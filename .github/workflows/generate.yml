@@ -30,4 +30,5 @@ jobs:
           openapi-file: schema.yml
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
-        commit_message: Update clients
+        with:
+          commit_message: Update clients
