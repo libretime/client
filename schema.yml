@@ -1,6 +1,7 @@
 openapi: 3.0.3
 info:
   title: 'LibreTime API'
+  description: 'Radio Broadcast & Automation Platform'
   version: 2.0.0
 paths:
   /api/v2/celery-tasks/:
