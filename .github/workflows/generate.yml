@@ -1,0 +1,33 @@
+on:
+  push:
+    branches: [main]
+    paths:
+      - schema.yml
+
+jobs:
+  generate:
+    name: Generate clients
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate Python client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          generator: python
+          openapi-file: schema.yml
+      - name: Generate Javascript client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          generator: javascript
+          openapi-file: schema.yml
+      - name: Generate PHP client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          generator: php
+          openapi-file: schema.yml
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        commit_message: Update clients
