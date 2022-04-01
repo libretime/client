@@ -1,0 +1,78 @@
+# LibreTimeApi.File
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**itemUrl** | **String** |  | [readonly] 
+**id** | **Number** |  | [readonly] 
+**name** | **String** |  | 
+**mime** | **String** |  | 
+**ftype** | **String** |  | 
+**filepath** | **String** |  | [optional] 
+**importStatus** | **Number** |  | 
+**currentlyAccessing** | **Number** |  | 
+**mtime** | **Date** |  | [optional] 
+**utime** | **Date** |  | [optional] 
+**lptime** | **Date** |  | [optional] 
+**md5** | **String** |  | [optional] 
+**trackTitle** | **String** |  | [optional] 
+**artistName** | **String** |  | [optional] 
+**bitRate** | **Number** |  | [optional] 
+**sampleRate** | **Number** |  | [optional] 
+**format** | **String** |  | [optional] 
+**length** | **String** |  | [optional] 
+**albumTitle** | **String** |  | [optional] 
+**genre** | **String** |  | [optional] 
+**comments** | **String** |  | [optional] 
+**year** | **String** |  | [optional] 
+**trackNumber** | **Number** |  | [optional] 
+**channels** | **Number** |  | [optional] 
+**url** | **String** |  | [optional] 
+**bpm** | **Number** |  | [optional] 
+**rating** | **String** |  | [optional] 
+**encodedBy** | **String** |  | [optional] 
+**discNumber** | **String** |  | [optional] 
+**mood** | **String** |  | [optional] 
+**label** | **String** |  | [optional] 
+**composer** | **String** |  | [optional] 
+**encoder** | **String** |  | [optional] 
+**checksum** | **String** |  | [optional] 
+**lyrics** | **String** |  | [optional] 
+**orchestra** | **String** |  | [optional] 
+**conductor** | **String** |  | [optional] 
+**lyricist** | **String** |  | [optional] 
+**originalLyricist** | **String** |  | [optional] 
+**radioStationName** | **String** |  | [optional] 
+**infoUrl** | **String** |  | [optional] 
+**artistUrl** | **String** |  | [optional] 
+**audioSourceUrl** | **String** |  | [optional] 
+**radioStationUrl** | **String** |  | [optional] 
+**buyThisUrl** | **String** |  | [optional] 
+**isrcNumber** | **String** |  | [optional] 
+**catalogNumber** | **String** |  | [optional] 
+**originalArtist** | **String** |  | [optional] 
+**copyright** | **String** |  | [optional] 
+**reportDatetime** | **String** |  | [optional] 
+**reportLocation** | **String** |  | [optional] 
+**reportOrganization** | **String** |  | [optional] 
+**subject** | **String** |  | [optional] 
+**contributor** | **String** |  | [optional] 
+**language** | **String** |  | [optional] 
+**fileExists** | **Boolean** |  | [optional] 
+**replayGain** | **Number** |  | [optional] 
+**cuein** | **String** |  | [optional] 
+**cueout** | **String** |  | [optional] 
+**silanCheck** | **Boolean** |  | [optional] 
+**hidden** | **Boolean** |  | [optional] 
+**isScheduled** | **Boolean** |  | [optional] 
+**isPlaylist** | **Boolean** |  | [optional] 
+**filesize** | **Number** |  | 
+**description** | **String** |  | [optional] 
+**artwork** | **String** |  | [optional] 
+**trackType** | **String** |  | [optional] 
+**directory** | **String** |  | [optional] 
+**editedBy** | **String** |  | [optional] 
+**owner** | **String** |  | [optional] 
+
+

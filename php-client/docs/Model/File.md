@@ -1,0 +1,78 @@
+# # File
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
+**name** | **string** |  |
+**mime** | **string** |  |
+**ftype** | **string** |  |
+**filepath** | **string** |  | [optional]
+**import_status** | **int** |  |
+**currently_accessing** | **int** |  |
+**mtime** | **\DateTime** |  | [optional]
+**utime** | **\DateTime** |  | [optional]
+**lptime** | **\DateTime** |  | [optional]
+**md5** | **string** |  | [optional]
+**track_title** | **string** |  | [optional]
+**artist_name** | **string** |  | [optional]
+**bit_rate** | **int** |  | [optional]
+**sample_rate** | **int** |  | [optional]
+**format** | **string** |  | [optional]
+**length** | **string** |  | [optional]
+**album_title** | **string** |  | [optional]
+**genre** | **string** |  | [optional]
+**comments** | **string** |  | [optional]
+**year** | **string** |  | [optional]
+**track_number** | **int** |  | [optional]
+**channels** | **int** |  | [optional]
+**url** | **string** |  | [optional]
+**bpm** | **int** |  | [optional]
+**rating** | **string** |  | [optional]
+**encoded_by** | **string** |  | [optional]
+**disc_number** | **string** |  | [optional]
+**mood** | **string** |  | [optional]
+**label** | **string** |  | [optional]
+**composer** | **string** |  | [optional]
+**encoder** | **string** |  | [optional]
+**checksum** | **string** |  | [optional]
+**lyrics** | **string** |  | [optional]
+**orchestra** | **string** |  | [optional]
+**conductor** | **string** |  | [optional]
+**lyricist** | **string** |  | [optional]
+**original_lyricist** | **string** |  | [optional]
+**radio_station_name** | **string** |  | [optional]
+**info_url** | **string** |  | [optional]
+**artist_url** | **string** |  | [optional]
+**audio_source_url** | **string** |  | [optional]
+**radio_station_url** | **string** |  | [optional]
+**buy_this_url** | **string** |  | [optional]
+**isrc_number** | **string** |  | [optional]
+**catalog_number** | **string** |  | [optional]
+**original_artist** | **string** |  | [optional]
+**copyright** | **string** |  | [optional]
+**report_datetime** | **string** |  | [optional]
+**report_location** | **string** |  | [optional]
+**report_organization** | **string** |  | [optional]
+**subject** | **string** |  | [optional]
+**contributor** | **string** |  | [optional]
+**language** | **string** |  | [optional]
+**file_exists** | **bool** |  | [optional]
+**replay_gain** | **float** |  | [optional]
+**cuein** | **string** |  | [optional]
+**cueout** | **string** |  | [optional]
+**silan_check** | **bool** |  | [optional]
+**hidden** | **bool** |  | [optional]
+**is_scheduled** | **bool** |  | [optional]
+**is_playlist** | **bool** |  | [optional]
+**filesize** | **int** |  |
+**description** | **string** |  | [optional]
+**artwork** | **string** |  | [optional]
+**track_type** | **string** |  | [optional]
+**directory** | **string** |  | [optional]
+**edited_by** | **string** |  | [optional]
+**owner** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
