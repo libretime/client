@@ -35,7 +35,7 @@ jobs:
       - name: Test package
         run: |
           cd python-client
-          pytest --cov=libretime.api
+          pytest --cov=libretime
   php:
     name: Test PHP
     runs-on: ubuntu-latest
