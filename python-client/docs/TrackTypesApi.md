@@ -25,7 +25,7 @@ Method | HTTP request | Description
 ```python
 import time
 import openapi_client
-from openapi_client.api import track_types_api
+from libretime import track_types_api
 from openapi_client.model.track_type import TrackType
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import track_types_api
+from libretime import track_types_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -192,7 +192,7 @@ void (empty response body)
 ```python
 import time
 import openapi_client
-from openapi_client.api import track_types_api
+from libretime import track_types_api
 from openapi_client.model.track_type import TrackType
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -270,7 +270,7 @@ This endpoint does not need any parameter.
 ```python
 import time
 import openapi_client
-from openapi_client.api import track_types_api
+from libretime import track_types_api
 from openapi_client.model.track_type import TrackType
 from openapi_client.model.patched_track_type import PatchedTrackType
 from pprint import pprint
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import track_types_api
+from libretime import track_types_api
 from openapi_client.model.track_type import TrackType
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import track_types_api
+from libretime import track_types_api
 from openapi_client.model.track_type import TrackType
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

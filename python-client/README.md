@@ -49,7 +49,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import openapi_client
 from pprint import pprint
-from openapi_client.api import celery_tasks_api
+from libretime import celery_tasks_api
 from openapi_client.model.celery_task import CeleryTask
 from openapi_client.model.patched_celery_task import PatchedCeleryTask
 # Defining the host is optional and defaults to http://localhost

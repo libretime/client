@@ -25,7 +25,7 @@ Method | HTTP request | Description
 ```python
 import time
 import openapi_client
-from openapi_client.api import music_dirs_api
+from libretime import music_dirs_api
 from openapi_client.model.music_dir import MusicDir
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import music_dirs_api
+from libretime import music_dirs_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -193,7 +193,7 @@ void (empty response body)
 ```python
 import time
 import openapi_client
-from openapi_client.api import music_dirs_api
+from libretime import music_dirs_api
 from openapi_client.model.music_dir import MusicDir
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -271,7 +271,7 @@ This endpoint does not need any parameter.
 ```python
 import time
 import openapi_client
-from openapi_client.api import music_dirs_api
+from libretime import music_dirs_api
 from openapi_client.model.music_dir import MusicDir
 from openapi_client.model.patched_music_dir import PatchedMusicDir
 from pprint import pprint
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import music_dirs_api
+from libretime import music_dirs_api
 from openapi_client.model.music_dir import MusicDir
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import music_dirs_api
+from libretime import music_dirs_api
 from openapi_client.model.music_dir import MusicDir
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

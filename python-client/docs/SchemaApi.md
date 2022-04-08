@@ -22,7 +22,7 @@ OpenApi3 schema for this API. Format can be selected via content negotiation.  -
 ```python
 import time
 import openapi_client
-from openapi_client.api import schema_api
+from libretime import schema_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.

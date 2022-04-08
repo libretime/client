@@ -25,7 +25,7 @@ Method | HTTP request | Description
 ```python
 import time
 import openapi_client
-from openapi_client.api import playout_history_metadata_api
+from libretime import playout_history_metadata_api
 from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import playout_history_metadata_api
+from libretime import playout_history_metadata_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -191,7 +191,7 @@ void (empty response body)
 ```python
 import time
 import openapi_client
-from openapi_client.api import playout_history_metadata_api
+from libretime import playout_history_metadata_api
 from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -269,7 +269,7 @@ This endpoint does not need any parameter.
 ```python
 import time
 import openapi_client
-from openapi_client.api import playout_history_metadata_api
+from libretime import playout_history_metadata_api
 from openapi_client.model.patched_playout_history_metadata import PatchedPlayoutHistoryMetadata
 from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import playout_history_metadata_api
+from libretime import playout_history_metadata_api
 from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import playout_history_metadata_api
+from libretime import playout_history_metadata_api
 from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

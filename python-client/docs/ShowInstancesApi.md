@@ -25,7 +25,7 @@ Method | HTTP request | Description
 ```python
 import time
 import openapi_client
-from openapi_client.api import show_instances_api
+from libretime import show_instances_api
 from openapi_client.model.show_instance import ShowInstance
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import show_instances_api
+from libretime import show_instances_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -201,7 +201,7 @@ void (empty response body)
 ```python
 import time
 import openapi_client
-from openapi_client.api import show_instances_api
+from libretime import show_instances_api
 from openapi_client.model.show_instance import ShowInstance
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -279,7 +279,7 @@ This endpoint does not need any parameter.
 ```python
 import time
 import openapi_client
-from openapi_client.api import show_instances_api
+from libretime import show_instances_api
 from openapi_client.model.show_instance import ShowInstance
 from openapi_client.model.patched_show_instance import PatchedShowInstance
 from pprint import pprint
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import show_instances_api
+from libretime import show_instances_api
 from openapi_client.model.show_instance import ShowInstance
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 ```python
 import time
 import openapi_client
-from openapi_client.api import show_instances_api
+from libretime import show_instances_api
 from openapi_client.model.show_instance import ShowInstance
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
