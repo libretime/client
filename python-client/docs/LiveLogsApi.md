@@ -1,4 +1,4 @@
-# openapi_client.LiveLogsApi
+# libretime.api.LiveLogsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import live_logs_api
-from openapi_client.model.live_log import LiveLog
+import libretime.api
+from libretime.api.api import live_logs_api
+from libretime.api.model.live_log import LiveLog
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = live_logs_api.LiveLogsApi(api_client)
     live_log = LiveLog(
@@ -65,7 +65,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.live_logs_create(live_log)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_create: %s\n" % e)
 ```
 
@@ -110,12 +110,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import live_logs_api
+import libretime.api
+from libretime.api.api import live_logs_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -137,7 +137,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = live_logs_api.LiveLogsApi(api_client)
     id = 1 # int | A unique integer value identifying this live log.
@@ -145,7 +145,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.live_logs_destroy(id)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_destroy: %s\n" % e)
 ```
 
@@ -190,13 +190,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import live_logs_api
-from openapi_client.model.live_log import LiveLog
+import libretime.api
+from libretime.api.api import live_logs_api
+from libretime.api.model.live_log import LiveLog
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -206,7 +206,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -218,7 +218,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = live_logs_api.LiveLogsApi(api_client)
 
@@ -226,7 +226,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.live_logs_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_list: %s\n" % e)
 ```
 
@@ -268,14 +268,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import live_logs_api
-from openapi_client.model.patched_live_log import PatchedLiveLog
-from openapi_client.model.live_log import LiveLog
+import libretime.api
+from libretime.api.api import live_logs_api
+from libretime.api.model.live_log import LiveLog
+from libretime.api.model.patched_live_log import PatchedLiveLog
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -285,7 +285,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -297,7 +297,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = live_logs_api.LiveLogsApi(api_client)
     id = 1 # int | A unique integer value identifying this live log.
@@ -311,7 +311,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.live_logs_partial_update(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -319,7 +319,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.live_logs_partial_update(id, patched_live_log=patched_live_log)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_partial_update: %s\n" % e)
 ```
 
@@ -365,13 +365,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import live_logs_api
-from openapi_client.model.live_log import LiveLog
+import libretime.api
+from libretime.api.api import live_logs_api
+from libretime.api.model.live_log import LiveLog
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -381,7 +381,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -393,7 +393,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = live_logs_api.LiveLogsApi(api_client)
     id = 1 # int | A unique integer value identifying this live log.
@@ -402,7 +402,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.live_logs_retrieve(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_retrieve: %s\n" % e)
 ```
 
@@ -447,13 +447,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import live_logs_api
-from openapi_client.model.live_log import LiveLog
+import libretime.api
+from libretime.api.api import live_logs_api
+from libretime.api.model.live_log import LiveLog
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -463,7 +463,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -475,7 +475,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = live_logs_api.LiveLogsApi(api_client)
     id = 1 # int | A unique integer value identifying this live log.
@@ -489,7 +489,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.live_logs_update(id, live_log)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LiveLogsApi->live_logs_update: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# openapi_client.PlayoutHistoryMetadataApi
+# libretime.api.PlayoutHistoryMetadataApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import playout_history_metadata_api
-from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
+import libretime.api
+from libretime.api.api import playout_history_metadata_api
+from libretime.api.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playout_history_metadata_api.PlayoutHistoryMetadataApi(api_client)
     playout_history_metadata = PlayoutHistoryMetadata(
@@ -65,7 +65,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playout_history_metadata_create(playout_history_metadata)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_create: %s\n" % e)
 ```
 
@@ -110,12 +110,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import playout_history_metadata_api
+import libretime.api
+from libretime.api.api import playout_history_metadata_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -137,7 +137,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playout_history_metadata_api.PlayoutHistoryMetadataApi(api_client)
     id = 1 # int | A unique integer value identifying this playout history metadata.
@@ -145,7 +145,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.playout_history_metadata_destroy(id)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_destroy: %s\n" % e)
 ```
 
@@ -190,13 +190,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import playout_history_metadata_api
-from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
+import libretime.api
+from libretime.api.api import playout_history_metadata_api
+from libretime.api.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -206,7 +206,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -218,7 +218,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playout_history_metadata_api.PlayoutHistoryMetadataApi(api_client)
 
@@ -226,7 +226,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playout_history_metadata_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_list: %s\n" % e)
 ```
 
@@ -268,14 +268,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import playout_history_metadata_api
-from openapi_client.model.patched_playout_history_metadata import PatchedPlayoutHistoryMetadata
-from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
+import libretime.api
+from libretime.api.api import playout_history_metadata_api
+from libretime.api.model.playout_history_metadata import PlayoutHistoryMetadata
+from libretime.api.model.patched_playout_history_metadata import PatchedPlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -285,7 +285,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -297,7 +297,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playout_history_metadata_api.PlayoutHistoryMetadataApi(api_client)
     id = 1 # int | A unique integer value identifying this playout history metadata.
@@ -311,7 +311,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playout_history_metadata_partial_update(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -319,7 +319,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playout_history_metadata_partial_update(id, patched_playout_history_metadata=patched_playout_history_metadata)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_partial_update: %s\n" % e)
 ```
 
@@ -365,13 +365,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import playout_history_metadata_api
-from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
+import libretime.api
+from libretime.api.api import playout_history_metadata_api
+from libretime.api.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -381,7 +381,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -393,7 +393,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playout_history_metadata_api.PlayoutHistoryMetadataApi(api_client)
     id = 1 # int | A unique integer value identifying this playout history metadata.
@@ -402,7 +402,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playout_history_metadata_retrieve(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_retrieve: %s\n" % e)
 ```
 
@@ -447,13 +447,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import playout_history_metadata_api
-from openapi_client.model.playout_history_metadata import PlayoutHistoryMetadata
+import libretime.api
+from libretime.api.api import playout_history_metadata_api
+from libretime.api.model.playout_history_metadata import PlayoutHistoryMetadata
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -463,7 +463,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -475,7 +475,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playout_history_metadata_api.PlayoutHistoryMetadataApi(api_client)
     id = 1 # int | A unique integer value identifying this playout history metadata.
@@ -489,7 +489,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playout_history_metadata_update(id, playout_history_metadata)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling PlayoutHistoryMetadataApi->playout_history_metadata_update: %s\n" % e)
 ```
 

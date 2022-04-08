@@ -1,4 +1,4 @@
-# openapi_client.SmartBlocksApi
+# libretime.api.SmartBlocksApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import smart_blocks_api
-from openapi_client.model.smart_block import SmartBlock
+import libretime.api
+from libretime.api.api import smart_blocks_api
+from libretime.api.model.smart_block import SmartBlock
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_blocks_api.SmartBlocksApi(api_client)
     smart_block = SmartBlock(
@@ -69,7 +69,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_blocks_create(smart_block)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_create: %s\n" % e)
 ```
 
@@ -114,12 +114,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import smart_blocks_api
+import libretime.api
+from libretime.api.api import smart_blocks_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -129,7 +129,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -141,7 +141,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_blocks_api.SmartBlocksApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block.
@@ -149,7 +149,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.smart_blocks_destroy(id)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_destroy: %s\n" % e)
 ```
 
@@ -194,13 +194,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import smart_blocks_api
-from openapi_client.model.smart_block import SmartBlock
+import libretime.api
+from libretime.api.api import smart_blocks_api
+from libretime.api.model.smart_block import SmartBlock
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -210,7 +210,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -222,7 +222,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_blocks_api.SmartBlocksApi(api_client)
 
@@ -230,7 +230,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_blocks_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_list: %s\n" % e)
 ```
 
@@ -272,14 +272,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import smart_blocks_api
-from openapi_client.model.smart_block import SmartBlock
-from openapi_client.model.patched_smart_block import PatchedSmartBlock
+import libretime.api
+from libretime.api.api import smart_blocks_api
+from libretime.api.model.smart_block import SmartBlock
+from libretime.api.model.patched_smart_block import PatchedSmartBlock
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -289,7 +289,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -301,7 +301,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_blocks_api.SmartBlocksApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block.
@@ -319,7 +319,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_blocks_partial_update(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -327,7 +327,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_blocks_partial_update(id, patched_smart_block=patched_smart_block)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_partial_update: %s\n" % e)
 ```
 
@@ -373,13 +373,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import smart_blocks_api
-from openapi_client.model.smart_block import SmartBlock
+import libretime.api
+from libretime.api.api import smart_blocks_api
+from libretime.api.model.smart_block import SmartBlock
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -389,7 +389,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -401,7 +401,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_blocks_api.SmartBlocksApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block.
@@ -410,7 +410,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_blocks_retrieve(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_retrieve: %s\n" % e)
 ```
 
@@ -455,13 +455,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import smart_blocks_api
-from openapi_client.model.smart_block import SmartBlock
+import libretime.api
+from libretime.api.api import smart_blocks_api
+from libretime.api.model.smart_block import SmartBlock
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -471,7 +471,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -483,7 +483,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_blocks_api.SmartBlocksApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block.
@@ -501,7 +501,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_blocks_update(id, smart_block)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SmartBlocksApi->smart_blocks_update: %s\n" % e)
 ```
 

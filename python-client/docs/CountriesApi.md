@@ -1,4 +1,4 @@
-# openapi_client.CountriesApi
+# libretime.api.CountriesApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import countries_api
-from openapi_client.model.country import Country
+import libretime.api
+from libretime.api.api import countries_api
+from libretime.api.model.country import Country
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
     country = Country(
@@ -63,7 +63,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.countries_create(country)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_create: %s\n" % e)
 ```
 
@@ -108,12 +108,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import countries_api
+import libretime.api
+from libretime.api.api import countries_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -123,7 +123,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -135,7 +135,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
     isocode = "isocode_example" # str | A unique value identifying this country.
@@ -143,7 +143,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.countries_destroy(isocode)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_destroy: %s\n" % e)
 ```
 
@@ -188,13 +188,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import countries_api
-from openapi_client.model.country import Country
+import libretime.api
+from libretime.api.api import countries_api
+from libretime.api.model.country import Country
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -204,7 +204,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -216,7 +216,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
 
@@ -224,7 +224,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.countries_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_list: %s\n" % e)
 ```
 
@@ -266,14 +266,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import countries_api
-from openapi_client.model.patched_country import PatchedCountry
-from openapi_client.model.country import Country
+import libretime.api
+from libretime.api.api import countries_api
+from libretime.api.model.country import Country
+from libretime.api.model.patched_country import PatchedCountry
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -283,7 +283,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -295,7 +295,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
     isocode = "isocode_example" # str | A unique value identifying this country.
@@ -307,7 +307,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.countries_partial_update(isocode)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -315,7 +315,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.countries_partial_update(isocode, patched_country=patched_country)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_partial_update: %s\n" % e)
 ```
 
@@ -361,13 +361,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import countries_api
-from openapi_client.model.country import Country
+import libretime.api
+from libretime.api.api import countries_api
+from libretime.api.model.country import Country
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -377,7 +377,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -389,7 +389,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
     isocode = "isocode_example" # str | A unique value identifying this country.
@@ -398,7 +398,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.countries_retrieve(isocode)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_retrieve: %s\n" % e)
 ```
 
@@ -443,13 +443,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import countries_api
-from openapi_client.model.country import Country
+import libretime.api
+from libretime.api.api import countries_api
+from libretime.api.model.country import Country
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -459,7 +459,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -471,7 +471,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
     isocode = "isocode_example" # str | A unique value identifying this country.
@@ -483,7 +483,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.countries_update(isocode, country)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling CountriesApi->countries_update: %s\n" % e)
 ```
 

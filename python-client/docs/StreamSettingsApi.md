@@ -1,4 +1,4 @@
-# openapi_client.StreamSettingsApi
+# libretime.api.StreamSettingsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import stream_settings_api
-from openapi_client.model.stream_setting import StreamSetting
+import libretime.api
+from libretime.api.api import stream_settings_api
+from libretime.api.model.stream_setting import StreamSetting
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     stream_setting = StreamSetting(
@@ -64,7 +64,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.stream_settings_create(stream_setting)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_create: %s\n" % e)
 ```
 
@@ -109,12 +109,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import stream_settings_api
+import libretime.api
+from libretime.api.api import stream_settings_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -124,7 +124,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -136,7 +136,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     keyname = "keyname_example" # str | A unique value identifying this stream setting.
@@ -144,7 +144,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.stream_settings_destroy(keyname)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_destroy: %s\n" % e)
 ```
 
@@ -189,13 +189,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import stream_settings_api
-from openapi_client.model.stream_setting import StreamSetting
+import libretime.api
+from libretime.api.api import stream_settings_api
+from libretime.api.model.stream_setting import StreamSetting
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -205,7 +205,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -217,7 +217,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
 
@@ -225,7 +225,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.stream_settings_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_list: %s\n" % e)
 ```
 
@@ -267,14 +267,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import stream_settings_api
-from openapi_client.model.stream_setting import StreamSetting
-from openapi_client.model.patched_stream_setting import PatchedStreamSetting
+import libretime.api
+from libretime.api.api import stream_settings_api
+from libretime.api.model.stream_setting import StreamSetting
+from libretime.api.model.patched_stream_setting import PatchedStreamSetting
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -284,7 +284,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -296,7 +296,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     keyname = "keyname_example" # str | A unique value identifying this stream setting.
@@ -309,7 +309,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.stream_settings_partial_update(keyname)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -317,7 +317,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.stream_settings_partial_update(keyname, patched_stream_setting=patched_stream_setting)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_partial_update: %s\n" % e)
 ```
 
@@ -363,13 +363,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import stream_settings_api
-from openapi_client.model.stream_setting import StreamSetting
+import libretime.api
+from libretime.api.api import stream_settings_api
+from libretime.api.model.stream_setting import StreamSetting
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -379,7 +379,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -391,7 +391,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     keyname = "keyname_example" # str | A unique value identifying this stream setting.
@@ -400,7 +400,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.stream_settings_retrieve(keyname)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_retrieve: %s\n" % e)
 ```
 
@@ -445,13 +445,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import stream_settings_api
-from openapi_client.model.stream_setting import StreamSetting
+import libretime.api
+from libretime.api.api import stream_settings_api
+from libretime.api.model.stream_setting import StreamSetting
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -461,7 +461,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -473,7 +473,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     keyname = "keyname_example" # str | A unique value identifying this stream setting.
@@ -486,7 +486,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.stream_settings_update(keyname, stream_setting)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_update: %s\n" % e)
 ```
 

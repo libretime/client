@@ -1,4 +1,4 @@
-# openapi_client.ShowDaysApi
+# libretime.api.ShowDaysApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import show_days_api
-from openapi_client.model.show_days import ShowDays
+import libretime.api
+from libretime.api.api import show_days_api
+from libretime.api.model.show_days import ShowDays
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
     show_days = ShowDays(
@@ -72,7 +72,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_days_create(show_days)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_create: %s\n" % e)
 ```
 
@@ -117,12 +117,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import show_days_api
+import libretime.api
+from libretime.api.api import show_days_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -132,7 +132,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -144,7 +144,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
     id = 1 # int | A unique integer value identifying this show days.
@@ -152,7 +152,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.show_days_destroy(id)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_destroy: %s\n" % e)
 ```
 
@@ -197,13 +197,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import show_days_api
-from openapi_client.model.show_days import ShowDays
+import libretime.api
+from libretime.api.api import show_days_api
+from libretime.api.model.show_days import ShowDays
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -213,7 +213,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -225,7 +225,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
 
@@ -233,7 +233,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_days_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_list: %s\n" % e)
 ```
 
@@ -275,14 +275,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import show_days_api
-from openapi_client.model.show_days import ShowDays
-from openapi_client.model.patched_show_days import PatchedShowDays
+import libretime.api
+from libretime.api.api import show_days_api
+from libretime.api.model.patched_show_days import PatchedShowDays
+from libretime.api.model.show_days import ShowDays
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -292,7 +292,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -304,7 +304,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
     id = 1 # int | A unique integer value identifying this show days.
@@ -325,7 +325,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_days_partial_update(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -333,7 +333,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_days_partial_update(id, patched_show_days=patched_show_days)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_partial_update: %s\n" % e)
 ```
 
@@ -379,13 +379,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import show_days_api
-from openapi_client.model.show_days import ShowDays
+import libretime.api
+from libretime.api.api import show_days_api
+from libretime.api.model.show_days import ShowDays
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -395,7 +395,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -407,7 +407,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
     id = 1 # int | A unique integer value identifying this show days.
@@ -416,7 +416,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_days_retrieve(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_retrieve: %s\n" % e)
 ```
 
@@ -461,13 +461,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import show_days_api
-from openapi_client.model.show_days import ShowDays
+import libretime.api
+from libretime.api.api import show_days_api
+from libretime.api.model.show_days import ShowDays
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -477,7 +477,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -489,7 +489,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
     id = 1 # int | A unique integer value identifying this show days.
@@ -510,7 +510,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_days_update(id, show_days)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling ShowDaysApi->show_days_update: %s\n" % e)
 ```
 

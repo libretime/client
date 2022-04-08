@@ -1,4 +1,4 @@
-# openapi_client.SchemaApi
+# libretime.api.SchemaApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,12 +21,12 @@ OpenApi3 schema for this API. Format can be selected via content negotiation.  -
 
 ```python
 import time
-import openapi_client
-from libretime import schema_api
+import libretime.api
+from libretime.api.api import schema_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -36,7 +36,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -48,7 +48,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schema_api.SchemaApi(api_client)
     format = "json" # str |  (optional)
@@ -59,7 +59,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schema_retrieve(format=format, lang=lang)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling SchemaApi->schema_retrieve: %s\n" % e)
 ```
 

@@ -56,11 +56,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/GIT_USER_ID/GIT_REPO_ID
+If the library is hosted at a git repository, e.g.https://github.com/libretime/api-client
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install libretime/api-client --save
 ```
 
 ### For browser

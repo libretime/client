@@ -1,4 +1,5 @@
 {
+    "name": "libretime/api-client",
     "description": "Radio Broadcast & Automation Platform",
     "keywords": [
         "openapitools",

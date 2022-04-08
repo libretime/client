@@ -1,4 +1,4 @@
-# openapi_client.LoginAttemptsApi
+# libretime.api.LoginAttemptsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import login_attempts_api
-from openapi_client.model.login_attempt import LoginAttempt
+import libretime.api
+from libretime.api.api import login_attempts_api
+from libretime.api.model.login_attempt import LoginAttempt
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     login_attempt = LoginAttempt(
@@ -64,7 +64,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_create(login_attempt=login_attempt)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_create: %s\n" % e)
 ```
 
@@ -109,12 +109,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import login_attempts_api
+import libretime.api
+from libretime.api.api import login_attempts_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -124,7 +124,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -136,7 +136,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     ip = "ip_example" # str | A unique value identifying this login attempt.
@@ -144,7 +144,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.login_attempts_destroy(ip)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_destroy: %s\n" % e)
 ```
 
@@ -189,13 +189,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import login_attempts_api
-from openapi_client.model.login_attempt import LoginAttempt
+import libretime.api
+from libretime.api.api import login_attempts_api
+from libretime.api.model.login_attempt import LoginAttempt
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -205,7 +205,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -217,7 +217,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
 
@@ -225,7 +225,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_list: %s\n" % e)
 ```
 
@@ -267,14 +267,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import login_attempts_api
-from openapi_client.model.patched_login_attempt import PatchedLoginAttempt
-from openapi_client.model.login_attempt import LoginAttempt
+import libretime.api
+from libretime.api.api import login_attempts_api
+from libretime.api.model.login_attempt import LoginAttempt
+from libretime.api.model.patched_login_attempt import PatchedLoginAttempt
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -284,7 +284,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -296,7 +296,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     ip = "ip_example" # str | A unique value identifying this login attempt.
@@ -308,7 +308,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_partial_update(ip)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -316,7 +316,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_partial_update(ip, patched_login_attempt=patched_login_attempt)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_partial_update: %s\n" % e)
 ```
 
@@ -362,13 +362,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import login_attempts_api
-from openapi_client.model.login_attempt import LoginAttempt
+import libretime.api
+from libretime.api.api import login_attempts_api
+from libretime.api.model.login_attempt import LoginAttempt
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -378,7 +378,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -390,7 +390,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     ip = "ip_example" # str | A unique value identifying this login attempt.
@@ -399,7 +399,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_retrieve(ip)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_retrieve: %s\n" % e)
 ```
 
@@ -444,13 +444,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import login_attempts_api
-from openapi_client.model.login_attempt import LoginAttempt
+import libretime.api
+from libretime.api.api import login_attempts_api
+from libretime.api.model.login_attempt import LoginAttempt
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -460,7 +460,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -472,7 +472,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     ip = "ip_example" # str | A unique value identifying this login attempt.
@@ -484,7 +484,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_update(ip)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -492,7 +492,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.login_attempts_update(ip, login_attempt=login_attempt)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_update: %s\n" % e)
 ```
 

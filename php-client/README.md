@@ -1,4 +1,4 @@
-# OpenAPIClient-php
+# libretime/api
 
 Radio Broadcast & Automation Platform
 
@@ -19,11 +19,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/libretime/api-client.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "libretime/api-client": "*@dev"
   }
 }
 ```
@@ -36,7 +36,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
+require_once('/path/to/libretime/api/vendor/autoload.php');
 ```
 
 ## Getting Started

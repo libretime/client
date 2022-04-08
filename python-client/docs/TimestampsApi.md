@@ -1,4 +1,4 @@
-# openapi_client.TimestampsApi
+# libretime.api.TimestampsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import openapi_client
-from libretime import timestamps_api
-from openapi_client.model.timestamp import Timestamp
+import libretime.api
+from libretime.api.api import timestamps_api
+from libretime.api.model.timestamp import Timestamp
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = timestamps_api.TimestampsApi(api_client)
     timestamp = Timestamp(
@@ -63,7 +63,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.timestamps_create(timestamp)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_create: %s\n" % e)
 ```
 
@@ -108,12 +108,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import timestamps_api
+import libretime.api
+from libretime.api.api import timestamps_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -123,7 +123,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -135,7 +135,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = timestamps_api.TimestampsApi(api_client)
     id = 1 # int | A unique integer value identifying this timestamp.
@@ -143,7 +143,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.timestamps_destroy(id)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_destroy: %s\n" % e)
 ```
 
@@ -188,13 +188,13 @@ void (empty response body)
 
 ```python
 import time
-import openapi_client
-from libretime import timestamps_api
-from openapi_client.model.timestamp import Timestamp
+import libretime.api
+from libretime.api.api import timestamps_api
+from libretime.api.model.timestamp import Timestamp
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -204,7 +204,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -216,7 +216,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = timestamps_api.TimestampsApi(api_client)
 
@@ -224,7 +224,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.timestamps_list()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_list: %s\n" % e)
 ```
 
@@ -266,14 +266,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import openapi_client
-from libretime import timestamps_api
-from openapi_client.model.patched_timestamp import PatchedTimestamp
-from openapi_client.model.timestamp import Timestamp
+import libretime.api
+from libretime.api.api import timestamps_api
+from libretime.api.model.timestamp import Timestamp
+from libretime.api.model.patched_timestamp import PatchedTimestamp
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -283,7 +283,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -295,7 +295,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = timestamps_api.TimestampsApi(api_client)
     id = 1 # int | A unique integer value identifying this timestamp.
@@ -307,7 +307,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.timestamps_partial_update(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -315,7 +315,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.timestamps_partial_update(id, patched_timestamp=patched_timestamp)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_partial_update: %s\n" % e)
 ```
 
@@ -361,13 +361,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import timestamps_api
-from openapi_client.model.timestamp import Timestamp
+import libretime.api
+from libretime.api.api import timestamps_api
+from libretime.api.model.timestamp import Timestamp
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -377,7 +377,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -389,7 +389,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = timestamps_api.TimestampsApi(api_client)
     id = 1 # int | A unique integer value identifying this timestamp.
@@ -398,7 +398,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.timestamps_retrieve(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_retrieve: %s\n" % e)
 ```
 
@@ -443,13 +443,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import openapi_client
-from libretime import timestamps_api
-from openapi_client.model.timestamp import Timestamp
+import libretime.api
+from libretime.api.api import timestamps_api
+from libretime.api.model.timestamp import Timestamp
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     host = "http://localhost"
 )
 
@@ -459,7 +459,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = openapi_client.Configuration(
+configuration = libretime.api.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -471,7 +471,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with libretime.api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = timestamps_api.TimestampsApi(api_client)
     id = 1 # int | A unique integer value identifying this timestamp.
@@ -483,7 +483,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.timestamps_update(id, timestamp)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except libretime.api.ApiException as e:
         print("Exception when calling TimestampsApi->timestamps_update: %s\n" % e)
 ```
 
