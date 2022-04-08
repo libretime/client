@@ -24,9 +24,9 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
+          key: ${{ runner.os }}-${{ matrix.python-version }}-pip-${{ hashFiles('**/setup.py') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            ${{ runner.os }}-${{ matrix.python-version }}-pip-
       - name: Install dependencies
         run: |
           cd python-client
@@ -34,6 +34,7 @@ jobs:
           pip3 install -r test-requirements.txt
       - name: Test package
         run: |
+          cd python-client
           pytest --cov=libretime.api
   php:
     name: Test PHP
@@ -55,15 +56,16 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
-            ${{ runner.os }}-composer-
+            ${{ runner.os }}-${{ matrix.php-version }}-composer-
       - name: Install dependencies
         run: |
           cd php-client
           composer install
       - name: Test package
         run: |
+          cd php-client
           vendor/bin/phpunit
   javascript:
     name: Test Javascript
@@ -83,9 +85,9 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-${{ matrix.node-version }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-${{ matrix.node-version }}-node-
       - name: Install dependencies
         run: |
           cd javascript-client
@@ -93,4 +95,5 @@ jobs:
           npm run build --if-present
       - name: Test package
         run: |
+          cd javascript-client
           npm test
