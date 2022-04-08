@@ -18,7 +18,7 @@ jobs:
         with:
           generator: python
           openapi-file: schema.yml
-          command_args: '--api-package libretime'
+          command-args: '--api-package libretime'
       - name: Generate Javascript client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
