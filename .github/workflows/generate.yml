@@ -18,17 +18,19 @@ jobs:
         with:
           generator: python
           openapi-file: schema.yml
-          command-args: '--api-package libretime'
+          command-args: '--package-name libretime.api --git-user-id $GITHUB_REPOSITORY_OWNER --git-repo-id api-client'
       - name: Generate Javascript client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: javascript
           openapi-file: schema.yml
+          command-args: '--package-name api --git-user-id $GITHUB_REPOSITORY_OWNER --git-repo-id api-client'
       - name: Generate PHP client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: php
           openapi-file: schema.yml
+          command-args: '--package-name libretime/api --git-user-id $GITHUB_REPOSITORY_OWNER --git-repo-id api-client'
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
