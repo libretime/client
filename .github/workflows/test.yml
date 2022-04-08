@@ -89,7 +89,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd javascript-client
-          npm ci
+          npm install
           npm run build --if-present
       - name: Test package
         run: |
