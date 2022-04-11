@@ -28,9 +28,9 @@ jobs:
       - name: Generate Javascript client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
-          generator: javascript
+          generator: typescript-axios
           openapi-file: schema.yml
-          command-args: '--package-name api $COMMON_CONFIG'
+          command-args: '--package-name libretime-client $COMMON_CONFIG'
       - name: Generate PHP client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
