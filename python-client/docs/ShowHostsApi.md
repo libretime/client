@@ -1,4 +1,4 @@
-# libretime.api.ShowHostsApi
+# libretime_client.ShowHostsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import show_hosts_api
-from libretime.api.model.show_host import ShowHost
+import libretime_client
+from libretime_client.api import show_hosts_api
+from libretime_client.model.show_host import ShowHost
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     show_host = ShowHost(
@@ -64,7 +64,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_hosts_create(show_host)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_create: %s\n" % e)
 ```
 
@@ -109,12 +109,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import show_hosts_api
+import libretime_client
+from libretime_client.api import show_hosts_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -124,7 +124,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -136,7 +136,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     id = 1 # int | A unique integer value identifying this show host.
@@ -144,7 +144,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.show_hosts_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_destroy: %s\n" % e)
 ```
 
@@ -189,13 +189,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import show_hosts_api
-from libretime.api.model.show_host import ShowHost
+import libretime_client
+from libretime_client.api import show_hosts_api
+from libretime_client.model.show_host import ShowHost
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -205,7 +205,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -217,7 +217,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
 
@@ -225,7 +225,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_hosts_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_list: %s\n" % e)
 ```
 
@@ -267,14 +267,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import show_hosts_api
-from libretime.api.model.patched_show_host import PatchedShowHost
-from libretime.api.model.show_host import ShowHost
+import libretime_client
+from libretime_client.api import show_hosts_api
+from libretime_client.model.show_host import ShowHost
+from libretime_client.model.patched_show_host import PatchedShowHost
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -284,7 +284,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -296,7 +296,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     id = 1 # int | A unique integer value identifying this show host.
@@ -309,7 +309,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_hosts_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -317,7 +317,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_hosts_partial_update(id, patched_show_host=patched_show_host)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_partial_update: %s\n" % e)
 ```
 
@@ -363,13 +363,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import show_hosts_api
-from libretime.api.model.show_host import ShowHost
+import libretime_client
+from libretime_client.api import show_hosts_api
+from libretime_client.model.show_host import ShowHost
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -379,7 +379,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -391,7 +391,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     id = 1 # int | A unique integer value identifying this show host.
@@ -400,7 +400,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_hosts_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_retrieve: %s\n" % e)
 ```
 
@@ -445,13 +445,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import show_hosts_api
-from libretime.api.model.show_host import ShowHost
+import libretime_client
+from libretime_client.api import show_hosts_api
+from libretime_client.model.show_host import ShowHost
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -461,7 +461,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -473,7 +473,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     id = 1 # int | A unique integer value identifying this show host.
@@ -486,7 +486,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.show_hosts_update(id, show_host)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ShowHostsApi->show_hosts_update: %s\n" % e)
 ```
 

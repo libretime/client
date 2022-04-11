@@ -1,4 +1,4 @@
-# libretime.api.ThirdPartyTrackReferencesApi
+# libretime_client.ThirdPartyTrackReferencesApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import third_party_track_references_api
-from libretime.api.model.third_party_track_reference import ThirdPartyTrackReference
+import libretime_client
+from libretime_client.api import third_party_track_references_api
+from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = third_party_track_references_api.ThirdPartyTrackReferencesApi(api_client)
     third_party_track_reference = ThirdPartyTrackReference(
@@ -67,7 +67,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.third_party_track_references_create(third_party_track_reference)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_create: %s\n" % e)
 ```
 
@@ -112,12 +112,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import third_party_track_references_api
+import libretime_client
+from libretime_client.api import third_party_track_references_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -127,7 +127,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -139,7 +139,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = third_party_track_references_api.ThirdPartyTrackReferencesApi(api_client)
     id = 1 # int | A unique integer value identifying this third party track reference.
@@ -147,7 +147,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.third_party_track_references_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_destroy: %s\n" % e)
 ```
 
@@ -192,13 +192,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import third_party_track_references_api
-from libretime.api.model.third_party_track_reference import ThirdPartyTrackReference
+import libretime_client
+from libretime_client.api import third_party_track_references_api
+from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -208,7 +208,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -220,7 +220,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = third_party_track_references_api.ThirdPartyTrackReferencesApi(api_client)
 
@@ -228,7 +228,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.third_party_track_references_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_list: %s\n" % e)
 ```
 
@@ -270,14 +270,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import third_party_track_references_api
-from libretime.api.model.third_party_track_reference import ThirdPartyTrackReference
-from libretime.api.model.patched_third_party_track_reference import PatchedThirdPartyTrackReference
+import libretime_client
+from libretime_client.api import third_party_track_references_api
+from libretime_client.model.patched_third_party_track_reference import PatchedThirdPartyTrackReference
+from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -287,7 +287,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -299,7 +299,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = third_party_track_references_api.ThirdPartyTrackReferencesApi(api_client)
     id = 1 # int | A unique integer value identifying this third party track reference.
@@ -315,7 +315,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.third_party_track_references_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -323,7 +323,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.third_party_track_references_partial_update(id, patched_third_party_track_reference=patched_third_party_track_reference)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_partial_update: %s\n" % e)
 ```
 
@@ -369,13 +369,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import third_party_track_references_api
-from libretime.api.model.third_party_track_reference import ThirdPartyTrackReference
+import libretime_client
+from libretime_client.api import third_party_track_references_api
+from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -385,7 +385,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -397,7 +397,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = third_party_track_references_api.ThirdPartyTrackReferencesApi(api_client)
     id = 1 # int | A unique integer value identifying this third party track reference.
@@ -406,7 +406,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.third_party_track_references_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_retrieve: %s\n" % e)
 ```
 
@@ -451,13 +451,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import third_party_track_references_api
-from libretime.api.model.third_party_track_reference import ThirdPartyTrackReference
+import libretime_client
+from libretime_client.api import third_party_track_references_api
+from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -467,7 +467,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -479,7 +479,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = third_party_track_references_api.ThirdPartyTrackReferencesApi(api_client)
     id = 1 # int | A unique integer value identifying this third party track reference.
@@ -495,7 +495,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.third_party_track_references_update(id, third_party_track_reference)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ThirdPartyTrackReferencesApi->third_party_track_references_update: %s\n" % e)
 ```
 

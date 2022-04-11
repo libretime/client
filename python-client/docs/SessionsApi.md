@@ -1,4 +1,4 @@
-# libretime.api.SessionsApi
+# libretime_client.SessionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import sessions_api
-from libretime.api.model.session import Session
+import libretime_client
+from libretime_client.api import sessions_api
+from libretime_client.model.session import Session
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sessions_api.SessionsApi(api_client)
     session = Session(
@@ -66,7 +66,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_create(session=session)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_create: %s\n" % e)
 ```
 
@@ -111,12 +111,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import sessions_api
+import libretime_client
+from libretime_client.api import sessions_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -126,7 +126,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -138,7 +138,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sessions_api.SessionsApi(api_client)
     sessid = "sessid_example" # str | A unique value identifying this session.
@@ -146,7 +146,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.sessions_destroy(sessid)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_destroy: %s\n" % e)
 ```
 
@@ -191,13 +191,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import sessions_api
-from libretime.api.model.session import Session
+import libretime_client
+from libretime_client.api import sessions_api
+from libretime_client.model.session import Session
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -207,7 +207,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -219,7 +219,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sessions_api.SessionsApi(api_client)
 
@@ -227,7 +227,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_list: %s\n" % e)
 ```
 
@@ -269,14 +269,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import sessions_api
-from libretime.api.model.patched_session import PatchedSession
-from libretime.api.model.session import Session
+import libretime_client
+from libretime_client.api import sessions_api
+from libretime_client.model.session import Session
+from libretime_client.model.patched_session import PatchedSession
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -286,7 +286,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -298,7 +298,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sessions_api.SessionsApi(api_client)
     sessid = "sessid_example" # str | A unique value identifying this session.
@@ -312,7 +312,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_partial_update(sessid)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -320,7 +320,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_partial_update(sessid, patched_session=patched_session)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_partial_update: %s\n" % e)
 ```
 
@@ -366,13 +366,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import sessions_api
-from libretime.api.model.session import Session
+import libretime_client
+from libretime_client.api import sessions_api
+from libretime_client.model.session import Session
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -382,7 +382,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -394,7 +394,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sessions_api.SessionsApi(api_client)
     sessid = "sessid_example" # str | A unique value identifying this session.
@@ -403,7 +403,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_retrieve(sessid)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_retrieve: %s\n" % e)
 ```
 
@@ -448,13 +448,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import sessions_api
-from libretime.api.model.session import Session
+import libretime_client
+from libretime_client.api import sessions_api
+from libretime_client.model.session import Session
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -464,7 +464,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -476,7 +476,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sessions_api.SessionsApi(api_client)
     sessid = "sessid_example" # str | A unique value identifying this session.
@@ -490,7 +490,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_update(sessid)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -498,7 +498,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.sessions_update(sessid, session=session)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SessionsApi->sessions_update: %s\n" % e)
 ```
 

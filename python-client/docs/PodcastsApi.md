@@ -1,4 +1,4 @@
-# libretime.api.PodcastsApi
+# libretime_client.PodcastsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import podcasts_api
-from libretime.api.model.podcast import Podcast
+import libretime_client
+from libretime_client.api import podcasts_api
+from libretime_client.model.podcast import Podcast
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcasts_api.PodcastsApi(api_client)
     podcast = Podcast(
@@ -76,7 +76,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.podcasts_create(podcast)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_create: %s\n" % e)
 ```
 
@@ -121,12 +121,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import podcasts_api
+import libretime_client
+from libretime_client.api import podcasts_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -136,7 +136,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -148,7 +148,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcasts_api.PodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this podcast.
@@ -156,7 +156,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.podcasts_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_destroy: %s\n" % e)
 ```
 
@@ -201,13 +201,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import podcasts_api
-from libretime.api.model.podcast import Podcast
+import libretime_client
+from libretime_client.api import podcasts_api
+from libretime_client.model.podcast import Podcast
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -217,7 +217,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -229,7 +229,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcasts_api.PodcastsApi(api_client)
 
@@ -237,7 +237,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.podcasts_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_list: %s\n" % e)
 ```
 
@@ -279,14 +279,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import podcasts_api
-from libretime.api.model.patched_podcast import PatchedPodcast
-from libretime.api.model.podcast import Podcast
+import libretime_client
+from libretime_client.api import podcasts_api
+from libretime_client.model.podcast import Podcast
+from libretime_client.model.patched_podcast import PatchedPodcast
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -296,7 +296,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -308,7 +308,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcasts_api.PodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this podcast.
@@ -333,7 +333,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.podcasts_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -341,7 +341,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.podcasts_partial_update(id, patched_podcast=patched_podcast)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_partial_update: %s\n" % e)
 ```
 
@@ -387,13 +387,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import podcasts_api
-from libretime.api.model.podcast import Podcast
+import libretime_client
+from libretime_client.api import podcasts_api
+from libretime_client.model.podcast import Podcast
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -403,7 +403,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -415,7 +415,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcasts_api.PodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this podcast.
@@ -424,7 +424,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.podcasts_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_retrieve: %s\n" % e)
 ```
 
@@ -469,13 +469,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import podcasts_api
-from libretime.api.model.podcast import Podcast
+import libretime_client
+from libretime_client.api import podcasts_api
+from libretime_client.model.podcast import Podcast
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -485,7 +485,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -497,7 +497,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcasts_api.PodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this podcast.
@@ -522,7 +522,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.podcasts_update(id, podcast)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PodcastsApi->podcasts_update: %s\n" % e)
 ```
 

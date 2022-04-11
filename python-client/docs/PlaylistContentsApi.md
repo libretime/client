@@ -1,4 +1,4 @@
-# libretime.api.PlaylistContentsApi
+# libretime_client.PlaylistContentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import playlist_contents_api
-from libretime.api.model.playlist_content import PlaylistContent
+import libretime_client
+from libretime_client.api import playlist_contents_api
+from libretime_client.model.playlist_content import PlaylistContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     playlist_content = PlaylistContent(
@@ -74,7 +74,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playlist_contents_create(playlist_content)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_create: %s\n" % e)
 ```
 
@@ -119,12 +119,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import playlist_contents_api
+import libretime_client
+from libretime_client.api import playlist_contents_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -134,7 +134,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -146,7 +146,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist content.
@@ -154,7 +154,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.playlist_contents_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_destroy: %s\n" % e)
 ```
 
@@ -199,13 +199,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import playlist_contents_api
-from libretime.api.model.playlist_content import PlaylistContent
+import libretime_client
+from libretime_client.api import playlist_contents_api
+from libretime_client.model.playlist_content import PlaylistContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -215,7 +215,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -227,7 +227,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
 
@@ -235,7 +235,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playlist_contents_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_list: %s\n" % e)
 ```
 
@@ -277,14 +277,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import playlist_contents_api
-from libretime.api.model.playlist_content import PlaylistContent
-from libretime.api.model.patched_playlist_content import PatchedPlaylistContent
+import libretime_client
+from libretime_client.api import playlist_contents_api
+from libretime_client.model.patched_playlist_content import PatchedPlaylistContent
+from libretime_client.model.playlist_content import PlaylistContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -294,7 +294,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -306,7 +306,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist content.
@@ -329,7 +329,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playlist_contents_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -337,7 +337,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playlist_contents_partial_update(id, patched_playlist_content=patched_playlist_content)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_partial_update: %s\n" % e)
 ```
 
@@ -383,13 +383,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import playlist_contents_api
-from libretime.api.model.playlist_content import PlaylistContent
+import libretime_client
+from libretime_client.api import playlist_contents_api
+from libretime_client.model.playlist_content import PlaylistContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -399,7 +399,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -411,7 +411,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist content.
@@ -420,7 +420,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playlist_contents_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_retrieve: %s\n" % e)
 ```
 
@@ -465,13 +465,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import playlist_contents_api
-from libretime.api.model.playlist_content import PlaylistContent
+import libretime_client
+from libretime_client.api import playlist_contents_api
+from libretime_client.model.playlist_content import PlaylistContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -481,7 +481,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -493,7 +493,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist content.
@@ -516,7 +516,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.playlist_contents_update(id, playlist_content)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling PlaylistContentsApi->playlist_contents_update: %s\n" % e)
 ```
 

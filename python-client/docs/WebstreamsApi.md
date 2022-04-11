@@ -1,4 +1,4 @@
-# libretime.api.WebstreamsApi
+# libretime_client.WebstreamsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import webstreams_api
-from libretime.api.model.webstream import Webstream
+import libretime_client
+from libretime_client.api import webstreams_api
+from libretime_client.model.webstream import Webstream
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
     webstream = Webstream(
@@ -71,7 +71,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.webstreams_create(webstream)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_create: %s\n" % e)
 ```
 
@@ -116,12 +116,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import webstreams_api
+import libretime_client
+from libretime_client.api import webstreams_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -131,7 +131,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -143,7 +143,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream.
@@ -151,7 +151,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.webstreams_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_destroy: %s\n" % e)
 ```
 
@@ -196,13 +196,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import webstreams_api
-from libretime.api.model.webstream import Webstream
+import libretime_client
+from libretime_client.api import webstreams_api
+from libretime_client.model.webstream import Webstream
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -224,7 +224,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
 
@@ -232,7 +232,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.webstreams_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_list: %s\n" % e)
 ```
 
@@ -274,14 +274,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import webstreams_api
-from libretime.api.model.patched_webstream import PatchedWebstream
-from libretime.api.model.webstream import Webstream
+import libretime_client
+from libretime_client.api import webstreams_api
+from libretime_client.model.patched_webstream import PatchedWebstream
+from libretime_client.model.webstream import Webstream
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -291,7 +291,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -303,7 +303,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream.
@@ -323,7 +323,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.webstreams_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -331,7 +331,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.webstreams_partial_update(id, patched_webstream=patched_webstream)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_partial_update: %s\n" % e)
 ```
 
@@ -377,13 +377,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import webstreams_api
-from libretime.api.model.webstream import Webstream
+import libretime_client
+from libretime_client.api import webstreams_api
+from libretime_client.model.webstream import Webstream
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -393,7 +393,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -405,7 +405,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream.
@@ -414,7 +414,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.webstreams_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_retrieve: %s\n" % e)
 ```
 
@@ -459,13 +459,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import webstreams_api
-from libretime.api.model.webstream import Webstream
+import libretime_client
+from libretime_client.api import webstreams_api
+from libretime_client.model.webstream import Webstream
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -475,7 +475,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -487,7 +487,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream.
@@ -507,7 +507,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.webstreams_update(id, webstream)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling WebstreamsApi->webstreams_update: %s\n" % e)
 ```
 

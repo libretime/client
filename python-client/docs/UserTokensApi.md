@@ -1,4 +1,4 @@
-# libretime.api.UserTokensApi
+# libretime_client.UserTokensApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import user_tokens_api
-from libretime.api.model.user_token import UserToken
+import libretime_client
+from libretime_client.api import user_tokens_api
+from libretime_client.model.user_token import UserToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_tokens_api.UserTokensApi(api_client)
     user_token = UserToken(
@@ -66,7 +66,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.user_tokens_create(user_token)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_create: %s\n" % e)
 ```
 
@@ -111,12 +111,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import user_tokens_api
+import libretime_client
+from libretime_client.api import user_tokens_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -126,7 +126,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -138,7 +138,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_tokens_api.UserTokensApi(api_client)
     id = 1 # int | A unique integer value identifying this user token.
@@ -146,7 +146,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.user_tokens_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_destroy: %s\n" % e)
 ```
 
@@ -191,13 +191,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import user_tokens_api
-from libretime.api.model.user_token import UserToken
+import libretime_client
+from libretime_client.api import user_tokens_api
+from libretime_client.model.user_token import UserToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -207,7 +207,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -219,7 +219,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_tokens_api.UserTokensApi(api_client)
 
@@ -227,7 +227,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.user_tokens_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_list: %s\n" % e)
 ```
 
@@ -269,14 +269,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import user_tokens_api
-from libretime.api.model.user_token import UserToken
-from libretime.api.model.patched_user_token import PatchedUserToken
+import libretime_client
+from libretime_client.api import user_tokens_api
+from libretime_client.model.user_token import UserToken
+from libretime_client.model.patched_user_token import PatchedUserToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -286,7 +286,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -298,7 +298,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_tokens_api.UserTokensApi(api_client)
     id = 1 # int | A unique integer value identifying this user token.
@@ -313,7 +313,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.user_tokens_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -321,7 +321,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.user_tokens_partial_update(id, patched_user_token=patched_user_token)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_partial_update: %s\n" % e)
 ```
 
@@ -367,13 +367,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import user_tokens_api
-from libretime.api.model.user_token import UserToken
+import libretime_client
+from libretime_client.api import user_tokens_api
+from libretime_client.model.user_token import UserToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -383,7 +383,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -395,7 +395,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_tokens_api.UserTokensApi(api_client)
     id = 1 # int | A unique integer value identifying this user token.
@@ -404,7 +404,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.user_tokens_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_retrieve: %s\n" % e)
 ```
 
@@ -449,13 +449,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import user_tokens_api
-from libretime.api.model.user_token import UserToken
+import libretime_client
+from libretime_client.api import user_tokens_api
+from libretime_client.model.user_token import UserToken
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -465,7 +465,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -477,7 +477,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_tokens_api.UserTokensApi(api_client)
     id = 1 # int | A unique integer value identifying this user token.
@@ -492,7 +492,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.user_tokens_update(id, user_token)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling UserTokensApi->user_tokens_update: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# libretime.api.VersionApi
+# libretime_client.VersionApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,12 +19,12 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import version_api
+import libretime_client
+from libretime_client.api import version_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -34,7 +34,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -46,14 +46,14 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = version_api.VersionApi(api_client)
 
     # example, this endpoint has no required or optional parameters
     try:
         api_instance.version_retrieve()
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling VersionApi->version_retrieve: %s\n" % e)
 ```
 

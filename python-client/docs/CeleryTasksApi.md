@@ -1,4 +1,4 @@
-# libretime.api.CeleryTasksApi
+# libretime_client.CeleryTasksApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import celery_tasks_api
-from libretime.api.model.celery_task import CeleryTask
+import libretime_client
+from libretime_client.api import celery_tasks_api
+from libretime_client.model.celery_task import CeleryTask
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = celery_tasks_api.CeleryTasksApi(api_client)
     celery_task = CeleryTask(
@@ -67,7 +67,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.celery_tasks_create(celery_task)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_create: %s\n" % e)
 ```
 
@@ -112,12 +112,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import celery_tasks_api
+import libretime_client
+from libretime_client.api import celery_tasks_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -127,7 +127,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -139,7 +139,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = celery_tasks_api.CeleryTasksApi(api_client)
     id = 1 # int | A unique integer value identifying this celery task.
@@ -147,7 +147,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.celery_tasks_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_destroy: %s\n" % e)
 ```
 
@@ -192,13 +192,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import celery_tasks_api
-from libretime.api.model.celery_task import CeleryTask
+import libretime_client
+from libretime_client.api import celery_tasks_api
+from libretime_client.model.celery_task import CeleryTask
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -208,7 +208,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -220,7 +220,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = celery_tasks_api.CeleryTasksApi(api_client)
 
@@ -228,7 +228,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.celery_tasks_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_list: %s\n" % e)
 ```
 
@@ -270,14 +270,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import celery_tasks_api
-from libretime.api.model.patched_celery_task import PatchedCeleryTask
-from libretime.api.model.celery_task import CeleryTask
+import libretime_client
+from libretime_client.api import celery_tasks_api
+from libretime_client.model.patched_celery_task import PatchedCeleryTask
+from libretime_client.model.celery_task import CeleryTask
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -287,7 +287,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -299,7 +299,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = celery_tasks_api.CeleryTasksApi(api_client)
     id = 1 # int | A unique integer value identifying this celery task.
@@ -315,7 +315,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.celery_tasks_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -323,7 +323,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.celery_tasks_partial_update(id, patched_celery_task=patched_celery_task)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_partial_update: %s\n" % e)
 ```
 
@@ -369,13 +369,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import celery_tasks_api
-from libretime.api.model.celery_task import CeleryTask
+import libretime_client
+from libretime_client.api import celery_tasks_api
+from libretime_client.model.celery_task import CeleryTask
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -385,7 +385,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -397,7 +397,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = celery_tasks_api.CeleryTasksApi(api_client)
     id = 1 # int | A unique integer value identifying this celery task.
@@ -406,7 +406,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.celery_tasks_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_retrieve: %s\n" % e)
 ```
 
@@ -451,13 +451,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import celery_tasks_api
-from libretime.api.model.celery_task import CeleryTask
+import libretime_client
+from libretime_client.api import celery_tasks_api
+from libretime_client.model.celery_task import CeleryTask
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -467,7 +467,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -479,7 +479,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = celery_tasks_api.CeleryTasksApi(api_client)
     id = 1 # int | A unique integer value identifying this celery task.
@@ -495,7 +495,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.celery_tasks_update(id, celery_task)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling CeleryTasksApi->celery_tasks_update: %s\n" % e)
 ```
 

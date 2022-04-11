@@ -1,4 +1,4 @@
-# libretime.api.SmartBlockContentsApi
+# libretime_client.SmartBlockContentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import smart_block_contents_api
-from libretime.api.model.smart_block_content import SmartBlockContent
+import libretime_client
+from libretime_client.api import smart_block_contents_api
+from libretime_client.model.smart_block_content import SmartBlockContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
     smart_block_content = SmartBlockContent(
@@ -71,7 +71,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_block_contents_create(smart_block_content)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_create: %s\n" % e)
 ```
 
@@ -116,12 +116,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import smart_block_contents_api
+import libretime_client
+from libretime_client.api import smart_block_contents_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -131,7 +131,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -143,7 +143,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block content.
@@ -151,7 +151,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.smart_block_contents_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_destroy: %s\n" % e)
 ```
 
@@ -196,13 +196,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import smart_block_contents_api
-from libretime.api.model.smart_block_content import SmartBlockContent
+import libretime_client
+from libretime_client.api import smart_block_contents_api
+from libretime_client.model.smart_block_content import SmartBlockContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -224,7 +224,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
 
@@ -232,7 +232,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_block_contents_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_list: %s\n" % e)
 ```
 
@@ -274,14 +274,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import smart_block_contents_api
-from libretime.api.model.patched_smart_block_content import PatchedSmartBlockContent
-from libretime.api.model.smart_block_content import SmartBlockContent
+import libretime_client
+from libretime_client.api import smart_block_contents_api
+from libretime_client.model.smart_block_content import SmartBlockContent
+from libretime_client.model.patched_smart_block_content import PatchedSmartBlockContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -291,7 +291,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -303,7 +303,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block content.
@@ -323,7 +323,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_block_contents_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -331,7 +331,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_block_contents_partial_update(id, patched_smart_block_content=patched_smart_block_content)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_partial_update: %s\n" % e)
 ```
 
@@ -377,13 +377,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import smart_block_contents_api
-from libretime.api.model.smart_block_content import SmartBlockContent
+import libretime_client
+from libretime_client.api import smart_block_contents_api
+from libretime_client.model.smart_block_content import SmartBlockContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -393,7 +393,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -405,7 +405,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block content.
@@ -414,7 +414,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_block_contents_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_retrieve: %s\n" % e)
 ```
 
@@ -459,13 +459,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import smart_block_contents_api
-from libretime.api.model.smart_block_content import SmartBlockContent
+import libretime_client
+from libretime_client.api import smart_block_contents_api
+from libretime_client.model.smart_block_content import SmartBlockContent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -475,7 +475,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -487,7 +487,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block content.
@@ -507,7 +507,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.smart_block_contents_update(id, smart_block_content)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling SmartBlockContentsApi->smart_block_contents_update: %s\n" % e)
 ```
 

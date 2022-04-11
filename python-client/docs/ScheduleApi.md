@@ -1,4 +1,4 @@
-# libretime.api.ScheduleApi
+# libretime_client.ScheduleApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import schedule_api
-from libretime.api.model.schedule import Schedule
+import libretime_client
+from libretime_client.api import schedule_api
+from libretime_client.model.schedule import Schedule
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     schedule = Schedule(
@@ -74,7 +74,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schedule_create(schedule)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_create: %s\n" % e)
 ```
 
@@ -119,12 +119,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import schedule_api
+import libretime_client
+from libretime_client.api import schedule_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -134,7 +134,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -146,7 +146,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     id = 1 # int | A unique integer value identifying this schedule.
@@ -154,7 +154,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.schedule_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_destroy: %s\n" % e)
 ```
 
@@ -199,13 +199,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import schedule_api
-from libretime.api.model.schedule import Schedule
+import libretime_client
+from libretime_client.api import schedule_api
+from libretime_client.model.schedule import Schedule
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -215,7 +215,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -227,7 +227,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     broadcasted = 1 # int |  (optional)
@@ -269,7 +269,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schedule_list(broadcasted=broadcasted, broadcasted__gt=broadcasted__gt, broadcasted__gte=broadcasted__gte, broadcasted__lt=broadcasted__lt, broadcasted__lte=broadcasted__lte, broadcasted__range=broadcasted__range, ends=ends, ends__gt=ends__gt, ends__gte=ends__gte, ends__lt=ends__lt, ends__lte=ends__lte, ends__range=ends__range, is_valid=is_valid, playout_status=playout_status, playout_status__gt=playout_status__gt, playout_status__gte=playout_status__gte, playout_status__lt=playout_status__lt, playout_status__lte=playout_status__lte, playout_status__range=playout_status__range, starts=starts, starts__gt=starts__gt, starts__gte=starts__gte, starts__lt=starts__lt, starts__lte=starts__lte, starts__range=starts__range)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_list: %s\n" % e)
 ```
 
@@ -338,14 +338,14 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import schedule_api
-from libretime.api.model.patched_schedule import PatchedSchedule
-from libretime.api.model.schedule import Schedule
+import libretime_client
+from libretime_client.api import schedule_api
+from libretime_client.model.schedule import Schedule
+from libretime_client.model.patched_schedule import PatchedSchedule
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -355,7 +355,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -367,7 +367,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     id = 1 # int | A unique integer value identifying this schedule.
@@ -390,7 +390,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schedule_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -398,7 +398,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schedule_partial_update(id, patched_schedule=patched_schedule)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_partial_update: %s\n" % e)
 ```
 
@@ -444,13 +444,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import schedule_api
-from libretime.api.model.schedule import Schedule
+import libretime_client
+from libretime_client.api import schedule_api
+from libretime_client.model.schedule import Schedule
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -460,7 +460,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -472,7 +472,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     id = 1 # int | A unique integer value identifying this schedule.
@@ -481,7 +481,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schedule_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_retrieve: %s\n" % e)
 ```
 
@@ -526,13 +526,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import schedule_api
-from libretime.api.model.schedule import Schedule
+import libretime_client
+from libretime_client.api import schedule_api
+from libretime_client.model.schedule import Schedule
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -542,7 +542,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -554,7 +554,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     id = 1 # int | A unique integer value identifying this schedule.
@@ -577,7 +577,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.schedule_update(id, schedule)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_update: %s\n" % e)
 ```
 

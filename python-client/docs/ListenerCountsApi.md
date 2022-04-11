@@ -1,4 +1,4 @@
-# libretime.api.ListenerCountsApi
+# libretime_client.ListenerCountsApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import listener_counts_api
-from libretime.api.model.listener_count import ListenerCount
+import libretime_client
+from libretime_client.api import listener_counts_api
+from libretime_client.model.listener_count import ListenerCount
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
     listener_count = ListenerCount(
@@ -65,7 +65,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.listener_counts_create(listener_count)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_create: %s\n" % e)
 ```
 
@@ -110,12 +110,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import listener_counts_api
+import libretime_client
+from libretime_client.api import listener_counts_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -137,7 +137,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
     id = 1 # int | A unique integer value identifying this listener count.
@@ -145,7 +145,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.listener_counts_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_destroy: %s\n" % e)
 ```
 
@@ -190,13 +190,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import listener_counts_api
-from libretime.api.model.listener_count import ListenerCount
+import libretime_client
+from libretime_client.api import listener_counts_api
+from libretime_client.model.listener_count import ListenerCount
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -206,7 +206,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -218,7 +218,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
 
@@ -226,7 +226,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.listener_counts_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_list: %s\n" % e)
 ```
 
@@ -268,14 +268,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import listener_counts_api
-from libretime.api.model.patched_listener_count import PatchedListenerCount
-from libretime.api.model.listener_count import ListenerCount
+import libretime_client
+from libretime_client.api import listener_counts_api
+from libretime_client.model.patched_listener_count import PatchedListenerCount
+from libretime_client.model.listener_count import ListenerCount
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -285,7 +285,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -297,7 +297,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
     id = 1 # int | A unique integer value identifying this listener count.
@@ -311,7 +311,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.listener_counts_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -319,7 +319,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.listener_counts_partial_update(id, patched_listener_count=patched_listener_count)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_partial_update: %s\n" % e)
 ```
 
@@ -365,13 +365,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import listener_counts_api
-from libretime.api.model.listener_count import ListenerCount
+import libretime_client
+from libretime_client.api import listener_counts_api
+from libretime_client.model.listener_count import ListenerCount
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -381,7 +381,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -393,7 +393,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
     id = 1 # int | A unique integer value identifying this listener count.
@@ -402,7 +402,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.listener_counts_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_retrieve: %s\n" % e)
 ```
 
@@ -447,13 +447,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import listener_counts_api
-from libretime.api.model.listener_count import ListenerCount
+import libretime_client
+from libretime_client.api import listener_counts_api
+from libretime_client.model.listener_count import ListenerCount
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -463,7 +463,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -475,7 +475,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
     id = 1 # int | A unique integer value identifying this listener count.
@@ -489,7 +489,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.listener_counts_update(id, listener_count)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling ListenerCountsApi->listener_counts_update: %s\n" % e)
 ```
 

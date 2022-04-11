@@ -1,4 +1,4 @@
-# libretime.api.MountNamesApi
+# libretime_client.MountNamesApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import mount_names_api
-from libretime.api.model.mount_name import MountName
+import libretime_client
+from libretime_client.api import mount_names_api
+from libretime_client.model.mount_name import MountName
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -52,7 +52,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mount_names_api.MountNamesApi(api_client)
     mount_name = MountName(
@@ -63,7 +63,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.mount_names_create(mount_name)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_create: %s\n" % e)
 ```
 
@@ -108,12 +108,12 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import mount_names_api
+import libretime_client
+from libretime_client.api import mount_names_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -123,7 +123,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -135,7 +135,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mount_names_api.MountNamesApi(api_client)
     id = 1 # int | A unique integer value identifying this mount name.
@@ -143,7 +143,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.mount_names_destroy(id)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_destroy: %s\n" % e)
 ```
 
@@ -188,13 +188,13 @@ void (empty response body)
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import mount_names_api
-from libretime.api.model.mount_name import MountName
+import libretime_client
+from libretime_client.api import mount_names_api
+from libretime_client.model.mount_name import MountName
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -204,7 +204,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -216,7 +216,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mount_names_api.MountNamesApi(api_client)
 
@@ -224,7 +224,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.mount_names_list()
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_list: %s\n" % e)
 ```
 
@@ -266,14 +266,14 @@ This endpoint does not need any parameter.
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import mount_names_api
-from libretime.api.model.mount_name import MountName
-from libretime.api.model.patched_mount_name import PatchedMountName
+import libretime_client
+from libretime_client.api import mount_names_api
+from libretime_client.model.mount_name import MountName
+from libretime_client.model.patched_mount_name import PatchedMountName
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -283,7 +283,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -295,7 +295,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mount_names_api.MountNamesApi(api_client)
     id = 1 # int | A unique integer value identifying this mount name.
@@ -307,7 +307,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.mount_names_partial_update(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_partial_update: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -315,7 +315,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.mount_names_partial_update(id, patched_mount_name=patched_mount_name)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_partial_update: %s\n" % e)
 ```
 
@@ -361,13 +361,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import mount_names_api
-from libretime.api.model.mount_name import MountName
+import libretime_client
+from libretime_client.api import mount_names_api
+from libretime_client.model.mount_name import MountName
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -377,7 +377,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -389,7 +389,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mount_names_api.MountNamesApi(api_client)
     id = 1 # int | A unique integer value identifying this mount name.
@@ -398,7 +398,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.mount_names_retrieve(id)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_retrieve: %s\n" % e)
 ```
 
@@ -443,13 +443,13 @@ Name | Type | Description  | Notes
 
 ```python
 import time
-import libretime.api
-from libretime.api.api import mount_names_api
-from libretime.api.model.mount_name import MountName
+import libretime_client
+from libretime_client.api import mount_names_api
+from libretime_client.model.mount_name import MountName
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     host = "http://localhost"
 )
 
@@ -459,7 +459,7 @@ configuration = libretime.api.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: basicAuth
-configuration = libretime.api.Configuration(
+configuration = libretime_client.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
@@ -471,7 +471,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['cookieAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with libretime.api.ApiClient(configuration) as api_client:
+with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mount_names_api.MountNamesApi(api_client)
     id = 1 # int | A unique integer value identifying this mount name.
@@ -483,7 +483,7 @@ with libretime.api.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.mount_names_update(id, mount_name)
         pprint(api_response)
-    except libretime.api.ApiException as e:
+    except libretime_client.ApiException as e:
         print("Exception when calling MountNamesApi->mount_names_update: %s\n" % e)
 ```
 
