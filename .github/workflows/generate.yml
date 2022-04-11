@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - schema.yml
-      - .github/workflow/generate.yml
+      - .github/workflows/generate.yml
 
 env:
   COMMON_CONFIG: '--git-user-id $GITHUB_REPOSITORY_OWNER --git-repo-id api-client'
