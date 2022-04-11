@@ -3,6 +3,7 @@ on:
     branches: [main]
     paths:
       - schema.yml
+      - .github/workflow/generate.yml
 
 env:
   COMMON_CONFIG: '--git-user-id $GITHUB_REPOSITORY_OWNER --git-repo-id api-client'
@@ -21,7 +22,7 @@ jobs:
         with:
           generator: python
           openapi-file: schema.yml
-          command-args: '--package-name libretime.api $COMMON_CONFIG'
+          command-args: '--package-name libretime_client $COMMON_CONFIG'
       - name: Generate Javascript client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
