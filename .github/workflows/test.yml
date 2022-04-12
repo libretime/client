@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "*-client/**"
+      - .github/workflows/test.yml
 
 jobs:
   python:
