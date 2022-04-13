@@ -16,9 +16,10 @@ jobs:
   generate:
     name: Generate clients
     runs-on: ubuntu-latest
+
     concurrency:
       group: ${{ github.workflow }}
-      cancel-in-progress: true
+
     steps:
       - uses: actions/checkout@v3
 
