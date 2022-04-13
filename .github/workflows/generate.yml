@@ -8,7 +8,9 @@ on:
       - .github/workflows/generate.yml
 
 env:
-  COMMON_CONFIG: '--git-user-id $GITHUB_REPOSITORY_OWNER --git-repo-id api-client'
+  COMMON_CONFIG: >
+    --git-user-id $GITHUB_REPOSITORY_OWNER
+    --git-repo-id api-client
 
 jobs:
   generate:
@@ -19,24 +21,34 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
+
       - name: Generate Python client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: python
           openapi-file: schema.yml
-          command-args: '--package-name libretime_client $COMMON_CONFIG'
+          command-args: >
+            --package-name libretime_client
+            $COMMON_CONFIG
+
       - name: Generate Javascript client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: typescript-axios
           openapi-file: schema.yml
-          command-args: '--package-name libretime-client $COMMON_CONFIG'
+          command-args: >
+            --package-name libretime-client
+            $COMMON_CONFIG
+
       - name: Generate PHP client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: php
           openapi-file: schema.yml
-          command-args: '--package-name libretime/api $COMMON_CONFIG'
+          command-args: >
+            --package-name libretime/api
+            $COMMON_CONFIG
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
