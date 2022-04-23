@@ -1,0 +1,42 @@
+name: Schema
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/generate.yml
+      - Makefile
+      - schema.yml
+
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/generate.yml
+      - Makefile
+      - schema.yml
+
+jobs:
+  generate:
+    name: Generate clients
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate Javascript client
+        run: make javascript-client
+
+      - name: Generate Python client
+        run: make python-client
+
+      - name: Generate PHP client
+        run: make php-client
+
+      - name: Commit changes
+        if: github.repository_owner == 'libretime' && github.event_name == 'push'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: update clients"

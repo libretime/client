@@ -1,0 +1,53 @@
+name: PHP Client
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/php-client.yml
+      - php-client/**
+
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/php-client.yml
+      - php-client/**
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version:
+          - "7.3"
+          - "7.4"
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.php-version }}-composer-
+
+      - name: Install
+        working-directory: php-client
+        run: |
+          composer install
+
+      - name: Test
+        working-directory: php-client
+        run: |
+          composer exec phpunit

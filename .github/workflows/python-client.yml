@@ -1,0 +1,52 @@
+name: Python Client
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/python-client.yml
+      - python-client/**
+
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/python-client.yml
+      - python-client/**
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version:
+          - "3.6"
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.10"
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-${{ matrix.python-version }}-pip-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.python-version }}-pip-
+
+      - name: Install
+        working-directory: python-client
+        run: |
+          pip3 install -r requirements.txt
+          pip3 install -r test-requirements.txt
+
+      - name: Test
+        working-directory: python-client
+        run: |
+          pytest --cov=libretime
