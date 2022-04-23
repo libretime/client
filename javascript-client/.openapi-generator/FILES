@@ -128,4 +128,3 @@ model/user-token.ts
 model/user.ts
 model/webstream-metadata.ts
 model/webstream.ts
-tsconfig.json
