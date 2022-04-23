@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - schema.yml
       - .github/workflows/generate.yml
+      - schema.yml
 
 env:
   COMMON_CONFIG: >
@@ -51,6 +51,7 @@ jobs:
             $COMMON_CONFIG
 
       - name: Commit changes
+        if: github.repository_owner == 'libretime'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update clients
