@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.smart_block_criteria_api import SmartBlockCriteriaApi  # noqa: E501
+import libretime_client
+from libretime_client.api.smart_block_criteria_api import SmartBlockCriteriaApi  # noqa: E501
 
 
 class TestSmartBlockCriteriaApi(unittest.TestCase):

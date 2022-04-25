@@ -1,4 +1,4 @@
-# OpenAPI\Client\ListenerCountsApi
+# Libretime\Client\ListenerCountsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `listenerCountsCreate()`
 
 ```php
-listenerCountsCreate($listener_count): \OpenAPI\Client\Model\ListenerCount
+listenerCountsCreate($listener_count): \Libretime\Client\Model\ListenerCount
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ListenerCountsApi(
+$apiInstance = new Libretime\Client\Api\ListenerCountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$listener_count = new \OpenAPI\Client\Model\ListenerCount(); // \OpenAPI\Client\Model\ListenerCount
+$listener_count = new \Libretime\Client\Model\ListenerCount(); // \Libretime\Client\Model\ListenerCount
 
 try {
     $result = $apiInstance->listenerCountsCreate($listener_count);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listener_count** | [**\OpenAPI\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  |
+ **listener_count** | [**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListenerCount**](../Model/ListenerCount.md)
+[**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ListenerCountsApi(
+$apiInstance = new Libretime\Client\Api\ListenerCountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `listenerCountsList()`
 
 ```php
-listenerCountsList(): \OpenAPI\Client\Model\ListenerCount[]
+listenerCountsList(): \Libretime\Client\Model\ListenerCount[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ListenerCountsApi(
+$apiInstance = new Libretime\Client\Api\ListenerCountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListenerCount[]**](../Model/ListenerCount.md)
+[**\Libretime\Client\Model\ListenerCount[]**](../Model/ListenerCount.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `listenerCountsPartialUpdate()`
 
 ```php
-listenerCountsPartialUpdate($id, $patched_listener_count): \OpenAPI\Client\Model\ListenerCount
+listenerCountsPartialUpdate($id, $patched_listener_count): \Libretime\Client\Model\ListenerCount
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ListenerCountsApi(
+$apiInstance = new Libretime\Client\Api\ListenerCountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this listener count.
-$patched_listener_count = new \OpenAPI\Client\Model\PatchedListenerCount(); // \OpenAPI\Client\Model\PatchedListenerCount
+$patched_listener_count = new \Libretime\Client\Model\PatchedListenerCount(); // \Libretime\Client\Model\PatchedListenerCount
 
 try {
     $result = $apiInstance->listenerCountsPartialUpdate($id, $patched_listener_count);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this listener count. |
- **patched_listener_count** | [**\OpenAPI\Client\Model\PatchedListenerCount**](../Model/PatchedListenerCount.md)|  | [optional]
+ **patched_listener_count** | [**\Libretime\Client\Model\PatchedListenerCount**](../Model/PatchedListenerCount.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListenerCount**](../Model/ListenerCount.md)
+[**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `listenerCountsRetrieve()`
 
 ```php
-listenerCountsRetrieve($id): \OpenAPI\Client\Model\ListenerCount
+listenerCountsRetrieve($id): \Libretime\Client\Model\ListenerCount
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ListenerCountsApi(
+$apiInstance = new Libretime\Client\Api\ListenerCountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListenerCount**](../Model/ListenerCount.md)
+[**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `listenerCountsUpdate()`
 
 ```php
-listenerCountsUpdate($id, $listener_count): \OpenAPI\Client\Model\ListenerCount
+listenerCountsUpdate($id, $listener_count): \Libretime\Client\Model\ListenerCount
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ListenerCountsApi(
+$apiInstance = new Libretime\Client\Api\ListenerCountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this listener count.
-$listener_count = new \OpenAPI\Client\Model\ListenerCount(); // \OpenAPI\Client\Model\ListenerCount
+$listener_count = new \Libretime\Client\Model\ListenerCount(); // \Libretime\Client\Model\ListenerCount
 
 try {
     $result = $apiInstance->listenerCountsUpdate($id, $listener_count);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this listener count. |
- **listener_count** | [**\OpenAPI\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  |
+ **listener_count** | [**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListenerCount**](../Model/ListenerCount.md)
+[**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)
 
 ### Authorization
 

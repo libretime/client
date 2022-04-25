@@ -1,4 +1,4 @@
-# OpenAPI\Client\CloudFilesApi
+# Libretime\Client\CloudFilesApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `cloudFilesCreate()`
 
 ```php
-cloudFilesCreate($cloud_file): \OpenAPI\Client\Model\CloudFile
+cloudFilesCreate($cloud_file): \Libretime\Client\Model\CloudFile
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudFilesApi(
+$apiInstance = new Libretime\Client\Api\CloudFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$cloud_file = new \OpenAPI\Client\Model\CloudFile(); // \OpenAPI\Client\Model\CloudFile
+$cloud_file = new \Libretime\Client\Model\CloudFile(); // \Libretime\Client\Model\CloudFile
 
 try {
     $result = $apiInstance->cloudFilesCreate($cloud_file);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_file** | [**\OpenAPI\Client\Model\CloudFile**](../Model/CloudFile.md)|  |
+ **cloud_file** | [**\Libretime\Client\Model\CloudFile**](../Model/CloudFile.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CloudFile**](../Model/CloudFile.md)
+[**\Libretime\Client\Model\CloudFile**](../Model/CloudFile.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudFilesApi(
+$apiInstance = new Libretime\Client\Api\CloudFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `cloudFilesList()`
 
 ```php
-cloudFilesList(): \OpenAPI\Client\Model\CloudFile[]
+cloudFilesList(): \Libretime\Client\Model\CloudFile[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudFilesApi(
+$apiInstance = new Libretime\Client\Api\CloudFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CloudFile[]**](../Model/CloudFile.md)
+[**\Libretime\Client\Model\CloudFile[]**](../Model/CloudFile.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `cloudFilesPartialUpdate()`
 
 ```php
-cloudFilesPartialUpdate($id, $patched_cloud_file): \OpenAPI\Client\Model\CloudFile
+cloudFilesPartialUpdate($id, $patched_cloud_file): \Libretime\Client\Model\CloudFile
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudFilesApi(
+$apiInstance = new Libretime\Client\Api\CloudFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this cloud file.
-$patched_cloud_file = new \OpenAPI\Client\Model\PatchedCloudFile(); // \OpenAPI\Client\Model\PatchedCloudFile
+$patched_cloud_file = new \Libretime\Client\Model\PatchedCloudFile(); // \Libretime\Client\Model\PatchedCloudFile
 
 try {
     $result = $apiInstance->cloudFilesPartialUpdate($id, $patched_cloud_file);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this cloud file. |
- **patched_cloud_file** | [**\OpenAPI\Client\Model\PatchedCloudFile**](../Model/PatchedCloudFile.md)|  | [optional]
+ **patched_cloud_file** | [**\Libretime\Client\Model\PatchedCloudFile**](../Model/PatchedCloudFile.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CloudFile**](../Model/CloudFile.md)
+[**\Libretime\Client\Model\CloudFile**](../Model/CloudFile.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `cloudFilesRetrieve()`
 
 ```php
-cloudFilesRetrieve($id): \OpenAPI\Client\Model\CloudFile
+cloudFilesRetrieve($id): \Libretime\Client\Model\CloudFile
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudFilesApi(
+$apiInstance = new Libretime\Client\Api\CloudFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CloudFile**](../Model/CloudFile.md)
+[**\Libretime\Client\Model\CloudFile**](../Model/CloudFile.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `cloudFilesUpdate()`
 
 ```php
-cloudFilesUpdate($id, $cloud_file): \OpenAPI\Client\Model\CloudFile
+cloudFilesUpdate($id, $cloud_file): \Libretime\Client\Model\CloudFile
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudFilesApi(
+$apiInstance = new Libretime\Client\Api\CloudFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this cloud file.
-$cloud_file = new \OpenAPI\Client\Model\CloudFile(); // \OpenAPI\Client\Model\CloudFile
+$cloud_file = new \Libretime\Client\Model\CloudFile(); // \Libretime\Client\Model\CloudFile
 
 try {
     $result = $apiInstance->cloudFilesUpdate($id, $cloud_file);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this cloud file. |
- **cloud_file** | [**\OpenAPI\Client\Model\CloudFile**](../Model/CloudFile.md)|  |
+ **cloud_file** | [**\Libretime\Client\Model\CloudFile**](../Model/CloudFile.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CloudFile**](../Model/CloudFile.md)
+[**\Libretime\Client\Model\CloudFile**](../Model/CloudFile.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\PodcastsApi
+# Libretime\Client\PodcastsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `podcastsCreate()`
 
 ```php
-podcastsCreate($podcast): \OpenAPI\Client\Model\Podcast
+podcastsCreate($podcast): \Libretime\Client\Model\Podcast
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PodcastsApi(
+$apiInstance = new Libretime\Client\Api\PodcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$podcast = new \OpenAPI\Client\Model\Podcast(); // \OpenAPI\Client\Model\Podcast
+$podcast = new \Libretime\Client\Model\Podcast(); // \Libretime\Client\Model\Podcast
 
 try {
     $result = $apiInstance->podcastsCreate($podcast);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **podcast** | [**\OpenAPI\Client\Model\Podcast**](../Model/Podcast.md)|  |
+ **podcast** | [**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Podcast**](../Model/Podcast.md)
+[**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PodcastsApi(
+$apiInstance = new Libretime\Client\Api\PodcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `podcastsList()`
 
 ```php
-podcastsList(): \OpenAPI\Client\Model\Podcast[]
+podcastsList(): \Libretime\Client\Model\Podcast[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PodcastsApi(
+$apiInstance = new Libretime\Client\Api\PodcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Podcast[]**](../Model/Podcast.md)
+[**\Libretime\Client\Model\Podcast[]**](../Model/Podcast.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `podcastsPartialUpdate()`
 
 ```php
-podcastsPartialUpdate($id, $patched_podcast): \OpenAPI\Client\Model\Podcast
+podcastsPartialUpdate($id, $patched_podcast): \Libretime\Client\Model\Podcast
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PodcastsApi(
+$apiInstance = new Libretime\Client\Api\PodcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this podcast.
-$patched_podcast = new \OpenAPI\Client\Model\PatchedPodcast(); // \OpenAPI\Client\Model\PatchedPodcast
+$patched_podcast = new \Libretime\Client\Model\PatchedPodcast(); // \Libretime\Client\Model\PatchedPodcast
 
 try {
     $result = $apiInstance->podcastsPartialUpdate($id, $patched_podcast);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this podcast. |
- **patched_podcast** | [**\OpenAPI\Client\Model\PatchedPodcast**](../Model/PatchedPodcast.md)|  | [optional]
+ **patched_podcast** | [**\Libretime\Client\Model\PatchedPodcast**](../Model/PatchedPodcast.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Podcast**](../Model/Podcast.md)
+[**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `podcastsRetrieve()`
 
 ```php
-podcastsRetrieve($id): \OpenAPI\Client\Model\Podcast
+podcastsRetrieve($id): \Libretime\Client\Model\Podcast
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PodcastsApi(
+$apiInstance = new Libretime\Client\Api\PodcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Podcast**](../Model/Podcast.md)
+[**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `podcastsUpdate()`
 
 ```php
-podcastsUpdate($id, $podcast): \OpenAPI\Client\Model\Podcast
+podcastsUpdate($id, $podcast): \Libretime\Client\Model\Podcast
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PodcastsApi(
+$apiInstance = new Libretime\Client\Api\PodcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this podcast.
-$podcast = new \OpenAPI\Client\Model\Podcast(); // \OpenAPI\Client\Model\Podcast
+$podcast = new \Libretime\Client\Model\Podcast(); // \Libretime\Client\Model\Podcast
 
 try {
     $result = $apiInstance->podcastsUpdate($id, $podcast);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this podcast. |
- **podcast** | [**\OpenAPI\Client\Model\Podcast**](../Model/Podcast.md)|  |
+ **podcast** | [**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Podcast**](../Model/Podcast.md)
+[**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)
 
 ### Authorization
 

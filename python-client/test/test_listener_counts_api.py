@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.listener_counts_api import ListenerCountsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.listener_counts_api import ListenerCountsApi  # noqa: E501
 
 
 class TestListenerCountsApi(unittest.TestCase):

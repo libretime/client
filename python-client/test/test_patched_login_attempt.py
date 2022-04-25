@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_login_attempt import PatchedLoginAttempt
+import libretime_client
+from libretime_client.model.patched_login_attempt import PatchedLoginAttempt
 
 
 class TestPatchedLoginAttempt(unittest.TestCase):

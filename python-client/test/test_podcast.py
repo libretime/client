@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.podcast import Podcast
+import libretime_client
+from libretime_client.model.podcast import Podcast
 
 
 class TestPodcast(unittest.TestCase):

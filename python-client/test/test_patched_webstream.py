@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_webstream import PatchedWebstream
+import libretime_client
+from libretime_client.model.patched_webstream import PatchedWebstream
 
 
 class TestPatchedWebstream(unittest.TestCase):

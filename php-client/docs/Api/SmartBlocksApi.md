@@ -1,4 +1,4 @@
-# OpenAPI\Client\SmartBlocksApi
+# Libretime\Client\SmartBlocksApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `smartBlocksCreate()`
 
 ```php
-smartBlocksCreate($smart_block): \OpenAPI\Client\Model\SmartBlock
+smartBlocksCreate($smart_block): \Libretime\Client\Model\SmartBlock
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlocksApi(
+$apiInstance = new Libretime\Client\Api\SmartBlocksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$smart_block = new \OpenAPI\Client\Model\SmartBlock(); // \OpenAPI\Client\Model\SmartBlock
+$smart_block = new \Libretime\Client\Model\SmartBlock(); // \Libretime\Client\Model\SmartBlock
 
 try {
     $result = $apiInstance->smartBlocksCreate($smart_block);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smart_block** | [**\OpenAPI\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  |
+ **smart_block** | [**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlock**](../Model/SmartBlock.md)
+[**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlocksApi(
+$apiInstance = new Libretime\Client\Api\SmartBlocksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `smartBlocksList()`
 
 ```php
-smartBlocksList(): \OpenAPI\Client\Model\SmartBlock[]
+smartBlocksList(): \Libretime\Client\Model\SmartBlock[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlocksApi(
+$apiInstance = new Libretime\Client\Api\SmartBlocksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlock[]**](../Model/SmartBlock.md)
+[**\Libretime\Client\Model\SmartBlock[]**](../Model/SmartBlock.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `smartBlocksPartialUpdate()`
 
 ```php
-smartBlocksPartialUpdate($id, $patched_smart_block): \OpenAPI\Client\Model\SmartBlock
+smartBlocksPartialUpdate($id, $patched_smart_block): \Libretime\Client\Model\SmartBlock
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlocksApi(
+$apiInstance = new Libretime\Client\Api\SmartBlocksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this smart block.
-$patched_smart_block = new \OpenAPI\Client\Model\PatchedSmartBlock(); // \OpenAPI\Client\Model\PatchedSmartBlock
+$patched_smart_block = new \Libretime\Client\Model\PatchedSmartBlock(); // \Libretime\Client\Model\PatchedSmartBlock
 
 try {
     $result = $apiInstance->smartBlocksPartialUpdate($id, $patched_smart_block);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this smart block. |
- **patched_smart_block** | [**\OpenAPI\Client\Model\PatchedSmartBlock**](../Model/PatchedSmartBlock.md)|  | [optional]
+ **patched_smart_block** | [**\Libretime\Client\Model\PatchedSmartBlock**](../Model/PatchedSmartBlock.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlock**](../Model/SmartBlock.md)
+[**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `smartBlocksRetrieve()`
 
 ```php
-smartBlocksRetrieve($id): \OpenAPI\Client\Model\SmartBlock
+smartBlocksRetrieve($id): \Libretime\Client\Model\SmartBlock
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlocksApi(
+$apiInstance = new Libretime\Client\Api\SmartBlocksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlock**](../Model/SmartBlock.md)
+[**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `smartBlocksUpdate()`
 
 ```php
-smartBlocksUpdate($id, $smart_block): \OpenAPI\Client\Model\SmartBlock
+smartBlocksUpdate($id, $smart_block): \Libretime\Client\Model\SmartBlock
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlocksApi(
+$apiInstance = new Libretime\Client\Api\SmartBlocksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this smart block.
-$smart_block = new \OpenAPI\Client\Model\SmartBlock(); // \OpenAPI\Client\Model\SmartBlock
+$smart_block = new \Libretime\Client\Model\SmartBlock(); // \Libretime\Client\Model\SmartBlock
 
 try {
     $result = $apiInstance->smartBlocksUpdate($id, $smart_block);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this smart block. |
- **smart_block** | [**\OpenAPI\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  |
+ **smart_block** | [**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlock**](../Model/SmartBlock.md)
+[**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)
 
 ### Authorization
 

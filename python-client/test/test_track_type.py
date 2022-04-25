@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.track_type import TrackType
+import libretime_client
+from libretime_client.model.track_type import TrackType
 
 
 class TestTrackType(unittest.TestCase):

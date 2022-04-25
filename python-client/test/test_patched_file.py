@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_file import PatchedFile
+import libretime_client
+from libretime_client.model.patched_file import PatchedFile
 
 
 class TestPatchedFile(unittest.TestCase):

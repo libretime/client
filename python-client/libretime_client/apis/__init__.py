@@ -6,7 +6,7 @@
 # raise a `RecursionError`.
 # In order to avoid this, import only the API that you directly need like:
 #
-#   from libretime_client.api.celery_tasks_api import CeleryTasksApi
+#   from .api.celery_tasks_api import CeleryTasksApi
 #
 # or import this package, but before doing it, use:
 #

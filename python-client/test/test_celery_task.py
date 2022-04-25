@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.celery_task import CeleryTask
+import libretime_client
+from libretime_client.model.celery_task import CeleryTask
 
 
 class TestCeleryTask(unittest.TestCase):

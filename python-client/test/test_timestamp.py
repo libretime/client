@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.timestamp import Timestamp
+import libretime_client
+from libretime_client.model.timestamp import Timestamp
 
 
 class TestTimestamp(unittest.TestCase):

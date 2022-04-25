@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.login_attempt import LoginAttempt
+import libretime_client
+from libretime_client.model.login_attempt import LoginAttempt
 
 
 class TestLoginAttempt(unittest.TestCase):

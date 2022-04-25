@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.celery_tasks_api import CeleryTasksApi  # noqa: E501
+import libretime_client
+from libretime_client.api.celery_tasks_api import CeleryTasksApi  # noqa: E501
 
 
 class TestCeleryTasksApi(unittest.TestCase):

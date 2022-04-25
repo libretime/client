@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShowRebroadcastsApi
+# Libretime\Client\ShowRebroadcastsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `showRebroadcastsCreate()`
 
 ```php
-showRebroadcastsCreate($show_rebroadcast): \OpenAPI\Client\Model\ShowRebroadcast
+showRebroadcastsCreate($show_rebroadcast): \Libretime\Client\Model\ShowRebroadcast
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowRebroadcastsApi(
+$apiInstance = new Libretime\Client\Api\ShowRebroadcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$show_rebroadcast = new \OpenAPI\Client\Model\ShowRebroadcast(); // \OpenAPI\Client\Model\ShowRebroadcast
+$show_rebroadcast = new \Libretime\Client\Model\ShowRebroadcast(); // \Libretime\Client\Model\ShowRebroadcast
 
 try {
     $result = $apiInstance->showRebroadcastsCreate($show_rebroadcast);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **show_rebroadcast** | [**\OpenAPI\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  |
+ **show_rebroadcast** | [**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
+[**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowRebroadcastsApi(
+$apiInstance = new Libretime\Client\Api\ShowRebroadcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `showRebroadcastsList()`
 
 ```php
-showRebroadcastsList(): \OpenAPI\Client\Model\ShowRebroadcast[]
+showRebroadcastsList(): \Libretime\Client\Model\ShowRebroadcast[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowRebroadcastsApi(
+$apiInstance = new Libretime\Client\Api\ShowRebroadcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowRebroadcast[]**](../Model/ShowRebroadcast.md)
+[**\Libretime\Client\Model\ShowRebroadcast[]**](../Model/ShowRebroadcast.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `showRebroadcastsPartialUpdate()`
 
 ```php
-showRebroadcastsPartialUpdate($id, $patched_show_rebroadcast): \OpenAPI\Client\Model\ShowRebroadcast
+showRebroadcastsPartialUpdate($id, $patched_show_rebroadcast): \Libretime\Client\Model\ShowRebroadcast
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowRebroadcastsApi(
+$apiInstance = new Libretime\Client\Api\ShowRebroadcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this show rebroadcast.
-$patched_show_rebroadcast = new \OpenAPI\Client\Model\PatchedShowRebroadcast(); // \OpenAPI\Client\Model\PatchedShowRebroadcast
+$patched_show_rebroadcast = new \Libretime\Client\Model\PatchedShowRebroadcast(); // \Libretime\Client\Model\PatchedShowRebroadcast
 
 try {
     $result = $apiInstance->showRebroadcastsPartialUpdate($id, $patched_show_rebroadcast);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this show rebroadcast. |
- **patched_show_rebroadcast** | [**\OpenAPI\Client\Model\PatchedShowRebroadcast**](../Model/PatchedShowRebroadcast.md)|  | [optional]
+ **patched_show_rebroadcast** | [**\Libretime\Client\Model\PatchedShowRebroadcast**](../Model/PatchedShowRebroadcast.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
+[**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `showRebroadcastsRetrieve()`
 
 ```php
-showRebroadcastsRetrieve($id): \OpenAPI\Client\Model\ShowRebroadcast
+showRebroadcastsRetrieve($id): \Libretime\Client\Model\ShowRebroadcast
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowRebroadcastsApi(
+$apiInstance = new Libretime\Client\Api\ShowRebroadcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
+[**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `showRebroadcastsUpdate()`
 
 ```php
-showRebroadcastsUpdate($id, $show_rebroadcast): \OpenAPI\Client\Model\ShowRebroadcast
+showRebroadcastsUpdate($id, $show_rebroadcast): \Libretime\Client\Model\ShowRebroadcast
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowRebroadcastsApi(
+$apiInstance = new Libretime\Client\Api\ShowRebroadcastsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this show rebroadcast.
-$show_rebroadcast = new \OpenAPI\Client\Model\ShowRebroadcast(); // \OpenAPI\Client\Model\ShowRebroadcast
+$show_rebroadcast = new \Libretime\Client\Model\ShowRebroadcast(); // \Libretime\Client\Model\ShowRebroadcast
 
 try {
     $result = $apiInstance->showRebroadcastsUpdate($id, $show_rebroadcast);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this show rebroadcast. |
- **show_rebroadcast** | [**\OpenAPI\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  |
+ **show_rebroadcast** | [**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
+[**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)
 
 ### Authorization
 

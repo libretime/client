@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.music_dir import MusicDir
+import libretime_client
+from libretime_client.model.music_dir import MusicDir
 
 
 class TestMusicDir(unittest.TestCase):

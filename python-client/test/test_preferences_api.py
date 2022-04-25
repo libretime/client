@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.preferences_api import PreferencesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.preferences_api import PreferencesApi  # noqa: E501
 
 
 class TestPreferencesApi(unittest.TestCase):

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ServiceRegistersApi
+# Libretime\Client\ServiceRegistersApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `serviceRegistersCreate()`
 
 ```php
-serviceRegistersCreate($service_register): \OpenAPI\Client\Model\ServiceRegister
+serviceRegistersCreate($service_register): \Libretime\Client\Model\ServiceRegister
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServiceRegistersApi(
+$apiInstance = new Libretime\Client\Api\ServiceRegistersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$service_register = new \OpenAPI\Client\Model\ServiceRegister(); // \OpenAPI\Client\Model\ServiceRegister
+$service_register = new \Libretime\Client\Model\ServiceRegister(); // \Libretime\Client\Model\ServiceRegister
 
 try {
     $result = $apiInstance->serviceRegistersCreate($service_register);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **service_register** | [**\OpenAPI\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  |
+ **service_register** | [**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
+[**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServiceRegistersApi(
+$apiInstance = new Libretime\Client\Api\ServiceRegistersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `serviceRegistersList()`
 
 ```php
-serviceRegistersList(): \OpenAPI\Client\Model\ServiceRegister[]
+serviceRegistersList(): \Libretime\Client\Model\ServiceRegister[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServiceRegistersApi(
+$apiInstance = new Libretime\Client\Api\ServiceRegistersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceRegister[]**](../Model/ServiceRegister.md)
+[**\Libretime\Client\Model\ServiceRegister[]**](../Model/ServiceRegister.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `serviceRegistersPartialUpdate()`
 
 ```php
-serviceRegistersPartialUpdate($name, $patched_service_register): \OpenAPI\Client\Model\ServiceRegister
+serviceRegistersPartialUpdate($name, $patched_service_register): \Libretime\Client\Model\ServiceRegister
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServiceRegistersApi(
+$apiInstance = new Libretime\Client\Api\ServiceRegistersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $name = 'name_example'; // string | A unique value identifying this service register.
-$patched_service_register = new \OpenAPI\Client\Model\PatchedServiceRegister(); // \OpenAPI\Client\Model\PatchedServiceRegister
+$patched_service_register = new \Libretime\Client\Model\PatchedServiceRegister(); // \Libretime\Client\Model\PatchedServiceRegister
 
 try {
     $result = $apiInstance->serviceRegistersPartialUpdate($name, $patched_service_register);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| A unique value identifying this service register. |
- **patched_service_register** | [**\OpenAPI\Client\Model\PatchedServiceRegister**](../Model/PatchedServiceRegister.md)|  | [optional]
+ **patched_service_register** | [**\Libretime\Client\Model\PatchedServiceRegister**](../Model/PatchedServiceRegister.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
+[**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `serviceRegistersRetrieve()`
 
 ```php
-serviceRegistersRetrieve($name): \OpenAPI\Client\Model\ServiceRegister
+serviceRegistersRetrieve($name): \Libretime\Client\Model\ServiceRegister
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServiceRegistersApi(
+$apiInstance = new Libretime\Client\Api\ServiceRegistersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
+[**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `serviceRegistersUpdate()`
 
 ```php
-serviceRegistersUpdate($name, $service_register): \OpenAPI\Client\Model\ServiceRegister
+serviceRegistersUpdate($name, $service_register): \Libretime\Client\Model\ServiceRegister
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ServiceRegistersApi(
+$apiInstance = new Libretime\Client\Api\ServiceRegistersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $name = 'name_example'; // string | A unique value identifying this service register.
-$service_register = new \OpenAPI\Client\Model\ServiceRegister(); // \OpenAPI\Client\Model\ServiceRegister
+$service_register = new \Libretime\Client\Model\ServiceRegister(); // \Libretime\Client\Model\ServiceRegister
 
 try {
     $result = $apiInstance->serviceRegistersUpdate($name, $service_register);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| A unique value identifying this service register. |
- **service_register** | [**\OpenAPI\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  |
+ **service_register** | [**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
+[**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)
 
 ### Authorization
 

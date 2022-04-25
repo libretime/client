@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_service_register import PatchedServiceRegister
+import libretime_client
+from libretime_client.model.patched_service_register import PatchedServiceRegister
 
 
 class TestPatchedServiceRegister(unittest.TestCase):

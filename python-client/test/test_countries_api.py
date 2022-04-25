@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.countries_api import CountriesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.countries_api import CountriesApi  # noqa: E501
 
 
 class TestCountriesApi(unittest.TestCase):

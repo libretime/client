@@ -1,4 +1,4 @@
-# OpenAPI\Client\StreamSettingsApi
+# Libretime\Client\StreamSettingsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `streamSettingsCreate()`
 
 ```php
-streamSettingsCreate($stream_setting): \OpenAPI\Client\Model\StreamSetting
+streamSettingsCreate($stream_setting): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StreamSettingsApi(
+$apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$stream_setting = new \OpenAPI\Client\Model\StreamSetting(); // \OpenAPI\Client\Model\StreamSetting
+$stream_setting = new \Libretime\Client\Model\StreamSetting(); // \Libretime\Client\Model\StreamSetting
 
 try {
     $result = $apiInstance->streamSettingsCreate($stream_setting);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stream_setting** | [**\OpenAPI\Client\Model\StreamSetting**](../Model/StreamSetting.md)|  |
+ **stream_setting** | [**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StreamSetting**](../Model/StreamSetting.md)
+[**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StreamSettingsApi(
+$apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `streamSettingsList()`
 
 ```php
-streamSettingsList(): \OpenAPI\Client\Model\StreamSetting[]
+streamSettingsList(): \Libretime\Client\Model\StreamSetting[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StreamSettingsApi(
+$apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StreamSetting[]**](../Model/StreamSetting.md)
+[**\Libretime\Client\Model\StreamSetting[]**](../Model/StreamSetting.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `streamSettingsPartialUpdate()`
 
 ```php
-streamSettingsPartialUpdate($keyname, $patched_stream_setting): \OpenAPI\Client\Model\StreamSetting
+streamSettingsPartialUpdate($keyname, $patched_stream_setting): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StreamSettingsApi(
+$apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $keyname = 'keyname_example'; // string | A unique value identifying this stream setting.
-$patched_stream_setting = new \OpenAPI\Client\Model\PatchedStreamSetting(); // \OpenAPI\Client\Model\PatchedStreamSetting
+$patched_stream_setting = new \Libretime\Client\Model\PatchedStreamSetting(); // \Libretime\Client\Model\PatchedStreamSetting
 
 try {
     $result = $apiInstance->streamSettingsPartialUpdate($keyname, $patched_stream_setting);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyname** | **string**| A unique value identifying this stream setting. |
- **patched_stream_setting** | [**\OpenAPI\Client\Model\PatchedStreamSetting**](../Model/PatchedStreamSetting.md)|  | [optional]
+ **patched_stream_setting** | [**\Libretime\Client\Model\PatchedStreamSetting**](../Model/PatchedStreamSetting.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StreamSetting**](../Model/StreamSetting.md)
+[**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `streamSettingsRetrieve()`
 
 ```php
-streamSettingsRetrieve($keyname): \OpenAPI\Client\Model\StreamSetting
+streamSettingsRetrieve($keyname): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StreamSettingsApi(
+$apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StreamSetting**](../Model/StreamSetting.md)
+[**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `streamSettingsUpdate()`
 
 ```php
-streamSettingsUpdate($keyname, $stream_setting): \OpenAPI\Client\Model\StreamSetting
+streamSettingsUpdate($keyname, $stream_setting): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StreamSettingsApi(
+$apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $keyname = 'keyname_example'; // string | A unique value identifying this stream setting.
-$stream_setting = new \OpenAPI\Client\Model\StreamSetting(); // \OpenAPI\Client\Model\StreamSetting
+$stream_setting = new \Libretime\Client\Model\StreamSetting(); // \Libretime\Client\Model\StreamSetting
 
 try {
     $result = $apiInstance->streamSettingsUpdate($keyname, $stream_setting);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyname** | **string**| A unique value identifying this stream setting. |
- **stream_setting** | [**\OpenAPI\Client\Model\StreamSetting**](../Model/StreamSetting.md)|  |
+ **stream_setting** | [**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StreamSetting**](../Model/StreamSetting.md)
+[**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)
 
 ### Authorization
 

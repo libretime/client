@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
 **username** | **string** |  |
-**type** | [**\OpenAPI\Client\Model\TypeEnum**](TypeEnum.md) |  |
+**type** | [**\Libretime\Client\Model\TypeEnum**](TypeEnum.md) |  |
 **first_name** | **string** |  |
 **last_name** | **string** |  |
 **lastfail** | **\DateTime** |  | [optional]

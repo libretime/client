@@ -1,4 +1,4 @@
-# OpenAPI\Client\SmartBlockContentsApi
+# Libretime\Client\SmartBlockContentsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `smartBlockContentsCreate()`
 
 ```php
-smartBlockContentsCreate($smart_block_content): \OpenAPI\Client\Model\SmartBlockContent
+smartBlockContentsCreate($smart_block_content): \Libretime\Client\Model\SmartBlockContent
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlockContentsApi(
+$apiInstance = new Libretime\Client\Api\SmartBlockContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$smart_block_content = new \OpenAPI\Client\Model\SmartBlockContent(); // \OpenAPI\Client\Model\SmartBlockContent
+$smart_block_content = new \Libretime\Client\Model\SmartBlockContent(); // \Libretime\Client\Model\SmartBlockContent
 
 try {
     $result = $apiInstance->smartBlockContentsCreate($smart_block_content);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smart_block_content** | [**\OpenAPI\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  |
+ **smart_block_content** | [**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
+[**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlockContentsApi(
+$apiInstance = new Libretime\Client\Api\SmartBlockContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `smartBlockContentsList()`
 
 ```php
-smartBlockContentsList(): \OpenAPI\Client\Model\SmartBlockContent[]
+smartBlockContentsList(): \Libretime\Client\Model\SmartBlockContent[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlockContentsApi(
+$apiInstance = new Libretime\Client\Api\SmartBlockContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlockContent[]**](../Model/SmartBlockContent.md)
+[**\Libretime\Client\Model\SmartBlockContent[]**](../Model/SmartBlockContent.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `smartBlockContentsPartialUpdate()`
 
 ```php
-smartBlockContentsPartialUpdate($id, $patched_smart_block_content): \OpenAPI\Client\Model\SmartBlockContent
+smartBlockContentsPartialUpdate($id, $patched_smart_block_content): \Libretime\Client\Model\SmartBlockContent
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlockContentsApi(
+$apiInstance = new Libretime\Client\Api\SmartBlockContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this smart block content.
-$patched_smart_block_content = new \OpenAPI\Client\Model\PatchedSmartBlockContent(); // \OpenAPI\Client\Model\PatchedSmartBlockContent
+$patched_smart_block_content = new \Libretime\Client\Model\PatchedSmartBlockContent(); // \Libretime\Client\Model\PatchedSmartBlockContent
 
 try {
     $result = $apiInstance->smartBlockContentsPartialUpdate($id, $patched_smart_block_content);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this smart block content. |
- **patched_smart_block_content** | [**\OpenAPI\Client\Model\PatchedSmartBlockContent**](../Model/PatchedSmartBlockContent.md)|  | [optional]
+ **patched_smart_block_content** | [**\Libretime\Client\Model\PatchedSmartBlockContent**](../Model/PatchedSmartBlockContent.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
+[**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `smartBlockContentsRetrieve()`
 
 ```php
-smartBlockContentsRetrieve($id): \OpenAPI\Client\Model\SmartBlockContent
+smartBlockContentsRetrieve($id): \Libretime\Client\Model\SmartBlockContent
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlockContentsApi(
+$apiInstance = new Libretime\Client\Api\SmartBlockContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
+[**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `smartBlockContentsUpdate()`
 
 ```php
-smartBlockContentsUpdate($id, $smart_block_content): \OpenAPI\Client\Model\SmartBlockContent
+smartBlockContentsUpdate($id, $smart_block_content): \Libretime\Client\Model\SmartBlockContent
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SmartBlockContentsApi(
+$apiInstance = new Libretime\Client\Api\SmartBlockContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this smart block content.
-$smart_block_content = new \OpenAPI\Client\Model\SmartBlockContent(); // \OpenAPI\Client\Model\SmartBlockContent
+$smart_block_content = new \Libretime\Client\Model\SmartBlockContent(); // \Libretime\Client\Model\SmartBlockContent
 
 try {
     $result = $apiInstance->smartBlockContentsUpdate($id, $smart_block_content);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this smart block content. |
- **smart_block_content** | [**\OpenAPI\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  |
+ **smart_block_content** | [**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
+[**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)
 
 ### Authorization
 

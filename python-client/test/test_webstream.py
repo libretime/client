@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.webstream import Webstream
+import libretime_client
+from libretime_client.model.webstream import Webstream
 
 
 class TestWebstream(unittest.TestCase):

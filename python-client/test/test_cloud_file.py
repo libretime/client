@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.cloud_file import CloudFile
+import libretime_client
+from libretime_client.model.cloud_file import CloudFile
 
 
 class TestCloudFile(unittest.TestCase):

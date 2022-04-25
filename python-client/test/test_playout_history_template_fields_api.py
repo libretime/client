@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.playout_history_template_fields_api import PlayoutHistoryTemplateFieldsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.playout_history_template_fields_api import PlayoutHistoryTemplateFieldsApi  # noqa: E501
 
 
 class TestPlayoutHistoryTemplateFieldsApi(unittest.TestCase):

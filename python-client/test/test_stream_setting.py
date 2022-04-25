@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.stream_setting import StreamSetting
+import libretime_client
+from libretime_client.model.stream_setting import StreamSetting
 
 
 class TestStreamSetting(unittest.TestCase):

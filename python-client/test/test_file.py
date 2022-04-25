@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.file import File
+import libretime_client
+from libretime_client.model.file import File
 
 
 class TestFile(unittest.TestCase):

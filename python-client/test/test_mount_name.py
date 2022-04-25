@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.mount_name import MountName
+import libretime_client
+from libretime_client.model.mount_name import MountName
 
 
 class TestMountName(unittest.TestCase):

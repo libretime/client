@@ -1,4 +1,4 @@
-# OpenAPI\Client\LoginAttemptsApi
+# Libretime\Client\LoginAttemptsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `loginAttemptsCreate()`
 
 ```php
-loginAttemptsCreate($login_attempt): \OpenAPI\Client\Model\LoginAttempt
+loginAttemptsCreate($login_attempt): \Libretime\Client\Model\LoginAttempt
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LoginAttemptsApi(
+$apiInstance = new Libretime\Client\Api\LoginAttemptsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$login_attempt = new \OpenAPI\Client\Model\LoginAttempt(); // \OpenAPI\Client\Model\LoginAttempt
+$login_attempt = new \Libretime\Client\Model\LoginAttempt(); // \Libretime\Client\Model\LoginAttempt
 
 try {
     $result = $apiInstance->loginAttemptsCreate($login_attempt);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_attempt** | [**\OpenAPI\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | [optional]
+ **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
+[**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LoginAttemptsApi(
+$apiInstance = new Libretime\Client\Api\LoginAttemptsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `loginAttemptsList()`
 
 ```php
-loginAttemptsList(): \OpenAPI\Client\Model\LoginAttempt[]
+loginAttemptsList(): \Libretime\Client\Model\LoginAttempt[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LoginAttemptsApi(
+$apiInstance = new Libretime\Client\Api\LoginAttemptsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LoginAttempt[]**](../Model/LoginAttempt.md)
+[**\Libretime\Client\Model\LoginAttempt[]**](../Model/LoginAttempt.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `loginAttemptsPartialUpdate()`
 
 ```php
-loginAttemptsPartialUpdate($ip, $patched_login_attempt): \OpenAPI\Client\Model\LoginAttempt
+loginAttemptsPartialUpdate($ip, $patched_login_attempt): \Libretime\Client\Model\LoginAttempt
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LoginAttemptsApi(
+$apiInstance = new Libretime\Client\Api\LoginAttemptsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $ip = 'ip_example'; // string | A unique value identifying this login attempt.
-$patched_login_attempt = new \OpenAPI\Client\Model\PatchedLoginAttempt(); // \OpenAPI\Client\Model\PatchedLoginAttempt
+$patched_login_attempt = new \Libretime\Client\Model\PatchedLoginAttempt(); // \Libretime\Client\Model\PatchedLoginAttempt
 
 try {
     $result = $apiInstance->loginAttemptsPartialUpdate($ip, $patched_login_attempt);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ip** | **string**| A unique value identifying this login attempt. |
- **patched_login_attempt** | [**\OpenAPI\Client\Model\PatchedLoginAttempt**](../Model/PatchedLoginAttempt.md)|  | [optional]
+ **patched_login_attempt** | [**\Libretime\Client\Model\PatchedLoginAttempt**](../Model/PatchedLoginAttempt.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
+[**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `loginAttemptsRetrieve()`
 
 ```php
-loginAttemptsRetrieve($ip): \OpenAPI\Client\Model\LoginAttempt
+loginAttemptsRetrieve($ip): \Libretime\Client\Model\LoginAttempt
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LoginAttemptsApi(
+$apiInstance = new Libretime\Client\Api\LoginAttemptsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
+[**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `loginAttemptsUpdate()`
 
 ```php
-loginAttemptsUpdate($ip, $login_attempt): \OpenAPI\Client\Model\LoginAttempt
+loginAttemptsUpdate($ip, $login_attempt): \Libretime\Client\Model\LoginAttempt
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LoginAttemptsApi(
+$apiInstance = new Libretime\Client\Api\LoginAttemptsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $ip = 'ip_example'; // string | A unique value identifying this login attempt.
-$login_attempt = new \OpenAPI\Client\Model\LoginAttempt(); // \OpenAPI\Client\Model\LoginAttempt
+$login_attempt = new \Libretime\Client\Model\LoginAttempt(); // \Libretime\Client\Model\LoginAttempt
 
 try {
     $result = $apiInstance->loginAttemptsUpdate($ip, $login_attempt);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ip** | **string**| A unique value identifying this login attempt. |
- **login_attempt** | [**\OpenAPI\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | [optional]
+ **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
+[**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)
 
 ### Authorization
 

@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.playlists_api import PlaylistsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.playlists_api import PlaylistsApi  # noqa: E501
 
 
 class TestPlaylistsApi(unittest.TestCase):

@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.schedule_api import ScheduleApi  # noqa: E501
+import libretime_client
+from libretime_client.api.schedule_api import ScheduleApi  # noqa: E501
 
 
 class TestScheduleApi(unittest.TestCase):

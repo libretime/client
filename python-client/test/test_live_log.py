@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.live_log import LiveLog
+import libretime_client
+from libretime_client.model.live_log import LiveLog
 
 
 class TestLiveLog(unittest.TestCase):

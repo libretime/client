@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.playlist import Playlist
+import libretime_client
+from libretime_client.model.playlist import Playlist
 
 
 class TestPlaylist(unittest.TestCase):

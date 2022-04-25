@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.smart_blocks_api import SmartBlocksApi  # noqa: E501
+import libretime_client
+from libretime_client.api.smart_blocks_api import SmartBlocksApi  # noqa: E501
 
 
 class TestSmartBlocksApi(unittest.TestCase):

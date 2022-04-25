@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.smart_block_criteria import SmartBlockCriteria
+import libretime_client
+from libretime_client.model.smart_block_criteria import SmartBlockCriteria
 
 
 class TestSmartBlockCriteria(unittest.TestCase):
