@@ -1,11 +1,17 @@
-name: CI tests
+name: Test
 
 on:
   push:
     branches: [main]
     paths:
-      - "*-client/**"
       - .github/workflows/test.yml
+      - "*-client/**"
+
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/test.yml
+      - "*-client/**"
 
 jobs:
   pre-commit:
