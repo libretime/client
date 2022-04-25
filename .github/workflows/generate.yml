@@ -10,7 +10,7 @@ on:
 env:
   COMMON_CONFIG: >
     --git-user-id $GITHUB_REPOSITORY_OWNER
-    --git-repo-id api-client
+    --git-repo-id client
 
 jobs:
   generate:
