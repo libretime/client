@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.type_enum import TypeEnum
+import libretime_client
+from libretime_client.model.type_enum import TypeEnum
 globals()['TypeEnum'] = TypeEnum
-from openapi_client.model.user import User
+from libretime_client.model.user import User
 
 
 class TestUser(unittest.TestCase):

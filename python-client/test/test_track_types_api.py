@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.track_types_api import TrackTypesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.track_types_api import TrackTypesApi  # noqa: E501
 
 
 class TestTrackTypesApi(unittest.TestCase):

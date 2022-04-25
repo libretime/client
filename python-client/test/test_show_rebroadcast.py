@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.show_rebroadcast import ShowRebroadcast
+import libretime_client
+from libretime_client.model.show_rebroadcast import ShowRebroadcast
 
 
 class TestShowRebroadcast(unittest.TestCase):

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ThirdPartyTrackReferencesApi
+# Libretime\Client\ThirdPartyTrackReferencesApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `thirdPartyTrackReferencesCreate()`
 
 ```php
-thirdPartyTrackReferencesCreate($third_party_track_reference): \OpenAPI\Client\Model\ThirdPartyTrackReference
+thirdPartyTrackReferencesCreate($third_party_track_reference): \Libretime\Client\Model\ThirdPartyTrackReference
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ThirdPartyTrackReferencesApi(
+$apiInstance = new Libretime\Client\Api\ThirdPartyTrackReferencesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$third_party_track_reference = new \OpenAPI\Client\Model\ThirdPartyTrackReference(); // \OpenAPI\Client\Model\ThirdPartyTrackReference
+$third_party_track_reference = new \Libretime\Client\Model\ThirdPartyTrackReference(); // \Libretime\Client\Model\ThirdPartyTrackReference
 
 try {
     $result = $apiInstance->thirdPartyTrackReferencesCreate($third_party_track_reference);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **third_party_track_reference** | [**\OpenAPI\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  |
+ **third_party_track_reference** | [**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
+[**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ThirdPartyTrackReferencesApi(
+$apiInstance = new Libretime\Client\Api\ThirdPartyTrackReferencesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `thirdPartyTrackReferencesList()`
 
 ```php
-thirdPartyTrackReferencesList(): \OpenAPI\Client\Model\ThirdPartyTrackReference[]
+thirdPartyTrackReferencesList(): \Libretime\Client\Model\ThirdPartyTrackReference[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ThirdPartyTrackReferencesApi(
+$apiInstance = new Libretime\Client\Api\ThirdPartyTrackReferencesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ThirdPartyTrackReference[]**](../Model/ThirdPartyTrackReference.md)
+[**\Libretime\Client\Model\ThirdPartyTrackReference[]**](../Model/ThirdPartyTrackReference.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `thirdPartyTrackReferencesPartialUpdate()`
 
 ```php
-thirdPartyTrackReferencesPartialUpdate($id, $patched_third_party_track_reference): \OpenAPI\Client\Model\ThirdPartyTrackReference
+thirdPartyTrackReferencesPartialUpdate($id, $patched_third_party_track_reference): \Libretime\Client\Model\ThirdPartyTrackReference
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ThirdPartyTrackReferencesApi(
+$apiInstance = new Libretime\Client\Api\ThirdPartyTrackReferencesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this third party track reference.
-$patched_third_party_track_reference = new \OpenAPI\Client\Model\PatchedThirdPartyTrackReference(); // \OpenAPI\Client\Model\PatchedThirdPartyTrackReference
+$patched_third_party_track_reference = new \Libretime\Client\Model\PatchedThirdPartyTrackReference(); // \Libretime\Client\Model\PatchedThirdPartyTrackReference
 
 try {
     $result = $apiInstance->thirdPartyTrackReferencesPartialUpdate($id, $patched_third_party_track_reference);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this third party track reference. |
- **patched_third_party_track_reference** | [**\OpenAPI\Client\Model\PatchedThirdPartyTrackReference**](../Model/PatchedThirdPartyTrackReference.md)|  | [optional]
+ **patched_third_party_track_reference** | [**\Libretime\Client\Model\PatchedThirdPartyTrackReference**](../Model/PatchedThirdPartyTrackReference.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
+[**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `thirdPartyTrackReferencesRetrieve()`
 
 ```php
-thirdPartyTrackReferencesRetrieve($id): \OpenAPI\Client\Model\ThirdPartyTrackReference
+thirdPartyTrackReferencesRetrieve($id): \Libretime\Client\Model\ThirdPartyTrackReference
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ThirdPartyTrackReferencesApi(
+$apiInstance = new Libretime\Client\Api\ThirdPartyTrackReferencesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
+[**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `thirdPartyTrackReferencesUpdate()`
 
 ```php
-thirdPartyTrackReferencesUpdate($id, $third_party_track_reference): \OpenAPI\Client\Model\ThirdPartyTrackReference
+thirdPartyTrackReferencesUpdate($id, $third_party_track_reference): \Libretime\Client\Model\ThirdPartyTrackReference
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ThirdPartyTrackReferencesApi(
+$apiInstance = new Libretime\Client\Api\ThirdPartyTrackReferencesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this third party track reference.
-$third_party_track_reference = new \OpenAPI\Client\Model\ThirdPartyTrackReference(); // \OpenAPI\Client\Model\ThirdPartyTrackReference
+$third_party_track_reference = new \Libretime\Client\Model\ThirdPartyTrackReference(); // \Libretime\Client\Model\ThirdPartyTrackReference
 
 try {
     $result = $apiInstance->thirdPartyTrackReferencesUpdate($id, $third_party_track_reference);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this third party track reference. |
- **third_party_track_reference** | [**\OpenAPI\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  |
+ **third_party_track_reference** | [**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
+[**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)
 
 ### Authorization
 

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.playout_history_template import PlayoutHistoryTemplate
+import libretime_client
+from libretime_client.model.playout_history_template import PlayoutHistoryTemplate
 
 
 class TestPlayoutHistoryTemplate(unittest.TestCase):

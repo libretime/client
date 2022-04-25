@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShowDaysApi
+# Libretime\Client\ShowDaysApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `showDaysCreate()`
 
 ```php
-showDaysCreate($show_days): \OpenAPI\Client\Model\ShowDays
+showDaysCreate($show_days): \Libretime\Client\Model\ShowDays
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowDaysApi(
+$apiInstance = new Libretime\Client\Api\ShowDaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$show_days = new \OpenAPI\Client\Model\ShowDays(); // \OpenAPI\Client\Model\ShowDays
+$show_days = new \Libretime\Client\Model\ShowDays(); // \Libretime\Client\Model\ShowDays
 
 try {
     $result = $apiInstance->showDaysCreate($show_days);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **show_days** | [**\OpenAPI\Client\Model\ShowDays**](../Model/ShowDays.md)|  |
+ **show_days** | [**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowDays**](../Model/ShowDays.md)
+[**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowDaysApi(
+$apiInstance = new Libretime\Client\Api\ShowDaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `showDaysList()`
 
 ```php
-showDaysList(): \OpenAPI\Client\Model\ShowDays[]
+showDaysList(): \Libretime\Client\Model\ShowDays[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowDaysApi(
+$apiInstance = new Libretime\Client\Api\ShowDaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowDays[]**](../Model/ShowDays.md)
+[**\Libretime\Client\Model\ShowDays[]**](../Model/ShowDays.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `showDaysPartialUpdate()`
 
 ```php
-showDaysPartialUpdate($id, $patched_show_days): \OpenAPI\Client\Model\ShowDays
+showDaysPartialUpdate($id, $patched_show_days): \Libretime\Client\Model\ShowDays
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowDaysApi(
+$apiInstance = new Libretime\Client\Api\ShowDaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this show days.
-$patched_show_days = new \OpenAPI\Client\Model\PatchedShowDays(); // \OpenAPI\Client\Model\PatchedShowDays
+$patched_show_days = new \Libretime\Client\Model\PatchedShowDays(); // \Libretime\Client\Model\PatchedShowDays
 
 try {
     $result = $apiInstance->showDaysPartialUpdate($id, $patched_show_days);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this show days. |
- **patched_show_days** | [**\OpenAPI\Client\Model\PatchedShowDays**](../Model/PatchedShowDays.md)|  | [optional]
+ **patched_show_days** | [**\Libretime\Client\Model\PatchedShowDays**](../Model/PatchedShowDays.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowDays**](../Model/ShowDays.md)
+[**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `showDaysRetrieve()`
 
 ```php
-showDaysRetrieve($id): \OpenAPI\Client\Model\ShowDays
+showDaysRetrieve($id): \Libretime\Client\Model\ShowDays
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowDaysApi(
+$apiInstance = new Libretime\Client\Api\ShowDaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowDays**](../Model/ShowDays.md)
+[**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `showDaysUpdate()`
 
 ```php
-showDaysUpdate($id, $show_days): \OpenAPI\Client\Model\ShowDays
+showDaysUpdate($id, $show_days): \Libretime\Client\Model\ShowDays
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowDaysApi(
+$apiInstance = new Libretime\Client\Api\ShowDaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this show days.
-$show_days = new \OpenAPI\Client\Model\ShowDays(); // \OpenAPI\Client\Model\ShowDays
+$show_days = new \Libretime\Client\Model\ShowDays(); // \Libretime\Client\Model\ShowDays
 
 try {
     $result = $apiInstance->showDaysUpdate($id, $show_days);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this show days. |
- **show_days** | [**\OpenAPI\Client\Model\ShowDays**](../Model/ShowDays.md)|  |
+ **show_days** | [**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowDays**](../Model/ShowDays.md)
+[**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)
 
 ### Authorization
 

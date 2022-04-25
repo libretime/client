@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShowInstancesApi
+# Libretime\Client\ShowInstancesApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `showInstancesCreate()`
 
 ```php
-showInstancesCreate($show_instance): \OpenAPI\Client\Model\ShowInstance
+showInstancesCreate($show_instance): \Libretime\Client\Model\ShowInstance
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowInstancesApi(
+$apiInstance = new Libretime\Client\Api\ShowInstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$show_instance = new \OpenAPI\Client\Model\ShowInstance(); // \OpenAPI\Client\Model\ShowInstance
+$show_instance = new \Libretime\Client\Model\ShowInstance(); // \Libretime\Client\Model\ShowInstance
 
 try {
     $result = $apiInstance->showInstancesCreate($show_instance);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **show_instance** | [**\OpenAPI\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  |
+ **show_instance** | [**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowInstance**](../Model/ShowInstance.md)
+[**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowInstancesApi(
+$apiInstance = new Libretime\Client\Api\ShowInstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `showInstancesList()`
 
 ```php
-showInstancesList(): \OpenAPI\Client\Model\ShowInstance[]
+showInstancesList(): \Libretime\Client\Model\ShowInstance[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowInstancesApi(
+$apiInstance = new Libretime\Client\Api\ShowInstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowInstance[]**](../Model/ShowInstance.md)
+[**\Libretime\Client\Model\ShowInstance[]**](../Model/ShowInstance.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `showInstancesPartialUpdate()`
 
 ```php
-showInstancesPartialUpdate($id, $patched_show_instance): \OpenAPI\Client\Model\ShowInstance
+showInstancesPartialUpdate($id, $patched_show_instance): \Libretime\Client\Model\ShowInstance
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowInstancesApi(
+$apiInstance = new Libretime\Client\Api\ShowInstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this show instance.
-$patched_show_instance = new \OpenAPI\Client\Model\PatchedShowInstance(); // \OpenAPI\Client\Model\PatchedShowInstance
+$patched_show_instance = new \Libretime\Client\Model\PatchedShowInstance(); // \Libretime\Client\Model\PatchedShowInstance
 
 try {
     $result = $apiInstance->showInstancesPartialUpdate($id, $patched_show_instance);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this show instance. |
- **patched_show_instance** | [**\OpenAPI\Client\Model\PatchedShowInstance**](../Model/PatchedShowInstance.md)|  | [optional]
+ **patched_show_instance** | [**\Libretime\Client\Model\PatchedShowInstance**](../Model/PatchedShowInstance.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowInstance**](../Model/ShowInstance.md)
+[**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `showInstancesRetrieve()`
 
 ```php
-showInstancesRetrieve($id): \OpenAPI\Client\Model\ShowInstance
+showInstancesRetrieve($id): \Libretime\Client\Model\ShowInstance
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowInstancesApi(
+$apiInstance = new Libretime\Client\Api\ShowInstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowInstance**](../Model/ShowInstance.md)
+[**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `showInstancesUpdate()`
 
 ```php
-showInstancesUpdate($id, $show_instance): \OpenAPI\Client\Model\ShowInstance
+showInstancesUpdate($id, $show_instance): \Libretime\Client\Model\ShowInstance
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShowInstancesApi(
+$apiInstance = new Libretime\Client\Api\ShowInstancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this show instance.
-$show_instance = new \OpenAPI\Client\Model\ShowInstance(); // \OpenAPI\Client\Model\ShowInstance
+$show_instance = new \Libretime\Client\Model\ShowInstance(); // \Libretime\Client\Model\ShowInstance
 
 try {
     $result = $apiInstance->showInstancesUpdate($id, $show_instance);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this show instance. |
- **show_instance** | [**\OpenAPI\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  |
+ **show_instance** | [**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShowInstance**](../Model/ShowInstance.md)
+[**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)
 
 ### Authorization
 

@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.cloud_files_api import CloudFilesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.cloud_files_api import CloudFilesApi  # noqa: E501
 
 
 class TestCloudFilesApi(unittest.TestCase):

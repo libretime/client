@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_cloud_file import PatchedCloudFile
+import libretime_client
+from libretime_client.model.patched_cloud_file import PatchedCloudFile
 
 
 class TestPatchedCloudFile(unittest.TestCase):

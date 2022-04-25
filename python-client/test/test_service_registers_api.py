@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.service_registers_api import ServiceRegistersApi  # noqa: E501
+import libretime_client
+from libretime_client.api.service_registers_api import ServiceRegistersApi  # noqa: E501
 
 
 class TestServiceRegistersApi(unittest.TestCase):

@@ -1,4 +1,4 @@
-# libretime/api
+# libretime/client
 
 Radio Broadcast & Automation Platform
 
@@ -36,7 +36,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/libretime/api/vendor/autoload.php');
+require_once('/path/to/libretime/client/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -50,23 +50,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$celery_task = new \OpenAPI\Client\Model\CeleryTask(); // \OpenAPI\Client\Model\CeleryTask
+$celery_task = new \Libretime\Client\Model\CeleryTask(); // \Libretime\Client\Model\CeleryTask
 
 try {
     $result = $apiInstance->celeryTasksCreate($celery_task);

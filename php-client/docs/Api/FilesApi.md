@@ -1,4 +1,4 @@
-# OpenAPI\Client\FilesApi
+# Libretime\Client\FilesApi
 
 All URIs are relative to http://localhost.
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `filesCreate()`
 
 ```php
-filesCreate($file): \OpenAPI\Client\Model\File
+filesCreate($file): \Libretime\Client\Model\File
 ```
 
 
@@ -29,23 +29,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$file = new \OpenAPI\Client\Model\File(); // \OpenAPI\Client\Model\File
+$file = new \Libretime\Client\Model\File(); // \Libretime\Client\Model\File
 
 try {
     $result = $apiInstance->filesCreate($file);
@@ -59,11 +59,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | [**\OpenAPI\Client\Model\File**](../Model/File.md)|  |
+ **file** | [**\Libretime\Client\Model\File**](../Model/File.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\File**](../Model/File.md)
+[**\Libretime\Client\Model\File**](../Model/File.md)
 
 ### Authorization
 
@@ -94,17 +94,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -145,7 +145,7 @@ void (empty response body)
 ## `filesDownloadRetrieve()`
 
 ```php
-filesDownloadRetrieve($id): \OpenAPI\Client\Model\File
+filesDownloadRetrieve($id): \Libretime\Client\Model\File
 ```
 
 
@@ -158,17 +158,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\File**](../Model/File.md)
+[**\Libretime\Client\Model\File**](../Model/File.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 ## `filesList()`
 
 ```php
-filesList(): \OpenAPI\Client\Model\File[]
+filesList(): \Libretime\Client\Model\File[]
 ```
 
 
@@ -223,17 +223,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -254,7 +254,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\File[]**](../Model/File.md)
+[**\Libretime\Client\Model\File[]**](../Model/File.md)
 
 ### Authorization
 
@@ -272,7 +272,7 @@ This endpoint does not need any parameter.
 ## `filesPartialUpdate()`
 
 ```php
-filesPartialUpdate($id, $patched_file): \OpenAPI\Client\Model\File
+filesPartialUpdate($id, $patched_file): \Libretime\Client\Model\File
 ```
 
 
@@ -285,24 +285,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this file.
-$patched_file = new \OpenAPI\Client\Model\PatchedFile(); // \OpenAPI\Client\Model\PatchedFile
+$patched_file = new \Libretime\Client\Model\PatchedFile(); // \Libretime\Client\Model\PatchedFile
 
 try {
     $result = $apiInstance->filesPartialUpdate($id, $patched_file);
@@ -317,11 +317,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. |
- **patched_file** | [**\OpenAPI\Client\Model\PatchedFile**](../Model/PatchedFile.md)|  | [optional]
+ **patched_file** | [**\Libretime\Client\Model\PatchedFile**](../Model/PatchedFile.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\File**](../Model/File.md)
+[**\Libretime\Client\Model\File**](../Model/File.md)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 ## `filesRetrieve()`
 
 ```php
-filesRetrieve($id): \OpenAPI\Client\Model\File
+filesRetrieve($id): \Libretime\Client\Model\File
 ```
 
 
@@ -352,17 +352,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\File**](../Model/File.md)
+[**\Libretime\Client\Model\File**](../Model/File.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 ## `filesUpdate()`
 
 ```php
-filesUpdate($id, $file): \OpenAPI\Client\Model\File
+filesUpdate($id, $file): \Libretime\Client\Model\File
 ```
 
 
@@ -417,24 +417,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\FilesApi(
+$apiInstance = new Libretime\Client\Api\FilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this file.
-$file = new \OpenAPI\Client\Model\File(); // \OpenAPI\Client\Model\File
+$file = new \Libretime\Client\Model\File(); // \Libretime\Client\Model\File
 
 try {
     $result = $apiInstance->filesUpdate($id, $file);
@@ -449,11 +449,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. |
- **file** | [**\OpenAPI\Client\Model\File**](../Model/File.md)|  |
+ **file** | [**\Libretime\Client\Model\File**](../Model/File.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\File**](../Model/File.md)
+[**\Libretime\Client\Model\File**](../Model/File.md)
 
 ### Authorization
 

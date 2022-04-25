@@ -1,4 +1,4 @@
-# OpenAPI\Client\PlayoutHistoryTemplatesApi
+# Libretime\Client\PlayoutHistoryTemplatesApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `playoutHistoryTemplatesCreate()`
 
 ```php
-playoutHistoryTemplatesCreate($playout_history_template): \OpenAPI\Client\Model\PlayoutHistoryTemplate
+playoutHistoryTemplatesCreate($playout_history_template): \Libretime\Client\Model\PlayoutHistoryTemplate
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlayoutHistoryTemplatesApi(
+$apiInstance = new Libretime\Client\Api\PlayoutHistoryTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$playout_history_template = new \OpenAPI\Client\Model\PlayoutHistoryTemplate(); // \OpenAPI\Client\Model\PlayoutHistoryTemplate
+$playout_history_template = new \Libretime\Client\Model\PlayoutHistoryTemplate(); // \Libretime\Client\Model\PlayoutHistoryTemplate
 
 try {
     $result = $apiInstance->playoutHistoryTemplatesCreate($playout_history_template);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **playout_history_template** | [**\OpenAPI\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  |
+ **playout_history_template** | [**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
+[**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlayoutHistoryTemplatesApi(
+$apiInstance = new Libretime\Client\Api\PlayoutHistoryTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `playoutHistoryTemplatesList()`
 
 ```php
-playoutHistoryTemplatesList(): \OpenAPI\Client\Model\PlayoutHistoryTemplate[]
+playoutHistoryTemplatesList(): \Libretime\Client\Model\PlayoutHistoryTemplate[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlayoutHistoryTemplatesApi(
+$apiInstance = new Libretime\Client\Api\PlayoutHistoryTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlayoutHistoryTemplate[]**](../Model/PlayoutHistoryTemplate.md)
+[**\Libretime\Client\Model\PlayoutHistoryTemplate[]**](../Model/PlayoutHistoryTemplate.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `playoutHistoryTemplatesPartialUpdate()`
 
 ```php
-playoutHistoryTemplatesPartialUpdate($id, $patched_playout_history_template): \OpenAPI\Client\Model\PlayoutHistoryTemplate
+playoutHistoryTemplatesPartialUpdate($id, $patched_playout_history_template): \Libretime\Client\Model\PlayoutHistoryTemplate
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlayoutHistoryTemplatesApi(
+$apiInstance = new Libretime\Client\Api\PlayoutHistoryTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this playout history template.
-$patched_playout_history_template = new \OpenAPI\Client\Model\PatchedPlayoutHistoryTemplate(); // \OpenAPI\Client\Model\PatchedPlayoutHistoryTemplate
+$patched_playout_history_template = new \Libretime\Client\Model\PatchedPlayoutHistoryTemplate(); // \Libretime\Client\Model\PatchedPlayoutHistoryTemplate
 
 try {
     $result = $apiInstance->playoutHistoryTemplatesPartialUpdate($id, $patched_playout_history_template);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this playout history template. |
- **patched_playout_history_template** | [**\OpenAPI\Client\Model\PatchedPlayoutHistoryTemplate**](../Model/PatchedPlayoutHistoryTemplate.md)|  | [optional]
+ **patched_playout_history_template** | [**\Libretime\Client\Model\PatchedPlayoutHistoryTemplate**](../Model/PatchedPlayoutHistoryTemplate.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
+[**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `playoutHistoryTemplatesRetrieve()`
 
 ```php
-playoutHistoryTemplatesRetrieve($id): \OpenAPI\Client\Model\PlayoutHistoryTemplate
+playoutHistoryTemplatesRetrieve($id): \Libretime\Client\Model\PlayoutHistoryTemplate
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlayoutHistoryTemplatesApi(
+$apiInstance = new Libretime\Client\Api\PlayoutHistoryTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
+[**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `playoutHistoryTemplatesUpdate()`
 
 ```php
-playoutHistoryTemplatesUpdate($id, $playout_history_template): \OpenAPI\Client\Model\PlayoutHistoryTemplate
+playoutHistoryTemplatesUpdate($id, $playout_history_template): \Libretime\Client\Model\PlayoutHistoryTemplate
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlayoutHistoryTemplatesApi(
+$apiInstance = new Libretime\Client\Api\PlayoutHistoryTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this playout history template.
-$playout_history_template = new \OpenAPI\Client\Model\PlayoutHistoryTemplate(); // \OpenAPI\Client\Model\PlayoutHistoryTemplate
+$playout_history_template = new \Libretime\Client\Model\PlayoutHistoryTemplate(); // \Libretime\Client\Model\PlayoutHistoryTemplate
 
 try {
     $result = $apiInstance->playoutHistoryTemplatesUpdate($id, $playout_history_template);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this playout history template. |
- **playout_history_template** | [**\OpenAPI\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  |
+ **playout_history_template** | [**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
+[**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)
 
 ### Authorization
 

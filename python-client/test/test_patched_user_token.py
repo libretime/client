@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_user_token import PatchedUserToken
+import libretime_client
+from libretime_client.model.patched_user_token import PatchedUserToken
 
 
 class TestPatchedUserToken(unittest.TestCase):

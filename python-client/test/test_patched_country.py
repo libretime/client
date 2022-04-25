@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.patched_country import PatchedCountry
+import libretime_client
+from libretime_client.model.patched_country import PatchedCountry
 
 
 class TestPatchedCountry(unittest.TestCase):

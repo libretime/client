@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.imported_podcasts_api import ImportedPodcastsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi  # noqa: E501
 
 
 class TestImportedPodcastsApi(unittest.TestCase):

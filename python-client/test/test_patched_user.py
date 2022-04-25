@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.type_enum import TypeEnum
+import libretime_client
+from libretime_client.model.type_enum import TypeEnum
 globals()['TypeEnum'] = TypeEnum
-from openapi_client.model.patched_user import PatchedUser
+from libretime_client.model.patched_user import PatchedUser
 
 
 class TestPatchedUser(unittest.TestCase):

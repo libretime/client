@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.user_token import UserToken
+import libretime_client
+from libretime_client.model.user_token import UserToken
 
 
 class TestUserToken(unittest.TestCase):

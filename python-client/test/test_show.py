@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.show import Show
+import libretime_client
+from libretime_client.model.show import Show
 
 
 class TestShow(unittest.TestCase):

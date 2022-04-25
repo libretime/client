@@ -1,4 +1,4 @@
-# OpenAPI\Client\MusicDirsApi
+# Libretime\Client\MusicDirsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `musicDirsCreate()`
 
 ```php
-musicDirsCreate($music_dir): \OpenAPI\Client\Model\MusicDir
+musicDirsCreate($music_dir): \Libretime\Client\Model\MusicDir
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MusicDirsApi(
+$apiInstance = new Libretime\Client\Api\MusicDirsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$music_dir = new \OpenAPI\Client\Model\MusicDir(); // \OpenAPI\Client\Model\MusicDir
+$music_dir = new \Libretime\Client\Model\MusicDir(); // \Libretime\Client\Model\MusicDir
 
 try {
     $result = $apiInstance->musicDirsCreate($music_dir);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **music_dir** | [**\OpenAPI\Client\Model\MusicDir**](../Model/MusicDir.md)|  | [optional]
+ **music_dir** | [**\Libretime\Client\Model\MusicDir**](../Model/MusicDir.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MusicDir**](../Model/MusicDir.md)
+[**\Libretime\Client\Model\MusicDir**](../Model/MusicDir.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MusicDirsApi(
+$apiInstance = new Libretime\Client\Api\MusicDirsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `musicDirsList()`
 
 ```php
-musicDirsList(): \OpenAPI\Client\Model\MusicDir[]
+musicDirsList(): \Libretime\Client\Model\MusicDir[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MusicDirsApi(
+$apiInstance = new Libretime\Client\Api\MusicDirsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MusicDir[]**](../Model/MusicDir.md)
+[**\Libretime\Client\Model\MusicDir[]**](../Model/MusicDir.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `musicDirsPartialUpdate()`
 
 ```php
-musicDirsPartialUpdate($id, $patched_music_dir): \OpenAPI\Client\Model\MusicDir
+musicDirsPartialUpdate($id, $patched_music_dir): \Libretime\Client\Model\MusicDir
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MusicDirsApi(
+$apiInstance = new Libretime\Client\Api\MusicDirsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this music dir.
-$patched_music_dir = new \OpenAPI\Client\Model\PatchedMusicDir(); // \OpenAPI\Client\Model\PatchedMusicDir
+$patched_music_dir = new \Libretime\Client\Model\PatchedMusicDir(); // \Libretime\Client\Model\PatchedMusicDir
 
 try {
     $result = $apiInstance->musicDirsPartialUpdate($id, $patched_music_dir);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this music dir. |
- **patched_music_dir** | [**\OpenAPI\Client\Model\PatchedMusicDir**](../Model/PatchedMusicDir.md)|  | [optional]
+ **patched_music_dir** | [**\Libretime\Client\Model\PatchedMusicDir**](../Model/PatchedMusicDir.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MusicDir**](../Model/MusicDir.md)
+[**\Libretime\Client\Model\MusicDir**](../Model/MusicDir.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `musicDirsRetrieve()`
 
 ```php
-musicDirsRetrieve($id): \OpenAPI\Client\Model\MusicDir
+musicDirsRetrieve($id): \Libretime\Client\Model\MusicDir
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MusicDirsApi(
+$apiInstance = new Libretime\Client\Api\MusicDirsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MusicDir**](../Model/MusicDir.md)
+[**\Libretime\Client\Model\MusicDir**](../Model/MusicDir.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `musicDirsUpdate()`
 
 ```php
-musicDirsUpdate($id, $music_dir): \OpenAPI\Client\Model\MusicDir
+musicDirsUpdate($id, $music_dir): \Libretime\Client\Model\MusicDir
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MusicDirsApi(
+$apiInstance = new Libretime\Client\Api\MusicDirsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this music dir.
-$music_dir = new \OpenAPI\Client\Model\MusicDir(); // \OpenAPI\Client\Model\MusicDir
+$music_dir = new \Libretime\Client\Model\MusicDir(); // \Libretime\Client\Model\MusicDir
 
 try {
     $result = $apiInstance->musicDirsUpdate($id, $music_dir);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this music dir. |
- **music_dir** | [**\OpenAPI\Client\Model\MusicDir**](../Model/MusicDir.md)|  | [optional]
+ **music_dir** | [**\Libretime\Client\Model\MusicDir**](../Model/MusicDir.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MusicDir**](../Model/MusicDir.md)
+[**\Libretime\Client\Model\MusicDir**](../Model/MusicDir.md)
 
 ### Authorization
 

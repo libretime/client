@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.sessions_api import SessionsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.sessions_api import SessionsApi  # noqa: E501
 
 
 class TestSessionsApi(unittest.TestCase):

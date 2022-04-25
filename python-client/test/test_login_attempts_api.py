@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.login_attempts_api import LoginAttemptsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.login_attempts_api import LoginAttemptsApi  # noqa: E501
 
 
 class TestLoginAttemptsApi(unittest.TestCase):

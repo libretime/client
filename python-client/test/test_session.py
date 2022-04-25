@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.session import Session
+import libretime_client
+from libretime_client.model.session import Session
 
 
 class TestSession(unittest.TestCase):

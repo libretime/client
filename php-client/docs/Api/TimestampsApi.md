@@ -1,4 +1,4 @@
-# OpenAPI\Client\TimestampsApi
+# Libretime\Client\TimestampsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `timestampsCreate()`
 
 ```php
-timestampsCreate($timestamp): \OpenAPI\Client\Model\Timestamp
+timestampsCreate($timestamp): \Libretime\Client\Model\Timestamp
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TimestampsApi(
+$apiInstance = new Libretime\Client\Api\TimestampsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$timestamp = new \OpenAPI\Client\Model\Timestamp(); // \OpenAPI\Client\Model\Timestamp
+$timestamp = new \Libretime\Client\Model\Timestamp(); // \Libretime\Client\Model\Timestamp
 
 try {
     $result = $apiInstance->timestampsCreate($timestamp);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **timestamp** | [**\OpenAPI\Client\Model\Timestamp**](../Model/Timestamp.md)|  |
+ **timestamp** | [**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Timestamp**](../Model/Timestamp.md)
+[**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TimestampsApi(
+$apiInstance = new Libretime\Client\Api\TimestampsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `timestampsList()`
 
 ```php
-timestampsList(): \OpenAPI\Client\Model\Timestamp[]
+timestampsList(): \Libretime\Client\Model\Timestamp[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TimestampsApi(
+$apiInstance = new Libretime\Client\Api\TimestampsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Timestamp[]**](../Model/Timestamp.md)
+[**\Libretime\Client\Model\Timestamp[]**](../Model/Timestamp.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `timestampsPartialUpdate()`
 
 ```php
-timestampsPartialUpdate($id, $patched_timestamp): \OpenAPI\Client\Model\Timestamp
+timestampsPartialUpdate($id, $patched_timestamp): \Libretime\Client\Model\Timestamp
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TimestampsApi(
+$apiInstance = new Libretime\Client\Api\TimestampsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this timestamp.
-$patched_timestamp = new \OpenAPI\Client\Model\PatchedTimestamp(); // \OpenAPI\Client\Model\PatchedTimestamp
+$patched_timestamp = new \Libretime\Client\Model\PatchedTimestamp(); // \Libretime\Client\Model\PatchedTimestamp
 
 try {
     $result = $apiInstance->timestampsPartialUpdate($id, $patched_timestamp);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this timestamp. |
- **patched_timestamp** | [**\OpenAPI\Client\Model\PatchedTimestamp**](../Model/PatchedTimestamp.md)|  | [optional]
+ **patched_timestamp** | [**\Libretime\Client\Model\PatchedTimestamp**](../Model/PatchedTimestamp.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Timestamp**](../Model/Timestamp.md)
+[**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `timestampsRetrieve()`
 
 ```php
-timestampsRetrieve($id): \OpenAPI\Client\Model\Timestamp
+timestampsRetrieve($id): \Libretime\Client\Model\Timestamp
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TimestampsApi(
+$apiInstance = new Libretime\Client\Api\TimestampsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Timestamp**](../Model/Timestamp.md)
+[**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `timestampsUpdate()`
 
 ```php
-timestampsUpdate($id, $timestamp): \OpenAPI\Client\Model\Timestamp
+timestampsUpdate($id, $timestamp): \Libretime\Client\Model\Timestamp
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TimestampsApi(
+$apiInstance = new Libretime\Client\Api\TimestampsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this timestamp.
-$timestamp = new \OpenAPI\Client\Model\Timestamp(); // \OpenAPI\Client\Model\Timestamp
+$timestamp = new \Libretime\Client\Model\Timestamp(); // \Libretime\Client\Model\Timestamp
 
 try {
     $result = $apiInstance->timestampsUpdate($id, $timestamp);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this timestamp. |
- **timestamp** | [**\OpenAPI\Client\Model\Timestamp**](../Model/Timestamp.md)|  |
+ **timestamp** | [**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Timestamp**](../Model/Timestamp.md)
+[**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)
 
 ### Authorization
 

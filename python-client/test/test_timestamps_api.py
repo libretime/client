@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.timestamps_api import TimestampsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.timestamps_api import TimestampsApi  # noqa: E501
 
 
 class TestTimestampsApi(unittest.TestCase):

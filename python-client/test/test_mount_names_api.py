@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.mount_names_api import MountNamesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.mount_names_api import MountNamesApi  # noqa: E501
 
 
 class TestMountNamesApi(unittest.TestCase):

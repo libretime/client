@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.smart_block_content import SmartBlockContent
+import libretime_client
+from libretime_client.model.smart_block_content import SmartBlockContent
 
 
 class TestSmartBlockContent(unittest.TestCase):

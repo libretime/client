@@ -1,4 +1,4 @@
-# OpenAPI\Client\TrackTypesApi
+# Libretime\Client\TrackTypesApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `trackTypesCreate()`
 
 ```php
-trackTypesCreate($track_type): \OpenAPI\Client\Model\TrackType
+trackTypesCreate($track_type): \Libretime\Client\Model\TrackType
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackTypesApi(
+$apiInstance = new Libretime\Client\Api\TrackTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$track_type = new \OpenAPI\Client\Model\TrackType(); // \OpenAPI\Client\Model\TrackType
+$track_type = new \Libretime\Client\Model\TrackType(); // \Libretime\Client\Model\TrackType
 
 try {
     $result = $apiInstance->trackTypesCreate($track_type);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **track_type** | [**\OpenAPI\Client\Model\TrackType**](../Model/TrackType.md)|  |
+ **track_type** | [**\Libretime\Client\Model\TrackType**](../Model/TrackType.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackType**](../Model/TrackType.md)
+[**\Libretime\Client\Model\TrackType**](../Model/TrackType.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackTypesApi(
+$apiInstance = new Libretime\Client\Api\TrackTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `trackTypesList()`
 
 ```php
-trackTypesList(): \OpenAPI\Client\Model\TrackType[]
+trackTypesList(): \Libretime\Client\Model\TrackType[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackTypesApi(
+$apiInstance = new Libretime\Client\Api\TrackTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackType[]**](../Model/TrackType.md)
+[**\Libretime\Client\Model\TrackType[]**](../Model/TrackType.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `trackTypesPartialUpdate()`
 
 ```php
-trackTypesPartialUpdate($id, $patched_track_type): \OpenAPI\Client\Model\TrackType
+trackTypesPartialUpdate($id, $patched_track_type): \Libretime\Client\Model\TrackType
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackTypesApi(
+$apiInstance = new Libretime\Client\Api\TrackTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this track type.
-$patched_track_type = new \OpenAPI\Client\Model\PatchedTrackType(); // \OpenAPI\Client\Model\PatchedTrackType
+$patched_track_type = new \Libretime\Client\Model\PatchedTrackType(); // \Libretime\Client\Model\PatchedTrackType
 
 try {
     $result = $apiInstance->trackTypesPartialUpdate($id, $patched_track_type);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this track type. |
- **patched_track_type** | [**\OpenAPI\Client\Model\PatchedTrackType**](../Model/PatchedTrackType.md)|  | [optional]
+ **patched_track_type** | [**\Libretime\Client\Model\PatchedTrackType**](../Model/PatchedTrackType.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackType**](../Model/TrackType.md)
+[**\Libretime\Client\Model\TrackType**](../Model/TrackType.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `trackTypesRetrieve()`
 
 ```php
-trackTypesRetrieve($id): \OpenAPI\Client\Model\TrackType
+trackTypesRetrieve($id): \Libretime\Client\Model\TrackType
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackTypesApi(
+$apiInstance = new Libretime\Client\Api\TrackTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackType**](../Model/TrackType.md)
+[**\Libretime\Client\Model\TrackType**](../Model/TrackType.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `trackTypesUpdate()`
 
 ```php
-trackTypesUpdate($id, $track_type): \OpenAPI\Client\Model\TrackType
+trackTypesUpdate($id, $track_type): \Libretime\Client\Model\TrackType
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackTypesApi(
+$apiInstance = new Libretime\Client\Api\TrackTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this track type.
-$track_type = new \OpenAPI\Client\Model\TrackType(); // \OpenAPI\Client\Model\TrackType
+$track_type = new \Libretime\Client\Model\TrackType(); // \Libretime\Client\Model\TrackType
 
 try {
     $result = $apiInstance->trackTypesUpdate($id, $track_type);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this track type. |
- **track_type** | [**\OpenAPI\Client\Model\TrackType**](../Model/TrackType.md)|  |
+ **track_type** | [**\Libretime\Client\Model\TrackType**](../Model/TrackType.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackType**](../Model/TrackType.md)
+[**\Libretime\Client\Model\TrackType**](../Model/TrackType.md)
 
 ### Authorization
 

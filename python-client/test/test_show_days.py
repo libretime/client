@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.show_days import ShowDays
+import libretime_client
+from libretime_client.model.show_days import ShowDays
 
 
 class TestShowDays(unittest.TestCase):

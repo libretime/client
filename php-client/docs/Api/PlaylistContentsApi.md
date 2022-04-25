@@ -1,4 +1,4 @@
-# OpenAPI\Client\PlaylistContentsApi
+# Libretime\Client\PlaylistContentsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `playlistContentsCreate()`
 
 ```php
-playlistContentsCreate($playlist_content): \OpenAPI\Client\Model\PlaylistContent
+playlistContentsCreate($playlist_content): \Libretime\Client\Model\PlaylistContent
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlaylistContentsApi(
+$apiInstance = new Libretime\Client\Api\PlaylistContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$playlist_content = new \OpenAPI\Client\Model\PlaylistContent(); // \OpenAPI\Client\Model\PlaylistContent
+$playlist_content = new \Libretime\Client\Model\PlaylistContent(); // \Libretime\Client\Model\PlaylistContent
 
 try {
     $result = $apiInstance->playlistContentsCreate($playlist_content);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **playlist_content** | [**\OpenAPI\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  |
+ **playlist_content** | [**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
+[**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlaylistContentsApi(
+$apiInstance = new Libretime\Client\Api\PlaylistContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `playlistContentsList()`
 
 ```php
-playlistContentsList(): \OpenAPI\Client\Model\PlaylistContent[]
+playlistContentsList(): \Libretime\Client\Model\PlaylistContent[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlaylistContentsApi(
+$apiInstance = new Libretime\Client\Api\PlaylistContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlaylistContent[]**](../Model/PlaylistContent.md)
+[**\Libretime\Client\Model\PlaylistContent[]**](../Model/PlaylistContent.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `playlistContentsPartialUpdate()`
 
 ```php
-playlistContentsPartialUpdate($id, $patched_playlist_content): \OpenAPI\Client\Model\PlaylistContent
+playlistContentsPartialUpdate($id, $patched_playlist_content): \Libretime\Client\Model\PlaylistContent
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlaylistContentsApi(
+$apiInstance = new Libretime\Client\Api\PlaylistContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this playlist content.
-$patched_playlist_content = new \OpenAPI\Client\Model\PatchedPlaylistContent(); // \OpenAPI\Client\Model\PatchedPlaylistContent
+$patched_playlist_content = new \Libretime\Client\Model\PatchedPlaylistContent(); // \Libretime\Client\Model\PatchedPlaylistContent
 
 try {
     $result = $apiInstance->playlistContentsPartialUpdate($id, $patched_playlist_content);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this playlist content. |
- **patched_playlist_content** | [**\OpenAPI\Client\Model\PatchedPlaylistContent**](../Model/PatchedPlaylistContent.md)|  | [optional]
+ **patched_playlist_content** | [**\Libretime\Client\Model\PatchedPlaylistContent**](../Model/PatchedPlaylistContent.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
+[**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `playlistContentsRetrieve()`
 
 ```php
-playlistContentsRetrieve($id): \OpenAPI\Client\Model\PlaylistContent
+playlistContentsRetrieve($id): \Libretime\Client\Model\PlaylistContent
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlaylistContentsApi(
+$apiInstance = new Libretime\Client\Api\PlaylistContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
+[**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `playlistContentsUpdate()`
 
 ```php
-playlistContentsUpdate($id, $playlist_content): \OpenAPI\Client\Model\PlaylistContent
+playlistContentsUpdate($id, $playlist_content): \Libretime\Client\Model\PlaylistContent
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\PlaylistContentsApi(
+$apiInstance = new Libretime\Client\Api\PlaylistContentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this playlist content.
-$playlist_content = new \OpenAPI\Client\Model\PlaylistContent(); // \OpenAPI\Client\Model\PlaylistContent
+$playlist_content = new \Libretime\Client\Model\PlaylistContent(); // \Libretime\Client\Model\PlaylistContent
 
 try {
     $result = $apiInstance->playlistContentsUpdate($id, $playlist_content);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this playlist content. |
- **playlist_content** | [**\OpenAPI\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  |
+ **playlist_content** | [**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
+[**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\LiveLogsApi
+# Libretime\Client\LiveLogsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `liveLogsCreate()`
 
 ```php
-liveLogsCreate($live_log): \OpenAPI\Client\Model\LiveLog
+liveLogsCreate($live_log): \Libretime\Client\Model\LiveLog
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LiveLogsApi(
+$apiInstance = new Libretime\Client\Api\LiveLogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$live_log = new \OpenAPI\Client\Model\LiveLog(); // \OpenAPI\Client\Model\LiveLog
+$live_log = new \Libretime\Client\Model\LiveLog(); // \Libretime\Client\Model\LiveLog
 
 try {
     $result = $apiInstance->liveLogsCreate($live_log);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **live_log** | [**\OpenAPI\Client\Model\LiveLog**](../Model/LiveLog.md)|  |
+ **live_log** | [**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiveLog**](../Model/LiveLog.md)
+[**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LiveLogsApi(
+$apiInstance = new Libretime\Client\Api\LiveLogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `liveLogsList()`
 
 ```php
-liveLogsList(): \OpenAPI\Client\Model\LiveLog[]
+liveLogsList(): \Libretime\Client\Model\LiveLog[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LiveLogsApi(
+$apiInstance = new Libretime\Client\Api\LiveLogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiveLog[]**](../Model/LiveLog.md)
+[**\Libretime\Client\Model\LiveLog[]**](../Model/LiveLog.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `liveLogsPartialUpdate()`
 
 ```php
-liveLogsPartialUpdate($id, $patched_live_log): \OpenAPI\Client\Model\LiveLog
+liveLogsPartialUpdate($id, $patched_live_log): \Libretime\Client\Model\LiveLog
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LiveLogsApi(
+$apiInstance = new Libretime\Client\Api\LiveLogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this live log.
-$patched_live_log = new \OpenAPI\Client\Model\PatchedLiveLog(); // \OpenAPI\Client\Model\PatchedLiveLog
+$patched_live_log = new \Libretime\Client\Model\PatchedLiveLog(); // \Libretime\Client\Model\PatchedLiveLog
 
 try {
     $result = $apiInstance->liveLogsPartialUpdate($id, $patched_live_log);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this live log. |
- **patched_live_log** | [**\OpenAPI\Client\Model\PatchedLiveLog**](../Model/PatchedLiveLog.md)|  | [optional]
+ **patched_live_log** | [**\Libretime\Client\Model\PatchedLiveLog**](../Model/PatchedLiveLog.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiveLog**](../Model/LiveLog.md)
+[**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `liveLogsRetrieve()`
 
 ```php
-liveLogsRetrieve($id): \OpenAPI\Client\Model\LiveLog
+liveLogsRetrieve($id): \Libretime\Client\Model\LiveLog
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LiveLogsApi(
+$apiInstance = new Libretime\Client\Api\LiveLogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiveLog**](../Model/LiveLog.md)
+[**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `liveLogsUpdate()`
 
 ```php
-liveLogsUpdate($id, $live_log): \OpenAPI\Client\Model\LiveLog
+liveLogsUpdate($id, $live_log): \Libretime\Client\Model\LiveLog
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LiveLogsApi(
+$apiInstance = new Libretime\Client\Api\LiveLogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this live log.
-$live_log = new \OpenAPI\Client\Model\LiveLog(); // \OpenAPI\Client\Model\LiveLog
+$live_log = new \Libretime\Client\Model\LiveLog(); // \Libretime\Client\Model\LiveLog
 
 try {
     $result = $apiInstance->liveLogsUpdate($id, $live_log);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this live log. |
- **live_log** | [**\OpenAPI\Client\Model\LiveLog**](../Model/LiveLog.md)|  |
+ **live_log** | [**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiveLog**](../Model/LiveLog.md)
+[**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)
 
 ### Authorization
 

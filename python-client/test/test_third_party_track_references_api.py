@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi  # noqa: E501
 
 
 class TestThirdPartyTrackReferencesApi(unittest.TestCase):

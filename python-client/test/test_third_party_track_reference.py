@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.third_party_track_reference import ThirdPartyTrackReference
+import libretime_client
+from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 
 
 class TestThirdPartyTrackReference(unittest.TestCase):

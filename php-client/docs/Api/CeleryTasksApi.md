@@ -1,4 +1,4 @@
-# OpenAPI\Client\CeleryTasksApi
+# Libretime\Client\CeleryTasksApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `celeryTasksCreate()`
 
 ```php
-celeryTasksCreate($celery_task): \OpenAPI\Client\Model\CeleryTask
+celeryTasksCreate($celery_task): \Libretime\Client\Model\CeleryTask
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$celery_task = new \OpenAPI\Client\Model\CeleryTask(); // \OpenAPI\Client\Model\CeleryTask
+$celery_task = new \Libretime\Client\Model\CeleryTask(); // \Libretime\Client\Model\CeleryTask
 
 try {
     $result = $apiInstance->celeryTasksCreate($celery_task);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **celery_task** | [**\OpenAPI\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  |
+ **celery_task** | [**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CeleryTask**](../Model/CeleryTask.md)
+[**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `celeryTasksList()`
 
 ```php
-celeryTasksList(): \OpenAPI\Client\Model\CeleryTask[]
+celeryTasksList(): \Libretime\Client\Model\CeleryTask[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CeleryTask[]**](../Model/CeleryTask.md)
+[**\Libretime\Client\Model\CeleryTask[]**](../Model/CeleryTask.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `celeryTasksPartialUpdate()`
 
 ```php
-celeryTasksPartialUpdate($id, $patched_celery_task): \OpenAPI\Client\Model\CeleryTask
+celeryTasksPartialUpdate($id, $patched_celery_task): \Libretime\Client\Model\CeleryTask
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this celery task.
-$patched_celery_task = new \OpenAPI\Client\Model\PatchedCeleryTask(); // \OpenAPI\Client\Model\PatchedCeleryTask
+$patched_celery_task = new \Libretime\Client\Model\PatchedCeleryTask(); // \Libretime\Client\Model\PatchedCeleryTask
 
 try {
     $result = $apiInstance->celeryTasksPartialUpdate($id, $patched_celery_task);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this celery task. |
- **patched_celery_task** | [**\OpenAPI\Client\Model\PatchedCeleryTask**](../Model/PatchedCeleryTask.md)|  | [optional]
+ **patched_celery_task** | [**\Libretime\Client\Model\PatchedCeleryTask**](../Model/PatchedCeleryTask.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CeleryTask**](../Model/CeleryTask.md)
+[**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `celeryTasksRetrieve()`
 
 ```php
-celeryTasksRetrieve($id): \OpenAPI\Client\Model\CeleryTask
+celeryTasksRetrieve($id): \Libretime\Client\Model\CeleryTask
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CeleryTask**](../Model/CeleryTask.md)
+[**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `celeryTasksUpdate()`
 
 ```php
-celeryTasksUpdate($id, $celery_task): \OpenAPI\Client\Model\CeleryTask
+celeryTasksUpdate($id, $celery_task): \Libretime\Client\Model\CeleryTask
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CeleryTasksApi(
+$apiInstance = new Libretime\Client\Api\CeleryTasksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this celery task.
-$celery_task = new \OpenAPI\Client\Model\CeleryTask(); // \OpenAPI\Client\Model\CeleryTask
+$celery_task = new \Libretime\Client\Model\CeleryTask(); // \Libretime\Client\Model\CeleryTask
 
 try {
     $result = $apiInstance->celeryTasksUpdate($id, $celery_task);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this celery task. |
- **celery_task** | [**\OpenAPI\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  |
+ **celery_task** | [**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CeleryTask**](../Model/CeleryTask.md)
+[**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)
 
 ### Authorization
 

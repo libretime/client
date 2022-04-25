@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.files_api import FilesApi  # noqa: E501
+import libretime_client
+from libretime_client.api.files_api import FilesApi  # noqa: E501
 
 
 class TestFilesApi(unittest.TestCase):

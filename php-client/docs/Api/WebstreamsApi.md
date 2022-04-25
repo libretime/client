@@ -1,4 +1,4 @@
-# OpenAPI\Client\WebstreamsApi
+# Libretime\Client\WebstreamsApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `webstreamsCreate()`
 
 ```php
-webstreamsCreate($webstream): \OpenAPI\Client\Model\Webstream
+webstreamsCreate($webstream): \Libretime\Client\Model\Webstream
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamsApi(
+$apiInstance = new Libretime\Client\Api\WebstreamsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$webstream = new \OpenAPI\Client\Model\Webstream(); // \OpenAPI\Client\Model\Webstream
+$webstream = new \Libretime\Client\Model\Webstream(); // \Libretime\Client\Model\Webstream
 
 try {
     $result = $apiInstance->webstreamsCreate($webstream);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webstream** | [**\OpenAPI\Client\Model\Webstream**](../Model/Webstream.md)|  |
+ **webstream** | [**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webstream**](../Model/Webstream.md)
+[**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamsApi(
+$apiInstance = new Libretime\Client\Api\WebstreamsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `webstreamsList()`
 
 ```php
-webstreamsList(): \OpenAPI\Client\Model\Webstream[]
+webstreamsList(): \Libretime\Client\Model\Webstream[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamsApi(
+$apiInstance = new Libretime\Client\Api\WebstreamsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webstream[]**](../Model/Webstream.md)
+[**\Libretime\Client\Model\Webstream[]**](../Model/Webstream.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `webstreamsPartialUpdate()`
 
 ```php
-webstreamsPartialUpdate($id, $patched_webstream): \OpenAPI\Client\Model\Webstream
+webstreamsPartialUpdate($id, $patched_webstream): \Libretime\Client\Model\Webstream
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamsApi(
+$apiInstance = new Libretime\Client\Api\WebstreamsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this webstream.
-$patched_webstream = new \OpenAPI\Client\Model\PatchedWebstream(); // \OpenAPI\Client\Model\PatchedWebstream
+$patched_webstream = new \Libretime\Client\Model\PatchedWebstream(); // \Libretime\Client\Model\PatchedWebstream
 
 try {
     $result = $apiInstance->webstreamsPartialUpdate($id, $patched_webstream);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this webstream. |
- **patched_webstream** | [**\OpenAPI\Client\Model\PatchedWebstream**](../Model/PatchedWebstream.md)|  | [optional]
+ **patched_webstream** | [**\Libretime\Client\Model\PatchedWebstream**](../Model/PatchedWebstream.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webstream**](../Model/Webstream.md)
+[**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `webstreamsRetrieve()`
 
 ```php
-webstreamsRetrieve($id): \OpenAPI\Client\Model\Webstream
+webstreamsRetrieve($id): \Libretime\Client\Model\Webstream
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamsApi(
+$apiInstance = new Libretime\Client\Api\WebstreamsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webstream**](../Model/Webstream.md)
+[**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `webstreamsUpdate()`
 
 ```php
-webstreamsUpdate($id, $webstream): \OpenAPI\Client\Model\Webstream
+webstreamsUpdate($id, $webstream): \Libretime\Client\Model\Webstream
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamsApi(
+$apiInstance = new Libretime\Client\Api\WebstreamsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this webstream.
-$webstream = new \OpenAPI\Client\Model\Webstream(); // \OpenAPI\Client\Model\Webstream
+$webstream = new \Libretime\Client\Model\Webstream(); // \Libretime\Client\Model\Webstream
 
 try {
     $result = $apiInstance->webstreamsUpdate($id, $webstream);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this webstream. |
- **webstream** | [**\OpenAPI\Client\Model\Webstream**](../Model/Webstream.md)|  |
+ **webstream** | [**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webstream**](../Model/Webstream.md)
+[**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\ScheduleApi
+# Libretime\Client\ScheduleApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `scheduleCreate()`
 
 ```php
-scheduleCreate($schedule): \OpenAPI\Client\Model\Schedule
+scheduleCreate($schedule): \Libretime\Client\Model\Schedule
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleApi(
+$apiInstance = new Libretime\Client\Api\ScheduleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$schedule = new \OpenAPI\Client\Model\Schedule(); // \OpenAPI\Client\Model\Schedule
+$schedule = new \Libretime\Client\Model\Schedule(); // \Libretime\Client\Model\Schedule
 
 try {
     $result = $apiInstance->scheduleCreate($schedule);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule** | [**\OpenAPI\Client\Model\Schedule**](../Model/Schedule.md)|  |
+ **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleApi(
+$apiInstance = new Libretime\Client\Api\ScheduleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `scheduleList()`
 
 ```php
-scheduleList($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range): \OpenAPI\Client\Model\Schedule[]
+scheduleList($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range): \Libretime\Client\Model\Schedule[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleApi(
+$apiInstance = new Libretime\Client\Api\ScheduleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Schedule[]**](../Model/Schedule.md)
+[**\Libretime\Client\Model\Schedule[]**](../Model/Schedule.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 ## `schedulePartialUpdate()`
 
 ```php
-schedulePartialUpdate($id, $patched_schedule): \OpenAPI\Client\Model\Schedule
+schedulePartialUpdate($id, $patched_schedule): \Libretime\Client\Model\Schedule
 ```
 
 
@@ -270,24 +270,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleApi(
+$apiInstance = new Libretime\Client\Api\ScheduleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this schedule.
-$patched_schedule = new \OpenAPI\Client\Model\PatchedSchedule(); // \OpenAPI\Client\Model\PatchedSchedule
+$patched_schedule = new \Libretime\Client\Model\PatchedSchedule(); // \Libretime\Client\Model\PatchedSchedule
 
 try {
     $result = $apiInstance->schedulePartialUpdate($id, $patched_schedule);
@@ -302,11 +302,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. |
- **patched_schedule** | [**\OpenAPI\Client\Model\PatchedSchedule**](../Model/PatchedSchedule.md)|  | [optional]
+ **patched_schedule** | [**\Libretime\Client\Model\PatchedSchedule**](../Model/PatchedSchedule.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 ## `scheduleRetrieve()`
 
 ```php
-scheduleRetrieve($id): \OpenAPI\Client\Model\Schedule
+scheduleRetrieve($id): \Libretime\Client\Model\Schedule
 ```
 
 
@@ -337,17 +337,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleApi(
+$apiInstance = new Libretime\Client\Api\ScheduleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
 
 ### Authorization
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 ## `scheduleUpdate()`
 
 ```php
-scheduleUpdate($id, $schedule): \OpenAPI\Client\Model\Schedule
+scheduleUpdate($id, $schedule): \Libretime\Client\Model\Schedule
 ```
 
 
@@ -402,24 +402,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduleApi(
+$apiInstance = new Libretime\Client\Api\ScheduleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this schedule.
-$schedule = new \OpenAPI\Client\Model\Schedule(); // \OpenAPI\Client\Model\Schedule
+$schedule = new \Libretime\Client\Model\Schedule(); // \Libretime\Client\Model\Schedule
 
 try {
     $result = $apiInstance->scheduleUpdate($id, $schedule);
@@ -434,11 +434,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. |
- **schedule** | [**\OpenAPI\Client\Model\Schedule**](../Model/Schedule.md)|  |
+ **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
 
 ### Authorization
 

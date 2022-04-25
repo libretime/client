@@ -1,4 +1,4 @@
-# OpenAPI\Client\WebstreamMetadataApi
+# Libretime\Client\WebstreamMetadataApi
 
 All URIs are relative to http://localhost.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `webstreamMetadataCreate()`
 
 ```php
-webstreamMetadataCreate($webstream_metadata): \OpenAPI\Client\Model\WebstreamMetadata
+webstreamMetadataCreate($webstream_metadata): \Libretime\Client\Model\WebstreamMetadata
 ```
 
 
@@ -28,23 +28,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamMetadataApi(
+$apiInstance = new Libretime\Client\Api\WebstreamMetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$webstream_metadata = new \OpenAPI\Client\Model\WebstreamMetadata(); // \OpenAPI\Client\Model\WebstreamMetadata
+$webstream_metadata = new \Libretime\Client\Model\WebstreamMetadata(); // \Libretime\Client\Model\WebstreamMetadata
 
 try {
     $result = $apiInstance->webstreamMetadataCreate($webstream_metadata);
@@ -58,11 +58,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webstream_metadata** | [**\OpenAPI\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  |
+ **webstream_metadata** | [**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
+[**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
 
 ### Authorization
 
@@ -93,17 +93,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamMetadataApi(
+$apiInstance = new Libretime\Client\Api\WebstreamMetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `webstreamMetadataList()`
 
 ```php
-webstreamMetadataList(): \OpenAPI\Client\Model\WebstreamMetadata[]
+webstreamMetadataList(): \Libretime\Client\Model\WebstreamMetadata[]
 ```
 
 
@@ -157,17 +157,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamMetadataApi(
+$apiInstance = new Libretime\Client\Api\WebstreamMetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebstreamMetadata[]**](../Model/WebstreamMetadata.md)
+[**\Libretime\Client\Model\WebstreamMetadata[]**](../Model/WebstreamMetadata.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `webstreamMetadataPartialUpdate()`
 
 ```php
-webstreamMetadataPartialUpdate($id, $patched_webstream_metadata): \OpenAPI\Client\Model\WebstreamMetadata
+webstreamMetadataPartialUpdate($id, $patched_webstream_metadata): \Libretime\Client\Model\WebstreamMetadata
 ```
 
 
@@ -219,24 +219,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamMetadataApi(
+$apiInstance = new Libretime\Client\Api\WebstreamMetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this webstream metadata.
-$patched_webstream_metadata = new \OpenAPI\Client\Model\PatchedWebstreamMetadata(); // \OpenAPI\Client\Model\PatchedWebstreamMetadata
+$patched_webstream_metadata = new \Libretime\Client\Model\PatchedWebstreamMetadata(); // \Libretime\Client\Model\PatchedWebstreamMetadata
 
 try {
     $result = $apiInstance->webstreamMetadataPartialUpdate($id, $patched_webstream_metadata);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this webstream metadata. |
- **patched_webstream_metadata** | [**\OpenAPI\Client\Model\PatchedWebstreamMetadata**](../Model/PatchedWebstreamMetadata.md)|  | [optional]
+ **patched_webstream_metadata** | [**\Libretime\Client\Model\PatchedWebstreamMetadata**](../Model/PatchedWebstreamMetadata.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
+[**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `webstreamMetadataRetrieve()`
 
 ```php
-webstreamMetadataRetrieve($id): \OpenAPI\Client\Model\WebstreamMetadata
+webstreamMetadataRetrieve($id): \Libretime\Client\Model\WebstreamMetadata
 ```
 
 
@@ -286,17 +286,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamMetadataApi(
+$apiInstance = new Libretime\Client\Api\WebstreamMetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
+[**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `webstreamMetadataUpdate()`
 
 ```php
-webstreamMetadataUpdate($id, $webstream_metadata): \OpenAPI\Client\Model\WebstreamMetadata
+webstreamMetadataUpdate($id, $webstream_metadata): \Libretime\Client\Model\WebstreamMetadata
 ```
 
 
@@ -351,24 +351,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basicAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+$config = Libretime\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure API key authorization: cookieAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
+$config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKey('sessionid', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
+// $config = Libretime\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('sessionid', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebstreamMetadataApi(
+$apiInstance = new Libretime\Client\Api\WebstreamMetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | A unique integer value identifying this webstream metadata.
-$webstream_metadata = new \OpenAPI\Client\Model\WebstreamMetadata(); // \OpenAPI\Client\Model\WebstreamMetadata
+$webstream_metadata = new \Libretime\Client\Model\WebstreamMetadata(); // \Libretime\Client\Model\WebstreamMetadata
 
 try {
     $result = $apiInstance->webstreamMetadataUpdate($id, $webstream_metadata);
@@ -383,11 +383,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this webstream metadata. |
- **webstream_metadata** | [**\OpenAPI\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  |
+ **webstream_metadata** | [**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
+[**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)
 
 ### Authorization
 

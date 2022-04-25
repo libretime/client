@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.live_logs_api import LiveLogsApi  # noqa: E501
+import libretime_client
+from libretime_client.api.live_logs_api import LiveLogsApi  # noqa: E501
 
 
 class TestLiveLogsApi(unittest.TestCase):
