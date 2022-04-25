@@ -29,8 +29,8 @@ namespace OpenAPI\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
@@ -323,7 +323,8 @@ class SchemaApi
             'format', // param base name
             'string', // openApiType
             'form', // style
-            true // explode
+            true, // explode
+            false // required
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
@@ -331,7 +332,8 @@ class SchemaApi
             'lang', // param base name
             'string', // openApiType
             'form', // style
-            true // explode
+            true, // explode
+            false // required
         ) ?? []);
 
 

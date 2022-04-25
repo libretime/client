@@ -19,11 +19,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/libretime/api-client.git"
+      "url": "https://github.com/libretime/client.git"
     }
   ],
   "require": {
-    "libretime/api-client": "*@dev"
+    "libretime/client": "*@dev"
   }
 }
 ```

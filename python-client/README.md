@@ -17,9 +17,9 @@ Python >=3.6
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/libretime/api-client.git
+pip install git+https://github.com/libretime/client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/libretime/api-client.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/libretime/client.git`)
 
 Then import the package:
 ```python
