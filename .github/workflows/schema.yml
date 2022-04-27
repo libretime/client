@@ -40,3 +40,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: update clients"
+          commit_user_name: "libretime-bot"
+          commit_user_email: "libretime-bot@users.noreply.github.com"
