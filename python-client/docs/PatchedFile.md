@@ -71,7 +71,6 @@ Name | Type | Description | Notes
 **description** | **str, none_type** |  | [optional] 
 **artwork** | **str, none_type** |  | [optional] 
 **track_type** | **str, none_type** |  | [optional] 
-**directory** | **str, none_type** |  | [optional] 
 **edited_by** | **str, none_type** |  | [optional] 
 **owner** | **str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

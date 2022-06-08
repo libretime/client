@@ -427,12 +427,6 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'directory'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
     'edited_by'?: string | null;
     /**
      * 

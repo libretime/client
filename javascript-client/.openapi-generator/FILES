@@ -11,7 +11,6 @@ api/listener-counts-api.ts
 api/live-logs-api.ts
 api/login-attempts-api.ts
 api/mount-names-api.ts
-api/music-dirs-api.ts
 api/playlist-contents-api.ts
 api/playlists-api.ts
 api/playout-history-api.ts
@@ -58,7 +57,6 @@ model/live-log.ts
 model/login-attempt.ts
 model/model-file.ts
 model/mount-name.ts
-model/music-dir.ts
 model/patched-celery-task.ts
 model/patched-cloud-file.ts
 model/patched-country.ts
@@ -68,7 +66,6 @@ model/patched-listener-count.ts
 model/patched-live-log.ts
 model/patched-login-attempt.ts
 model/patched-mount-name.ts
-model/patched-music-dir.ts
 model/patched-playlist-content.ts
 model/patched-playlist.ts
 model/patched-playout-history-metadata.ts

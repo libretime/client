@@ -156,12 +156,6 @@ Class | Method | HTTP request | Description
 *MountNamesApi* | [**mount_names_partial_update**](docs/MountNamesApi.md#mount_names_partial_update) | **PATCH** /api/v2/mount-names/{id}/ | 
 *MountNamesApi* | [**mount_names_retrieve**](docs/MountNamesApi.md#mount_names_retrieve) | **GET** /api/v2/mount-names/{id}/ | 
 *MountNamesApi* | [**mount_names_update**](docs/MountNamesApi.md#mount_names_update) | **PUT** /api/v2/mount-names/{id}/ | 
-*MusicDirsApi* | [**music_dirs_create**](docs/MusicDirsApi.md#music_dirs_create) | **POST** /api/v2/music-dirs/ | 
-*MusicDirsApi* | [**music_dirs_destroy**](docs/MusicDirsApi.md#music_dirs_destroy) | **DELETE** /api/v2/music-dirs/{id}/ | 
-*MusicDirsApi* | [**music_dirs_list**](docs/MusicDirsApi.md#music_dirs_list) | **GET** /api/v2/music-dirs/ | 
-*MusicDirsApi* | [**music_dirs_partial_update**](docs/MusicDirsApi.md#music_dirs_partial_update) | **PATCH** /api/v2/music-dirs/{id}/ | 
-*MusicDirsApi* | [**music_dirs_retrieve**](docs/MusicDirsApi.md#music_dirs_retrieve) | **GET** /api/v2/music-dirs/{id}/ | 
-*MusicDirsApi* | [**music_dirs_update**](docs/MusicDirsApi.md#music_dirs_update) | **PUT** /api/v2/music-dirs/{id}/ | 
 *PlaylistContentsApi* | [**playlist_contents_create**](docs/PlaylistContentsApi.md#playlist_contents_create) | **POST** /api/v2/playlist-contents/ | 
 *PlaylistContentsApi* | [**playlist_contents_destroy**](docs/PlaylistContentsApi.md#playlist_contents_destroy) | **DELETE** /api/v2/playlist-contents/{id}/ | 
 *PlaylistContentsApi* | [**playlist_contents_list**](docs/PlaylistContentsApi.md#playlist_contents_list) | **GET** /api/v2/playlist-contents/ | 
@@ -351,7 +345,6 @@ Class | Method | HTTP request | Description
  - [LiveLog](docs/LiveLog.md)
  - [LoginAttempt](docs/LoginAttempt.md)
  - [MountName](docs/MountName.md)
- - [MusicDir](docs/MusicDir.md)
  - [PatchedCeleryTask](docs/PatchedCeleryTask.md)
  - [PatchedCloudFile](docs/PatchedCloudFile.md)
  - [PatchedCountry](docs/PatchedCountry.md)
@@ -361,7 +354,6 @@ Class | Method | HTTP request | Description
  - [PatchedLiveLog](docs/PatchedLiveLog.md)
  - [PatchedLoginAttempt](docs/PatchedLoginAttempt.md)
  - [PatchedMountName](docs/PatchedMountName.md)
- - [PatchedMusicDir](docs/PatchedMusicDir.md)
  - [PatchedPlaylist](docs/PatchedPlaylist.md)
  - [PatchedPlaylistContent](docs/PatchedPlaylistContent.md)
  - [PatchedPlayoutHistory](docs/PatchedPlayoutHistory.md)

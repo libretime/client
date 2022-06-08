@@ -311,7 +311,6 @@ class PatchedFile(ModelNormal):
             'description': (str, none_type,),  # noqa: E501
             'artwork': (str, none_type,),  # noqa: E501
             'track_type': (str, none_type,),  # noqa: E501
-            'directory': (str, none_type,),  # noqa: E501
             'edited_by': (str, none_type,),  # noqa: E501
             'owner': (str, none_type,),  # noqa: E501
         }
@@ -389,7 +388,6 @@ class PatchedFile(ModelNormal):
         'description': 'description',  # noqa: E501
         'artwork': 'artwork',  # noqa: E501
         'track_type': 'track_type',  # noqa: E501
-        'directory': 'directory',  # noqa: E501
         'edited_by': 'edited_by',  # noqa: E501
         'owner': 'owner',  # noqa: E501
     }
@@ -504,7 +502,6 @@ class PatchedFile(ModelNormal):
             description (str, none_type): [optional]  # noqa: E501
             artwork (str, none_type): [optional]  # noqa: E501
             track_type (str, none_type): [optional]  # noqa: E501
-            directory (str, none_type): [optional]  # noqa: E501
             edited_by (str, none_type): [optional]  # noqa: E501
             owner (str, none_type): [optional]  # noqa: E501
         """
@@ -659,7 +656,6 @@ class PatchedFile(ModelNormal):
             description (str, none_type): [optional]  # noqa: E501
             artwork (str, none_type): [optional]  # noqa: E501
             track_type (str, none_type): [optional]  # noqa: E501
-            directory (str, none_type): [optional]  # noqa: E501
             edited_by (str, none_type): [optional]  # noqa: E501
             owner (str, none_type): [optional]  # noqa: E501
         """

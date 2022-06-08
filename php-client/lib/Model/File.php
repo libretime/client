@@ -126,7 +126,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'string',
         'artwork' => 'string',
         'track_type' => 'string',
-        'directory' => 'string',
         'edited_by' => 'string',
         'owner' => 'string'
     ];
@@ -206,7 +205,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => null,
         'artwork' => null,
         'track_type' => null,
-        'directory' => 'uri',
         'edited_by' => 'uri',
         'owner' => 'uri'
     ];
@@ -305,7 +303,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'description',
         'artwork' => 'artwork',
         'track_type' => 'track_type',
-        'directory' => 'directory',
         'edited_by' => 'edited_by',
         'owner' => 'owner'
     ];
@@ -383,7 +380,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'setDescription',
         'artwork' => 'setArtwork',
         'track_type' => 'setTrackType',
-        'directory' => 'setDirectory',
         'edited_by' => 'setEditedBy',
         'owner' => 'setOwner'
     ];
@@ -461,7 +457,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'getDescription',
         'artwork' => 'getArtwork',
         'track_type' => 'getTrackType',
-        'directory' => 'getDirectory',
         'edited_by' => 'getEditedBy',
         'owner' => 'getOwner'
     ];
@@ -590,7 +585,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['description'] = $data['description'] ?? null;
         $this->container['artwork'] = $data['artwork'] ?? null;
         $this->container['track_type'] = $data['track_type'] ?? null;
-        $this->container['directory'] = $data['directory'] ?? null;
         $this->container['edited_by'] = $data['edited_by'] ?? null;
         $this->container['owner'] = $data['owner'] ?? null;
     }
@@ -2720,30 +2714,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['track_type'] = $track_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets directory
-     *
-     * @return string|null
-     */
-    public function getDirectory()
-    {
-        return $this->container['directory'];
-    }
-
-    /**
-     * Sets directory
-     *
-     * @param string|null $directory directory
-     *
-     * @return self
-     */
-    public function setDirectory($directory)
-    {
-        $this->container['directory'] = $directory;
 
         return $this;
     }

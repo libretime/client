@@ -138,12 +138,6 @@ Class | Method | HTTP request | Description
 *MountNamesApi* | [**mountNamesPartialUpdate**](docs/Api/MountNamesApi.md#mountnamespartialupdate) | **PATCH** /api/v2/mount-names/{id}/ | 
 *MountNamesApi* | [**mountNamesRetrieve**](docs/Api/MountNamesApi.md#mountnamesretrieve) | **GET** /api/v2/mount-names/{id}/ | 
 *MountNamesApi* | [**mountNamesUpdate**](docs/Api/MountNamesApi.md#mountnamesupdate) | **PUT** /api/v2/mount-names/{id}/ | 
-*MusicDirsApi* | [**musicDirsCreate**](docs/Api/MusicDirsApi.md#musicdirscreate) | **POST** /api/v2/music-dirs/ | 
-*MusicDirsApi* | [**musicDirsDestroy**](docs/Api/MusicDirsApi.md#musicdirsdestroy) | **DELETE** /api/v2/music-dirs/{id}/ | 
-*MusicDirsApi* | [**musicDirsList**](docs/Api/MusicDirsApi.md#musicdirslist) | **GET** /api/v2/music-dirs/ | 
-*MusicDirsApi* | [**musicDirsPartialUpdate**](docs/Api/MusicDirsApi.md#musicdirspartialupdate) | **PATCH** /api/v2/music-dirs/{id}/ | 
-*MusicDirsApi* | [**musicDirsRetrieve**](docs/Api/MusicDirsApi.md#musicdirsretrieve) | **GET** /api/v2/music-dirs/{id}/ | 
-*MusicDirsApi* | [**musicDirsUpdate**](docs/Api/MusicDirsApi.md#musicdirsupdate) | **PUT** /api/v2/music-dirs/{id}/ | 
 *PlaylistContentsApi* | [**playlistContentsCreate**](docs/Api/PlaylistContentsApi.md#playlistcontentscreate) | **POST** /api/v2/playlist-contents/ | 
 *PlaylistContentsApi* | [**playlistContentsDestroy**](docs/Api/PlaylistContentsApi.md#playlistcontentsdestroy) | **DELETE** /api/v2/playlist-contents/{id}/ | 
 *PlaylistContentsApi* | [**playlistContentsList**](docs/Api/PlaylistContentsApi.md#playlistcontentslist) | **GET** /api/v2/playlist-contents/ | 
@@ -332,7 +326,6 @@ Class | Method | HTTP request | Description
 - [LiveLog](docs/Model/LiveLog.md)
 - [LoginAttempt](docs/Model/LoginAttempt.md)
 - [MountName](docs/Model/MountName.md)
-- [MusicDir](docs/Model/MusicDir.md)
 - [PatchedCeleryTask](docs/Model/PatchedCeleryTask.md)
 - [PatchedCloudFile](docs/Model/PatchedCloudFile.md)
 - [PatchedCountry](docs/Model/PatchedCountry.md)
@@ -342,7 +335,6 @@ Class | Method | HTTP request | Description
 - [PatchedLiveLog](docs/Model/PatchedLiveLog.md)
 - [PatchedLoginAttempt](docs/Model/PatchedLoginAttempt.md)
 - [PatchedMountName](docs/Model/PatchedMountName.md)
-- [PatchedMusicDir](docs/Model/PatchedMusicDir.md)
 - [PatchedPlaylist](docs/Model/PatchedPlaylist.md)
 - [PatchedPlaylistContent](docs/Model/PatchedPlaylistContent.md)
 - [PatchedPlayoutHistory](docs/Model/PatchedPlayoutHistory.md)

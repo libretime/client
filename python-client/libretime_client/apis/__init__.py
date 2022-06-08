@@ -23,7 +23,6 @@ from libretime_client.api.listener_counts_api import ListenerCountsApi
 from libretime_client.api.live_logs_api import LiveLogsApi
 from libretime_client.api.login_attempts_api import LoginAttemptsApi
 from libretime_client.api.mount_names_api import MountNamesApi
-from libretime_client.api.music_dirs_api import MusicDirsApi
 from libretime_client.api.playlist_contents_api import PlaylistContentsApi
 from libretime_client.api.playlists_api import PlaylistsApi
 from libretime_client.api.playout_history_api import PlayoutHistoryApi

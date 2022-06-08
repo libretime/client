@@ -427,12 +427,6 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'directory'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
     'edited_by'?: string | null;
     /**
      * 

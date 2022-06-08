@@ -71,7 +71,6 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional]
 **artwork** | **string** |  | [optional]
 **track_type** | **string** |  | [optional]
-**directory** | **string** |  | [optional]
 **edited_by** | **string** |  | [optional]
 **owner** | **string** |  | [optional]
 

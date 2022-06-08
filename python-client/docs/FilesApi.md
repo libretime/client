@@ -122,7 +122,6 @@ with libretime_client.ApiClient(configuration) as api_client:
         description="description_example",
         artwork="artwork_example",
         track_type="track_type_example",
-        directory="directory_example",
         edited_by="edited_by_example",
         owner="owner_example",
     ) # File | 
@@ -515,7 +514,6 @@ with libretime_client.ApiClient(configuration) as api_client:
         description="description_example",
         artwork="artwork_example",
         track_type="track_type_example",
-        directory="directory_example",
         edited_by="edited_by_example",
         owner="owner_example",
     ) # PatchedFile |  (optional)
@@ -758,7 +756,6 @@ with libretime_client.ApiClient(configuration) as api_client:
         description="description_example",
         artwork="artwork_example",
         track_type="track_type_example",
-        directory="directory_example",
         edited_by="edited_by_example",
         owner="owner_example",
     ) # File | 

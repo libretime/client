@@ -18,7 +18,6 @@ from libretime_client.model.listener_count import ListenerCount
 from libretime_client.model.live_log import LiveLog
 from libretime_client.model.login_attempt import LoginAttempt
 from libretime_client.model.mount_name import MountName
-from libretime_client.model.music_dir import MusicDir
 from libretime_client.model.patched_celery_task import PatchedCeleryTask
 from libretime_client.model.patched_cloud_file import PatchedCloudFile
 from libretime_client.model.patched_country import PatchedCountry
@@ -28,7 +27,6 @@ from libretime_client.model.patched_listener_count import PatchedListenerCount
 from libretime_client.model.patched_live_log import PatchedLiveLog
 from libretime_client.model.patched_login_attempt import PatchedLoginAttempt
 from libretime_client.model.patched_mount_name import PatchedMountName
-from libretime_client.model.patched_music_dir import PatchedMusicDir
 from libretime_client.model.patched_playlist import PatchedPlaylist
 from libretime_client.model.patched_playlist_content import PatchedPlaylistContent
 from libretime_client.model.patched_playout_history import PatchedPlayoutHistory

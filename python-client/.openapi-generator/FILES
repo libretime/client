@@ -20,8 +20,6 @@ docs/LoginAttempt.md
 docs/LoginAttemptsApi.md
 docs/MountName.md
 docs/MountNamesApi.md
-docs/MusicDir.md
-docs/MusicDirsApi.md
 docs/PatchedCeleryTask.md
 docs/PatchedCloudFile.md
 docs/PatchedCountry.md
@@ -31,7 +29,6 @@ docs/PatchedListenerCount.md
 docs/PatchedLiveLog.md
 docs/PatchedLoginAttempt.md
 docs/PatchedMountName.md
-docs/PatchedMusicDir.md
 docs/PatchedPlaylist.md
 docs/PatchedPlaylistContent.md
 docs/PatchedPlayoutHistory.md
@@ -134,7 +131,6 @@ libretime_client/api/listener_counts_api.py
 libretime_client/api/live_logs_api.py
 libretime_client/api/login_attempts_api.py
 libretime_client/api/mount_names_api.py
-libretime_client/api/music_dirs_api.py
 libretime_client/api/playlist_contents_api.py
 libretime_client/api/playlists_api.py
 libretime_client/api/playout_history_api.py
@@ -180,7 +176,6 @@ libretime_client/model/listener_count.py
 libretime_client/model/live_log.py
 libretime_client/model/login_attempt.py
 libretime_client/model/mount_name.py
-libretime_client/model/music_dir.py
 libretime_client/model/patched_celery_task.py
 libretime_client/model/patched_cloud_file.py
 libretime_client/model/patched_country.py
@@ -190,7 +185,6 @@ libretime_client/model/patched_listener_count.py
 libretime_client/model/patched_live_log.py
 libretime_client/model/patched_login_attempt.py
 libretime_client/model/patched_mount_name.py
-libretime_client/model/patched_music_dir.py
 libretime_client/model/patched_playlist.py
 libretime_client/model/patched_playlist_content.py
 libretime_client/model/patched_playout_history.py

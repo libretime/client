@@ -23,7 +23,6 @@ export * from './api/listener-counts-api';
 export * from './api/live-logs-api';
 export * from './api/login-attempts-api';
 export * from './api/mount-names-api';
-export * from './api/music-dirs-api';
 export * from './api/playlist-contents-api';
 export * from './api/playlists-api';
 export * from './api/playout-history-api';

@@ -12,7 +12,6 @@ docs/Api/ListenerCountsApi.md
 docs/Api/LiveLogsApi.md
 docs/Api/LoginAttemptsApi.md
 docs/Api/MountNamesApi.md
-docs/Api/MusicDirsApi.md
 docs/Api/PlaylistContentsApi.md
 docs/Api/PlaylistsApi.md
 docs/Api/PlayoutHistoryApi.md
@@ -53,7 +52,6 @@ docs/Model/ListenerCount.md
 docs/Model/LiveLog.md
 docs/Model/LoginAttempt.md
 docs/Model/MountName.md
-docs/Model/MusicDir.md
 docs/Model/PatchedCeleryTask.md
 docs/Model/PatchedCloudFile.md
 docs/Model/PatchedCountry.md
@@ -63,7 +61,6 @@ docs/Model/PatchedListenerCount.md
 docs/Model/PatchedLiveLog.md
 docs/Model/PatchedLoginAttempt.md
 docs/Model/PatchedMountName.md
-docs/Model/PatchedMusicDir.md
 docs/Model/PatchedPlaylist.md
 docs/Model/PatchedPlaylistContent.md
 docs/Model/PatchedPlayoutHistory.md
@@ -133,7 +130,6 @@ lib/Api/ListenerCountsApi.php
 lib/Api/LiveLogsApi.php
 lib/Api/LoginAttemptsApi.php
 lib/Api/MountNamesApi.php
-lib/Api/MusicDirsApi.php
 lib/Api/PlaylistContentsApi.php
 lib/Api/PlaylistsApi.php
 lib/Api/PlayoutHistoryApi.php
@@ -178,7 +174,6 @@ lib/Model/LiveLog.php
 lib/Model/LoginAttempt.php
 lib/Model/ModelInterface.php
 lib/Model/MountName.php
-lib/Model/MusicDir.php
 lib/Model/PatchedCeleryTask.php
 lib/Model/PatchedCloudFile.php
 lib/Model/PatchedCountry.php
@@ -188,7 +183,6 @@ lib/Model/PatchedListenerCount.php
 lib/Model/PatchedLiveLog.php
 lib/Model/PatchedLoginAttempt.php
 lib/Model/PatchedMountName.php
-lib/Model/PatchedMusicDir.php
 lib/Model/PatchedPlaylist.php
 lib/Model/PatchedPlaylistContent.php
 lib/Model/PatchedPlayoutHistory.php
