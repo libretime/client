@@ -1347,151 +1347,6 @@ paths:
       responses:
         "204":
           description: No response body
-  /api/v2/music-dirs/:
-    get:
-      operationId: music_dirs_list
-      tags:
-        - music-dirs
-      security:
-        - cookieAuth: []
-        - basicAuth: []
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/MusicDir"
-          description: ""
-    post:
-      operationId: music_dirs_create
-      tags:
-        - music-dirs
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/MusicDir"
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: "#/components/schemas/MusicDir"
-          multipart/form-data:
-            schema:
-              $ref: "#/components/schemas/MusicDir"
-      security:
-        - cookieAuth: []
-        - basicAuth: []
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MusicDir"
-          description: ""
-  /api/v2/music-dirs/{id}/:
-    get:
-      operationId: music_dirs_retrieve
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-          description: A unique integer value identifying this music dir.
-          required: true
-      tags:
-        - music-dirs
-      security:
-        - cookieAuth: []
-        - basicAuth: []
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MusicDir"
-          description: ""
-    put:
-      operationId: music_dirs_update
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-          description: A unique integer value identifying this music dir.
-          required: true
-      tags:
-        - music-dirs
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/MusicDir"
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: "#/components/schemas/MusicDir"
-          multipart/form-data:
-            schema:
-              $ref: "#/components/schemas/MusicDir"
-      security:
-        - cookieAuth: []
-        - basicAuth: []
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MusicDir"
-          description: ""
-    patch:
-      operationId: music_dirs_partial_update
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-          description: A unique integer value identifying this music dir.
-          required: true
-      tags:
-        - music-dirs
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PatchedMusicDir"
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: "#/components/schemas/PatchedMusicDir"
-          multipart/form-data:
-            schema:
-              $ref: "#/components/schemas/PatchedMusicDir"
-      security:
-        - cookieAuth: []
-        - basicAuth: []
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MusicDir"
-          description: ""
-    delete:
-      operationId: music_dirs_destroy
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-          description: A unique integer value identifying this music dir.
-          required: true
-      tags:
-        - music-dirs
-      security:
-        - cookieAuth: []
-        - basicAuth: []
-      responses:
-        "204":
-          description: No response body
   /api/v2/playlist-contents/:
     get:
       operationId: playlist_contents_list
@@ -6376,10 +6231,6 @@ components:
           type: string
           nullable: true
           maxLength: 16
-        directory:
-          type: string
-          format: uri
-          nullable: true
         edited_by:
           type: string
           format: uri
@@ -6490,28 +6341,6 @@ components:
       required:
         - item_url
         - mount_name
-    MusicDir:
-      type: object
-      properties:
-        item_url:
-          type: string
-          format: uri
-          readOnly: true
-        directory:
-          type: string
-          nullable: true
-        type:
-          type: string
-          nullable: true
-          maxLength: 255
-        exists:
-          type: boolean
-          nullable: true
-        watched:
-          type: boolean
-          nullable: true
-      required:
-        - item_url
     PatchedCeleryTask:
       type: object
       properties:
@@ -6824,10 +6653,6 @@ components:
           type: string
           nullable: true
           maxLength: 16
-        directory:
-          type: string
-          format: uri
-          nullable: true
         edited_by:
           type: string
           format: uri
@@ -6910,26 +6735,6 @@ components:
         mount_name:
           type: string
           maxLength: 1024
-    PatchedMusicDir:
-      type: object
-      properties:
-        item_url:
-          type: string
-          format: uri
-          readOnly: true
-        directory:
-          type: string
-          nullable: true
-        type:
-          type: string
-          nullable: true
-          maxLength: 255
-        exists:
-          type: boolean
-          nullable: true
-        watched:
-          type: boolean
-          nullable: true
     PatchedPlaylist:
       type: object
       properties:
