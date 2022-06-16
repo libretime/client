@@ -5,7 +5,7 @@ GIT_USER_ID = libretime
 GIT_REPO_ID = client
 
 # https://github.com/OpenAPITools/openapi-generator/releases
-GENERATOR_VERSION = v6.0.0-beta
+GENERATOR_VERSION = v6.0.0
 GENERATOR_CLI = docker run \
 	--rm \
 	--volume="$$PWD:/local" \
