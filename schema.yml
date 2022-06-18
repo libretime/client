@@ -2683,10 +2683,138 @@ paths:
       operationId: schedule_list
       parameters:
         - in: query
+          name: broadcasted
+          schema:
+            type: integer
+        - in: query
+          name: broadcasted__gt
+          schema:
+            type: integer
+        - in: query
+          name: broadcasted__gte
+          schema:
+            type: integer
+        - in: query
+          name: broadcasted__lt
+          schema:
+            type: integer
+        - in: query
+          name: broadcasted__lte
+          schema:
+            type: integer
+        - in: query
+          name: broadcasted__range
+          schema:
+            type: array
+            items:
+              type: integer
+          description: Multiple values may be separated by commas.
+          explode: false
+          style: form
+        - in: query
+          name: ends
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: ends__gt
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: ends__gte
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: ends__lt
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: ends__lte
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: ends__range
+          schema:
+            type: array
+            items:
+              type: string
+              format: date-time
+          description: Multiple values may be separated by commas.
+          explode: false
+          style: form
+        - in: query
           name: is_valid
           schema:
             type: boolean
           description: Filter on valid instances
+        - in: query
+          name: playout_status
+          schema:
+            type: integer
+        - in: query
+          name: playout_status__gt
+          schema:
+            type: integer
+        - in: query
+          name: playout_status__gte
+          schema:
+            type: integer
+        - in: query
+          name: playout_status__lt
+          schema:
+            type: integer
+        - in: query
+          name: playout_status__lte
+          schema:
+            type: integer
+        - in: query
+          name: playout_status__range
+          schema:
+            type: array
+            items:
+              type: integer
+          description: Multiple values may be separated by commas.
+          explode: false
+          style: form
+        - in: query
+          name: starts
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: starts__gt
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: starts__gte
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: starts__lt
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: starts__lte
+          schema:
+            type: string
+            format: date-time
+        - in: query
+          name: starts__range
+          schema:
+            type: array
+            items:
+              type: string
+              format: date-time
+          description: Multiple values may be separated by commas.
+          explode: false
+          style: form
       tags:
         - schedule
       security:
