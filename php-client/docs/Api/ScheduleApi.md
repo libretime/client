@@ -144,7 +144,7 @@ void (empty response body)
 ## `scheduleList()`
 
 ```php
-scheduleList($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range): \Libretime\Client\Model\Schedule[]
+scheduleList($is_valid): \Libretime\Client\Model\Schedule[]
 ```
 
 
@@ -173,34 +173,10 @@ $apiInstance = new Libretime\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$broadcasted = 56; // int
-$broadcasted__gt = 56; // int
-$broadcasted__gte = 56; // int
-$broadcasted__lt = 56; // int
-$broadcasted__lte = 56; // int
-$broadcasted__range = array(56); // int[] | Multiple values may be separated by commas.
-$ends = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$ends__gt = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$ends__gte = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$ends__lt = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$ends__lte = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$ends__range = array(new \DateTime("2013-10-20T19:20:30+01:00")); // \DateTime[] | Multiple values may be separated by commas.
 $is_valid = True; // bool | Filter on valid instances
-$playout_status = 56; // int
-$playout_status__gt = 56; // int
-$playout_status__gte = 56; // int
-$playout_status__lt = 56; // int
-$playout_status__lte = 56; // int
-$playout_status__range = array(56); // int[] | Multiple values may be separated by commas.
-$starts = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$starts__gt = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$starts__gte = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$starts__lt = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$starts__lte = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$starts__range = array(new \DateTime("2013-10-20T19:20:30+01:00")); // \DateTime[] | Multiple values may be separated by commas.
 
 try {
-    $result = $apiInstance->scheduleList($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range);
+    $result = $apiInstance->scheduleList($is_valid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->scheduleList: ', $e->getMessage(), PHP_EOL;
@@ -211,31 +187,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **broadcasted** | **int**|  | [optional]
- **broadcasted__gt** | **int**|  | [optional]
- **broadcasted__gte** | **int**|  | [optional]
- **broadcasted__lt** | **int**|  | [optional]
- **broadcasted__lte** | **int**|  | [optional]
- **broadcasted__range** | [**int[]**](../Model/int.md)| Multiple values may be separated by commas. | [optional]
- **ends** | **\DateTime**|  | [optional]
- **ends__gt** | **\DateTime**|  | [optional]
- **ends__gte** | **\DateTime**|  | [optional]
- **ends__lt** | **\DateTime**|  | [optional]
- **ends__lte** | **\DateTime**|  | [optional]
- **ends__range** | [**\DateTime[]**](../Model/\DateTime.md)| Multiple values may be separated by commas. | [optional]
  **is_valid** | **bool**| Filter on valid instances | [optional]
- **playout_status** | **int**|  | [optional]
- **playout_status__gt** | **int**|  | [optional]
- **playout_status__gte** | **int**|  | [optional]
- **playout_status__lt** | **int**|  | [optional]
- **playout_status__lte** | **int**|  | [optional]
- **playout_status__range** | [**int[]**](../Model/int.md)| Multiple values may be separated by commas. | [optional]
- **starts** | **\DateTime**|  | [optional]
- **starts__gt** | **\DateTime**|  | [optional]
- **starts__gte** | **\DateTime**|  | [optional]
- **starts__lt** | **\DateTime**|  | [optional]
- **starts__lte** | **\DateTime**|  | [optional]
- **starts__range** | [**\DateTime[]**](../Model/\DateTime.md)| Multiple values may be separated by commas. | [optional]
 
 ### Return type
 

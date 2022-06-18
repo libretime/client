@@ -624,78 +624,30 @@ class ScheduleApi
     /**
      * Operation scheduleList
      *
-     * @param  int $broadcasted broadcasted (optional)
-     * @param  int $broadcasted__gt broadcasted__gt (optional)
-     * @param  int $broadcasted__gte broadcasted__gte (optional)
-     * @param  int $broadcasted__lt broadcasted__lt (optional)
-     * @param  int $broadcasted__lte broadcasted__lte (optional)
-     * @param  int[] $broadcasted__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $ends ends (optional)
-     * @param  \DateTime $ends__gt ends__gt (optional)
-     * @param  \DateTime $ends__gte ends__gte (optional)
-     * @param  \DateTime $ends__lt ends__lt (optional)
-     * @param  \DateTime $ends__lte ends__lte (optional)
-     * @param  \DateTime[] $ends__range Multiple values may be separated by commas. (optional)
      * @param  bool $is_valid Filter on valid instances (optional)
-     * @param  int $playout_status playout_status (optional)
-     * @param  int $playout_status__gt playout_status__gt (optional)
-     * @param  int $playout_status__gte playout_status__gte (optional)
-     * @param  int $playout_status__lt playout_status__lt (optional)
-     * @param  int $playout_status__lte playout_status__lte (optional)
-     * @param  int[] $playout_status__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $starts starts (optional)
-     * @param  \DateTime $starts__gt starts__gt (optional)
-     * @param  \DateTime $starts__gte starts__gte (optional)
-     * @param  \DateTime $starts__lt starts__lt (optional)
-     * @param  \DateTime $starts__lte starts__lte (optional)
-     * @param  \DateTime[] $starts__range Multiple values may be separated by commas. (optional)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\Schedule[]
      */
-    public function scheduleList($broadcasted = null, $broadcasted__gt = null, $broadcasted__gte = null, $broadcasted__lt = null, $broadcasted__lte = null, $broadcasted__range = null, $ends = null, $ends__gt = null, $ends__gte = null, $ends__lt = null, $ends__lte = null, $ends__range = null, $is_valid = null, $playout_status = null, $playout_status__gt = null, $playout_status__gte = null, $playout_status__lt = null, $playout_status__lte = null, $playout_status__range = null, $starts = null, $starts__gt = null, $starts__gte = null, $starts__lt = null, $starts__lte = null, $starts__range = null)
+    public function scheduleList($is_valid = null)
     {
-        list($response) = $this->scheduleListWithHttpInfo($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range);
+        list($response) = $this->scheduleListWithHttpInfo($is_valid);
         return $response;
     }
 
     /**
      * Operation scheduleListWithHttpInfo
      *
-     * @param  int $broadcasted (optional)
-     * @param  int $broadcasted__gt (optional)
-     * @param  int $broadcasted__gte (optional)
-     * @param  int $broadcasted__lt (optional)
-     * @param  int $broadcasted__lte (optional)
-     * @param  int[] $broadcasted__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $ends (optional)
-     * @param  \DateTime $ends__gt (optional)
-     * @param  \DateTime $ends__gte (optional)
-     * @param  \DateTime $ends__lt (optional)
-     * @param  \DateTime $ends__lte (optional)
-     * @param  \DateTime[] $ends__range Multiple values may be separated by commas. (optional)
      * @param  bool $is_valid Filter on valid instances (optional)
-     * @param  int $playout_status (optional)
-     * @param  int $playout_status__gt (optional)
-     * @param  int $playout_status__gte (optional)
-     * @param  int $playout_status__lt (optional)
-     * @param  int $playout_status__lte (optional)
-     * @param  int[] $playout_status__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $starts (optional)
-     * @param  \DateTime $starts__gt (optional)
-     * @param  \DateTime $starts__gte (optional)
-     * @param  \DateTime $starts__lt (optional)
-     * @param  \DateTime $starts__lte (optional)
-     * @param  \DateTime[] $starts__range Multiple values may be separated by commas. (optional)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\Schedule[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function scheduleListWithHttpInfo($broadcasted = null, $broadcasted__gt = null, $broadcasted__gte = null, $broadcasted__lt = null, $broadcasted__lte = null, $broadcasted__range = null, $ends = null, $ends__gt = null, $ends__gte = null, $ends__lt = null, $ends__lte = null, $ends__range = null, $is_valid = null, $playout_status = null, $playout_status__gt = null, $playout_status__gte = null, $playout_status__lt = null, $playout_status__lte = null, $playout_status__range = null, $starts = null, $starts__gt = null, $starts__gte = null, $starts__lt = null, $starts__lte = null, $starts__range = null)
+    public function scheduleListWithHttpInfo($is_valid = null)
     {
-        $request = $this->scheduleListRequest($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range);
+        $request = $this->scheduleListRequest($is_valid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -784,38 +736,14 @@ class ScheduleApi
     /**
      * Operation scheduleListAsync
      *
-     * @param  int $broadcasted (optional)
-     * @param  int $broadcasted__gt (optional)
-     * @param  int $broadcasted__gte (optional)
-     * @param  int $broadcasted__lt (optional)
-     * @param  int $broadcasted__lte (optional)
-     * @param  int[] $broadcasted__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $ends (optional)
-     * @param  \DateTime $ends__gt (optional)
-     * @param  \DateTime $ends__gte (optional)
-     * @param  \DateTime $ends__lt (optional)
-     * @param  \DateTime $ends__lte (optional)
-     * @param  \DateTime[] $ends__range Multiple values may be separated by commas. (optional)
      * @param  bool $is_valid Filter on valid instances (optional)
-     * @param  int $playout_status (optional)
-     * @param  int $playout_status__gt (optional)
-     * @param  int $playout_status__gte (optional)
-     * @param  int $playout_status__lt (optional)
-     * @param  int $playout_status__lte (optional)
-     * @param  int[] $playout_status__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $starts (optional)
-     * @param  \DateTime $starts__gt (optional)
-     * @param  \DateTime $starts__gte (optional)
-     * @param  \DateTime $starts__lt (optional)
-     * @param  \DateTime $starts__lte (optional)
-     * @param  \DateTime[] $starts__range Multiple values may be separated by commas. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scheduleListAsync($broadcasted = null, $broadcasted__gt = null, $broadcasted__gte = null, $broadcasted__lt = null, $broadcasted__lte = null, $broadcasted__range = null, $ends = null, $ends__gt = null, $ends__gte = null, $ends__lt = null, $ends__lte = null, $ends__range = null, $is_valid = null, $playout_status = null, $playout_status__gt = null, $playout_status__gte = null, $playout_status__lt = null, $playout_status__lte = null, $playout_status__range = null, $starts = null, $starts__gt = null, $starts__gte = null, $starts__lt = null, $starts__lte = null, $starts__range = null)
+    public function scheduleListAsync($is_valid = null)
     {
-        return $this->scheduleListAsyncWithHttpInfo($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range)
+        return $this->scheduleListAsyncWithHttpInfo($is_valid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -826,39 +754,15 @@ class ScheduleApi
     /**
      * Operation scheduleListAsyncWithHttpInfo
      *
-     * @param  int $broadcasted (optional)
-     * @param  int $broadcasted__gt (optional)
-     * @param  int $broadcasted__gte (optional)
-     * @param  int $broadcasted__lt (optional)
-     * @param  int $broadcasted__lte (optional)
-     * @param  int[] $broadcasted__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $ends (optional)
-     * @param  \DateTime $ends__gt (optional)
-     * @param  \DateTime $ends__gte (optional)
-     * @param  \DateTime $ends__lt (optional)
-     * @param  \DateTime $ends__lte (optional)
-     * @param  \DateTime[] $ends__range Multiple values may be separated by commas. (optional)
      * @param  bool $is_valid Filter on valid instances (optional)
-     * @param  int $playout_status (optional)
-     * @param  int $playout_status__gt (optional)
-     * @param  int $playout_status__gte (optional)
-     * @param  int $playout_status__lt (optional)
-     * @param  int $playout_status__lte (optional)
-     * @param  int[] $playout_status__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $starts (optional)
-     * @param  \DateTime $starts__gt (optional)
-     * @param  \DateTime $starts__gte (optional)
-     * @param  \DateTime $starts__lt (optional)
-     * @param  \DateTime $starts__lte (optional)
-     * @param  \DateTime[] $starts__range Multiple values may be separated by commas. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scheduleListAsyncWithHttpInfo($broadcasted = null, $broadcasted__gt = null, $broadcasted__gte = null, $broadcasted__lt = null, $broadcasted__lte = null, $broadcasted__range = null, $ends = null, $ends__gt = null, $ends__gte = null, $ends__lt = null, $ends__lte = null, $ends__range = null, $is_valid = null, $playout_status = null, $playout_status__gt = null, $playout_status__gte = null, $playout_status__lt = null, $playout_status__lte = null, $playout_status__range = null, $starts = null, $starts__gt = null, $starts__gte = null, $starts__lt = null, $starts__lte = null, $starts__range = null)
+    public function scheduleListAsyncWithHttpInfo($is_valid = null)
     {
         $returnType = '\Libretime\Client\Model\Schedule[]';
-        $request = $this->scheduleListRequest($broadcasted, $broadcasted__gt, $broadcasted__gte, $broadcasted__lt, $broadcasted__lte, $broadcasted__range, $ends, $ends__gt, $ends__gte, $ends__lt, $ends__lte, $ends__range, $is_valid, $playout_status, $playout_status__gt, $playout_status__gte, $playout_status__lt, $playout_status__lte, $playout_status__range, $starts, $starts__gt, $starts__gte, $starts__lt, $starts__lte, $starts__range);
+        $request = $this->scheduleListRequest($is_valid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -899,36 +803,12 @@ class ScheduleApi
     /**
      * Create request for operation 'scheduleList'
      *
-     * @param  int $broadcasted (optional)
-     * @param  int $broadcasted__gt (optional)
-     * @param  int $broadcasted__gte (optional)
-     * @param  int $broadcasted__lt (optional)
-     * @param  int $broadcasted__lte (optional)
-     * @param  int[] $broadcasted__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $ends (optional)
-     * @param  \DateTime $ends__gt (optional)
-     * @param  \DateTime $ends__gte (optional)
-     * @param  \DateTime $ends__lt (optional)
-     * @param  \DateTime $ends__lte (optional)
-     * @param  \DateTime[] $ends__range Multiple values may be separated by commas. (optional)
      * @param  bool $is_valid Filter on valid instances (optional)
-     * @param  int $playout_status (optional)
-     * @param  int $playout_status__gt (optional)
-     * @param  int $playout_status__gte (optional)
-     * @param  int $playout_status__lt (optional)
-     * @param  int $playout_status__lte (optional)
-     * @param  int[] $playout_status__range Multiple values may be separated by commas. (optional)
-     * @param  \DateTime $starts (optional)
-     * @param  \DateTime $starts__gt (optional)
-     * @param  \DateTime $starts__gte (optional)
-     * @param  \DateTime $starts__lt (optional)
-     * @param  \DateTime $starts__lte (optional)
-     * @param  \DateTime[] $starts__range Multiple values may be separated by commas. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function scheduleListRequest($broadcasted = null, $broadcasted__gt = null, $broadcasted__gte = null, $broadcasted__lt = null, $broadcasted__lte = null, $broadcasted__range = null, $ends = null, $ends__gt = null, $ends__gte = null, $ends__lt = null, $ends__lte = null, $ends__range = null, $is_valid = null, $playout_status = null, $playout_status__gt = null, $playout_status__gte = null, $playout_status__lt = null, $playout_status__lte = null, $playout_status__range = null, $starts = null, $starts__gt = null, $starts__gte = null, $starts__lt = null, $starts__lte = null, $starts__range = null)
+    public function scheduleListRequest($is_valid = null)
     {
 
         $resourcePath = '/api/v2/schedule/';
@@ -940,227 +820,11 @@ class ScheduleApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $broadcasted,
-            'broadcasted', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $broadcasted__gt,
-            'broadcasted__gt', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $broadcasted__gte,
-            'broadcasted__gte', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $broadcasted__lt,
-            'broadcasted__lt', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $broadcasted__lte,
-            'broadcasted__lte', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $broadcasted__range,
-            'broadcasted__range', // param base name
-            'array', // openApiType
-            'form', // style
-            false, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ends,
-            'ends', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ends__gt,
-            'ends__gt', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ends__gte,
-            'ends__gte', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ends__lt,
-            'ends__lt', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ends__lte,
-            'ends__lte', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ends__range,
-            'ends__range', // param base name
-            'array', // openApiType
-            'form', // style
-            false, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $is_valid,
             'is_valid', // param base name
             'boolean', // openApiType
             'form', // style
             true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $playout_status,
-            'playout_status', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $playout_status__gt,
-            'playout_status__gt', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $playout_status__gte,
-            'playout_status__gte', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $playout_status__lt,
-            'playout_status__lt', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $playout_status__lte,
-            'playout_status__lte', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $playout_status__range,
-            'playout_status__range', // param base name
-            'array', // openApiType
-            'form', // style
-            false, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $starts,
-            'starts', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $starts__gt,
-            'starts__gt', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $starts__gte,
-            'starts__gte', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $starts__lt,
-            'starts__lt', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $starts__lte,
-            'starts__lte', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $starts__range,
-            'starts__range', // param base name
-            'array', // openApiType
-            'form', // style
-            false, // explode
             false // required
         ) ?? []);
 
