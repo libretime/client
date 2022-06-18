@@ -112,11 +112,35 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
         },
         /**
          * 
+         * @param {number} [broadcasted] 
+         * @param {number} [broadcastedGt] 
+         * @param {number} [broadcastedGte] 
+         * @param {number} [broadcastedLt] 
+         * @param {number} [broadcastedLte] 
+         * @param {Array<number>} [broadcastedRange] Multiple values may be separated by commas.
+         * @param {string} [ends] 
+         * @param {string} [endsGt] 
+         * @param {string} [endsGte] 
+         * @param {string} [endsLt] 
+         * @param {string} [endsLte] 
+         * @param {Array<string>} [endsRange] Multiple values may be separated by commas.
          * @param {boolean} [isValid] Filter on valid instances
+         * @param {number} [playoutStatus] 
+         * @param {number} [playoutStatusGt] 
+         * @param {number} [playoutStatusGte] 
+         * @param {number} [playoutStatusLt] 
+         * @param {number} [playoutStatusLte] 
+         * @param {Array<number>} [playoutStatusRange] Multiple values may be separated by commas.
+         * @param {string} [starts] 
+         * @param {string} [startsGt] 
+         * @param {string} [startsGte] 
+         * @param {string} [startsLt] 
+         * @param {string} [startsLte] 
+         * @param {Array<string>} [startsRange] Multiple values may be separated by commas.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleList: async (isValid?: boolean, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        scheduleList: async (broadcasted?: number, broadcastedGt?: number, broadcastedGte?: number, broadcastedLt?: number, broadcastedLte?: number, broadcastedRange?: Array<number>, ends?: string, endsGt?: string, endsGte?: string, endsLt?: string, endsLte?: string, endsRange?: Array<string>, isValid?: boolean, playoutStatus?: number, playoutStatusGt?: number, playoutStatusGte?: number, playoutStatusLt?: number, playoutStatusLte?: number, playoutStatusRange?: Array<number>, starts?: string, startsGt?: string, startsGte?: string, startsLt?: string, startsLte?: string, startsRange?: Array<string>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/schedule/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -135,8 +159,124 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            if (broadcasted !== undefined) {
+                localVarQueryParameter['broadcasted'] = broadcasted;
+            }
+
+            if (broadcastedGt !== undefined) {
+                localVarQueryParameter['broadcasted__gt'] = broadcastedGt;
+            }
+
+            if (broadcastedGte !== undefined) {
+                localVarQueryParameter['broadcasted__gte'] = broadcastedGte;
+            }
+
+            if (broadcastedLt !== undefined) {
+                localVarQueryParameter['broadcasted__lt'] = broadcastedLt;
+            }
+
+            if (broadcastedLte !== undefined) {
+                localVarQueryParameter['broadcasted__lte'] = broadcastedLte;
+            }
+
+            if (broadcastedRange) {
+                localVarQueryParameter['broadcasted__range'] = broadcastedRange.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (ends !== undefined) {
+                localVarQueryParameter['ends'] = (ends as any instanceof Date) ?
+                    (ends as any).toISOString() :
+                    ends;
+            }
+
+            if (endsGt !== undefined) {
+                localVarQueryParameter['ends__gt'] = (endsGt as any instanceof Date) ?
+                    (endsGt as any).toISOString() :
+                    endsGt;
+            }
+
+            if (endsGte !== undefined) {
+                localVarQueryParameter['ends__gte'] = (endsGte as any instanceof Date) ?
+                    (endsGte as any).toISOString() :
+                    endsGte;
+            }
+
+            if (endsLt !== undefined) {
+                localVarQueryParameter['ends__lt'] = (endsLt as any instanceof Date) ?
+                    (endsLt as any).toISOString() :
+                    endsLt;
+            }
+
+            if (endsLte !== undefined) {
+                localVarQueryParameter['ends__lte'] = (endsLte as any instanceof Date) ?
+                    (endsLte as any).toISOString() :
+                    endsLte;
+            }
+
+            if (endsRange) {
+                localVarQueryParameter['ends__range'] = endsRange.join(COLLECTION_FORMATS.csv);
+            }
+
             if (isValid !== undefined) {
                 localVarQueryParameter['is_valid'] = isValid;
+            }
+
+            if (playoutStatus !== undefined) {
+                localVarQueryParameter['playout_status'] = playoutStatus;
+            }
+
+            if (playoutStatusGt !== undefined) {
+                localVarQueryParameter['playout_status__gt'] = playoutStatusGt;
+            }
+
+            if (playoutStatusGte !== undefined) {
+                localVarQueryParameter['playout_status__gte'] = playoutStatusGte;
+            }
+
+            if (playoutStatusLt !== undefined) {
+                localVarQueryParameter['playout_status__lt'] = playoutStatusLt;
+            }
+
+            if (playoutStatusLte !== undefined) {
+                localVarQueryParameter['playout_status__lte'] = playoutStatusLte;
+            }
+
+            if (playoutStatusRange) {
+                localVarQueryParameter['playout_status__range'] = playoutStatusRange.join(COLLECTION_FORMATS.csv);
+            }
+
+            if (starts !== undefined) {
+                localVarQueryParameter['starts'] = (starts as any instanceof Date) ?
+                    (starts as any).toISOString() :
+                    starts;
+            }
+
+            if (startsGt !== undefined) {
+                localVarQueryParameter['starts__gt'] = (startsGt as any instanceof Date) ?
+                    (startsGt as any).toISOString() :
+                    startsGt;
+            }
+
+            if (startsGte !== undefined) {
+                localVarQueryParameter['starts__gte'] = (startsGte as any instanceof Date) ?
+                    (startsGte as any).toISOString() :
+                    startsGte;
+            }
+
+            if (startsLt !== undefined) {
+                localVarQueryParameter['starts__lt'] = (startsLt as any instanceof Date) ?
+                    (startsLt as any).toISOString() :
+                    startsLt;
+            }
+
+            if (startsLte !== undefined) {
+                localVarQueryParameter['starts__lte'] = (startsLte as any instanceof Date) ?
+                    (startsLte as any).toISOString() :
+                    startsLte;
+            }
+
+            if (startsRange) {
+                localVarQueryParameter['starts__range'] = startsRange.join(COLLECTION_FORMATS.csv);
             }
 
 
@@ -309,12 +449,36 @@ export const ScheduleApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {number} [broadcasted] 
+         * @param {number} [broadcastedGt] 
+         * @param {number} [broadcastedGte] 
+         * @param {number} [broadcastedLt] 
+         * @param {number} [broadcastedLte] 
+         * @param {Array<number>} [broadcastedRange] Multiple values may be separated by commas.
+         * @param {string} [ends] 
+         * @param {string} [endsGt] 
+         * @param {string} [endsGte] 
+         * @param {string} [endsLt] 
+         * @param {string} [endsLte] 
+         * @param {Array<string>} [endsRange] Multiple values may be separated by commas.
          * @param {boolean} [isValid] Filter on valid instances
+         * @param {number} [playoutStatus] 
+         * @param {number} [playoutStatusGt] 
+         * @param {number} [playoutStatusGte] 
+         * @param {number} [playoutStatusLt] 
+         * @param {number} [playoutStatusLte] 
+         * @param {Array<number>} [playoutStatusRange] Multiple values may be separated by commas.
+         * @param {string} [starts] 
+         * @param {string} [startsGt] 
+         * @param {string} [startsGte] 
+         * @param {string} [startsLt] 
+         * @param {string} [startsLte] 
+         * @param {Array<string>} [startsRange] Multiple values may be separated by commas.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async scheduleList(isValid?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Schedule>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleList(isValid, options);
+        async scheduleList(broadcasted?: number, broadcastedGt?: number, broadcastedGte?: number, broadcastedLt?: number, broadcastedLte?: number, broadcastedRange?: Array<number>, ends?: string, endsGt?: string, endsGte?: string, endsLt?: string, endsLte?: string, endsRange?: Array<string>, isValid?: boolean, playoutStatus?: number, playoutStatusGt?: number, playoutStatusGte?: number, playoutStatusLt?: number, playoutStatusLte?: number, playoutStatusRange?: Array<number>, starts?: string, startsGt?: string, startsGte?: string, startsLt?: string, startsLte?: string, startsRange?: Array<string>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Schedule>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleList(broadcasted, broadcastedGt, broadcastedGte, broadcastedLt, broadcastedLte, broadcastedRange, ends, endsGt, endsGte, endsLt, endsLte, endsRange, isValid, playoutStatus, playoutStatusGt, playoutStatusGte, playoutStatusLt, playoutStatusLte, playoutStatusRange, starts, startsGt, startsGte, startsLt, startsLte, startsRange, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -379,12 +543,36 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
         },
         /**
          * 
+         * @param {number} [broadcasted] 
+         * @param {number} [broadcastedGt] 
+         * @param {number} [broadcastedGte] 
+         * @param {number} [broadcastedLt] 
+         * @param {number} [broadcastedLte] 
+         * @param {Array<number>} [broadcastedRange] Multiple values may be separated by commas.
+         * @param {string} [ends] 
+         * @param {string} [endsGt] 
+         * @param {string} [endsGte] 
+         * @param {string} [endsLt] 
+         * @param {string} [endsLte] 
+         * @param {Array<string>} [endsRange] Multiple values may be separated by commas.
          * @param {boolean} [isValid] Filter on valid instances
+         * @param {number} [playoutStatus] 
+         * @param {number} [playoutStatusGt] 
+         * @param {number} [playoutStatusGte] 
+         * @param {number} [playoutStatusLt] 
+         * @param {number} [playoutStatusLte] 
+         * @param {Array<number>} [playoutStatusRange] Multiple values may be separated by commas.
+         * @param {string} [starts] 
+         * @param {string} [startsGt] 
+         * @param {string} [startsGte] 
+         * @param {string} [startsLt] 
+         * @param {string} [startsLte] 
+         * @param {Array<string>} [startsRange] Multiple values may be separated by commas.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleList(isValid?: boolean, options?: any): AxiosPromise<Array<Schedule>> {
-            return localVarFp.scheduleList(isValid, options).then((request) => request(axios, basePath));
+        scheduleList(broadcasted?: number, broadcastedGt?: number, broadcastedGte?: number, broadcastedLt?: number, broadcastedLte?: number, broadcastedRange?: Array<number>, ends?: string, endsGt?: string, endsGte?: string, endsLt?: string, endsLte?: string, endsRange?: Array<string>, isValid?: boolean, playoutStatus?: number, playoutStatusGt?: number, playoutStatusGte?: number, playoutStatusLt?: number, playoutStatusLte?: number, playoutStatusRange?: Array<number>, starts?: string, startsGt?: string, startsGte?: string, startsLt?: string, startsLte?: string, startsRange?: Array<string>, options?: any): AxiosPromise<Array<Schedule>> {
+            return localVarFp.scheduleList(broadcasted, broadcastedGt, broadcastedGte, broadcastedLt, broadcastedLte, broadcastedRange, ends, endsGt, endsGte, endsLt, endsLte, endsRange, isValid, playoutStatus, playoutStatusGt, playoutStatusGte, playoutStatusLt, playoutStatusLte, playoutStatusRange, starts, startsGt, startsGte, startsLt, startsLte, startsRange, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -449,13 +637,37 @@ export class ScheduleApi extends BaseAPI {
 
     /**
      * 
+     * @param {number} [broadcasted] 
+     * @param {number} [broadcastedGt] 
+     * @param {number} [broadcastedGte] 
+     * @param {number} [broadcastedLt] 
+     * @param {number} [broadcastedLte] 
+     * @param {Array<number>} [broadcastedRange] Multiple values may be separated by commas.
+     * @param {string} [ends] 
+     * @param {string} [endsGt] 
+     * @param {string} [endsGte] 
+     * @param {string} [endsLt] 
+     * @param {string} [endsLte] 
+     * @param {Array<string>} [endsRange] Multiple values may be separated by commas.
      * @param {boolean} [isValid] Filter on valid instances
+     * @param {number} [playoutStatus] 
+     * @param {number} [playoutStatusGt] 
+     * @param {number} [playoutStatusGte] 
+     * @param {number} [playoutStatusLt] 
+     * @param {number} [playoutStatusLte] 
+     * @param {Array<number>} [playoutStatusRange] Multiple values may be separated by commas.
+     * @param {string} [starts] 
+     * @param {string} [startsGt] 
+     * @param {string} [startsGte] 
+     * @param {string} [startsLt] 
+     * @param {string} [startsLte] 
+     * @param {Array<string>} [startsRange] Multiple values may be separated by commas.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ScheduleApi
      */
-    public scheduleList(isValid?: boolean, options?: AxiosRequestConfig) {
-        return ScheduleApiFp(this.configuration).scheduleList(isValid, options).then((request) => request(this.axios, this.basePath));
+    public scheduleList(broadcasted?: number, broadcastedGt?: number, broadcastedGte?: number, broadcastedLt?: number, broadcastedLte?: number, broadcastedRange?: Array<number>, ends?: string, endsGt?: string, endsGte?: string, endsLt?: string, endsLte?: string, endsRange?: Array<string>, isValid?: boolean, playoutStatus?: number, playoutStatusGt?: number, playoutStatusGte?: number, playoutStatusLt?: number, playoutStatusLte?: number, playoutStatusRange?: Array<number>, starts?: string, startsGt?: string, startsGte?: string, startsLt?: string, startsLte?: string, startsRange?: Array<string>, options?: AxiosRequestConfig) {
+        return ScheduleApiFp(this.configuration).scheduleList(broadcasted, broadcastedGt, broadcastedGte, broadcastedLt, broadcastedLte, broadcastedRange, ends, endsGt, endsGte, endsLt, endsLte, endsRange, isValid, playoutStatus, playoutStatusGt, playoutStatusGte, playoutStatusLt, playoutStatusLte, playoutStatusRange, starts, startsGt, startsGte, startsLt, startsLte, startsRange, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
