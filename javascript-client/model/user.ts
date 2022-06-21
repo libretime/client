@@ -13,7 +13,7 @@
  */
 
 
-import { TypeEnum } from './type-enum';
+import { RoleEnum } from './role-enum';
 
 /**
  * 
@@ -29,16 +29,22 @@ export interface User {
     'item_url': string;
     /**
      * 
+     * @type {RoleEnum}
+     * @memberof User
+     */
+    'role': RoleEnum;
+    /**
+     * 
      * @type {string}
      * @memberof User
      */
     'username': string;
     /**
      * 
-     * @type {TypeEnum}
+     * @type {string}
      * @memberof User
      */
-    'type': TypeEnum;
+    'email'?: string | null;
     /**
      * 
      * @type {string}
@@ -53,39 +59,39 @@ export interface User {
     'last_name': string;
     /**
      * 
-     * @type {string}
-     * @memberof User
-     */
-    'lastfail'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'skype_contact'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'jabber_contact'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'email'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof User
-     */
-    'cell_phone'?: string | null;
-    /**
-     * 
      * @type {number}
      * @memberof User
      */
     'login_attempts'?: number | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'last_login'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'last_failed_login'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'skype'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'jabber'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof User
+     */
+    'phone'?: string | null;
 }
 

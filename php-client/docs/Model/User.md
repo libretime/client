@@ -5,15 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
+**role** | [**\Libretime\Client\Model\RoleEnum**](RoleEnum.md) |  |
 **username** | **string** |  |
-**type** | [**\Libretime\Client\Model\TypeEnum**](TypeEnum.md) |  |
+**email** | **string** |  | [optional]
 **first_name** | **string** |  |
 **last_name** | **string** |  |
-**lastfail** | **\DateTime** |  | [optional]
-**skype_contact** | **string** |  | [optional]
-**jabber_contact** | **string** |  | [optional]
-**email** | **string** |  | [optional]
-**cell_phone** | **string** |  | [optional]
 **login_attempts** | **int** |  | [optional]
+**last_login** | **\DateTime** |  | [optional]
+**last_failed_login** | **\DateTime** |  | [optional]
+**skype** | **string** |  | [optional]
+**jabber** | **string** |  | [optional]
+**phone** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -60,16 +60,17 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
+        'role' => '\Libretime\Client\Model\RoleEnum',
         'username' => 'string',
-        'type' => '\Libretime\Client\Model\TypeEnum',
+        'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'lastfail' => '\DateTime',
-        'skype_contact' => 'string',
-        'jabber_contact' => 'string',
-        'email' => 'string',
-        'cell_phone' => 'string',
-        'login_attempts' => 'int'
+        'login_attempts' => 'int',
+        'last_login' => '\DateTime',
+        'last_failed_login' => '\DateTime',
+        'skype' => 'string',
+        'jabber' => 'string',
+        'phone' => 'string'
     ];
 
     /**
@@ -81,16 +82,17 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
+        'role' => null,
         'username' => null,
-        'type' => null,
+        'email' => null,
         'first_name' => null,
         'last_name' => null,
-        'lastfail' => 'date-time',
-        'skype_contact' => null,
-        'jabber_contact' => null,
-        'email' => null,
-        'cell_phone' => null,
-        'login_attempts' => null
+        'login_attempts' => null,
+        'last_login' => 'date-time',
+        'last_failed_login' => 'date-time',
+        'skype' => null,
+        'jabber' => null,
+        'phone' => null
     ];
 
     /**
@@ -121,16 +123,17 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
+        'role' => 'role',
         'username' => 'username',
-        'type' => 'type',
+        'email' => 'email',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
-        'lastfail' => 'lastfail',
-        'skype_contact' => 'skype_contact',
-        'jabber_contact' => 'jabber_contact',
-        'email' => 'email',
-        'cell_phone' => 'cell_phone',
-        'login_attempts' => 'login_attempts'
+        'login_attempts' => 'login_attempts',
+        'last_login' => 'last_login',
+        'last_failed_login' => 'last_failed_login',
+        'skype' => 'skype',
+        'jabber' => 'jabber',
+        'phone' => 'phone'
     ];
 
     /**
@@ -140,16 +143,17 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
+        'role' => 'setRole',
         'username' => 'setUsername',
-        'type' => 'setType',
+        'email' => 'setEmail',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
-        'lastfail' => 'setLastfail',
-        'skype_contact' => 'setSkypeContact',
-        'jabber_contact' => 'setJabberContact',
-        'email' => 'setEmail',
-        'cell_phone' => 'setCellPhone',
-        'login_attempts' => 'setLoginAttempts'
+        'login_attempts' => 'setLoginAttempts',
+        'last_login' => 'setLastLogin',
+        'last_failed_login' => 'setLastFailedLogin',
+        'skype' => 'setSkype',
+        'jabber' => 'setJabber',
+        'phone' => 'setPhone'
     ];
 
     /**
@@ -159,16 +163,17 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
+        'role' => 'getRole',
         'username' => 'getUsername',
-        'type' => 'getType',
+        'email' => 'getEmail',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
-        'lastfail' => 'getLastfail',
-        'skype_contact' => 'getSkypeContact',
-        'jabber_contact' => 'getJabberContact',
-        'email' => 'getEmail',
-        'cell_phone' => 'getCellPhone',
-        'login_attempts' => 'getLoginAttempts'
+        'login_attempts' => 'getLoginAttempts',
+        'last_login' => 'getLastLogin',
+        'last_failed_login' => 'getLastFailedLogin',
+        'skype' => 'getSkype',
+        'jabber' => 'getJabber',
+        'phone' => 'getPhone'
     ];
 
     /**
@@ -229,16 +234,17 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['role'] = $data['role'] ?? null;
         $this->container['username'] = $data['username'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
         $this->container['first_name'] = $data['first_name'] ?? null;
         $this->container['last_name'] = $data['last_name'] ?? null;
-        $this->container['lastfail'] = $data['lastfail'] ?? null;
-        $this->container['skype_contact'] = $data['skype_contact'] ?? null;
-        $this->container['jabber_contact'] = $data['jabber_contact'] ?? null;
-        $this->container['email'] = $data['email'] ?? null;
-        $this->container['cell_phone'] = $data['cell_phone'] ?? null;
         $this->container['login_attempts'] = $data['login_attempts'] ?? null;
+        $this->container['last_login'] = $data['last_login'] ?? null;
+        $this->container['last_failed_login'] = $data['last_failed_login'] ?? null;
+        $this->container['skype'] = $data['skype'] ?? null;
+        $this->container['jabber'] = $data['jabber'] ?? null;
+        $this->container['phone'] = $data['phone'] ?? null;
     }
 
     /**
@@ -253,6 +259,9 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
+        if ($this->container['role'] === null) {
+            $invalidProperties[] = "'role' can't be null";
+        }
         if ($this->container['username'] === null) {
             $invalidProperties[] = "'username' can't be null";
         }
@@ -260,9 +269,10 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'username', the character length must be smaller than or equal to 255.";
         }
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'email', the character length must be smaller than or equal to 1024.";
         }
+
         if ($this->container['first_name'] === null) {
             $invalidProperties[] = "'first_name' can't be null";
         }
@@ -277,28 +287,24 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'last_name', the character length must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['skype_contact']) && (mb_strlen($this->container['skype_contact']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'skype_contact', the character length must be smaller than or equal to 1024.";
-        }
-
-        if (!is_null($this->container['jabber_contact']) && (mb_strlen($this->container['jabber_contact']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'jabber_contact', the character length must be smaller than or equal to 1024.";
-        }
-
-        if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'email', the character length must be smaller than or equal to 1024.";
-        }
-
-        if (!is_null($this->container['cell_phone']) && (mb_strlen($this->container['cell_phone']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'cell_phone', the character length must be smaller than or equal to 1024.";
-        }
-
         if (!is_null($this->container['login_attempts']) && ($this->container['login_attempts'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'login_attempts', must be smaller than or equal to 2147483647.";
         }
 
         if (!is_null($this->container['login_attempts']) && ($this->container['login_attempts'] < -2147483648)) {
             $invalidProperties[] = "invalid value for 'login_attempts', must be bigger than or equal to -2147483648.";
+        }
+
+        if (!is_null($this->container['skype']) && (mb_strlen($this->container['skype']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'skype', the character length must be smaller than or equal to 1024.";
+        }
+
+        if (!is_null($this->container['jabber']) && (mb_strlen($this->container['jabber']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'jabber', the character length must be smaller than or equal to 1024.";
+        }
+
+        if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'phone', the character length must be smaller than or equal to 1024.";
         }
 
         return $invalidProperties;
@@ -341,6 +347,30 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets role
+     *
+     * @return \Libretime\Client\Model\RoleEnum
+     */
+    public function getRole()
+    {
+        return $this->container['role'];
+    }
+
+    /**
+     * Sets role
+     *
+     * @param \Libretime\Client\Model\RoleEnum $role role
+     *
+     * @return self
+     */
+    public function setRole($role)
+    {
+        $this->container['role'] = $role;
+
+        return $this;
+    }
+
+    /**
      * Gets username
      *
      * @return string
@@ -369,25 +399,29 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type
+     * Gets email
      *
-     * @return \Libretime\Client\Model\TypeEnum
+     * @return string|null
      */
-    public function getType()
+    public function getEmail()
     {
-        return $this->container['type'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets type
+     * Sets email
      *
-     * @param \Libretime\Client\Model\TypeEnum $type type
+     * @param string|null $email email
      *
      * @return self
      */
-    public function setType($type)
+    public function setEmail($email)
     {
-        $this->container['type'] = $type;
+        if (!is_null($email) && (mb_strlen($email) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $email when calling User., must be smaller than or equal to 1024.');
+        }
+
+        $this->container['email'] = $email;
 
         return $this;
     }
@@ -449,142 +483,6 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets lastfail
-     *
-     * @return \DateTime|null
-     */
-    public function getLastfail()
-    {
-        return $this->container['lastfail'];
-    }
-
-    /**
-     * Sets lastfail
-     *
-     * @param \DateTime|null $lastfail lastfail
-     *
-     * @return self
-     */
-    public function setLastfail($lastfail)
-    {
-        $this->container['lastfail'] = $lastfail;
-
-        return $this;
-    }
-
-    /**
-     * Gets skype_contact
-     *
-     * @return string|null
-     */
-    public function getSkypeContact()
-    {
-        return $this->container['skype_contact'];
-    }
-
-    /**
-     * Sets skype_contact
-     *
-     * @param string|null $skype_contact skype_contact
-     *
-     * @return self
-     */
-    public function setSkypeContact($skype_contact)
-    {
-        if (!is_null($skype_contact) && (mb_strlen($skype_contact) > 1024)) {
-            throw new \InvalidArgumentException('invalid length for $skype_contact when calling User., must be smaller than or equal to 1024.');
-        }
-
-        $this->container['skype_contact'] = $skype_contact;
-
-        return $this;
-    }
-
-    /**
-     * Gets jabber_contact
-     *
-     * @return string|null
-     */
-    public function getJabberContact()
-    {
-        return $this->container['jabber_contact'];
-    }
-
-    /**
-     * Sets jabber_contact
-     *
-     * @param string|null $jabber_contact jabber_contact
-     *
-     * @return self
-     */
-    public function setJabberContact($jabber_contact)
-    {
-        if (!is_null($jabber_contact) && (mb_strlen($jabber_contact) > 1024)) {
-            throw new \InvalidArgumentException('invalid length for $jabber_contact when calling User., must be smaller than or equal to 1024.');
-        }
-
-        $this->container['jabber_contact'] = $jabber_contact;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string|null
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string|null $email email
-     *
-     * @return self
-     */
-    public function setEmail($email)
-    {
-        if (!is_null($email) && (mb_strlen($email) > 1024)) {
-            throw new \InvalidArgumentException('invalid length for $email when calling User., must be smaller than or equal to 1024.');
-        }
-
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets cell_phone
-     *
-     * @return string|null
-     */
-    public function getCellPhone()
-    {
-        return $this->container['cell_phone'];
-    }
-
-    /**
-     * Sets cell_phone
-     *
-     * @param string|null $cell_phone cell_phone
-     *
-     * @return self
-     */
-    public function setCellPhone($cell_phone)
-    {
-        if (!is_null($cell_phone) && (mb_strlen($cell_phone) > 1024)) {
-            throw new \InvalidArgumentException('invalid length for $cell_phone when calling User., must be smaller than or equal to 1024.');
-        }
-
-        $this->container['cell_phone'] = $cell_phone;
-
-        return $this;
-    }
-
-    /**
      * Gets login_attempts
      *
      * @return int|null
@@ -612,6 +510,138 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['login_attempts'] = $login_attempts;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_login
+     *
+     * @return \DateTime|null
+     */
+    public function getLastLogin()
+    {
+        return $this->container['last_login'];
+    }
+
+    /**
+     * Sets last_login
+     *
+     * @param \DateTime|null $last_login last_login
+     *
+     * @return self
+     */
+    public function setLastLogin($last_login)
+    {
+        $this->container['last_login'] = $last_login;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_failed_login
+     *
+     * @return \DateTime|null
+     */
+    public function getLastFailedLogin()
+    {
+        return $this->container['last_failed_login'];
+    }
+
+    /**
+     * Sets last_failed_login
+     *
+     * @param \DateTime|null $last_failed_login last_failed_login
+     *
+     * @return self
+     */
+    public function setLastFailedLogin($last_failed_login)
+    {
+        $this->container['last_failed_login'] = $last_failed_login;
+
+        return $this;
+    }
+
+    /**
+     * Gets skype
+     *
+     * @return string|null
+     */
+    public function getSkype()
+    {
+        return $this->container['skype'];
+    }
+
+    /**
+     * Sets skype
+     *
+     * @param string|null $skype skype
+     *
+     * @return self
+     */
+    public function setSkype($skype)
+    {
+        if (!is_null($skype) && (mb_strlen($skype) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $skype when calling User., must be smaller than or equal to 1024.');
+        }
+
+        $this->container['skype'] = $skype;
+
+        return $this;
+    }
+
+    /**
+     * Gets jabber
+     *
+     * @return string|null
+     */
+    public function getJabber()
+    {
+        return $this->container['jabber'];
+    }
+
+    /**
+     * Sets jabber
+     *
+     * @param string|null $jabber jabber
+     *
+     * @return self
+     */
+    public function setJabber($jabber)
+    {
+        if (!is_null($jabber) && (mb_strlen($jabber) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $jabber when calling User., must be smaller than or equal to 1024.');
+        }
+
+        $this->container['jabber'] = $jabber;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     *
+     * @return string|null
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     *
+     * @param string|null $phone phone
+     *
+     * @return self
+     */
+    public function setPhone($phone)
+    {
+        if (!is_null($phone) && (mb_strlen($phone) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $phone when calling User., must be smaller than or equal to 1024.');
+        }
+
+        $this->container['phone'] = $phone;
 
         return $this;
     }

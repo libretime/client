@@ -65,6 +65,7 @@ from libretime_client.model.playout_history_template_field import PlayoutHistory
 from libretime_client.model.podcast import Podcast
 from libretime_client.model.podcast_episode import PodcastEpisode
 from libretime_client.model.preference import Preference
+from libretime_client.model.role_enum import RoleEnum
 from libretime_client.model.schedule import Schedule
 from libretime_client.model.service_register import ServiceRegister
 from libretime_client.model.session import Session
@@ -81,7 +82,6 @@ from libretime_client.model.stream_setting import StreamSetting
 from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from libretime_client.model.timestamp import Timestamp
 from libretime_client.model.track_type import TrackType
-from libretime_client.model.type_enum import TypeEnum
 from libretime_client.model.user import User
 from libretime_client.model.user_token import UserToken
 from libretime_client.model.webstream import Webstream

@@ -30,8 +30,8 @@ from libretime_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from libretime_client.model.type_enum import TypeEnum
-    globals()['TypeEnum'] = TypeEnum
+    from libretime_client.model.role_enum import RoleEnum
+    globals()['RoleEnum'] = RoleEnum
 
 
 class User(ModelNormal):
@@ -71,21 +71,21 @@ class User(ModelNormal):
         ('last_name',): {
             'max_length': 255,
         },
-        ('skype_contact',): {
-            'max_length': 1024,
-        },
-        ('jabber_contact',): {
-            'max_length': 1024,
-        },
         ('email',): {
-            'max_length': 1024,
-        },
-        ('cell_phone',): {
             'max_length': 1024,
         },
         ('login_attempts',): {
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': -2147483648,
+        },
+        ('skype',): {
+            'max_length': 1024,
+        },
+        ('jabber',): {
+            'max_length': 1024,
+        },
+        ('phone',): {
+            'max_length': 1024,
         },
     }
 
@@ -113,16 +113,17 @@ class User(ModelNormal):
         lazy_import()
         return {
             'item_url': (str,),  # noqa: E501
+            'role': (RoleEnum,),  # noqa: E501
             'username': (str,),  # noqa: E501
-            'type': (TypeEnum,),  # noqa: E501
             'first_name': (str,),  # noqa: E501
             'last_name': (str,),  # noqa: E501
-            'lastfail': (datetime, none_type,),  # noqa: E501
-            'skype_contact': (str, none_type,),  # noqa: E501
-            'jabber_contact': (str, none_type,),  # noqa: E501
             'email': (str, none_type,),  # noqa: E501
-            'cell_phone': (str, none_type,),  # noqa: E501
             'login_attempts': (int, none_type,),  # noqa: E501
+            'last_login': (datetime, none_type,),  # noqa: E501
+            'last_failed_login': (datetime, none_type,),  # noqa: E501
+            'skype': (str, none_type,),  # noqa: E501
+            'jabber': (str, none_type,),  # noqa: E501
+            'phone': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -132,16 +133,17 @@ class User(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
+        'role': 'role',  # noqa: E501
         'username': 'username',  # noqa: E501
-        'type': 'type',  # noqa: E501
         'first_name': 'first_name',  # noqa: E501
         'last_name': 'last_name',  # noqa: E501
-        'lastfail': 'lastfail',  # noqa: E501
-        'skype_contact': 'skype_contact',  # noqa: E501
-        'jabber_contact': 'jabber_contact',  # noqa: E501
         'email': 'email',  # noqa: E501
-        'cell_phone': 'cell_phone',  # noqa: E501
         'login_attempts': 'login_attempts',  # noqa: E501
+        'last_login': 'last_login',  # noqa: E501
+        'last_failed_login': 'last_failed_login',  # noqa: E501
+        'skype': 'skype',  # noqa: E501
+        'jabber': 'jabber',  # noqa: E501
+        'phone': 'phone',  # noqa: E501
     }
 
     read_only_vars = {
@@ -152,13 +154,13 @@ class User(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, username, type, first_name, last_name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, role, username, first_name, last_name, *args, **kwargs):  # noqa: E501
         """User - a model defined in OpenAPI
 
         Args:
             item_url (str):
+            role (RoleEnum):
             username (str):
-            type (TypeEnum):
             first_name (str):
             last_name (str):
 
@@ -193,12 +195,13 @@ class User(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            lastfail (datetime, none_type): [optional]  # noqa: E501
-            skype_contact (str, none_type): [optional]  # noqa: E501
-            jabber_contact (str, none_type): [optional]  # noqa: E501
             email (str, none_type): [optional]  # noqa: E501
-            cell_phone (str, none_type): [optional]  # noqa: E501
             login_attempts (int, none_type): [optional]  # noqa: E501
+            last_login (datetime, none_type): [optional]  # noqa: E501
+            last_failed_login (datetime, none_type): [optional]  # noqa: E501
+            skype (str, none_type): [optional]  # noqa: E501
+            jabber (str, none_type): [optional]  # noqa: E501
+            phone (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -231,8 +234,8 @@ class User(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.item_url = item_url
+        self.role = role
         self.username = username
-        self.type = type
         self.first_name = first_name
         self.last_name = last_name
         for var_name, var_value in kwargs.items():
@@ -255,11 +258,11 @@ class User(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, username, type, first_name, last_name, *args, **kwargs):  # noqa: E501
+    def __init__(self, role, username, first_name, last_name, *args, **kwargs):  # noqa: E501
         """User - a model defined in OpenAPI
 
+            role (RoleEnum):
             username (str):
-            type (TypeEnum):
             first_name (str):
             last_name (str):
 
@@ -294,12 +297,13 @@ class User(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            lastfail (datetime, none_type): [optional]  # noqa: E501
-            skype_contact (str, none_type): [optional]  # noqa: E501
-            jabber_contact (str, none_type): [optional]  # noqa: E501
             email (str, none_type): [optional]  # noqa: E501
-            cell_phone (str, none_type): [optional]  # noqa: E501
             login_attempts (int, none_type): [optional]  # noqa: E501
+            last_login (datetime, none_type): [optional]  # noqa: E501
+            last_failed_login (datetime, none_type): [optional]  # noqa: E501
+            skype (str, none_type): [optional]  # noqa: E501
+            jabber (str, none_type): [optional]  # noqa: E501
+            phone (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -329,8 +333,8 @@ class User(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.role = role
         self.username = username
-        self.type = type
         self.first_name = first_name
         self.last_name = last_name
         for var_name, var_value in kwargs.items():

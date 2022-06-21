@@ -13,7 +13,7 @@
  */
 
 
-import { TypeEnum } from './type-enum';
+import { RoleEnum } from './role-enum';
 
 /**
  * 
@@ -29,16 +29,22 @@ export interface PatchedUser {
     'item_url'?: string;
     /**
      * 
+     * @type {RoleEnum}
+     * @memberof PatchedUser
+     */
+    'role'?: RoleEnum;
+    /**
+     * 
      * @type {string}
      * @memberof PatchedUser
      */
     'username'?: string;
     /**
      * 
-     * @type {TypeEnum}
+     * @type {string}
      * @memberof PatchedUser
      */
-    'type'?: TypeEnum;
+    'email'?: string | null;
     /**
      * 
      * @type {string}
@@ -53,39 +59,39 @@ export interface PatchedUser {
     'last_name'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof PatchedUser
-     */
-    'lastfail'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUser
-     */
-    'skype_contact'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUser
-     */
-    'jabber_contact'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUser
-     */
-    'email'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUser
-     */
-    'cell_phone'?: string | null;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedUser
      */
     'login_attempts'?: number | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedUser
+     */
+    'last_login'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedUser
+     */
+    'last_failed_login'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedUser
+     */
+    'skype'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedUser
+     */
+    'jabber'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedUser
+     */
+    'phone'?: string | null;
 }
 

@@ -99,6 +99,7 @@ docs/Model/PlayoutHistoryTemplateField.md
 docs/Model/Podcast.md
 docs/Model/PodcastEpisode.md
 docs/Model/Preference.md
+docs/Model/RoleEnum.md
 docs/Model/Schedule.md
 docs/Model/ServiceRegister.md
 docs/Model/Session.md
@@ -115,7 +116,6 @@ docs/Model/StreamSetting.md
 docs/Model/ThirdPartyTrackReference.md
 docs/Model/Timestamp.md
 docs/Model/TrackType.md
-docs/Model/TypeEnum.md
 docs/Model/User.md
 docs/Model/UserToken.md
 docs/Model/Webstream.md
@@ -221,6 +221,7 @@ lib/Model/PlayoutHistoryTemplateField.php
 lib/Model/Podcast.php
 lib/Model/PodcastEpisode.php
 lib/Model/Preference.php
+lib/Model/RoleEnum.php
 lib/Model/Schedule.php
 lib/Model/ServiceRegister.php
 lib/Model/Session.php
@@ -237,10 +238,10 @@ lib/Model/StreamSetting.php
 lib/Model/ThirdPartyTrackReference.php
 lib/Model/Timestamp.php
 lib/Model/TrackType.php
-lib/Model/TypeEnum.php
 lib/Model/User.php
 lib/Model/UserToken.php
 lib/Model/Webstream.php
 lib/Model/WebstreamMetadata.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/RoleEnumTest.php

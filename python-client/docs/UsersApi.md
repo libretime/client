@@ -56,16 +56,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = users_api.UsersApi(api_client)
     user = User(
+        role=RoleEnum("G"),
         username="username_example",
-        type=TypeEnum("G"),
+        email="email_example",
         first_name="first_name_example",
         last_name="last_name_example",
-        lastfail=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        skype_contact="skype_contact_example",
-        jabber_contact="jabber_contact_example",
-        email="email_example",
-        cell_phone="cell_phone_example",
         login_attempts=-2147483648,
+        last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        skype="skype_example",
+        jabber="jabber_example",
+        phone="phone_example",
     ) # User | 
 
     # example passing only required values which don't have defaults set
@@ -309,16 +310,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = users_api.UsersApi(api_client)
     id = 1 # int | A unique integer value identifying this user.
     patched_user = PatchedUser(
+        role=RoleEnum("G"),
         username="username_example",
-        type=TypeEnum("G"),
+        email="email_example",
         first_name="first_name_example",
         last_name="last_name_example",
-        lastfail=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        skype_contact="skype_contact_example",
-        jabber_contact="jabber_contact_example",
-        email="email_example",
-        cell_phone="cell_phone_example",
         login_attempts=-2147483648,
+        last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        skype="skype_example",
+        jabber="jabber_example",
+        phone="phone_example",
     ) # PatchedUser |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -494,16 +496,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = users_api.UsersApi(api_client)
     id = 1 # int | A unique integer value identifying this user.
     user = User(
+        role=RoleEnum("G"),
         username="username_example",
-        type=TypeEnum("G"),
+        email="email_example",
         first_name="first_name_example",
         last_name="last_name_example",
-        lastfail=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        skype_contact="skype_contact_example",
-        jabber_contact="jabber_contact_example",
-        email="email_example",
-        cell_phone="cell_phone_example",
         login_attempts=-2147483648,
+        last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        skype="skype_example",
+        jabber="jabber_example",
+        phone="phone_example",
     ) # User | 
 
     # example passing only required values which don't have defaults set

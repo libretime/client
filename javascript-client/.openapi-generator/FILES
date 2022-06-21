@@ -104,6 +104,7 @@ model/playout-history.ts
 model/podcast-episode.ts
 model/podcast.ts
 model/preference.ts
+model/role-enum.ts
 model/schedule.ts
 model/service-register.ts
 model/session.ts
@@ -120,7 +121,6 @@ model/stream-setting.ts
 model/third-party-track-reference.ts
 model/timestamp.ts
 model/track-type.ts
-model/type-enum.ts
 model/user-token.ts
 model/user.ts
 model/webstream-metadata.ts

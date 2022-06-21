@@ -76,6 +76,7 @@ docs/PodcastEpisodesApi.md
 docs/PodcastsApi.md
 docs/Preference.md
 docs/PreferencesApi.md
+docs/RoleEnum.md
 docs/Schedule.md
 docs/ScheduleApi.md
 docs/SchemaApi.md
@@ -109,7 +110,6 @@ docs/Timestamp.md
 docs/TimestampsApi.md
 docs/TrackType.md
 docs/TrackTypesApi.md
-docs/TypeEnum.md
 docs/User.md
 docs/UserToken.md
 docs/UserTokensApi.md
@@ -223,6 +223,7 @@ libretime_client/model/playout_history_template_field.py
 libretime_client/model/podcast.py
 libretime_client/model/podcast_episode.py
 libretime_client/model/preference.py
+libretime_client/model/role_enum.py
 libretime_client/model/schedule.py
 libretime_client/model/service_register.py
 libretime_client/model/session.py
@@ -239,7 +240,6 @@ libretime_client/model/stream_setting.py
 libretime_client/model/third_party_track_reference.py
 libretime_client/model/timestamp.py
 libretime_client/model/track_type.py
-libretime_client/model/type_enum.py
 libretime_client/model/user.py
 libretime_client/model/user_token.py
 libretime_client/model/webstream.py
@@ -252,4 +252,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_role_enum.py
 tox.ini
