@@ -397,29 +397,29 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsDestroy
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function streamSettingsDestroy($keyname)
+    public function streamSettingsDestroy($key)
     {
-        $this->streamSettingsDestroyWithHttpInfo($keyname);
+        $this->streamSettingsDestroyWithHttpInfo($key);
     }
 
     /**
      * Operation streamSettingsDestroyWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function streamSettingsDestroyWithHttpInfo($keyname)
+    public function streamSettingsDestroyWithHttpInfo($key)
     {
-        $request = $this->streamSettingsDestroyRequest($keyname);
+        $request = $this->streamSettingsDestroyRequest($key);
 
         try {
             $options = $this->createHttpClientOption();
@@ -468,14 +468,14 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsDestroyAsync
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsDestroyAsync($keyname)
+    public function streamSettingsDestroyAsync($key)
     {
-        return $this->streamSettingsDestroyAsyncWithHttpInfo($keyname)
+        return $this->streamSettingsDestroyAsyncWithHttpInfo($key)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,15 +486,15 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsDestroyAsyncWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsDestroyAsyncWithHttpInfo($keyname)
+    public function streamSettingsDestroyAsyncWithHttpInfo($key)
     {
         $returnType = '';
-        $request = $this->streamSettingsDestroyRequest($keyname);
+        $request = $this->streamSettingsDestroyRequest($key);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -522,21 +522,21 @@ class StreamSettingsApi
     /**
      * Create request for operation 'streamSettingsDestroy'
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function streamSettingsDestroyRequest($keyname)
+    public function streamSettingsDestroyRequest($key)
     {
-        // verify the required parameter 'keyname' is set
-        if ($keyname === null || (is_array($keyname) && count($keyname) === 0)) {
+        // verify the required parameter 'key' is set
+        if ($key === null || (is_array($key) && count($key) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $keyname when calling streamSettingsDestroy'
+                'Missing the required parameter $key when calling streamSettingsDestroy'
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{keyname}/';
+        $resourcePath = '/api/v2/stream-settings/{key}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -546,10 +546,10 @@ class StreamSettingsApi
 
 
         // path params
-        if ($keyname !== null) {
+        if ($key !== null) {
             $resourcePath = str_replace(
-                '{' . 'keyname' . '}',
-                ObjectSerializer::toPathValue($keyname),
+                '{' . 'key' . '}',
+                ObjectSerializer::toPathValue($key),
                 $resourcePath
             );
         }
@@ -886,32 +886,32 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsPartialUpdate
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\PatchedStreamSetting $patched_stream_setting patched_stream_setting (optional)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\StreamSetting
      */
-    public function streamSettingsPartialUpdate($keyname, $patched_stream_setting = null)
+    public function streamSettingsPartialUpdate($key, $patched_stream_setting = null)
     {
-        list($response) = $this->streamSettingsPartialUpdateWithHttpInfo($keyname, $patched_stream_setting);
+        list($response) = $this->streamSettingsPartialUpdateWithHttpInfo($key, $patched_stream_setting);
         return $response;
     }
 
     /**
      * Operation streamSettingsPartialUpdateWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\PatchedStreamSetting $patched_stream_setting (optional)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\StreamSetting, HTTP status code, HTTP response headers (array of strings)
      */
-    public function streamSettingsPartialUpdateWithHttpInfo($keyname, $patched_stream_setting = null)
+    public function streamSettingsPartialUpdateWithHttpInfo($key, $patched_stream_setting = null)
     {
-        $request = $this->streamSettingsPartialUpdateRequest($keyname, $patched_stream_setting);
+        $request = $this->streamSettingsPartialUpdateRequest($key, $patched_stream_setting);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1000,15 +1000,15 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsPartialUpdateAsync
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\PatchedStreamSetting $patched_stream_setting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsPartialUpdateAsync($keyname, $patched_stream_setting = null)
+    public function streamSettingsPartialUpdateAsync($key, $patched_stream_setting = null)
     {
-        return $this->streamSettingsPartialUpdateAsyncWithHttpInfo($keyname, $patched_stream_setting)
+        return $this->streamSettingsPartialUpdateAsyncWithHttpInfo($key, $patched_stream_setting)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1019,16 +1019,16 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsPartialUpdateAsyncWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\PatchedStreamSetting $patched_stream_setting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsPartialUpdateAsyncWithHttpInfo($keyname, $patched_stream_setting = null)
+    public function streamSettingsPartialUpdateAsyncWithHttpInfo($key, $patched_stream_setting = null)
     {
         $returnType = '\Libretime\Client\Model\StreamSetting';
-        $request = $this->streamSettingsPartialUpdateRequest($keyname, $patched_stream_setting);
+        $request = $this->streamSettingsPartialUpdateRequest($key, $patched_stream_setting);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1069,22 +1069,22 @@ class StreamSettingsApi
     /**
      * Create request for operation 'streamSettingsPartialUpdate'
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\PatchedStreamSetting $patched_stream_setting (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function streamSettingsPartialUpdateRequest($keyname, $patched_stream_setting = null)
+    public function streamSettingsPartialUpdateRequest($key, $patched_stream_setting = null)
     {
-        // verify the required parameter 'keyname' is set
-        if ($keyname === null || (is_array($keyname) && count($keyname) === 0)) {
+        // verify the required parameter 'key' is set
+        if ($key === null || (is_array($key) && count($key) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $keyname when calling streamSettingsPartialUpdate'
+                'Missing the required parameter $key when calling streamSettingsPartialUpdate'
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{keyname}/';
+        $resourcePath = '/api/v2/stream-settings/{key}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1094,10 +1094,10 @@ class StreamSettingsApi
 
 
         // path params
-        if ($keyname !== null) {
+        if ($key !== null) {
             $resourcePath = str_replace(
-                '{' . 'keyname' . '}',
-                ObjectSerializer::toPathValue($keyname),
+                '{' . 'key' . '}',
+                ObjectSerializer::toPathValue($key),
                 $resourcePath
             );
         }
@@ -1178,30 +1178,30 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsRetrieve
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\StreamSetting
      */
-    public function streamSettingsRetrieve($keyname)
+    public function streamSettingsRetrieve($key)
     {
-        list($response) = $this->streamSettingsRetrieveWithHttpInfo($keyname);
+        list($response) = $this->streamSettingsRetrieveWithHttpInfo($key);
         return $response;
     }
 
     /**
      * Operation streamSettingsRetrieveWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\StreamSetting, HTTP status code, HTTP response headers (array of strings)
      */
-    public function streamSettingsRetrieveWithHttpInfo($keyname)
+    public function streamSettingsRetrieveWithHttpInfo($key)
     {
-        $request = $this->streamSettingsRetrieveRequest($keyname);
+        $request = $this->streamSettingsRetrieveRequest($key);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1290,14 +1290,14 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsRetrieveAsync
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsRetrieveAsync($keyname)
+    public function streamSettingsRetrieveAsync($key)
     {
-        return $this->streamSettingsRetrieveAsyncWithHttpInfo($keyname)
+        return $this->streamSettingsRetrieveAsyncWithHttpInfo($key)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1308,15 +1308,15 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsRetrieveAsyncWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsRetrieveAsyncWithHttpInfo($keyname)
+    public function streamSettingsRetrieveAsyncWithHttpInfo($key)
     {
         $returnType = '\Libretime\Client\Model\StreamSetting';
-        $request = $this->streamSettingsRetrieveRequest($keyname);
+        $request = $this->streamSettingsRetrieveRequest($key);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1357,21 +1357,21 @@ class StreamSettingsApi
     /**
      * Create request for operation 'streamSettingsRetrieve'
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function streamSettingsRetrieveRequest($keyname)
+    public function streamSettingsRetrieveRequest($key)
     {
-        // verify the required parameter 'keyname' is set
-        if ($keyname === null || (is_array($keyname) && count($keyname) === 0)) {
+        // verify the required parameter 'key' is set
+        if ($key === null || (is_array($key) && count($key) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $keyname when calling streamSettingsRetrieve'
+                'Missing the required parameter $key when calling streamSettingsRetrieve'
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{keyname}/';
+        $resourcePath = '/api/v2/stream-settings/{key}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1381,10 +1381,10 @@ class StreamSettingsApi
 
 
         // path params
-        if ($keyname !== null) {
+        if ($key !== null) {
             $resourcePath = str_replace(
-                '{' . 'keyname' . '}',
-                ObjectSerializer::toPathValue($keyname),
+                '{' . 'key' . '}',
+                ObjectSerializer::toPathValue($key),
                 $resourcePath
             );
         }
@@ -1459,32 +1459,32 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsUpdate
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\StreamSetting $stream_setting stream_setting (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\StreamSetting
      */
-    public function streamSettingsUpdate($keyname, $stream_setting)
+    public function streamSettingsUpdate($key, $stream_setting)
     {
-        list($response) = $this->streamSettingsUpdateWithHttpInfo($keyname, $stream_setting);
+        list($response) = $this->streamSettingsUpdateWithHttpInfo($key, $stream_setting);
         return $response;
     }
 
     /**
      * Operation streamSettingsUpdateWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\StreamSetting $stream_setting (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\StreamSetting, HTTP status code, HTTP response headers (array of strings)
      */
-    public function streamSettingsUpdateWithHttpInfo($keyname, $stream_setting)
+    public function streamSettingsUpdateWithHttpInfo($key, $stream_setting)
     {
-        $request = $this->streamSettingsUpdateRequest($keyname, $stream_setting);
+        $request = $this->streamSettingsUpdateRequest($key, $stream_setting);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1573,15 +1573,15 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsUpdateAsync
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\StreamSetting $stream_setting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsUpdateAsync($keyname, $stream_setting)
+    public function streamSettingsUpdateAsync($key, $stream_setting)
     {
-        return $this->streamSettingsUpdateAsyncWithHttpInfo($keyname, $stream_setting)
+        return $this->streamSettingsUpdateAsyncWithHttpInfo($key, $stream_setting)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1592,16 +1592,16 @@ class StreamSettingsApi
     /**
      * Operation streamSettingsUpdateAsyncWithHttpInfo
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\StreamSetting $stream_setting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function streamSettingsUpdateAsyncWithHttpInfo($keyname, $stream_setting)
+    public function streamSettingsUpdateAsyncWithHttpInfo($key, $stream_setting)
     {
         $returnType = '\Libretime\Client\Model\StreamSetting';
-        $request = $this->streamSettingsUpdateRequest($keyname, $stream_setting);
+        $request = $this->streamSettingsUpdateRequest($key, $stream_setting);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1642,18 +1642,18 @@ class StreamSettingsApi
     /**
      * Create request for operation 'streamSettingsUpdate'
      *
-     * @param  string $keyname A unique value identifying this stream setting. (required)
+     * @param  string $key A unique value identifying this stream setting. (required)
      * @param  \Libretime\Client\Model\StreamSetting $stream_setting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function streamSettingsUpdateRequest($keyname, $stream_setting)
+    public function streamSettingsUpdateRequest($key, $stream_setting)
     {
-        // verify the required parameter 'keyname' is set
-        if ($keyname === null || (is_array($keyname) && count($keyname) === 0)) {
+        // verify the required parameter 'key' is set
+        if ($key === null || (is_array($key) && count($key) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $keyname when calling streamSettingsUpdate'
+                'Missing the required parameter $key when calling streamSettingsUpdate'
             );
         }
         // verify the required parameter 'stream_setting' is set
@@ -1663,7 +1663,7 @@ class StreamSettingsApi
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{keyname}/';
+        $resourcePath = '/api/v2/stream-settings/{key}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1673,10 +1673,10 @@ class StreamSettingsApi
 
 
         // path params
-        if ($keyname !== null) {
+        if ($key !== null) {
             $resourcePath = str_replace(
-                '{' . 'keyname' . '}',
-                ObjectSerializer::toPathValue($keyname),
+                '{' . 'key' . '}',
+                ObjectSerializer::toPathValue($key),
                 $resourcePath
             );
         }

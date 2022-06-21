@@ -284,11 +284,11 @@ Class | Method | HTTP request | Description
 *StationPodcastsApi* | [**station_podcasts_retrieve**](docs/StationPodcastsApi.md#station_podcasts_retrieve) | **GET** /api/v2/station-podcasts/{id}/ | 
 *StationPodcastsApi* | [**station_podcasts_update**](docs/StationPodcastsApi.md#station_podcasts_update) | **PUT** /api/v2/station-podcasts/{id}/ | 
 *StreamSettingsApi* | [**stream_settings_create**](docs/StreamSettingsApi.md#stream_settings_create) | **POST** /api/v2/stream-settings/ | 
-*StreamSettingsApi* | [**stream_settings_destroy**](docs/StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{keyname}/ | 
+*StreamSettingsApi* | [**stream_settings_destroy**](docs/StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{key}/ | 
 *StreamSettingsApi* | [**stream_settings_list**](docs/StreamSettingsApi.md#stream_settings_list) | **GET** /api/v2/stream-settings/ | 
-*StreamSettingsApi* | [**stream_settings_partial_update**](docs/StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{keyname}/ | 
-*StreamSettingsApi* | [**stream_settings_retrieve**](docs/StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{keyname}/ | 
-*StreamSettingsApi* | [**stream_settings_update**](docs/StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{keyname}/ | 
+*StreamSettingsApi* | [**stream_settings_partial_update**](docs/StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{key}/ | 
+*StreamSettingsApi* | [**stream_settings_retrieve**](docs/StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{key}/ | 
+*StreamSettingsApi* | [**stream_settings_update**](docs/StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{key}/ | 
 *ThirdPartyTrackReferencesApi* | [**third_party_track_references_create**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_create) | **POST** /api/v2/third-party-track-references/ | 
 *ThirdPartyTrackReferencesApi* | [**third_party_track_references_destroy**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_destroy) | **DELETE** /api/v2/third-party-track-references/{id}/ | 
 *ThirdPartyTrackReferencesApi* | [**third_party_track_references_list**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_list) | **GET** /api/v2/third-party-track-references/ | 

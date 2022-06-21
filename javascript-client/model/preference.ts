@@ -31,18 +31,18 @@ export interface Preference {
      * @type {string}
      * @memberof Preference
      */
-    'keystr': string | null;
+    'key': string | null;
     /**
      * 
      * @type {string}
      * @memberof Preference
      */
-    'valstr'?: string | null;
+    'value'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Preference
      */
-    'subjid': string | null;
+    'user': string | null;
 }
 

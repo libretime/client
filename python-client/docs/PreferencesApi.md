@@ -56,9 +56,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = preferences_api.PreferencesApi(api_client)
     preference = Preference(
-        keystr="keystr_example",
-        valstr="valstr_example",
-        subjid="subjid_example",
+        key="key_example",
+        value="value_example",
+        user="user_example",
     ) # Preference | 
 
     # example passing only required values which don't have defaults set
@@ -302,9 +302,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = preferences_api.PreferencesApi(api_client)
     id = 1 # int | A unique integer value identifying this preference.
     patched_preference = PatchedPreference(
-        keystr="keystr_example",
-        valstr="valstr_example",
-        subjid="subjid_example",
+        key="key_example",
+        value="value_example",
+        user="user_example",
     ) # PatchedPreference |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -480,9 +480,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = preferences_api.PreferencesApi(api_client)
     id = 1 # int | A unique integer value identifying this preference.
     preference = Preference(
-        keystr="keystr_example",
-        valstr="valstr_example",
-        subjid="subjid_example",
+        key="key_example",
+        value="value_example",
+        user="user_example",
     ) # Preference | 
 
     # example passing only required values which don't have defaults set

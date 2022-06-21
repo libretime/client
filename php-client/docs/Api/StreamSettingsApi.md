@@ -5,11 +5,11 @@ All URIs are relative to http://localhost.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**streamSettingsCreate()**](StreamSettingsApi.md#streamSettingsCreate) | **POST** /api/v2/stream-settings/ | 
-[**streamSettingsDestroy()**](StreamSettingsApi.md#streamSettingsDestroy) | **DELETE** /api/v2/stream-settings/{keyname}/ | 
+[**streamSettingsDestroy()**](StreamSettingsApi.md#streamSettingsDestroy) | **DELETE** /api/v2/stream-settings/{key}/ | 
 [**streamSettingsList()**](StreamSettingsApi.md#streamSettingsList) | **GET** /api/v2/stream-settings/ | 
-[**streamSettingsPartialUpdate()**](StreamSettingsApi.md#streamSettingsPartialUpdate) | **PATCH** /api/v2/stream-settings/{keyname}/ | 
-[**streamSettingsRetrieve()**](StreamSettingsApi.md#streamSettingsRetrieve) | **GET** /api/v2/stream-settings/{keyname}/ | 
-[**streamSettingsUpdate()**](StreamSettingsApi.md#streamSettingsUpdate) | **PUT** /api/v2/stream-settings/{keyname}/ | 
+[**streamSettingsPartialUpdate()**](StreamSettingsApi.md#streamSettingsPartialUpdate) | **PATCH** /api/v2/stream-settings/{key}/ | 
+[**streamSettingsRetrieve()**](StreamSettingsApi.md#streamSettingsRetrieve) | **GET** /api/v2/stream-settings/{key}/ | 
+[**streamSettingsUpdate()**](StreamSettingsApi.md#streamSettingsUpdate) | **PUT** /api/v2/stream-settings/{key}/ | 
 
 
 ## `streamSettingsCreate()`
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 ## `streamSettingsDestroy()`
 
 ```php
-streamSettingsDestroy($keyname)
+streamSettingsDestroy($key)
 ```
 
 
@@ -109,10 +109,10 @@ $apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$keyname = 'keyname_example'; // string | A unique value identifying this stream setting.
+$key = 'key_example'; // string | A unique value identifying this stream setting.
 
 try {
-    $apiInstance->streamSettingsDestroy($keyname);
+    $apiInstance->streamSettingsDestroy($key);
 } catch (Exception $e) {
     echo 'Exception when calling StreamSettingsApi->streamSettingsDestroy: ', $e->getMessage(), PHP_EOL;
 }
@@ -122,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **string**| A unique value identifying this stream setting. |
+ **key** | **string**| A unique value identifying this stream setting. |
 
 ### Return type
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `streamSettingsPartialUpdate()`
 
 ```php
-streamSettingsPartialUpdate($keyname, $patched_stream_setting): \Libretime\Client\Model\StreamSetting
+streamSettingsPartialUpdate($key, $patched_stream_setting): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -235,11 +235,11 @@ $apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$keyname = 'keyname_example'; // string | A unique value identifying this stream setting.
+$key = 'key_example'; // string | A unique value identifying this stream setting.
 $patched_stream_setting = new \Libretime\Client\Model\PatchedStreamSetting(); // \Libretime\Client\Model\PatchedStreamSetting
 
 try {
-    $result = $apiInstance->streamSettingsPartialUpdate($keyname, $patched_stream_setting);
+    $result = $apiInstance->streamSettingsPartialUpdate($key, $patched_stream_setting);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StreamSettingsApi->streamSettingsPartialUpdate: ', $e->getMessage(), PHP_EOL;
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **string**| A unique value identifying this stream setting. |
+ **key** | **string**| A unique value identifying this stream setting. |
  **patched_stream_setting** | [**\Libretime\Client\Model\PatchedStreamSetting**](../Model/PatchedStreamSetting.md)|  | [optional]
 
 ### Return type
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `streamSettingsRetrieve()`
 
 ```php
-streamSettingsRetrieve($keyname): \Libretime\Client\Model\StreamSetting
+streamSettingsRetrieve($key): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -302,10 +302,10 @@ $apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$keyname = 'keyname_example'; // string | A unique value identifying this stream setting.
+$key = 'key_example'; // string | A unique value identifying this stream setting.
 
 try {
-    $result = $apiInstance->streamSettingsRetrieve($keyname);
+    $result = $apiInstance->streamSettingsRetrieve($key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StreamSettingsApi->streamSettingsRetrieve: ', $e->getMessage(), PHP_EOL;
@@ -316,7 +316,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **string**| A unique value identifying this stream setting. |
+ **key** | **string**| A unique value identifying this stream setting. |
 
 ### Return type
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `streamSettingsUpdate()`
 
 ```php
-streamSettingsUpdate($keyname, $stream_setting): \Libretime\Client\Model\StreamSetting
+streamSettingsUpdate($key, $stream_setting): \Libretime\Client\Model\StreamSetting
 ```
 
 
@@ -367,11 +367,11 @@ $apiInstance = new Libretime\Client\Api\StreamSettingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$keyname = 'keyname_example'; // string | A unique value identifying this stream setting.
+$key = 'key_example'; // string | A unique value identifying this stream setting.
 $stream_setting = new \Libretime\Client\Model\StreamSetting(); // \Libretime\Client\Model\StreamSetting
 
 try {
-    $result = $apiInstance->streamSettingsUpdate($keyname, $stream_setting);
+    $result = $apiInstance->streamSettingsUpdate($key, $stream_setting);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StreamSettingsApi->streamSettingsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -382,7 +382,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **string**| A unique value identifying this stream setting. |
+ **key** | **string**| A unique value identifying this stream setting. |
  **stream_setting** | [**\Libretime\Client\Model\StreamSetting**](../Model/StreamSetting.md)|  |
 
 ### Return type

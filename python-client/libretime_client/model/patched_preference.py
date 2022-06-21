@@ -58,7 +58,7 @@ class PatchedPreference(ModelNormal):
     }
 
     validations = {
-        ('keystr',): {
+        ('key',): {
             'max_length': 255,
         },
     }
@@ -85,9 +85,9 @@ class PatchedPreference(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
-            'keystr': (str, none_type,),  # noqa: E501
-            'valstr': (str, none_type,),  # noqa: E501
-            'subjid': (str, none_type,),  # noqa: E501
+            'key': (str, none_type,),  # noqa: E501
+            'value': (str, none_type,),  # noqa: E501
+            'user': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -97,9 +97,9 @@ class PatchedPreference(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
-        'keystr': 'keystr',  # noqa: E501
-        'valstr': 'valstr',  # noqa: E501
-        'subjid': 'subjid',  # noqa: E501
+        'key': 'key',  # noqa: E501
+        'value': 'value',  # noqa: E501
+        'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
@@ -145,9 +145,9 @@ class PatchedPreference(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
-            keystr (str, none_type): [optional]  # noqa: E501
-            valstr (str, none_type): [optional]  # noqa: E501
-            subjid (str, none_type): [optional]  # noqa: E501
+            key (str, none_type): [optional]  # noqa: E501
+            value (str, none_type): [optional]  # noqa: E501
+            user (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,9 +234,9 @@ class PatchedPreference(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
-            keystr (str, none_type): [optional]  # noqa: E501
-            valstr (str, none_type): [optional]  # noqa: E501
-            subjid (str, none_type): [optional]  # noqa: E501
+            key (str, none_type): [optional]  # noqa: E501
+            value (str, none_type): [optional]  # noqa: E501
+            user (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

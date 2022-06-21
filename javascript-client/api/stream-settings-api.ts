@@ -73,15 +73,15 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsDestroy: async (keyname: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'keyname' is not null or undefined
-            assertParamExists('streamSettingsDestroy', 'keyname', keyname)
-            const localVarPath = `/api/v2/stream-settings/{keyname}/`
-                .replace(`{${"keyname"}}`, encodeURIComponent(String(keyname)));
+        streamSettingsDestroy: async (key: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'key' is not null or undefined
+            assertParamExists('streamSettingsDestroy', 'key', key)
+            const localVarPath = `/api/v2/stream-settings/{key}/`
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -147,16 +147,16 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {PatchedStreamSetting} [patchedStreamSetting] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsPartialUpdate: async (keyname: string, patchedStreamSetting?: PatchedStreamSetting, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'keyname' is not null or undefined
-            assertParamExists('streamSettingsPartialUpdate', 'keyname', keyname)
-            const localVarPath = `/api/v2/stream-settings/{keyname}/`
-                .replace(`{${"keyname"}}`, encodeURIComponent(String(keyname)));
+        streamSettingsPartialUpdate: async (key: string, patchedStreamSetting?: PatchedStreamSetting, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'key' is not null or undefined
+            assertParamExists('streamSettingsPartialUpdate', 'key', key)
+            const localVarPath = `/api/v2/stream-settings/{key}/`
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -190,15 +190,15 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsRetrieve: async (keyname: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'keyname' is not null or undefined
-            assertParamExists('streamSettingsRetrieve', 'keyname', keyname)
-            const localVarPath = `/api/v2/stream-settings/{keyname}/`
-                .replace(`{${"keyname"}}`, encodeURIComponent(String(keyname)));
+        streamSettingsRetrieve: async (key: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'key' is not null or undefined
+            assertParamExists('streamSettingsRetrieve', 'key', key)
+            const localVarPath = `/api/v2/stream-settings/{key}/`
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -229,18 +229,18 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {StreamSetting} streamSetting 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsUpdate: async (keyname: string, streamSetting: StreamSetting, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'keyname' is not null or undefined
-            assertParamExists('streamSettingsUpdate', 'keyname', keyname)
+        streamSettingsUpdate: async (key: string, streamSetting: StreamSetting, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'key' is not null or undefined
+            assertParamExists('streamSettingsUpdate', 'key', key)
             // verify required parameter 'streamSetting' is not null or undefined
             assertParamExists('streamSettingsUpdate', 'streamSetting', streamSetting)
-            const localVarPath = `/api/v2/stream-settings/{keyname}/`
-                .replace(`{${"keyname"}}`, encodeURIComponent(String(keyname)));
+            const localVarPath = `/api/v2/stream-settings/{key}/`
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -294,12 +294,12 @@ export const StreamSettingsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async streamSettingsDestroy(keyname: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsDestroy(keyname, options);
+        async streamSettingsDestroy(key: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsDestroy(key, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -313,34 +313,34 @@ export const StreamSettingsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {PatchedStreamSetting} [patchedStreamSetting] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async streamSettingsPartialUpdate(keyname: string, patchedStreamSetting?: PatchedStreamSetting, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSetting>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsPartialUpdate(keyname, patchedStreamSetting, options);
+        async streamSettingsPartialUpdate(key: string, patchedStreamSetting?: PatchedStreamSetting, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSetting>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsPartialUpdate(key, patchedStreamSetting, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async streamSettingsRetrieve(keyname: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSetting>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsRetrieve(keyname, options);
+        async streamSettingsRetrieve(key: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSetting>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsRetrieve(key, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {StreamSetting} streamSetting 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async streamSettingsUpdate(keyname: string, streamSetting: StreamSetting, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSetting>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsUpdate(keyname, streamSetting, options);
+        async streamSettingsUpdate(key: string, streamSetting: StreamSetting, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSetting>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.streamSettingsUpdate(key, streamSetting, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -364,12 +364,12 @@ export const StreamSettingsApiFactory = function (configuration?: Configuration,
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsDestroy(keyname: string, options?: any): AxiosPromise<void> {
-            return localVarFp.streamSettingsDestroy(keyname, options).then((request) => request(axios, basePath));
+        streamSettingsDestroy(key: string, options?: any): AxiosPromise<void> {
+            return localVarFp.streamSettingsDestroy(key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -381,32 +381,32 @@ export const StreamSettingsApiFactory = function (configuration?: Configuration,
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {PatchedStreamSetting} [patchedStreamSetting] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsPartialUpdate(keyname: string, patchedStreamSetting?: PatchedStreamSetting, options?: any): AxiosPromise<StreamSetting> {
-            return localVarFp.streamSettingsPartialUpdate(keyname, patchedStreamSetting, options).then((request) => request(axios, basePath));
+        streamSettingsPartialUpdate(key: string, patchedStreamSetting?: PatchedStreamSetting, options?: any): AxiosPromise<StreamSetting> {
+            return localVarFp.streamSettingsPartialUpdate(key, patchedStreamSetting, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsRetrieve(keyname: string, options?: any): AxiosPromise<StreamSetting> {
-            return localVarFp.streamSettingsRetrieve(keyname, options).then((request) => request(axios, basePath));
+        streamSettingsRetrieve(key: string, options?: any): AxiosPromise<StreamSetting> {
+            return localVarFp.streamSettingsRetrieve(key, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} keyname A unique value identifying this stream setting.
+         * @param {string} key A unique value identifying this stream setting.
          * @param {StreamSetting} streamSetting 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamSettingsUpdate(keyname: string, streamSetting: StreamSetting, options?: any): AxiosPromise<StreamSetting> {
-            return localVarFp.streamSettingsUpdate(keyname, streamSetting, options).then((request) => request(axios, basePath));
+        streamSettingsUpdate(key: string, streamSetting: StreamSetting, options?: any): AxiosPromise<StreamSetting> {
+            return localVarFp.streamSettingsUpdate(key, streamSetting, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -431,13 +431,13 @@ export class StreamSettingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} keyname A unique value identifying this stream setting.
+     * @param {string} key A unique value identifying this stream setting.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamSettingsApi
      */
-    public streamSettingsDestroy(keyname: string, options?: AxiosRequestConfig) {
-        return StreamSettingsApiFp(this.configuration).streamSettingsDestroy(keyname, options).then((request) => request(this.axios, this.basePath));
+    public streamSettingsDestroy(key: string, options?: AxiosRequestConfig) {
+        return StreamSettingsApiFp(this.configuration).streamSettingsDestroy(key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -452,36 +452,36 @@ export class StreamSettingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} keyname A unique value identifying this stream setting.
+     * @param {string} key A unique value identifying this stream setting.
      * @param {PatchedStreamSetting} [patchedStreamSetting] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamSettingsApi
      */
-    public streamSettingsPartialUpdate(keyname: string, patchedStreamSetting?: PatchedStreamSetting, options?: AxiosRequestConfig) {
-        return StreamSettingsApiFp(this.configuration).streamSettingsPartialUpdate(keyname, patchedStreamSetting, options).then((request) => request(this.axios, this.basePath));
+    public streamSettingsPartialUpdate(key: string, patchedStreamSetting?: PatchedStreamSetting, options?: AxiosRequestConfig) {
+        return StreamSettingsApiFp(this.configuration).streamSettingsPartialUpdate(key, patchedStreamSetting, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} keyname A unique value identifying this stream setting.
+     * @param {string} key A unique value identifying this stream setting.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamSettingsApi
      */
-    public streamSettingsRetrieve(keyname: string, options?: AxiosRequestConfig) {
-        return StreamSettingsApiFp(this.configuration).streamSettingsRetrieve(keyname, options).then((request) => request(this.axios, this.basePath));
+    public streamSettingsRetrieve(key: string, options?: AxiosRequestConfig) {
+        return StreamSettingsApiFp(this.configuration).streamSettingsRetrieve(key, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} keyname A unique value identifying this stream setting.
+     * @param {string} key A unique value identifying this stream setting.
      * @param {StreamSetting} streamSetting 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamSettingsApi
      */
-    public streamSettingsUpdate(keyname: string, streamSetting: StreamSetting, options?: AxiosRequestConfig) {
-        return StreamSettingsApiFp(this.configuration).streamSettingsUpdate(keyname, streamSetting, options).then((request) => request(this.axios, this.basePath));
+    public streamSettingsUpdate(key: string, streamSetting: StreamSetting, options?: AxiosRequestConfig) {
+        return StreamSettingsApiFp(this.configuration).streamSettingsUpdate(key, streamSetting, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -98,17 +98,17 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{keyname}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}/',
                 'operation_id': 'stream_settings_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'keyname',
+                    'key',
                 ],
                 'required': [
-                    'keyname',
+                    'key',
                 ],
                 'nullable': [
                 ],
@@ -123,14 +123,14 @@ class StreamSettingsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'keyname':
+                    'key':
                         (str,),
                 },
                 'attribute_map': {
-                    'keyname': 'keyname',
+                    'key': 'key',
                 },
                 'location_map': {
-                    'keyname': 'path',
+                    'key': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -193,18 +193,18 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{keyname}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}/',
                 'operation_id': 'stream_settings_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'keyname',
+                    'key',
                     'patched_stream_setting',
                 ],
                 'required': [
-                    'keyname',
+                    'key',
                 ],
                 'nullable': [
                 ],
@@ -219,16 +219,16 @@ class StreamSettingsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'keyname':
+                    'key':
                         (str,),
                     'patched_stream_setting':
                         (PatchedStreamSetting,),
                 },
                 'attribute_map': {
-                    'keyname': 'keyname',
+                    'key': 'key',
                 },
                 'location_map': {
-                    'keyname': 'path',
+                    'key': 'path',
                     'patched_stream_setting': 'body',
                 },
                 'collection_format_map': {
@@ -253,17 +253,17 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{keyname}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}/',
                 'operation_id': 'stream_settings_retrieve',
                 'http_method': 'GET',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'keyname',
+                    'key',
                 ],
                 'required': [
-                    'keyname',
+                    'key',
                 ],
                 'nullable': [
                 ],
@@ -278,14 +278,14 @@ class StreamSettingsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'keyname':
+                    'key':
                         (str,),
                 },
                 'attribute_map': {
-                    'keyname': 'keyname',
+                    'key': 'key',
                 },
                 'location_map': {
-                    'keyname': 'path',
+                    'key': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -305,18 +305,18 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{keyname}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}/',
                 'operation_id': 'stream_settings_update',
                 'http_method': 'PUT',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'keyname',
+                    'key',
                     'stream_setting',
                 ],
                 'required': [
-                    'keyname',
+                    'key',
                     'stream_setting',
                 ],
                 'nullable': [
@@ -332,16 +332,16 @@ class StreamSettingsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'keyname':
+                    'key':
                         (str,),
                     'stream_setting':
                         (StreamSetting,),
                 },
                 'attribute_map': {
-                    'keyname': 'keyname',
+                    'key': 'key',
                 },
                 'location_map': {
-                    'keyname': 'path',
+                    'key': 'path',
                     'stream_setting': 'body',
                 },
                 'collection_format_map': {
@@ -444,7 +444,7 @@ class StreamSettingsApi(object):
 
     def stream_settings_destroy(
         self,
-        keyname,
+        key,
         **kwargs
     ):
         """stream_settings_destroy  # noqa: E501
@@ -452,11 +452,11 @@ class StreamSettingsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.stream_settings_destroy(keyname, async_req=True)
+        >>> thread = api.stream_settings_destroy(key, async_req=True)
         >>> result = thread.get()
 
         Args:
-            keyname (str): A unique value identifying this stream setting.
+            key (str): A unique value identifying this stream setting.
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -520,8 +520,8 @@ class StreamSettingsApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['keyname'] = \
-            keyname
+        kwargs['key'] = \
+            key
         return self.stream_settings_destroy_endpoint.call_with_http_info(**kwargs)
 
     def stream_settings_list(
@@ -603,7 +603,7 @@ class StreamSettingsApi(object):
 
     def stream_settings_partial_update(
         self,
-        keyname,
+        key,
         **kwargs
     ):
         """stream_settings_partial_update  # noqa: E501
@@ -611,11 +611,11 @@ class StreamSettingsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.stream_settings_partial_update(keyname, async_req=True)
+        >>> thread = api.stream_settings_partial_update(key, async_req=True)
         >>> result = thread.get()
 
         Args:
-            keyname (str): A unique value identifying this stream setting.
+            key (str): A unique value identifying this stream setting.
 
         Keyword Args:
             patched_stream_setting (PatchedStreamSetting): [optional]
@@ -680,13 +680,13 @@ class StreamSettingsApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['keyname'] = \
-            keyname
+        kwargs['key'] = \
+            key
         return self.stream_settings_partial_update_endpoint.call_with_http_info(**kwargs)
 
     def stream_settings_retrieve(
         self,
-        keyname,
+        key,
         **kwargs
     ):
         """stream_settings_retrieve  # noqa: E501
@@ -694,11 +694,11 @@ class StreamSettingsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.stream_settings_retrieve(keyname, async_req=True)
+        >>> thread = api.stream_settings_retrieve(key, async_req=True)
         >>> result = thread.get()
 
         Args:
-            keyname (str): A unique value identifying this stream setting.
+            key (str): A unique value identifying this stream setting.
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -762,13 +762,13 @@ class StreamSettingsApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['keyname'] = \
-            keyname
+        kwargs['key'] = \
+            key
         return self.stream_settings_retrieve_endpoint.call_with_http_info(**kwargs)
 
     def stream_settings_update(
         self,
-        keyname,
+        key,
         stream_setting,
         **kwargs
     ):
@@ -777,11 +777,11 @@ class StreamSettingsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.stream_settings_update(keyname, stream_setting, async_req=True)
+        >>> thread = api.stream_settings_update(key, stream_setting, async_req=True)
         >>> result = thread.get()
 
         Args:
-            keyname (str): A unique value identifying this stream setting.
+            key (str): A unique value identifying this stream setting.
             stream_setting (StreamSetting):
 
         Keyword Args:
@@ -846,8 +846,8 @@ class StreamSettingsApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['keyname'] = \
-            keyname
+        kwargs['key'] = \
+            key
         kwargs['stream_setting'] = \
             stream_setting
         return self.stream_settings_update_endpoint.call_with_http_info(**kwargs)

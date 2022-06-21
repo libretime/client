@@ -58,7 +58,7 @@ class Preference(ModelNormal):
     }
 
     validations = {
-        ('keystr',): {
+        ('key',): {
             'max_length': 255,
         },
     }
@@ -85,9 +85,9 @@ class Preference(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
-            'keystr': (str, none_type,),  # noqa: E501
-            'subjid': (str, none_type,),  # noqa: E501
-            'valstr': (str, none_type,),  # noqa: E501
+            'key': (str, none_type,),  # noqa: E501
+            'user': (str, none_type,),  # noqa: E501
+            'value': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -97,9 +97,9 @@ class Preference(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
-        'keystr': 'keystr',  # noqa: E501
-        'subjid': 'subjid',  # noqa: E501
-        'valstr': 'valstr',  # noqa: E501
+        'key': 'key',  # noqa: E501
+        'user': 'user',  # noqa: E501
+        'value': 'value',  # noqa: E501
     }
 
     read_only_vars = {
@@ -110,13 +110,13 @@ class Preference(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, keystr, subjid, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, key, user, *args, **kwargs):  # noqa: E501
         """Preference - a model defined in OpenAPI
 
         Args:
             item_url (str):
-            keystr (str, none_type):
-            subjid (str, none_type):
+            key (str, none_type):
+            user (str, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -149,7 +149,7 @@ class Preference(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            valstr (str, none_type): [optional]  # noqa: E501
+            value (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -182,8 +182,8 @@ class Preference(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.item_url = item_url
-        self.keystr = keystr
-        self.subjid = subjid
+        self.key = key
+        self.user = user
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -204,11 +204,11 @@ class Preference(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, keystr, subjid, *args, **kwargs):  # noqa: E501
+    def __init__(self, key, user, *args, **kwargs):  # noqa: E501
         """Preference - a model defined in OpenAPI
 
-            keystr (str, none_type):
-            subjid (str, none_type):
+            key (str, none_type):
+            user (str, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -241,7 +241,7 @@ class Preference(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            valstr (str, none_type): [optional]  # noqa: E501
+            value (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -271,8 +271,8 @@ class Preference(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.keystr = keystr
-        self.subjid = subjid
+        self.key = key
+        self.user = user
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

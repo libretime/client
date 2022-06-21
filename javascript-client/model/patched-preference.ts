@@ -31,18 +31,18 @@ export interface PatchedPreference {
      * @type {string}
      * @memberof PatchedPreference
      */
-    'keystr'?: string | null;
+    'key'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedPreference
      */
-    'valstr'?: string | null;
+    'value'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedPreference
      */
-    'subjid'?: string | null;
+    'user'?: string | null;
 }
 

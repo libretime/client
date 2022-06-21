@@ -60,9 +60,9 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'keystr' => 'string',
-        'valstr' => 'string',
-        'subjid' => 'string'
+        'key' => 'string',
+        'value' => 'string',
+        'user' => 'string'
     ];
 
     /**
@@ -74,9 +74,9 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
-        'keystr' => null,
-        'valstr' => null,
-        'subjid' => 'uri'
+        'key' => null,
+        'value' => null,
+        'user' => 'uri'
     ];
 
     /**
@@ -107,9 +107,9 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
-        'keystr' => 'keystr',
-        'valstr' => 'valstr',
-        'subjid' => 'subjid'
+        'key' => 'key',
+        'value' => 'value',
+        'user' => 'user'
     ];
 
     /**
@@ -119,9 +119,9 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
-        'keystr' => 'setKeystr',
-        'valstr' => 'setValstr',
-        'subjid' => 'setSubjid'
+        'key' => 'setKey',
+        'value' => 'setValue',
+        'user' => 'setUser'
     ];
 
     /**
@@ -131,9 +131,9 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
-        'keystr' => 'getKeystr',
-        'valstr' => 'getValstr',
-        'subjid' => 'getSubjid'
+        'key' => 'getKey',
+        'value' => 'getValue',
+        'user' => 'getUser'
     ];
 
     /**
@@ -194,9 +194,9 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
-        $this->container['keystr'] = $data['keystr'] ?? null;
-        $this->container['valstr'] = $data['valstr'] ?? null;
-        $this->container['subjid'] = $data['subjid'] ?? null;
+        $this->container['key'] = $data['key'] ?? null;
+        $this->container['value'] = $data['value'] ?? null;
+        $this->container['user'] = $data['user'] ?? null;
     }
 
     /**
@@ -211,15 +211,15 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
-        if ($this->container['keystr'] === null) {
-            $invalidProperties[] = "'keystr' can't be null";
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
         }
-        if ((mb_strlen($this->container['keystr']) > 255)) {
-            $invalidProperties[] = "invalid value for 'keystr', the character length must be smaller than or equal to 255.";
+        if ((mb_strlen($this->container['key']) > 255)) {
+            $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 255.";
         }
 
-        if ($this->container['subjid'] === null) {
-            $invalidProperties[] = "'subjid' can't be null";
+        if ($this->container['user'] === null) {
+            $invalidProperties[] = "'user' can't be null";
         }
         return $invalidProperties;
     }
@@ -261,77 +261,77 @@ class Preference implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets keystr
+     * Gets key
      *
      * @return string
      */
-    public function getKeystr()
+    public function getKey()
     {
-        return $this->container['keystr'];
+        return $this->container['key'];
     }
 
     /**
-     * Sets keystr
+     * Sets key
      *
-     * @param string $keystr keystr
+     * @param string $key key
      *
      * @return self
      */
-    public function setKeystr($keystr)
+    public function setKey($key)
     {
-        if ((mb_strlen($keystr) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $keystr when calling Preference., must be smaller than or equal to 255.');
+        if ((mb_strlen($key) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $key when calling Preference., must be smaller than or equal to 255.');
         }
 
-        $this->container['keystr'] = $keystr;
+        $this->container['key'] = $key;
 
         return $this;
     }
 
     /**
-     * Gets valstr
+     * Gets value
      *
      * @return string|null
      */
-    public function getValstr()
+    public function getValue()
     {
-        return $this->container['valstr'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets valstr
+     * Sets value
      *
-     * @param string|null $valstr valstr
+     * @param string|null $value value
      *
      * @return self
      */
-    public function setValstr($valstr)
+    public function setValue($value)
     {
-        $this->container['valstr'] = $valstr;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets subjid
+     * Gets user
      *
      * @return string
      */
-    public function getSubjid()
+    public function getUser()
     {
-        return $this->container['subjid'];
+        return $this->container['user'];
     }
 
     /**
-     * Sets subjid
+     * Sets user
      *
-     * @param string $subjid subjid
+     * @param string $user user
      *
      * @return self
      */
-    public function setSubjid($subjid)
+    public function setUser($user)
     {
-        $this->container['subjid'] = $subjid;
+        $this->container['user'] = $user;
 
         return $this;
     }

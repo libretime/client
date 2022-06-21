@@ -5,11 +5,11 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**stream_settings_create**](StreamSettingsApi.md#stream_settings_create) | **POST** /api/v2/stream-settings/ | 
-[**stream_settings_destroy**](StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{keyname}/ | 
+[**stream_settings_destroy**](StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{key}/ | 
 [**stream_settings_list**](StreamSettingsApi.md#stream_settings_list) | **GET** /api/v2/stream-settings/ | 
-[**stream_settings_partial_update**](StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{keyname}/ | 
-[**stream_settings_retrieve**](StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{keyname}/ | 
-[**stream_settings_update**](StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{keyname}/ | 
+[**stream_settings_partial_update**](StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{key}/ | 
+[**stream_settings_retrieve**](StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{key}/ | 
+[**stream_settings_update**](StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{key}/ | 
 
 
 # **stream_settings_create**
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **stream_settings_destroy**
-> stream_settings_destroy(keyname)
+> stream_settings_destroy(key)
 
 
 
@@ -139,11 +139,11 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
-    keyname = "keyname_example" # str | A unique value identifying this stream setting.
+    key = "key_example" # str | A unique value identifying this stream setting.
 
     # example passing only required values which don't have defaults set
     try:
-        api_instance.stream_settings_destroy(keyname)
+        api_instance.stream_settings_destroy(key)
     except libretime_client.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_destroy: %s\n" % e)
 ```
@@ -153,7 +153,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **str**| A unique value identifying this stream setting. |
+ **key** | **str**| A unique value identifying this stream setting. |
 
 ### Return type
 
@@ -256,7 +256,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **stream_settings_partial_update**
-> StreamSetting stream_settings_partial_update(keyname)
+> StreamSetting stream_settings_partial_update(key)
 
 
 
@@ -299,7 +299,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
-    keyname = "keyname_example" # str | A unique value identifying this stream setting.
+    key = "key_example" # str | A unique value identifying this stream setting.
     patched_stream_setting = PatchedStreamSetting(
         value="value_example",
         type="type_example",
@@ -307,7 +307,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.stream_settings_partial_update(keyname)
+        api_response = api_instance.stream_settings_partial_update(key)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_partial_update: %s\n" % e)
@@ -315,7 +315,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.stream_settings_partial_update(keyname, patched_stream_setting=patched_stream_setting)
+        api_response = api_instance.stream_settings_partial_update(key, patched_stream_setting=patched_stream_setting)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_partial_update: %s\n" % e)
@@ -326,7 +326,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **str**| A unique value identifying this stream setting. |
+ **key** | **str**| A unique value identifying this stream setting. |
  **patched_stream_setting** | [**PatchedStreamSetting**](PatchedStreamSetting.md)|  | [optional]
 
 ### Return type
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **stream_settings_retrieve**
-> StreamSetting stream_settings_retrieve(keyname)
+> StreamSetting stream_settings_retrieve(key)
 
 
 
@@ -394,11 +394,11 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
-    keyname = "keyname_example" # str | A unique value identifying this stream setting.
+    key = "key_example" # str | A unique value identifying this stream setting.
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.stream_settings_retrieve(keyname)
+        api_response = api_instance.stream_settings_retrieve(key)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_retrieve: %s\n" % e)
@@ -409,7 +409,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **str**| A unique value identifying this stream setting. |
+ **key** | **str**| A unique value identifying this stream setting. |
 
 ### Return type
 
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **stream_settings_update**
-> StreamSetting stream_settings_update(keyname, stream_setting)
+> StreamSetting stream_settings_update(key, stream_setting)
 
 
 
@@ -476,7 +476,7 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
-    keyname = "keyname_example" # str | A unique value identifying this stream setting.
+    key = "key_example" # str | A unique value identifying this stream setting.
     stream_setting = StreamSetting(
         value="value_example",
         type="type_example",
@@ -484,7 +484,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.stream_settings_update(keyname, stream_setting)
+        api_response = api_instance.stream_settings_update(key, stream_setting)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling StreamSettingsApi->stream_settings_update: %s\n" % e)
@@ -495,7 +495,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keyname** | **str**| A unique value identifying this stream setting. |
+ **key** | **str**| A unique value identifying this stream setting. |
  **stream_setting** | [**StreamSetting**](StreamSetting.md)|  |
 
 ### Return type
