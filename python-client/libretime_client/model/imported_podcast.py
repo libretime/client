@@ -82,10 +82,10 @@ class ImportedPodcast(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
+            'override_album': (bool,),  # noqa: E501
             'auto_ingest': (bool,),  # noqa: E501
-            'album_override': (bool,),  # noqa: E501
             'podcast': (str,),  # noqa: E501
-            'auto_ingest_timestamp': (datetime, none_type,),  # noqa: E501
+            'auto_ingested_at': (datetime, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -95,10 +95,10 @@ class ImportedPodcast(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
+        'override_album': 'override_album',  # noqa: E501
         'auto_ingest': 'auto_ingest',  # noqa: E501
-        'album_override': 'album_override',  # noqa: E501
         'podcast': 'podcast',  # noqa: E501
-        'auto_ingest_timestamp': 'auto_ingest_timestamp',  # noqa: E501
+        'auto_ingested_at': 'auto_ingested_at',  # noqa: E501
     }
 
     read_only_vars = {
@@ -109,13 +109,13 @@ class ImportedPodcast(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, auto_ingest, album_override, podcast, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, override_album, auto_ingest, podcast, *args, **kwargs):  # noqa: E501
         """ImportedPodcast - a model defined in OpenAPI
 
         Args:
             item_url (str):
+            override_album (bool):
             auto_ingest (bool):
-            album_override (bool):
             podcast (str):
 
         Keyword Args:
@@ -149,7 +149,7 @@ class ImportedPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            auto_ingest_timestamp (datetime, none_type): [optional]  # noqa: E501
+            auto_ingested_at (datetime, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -182,8 +182,8 @@ class ImportedPodcast(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.item_url = item_url
+        self.override_album = override_album
         self.auto_ingest = auto_ingest
-        self.album_override = album_override
         self.podcast = podcast
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -205,11 +205,11 @@ class ImportedPodcast(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, auto_ingest, album_override, podcast, *args, **kwargs):  # noqa: E501
+    def __init__(self, override_album, auto_ingest, podcast, *args, **kwargs):  # noqa: E501
         """ImportedPodcast - a model defined in OpenAPI
 
+            override_album (bool):
             auto_ingest (bool):
-            album_override (bool):
             podcast (str):
 
         Keyword Args:
@@ -243,7 +243,7 @@ class ImportedPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            auto_ingest_timestamp (datetime, none_type): [optional]  # noqa: E501
+            auto_ingested_at (datetime, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -273,8 +273,8 @@ class ImportedPodcast(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.override_album = override_album
         self.auto_ingest = auto_ingest
-        self.album_override = album_override
         self.podcast = podcast
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

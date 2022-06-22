@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **str** |  | [optional] [readonly] 
+**override_album** | **bool** |  | [optional] 
 **auto_ingest** | **bool** |  | [optional] 
-**auto_ingest_timestamp** | **datetime, none_type** |  | [optional] 
-**album_override** | **bool** |  | [optional] 
+**auto_ingested_at** | **datetime, none_type** |  | [optional] 
 **podcast** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

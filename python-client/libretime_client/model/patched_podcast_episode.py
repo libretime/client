@@ -91,13 +91,13 @@ class PatchedPodcastEpisode(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
-            'publication_date': (datetime,),  # noqa: E501
+            'published_at': (datetime,),  # noqa: E501
             'download_url': (str,),  # noqa: E501
             'episode_guid': (str,),  # noqa: E501
             'episode_title': (str,),  # noqa: E501
             'episode_description': (str,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
             'podcast': (str,),  # noqa: E501
+            'file': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -107,13 +107,13 @@ class PatchedPodcastEpisode(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
-        'publication_date': 'publication_date',  # noqa: E501
+        'published_at': 'published_at',  # noqa: E501
         'download_url': 'download_url',  # noqa: E501
         'episode_guid': 'episode_guid',  # noqa: E501
         'episode_title': 'episode_title',  # noqa: E501
         'episode_description': 'episode_description',  # noqa: E501
-        'file': 'file',  # noqa: E501
         'podcast': 'podcast',  # noqa: E501
+        'file': 'file',  # noqa: E501
     }
 
     read_only_vars = {
@@ -159,13 +159,13 @@ class PatchedPodcastEpisode(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
-            publication_date (datetime): [optional]  # noqa: E501
+            published_at (datetime): [optional]  # noqa: E501
             download_url (str): [optional]  # noqa: E501
             episode_guid (str): [optional]  # noqa: E501
             episode_title (str): [optional]  # noqa: E501
             episode_description (str): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
             podcast (str): [optional]  # noqa: E501
+            file (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,13 +252,13 @@ class PatchedPodcastEpisode(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
-            publication_date (datetime): [optional]  # noqa: E501
+            published_at (datetime): [optional]  # noqa: E501
             download_url (str): [optional]  # noqa: E501
             episode_guid (str): [optional]  # noqa: E501
             episode_title (str): [optional]  # noqa: E501
             episode_description (str): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
             podcast (str): [optional]  # noqa: E501
+            file (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

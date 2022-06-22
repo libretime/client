@@ -60,13 +60,13 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'publication_date' => '\DateTime',
+        'published_at' => '\DateTime',
         'download_url' => 'string',
         'episode_guid' => 'string',
         'episode_title' => 'string',
         'episode_description' => 'string',
-        'file' => 'string',
-        'podcast' => 'string'
+        'podcast' => 'string',
+        'file' => 'string'
     ];
 
     /**
@@ -78,13 +78,13 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
-        'publication_date' => 'date-time',
+        'published_at' => 'date-time',
         'download_url' => null,
         'episode_guid' => null,
         'episode_title' => null,
         'episode_description' => null,
-        'file' => 'uri',
-        'podcast' => 'uri'
+        'podcast' => 'uri',
+        'file' => 'uri'
     ];
 
     /**
@@ -115,13 +115,13 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
-        'publication_date' => 'publication_date',
+        'published_at' => 'published_at',
         'download_url' => 'download_url',
         'episode_guid' => 'episode_guid',
         'episode_title' => 'episode_title',
         'episode_description' => 'episode_description',
-        'file' => 'file',
-        'podcast' => 'podcast'
+        'podcast' => 'podcast',
+        'file' => 'file'
     ];
 
     /**
@@ -131,13 +131,13 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
-        'publication_date' => 'setPublicationDate',
+        'published_at' => 'setPublishedAt',
         'download_url' => 'setDownloadUrl',
         'episode_guid' => 'setEpisodeGuid',
         'episode_title' => 'setEpisodeTitle',
         'episode_description' => 'setEpisodeDescription',
-        'file' => 'setFile',
-        'podcast' => 'setPodcast'
+        'podcast' => 'setPodcast',
+        'file' => 'setFile'
     ];
 
     /**
@@ -147,13 +147,13 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
-        'publication_date' => 'getPublicationDate',
+        'published_at' => 'getPublishedAt',
         'download_url' => 'getDownloadUrl',
         'episode_guid' => 'getEpisodeGuid',
         'episode_title' => 'getEpisodeTitle',
         'episode_description' => 'getEpisodeDescription',
-        'file' => 'getFile',
-        'podcast' => 'getPodcast'
+        'podcast' => 'getPodcast',
+        'file' => 'getFile'
     ];
 
     /**
@@ -214,13 +214,13 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
-        $this->container['publication_date'] = $data['publication_date'] ?? null;
+        $this->container['published_at'] = $data['published_at'] ?? null;
         $this->container['download_url'] = $data['download_url'] ?? null;
         $this->container['episode_guid'] = $data['episode_guid'] ?? null;
         $this->container['episode_title'] = $data['episode_title'] ?? null;
         $this->container['episode_description'] = $data['episode_description'] ?? null;
-        $this->container['file'] = $data['file'] ?? null;
         $this->container['podcast'] = $data['podcast'] ?? null;
+        $this->container['file'] = $data['file'] ?? null;
     }
 
     /**
@@ -235,8 +235,8 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
-        if ($this->container['publication_date'] === null) {
-            $invalidProperties[] = "'publication_date' can't be null";
+        if ($this->container['published_at'] === null) {
+            $invalidProperties[] = "'published_at' can't be null";
         }
         if ($this->container['download_url'] === null) {
             $invalidProperties[] = "'download_url' can't be null";
@@ -305,25 +305,25 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets publication_date
+     * Gets published_at
      *
      * @return \DateTime
      */
-    public function getPublicationDate()
+    public function getPublishedAt()
     {
-        return $this->container['publication_date'];
+        return $this->container['published_at'];
     }
 
     /**
-     * Sets publication_date
+     * Sets published_at
      *
-     * @param \DateTime $publication_date publication_date
+     * @param \DateTime $published_at published_at
      *
      * @return self
      */
-    public function setPublicationDate($publication_date)
+    public function setPublishedAt($published_at)
     {
-        $this->container['publication_date'] = $publication_date;
+        $this->container['published_at'] = $published_at;
 
         return $this;
     }
@@ -437,30 +437,6 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets file
-     *
-     * @return string|null
-     */
-    public function getFile()
-    {
-        return $this->container['file'];
-    }
-
-    /**
-     * Sets file
-     *
-     * @param string|null $file file
-     *
-     * @return self
-     */
-    public function setFile($file)
-    {
-        $this->container['file'] = $file;
-
-        return $this;
-    }
-
-    /**
      * Gets podcast
      *
      * @return string
@@ -480,6 +456,30 @@ class PodcastEpisode implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setPodcast($podcast)
     {
         $this->container['podcast'] = $podcast;
+
+        return $this;
+    }
+
+    /**
+     * Gets file
+     *
+     * @return string|null
+     */
+    public function getFile()
+    {
+        return $this->container['file'];
+    }
+
+    /**
+     * Sets file
+     *
+     * @param string|null $file file
+     *
+     * @return self
+     */
+    public function setFile($file)
+    {
+        $this->container['file'] = $file;
 
         return $this;
     }

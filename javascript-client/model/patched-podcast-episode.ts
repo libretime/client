@@ -31,7 +31,7 @@ export interface PatchedPodcastEpisode {
      * @type {string}
      * @memberof PatchedPodcastEpisode
      */
-    'publication_date'?: string;
+    'published_at'?: string;
     /**
      * 
      * @type {string}
@@ -61,12 +61,12 @@ export interface PatchedPodcastEpisode {
      * @type {string}
      * @memberof PatchedPodcastEpisode
      */
-    'file'?: string | null;
+    'podcast'?: string;
     /**
      * 
      * @type {string}
      * @memberof PatchedPodcastEpisode
      */
-    'podcast'?: string;
+    'file'?: string | null;
 }
 

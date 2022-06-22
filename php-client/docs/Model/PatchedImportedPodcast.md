@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [optional] [readonly]
+**override_album** | **bool** |  | [optional]
 **auto_ingest** | **bool** |  | [optional]
-**auto_ingest_timestamp** | **\DateTime** |  | [optional]
-**album_override** | **bool** |  | [optional]
+**auto_ingested_at** | **\DateTime** |  | [optional]
 **podcast** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

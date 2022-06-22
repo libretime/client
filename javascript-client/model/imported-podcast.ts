@@ -31,19 +31,19 @@ export interface ImportedPodcast {
      * @type {boolean}
      * @memberof ImportedPodcast
      */
+    'override_album': boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ImportedPodcast
+     */
     'auto_ingest': boolean;
     /**
      * 
      * @type {string}
      * @memberof ImportedPodcast
      */
-    'auto_ingest_timestamp'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ImportedPodcast
-     */
-    'album_override': boolean;
+    'auto_ingested_at'?: string | null;
     /**
      * 
      * @type {string}

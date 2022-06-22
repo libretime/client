@@ -91,7 +91,7 @@ class PodcastEpisode(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
-            'publication_date': (datetime,),  # noqa: E501
+            'published_at': (datetime,),  # noqa: E501
             'download_url': (str,),  # noqa: E501
             'episode_guid': (str,),  # noqa: E501
             'episode_title': (str,),  # noqa: E501
@@ -107,7 +107,7 @@ class PodcastEpisode(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
-        'publication_date': 'publication_date',  # noqa: E501
+        'published_at': 'published_at',  # noqa: E501
         'download_url': 'download_url',  # noqa: E501
         'episode_guid': 'episode_guid',  # noqa: E501
         'episode_title': 'episode_title',  # noqa: E501
@@ -124,12 +124,12 @@ class PodcastEpisode(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, publication_date, download_url, episode_guid, episode_title, episode_description, podcast, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, published_at, download_url, episode_guid, episode_title, episode_description, podcast, *args, **kwargs):  # noqa: E501
         """PodcastEpisode - a model defined in OpenAPI
 
         Args:
             item_url (str):
-            publication_date (datetime):
+            published_at (datetime):
             download_url (str):
             episode_guid (str):
             episode_title (str):
@@ -200,7 +200,7 @@ class PodcastEpisode(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.item_url = item_url
-        self.publication_date = publication_date
+        self.published_at = published_at
         self.download_url = download_url
         self.episode_guid = episode_guid
         self.episode_title = episode_title
@@ -226,10 +226,10 @@ class PodcastEpisode(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, publication_date, download_url, episode_guid, episode_title, episode_description, podcast, *args, **kwargs):  # noqa: E501
+    def __init__(self, published_at, download_url, episode_guid, episode_title, episode_description, podcast, *args, **kwargs):  # noqa: E501
         """PodcastEpisode - a model defined in OpenAPI
 
-            publication_date (datetime):
+            published_at (datetime):
             download_url (str):
             episode_guid (str):
             episode_title (str):
@@ -297,7 +297,7 @@ class PodcastEpisode(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.publication_date = publication_date
+        self.published_at = published_at
         self.download_url = download_url
         self.episode_guid = episode_guid
         self.episode_title = episode_title

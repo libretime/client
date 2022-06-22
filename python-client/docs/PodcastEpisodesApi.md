@@ -56,13 +56,13 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = podcast_episodes_api.PodcastEpisodesApi(api_client)
     podcast_episode = PodcastEpisode(
-        publication_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        published_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         download_url="download_url_example",
         episode_guid="episode_guid_example",
         episode_title="episode_title_example",
         episode_description="episode_description_example",
-        file="file_example",
         podcast="podcast_example",
+        file="file_example",
     ) # PodcastEpisode | 
 
     # example passing only required values which don't have defaults set
@@ -306,13 +306,13 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = podcast_episodes_api.PodcastEpisodesApi(api_client)
     id = 1 # int | A unique integer value identifying this podcast episode.
     patched_podcast_episode = PatchedPodcastEpisode(
-        publication_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        published_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         download_url="download_url_example",
         episode_guid="episode_guid_example",
         episode_title="episode_title_example",
         episode_description="episode_description_example",
-        file="file_example",
         podcast="podcast_example",
+        file="file_example",
     ) # PatchedPodcastEpisode |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -488,13 +488,13 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = podcast_episodes_api.PodcastEpisodesApi(api_client)
     id = 1 # int | A unique integer value identifying this podcast episode.
     podcast_episode = PodcastEpisode(
-        publication_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        published_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         download_url="download_url_example",
         episode_guid="episode_guid_example",
         episode_title="episode_title_example",
         episode_description="episode_description_example",
-        file="file_example",
         podcast="podcast_example",
+        file="file_example",
     ) # PodcastEpisode | 
 
     # example passing only required values which don't have defaults set

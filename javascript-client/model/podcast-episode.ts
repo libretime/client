@@ -31,7 +31,7 @@ export interface PodcastEpisode {
      * @type {string}
      * @memberof PodcastEpisode
      */
-    'publication_date': string;
+    'published_at': string;
     /**
      * 
      * @type {string}
@@ -61,12 +61,12 @@ export interface PodcastEpisode {
      * @type {string}
      * @memberof PodcastEpisode
      */
-    'file'?: string | null;
+    'podcast': string;
     /**
      * 
      * @type {string}
      * @memberof PodcastEpisode
      */
-    'podcast': string;
+    'file'?: string | null;
 }
 

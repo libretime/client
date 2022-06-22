@@ -60,9 +60,9 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
+        'override_album' => 'bool',
         'auto_ingest' => 'bool',
-        'auto_ingest_timestamp' => '\DateTime',
-        'album_override' => 'bool',
+        'auto_ingested_at' => '\DateTime',
         'podcast' => 'string'
     ];
 
@@ -75,9 +75,9 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
+        'override_album' => null,
         'auto_ingest' => null,
-        'auto_ingest_timestamp' => 'date-time',
-        'album_override' => null,
+        'auto_ingested_at' => 'date-time',
         'podcast' => 'uri'
     ];
 
@@ -109,9 +109,9 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
+        'override_album' => 'override_album',
         'auto_ingest' => 'auto_ingest',
-        'auto_ingest_timestamp' => 'auto_ingest_timestamp',
-        'album_override' => 'album_override',
+        'auto_ingested_at' => 'auto_ingested_at',
         'podcast' => 'podcast'
     ];
 
@@ -122,9 +122,9 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
+        'override_album' => 'setOverrideAlbum',
         'auto_ingest' => 'setAutoIngest',
-        'auto_ingest_timestamp' => 'setAutoIngestTimestamp',
-        'album_override' => 'setAlbumOverride',
+        'auto_ingested_at' => 'setAutoIngestedAt',
         'podcast' => 'setPodcast'
     ];
 
@@ -135,9 +135,9 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
+        'override_album' => 'getOverrideAlbum',
         'auto_ingest' => 'getAutoIngest',
-        'auto_ingest_timestamp' => 'getAutoIngestTimestamp',
-        'album_override' => 'getAlbumOverride',
+        'auto_ingested_at' => 'getAutoIngestedAt',
         'podcast' => 'getPodcast'
     ];
 
@@ -199,9 +199,9 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['override_album'] = $data['override_album'] ?? null;
         $this->container['auto_ingest'] = $data['auto_ingest'] ?? null;
-        $this->container['auto_ingest_timestamp'] = $data['auto_ingest_timestamp'] ?? null;
-        $this->container['album_override'] = $data['album_override'] ?? null;
+        $this->container['auto_ingested_at'] = $data['auto_ingested_at'] ?? null;
         $this->container['podcast'] = $data['podcast'] ?? null;
     }
 
@@ -254,6 +254,30 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets override_album
+     *
+     * @return bool|null
+     */
+    public function getOverrideAlbum()
+    {
+        return $this->container['override_album'];
+    }
+
+    /**
+     * Sets override_album
+     *
+     * @param bool|null $override_album override_album
+     *
+     * @return self
+     */
+    public function setOverrideAlbum($override_album)
+    {
+        $this->container['override_album'] = $override_album;
+
+        return $this;
+    }
+
+    /**
      * Gets auto_ingest
      *
      * @return bool|null
@@ -278,49 +302,25 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets auto_ingest_timestamp
+     * Gets auto_ingested_at
      *
      * @return \DateTime|null
      */
-    public function getAutoIngestTimestamp()
+    public function getAutoIngestedAt()
     {
-        return $this->container['auto_ingest_timestamp'];
+        return $this->container['auto_ingested_at'];
     }
 
     /**
-     * Sets auto_ingest_timestamp
+     * Sets auto_ingested_at
      *
-     * @param \DateTime|null $auto_ingest_timestamp auto_ingest_timestamp
+     * @param \DateTime|null $auto_ingested_at auto_ingested_at
      *
      * @return self
      */
-    public function setAutoIngestTimestamp($auto_ingest_timestamp)
+    public function setAutoIngestedAt($auto_ingested_at)
     {
-        $this->container['auto_ingest_timestamp'] = $auto_ingest_timestamp;
-
-        return $this;
-    }
-
-    /**
-     * Gets album_override
-     *
-     * @return bool|null
-     */
-    public function getAlbumOverride()
-    {
-        return $this->container['album_override'];
-    }
-
-    /**
-     * Sets album_override
-     *
-     * @param bool|null $album_override album_override
-     *
-     * @return self
-     */
-    public function setAlbumOverride($album_override)
-    {
-        $this->container['album_override'] = $album_override;
+        $this->container['auto_ingested_at'] = $auto_ingested_at;
 
         return $this;
     }

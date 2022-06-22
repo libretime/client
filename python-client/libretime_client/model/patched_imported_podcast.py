@@ -82,9 +82,9 @@ class PatchedImportedPodcast(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
+            'override_album': (bool,),  # noqa: E501
             'auto_ingest': (bool,),  # noqa: E501
-            'auto_ingest_timestamp': (datetime, none_type,),  # noqa: E501
-            'album_override': (bool,),  # noqa: E501
+            'auto_ingested_at': (datetime, none_type,),  # noqa: E501
             'podcast': (str,),  # noqa: E501
         }
 
@@ -95,9 +95,9 @@ class PatchedImportedPodcast(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
+        'override_album': 'override_album',  # noqa: E501
         'auto_ingest': 'auto_ingest',  # noqa: E501
-        'auto_ingest_timestamp': 'auto_ingest_timestamp',  # noqa: E501
-        'album_override': 'album_override',  # noqa: E501
+        'auto_ingested_at': 'auto_ingested_at',  # noqa: E501
         'podcast': 'podcast',  # noqa: E501
     }
 
@@ -144,9 +144,9 @@ class PatchedImportedPodcast(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
+            override_album (bool): [optional]  # noqa: E501
             auto_ingest (bool): [optional]  # noqa: E501
-            auto_ingest_timestamp (datetime, none_type): [optional]  # noqa: E501
-            album_override (bool): [optional]  # noqa: E501
+            auto_ingested_at (datetime, none_type): [optional]  # noqa: E501
             podcast (str): [optional]  # noqa: E501
         """
 
@@ -234,9 +234,9 @@ class PatchedImportedPodcast(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
+            override_album (bool): [optional]  # noqa: E501
             auto_ingest (bool): [optional]  # noqa: E501
-            auto_ingest_timestamp (datetime, none_type): [optional]  # noqa: E501
-            album_override (bool): [optional]  # noqa: E501
+            auto_ingested_at (datetime, none_type): [optional]  # noqa: E501
             podcast (str): [optional]  # noqa: E501
         """
 

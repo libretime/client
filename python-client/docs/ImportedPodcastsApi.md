@@ -56,9 +56,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = imported_podcasts_api.ImportedPodcastsApi(api_client)
     imported_podcast = ImportedPodcast(
+        override_album=True,
         auto_ingest=True,
-        auto_ingest_timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        album_override=True,
+        auto_ingested_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         podcast="podcast_example",
     ) # ImportedPodcast | 
 
@@ -303,9 +303,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = imported_podcasts_api.ImportedPodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this imported podcast.
     patched_imported_podcast = PatchedImportedPodcast(
+        override_album=True,
         auto_ingest=True,
-        auto_ingest_timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        album_override=True,
+        auto_ingested_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         podcast="podcast_example",
     ) # PatchedImportedPodcast |  (optional)
 
@@ -482,9 +482,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = imported_podcasts_api.ImportedPodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this imported podcast.
     imported_podcast = ImportedPodcast(
+        override_album=True,
         auto_ingest=True,
-        auto_ingest_timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        album_override=True,
+        auto_ingested_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         podcast="podcast_example",
     ) # ImportedPodcast | 
 

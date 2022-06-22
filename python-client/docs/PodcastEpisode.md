@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **str** |  | [readonly] 
-**publication_date** | **datetime** |  | 
+**published_at** | **datetime** |  | 
 **download_url** | **str** |  | 
 **episode_guid** | **str** |  | 
 **episode_title** | **str** |  | 
