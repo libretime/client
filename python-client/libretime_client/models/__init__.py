@@ -38,7 +38,6 @@ from libretime_client.model.patched_podcast_episode import PatchedPodcastEpisode
 from libretime_client.model.patched_preference import PatchedPreference
 from libretime_client.model.patched_schedule import PatchedSchedule
 from libretime_client.model.patched_service_register import PatchedServiceRegister
-from libretime_client.model.patched_session import PatchedSession
 from libretime_client.model.patched_show import PatchedShow
 from libretime_client.model.patched_show_days import PatchedShowDays
 from libretime_client.model.patched_show_host import PatchedShowHost
@@ -68,7 +67,6 @@ from libretime_client.model.preference import Preference
 from libretime_client.model.role_enum import RoleEnum
 from libretime_client.model.schedule import Schedule
 from libretime_client.model.service_register import ServiceRegister
-from libretime_client.model.session import Session
 from libretime_client.model.show import Show
 from libretime_client.model.show_days import ShowDays
 from libretime_client.model.show_host import ShowHost

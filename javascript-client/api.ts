@@ -35,7 +35,6 @@ export * from './api/preferences-api';
 export * from './api/schedule-api';
 export * from './api/schema-api';
 export * from './api/service-registers-api';
-export * from './api/sessions-api';
 export * from './api/show-days-api';
 export * from './api/show-hosts-api';
 export * from './api/show-instances-api';

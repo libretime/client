@@ -223,12 +223,6 @@ Class | Method | HTTP request | Description
 *ServiceRegistersApi* | [**service_registers_partial_update**](docs/ServiceRegistersApi.md#service_registers_partial_update) | **PATCH** /api/v2/service-registers/{name}/ | 
 *ServiceRegistersApi* | [**service_registers_retrieve**](docs/ServiceRegistersApi.md#service_registers_retrieve) | **GET** /api/v2/service-registers/{name}/ | 
 *ServiceRegistersApi* | [**service_registers_update**](docs/ServiceRegistersApi.md#service_registers_update) | **PUT** /api/v2/service-registers/{name}/ | 
-*SessionsApi* | [**sessions_create**](docs/SessionsApi.md#sessions_create) | **POST** /api/v2/sessions/ | 
-*SessionsApi* | [**sessions_destroy**](docs/SessionsApi.md#sessions_destroy) | **DELETE** /api/v2/sessions/{sessid}/ | 
-*SessionsApi* | [**sessions_list**](docs/SessionsApi.md#sessions_list) | **GET** /api/v2/sessions/ | 
-*SessionsApi* | [**sessions_partial_update**](docs/SessionsApi.md#sessions_partial_update) | **PATCH** /api/v2/sessions/{sessid}/ | 
-*SessionsApi* | [**sessions_retrieve**](docs/SessionsApi.md#sessions_retrieve) | **GET** /api/v2/sessions/{sessid}/ | 
-*SessionsApi* | [**sessions_update**](docs/SessionsApi.md#sessions_update) | **PUT** /api/v2/sessions/{sessid}/ | 
 *ShowDaysApi* | [**show_days_create**](docs/ShowDaysApi.md#show_days_create) | **POST** /api/v2/show-days/ | 
 *ShowDaysApi* | [**show_days_destroy**](docs/ShowDaysApi.md#show_days_destroy) | **DELETE** /api/v2/show-days/{id}/ | 
 *ShowDaysApi* | [**show_days_list**](docs/ShowDaysApi.md#show_days_list) | **GET** /api/v2/show-days/ | 
@@ -365,7 +359,6 @@ Class | Method | HTTP request | Description
  - [PatchedPreference](docs/PatchedPreference.md)
  - [PatchedSchedule](docs/PatchedSchedule.md)
  - [PatchedServiceRegister](docs/PatchedServiceRegister.md)
- - [PatchedSession](docs/PatchedSession.md)
  - [PatchedShow](docs/PatchedShow.md)
  - [PatchedShowDays](docs/PatchedShowDays.md)
  - [PatchedShowHost](docs/PatchedShowHost.md)
@@ -395,7 +388,6 @@ Class | Method | HTTP request | Description
  - [RoleEnum](docs/RoleEnum.md)
  - [Schedule](docs/Schedule.md)
  - [ServiceRegister](docs/ServiceRegister.md)
- - [Session](docs/Session.md)
  - [Show](docs/Show.md)
  - [ShowDays](docs/ShowDays.md)
  - [ShowHost](docs/ShowHost.md)

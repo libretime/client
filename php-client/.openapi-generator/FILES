@@ -24,7 +24,6 @@ docs/Api/PreferencesApi.md
 docs/Api/ScheduleApi.md
 docs/Api/SchemaApi.md
 docs/Api/ServiceRegistersApi.md
-docs/Api/SessionsApi.md
 docs/Api/ShowDaysApi.md
 docs/Api/ShowHostsApi.md
 docs/Api/ShowInstancesApi.md
@@ -72,7 +71,6 @@ docs/Model/PatchedPodcastEpisode.md
 docs/Model/PatchedPreference.md
 docs/Model/PatchedSchedule.md
 docs/Model/PatchedServiceRegister.md
-docs/Model/PatchedSession.md
 docs/Model/PatchedShow.md
 docs/Model/PatchedShowDays.md
 docs/Model/PatchedShowHost.md
@@ -102,7 +100,6 @@ docs/Model/Preference.md
 docs/Model/RoleEnum.md
 docs/Model/Schedule.md
 docs/Model/ServiceRegister.md
-docs/Model/Session.md
 docs/Model/Show.md
 docs/Model/ShowDays.md
 docs/Model/ShowHost.md
@@ -142,7 +139,6 @@ lib/Api/PreferencesApi.php
 lib/Api/ScheduleApi.php
 lib/Api/SchemaApi.php
 lib/Api/ServiceRegistersApi.php
-lib/Api/SessionsApi.php
 lib/Api/ShowDaysApi.php
 lib/Api/ShowHostsApi.php
 lib/Api/ShowInstancesApi.php
@@ -194,7 +190,6 @@ lib/Model/PatchedPodcastEpisode.php
 lib/Model/PatchedPreference.php
 lib/Model/PatchedSchedule.php
 lib/Model/PatchedServiceRegister.php
-lib/Model/PatchedSession.php
 lib/Model/PatchedShow.php
 lib/Model/PatchedShowDays.php
 lib/Model/PatchedShowHost.php
@@ -224,7 +219,6 @@ lib/Model/Preference.php
 lib/Model/RoleEnum.php
 lib/Model/Schedule.php
 lib/Model/ServiceRegister.php
-lib/Model/Session.php
 lib/Model/Show.php
 lib/Model/ShowDays.php
 lib/Model/ShowHost.php
@@ -244,4 +238,3 @@ lib/Model/Webstream.php
 lib/Model/WebstreamMetadata.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/RoleEnumTest.php

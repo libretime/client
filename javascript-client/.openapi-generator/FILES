@@ -23,7 +23,6 @@ api/preferences-api.ts
 api/schedule-api.ts
 api/schema-api.ts
 api/service-registers-api.ts
-api/sessions-api.ts
 api/show-days-api.ts
 api/show-hosts-api.ts
 api/show-instances-api.ts
@@ -77,7 +76,6 @@ model/patched-podcast.ts
 model/patched-preference.ts
 model/patched-schedule.ts
 model/patched-service-register.ts
-model/patched-session.ts
 model/patched-show-days.ts
 model/patched-show-host.ts
 model/patched-show-instance.ts
@@ -107,7 +105,6 @@ model/preference.ts
 model/role-enum.ts
 model/schedule.ts
 model/service-register.ts
-model/session.ts
 model/show-days.ts
 model/show-host.ts
 model/show-instance.ts

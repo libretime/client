@@ -35,7 +35,6 @@ from libretime_client.api.preferences_api import PreferencesApi
 from libretime_client.api.schedule_api import ScheduleApi
 from libretime_client.api.schema_api import SchemaApi
 from libretime_client.api.service_registers_api import ServiceRegistersApi
-from libretime_client.api.sessions_api import SessionsApi
 from libretime_client.api.show_days_api import ShowDaysApi
 from libretime_client.api.show_hosts_api import ShowHostsApi
 from libretime_client.api.show_instances_api import ShowInstancesApi

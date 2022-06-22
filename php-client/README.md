@@ -205,12 +205,6 @@ Class | Method | HTTP request | Description
 *ServiceRegistersApi* | [**serviceRegistersPartialUpdate**](docs/Api/ServiceRegistersApi.md#serviceregisterspartialupdate) | **PATCH** /api/v2/service-registers/{name}/ | 
 *ServiceRegistersApi* | [**serviceRegistersRetrieve**](docs/Api/ServiceRegistersApi.md#serviceregistersretrieve) | **GET** /api/v2/service-registers/{name}/ | 
 *ServiceRegistersApi* | [**serviceRegistersUpdate**](docs/Api/ServiceRegistersApi.md#serviceregistersupdate) | **PUT** /api/v2/service-registers/{name}/ | 
-*SessionsApi* | [**sessionsCreate**](docs/Api/SessionsApi.md#sessionscreate) | **POST** /api/v2/sessions/ | 
-*SessionsApi* | [**sessionsDestroy**](docs/Api/SessionsApi.md#sessionsdestroy) | **DELETE** /api/v2/sessions/{sessid}/ | 
-*SessionsApi* | [**sessionsList**](docs/Api/SessionsApi.md#sessionslist) | **GET** /api/v2/sessions/ | 
-*SessionsApi* | [**sessionsPartialUpdate**](docs/Api/SessionsApi.md#sessionspartialupdate) | **PATCH** /api/v2/sessions/{sessid}/ | 
-*SessionsApi* | [**sessionsRetrieve**](docs/Api/SessionsApi.md#sessionsretrieve) | **GET** /api/v2/sessions/{sessid}/ | 
-*SessionsApi* | [**sessionsUpdate**](docs/Api/SessionsApi.md#sessionsupdate) | **PUT** /api/v2/sessions/{sessid}/ | 
 *ShowDaysApi* | [**showDaysCreate**](docs/Api/ShowDaysApi.md#showdayscreate) | **POST** /api/v2/show-days/ | 
 *ShowDaysApi* | [**showDaysDestroy**](docs/Api/ShowDaysApi.md#showdaysdestroy) | **DELETE** /api/v2/show-days/{id}/ | 
 *ShowDaysApi* | [**showDaysList**](docs/Api/ShowDaysApi.md#showdayslist) | **GET** /api/v2/show-days/ | 
@@ -346,7 +340,6 @@ Class | Method | HTTP request | Description
 - [PatchedPreference](docs/Model/PatchedPreference.md)
 - [PatchedSchedule](docs/Model/PatchedSchedule.md)
 - [PatchedServiceRegister](docs/Model/PatchedServiceRegister.md)
-- [PatchedSession](docs/Model/PatchedSession.md)
 - [PatchedShow](docs/Model/PatchedShow.md)
 - [PatchedShowDays](docs/Model/PatchedShowDays.md)
 - [PatchedShowHost](docs/Model/PatchedShowHost.md)
@@ -376,7 +369,6 @@ Class | Method | HTTP request | Description
 - [RoleEnum](docs/Model/RoleEnum.md)
 - [Schedule](docs/Model/Schedule.md)
 - [ServiceRegister](docs/Model/ServiceRegister.md)
-- [Session](docs/Model/Session.md)
 - [Show](docs/Model/Show.md)
 - [ShowDays](docs/Model/ShowDays.md)
 - [ShowHost](docs/Model/ShowHost.md)

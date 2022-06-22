@@ -40,7 +40,6 @@ docs/PatchedPodcastEpisode.md
 docs/PatchedPreference.md
 docs/PatchedSchedule.md
 docs/PatchedServiceRegister.md
-docs/PatchedSession.md
 docs/PatchedShow.md
 docs/PatchedShowDays.md
 docs/PatchedShowHost.md
@@ -82,8 +81,6 @@ docs/ScheduleApi.md
 docs/SchemaApi.md
 docs/ServiceRegister.md
 docs/ServiceRegistersApi.md
-docs/Session.md
-docs/SessionsApi.md
 docs/Show.md
 docs/ShowDays.md
 docs/ShowDaysApi.md
@@ -143,7 +140,6 @@ libretime_client/api/preferences_api.py
 libretime_client/api/schedule_api.py
 libretime_client/api/schema_api.py
 libretime_client/api/service_registers_api.py
-libretime_client/api/sessions_api.py
 libretime_client/api/show_days_api.py
 libretime_client/api/show_hosts_api.py
 libretime_client/api/show_instances_api.py
@@ -196,7 +192,6 @@ libretime_client/model/patched_podcast_episode.py
 libretime_client/model/patched_preference.py
 libretime_client/model/patched_schedule.py
 libretime_client/model/patched_service_register.py
-libretime_client/model/patched_session.py
 libretime_client/model/patched_show.py
 libretime_client/model/patched_show_days.py
 libretime_client/model/patched_show_host.py
@@ -226,7 +221,6 @@ libretime_client/model/preference.py
 libretime_client/model/role_enum.py
 libretime_client/model/schedule.py
 libretime_client/model/service_register.py
-libretime_client/model/session.py
 libretime_client/model/show.py
 libretime_client/model/show_days.py
 libretime_client/model/show_host.py
@@ -252,5 +246,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_role_enum.py
 tox.ini
