@@ -5,11 +5,11 @@ All URIs are relative to http://localhost.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**countriesCreate()**](CountriesApi.md#countriesCreate) | **POST** /api/v2/countries/ | 
-[**countriesDestroy()**](CountriesApi.md#countriesDestroy) | **DELETE** /api/v2/countries/{isocode}/ | 
+[**countriesDestroy()**](CountriesApi.md#countriesDestroy) | **DELETE** /api/v2/countries/{iso_code}/ | 
 [**countriesList()**](CountriesApi.md#countriesList) | **GET** /api/v2/countries/ | 
-[**countriesPartialUpdate()**](CountriesApi.md#countriesPartialUpdate) | **PATCH** /api/v2/countries/{isocode}/ | 
-[**countriesRetrieve()**](CountriesApi.md#countriesRetrieve) | **GET** /api/v2/countries/{isocode}/ | 
-[**countriesUpdate()**](CountriesApi.md#countriesUpdate) | **PUT** /api/v2/countries/{isocode}/ | 
+[**countriesPartialUpdate()**](CountriesApi.md#countriesPartialUpdate) | **PATCH** /api/v2/countries/{iso_code}/ | 
+[**countriesRetrieve()**](CountriesApi.md#countriesRetrieve) | **GET** /api/v2/countries/{iso_code}/ | 
+[**countriesUpdate()**](CountriesApi.md#countriesUpdate) | **PUT** /api/v2/countries/{iso_code}/ | 
 
 
 ## `countriesCreate()`
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 ## `countriesDestroy()`
 
 ```php
-countriesDestroy($isocode)
+countriesDestroy($iso_code)
 ```
 
 
@@ -109,10 +109,10 @@ $apiInstance = new Libretime\Client\Api\CountriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$isocode = 'isocode_example'; // string | A unique value identifying this country.
+$iso_code = 'iso_code_example'; // string | A unique value identifying this country.
 
 try {
-    $apiInstance->countriesDestroy($isocode);
+    $apiInstance->countriesDestroy($iso_code);
 } catch (Exception $e) {
     echo 'Exception when calling CountriesApi->countriesDestroy: ', $e->getMessage(), PHP_EOL;
 }
@@ -122,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **string**| A unique value identifying this country. |
+ **iso_code** | **string**| A unique value identifying this country. |
 
 ### Return type
 
@@ -206,7 +206,7 @@ This endpoint does not need any parameter.
 ## `countriesPartialUpdate()`
 
 ```php
-countriesPartialUpdate($isocode, $patched_country): \Libretime\Client\Model\Country
+countriesPartialUpdate($iso_code, $patched_country): \Libretime\Client\Model\Country
 ```
 
 
@@ -235,11 +235,11 @@ $apiInstance = new Libretime\Client\Api\CountriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$isocode = 'isocode_example'; // string | A unique value identifying this country.
+$iso_code = 'iso_code_example'; // string | A unique value identifying this country.
 $patched_country = new \Libretime\Client\Model\PatchedCountry(); // \Libretime\Client\Model\PatchedCountry
 
 try {
-    $result = $apiInstance->countriesPartialUpdate($isocode, $patched_country);
+    $result = $apiInstance->countriesPartialUpdate($iso_code, $patched_country);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CountriesApi->countriesPartialUpdate: ', $e->getMessage(), PHP_EOL;
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **string**| A unique value identifying this country. |
+ **iso_code** | **string**| A unique value identifying this country. |
  **patched_country** | [**\Libretime\Client\Model\PatchedCountry**](../Model/PatchedCountry.md)|  | [optional]
 
 ### Return type
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `countriesRetrieve()`
 
 ```php
-countriesRetrieve($isocode): \Libretime\Client\Model\Country
+countriesRetrieve($iso_code): \Libretime\Client\Model\Country
 ```
 
 
@@ -302,10 +302,10 @@ $apiInstance = new Libretime\Client\Api\CountriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$isocode = 'isocode_example'; // string | A unique value identifying this country.
+$iso_code = 'iso_code_example'; // string | A unique value identifying this country.
 
 try {
-    $result = $apiInstance->countriesRetrieve($isocode);
+    $result = $apiInstance->countriesRetrieve($iso_code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CountriesApi->countriesRetrieve: ', $e->getMessage(), PHP_EOL;
@@ -316,7 +316,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **string**| A unique value identifying this country. |
+ **iso_code** | **string**| A unique value identifying this country. |
 
 ### Return type
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `countriesUpdate()`
 
 ```php
-countriesUpdate($isocode, $country): \Libretime\Client\Model\Country
+countriesUpdate($iso_code, $country): \Libretime\Client\Model\Country
 ```
 
 
@@ -367,11 +367,11 @@ $apiInstance = new Libretime\Client\Api\CountriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$isocode = 'isocode_example'; // string | A unique value identifying this country.
+$iso_code = 'iso_code_example'; // string | A unique value identifying this country.
 $country = new \Libretime\Client\Model\Country(); // \Libretime\Client\Model\Country
 
 try {
-    $result = $apiInstance->countriesUpdate($isocode, $country);
+    $result = $apiInstance->countriesUpdate($iso_code, $country);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CountriesApi->countriesUpdate: ', $e->getMessage(), PHP_EOL;
@@ -382,7 +382,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **string**| A unique value identifying this country. |
+ **iso_code** | **string**| A unique value identifying this country. |
  **country** | [**\Libretime\Client\Model\Country**](../Model/Country.md)|  |
 
 ### Return type

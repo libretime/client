@@ -397,29 +397,29 @@ class CountriesApi
     /**
      * Operation countriesDestroy
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function countriesDestroy($isocode)
+    public function countriesDestroy($iso_code)
     {
-        $this->countriesDestroyWithHttpInfo($isocode);
+        $this->countriesDestroyWithHttpInfo($iso_code);
     }
 
     /**
      * Operation countriesDestroyWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function countriesDestroyWithHttpInfo($isocode)
+    public function countriesDestroyWithHttpInfo($iso_code)
     {
-        $request = $this->countriesDestroyRequest($isocode);
+        $request = $this->countriesDestroyRequest($iso_code);
 
         try {
             $options = $this->createHttpClientOption();
@@ -468,14 +468,14 @@ class CountriesApi
     /**
      * Operation countriesDestroyAsync
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesDestroyAsync($isocode)
+    public function countriesDestroyAsync($iso_code)
     {
-        return $this->countriesDestroyAsyncWithHttpInfo($isocode)
+        return $this->countriesDestroyAsyncWithHttpInfo($iso_code)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,15 +486,15 @@ class CountriesApi
     /**
      * Operation countriesDestroyAsyncWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesDestroyAsyncWithHttpInfo($isocode)
+    public function countriesDestroyAsyncWithHttpInfo($iso_code)
     {
         $returnType = '';
-        $request = $this->countriesDestroyRequest($isocode);
+        $request = $this->countriesDestroyRequest($iso_code);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -522,21 +522,21 @@ class CountriesApi
     /**
      * Create request for operation 'countriesDestroy'
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function countriesDestroyRequest($isocode)
+    public function countriesDestroyRequest($iso_code)
     {
-        // verify the required parameter 'isocode' is set
-        if ($isocode === null || (is_array($isocode) && count($isocode) === 0)) {
+        // verify the required parameter 'iso_code' is set
+        if ($iso_code === null || (is_array($iso_code) && count($iso_code) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $isocode when calling countriesDestroy'
+                'Missing the required parameter $iso_code when calling countriesDestroy'
             );
         }
 
-        $resourcePath = '/api/v2/countries/{isocode}/';
+        $resourcePath = '/api/v2/countries/{iso_code}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -546,10 +546,10 @@ class CountriesApi
 
 
         // path params
-        if ($isocode !== null) {
+        if ($iso_code !== null) {
             $resourcePath = str_replace(
-                '{' . 'isocode' . '}',
-                ObjectSerializer::toPathValue($isocode),
+                '{' . 'iso_code' . '}',
+                ObjectSerializer::toPathValue($iso_code),
                 $resourcePath
             );
         }
@@ -886,32 +886,32 @@ class CountriesApi
     /**
      * Operation countriesPartialUpdate
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\PatchedCountry $patched_country patched_country (optional)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\Country
      */
-    public function countriesPartialUpdate($isocode, $patched_country = null)
+    public function countriesPartialUpdate($iso_code, $patched_country = null)
     {
-        list($response) = $this->countriesPartialUpdateWithHttpInfo($isocode, $patched_country);
+        list($response) = $this->countriesPartialUpdateWithHttpInfo($iso_code, $patched_country);
         return $response;
     }
 
     /**
      * Operation countriesPartialUpdateWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\PatchedCountry $patched_country (optional)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
      */
-    public function countriesPartialUpdateWithHttpInfo($isocode, $patched_country = null)
+    public function countriesPartialUpdateWithHttpInfo($iso_code, $patched_country = null)
     {
-        $request = $this->countriesPartialUpdateRequest($isocode, $patched_country);
+        $request = $this->countriesPartialUpdateRequest($iso_code, $patched_country);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1000,15 +1000,15 @@ class CountriesApi
     /**
      * Operation countriesPartialUpdateAsync
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\PatchedCountry $patched_country (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesPartialUpdateAsync($isocode, $patched_country = null)
+    public function countriesPartialUpdateAsync($iso_code, $patched_country = null)
     {
-        return $this->countriesPartialUpdateAsyncWithHttpInfo($isocode, $patched_country)
+        return $this->countriesPartialUpdateAsyncWithHttpInfo($iso_code, $patched_country)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1019,16 +1019,16 @@ class CountriesApi
     /**
      * Operation countriesPartialUpdateAsyncWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\PatchedCountry $patched_country (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesPartialUpdateAsyncWithHttpInfo($isocode, $patched_country = null)
+    public function countriesPartialUpdateAsyncWithHttpInfo($iso_code, $patched_country = null)
     {
         $returnType = '\Libretime\Client\Model\Country';
-        $request = $this->countriesPartialUpdateRequest($isocode, $patched_country);
+        $request = $this->countriesPartialUpdateRequest($iso_code, $patched_country);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1069,22 +1069,22 @@ class CountriesApi
     /**
      * Create request for operation 'countriesPartialUpdate'
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\PatchedCountry $patched_country (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function countriesPartialUpdateRequest($isocode, $patched_country = null)
+    public function countriesPartialUpdateRequest($iso_code, $patched_country = null)
     {
-        // verify the required parameter 'isocode' is set
-        if ($isocode === null || (is_array($isocode) && count($isocode) === 0)) {
+        // verify the required parameter 'iso_code' is set
+        if ($iso_code === null || (is_array($iso_code) && count($iso_code) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $isocode when calling countriesPartialUpdate'
+                'Missing the required parameter $iso_code when calling countriesPartialUpdate'
             );
         }
 
-        $resourcePath = '/api/v2/countries/{isocode}/';
+        $resourcePath = '/api/v2/countries/{iso_code}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1094,10 +1094,10 @@ class CountriesApi
 
 
         // path params
-        if ($isocode !== null) {
+        if ($iso_code !== null) {
             $resourcePath = str_replace(
-                '{' . 'isocode' . '}',
-                ObjectSerializer::toPathValue($isocode),
+                '{' . 'iso_code' . '}',
+                ObjectSerializer::toPathValue($iso_code),
                 $resourcePath
             );
         }
@@ -1178,30 +1178,30 @@ class CountriesApi
     /**
      * Operation countriesRetrieve
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\Country
      */
-    public function countriesRetrieve($isocode)
+    public function countriesRetrieve($iso_code)
     {
-        list($response) = $this->countriesRetrieveWithHttpInfo($isocode);
+        list($response) = $this->countriesRetrieveWithHttpInfo($iso_code);
         return $response;
     }
 
     /**
      * Operation countriesRetrieveWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
      */
-    public function countriesRetrieveWithHttpInfo($isocode)
+    public function countriesRetrieveWithHttpInfo($iso_code)
     {
-        $request = $this->countriesRetrieveRequest($isocode);
+        $request = $this->countriesRetrieveRequest($iso_code);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1290,14 +1290,14 @@ class CountriesApi
     /**
      * Operation countriesRetrieveAsync
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesRetrieveAsync($isocode)
+    public function countriesRetrieveAsync($iso_code)
     {
-        return $this->countriesRetrieveAsyncWithHttpInfo($isocode)
+        return $this->countriesRetrieveAsyncWithHttpInfo($iso_code)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1308,15 +1308,15 @@ class CountriesApi
     /**
      * Operation countriesRetrieveAsyncWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesRetrieveAsyncWithHttpInfo($isocode)
+    public function countriesRetrieveAsyncWithHttpInfo($iso_code)
     {
         $returnType = '\Libretime\Client\Model\Country';
-        $request = $this->countriesRetrieveRequest($isocode);
+        $request = $this->countriesRetrieveRequest($iso_code);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1357,21 +1357,21 @@ class CountriesApi
     /**
      * Create request for operation 'countriesRetrieve'
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function countriesRetrieveRequest($isocode)
+    public function countriesRetrieveRequest($iso_code)
     {
-        // verify the required parameter 'isocode' is set
-        if ($isocode === null || (is_array($isocode) && count($isocode) === 0)) {
+        // verify the required parameter 'iso_code' is set
+        if ($iso_code === null || (is_array($iso_code) && count($iso_code) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $isocode when calling countriesRetrieve'
+                'Missing the required parameter $iso_code when calling countriesRetrieve'
             );
         }
 
-        $resourcePath = '/api/v2/countries/{isocode}/';
+        $resourcePath = '/api/v2/countries/{iso_code}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1381,10 +1381,10 @@ class CountriesApi
 
 
         // path params
-        if ($isocode !== null) {
+        if ($iso_code !== null) {
             $resourcePath = str_replace(
-                '{' . 'isocode' . '}',
-                ObjectSerializer::toPathValue($isocode),
+                '{' . 'iso_code' . '}',
+                ObjectSerializer::toPathValue($iso_code),
                 $resourcePath
             );
         }
@@ -1459,32 +1459,32 @@ class CountriesApi
     /**
      * Operation countriesUpdate
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\Country $country country (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\Country
      */
-    public function countriesUpdate($isocode, $country)
+    public function countriesUpdate($iso_code, $country)
     {
-        list($response) = $this->countriesUpdateWithHttpInfo($isocode, $country);
+        list($response) = $this->countriesUpdateWithHttpInfo($iso_code, $country);
         return $response;
     }
 
     /**
      * Operation countriesUpdateWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\Country $country (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
      */
-    public function countriesUpdateWithHttpInfo($isocode, $country)
+    public function countriesUpdateWithHttpInfo($iso_code, $country)
     {
-        $request = $this->countriesUpdateRequest($isocode, $country);
+        $request = $this->countriesUpdateRequest($iso_code, $country);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1573,15 +1573,15 @@ class CountriesApi
     /**
      * Operation countriesUpdateAsync
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\Country $country (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesUpdateAsync($isocode, $country)
+    public function countriesUpdateAsync($iso_code, $country)
     {
-        return $this->countriesUpdateAsyncWithHttpInfo($isocode, $country)
+        return $this->countriesUpdateAsyncWithHttpInfo($iso_code, $country)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1592,16 +1592,16 @@ class CountriesApi
     /**
      * Operation countriesUpdateAsyncWithHttpInfo
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\Country $country (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function countriesUpdateAsyncWithHttpInfo($isocode, $country)
+    public function countriesUpdateAsyncWithHttpInfo($iso_code, $country)
     {
         $returnType = '\Libretime\Client\Model\Country';
-        $request = $this->countriesUpdateRequest($isocode, $country);
+        $request = $this->countriesUpdateRequest($iso_code, $country);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1642,18 +1642,18 @@ class CountriesApi
     /**
      * Create request for operation 'countriesUpdate'
      *
-     * @param  string $isocode A unique value identifying this country. (required)
+     * @param  string $iso_code A unique value identifying this country. (required)
      * @param  \Libretime\Client\Model\Country $country (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function countriesUpdateRequest($isocode, $country)
+    public function countriesUpdateRequest($iso_code, $country)
     {
-        // verify the required parameter 'isocode' is set
-        if ($isocode === null || (is_array($isocode) && count($isocode) === 0)) {
+        // verify the required parameter 'iso_code' is set
+        if ($iso_code === null || (is_array($iso_code) && count($iso_code) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $isocode when calling countriesUpdate'
+                'Missing the required parameter $iso_code when calling countriesUpdate'
             );
         }
         // verify the required parameter 'country' is set
@@ -1663,7 +1663,7 @@ class CountriesApi
             );
         }
 
-        $resourcePath = '/api/v2/countries/{isocode}/';
+        $resourcePath = '/api/v2/countries/{iso_code}/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1673,10 +1673,10 @@ class CountriesApi
 
 
         // path params
-        if ($isocode !== null) {
+        if ($iso_code !== null) {
             $resourcePath = str_replace(
-                '{' . 'isocode' . '}',
-                ObjectSerializer::toPathValue($isocode),
+                '{' . 'iso_code' . '}',
+                ObjectSerializer::toPathValue($iso_code),
                 $resourcePath
             );
         }

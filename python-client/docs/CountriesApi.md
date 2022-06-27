@@ -5,11 +5,11 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**countries_create**](CountriesApi.md#countries_create) | **POST** /api/v2/countries/ | 
-[**countries_destroy**](CountriesApi.md#countries_destroy) | **DELETE** /api/v2/countries/{isocode}/ | 
+[**countries_destroy**](CountriesApi.md#countries_destroy) | **DELETE** /api/v2/countries/{iso_code}/ | 
 [**countries_list**](CountriesApi.md#countries_list) | **GET** /api/v2/countries/ | 
-[**countries_partial_update**](CountriesApi.md#countries_partial_update) | **PATCH** /api/v2/countries/{isocode}/ | 
-[**countries_retrieve**](CountriesApi.md#countries_retrieve) | **GET** /api/v2/countries/{isocode}/ | 
-[**countries_update**](CountriesApi.md#countries_update) | **PUT** /api/v2/countries/{isocode}/ | 
+[**countries_partial_update**](CountriesApi.md#countries_partial_update) | **PATCH** /api/v2/countries/{iso_code}/ | 
+[**countries_retrieve**](CountriesApi.md#countries_retrieve) | **GET** /api/v2/countries/{iso_code}/ | 
+[**countries_update**](CountriesApi.md#countries_update) | **PUT** /api/v2/countries/{iso_code}/ | 
 
 
 # **countries_create**
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **countries_destroy**
-> countries_destroy(isocode)
+> countries_destroy(iso_code)
 
 
 
@@ -138,11 +138,11 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
-    isocode = "isocode_example" # str | A unique value identifying this country.
+    iso_code = "iso_code_example" # str | A unique value identifying this country.
 
     # example passing only required values which don't have defaults set
     try:
-        api_instance.countries_destroy(isocode)
+        api_instance.countries_destroy(iso_code)
     except libretime_client.ApiException as e:
         print("Exception when calling CountriesApi->countries_destroy: %s\n" % e)
 ```
@@ -152,7 +152,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **str**| A unique value identifying this country. |
+ **iso_code** | **str**| A unique value identifying this country. |
 
 ### Return type
 
@@ -255,7 +255,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **countries_partial_update**
-> Country countries_partial_update(isocode)
+> Country countries_partial_update(iso_code)
 
 
 
@@ -298,14 +298,14 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
-    isocode = "isocode_example" # str | A unique value identifying this country.
+    iso_code = "iso_code_example" # str | A unique value identifying this country.
     patched_country = PatchedCountry(
         name="name_example",
     ) # PatchedCountry |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.countries_partial_update(isocode)
+        api_response = api_instance.countries_partial_update(iso_code)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling CountriesApi->countries_partial_update: %s\n" % e)
@@ -313,7 +313,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.countries_partial_update(isocode, patched_country=patched_country)
+        api_response = api_instance.countries_partial_update(iso_code, patched_country=patched_country)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling CountriesApi->countries_partial_update: %s\n" % e)
@@ -324,7 +324,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **str**| A unique value identifying this country. |
+ **iso_code** | **str**| A unique value identifying this country. |
  **patched_country** | [**PatchedCountry**](PatchedCountry.md)|  | [optional]
 
 ### Return type
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **countries_retrieve**
-> Country countries_retrieve(isocode)
+> Country countries_retrieve(iso_code)
 
 
 
@@ -392,11 +392,11 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
-    isocode = "isocode_example" # str | A unique value identifying this country.
+    iso_code = "iso_code_example" # str | A unique value identifying this country.
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.countries_retrieve(isocode)
+        api_response = api_instance.countries_retrieve(iso_code)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling CountriesApi->countries_retrieve: %s\n" % e)
@@ -407,7 +407,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **str**| A unique value identifying this country. |
+ **iso_code** | **str**| A unique value identifying this country. |
 
 ### Return type
 
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **countries_update**
-> Country countries_update(isocode, country)
+> Country countries_update(iso_code, country)
 
 
 
@@ -474,14 +474,14 @@ configuration.api_key['cookieAuth'] = 'YOUR_API_KEY'
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = countries_api.CountriesApi(api_client)
-    isocode = "isocode_example" # str | A unique value identifying this country.
+    iso_code = "iso_code_example" # str | A unique value identifying this country.
     country = Country(
         name="name_example",
     ) # Country | 
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.countries_update(isocode, country)
+        api_response = api_instance.countries_update(iso_code, country)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling CountriesApi->countries_update: %s\n" % e)
@@ -492,7 +492,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **isocode** | **str**| A unique value identifying this country. |
+ **iso_code** | **str**| A unique value identifying this country. |
  **country** | [**Country**](Country.md)|  |
 
 ### Return type

@@ -96,11 +96,11 @@ Class | Method | HTTP request | Description
 *CloudFilesApi* | [**cloudFilesRetrieve**](docs/Api/CloudFilesApi.md#cloudfilesretrieve) | **GET** /api/v2/cloud-files/{id}/ | 
 *CloudFilesApi* | [**cloudFilesUpdate**](docs/Api/CloudFilesApi.md#cloudfilesupdate) | **PUT** /api/v2/cloud-files/{id}/ | 
 *CountriesApi* | [**countriesCreate**](docs/Api/CountriesApi.md#countriescreate) | **POST** /api/v2/countries/ | 
-*CountriesApi* | [**countriesDestroy**](docs/Api/CountriesApi.md#countriesdestroy) | **DELETE** /api/v2/countries/{isocode}/ | 
+*CountriesApi* | [**countriesDestroy**](docs/Api/CountriesApi.md#countriesdestroy) | **DELETE** /api/v2/countries/{iso_code}/ | 
 *CountriesApi* | [**countriesList**](docs/Api/CountriesApi.md#countrieslist) | **GET** /api/v2/countries/ | 
-*CountriesApi* | [**countriesPartialUpdate**](docs/Api/CountriesApi.md#countriespartialupdate) | **PATCH** /api/v2/countries/{isocode}/ | 
-*CountriesApi* | [**countriesRetrieve**](docs/Api/CountriesApi.md#countriesretrieve) | **GET** /api/v2/countries/{isocode}/ | 
-*CountriesApi* | [**countriesUpdate**](docs/Api/CountriesApi.md#countriesupdate) | **PUT** /api/v2/countries/{isocode}/ | 
+*CountriesApi* | [**countriesPartialUpdate**](docs/Api/CountriesApi.md#countriespartialupdate) | **PATCH** /api/v2/countries/{iso_code}/ | 
+*CountriesApi* | [**countriesRetrieve**](docs/Api/CountriesApi.md#countriesretrieve) | **GET** /api/v2/countries/{iso_code}/ | 
+*CountriesApi* | [**countriesUpdate**](docs/Api/CountriesApi.md#countriesupdate) | **PUT** /api/v2/countries/{iso_code}/ | 
 *FilesApi* | [**filesCreate**](docs/Api/FilesApi.md#filescreate) | **POST** /api/v2/files/ | 
 *FilesApi* | [**filesDestroy**](docs/Api/FilesApi.md#filesdestroy) | **DELETE** /api/v2/files/{id}/ | 
 *FilesApi* | [**filesDownloadRetrieve**](docs/Api/FilesApi.md#filesdownloadretrieve) | **GET** /api/v2/files/{id}/download/ | 

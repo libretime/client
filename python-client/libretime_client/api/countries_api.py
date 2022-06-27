@@ -98,17 +98,17 @@ class CountriesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/countries/{isocode}/',
+                'endpoint_path': '/api/v2/countries/{iso_code}/',
                 'operation_id': 'countries_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'isocode',
+                    'iso_code',
                 ],
                 'required': [
-                    'isocode',
+                    'iso_code',
                 ],
                 'nullable': [
                 ],
@@ -123,14 +123,14 @@ class CountriesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'isocode':
+                    'iso_code':
                         (str,),
                 },
                 'attribute_map': {
-                    'isocode': 'isocode',
+                    'iso_code': 'iso_code',
                 },
                 'location_map': {
-                    'isocode': 'path',
+                    'iso_code': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -193,18 +193,18 @@ class CountriesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/countries/{isocode}/',
+                'endpoint_path': '/api/v2/countries/{iso_code}/',
                 'operation_id': 'countries_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'isocode',
+                    'iso_code',
                     'patched_country',
                 ],
                 'required': [
-                    'isocode',
+                    'iso_code',
                 ],
                 'nullable': [
                 ],
@@ -219,16 +219,16 @@ class CountriesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'isocode':
+                    'iso_code':
                         (str,),
                     'patched_country':
                         (PatchedCountry,),
                 },
                 'attribute_map': {
-                    'isocode': 'isocode',
+                    'iso_code': 'iso_code',
                 },
                 'location_map': {
-                    'isocode': 'path',
+                    'iso_code': 'path',
                     'patched_country': 'body',
                 },
                 'collection_format_map': {
@@ -253,17 +253,17 @@ class CountriesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/countries/{isocode}/',
+                'endpoint_path': '/api/v2/countries/{iso_code}/',
                 'operation_id': 'countries_retrieve',
                 'http_method': 'GET',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'isocode',
+                    'iso_code',
                 ],
                 'required': [
-                    'isocode',
+                    'iso_code',
                 ],
                 'nullable': [
                 ],
@@ -278,14 +278,14 @@ class CountriesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'isocode':
+                    'iso_code':
                         (str,),
                 },
                 'attribute_map': {
-                    'isocode': 'isocode',
+                    'iso_code': 'iso_code',
                 },
                 'location_map': {
-                    'isocode': 'path',
+                    'iso_code': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -305,18 +305,18 @@ class CountriesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/countries/{isocode}/',
+                'endpoint_path': '/api/v2/countries/{iso_code}/',
                 'operation_id': 'countries_update',
                 'http_method': 'PUT',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'isocode',
+                    'iso_code',
                     'country',
                 ],
                 'required': [
-                    'isocode',
+                    'iso_code',
                     'country',
                 ],
                 'nullable': [
@@ -332,16 +332,16 @@ class CountriesApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'isocode':
+                    'iso_code':
                         (str,),
                     'country':
                         (Country,),
                 },
                 'attribute_map': {
-                    'isocode': 'isocode',
+                    'iso_code': 'iso_code',
                 },
                 'location_map': {
-                    'isocode': 'path',
+                    'iso_code': 'path',
                     'country': 'body',
                 },
                 'collection_format_map': {
@@ -444,7 +444,7 @@ class CountriesApi(object):
 
     def countries_destroy(
         self,
-        isocode,
+        iso_code,
         **kwargs
     ):
         """countries_destroy  # noqa: E501
@@ -452,11 +452,11 @@ class CountriesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.countries_destroy(isocode, async_req=True)
+        >>> thread = api.countries_destroy(iso_code, async_req=True)
         >>> result = thread.get()
 
         Args:
-            isocode (str): A unique value identifying this country.
+            iso_code (str): A unique value identifying this country.
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -520,8 +520,8 @@ class CountriesApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['isocode'] = \
-            isocode
+        kwargs['iso_code'] = \
+            iso_code
         return self.countries_destroy_endpoint.call_with_http_info(**kwargs)
 
     def countries_list(
@@ -603,7 +603,7 @@ class CountriesApi(object):
 
     def countries_partial_update(
         self,
-        isocode,
+        iso_code,
         **kwargs
     ):
         """countries_partial_update  # noqa: E501
@@ -611,11 +611,11 @@ class CountriesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.countries_partial_update(isocode, async_req=True)
+        >>> thread = api.countries_partial_update(iso_code, async_req=True)
         >>> result = thread.get()
 
         Args:
-            isocode (str): A unique value identifying this country.
+            iso_code (str): A unique value identifying this country.
 
         Keyword Args:
             patched_country (PatchedCountry): [optional]
@@ -680,13 +680,13 @@ class CountriesApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['isocode'] = \
-            isocode
+        kwargs['iso_code'] = \
+            iso_code
         return self.countries_partial_update_endpoint.call_with_http_info(**kwargs)
 
     def countries_retrieve(
         self,
-        isocode,
+        iso_code,
         **kwargs
     ):
         """countries_retrieve  # noqa: E501
@@ -694,11 +694,11 @@ class CountriesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.countries_retrieve(isocode, async_req=True)
+        >>> thread = api.countries_retrieve(iso_code, async_req=True)
         >>> result = thread.get()
 
         Args:
-            isocode (str): A unique value identifying this country.
+            iso_code (str): A unique value identifying this country.
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -762,13 +762,13 @@ class CountriesApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['isocode'] = \
-            isocode
+        kwargs['iso_code'] = \
+            iso_code
         return self.countries_retrieve_endpoint.call_with_http_info(**kwargs)
 
     def countries_update(
         self,
-        isocode,
+        iso_code,
         country,
         **kwargs
     ):
@@ -777,11 +777,11 @@ class CountriesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.countries_update(isocode, country, async_req=True)
+        >>> thread = api.countries_update(iso_code, country, async_req=True)
         >>> result = thread.get()
 
         Args:
-            isocode (str): A unique value identifying this country.
+            iso_code (str): A unique value identifying this country.
             country (Country):
 
         Keyword Args:
@@ -846,8 +846,8 @@ class CountriesApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        kwargs['isocode'] = \
-            isocode
+        kwargs['iso_code'] = \
+            iso_code
         kwargs['country'] = \
             country
         return self.countries_update_endpoint.call_with_http_info(**kwargs)

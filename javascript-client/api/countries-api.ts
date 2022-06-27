@@ -73,15 +73,15 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesDestroy: async (isocode: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'isocode' is not null or undefined
-            assertParamExists('countriesDestroy', 'isocode', isocode)
-            const localVarPath = `/api/v2/countries/{isocode}/`
-                .replace(`{${"isocode"}}`, encodeURIComponent(String(isocode)));
+        countriesDestroy: async (isoCode: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'isoCode' is not null or undefined
+            assertParamExists('countriesDestroy', 'isoCode', isoCode)
+            const localVarPath = `/api/v2/countries/{iso_code}/`
+                .replace(`{${"iso_code"}}`, encodeURIComponent(String(isoCode)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -147,16 +147,16 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {PatchedCountry} [patchedCountry] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesPartialUpdate: async (isocode: string, patchedCountry?: PatchedCountry, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'isocode' is not null or undefined
-            assertParamExists('countriesPartialUpdate', 'isocode', isocode)
-            const localVarPath = `/api/v2/countries/{isocode}/`
-                .replace(`{${"isocode"}}`, encodeURIComponent(String(isocode)));
+        countriesPartialUpdate: async (isoCode: string, patchedCountry?: PatchedCountry, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'isoCode' is not null or undefined
+            assertParamExists('countriesPartialUpdate', 'isoCode', isoCode)
+            const localVarPath = `/api/v2/countries/{iso_code}/`
+                .replace(`{${"iso_code"}}`, encodeURIComponent(String(isoCode)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -190,15 +190,15 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesRetrieve: async (isocode: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'isocode' is not null or undefined
-            assertParamExists('countriesRetrieve', 'isocode', isocode)
-            const localVarPath = `/api/v2/countries/{isocode}/`
-                .replace(`{${"isocode"}}`, encodeURIComponent(String(isocode)));
+        countriesRetrieve: async (isoCode: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'isoCode' is not null or undefined
+            assertParamExists('countriesRetrieve', 'isoCode', isoCode)
+            const localVarPath = `/api/v2/countries/{iso_code}/`
+                .replace(`{${"iso_code"}}`, encodeURIComponent(String(isoCode)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -229,18 +229,18 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {Country} country 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesUpdate: async (isocode: string, country: Country, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'isocode' is not null or undefined
-            assertParamExists('countriesUpdate', 'isocode', isocode)
+        countriesUpdate: async (isoCode: string, country: Country, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'isoCode' is not null or undefined
+            assertParamExists('countriesUpdate', 'isoCode', isoCode)
             // verify required parameter 'country' is not null or undefined
             assertParamExists('countriesUpdate', 'country', country)
-            const localVarPath = `/api/v2/countries/{isocode}/`
-                .replace(`{${"isocode"}}`, encodeURIComponent(String(isocode)));
+            const localVarPath = `/api/v2/countries/{iso_code}/`
+                .replace(`{${"iso_code"}}`, encodeURIComponent(String(isoCode)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -294,12 +294,12 @@ export const CountriesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async countriesDestroy(isocode: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesDestroy(isocode, options);
+        async countriesDestroy(isoCode: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesDestroy(isoCode, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -313,34 +313,34 @@ export const CountriesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {PatchedCountry} [patchedCountry] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async countriesPartialUpdate(isocode: string, patchedCountry?: PatchedCountry, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesPartialUpdate(isocode, patchedCountry, options);
+        async countriesPartialUpdate(isoCode: string, patchedCountry?: PatchedCountry, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesPartialUpdate(isoCode, patchedCountry, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async countriesRetrieve(isocode: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesRetrieve(isocode, options);
+        async countriesRetrieve(isoCode: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesRetrieve(isoCode, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {Country} country 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async countriesUpdate(isocode: string, country: Country, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesUpdate(isocode, country, options);
+        async countriesUpdate(isoCode: string, country: Country, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Country>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.countriesUpdate(isoCode, country, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -364,12 +364,12 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesDestroy(isocode: string, options?: any): AxiosPromise<void> {
-            return localVarFp.countriesDestroy(isocode, options).then((request) => request(axios, basePath));
+        countriesDestroy(isoCode: string, options?: any): AxiosPromise<void> {
+            return localVarFp.countriesDestroy(isoCode, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -381,32 +381,32 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {PatchedCountry} [patchedCountry] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesPartialUpdate(isocode: string, patchedCountry?: PatchedCountry, options?: any): AxiosPromise<Country> {
-            return localVarFp.countriesPartialUpdate(isocode, patchedCountry, options).then((request) => request(axios, basePath));
+        countriesPartialUpdate(isoCode: string, patchedCountry?: PatchedCountry, options?: any): AxiosPromise<Country> {
+            return localVarFp.countriesPartialUpdate(isoCode, patchedCountry, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesRetrieve(isocode: string, options?: any): AxiosPromise<Country> {
-            return localVarFp.countriesRetrieve(isocode, options).then((request) => request(axios, basePath));
+        countriesRetrieve(isoCode: string, options?: any): AxiosPromise<Country> {
+            return localVarFp.countriesRetrieve(isoCode, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} isocode A unique value identifying this country.
+         * @param {string} isoCode A unique value identifying this country.
          * @param {Country} country 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        countriesUpdate(isocode: string, country: Country, options?: any): AxiosPromise<Country> {
-            return localVarFp.countriesUpdate(isocode, country, options).then((request) => request(axios, basePath));
+        countriesUpdate(isoCode: string, country: Country, options?: any): AxiosPromise<Country> {
+            return localVarFp.countriesUpdate(isoCode, country, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -431,13 +431,13 @@ export class CountriesApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} isocode A unique value identifying this country.
+     * @param {string} isoCode A unique value identifying this country.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountriesApi
      */
-    public countriesDestroy(isocode: string, options?: AxiosRequestConfig) {
-        return CountriesApiFp(this.configuration).countriesDestroy(isocode, options).then((request) => request(this.axios, this.basePath));
+    public countriesDestroy(isoCode: string, options?: AxiosRequestConfig) {
+        return CountriesApiFp(this.configuration).countriesDestroy(isoCode, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -452,36 +452,36 @@ export class CountriesApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} isocode A unique value identifying this country.
+     * @param {string} isoCode A unique value identifying this country.
      * @param {PatchedCountry} [patchedCountry] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountriesApi
      */
-    public countriesPartialUpdate(isocode: string, patchedCountry?: PatchedCountry, options?: AxiosRequestConfig) {
-        return CountriesApiFp(this.configuration).countriesPartialUpdate(isocode, patchedCountry, options).then((request) => request(this.axios, this.basePath));
+    public countriesPartialUpdate(isoCode: string, patchedCountry?: PatchedCountry, options?: AxiosRequestConfig) {
+        return CountriesApiFp(this.configuration).countriesPartialUpdate(isoCode, patchedCountry, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} isocode A unique value identifying this country.
+     * @param {string} isoCode A unique value identifying this country.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountriesApi
      */
-    public countriesRetrieve(isocode: string, options?: AxiosRequestConfig) {
-        return CountriesApiFp(this.configuration).countriesRetrieve(isocode, options).then((request) => request(this.axios, this.basePath));
+    public countriesRetrieve(isoCode: string, options?: AxiosRequestConfig) {
+        return CountriesApiFp(this.configuration).countriesRetrieve(isoCode, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {string} isocode A unique value identifying this country.
+     * @param {string} isoCode A unique value identifying this country.
      * @param {Country} country 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountriesApi
      */
-    public countriesUpdate(isocode: string, country: Country, options?: AxiosRequestConfig) {
-        return CountriesApiFp(this.configuration).countriesUpdate(isocode, country, options).then((request) => request(this.axios, this.basePath));
+    public countriesUpdate(isoCode: string, country: Country, options?: AxiosRequestConfig) {
+        return CountriesApiFp(this.configuration).countriesUpdate(isoCode, country, options).then((request) => request(this.axios, this.basePath));
     }
 }
