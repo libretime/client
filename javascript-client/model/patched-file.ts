@@ -13,6 +13,7 @@
  */
 
 
+import { ImportStatusEnum } from './import-status-enum';
 
 /**
  * 
@@ -37,19 +38,13 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'name'?: string;
+    'library'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {ImportStatusEnum}
      * @memberof PatchedFile
      */
-    'mime'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'ftype'?: string;
+    'import_status'?: ImportStatusEnum;
     /**
      * 
      * @type {string}
@@ -61,31 +56,19 @@ export interface PatchedFile {
      * @type {number}
      * @memberof PatchedFile
      */
-    'import_status'?: number;
+    'size'?: number;
     /**
      * 
-     * @type {number}
+     * @type {boolean}
      * @memberof PatchedFile
      */
-    'currently_accessing'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'mtime'?: string | null;
+    'exists'?: boolean | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
-    'utime'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'lptime'?: string | null;
+    'mime'?: string;
     /**
      * 
      * @type {string}
@@ -94,16 +77,46 @@ export interface PatchedFile {
     'md5'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {boolean}
      * @memberof PatchedFile
      */
-    'track_title'?: string | null;
+    'hidden'?: boolean | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedFile
+     */
+    'accessed'?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedFile
+     */
+    'scheduled'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedFile
+     */
+    'part_of_list'?: boolean | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
-    'artist_name'?: string | null;
+    'created_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'updated_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'last_played_at'?: string | null;
     /**
      * 
      * @type {number}
@@ -124,42 +137,6 @@ export interface PatchedFile {
     'format'?: string | null;
     /**
      * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'album_title'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'genre'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'comments'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'year'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedFile
-     */
-    'track_number'?: number | null;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedFile
      */
@@ -169,7 +146,7 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'url'?: string | null;
+    'length'?: string | null;
     /**
      * 
      * @type {number}
@@ -181,19 +158,73 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'rating'?: string | null;
+    'replay_gain'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
-    'encoded_by'?: string | null;
+    'cue_in'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
-    'disc_number'?: string | null;
+    'cue_out'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'artwork'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'artist_name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'artist_url'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'original_artist'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'album_title'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'track_title'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'genre'?: string | null;
     /**
      * 
      * @type {string}
@@ -205,7 +236,43 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
+    'date'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedFile
+     */
+    'track_number'?: number | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'disc_number'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'comment'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'language'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
     'label'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'copyright'?: string | null;
     /**
      * 
      * @type {string}
@@ -217,19 +284,7 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'encoder'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'checksum'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'lyrics'?: string | null;
+    'conductor'?: string | null;
     /**
      * 
      * @type {string}
@@ -241,7 +296,25 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'conductor'?: string | null;
+    'encoder'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'encoded_by'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'isrc'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'lyrics'?: string | null;
     /**
      * 
      * @type {string}
@@ -259,7 +332,25 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'radio_station_name'?: string | null;
+    'subject'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'contributor'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'rating'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'url'?: string | null;
     /**
      * 
      * @type {string}
@@ -271,19 +362,7 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'artist_url'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
     'audio_source_url'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'radio_station_url'?: string | null;
     /**
      * 
      * @type {string}
@@ -295,25 +374,19 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'isrc_number'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
     'catalog_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
-    'original_artist'?: string | null;
+    'radio_station_name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
-    'copyright'?: string | null;
+    'radio_station_url'?: string | null;
     /**
      * 
      * @type {string}
@@ -337,102 +410,12 @@ export interface PatchedFile {
      * @type {string}
      * @memberof PatchedFile
      */
-    'subject'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'contributor'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'language'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedFile
-     */
-    'file_exists'?: boolean | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'replay_gain'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'cuein'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'cueout'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedFile
-     */
-    'silan_check'?: boolean | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedFile
-     */
-    'hidden'?: boolean | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedFile
-     */
-    'is_scheduled'?: boolean | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedFile
-     */
-    'is_playlist'?: boolean | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedFile
-     */
-    'filesize'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'artwork'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'track_type'?: string | null;
+    'owner'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedFile
      */
     'edited_by'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'owner'?: string | null;
 }
 

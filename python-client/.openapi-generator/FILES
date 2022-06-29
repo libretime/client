@@ -10,8 +10,11 @@ docs/CountriesApi.md
 docs/Country.md
 docs/File.md
 docs/FilesApi.md
+docs/ImportStatusEnum.md
 docs/ImportedPodcast.md
 docs/ImportedPodcastsApi.md
+docs/LibrariesApi.md
+docs/Library.md
 docs/ListenerCount.md
 docs/ListenerCountsApi.md
 docs/LiveLog.md
@@ -25,6 +28,7 @@ docs/PatchedCloudFile.md
 docs/PatchedCountry.md
 docs/PatchedFile.md
 docs/PatchedImportedPodcast.md
+docs/PatchedLibrary.md
 docs/PatchedListenerCount.md
 docs/PatchedLiveLog.md
 docs/PatchedLoginAttempt.md
@@ -52,7 +56,6 @@ docs/PatchedStationPodcast.md
 docs/PatchedStreamSetting.md
 docs/PatchedThirdPartyTrackReference.md
 docs/PatchedTimestamp.md
-docs/PatchedTrackType.md
 docs/PatchedUser.md
 docs/PatchedUserToken.md
 docs/PatchedWebstream.md
@@ -105,8 +108,6 @@ docs/ThirdPartyTrackReference.md
 docs/ThirdPartyTrackReferencesApi.md
 docs/Timestamp.md
 docs/TimestampsApi.md
-docs/TrackType.md
-docs/TrackTypesApi.md
 docs/User.md
 docs/UserToken.md
 docs/UserTokensApi.md
@@ -124,6 +125,7 @@ libretime_client/api/cloud_files_api.py
 libretime_client/api/countries_api.py
 libretime_client/api/files_api.py
 libretime_client/api/imported_podcasts_api.py
+libretime_client/api/libraries_api.py
 libretime_client/api/listener_counts_api.py
 libretime_client/api/live_logs_api.py
 libretime_client/api/login_attempts_api.py
@@ -152,7 +154,6 @@ libretime_client/api/station_podcasts_api.py
 libretime_client/api/stream_settings_api.py
 libretime_client/api/third_party_track_references_api.py
 libretime_client/api/timestamps_api.py
-libretime_client/api/track_types_api.py
 libretime_client/api/user_tokens_api.py
 libretime_client/api/users_api.py
 libretime_client/api/version_api.py
@@ -167,7 +168,9 @@ libretime_client/model/celery_task.py
 libretime_client/model/cloud_file.py
 libretime_client/model/country.py
 libretime_client/model/file.py
+libretime_client/model/import_status_enum.py
 libretime_client/model/imported_podcast.py
+libretime_client/model/library.py
 libretime_client/model/listener_count.py
 libretime_client/model/live_log.py
 libretime_client/model/login_attempt.py
@@ -177,6 +180,7 @@ libretime_client/model/patched_cloud_file.py
 libretime_client/model/patched_country.py
 libretime_client/model/patched_file.py
 libretime_client/model/patched_imported_podcast.py
+libretime_client/model/patched_library.py
 libretime_client/model/patched_listener_count.py
 libretime_client/model/patched_live_log.py
 libretime_client/model/patched_login_attempt.py
@@ -204,7 +208,6 @@ libretime_client/model/patched_station_podcast.py
 libretime_client/model/patched_stream_setting.py
 libretime_client/model/patched_third_party_track_reference.py
 libretime_client/model/patched_timestamp.py
-libretime_client/model/patched_track_type.py
 libretime_client/model/patched_user.py
 libretime_client/model/patched_user_token.py
 libretime_client/model/patched_webstream.py
@@ -233,7 +236,6 @@ libretime_client/model/station_podcast.py
 libretime_client/model/stream_setting.py
 libretime_client/model/third_party_track_reference.py
 libretime_client/model/timestamp.py
-libretime_client/model/track_type.py
 libretime_client/model/user.py
 libretime_client/model/user_token.py
 libretime_client/model/webstream.py
@@ -246,4 +248,8 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_import_status_enum.py
+test/test_libraries_api.py
+test/test_library.py
+test/test_patched_library.py
 tox.ini

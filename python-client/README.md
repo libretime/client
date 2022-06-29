@@ -132,6 +132,12 @@ Class | Method | HTTP request | Description
 *ImportedPodcastsApi* | [**imported_podcasts_partial_update**](docs/ImportedPodcastsApi.md#imported_podcasts_partial_update) | **PATCH** /api/v2/imported-podcasts/{id}/ | 
 *ImportedPodcastsApi* | [**imported_podcasts_retrieve**](docs/ImportedPodcastsApi.md#imported_podcasts_retrieve) | **GET** /api/v2/imported-podcasts/{id}/ | 
 *ImportedPodcastsApi* | [**imported_podcasts_update**](docs/ImportedPodcastsApi.md#imported_podcasts_update) | **PUT** /api/v2/imported-podcasts/{id}/ | 
+*LibrariesApi* | [**libraries_create**](docs/LibrariesApi.md#libraries_create) | **POST** /api/v2/libraries/ | 
+*LibrariesApi* | [**libraries_destroy**](docs/LibrariesApi.md#libraries_destroy) | **DELETE** /api/v2/libraries/{id}/ | 
+*LibrariesApi* | [**libraries_list**](docs/LibrariesApi.md#libraries_list) | **GET** /api/v2/libraries/ | 
+*LibrariesApi* | [**libraries_partial_update**](docs/LibrariesApi.md#libraries_partial_update) | **PATCH** /api/v2/libraries/{id}/ | 
+*LibrariesApi* | [**libraries_retrieve**](docs/LibrariesApi.md#libraries_retrieve) | **GET** /api/v2/libraries/{id}/ | 
+*LibrariesApi* | [**libraries_update**](docs/LibrariesApi.md#libraries_update) | **PUT** /api/v2/libraries/{id}/ | 
 *ListenerCountsApi* | [**listener_counts_create**](docs/ListenerCountsApi.md#listener_counts_create) | **POST** /api/v2/listener-counts/ | 
 *ListenerCountsApi* | [**listener_counts_destroy**](docs/ListenerCountsApi.md#listener_counts_destroy) | **DELETE** /api/v2/listener-counts/{id}/ | 
 *ListenerCountsApi* | [**listener_counts_list**](docs/ListenerCountsApi.md#listener_counts_list) | **GET** /api/v2/listener-counts/ | 
@@ -295,12 +301,6 @@ Class | Method | HTTP request | Description
 *TimestampsApi* | [**timestamps_partial_update**](docs/TimestampsApi.md#timestamps_partial_update) | **PATCH** /api/v2/timestamps/{id}/ | 
 *TimestampsApi* | [**timestamps_retrieve**](docs/TimestampsApi.md#timestamps_retrieve) | **GET** /api/v2/timestamps/{id}/ | 
 *TimestampsApi* | [**timestamps_update**](docs/TimestampsApi.md#timestamps_update) | **PUT** /api/v2/timestamps/{id}/ | 
-*TrackTypesApi* | [**track_types_create**](docs/TrackTypesApi.md#track_types_create) | **POST** /api/v2/track-types/ | 
-*TrackTypesApi* | [**track_types_destroy**](docs/TrackTypesApi.md#track_types_destroy) | **DELETE** /api/v2/track-types/{id}/ | 
-*TrackTypesApi* | [**track_types_list**](docs/TrackTypesApi.md#track_types_list) | **GET** /api/v2/track-types/ | 
-*TrackTypesApi* | [**track_types_partial_update**](docs/TrackTypesApi.md#track_types_partial_update) | **PATCH** /api/v2/track-types/{id}/ | 
-*TrackTypesApi* | [**track_types_retrieve**](docs/TrackTypesApi.md#track_types_retrieve) | **GET** /api/v2/track-types/{id}/ | 
-*TrackTypesApi* | [**track_types_update**](docs/TrackTypesApi.md#track_types_update) | **PUT** /api/v2/track-types/{id}/ | 
 *UserTokensApi* | [**user_tokens_create**](docs/UserTokensApi.md#user_tokens_create) | **POST** /api/v2/user-tokens/ | 
 *UserTokensApi* | [**user_tokens_destroy**](docs/UserTokensApi.md#user_tokens_destroy) | **DELETE** /api/v2/user-tokens/{id}/ | 
 *UserTokensApi* | [**user_tokens_list**](docs/UserTokensApi.md#user_tokens_list) | **GET** /api/v2/user-tokens/ | 
@@ -334,7 +334,9 @@ Class | Method | HTTP request | Description
  - [CloudFile](docs/CloudFile.md)
  - [Country](docs/Country.md)
  - [File](docs/File.md)
+ - [ImportStatusEnum](docs/ImportStatusEnum.md)
  - [ImportedPodcast](docs/ImportedPodcast.md)
+ - [Library](docs/Library.md)
  - [ListenerCount](docs/ListenerCount.md)
  - [LiveLog](docs/LiveLog.md)
  - [LoginAttempt](docs/LoginAttempt.md)
@@ -344,6 +346,7 @@ Class | Method | HTTP request | Description
  - [PatchedCountry](docs/PatchedCountry.md)
  - [PatchedFile](docs/PatchedFile.md)
  - [PatchedImportedPodcast](docs/PatchedImportedPodcast.md)
+ - [PatchedLibrary](docs/PatchedLibrary.md)
  - [PatchedListenerCount](docs/PatchedListenerCount.md)
  - [PatchedLiveLog](docs/PatchedLiveLog.md)
  - [PatchedLoginAttempt](docs/PatchedLoginAttempt.md)
@@ -371,7 +374,6 @@ Class | Method | HTTP request | Description
  - [PatchedStreamSetting](docs/PatchedStreamSetting.md)
  - [PatchedThirdPartyTrackReference](docs/PatchedThirdPartyTrackReference.md)
  - [PatchedTimestamp](docs/PatchedTimestamp.md)
- - [PatchedTrackType](docs/PatchedTrackType.md)
  - [PatchedUser](docs/PatchedUser.md)
  - [PatchedUserToken](docs/PatchedUserToken.md)
  - [PatchedWebstream](docs/PatchedWebstream.md)
@@ -400,7 +402,6 @@ Class | Method | HTTP request | Description
  - [StreamSetting](docs/StreamSetting.md)
  - [ThirdPartyTrackReference](docs/ThirdPartyTrackReference.md)
  - [Timestamp](docs/Timestamp.md)
- - [TrackType](docs/TrackType.md)
  - [User](docs/User.md)
  - [UserToken](docs/UserToken.md)
  - [Webstream](docs/Webstream.md)

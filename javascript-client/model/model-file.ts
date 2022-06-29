@@ -13,6 +13,7 @@
  */
 
 
+import { ImportStatusEnum } from './import-status-enum';
 
 /**
  * 
@@ -37,19 +38,13 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'name': string;
+    'library'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {ImportStatusEnum}
      * @memberof ModelFile
      */
-    'mime': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'ftype': string;
+    'import_status'?: ImportStatusEnum;
     /**
      * 
      * @type {string}
@@ -61,31 +56,19 @@ export interface ModelFile {
      * @type {number}
      * @memberof ModelFile
      */
-    'import_status': number;
+    'size': number;
     /**
      * 
-     * @type {number}
+     * @type {boolean}
      * @memberof ModelFile
      */
-    'currently_accessing': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'mtime'?: string | null;
+    'exists'?: boolean | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
-    'utime'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'lptime'?: string | null;
+    'mime': string;
     /**
      * 
      * @type {string}
@@ -94,16 +77,46 @@ export interface ModelFile {
     'md5'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {boolean}
      * @memberof ModelFile
      */
-    'track_title'?: string | null;
+    'hidden'?: boolean | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof ModelFile
+     */
+    'accessed': number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ModelFile
+     */
+    'scheduled'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ModelFile
+     */
+    'part_of_list'?: boolean | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
-    'artist_name'?: string | null;
+    'created_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'updated_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'last_played_at'?: string | null;
     /**
      * 
      * @type {number}
@@ -124,42 +137,6 @@ export interface ModelFile {
     'format'?: string | null;
     /**
      * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'album_title'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'genre'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'comments'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'year'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ModelFile
-     */
-    'track_number'?: number | null;
-    /**
-     * 
      * @type {number}
      * @memberof ModelFile
      */
@@ -169,7 +146,7 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'url'?: string | null;
+    'length'?: string | null;
     /**
      * 
      * @type {number}
@@ -181,19 +158,73 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'rating'?: string | null;
+    'replay_gain'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
-    'encoded_by'?: string | null;
+    'cue_in'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
-    'disc_number'?: string | null;
+    'cue_out'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'artwork'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'artist_name'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'artist_url'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'original_artist'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'album_title'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'track_title'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'genre'?: string | null;
     /**
      * 
      * @type {string}
@@ -205,7 +236,43 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
+    'date'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof ModelFile
+     */
+    'track_number'?: number | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'disc_number'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'comment'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'language'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
     'label'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'copyright'?: string | null;
     /**
      * 
      * @type {string}
@@ -217,19 +284,7 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'encoder'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'checksum'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'lyrics'?: string | null;
+    'conductor'?: string | null;
     /**
      * 
      * @type {string}
@@ -241,7 +296,25 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'conductor'?: string | null;
+    'encoder'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'encoded_by'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'isrc'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'lyrics'?: string | null;
     /**
      * 
      * @type {string}
@@ -259,7 +332,25 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'radio_station_name'?: string | null;
+    'subject'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'contributor'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'rating'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'url'?: string | null;
     /**
      * 
      * @type {string}
@@ -271,19 +362,7 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'artist_url'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
     'audio_source_url'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'radio_station_url'?: string | null;
     /**
      * 
      * @type {string}
@@ -295,25 +374,19 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'isrc_number'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
     'catalog_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
-    'original_artist'?: string | null;
+    'radio_station_name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
-    'copyright'?: string | null;
+    'radio_station_url'?: string | null;
     /**
      * 
      * @type {string}
@@ -337,102 +410,12 @@ export interface ModelFile {
      * @type {string}
      * @memberof ModelFile
      */
-    'subject'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'contributor'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'language'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ModelFile
-     */
-    'file_exists'?: boolean | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'replay_gain'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'cuein'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'cueout'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ModelFile
-     */
-    'silan_check'?: boolean | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ModelFile
-     */
-    'hidden'?: boolean | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ModelFile
-     */
-    'is_scheduled'?: boolean | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ModelFile
-     */
-    'is_playlist'?: boolean | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ModelFile
-     */
-    'filesize': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'artwork'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'track_type'?: string | null;
+    'owner'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof ModelFile
      */
     'edited_by'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'owner'?: string | null;
 }
 

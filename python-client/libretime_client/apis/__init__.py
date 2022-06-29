@@ -19,6 +19,7 @@ from libretime_client.api.cloud_files_api import CloudFilesApi
 from libretime_client.api.countries_api import CountriesApi
 from libretime_client.api.files_api import FilesApi
 from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi
+from libretime_client.api.libraries_api import LibrariesApi
 from libretime_client.api.listener_counts_api import ListenerCountsApi
 from libretime_client.api.live_logs_api import LiveLogsApi
 from libretime_client.api.login_attempts_api import LoginAttemptsApi
@@ -47,7 +48,6 @@ from libretime_client.api.station_podcasts_api import StationPodcastsApi
 from libretime_client.api.stream_settings_api import StreamSettingsApi
 from libretime_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi
 from libretime_client.api.timestamps_api import TimestampsApi
-from libretime_client.api.track_types_api import TrackTypesApi
 from libretime_client.api.user_tokens_api import UserTokensApi
 from libretime_client.api.users_api import UsersApi
 from libretime_client.api.version_api import VersionApi

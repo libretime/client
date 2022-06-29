@@ -61,73 +61,70 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'item_url' => 'string',
         'id' => 'int',
-        'name' => 'string',
-        'mime' => 'string',
-        'ftype' => 'string',
+        'library' => 'string',
+        'import_status' => 'ImportStatusEnum',
         'filepath' => 'string',
-        'import_status' => 'int',
-        'currently_accessing' => 'int',
-        'mtime' => '\DateTime',
-        'utime' => '\DateTime',
-        'lptime' => '\DateTime',
+        'size' => 'int',
+        'exists' => 'bool',
+        'mime' => 'string',
         'md5' => 'string',
-        'track_title' => 'string',
-        'artist_name' => 'string',
+        'hidden' => 'bool',
+        'accessed' => 'int',
+        'scheduled' => 'bool',
+        'part_of_list' => 'bool',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'last_played_at' => '\DateTime',
         'bit_rate' => 'int',
         'sample_rate' => 'int',
         'format' => 'string',
-        'length' => 'string',
-        'album_title' => 'string',
-        'genre' => 'string',
-        'comments' => 'string',
-        'year' => 'string',
-        'track_number' => 'int',
         'channels' => 'int',
-        'url' => 'string',
+        'length' => 'string',
         'bpm' => 'int',
-        'rating' => 'string',
-        'encoded_by' => 'string',
-        'disc_number' => 'string',
+        'replay_gain' => 'float',
+        'cue_in' => 'string',
+        'cue_out' => 'string',
+        'name' => 'string',
+        'description' => 'string',
+        'artwork' => 'string',
+        'artist_name' => 'string',
+        'artist_url' => 'string',
+        'original_artist' => 'string',
+        'album_title' => 'string',
+        'track_title' => 'string',
+        'genre' => 'string',
         'mood' => 'string',
+        'date' => 'string',
+        'track_number' => 'int',
+        'disc_number' => 'string',
+        'comment' => 'string',
+        'language' => 'string',
         'label' => 'string',
+        'copyright' => 'string',
         'composer' => 'string',
-        'encoder' => 'string',
-        'checksum' => 'string',
-        'lyrics' => 'string',
-        'orchestra' => 'string',
         'conductor' => 'string',
+        'orchestra' => 'string',
+        'encoder' => 'string',
+        'encoded_by' => 'string',
+        'isrc' => 'string',
+        'lyrics' => 'string',
         'lyricist' => 'string',
         'original_lyricist' => 'string',
-        'radio_station_name' => 'string',
+        'subject' => 'string',
+        'contributor' => 'string',
+        'rating' => 'string',
+        'url' => 'string',
         'info_url' => 'string',
-        'artist_url' => 'string',
         'audio_source_url' => 'string',
-        'radio_station_url' => 'string',
         'buy_this_url' => 'string',
-        'isrc_number' => 'string',
         'catalog_number' => 'string',
-        'original_artist' => 'string',
-        'copyright' => 'string',
+        'radio_station_name' => 'string',
+        'radio_station_url' => 'string',
         'report_datetime' => 'string',
         'report_location' => 'string',
         'report_organization' => 'string',
-        'subject' => 'string',
-        'contributor' => 'string',
-        'language' => 'string',
-        'file_exists' => 'bool',
-        'replay_gain' => 'float',
-        'cuein' => 'string',
-        'cueout' => 'string',
-        'silan_check' => 'bool',
-        'hidden' => 'bool',
-        'is_scheduled' => 'bool',
-        'is_playlist' => 'bool',
-        'filesize' => 'int',
-        'description' => 'string',
-        'artwork' => 'string',
-        'track_type' => 'string',
-        'edited_by' => 'string',
-        'owner' => 'string'
+        'owner' => 'string',
+        'edited_by' => 'string'
     ];
 
     /**
@@ -140,73 +137,70 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'item_url' => 'uri',
         'id' => null,
-        'name' => null,
-        'mime' => null,
-        'ftype' => null,
-        'filepath' => null,
+        'library' => null,
         'import_status' => null,
-        'currently_accessing' => null,
-        'mtime' => 'date-time',
-        'utime' => 'date-time',
-        'lptime' => 'date-time',
+        'filepath' => null,
+        'size' => null,
+        'exists' => null,
+        'mime' => null,
         'md5' => null,
-        'track_title' => null,
-        'artist_name' => null,
+        'hidden' => null,
+        'accessed' => null,
+        'scheduled' => null,
+        'part_of_list' => null,
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
+        'last_played_at' => 'date-time',
         'bit_rate' => null,
         'sample_rate' => null,
         'format' => null,
-        'length' => null,
-        'album_title' => null,
-        'genre' => null,
-        'comments' => null,
-        'year' => null,
-        'track_number' => null,
         'channels' => null,
-        'url' => null,
+        'length' => null,
         'bpm' => null,
-        'rating' => null,
-        'encoded_by' => null,
-        'disc_number' => null,
+        'replay_gain' => 'decimal',
+        'cue_in' => null,
+        'cue_out' => null,
+        'name' => null,
+        'description' => null,
+        'artwork' => null,
+        'artist_name' => null,
+        'artist_url' => null,
+        'original_artist' => null,
+        'album_title' => null,
+        'track_title' => null,
+        'genre' => null,
         'mood' => null,
+        'date' => null,
+        'track_number' => null,
+        'disc_number' => null,
+        'comment' => null,
+        'language' => null,
         'label' => null,
+        'copyright' => null,
         'composer' => null,
-        'encoder' => null,
-        'checksum' => null,
-        'lyrics' => null,
-        'orchestra' => null,
         'conductor' => null,
+        'orchestra' => null,
+        'encoder' => null,
+        'encoded_by' => null,
+        'isrc' => null,
+        'lyrics' => null,
         'lyricist' => null,
         'original_lyricist' => null,
-        'radio_station_name' => null,
+        'subject' => null,
+        'contributor' => null,
+        'rating' => null,
+        'url' => null,
         'info_url' => null,
-        'artist_url' => null,
         'audio_source_url' => null,
-        'radio_station_url' => null,
         'buy_this_url' => null,
-        'isrc_number' => null,
         'catalog_number' => null,
-        'original_artist' => null,
-        'copyright' => null,
+        'radio_station_name' => null,
+        'radio_station_url' => null,
         'report_datetime' => null,
         'report_location' => null,
         'report_organization' => null,
-        'subject' => null,
-        'contributor' => null,
-        'language' => null,
-        'file_exists' => null,
-        'replay_gain' => 'decimal',
-        'cuein' => null,
-        'cueout' => null,
-        'silan_check' => null,
-        'hidden' => null,
-        'is_scheduled' => null,
-        'is_playlist' => null,
-        'filesize' => null,
-        'description' => null,
-        'artwork' => null,
-        'track_type' => null,
-        'edited_by' => 'uri',
-        'owner' => 'uri'
+        'owner' => 'uri',
+        'edited_by' => 'uri'
     ];
 
     /**
@@ -238,73 +232,70 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'item_url' => 'item_url',
         'id' => 'id',
-        'name' => 'name',
-        'mime' => 'mime',
-        'ftype' => 'ftype',
-        'filepath' => 'filepath',
+        'library' => 'library',
         'import_status' => 'import_status',
-        'currently_accessing' => 'currently_accessing',
-        'mtime' => 'mtime',
-        'utime' => 'utime',
-        'lptime' => 'lptime',
+        'filepath' => 'filepath',
+        'size' => 'size',
+        'exists' => 'exists',
+        'mime' => 'mime',
         'md5' => 'md5',
-        'track_title' => 'track_title',
-        'artist_name' => 'artist_name',
+        'hidden' => 'hidden',
+        'accessed' => 'accessed',
+        'scheduled' => 'scheduled',
+        'part_of_list' => 'part_of_list',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'last_played_at' => 'last_played_at',
         'bit_rate' => 'bit_rate',
         'sample_rate' => 'sample_rate',
         'format' => 'format',
-        'length' => 'length',
-        'album_title' => 'album_title',
-        'genre' => 'genre',
-        'comments' => 'comments',
-        'year' => 'year',
-        'track_number' => 'track_number',
         'channels' => 'channels',
-        'url' => 'url',
+        'length' => 'length',
         'bpm' => 'bpm',
-        'rating' => 'rating',
-        'encoded_by' => 'encoded_by',
-        'disc_number' => 'disc_number',
+        'replay_gain' => 'replay_gain',
+        'cue_in' => 'cue_in',
+        'cue_out' => 'cue_out',
+        'name' => 'name',
+        'description' => 'description',
+        'artwork' => 'artwork',
+        'artist_name' => 'artist_name',
+        'artist_url' => 'artist_url',
+        'original_artist' => 'original_artist',
+        'album_title' => 'album_title',
+        'track_title' => 'track_title',
+        'genre' => 'genre',
         'mood' => 'mood',
+        'date' => 'date',
+        'track_number' => 'track_number',
+        'disc_number' => 'disc_number',
+        'comment' => 'comment',
+        'language' => 'language',
         'label' => 'label',
+        'copyright' => 'copyright',
         'composer' => 'composer',
-        'encoder' => 'encoder',
-        'checksum' => 'checksum',
-        'lyrics' => 'lyrics',
-        'orchestra' => 'orchestra',
         'conductor' => 'conductor',
+        'orchestra' => 'orchestra',
+        'encoder' => 'encoder',
+        'encoded_by' => 'encoded_by',
+        'isrc' => 'isrc',
+        'lyrics' => 'lyrics',
         'lyricist' => 'lyricist',
         'original_lyricist' => 'original_lyricist',
-        'radio_station_name' => 'radio_station_name',
+        'subject' => 'subject',
+        'contributor' => 'contributor',
+        'rating' => 'rating',
+        'url' => 'url',
         'info_url' => 'info_url',
-        'artist_url' => 'artist_url',
         'audio_source_url' => 'audio_source_url',
-        'radio_station_url' => 'radio_station_url',
         'buy_this_url' => 'buy_this_url',
-        'isrc_number' => 'isrc_number',
         'catalog_number' => 'catalog_number',
-        'original_artist' => 'original_artist',
-        'copyright' => 'copyright',
+        'radio_station_name' => 'radio_station_name',
+        'radio_station_url' => 'radio_station_url',
         'report_datetime' => 'report_datetime',
         'report_location' => 'report_location',
         'report_organization' => 'report_organization',
-        'subject' => 'subject',
-        'contributor' => 'contributor',
-        'language' => 'language',
-        'file_exists' => 'file_exists',
-        'replay_gain' => 'replay_gain',
-        'cuein' => 'cuein',
-        'cueout' => 'cueout',
-        'silan_check' => 'silan_check',
-        'hidden' => 'hidden',
-        'is_scheduled' => 'is_scheduled',
-        'is_playlist' => 'is_playlist',
-        'filesize' => 'filesize',
-        'description' => 'description',
-        'artwork' => 'artwork',
-        'track_type' => 'track_type',
-        'edited_by' => 'edited_by',
-        'owner' => 'owner'
+        'owner' => 'owner',
+        'edited_by' => 'edited_by'
     ];
 
     /**
@@ -315,73 +306,70 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'item_url' => 'setItemUrl',
         'id' => 'setId',
-        'name' => 'setName',
-        'mime' => 'setMime',
-        'ftype' => 'setFtype',
-        'filepath' => 'setFilepath',
+        'library' => 'setLibrary',
         'import_status' => 'setImportStatus',
-        'currently_accessing' => 'setCurrentlyAccessing',
-        'mtime' => 'setMtime',
-        'utime' => 'setUtime',
-        'lptime' => 'setLptime',
+        'filepath' => 'setFilepath',
+        'size' => 'setSize',
+        'exists' => 'setExists',
+        'mime' => 'setMime',
         'md5' => 'setMd5',
-        'track_title' => 'setTrackTitle',
-        'artist_name' => 'setArtistName',
+        'hidden' => 'setHidden',
+        'accessed' => 'setAccessed',
+        'scheduled' => 'setScheduled',
+        'part_of_list' => 'setPartOfList',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'last_played_at' => 'setLastPlayedAt',
         'bit_rate' => 'setBitRate',
         'sample_rate' => 'setSampleRate',
         'format' => 'setFormat',
-        'length' => 'setLength',
-        'album_title' => 'setAlbumTitle',
-        'genre' => 'setGenre',
-        'comments' => 'setComments',
-        'year' => 'setYear',
-        'track_number' => 'setTrackNumber',
         'channels' => 'setChannels',
-        'url' => 'setUrl',
+        'length' => 'setLength',
         'bpm' => 'setBpm',
-        'rating' => 'setRating',
-        'encoded_by' => 'setEncodedBy',
-        'disc_number' => 'setDiscNumber',
+        'replay_gain' => 'setReplayGain',
+        'cue_in' => 'setCueIn',
+        'cue_out' => 'setCueOut',
+        'name' => 'setName',
+        'description' => 'setDescription',
+        'artwork' => 'setArtwork',
+        'artist_name' => 'setArtistName',
+        'artist_url' => 'setArtistUrl',
+        'original_artist' => 'setOriginalArtist',
+        'album_title' => 'setAlbumTitle',
+        'track_title' => 'setTrackTitle',
+        'genre' => 'setGenre',
         'mood' => 'setMood',
+        'date' => 'setDate',
+        'track_number' => 'setTrackNumber',
+        'disc_number' => 'setDiscNumber',
+        'comment' => 'setComment',
+        'language' => 'setLanguage',
         'label' => 'setLabel',
+        'copyright' => 'setCopyright',
         'composer' => 'setComposer',
-        'encoder' => 'setEncoder',
-        'checksum' => 'setChecksum',
-        'lyrics' => 'setLyrics',
-        'orchestra' => 'setOrchestra',
         'conductor' => 'setConductor',
+        'orchestra' => 'setOrchestra',
+        'encoder' => 'setEncoder',
+        'encoded_by' => 'setEncodedBy',
+        'isrc' => 'setIsrc',
+        'lyrics' => 'setLyrics',
         'lyricist' => 'setLyricist',
         'original_lyricist' => 'setOriginalLyricist',
-        'radio_station_name' => 'setRadioStationName',
+        'subject' => 'setSubject',
+        'contributor' => 'setContributor',
+        'rating' => 'setRating',
+        'url' => 'setUrl',
         'info_url' => 'setInfoUrl',
-        'artist_url' => 'setArtistUrl',
         'audio_source_url' => 'setAudioSourceUrl',
-        'radio_station_url' => 'setRadioStationUrl',
         'buy_this_url' => 'setBuyThisUrl',
-        'isrc_number' => 'setIsrcNumber',
         'catalog_number' => 'setCatalogNumber',
-        'original_artist' => 'setOriginalArtist',
-        'copyright' => 'setCopyright',
+        'radio_station_name' => 'setRadioStationName',
+        'radio_station_url' => 'setRadioStationUrl',
         'report_datetime' => 'setReportDatetime',
         'report_location' => 'setReportLocation',
         'report_organization' => 'setReportOrganization',
-        'subject' => 'setSubject',
-        'contributor' => 'setContributor',
-        'language' => 'setLanguage',
-        'file_exists' => 'setFileExists',
-        'replay_gain' => 'setReplayGain',
-        'cuein' => 'setCuein',
-        'cueout' => 'setCueout',
-        'silan_check' => 'setSilanCheck',
-        'hidden' => 'setHidden',
-        'is_scheduled' => 'setIsScheduled',
-        'is_playlist' => 'setIsPlaylist',
-        'filesize' => 'setFilesize',
-        'description' => 'setDescription',
-        'artwork' => 'setArtwork',
-        'track_type' => 'setTrackType',
-        'edited_by' => 'setEditedBy',
-        'owner' => 'setOwner'
+        'owner' => 'setOwner',
+        'edited_by' => 'setEditedBy'
     ];
 
     /**
@@ -392,73 +380,70 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'item_url' => 'getItemUrl',
         'id' => 'getId',
-        'name' => 'getName',
-        'mime' => 'getMime',
-        'ftype' => 'getFtype',
-        'filepath' => 'getFilepath',
+        'library' => 'getLibrary',
         'import_status' => 'getImportStatus',
-        'currently_accessing' => 'getCurrentlyAccessing',
-        'mtime' => 'getMtime',
-        'utime' => 'getUtime',
-        'lptime' => 'getLptime',
+        'filepath' => 'getFilepath',
+        'size' => 'getSize',
+        'exists' => 'getExists',
+        'mime' => 'getMime',
         'md5' => 'getMd5',
-        'track_title' => 'getTrackTitle',
-        'artist_name' => 'getArtistName',
+        'hidden' => 'getHidden',
+        'accessed' => 'getAccessed',
+        'scheduled' => 'getScheduled',
+        'part_of_list' => 'getPartOfList',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'last_played_at' => 'getLastPlayedAt',
         'bit_rate' => 'getBitRate',
         'sample_rate' => 'getSampleRate',
         'format' => 'getFormat',
-        'length' => 'getLength',
-        'album_title' => 'getAlbumTitle',
-        'genre' => 'getGenre',
-        'comments' => 'getComments',
-        'year' => 'getYear',
-        'track_number' => 'getTrackNumber',
         'channels' => 'getChannels',
-        'url' => 'getUrl',
+        'length' => 'getLength',
         'bpm' => 'getBpm',
-        'rating' => 'getRating',
-        'encoded_by' => 'getEncodedBy',
-        'disc_number' => 'getDiscNumber',
+        'replay_gain' => 'getReplayGain',
+        'cue_in' => 'getCueIn',
+        'cue_out' => 'getCueOut',
+        'name' => 'getName',
+        'description' => 'getDescription',
+        'artwork' => 'getArtwork',
+        'artist_name' => 'getArtistName',
+        'artist_url' => 'getArtistUrl',
+        'original_artist' => 'getOriginalArtist',
+        'album_title' => 'getAlbumTitle',
+        'track_title' => 'getTrackTitle',
+        'genre' => 'getGenre',
         'mood' => 'getMood',
+        'date' => 'getDate',
+        'track_number' => 'getTrackNumber',
+        'disc_number' => 'getDiscNumber',
+        'comment' => 'getComment',
+        'language' => 'getLanguage',
         'label' => 'getLabel',
+        'copyright' => 'getCopyright',
         'composer' => 'getComposer',
-        'encoder' => 'getEncoder',
-        'checksum' => 'getChecksum',
-        'lyrics' => 'getLyrics',
-        'orchestra' => 'getOrchestra',
         'conductor' => 'getConductor',
+        'orchestra' => 'getOrchestra',
+        'encoder' => 'getEncoder',
+        'encoded_by' => 'getEncodedBy',
+        'isrc' => 'getIsrc',
+        'lyrics' => 'getLyrics',
         'lyricist' => 'getLyricist',
         'original_lyricist' => 'getOriginalLyricist',
-        'radio_station_name' => 'getRadioStationName',
+        'subject' => 'getSubject',
+        'contributor' => 'getContributor',
+        'rating' => 'getRating',
+        'url' => 'getUrl',
         'info_url' => 'getInfoUrl',
-        'artist_url' => 'getArtistUrl',
         'audio_source_url' => 'getAudioSourceUrl',
-        'radio_station_url' => 'getRadioStationUrl',
         'buy_this_url' => 'getBuyThisUrl',
-        'isrc_number' => 'getIsrcNumber',
         'catalog_number' => 'getCatalogNumber',
-        'original_artist' => 'getOriginalArtist',
-        'copyright' => 'getCopyright',
+        'radio_station_name' => 'getRadioStationName',
+        'radio_station_url' => 'getRadioStationUrl',
         'report_datetime' => 'getReportDatetime',
         'report_location' => 'getReportLocation',
         'report_organization' => 'getReportOrganization',
-        'subject' => 'getSubject',
-        'contributor' => 'getContributor',
-        'language' => 'getLanguage',
-        'file_exists' => 'getFileExists',
-        'replay_gain' => 'getReplayGain',
-        'cuein' => 'getCuein',
-        'cueout' => 'getCueout',
-        'silan_check' => 'getSilanCheck',
-        'hidden' => 'getHidden',
-        'is_scheduled' => 'getIsScheduled',
-        'is_playlist' => 'getIsPlaylist',
-        'filesize' => 'getFilesize',
-        'description' => 'getDescription',
-        'artwork' => 'getArtwork',
-        'track_type' => 'getTrackType',
-        'edited_by' => 'getEditedBy',
-        'owner' => 'getOwner'
+        'owner' => 'getOwner',
+        'edited_by' => 'getEditedBy'
     ];
 
     /**
@@ -520,73 +505,70 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['name'] = $data['name'] ?? null;
-        $this->container['mime'] = $data['mime'] ?? null;
-        $this->container['ftype'] = $data['ftype'] ?? null;
-        $this->container['filepath'] = $data['filepath'] ?? null;
+        $this->container['library'] = $data['library'] ?? null;
         $this->container['import_status'] = $data['import_status'] ?? null;
-        $this->container['currently_accessing'] = $data['currently_accessing'] ?? null;
-        $this->container['mtime'] = $data['mtime'] ?? null;
-        $this->container['utime'] = $data['utime'] ?? null;
-        $this->container['lptime'] = $data['lptime'] ?? null;
+        $this->container['filepath'] = $data['filepath'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
+        $this->container['exists'] = $data['exists'] ?? null;
+        $this->container['mime'] = $data['mime'] ?? null;
         $this->container['md5'] = $data['md5'] ?? null;
-        $this->container['track_title'] = $data['track_title'] ?? null;
-        $this->container['artist_name'] = $data['artist_name'] ?? null;
+        $this->container['hidden'] = $data['hidden'] ?? null;
+        $this->container['accessed'] = $data['accessed'] ?? null;
+        $this->container['scheduled'] = $data['scheduled'] ?? null;
+        $this->container['part_of_list'] = $data['part_of_list'] ?? null;
+        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['last_played_at'] = $data['last_played_at'] ?? null;
         $this->container['bit_rate'] = $data['bit_rate'] ?? null;
         $this->container['sample_rate'] = $data['sample_rate'] ?? null;
         $this->container['format'] = $data['format'] ?? null;
-        $this->container['length'] = $data['length'] ?? null;
-        $this->container['album_title'] = $data['album_title'] ?? null;
-        $this->container['genre'] = $data['genre'] ?? null;
-        $this->container['comments'] = $data['comments'] ?? null;
-        $this->container['year'] = $data['year'] ?? null;
-        $this->container['track_number'] = $data['track_number'] ?? null;
         $this->container['channels'] = $data['channels'] ?? null;
-        $this->container['url'] = $data['url'] ?? null;
+        $this->container['length'] = $data['length'] ?? null;
         $this->container['bpm'] = $data['bpm'] ?? null;
-        $this->container['rating'] = $data['rating'] ?? null;
-        $this->container['encoded_by'] = $data['encoded_by'] ?? null;
-        $this->container['disc_number'] = $data['disc_number'] ?? null;
+        $this->container['replay_gain'] = $data['replay_gain'] ?? null;
+        $this->container['cue_in'] = $data['cue_in'] ?? null;
+        $this->container['cue_out'] = $data['cue_out'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
+        $this->container['description'] = $data['description'] ?? null;
+        $this->container['artwork'] = $data['artwork'] ?? null;
+        $this->container['artist_name'] = $data['artist_name'] ?? null;
+        $this->container['artist_url'] = $data['artist_url'] ?? null;
+        $this->container['original_artist'] = $data['original_artist'] ?? null;
+        $this->container['album_title'] = $data['album_title'] ?? null;
+        $this->container['track_title'] = $data['track_title'] ?? null;
+        $this->container['genre'] = $data['genre'] ?? null;
         $this->container['mood'] = $data['mood'] ?? null;
+        $this->container['date'] = $data['date'] ?? null;
+        $this->container['track_number'] = $data['track_number'] ?? null;
+        $this->container['disc_number'] = $data['disc_number'] ?? null;
+        $this->container['comment'] = $data['comment'] ?? null;
+        $this->container['language'] = $data['language'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
+        $this->container['copyright'] = $data['copyright'] ?? null;
         $this->container['composer'] = $data['composer'] ?? null;
-        $this->container['encoder'] = $data['encoder'] ?? null;
-        $this->container['checksum'] = $data['checksum'] ?? null;
-        $this->container['lyrics'] = $data['lyrics'] ?? null;
-        $this->container['orchestra'] = $data['orchestra'] ?? null;
         $this->container['conductor'] = $data['conductor'] ?? null;
+        $this->container['orchestra'] = $data['orchestra'] ?? null;
+        $this->container['encoder'] = $data['encoder'] ?? null;
+        $this->container['encoded_by'] = $data['encoded_by'] ?? null;
+        $this->container['isrc'] = $data['isrc'] ?? null;
+        $this->container['lyrics'] = $data['lyrics'] ?? null;
         $this->container['lyricist'] = $data['lyricist'] ?? null;
         $this->container['original_lyricist'] = $data['original_lyricist'] ?? null;
-        $this->container['radio_station_name'] = $data['radio_station_name'] ?? null;
+        $this->container['subject'] = $data['subject'] ?? null;
+        $this->container['contributor'] = $data['contributor'] ?? null;
+        $this->container['rating'] = $data['rating'] ?? null;
+        $this->container['url'] = $data['url'] ?? null;
         $this->container['info_url'] = $data['info_url'] ?? null;
-        $this->container['artist_url'] = $data['artist_url'] ?? null;
         $this->container['audio_source_url'] = $data['audio_source_url'] ?? null;
-        $this->container['radio_station_url'] = $data['radio_station_url'] ?? null;
         $this->container['buy_this_url'] = $data['buy_this_url'] ?? null;
-        $this->container['isrc_number'] = $data['isrc_number'] ?? null;
         $this->container['catalog_number'] = $data['catalog_number'] ?? null;
-        $this->container['original_artist'] = $data['original_artist'] ?? null;
-        $this->container['copyright'] = $data['copyright'] ?? null;
+        $this->container['radio_station_name'] = $data['radio_station_name'] ?? null;
+        $this->container['radio_station_url'] = $data['radio_station_url'] ?? null;
         $this->container['report_datetime'] = $data['report_datetime'] ?? null;
         $this->container['report_location'] = $data['report_location'] ?? null;
         $this->container['report_organization'] = $data['report_organization'] ?? null;
-        $this->container['subject'] = $data['subject'] ?? null;
-        $this->container['contributor'] = $data['contributor'] ?? null;
-        $this->container['language'] = $data['language'] ?? null;
-        $this->container['file_exists'] = $data['file_exists'] ?? null;
-        $this->container['replay_gain'] = $data['replay_gain'] ?? null;
-        $this->container['cuein'] = $data['cuein'] ?? null;
-        $this->container['cueout'] = $data['cueout'] ?? null;
-        $this->container['silan_check'] = $data['silan_check'] ?? null;
-        $this->container['hidden'] = $data['hidden'] ?? null;
-        $this->container['is_scheduled'] = $data['is_scheduled'] ?? null;
-        $this->container['is_playlist'] = $data['is_playlist'] ?? null;
-        $this->container['filesize'] = $data['filesize'] ?? null;
-        $this->container['description'] = $data['description'] ?? null;
-        $this->container['artwork'] = $data['artwork'] ?? null;
-        $this->container['track_type'] = $data['track_type'] ?? null;
-        $this->container['edited_by'] = $data['edited_by'] ?? null;
         $this->container['owner'] = $data['owner'] ?? null;
+        $this->container['edited_by'] = $data['edited_by'] ?? null;
     }
 
     /**
@@ -604,11 +586,27 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
+        if (!is_null($this->container['library']) && (mb_strlen($this->container['library']) > 16)) {
+            $invalidProperties[] = "invalid value for 'library', the character length must be smaller than or equal to 16.";
         }
-        if ((mb_strlen($this->container['name']) > 255)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+
+        if (!is_null($this->container['import_status']) && ($this->container['import_status'] > 2147483647)) {
+            $invalidProperties[] = "invalid value for 'import_status', must be smaller than or equal to 2147483647.";
+        }
+
+        if (!is_null($this->container['import_status']) && ($this->container['import_status'] < -2147483648)) {
+            $invalidProperties[] = "invalid value for 'import_status', must be bigger than or equal to -2147483648.";
+        }
+
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+        if (($this->container['size'] > 2147483647)) {
+            $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 2147483647.";
+        }
+
+        if (($this->container['size'] < -2147483648)) {
+            $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to -2147483648.";
         }
 
         if ($this->container['mime'] === null) {
@@ -618,45 +616,19 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'mime', the character length must be smaller than or equal to 255.";
         }
 
-        if ($this->container['ftype'] === null) {
-            $invalidProperties[] = "'ftype' can't be null";
-        }
-        if ((mb_strlen($this->container['ftype']) > 128)) {
-            $invalidProperties[] = "invalid value for 'ftype', the character length must be smaller than or equal to 128.";
-        }
-
-        if ($this->container['import_status'] === null) {
-            $invalidProperties[] = "'import_status' can't be null";
-        }
-        if (($this->container['import_status'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'import_status', must be smaller than or equal to 2147483647.";
-        }
-
-        if (($this->container['import_status'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'import_status', must be bigger than or equal to -2147483648.";
-        }
-
-        if ($this->container['currently_accessing'] === null) {
-            $invalidProperties[] = "'currently_accessing' can't be null";
-        }
-        if (($this->container['currently_accessing'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'currently_accessing', must be smaller than or equal to 2147483647.";
-        }
-
-        if (($this->container['currently_accessing'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'currently_accessing', must be bigger than or equal to -2147483648.";
-        }
-
         if (!is_null($this->container['md5']) && (mb_strlen($this->container['md5']) > 32)) {
             $invalidProperties[] = "invalid value for 'md5', the character length must be smaller than or equal to 32.";
         }
 
-        if (!is_null($this->container['track_title']) && (mb_strlen($this->container['track_title']) > 512)) {
-            $invalidProperties[] = "invalid value for 'track_title', the character length must be smaller than or equal to 512.";
+        if ($this->container['accessed'] === null) {
+            $invalidProperties[] = "'accessed' can't be null";
+        }
+        if (($this->container['accessed'] > 2147483647)) {
+            $invalidProperties[] = "invalid value for 'accessed', must be smaller than or equal to 2147483647.";
         }
 
-        if (!is_null($this->container['artist_name']) && (mb_strlen($this->container['artist_name']) > 512)) {
-            $invalidProperties[] = "invalid value for 'artist_name', the character length must be smaller than or equal to 512.";
+        if (($this->container['accessed'] < -2147483648)) {
+            $invalidProperties[] = "invalid value for 'accessed', must be bigger than or equal to -2147483648.";
         }
 
         if (!is_null($this->container['bit_rate']) && ($this->container['bit_rate'] > 2147483647)) {
@@ -679,36 +651,12 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'format', the character length must be smaller than or equal to 128.";
         }
 
-        if (!is_null($this->container['album_title']) && (mb_strlen($this->container['album_title']) > 512)) {
-            $invalidProperties[] = "invalid value for 'album_title', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['genre']) && (mb_strlen($this->container['genre']) > 64)) {
-            $invalidProperties[] = "invalid value for 'genre', the character length must be smaller than or equal to 64.";
-        }
-
-        if (!is_null($this->container['year']) && (mb_strlen($this->container['year']) > 16)) {
-            $invalidProperties[] = "invalid value for 'year', the character length must be smaller than or equal to 16.";
-        }
-
-        if (!is_null($this->container['track_number']) && ($this->container['track_number'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'track_number', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['track_number']) && ($this->container['track_number'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'track_number', must be bigger than or equal to -2147483648.";
-        }
-
         if (!is_null($this->container['channels']) && ($this->container['channels'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'channels', must be smaller than or equal to 2147483647.";
         }
 
         if (!is_null($this->container['channels']) && ($this->container['channels'] < -2147483648)) {
             $invalidProperties[] = "invalid value for 'channels', must be bigger than or equal to -2147483648.";
-        }
-
-        if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 1024.";
         }
 
         if (!is_null($this->container['bpm']) && ($this->container['bpm'] > 2147483647)) {
@@ -719,44 +667,103 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'bpm', must be bigger than or equal to -2147483648.";
         }
 
-        if (!is_null($this->container['rating']) && (mb_strlen($this->container['rating']) > 8)) {
-            $invalidProperties[] = "invalid value for 'rating', the character length must be smaller than or equal to 8.";
+        if (!is_null($this->container['replay_gain']) && !preg_match("/^-?\\d{0,6}(?:\\.\\d{0,2})?$/", $this->container['replay_gain'])) {
+            $invalidProperties[] = "invalid value for 'replay_gain', must be conform to the pattern /^-?\\d{0,6}(?:\\.\\d{0,2})?$/.";
         }
 
-        if (!is_null($this->container['encoded_by']) && (mb_strlen($this->container['encoded_by']) > 255)) {
-            $invalidProperties[] = "invalid value for 'encoded_by', the character length must be smaller than or equal to 255.";
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ((mb_strlen($this->container['name']) > 255)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['disc_number']) && (mb_strlen($this->container['disc_number']) > 8)) {
-            $invalidProperties[] = "invalid value for 'disc_number', the character length must be smaller than or equal to 8.";
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['artwork']) && (mb_strlen($this->container['artwork']) > 512)) {
+            $invalidProperties[] = "invalid value for 'artwork', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['artist_name']) && (mb_strlen($this->container['artist_name']) > 512)) {
+            $invalidProperties[] = "invalid value for 'artist_name', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['artist_url']) && (mb_strlen($this->container['artist_url']) > 512)) {
+            $invalidProperties[] = "invalid value for 'artist_url', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['original_artist']) && (mb_strlen($this->container['original_artist']) > 512)) {
+            $invalidProperties[] = "invalid value for 'original_artist', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['album_title']) && (mb_strlen($this->container['album_title']) > 512)) {
+            $invalidProperties[] = "invalid value for 'album_title', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['track_title']) && (mb_strlen($this->container['track_title']) > 512)) {
+            $invalidProperties[] = "invalid value for 'track_title', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['genre']) && (mb_strlen($this->container['genre']) > 64)) {
+            $invalidProperties[] = "invalid value for 'genre', the character length must be smaller than or equal to 64.";
         }
 
         if (!is_null($this->container['mood']) && (mb_strlen($this->container['mood']) > 64)) {
             $invalidProperties[] = "invalid value for 'mood', the character length must be smaller than or equal to 64.";
         }
 
+        if (!is_null($this->container['date']) && (mb_strlen($this->container['date']) > 16)) {
+            $invalidProperties[] = "invalid value for 'date', the character length must be smaller than or equal to 16.";
+        }
+
+        if (!is_null($this->container['track_number']) && ($this->container['track_number'] > 2147483647)) {
+            $invalidProperties[] = "invalid value for 'track_number', must be smaller than or equal to 2147483647.";
+        }
+
+        if (!is_null($this->container['track_number']) && ($this->container['track_number'] < -2147483648)) {
+            $invalidProperties[] = "invalid value for 'track_number', must be bigger than or equal to -2147483648.";
+        }
+
+        if (!is_null($this->container['disc_number']) && (mb_strlen($this->container['disc_number']) > 8)) {
+            $invalidProperties[] = "invalid value for 'disc_number', the character length must be smaller than or equal to 8.";
+        }
+
+        if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) > 512)) {
+            $invalidProperties[] = "invalid value for 'language', the character length must be smaller than or equal to 512.";
+        }
+
         if (!is_null($this->container['label']) && (mb_strlen($this->container['label']) > 512)) {
             $invalidProperties[] = "invalid value for 'label', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['copyright']) && (mb_strlen($this->container['copyright']) > 512)) {
+            $invalidProperties[] = "invalid value for 'copyright', the character length must be smaller than or equal to 512.";
         }
 
         if (!is_null($this->container['composer']) && (mb_strlen($this->container['composer']) > 512)) {
             $invalidProperties[] = "invalid value for 'composer', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['encoder']) && (mb_strlen($this->container['encoder']) > 64)) {
-            $invalidProperties[] = "invalid value for 'encoder', the character length must be smaller than or equal to 64.";
-        }
-
-        if (!is_null($this->container['checksum']) && (mb_strlen($this->container['checksum']) > 256)) {
-            $invalidProperties[] = "invalid value for 'checksum', the character length must be smaller than or equal to 256.";
+        if (!is_null($this->container['conductor']) && (mb_strlen($this->container['conductor']) > 512)) {
+            $invalidProperties[] = "invalid value for 'conductor', the character length must be smaller than or equal to 512.";
         }
 
         if (!is_null($this->container['orchestra']) && (mb_strlen($this->container['orchestra']) > 512)) {
             $invalidProperties[] = "invalid value for 'orchestra', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['conductor']) && (mb_strlen($this->container['conductor']) > 512)) {
-            $invalidProperties[] = "invalid value for 'conductor', the character length must be smaller than or equal to 512.";
+        if (!is_null($this->container['encoder']) && (mb_strlen($this->container['encoder']) > 64)) {
+            $invalidProperties[] = "invalid value for 'encoder', the character length must be smaller than or equal to 64.";
+        }
+
+        if (!is_null($this->container['encoded_by']) && (mb_strlen($this->container['encoded_by']) > 255)) {
+            $invalidProperties[] = "invalid value for 'encoded_by', the character length must be smaller than or equal to 255.";
+        }
+
+        if (!is_null($this->container['isrc']) && (mb_strlen($this->container['isrc']) > 512)) {
+            $invalidProperties[] = "invalid value for 'isrc', the character length must be smaller than or equal to 512.";
         }
 
         if (!is_null($this->container['lyricist']) && (mb_strlen($this->container['lyricist']) > 512)) {
@@ -767,44 +774,44 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'original_lyricist', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['radio_station_name']) && (mb_strlen($this->container['radio_station_name']) > 512)) {
-            $invalidProperties[] = "invalid value for 'radio_station_name', the character length must be smaller than or equal to 512.";
+        if (!is_null($this->container['subject']) && (mb_strlen($this->container['subject']) > 512)) {
+            $invalidProperties[] = "invalid value for 'subject', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['contributor']) && (mb_strlen($this->container['contributor']) > 512)) {
+            $invalidProperties[] = "invalid value for 'contributor', the character length must be smaller than or equal to 512.";
+        }
+
+        if (!is_null($this->container['rating']) && (mb_strlen($this->container['rating']) > 8)) {
+            $invalidProperties[] = "invalid value for 'rating', the character length must be smaller than or equal to 8.";
+        }
+
+        if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 1024.";
         }
 
         if (!is_null($this->container['info_url']) && (mb_strlen($this->container['info_url']) > 512)) {
             $invalidProperties[] = "invalid value for 'info_url', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['artist_url']) && (mb_strlen($this->container['artist_url']) > 512)) {
-            $invalidProperties[] = "invalid value for 'artist_url', the character length must be smaller than or equal to 512.";
-        }
-
         if (!is_null($this->container['audio_source_url']) && (mb_strlen($this->container['audio_source_url']) > 512)) {
             $invalidProperties[] = "invalid value for 'audio_source_url', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['radio_station_url']) && (mb_strlen($this->container['radio_station_url']) > 512)) {
-            $invalidProperties[] = "invalid value for 'radio_station_url', the character length must be smaller than or equal to 512.";
         }
 
         if (!is_null($this->container['buy_this_url']) && (mb_strlen($this->container['buy_this_url']) > 512)) {
             $invalidProperties[] = "invalid value for 'buy_this_url', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['isrc_number']) && (mb_strlen($this->container['isrc_number']) > 512)) {
-            $invalidProperties[] = "invalid value for 'isrc_number', the character length must be smaller than or equal to 512.";
-        }
-
         if (!is_null($this->container['catalog_number']) && (mb_strlen($this->container['catalog_number']) > 512)) {
             $invalidProperties[] = "invalid value for 'catalog_number', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['original_artist']) && (mb_strlen($this->container['original_artist']) > 512)) {
-            $invalidProperties[] = "invalid value for 'original_artist', the character length must be smaller than or equal to 512.";
+        if (!is_null($this->container['radio_station_name']) && (mb_strlen($this->container['radio_station_name']) > 512)) {
+            $invalidProperties[] = "invalid value for 'radio_station_name', the character length must be smaller than or equal to 512.";
         }
 
-        if (!is_null($this->container['copyright']) && (mb_strlen($this->container['copyright']) > 512)) {
-            $invalidProperties[] = "invalid value for 'copyright', the character length must be smaller than or equal to 512.";
+        if (!is_null($this->container['radio_station_url']) && (mb_strlen($this->container['radio_station_url']) > 512)) {
+            $invalidProperties[] = "invalid value for 'radio_station_url', the character length must be smaller than or equal to 512.";
         }
 
         if (!is_null($this->container['report_datetime']) && (mb_strlen($this->container['report_datetime']) > 32)) {
@@ -817,45 +824,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if (!is_null($this->container['report_organization']) && (mb_strlen($this->container['report_organization']) > 512)) {
             $invalidProperties[] = "invalid value for 'report_organization', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['subject']) && (mb_strlen($this->container['subject']) > 512)) {
-            $invalidProperties[] = "invalid value for 'subject', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['contributor']) && (mb_strlen($this->container['contributor']) > 512)) {
-            $invalidProperties[] = "invalid value for 'contributor', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) > 512)) {
-            $invalidProperties[] = "invalid value for 'language', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['replay_gain']) && !preg_match("/^-?\\d{0,6}(?:\\.\\d{0,2})?$/", $this->container['replay_gain'])) {
-            $invalidProperties[] = "invalid value for 'replay_gain', must be conform to the pattern /^-?\\d{0,6}(?:\\.\\d{0,2})?$/.";
-        }
-
-        if ($this->container['filesize'] === null) {
-            $invalidProperties[] = "'filesize' can't be null";
-        }
-        if (($this->container['filesize'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'filesize', must be smaller than or equal to 2147483647.";
-        }
-
-        if (($this->container['filesize'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'filesize', must be bigger than or equal to -2147483648.";
-        }
-
-        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
-            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['artwork']) && (mb_strlen($this->container['artwork']) > 512)) {
-            $invalidProperties[] = "invalid value for 'artwork', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['track_type']) && (mb_strlen($this->container['track_type']) > 16)) {
-            $invalidProperties[] = "invalid value for 'track_type', the character length must be smaller than or equal to 16.";
         }
 
         return $invalidProperties;
@@ -922,29 +890,141 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets name
+     * Gets library
      *
-     * @return string
+     * @return string|null
      */
-    public function getName()
+    public function getLibrary()
     {
-        return $this->container['name'];
+        return $this->container['library'];
     }
 
     /**
-     * Sets name
+     * Sets library
      *
-     * @param string $name name
+     * @param string|null $library library
      *
      * @return self
      */
-    public function setName($name)
+    public function setLibrary($library)
     {
-        if ((mb_strlen($name) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling File., must be smaller than or equal to 255.');
+        if (!is_null($library) && (mb_strlen($library) > 16)) {
+            throw new \InvalidArgumentException('invalid length for $library when calling File., must be smaller than or equal to 16.');
         }
 
-        $this->container['name'] = $name;
+        $this->container['library'] = $library;
+
+        return $this;
+    }
+
+    /**
+     * Gets import_status
+     *
+     * @return ImportStatusEnum|null
+     */
+    public function getImportStatus()
+    {
+        return $this->container['import_status'];
+    }
+
+    /**
+     * Sets import_status
+     *
+     * @param ImportStatusEnum|null $import_status import_status
+     *
+     * @return self
+     */
+    public function setImportStatus($import_status)
+    {
+
+        if (!is_null($import_status) && ($import_status > 2147483647)) {
+            throw new \InvalidArgumentException('invalid value for $import_status when calling File., must be smaller than or equal to 2147483647.');
+        }
+        if (!is_null($import_status) && ($import_status < -2147483648)) {
+            throw new \InvalidArgumentException('invalid value for $import_status when calling File., must be bigger than or equal to -2147483648.');
+        }
+
+        $this->container['import_status'] = $import_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets filepath
+     *
+     * @return string|null
+     */
+    public function getFilepath()
+    {
+        return $this->container['filepath'];
+    }
+
+    /**
+     * Sets filepath
+     *
+     * @param string|null $filepath filepath
+     *
+     * @return self
+     */
+    public function setFilepath($filepath)
+    {
+        $this->container['filepath'] = $filepath;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size size
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+
+        if (($size > 2147483647)) {
+            throw new \InvalidArgumentException('invalid value for $size when calling File., must be smaller than or equal to 2147483647.');
+        }
+        if (($size < -2147483648)) {
+            throw new \InvalidArgumentException('invalid value for $size when calling File., must be bigger than or equal to -2147483648.');
+        }
+
+        $this->container['size'] = $size;
+
+        return $this;
+    }
+
+    /**
+     * Gets exists
+     *
+     * @return bool|null
+     */
+    public function getExists()
+    {
+        return $this->container['exists'];
+    }
+
+    /**
+     * Sets exists
+     *
+     * @param bool|null $exists exists
+     *
+     * @return self
+     */
+    public function setExists($exists)
+    {
+        $this->container['exists'] = $exists;
 
         return $this;
     }
@@ -978,194 +1058,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets ftype
-     *
-     * @return string
-     */
-    public function getFtype()
-    {
-        return $this->container['ftype'];
-    }
-
-    /**
-     * Sets ftype
-     *
-     * @param string $ftype ftype
-     *
-     * @return self
-     */
-    public function setFtype($ftype)
-    {
-        if ((mb_strlen($ftype) > 128)) {
-            throw new \InvalidArgumentException('invalid length for $ftype when calling File., must be smaller than or equal to 128.');
-        }
-
-        $this->container['ftype'] = $ftype;
-
-        return $this;
-    }
-
-    /**
-     * Gets filepath
-     *
-     * @return string|null
-     */
-    public function getFilepath()
-    {
-        return $this->container['filepath'];
-    }
-
-    /**
-     * Sets filepath
-     *
-     * @param string|null $filepath filepath
-     *
-     * @return self
-     */
-    public function setFilepath($filepath)
-    {
-        $this->container['filepath'] = $filepath;
-
-        return $this;
-    }
-
-    /**
-     * Gets import_status
-     *
-     * @return int
-     */
-    public function getImportStatus()
-    {
-        return $this->container['import_status'];
-    }
-
-    /**
-     * Sets import_status
-     *
-     * @param int $import_status import_status
-     *
-     * @return self
-     */
-    public function setImportStatus($import_status)
-    {
-
-        if (($import_status > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $import_status when calling File., must be smaller than or equal to 2147483647.');
-        }
-        if (($import_status < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $import_status when calling File., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['import_status'] = $import_status;
-
-        return $this;
-    }
-
-    /**
-     * Gets currently_accessing
-     *
-     * @return int
-     */
-    public function getCurrentlyAccessing()
-    {
-        return $this->container['currently_accessing'];
-    }
-
-    /**
-     * Sets currently_accessing
-     *
-     * @param int $currently_accessing currently_accessing
-     *
-     * @return self
-     */
-    public function setCurrentlyAccessing($currently_accessing)
-    {
-
-        if (($currently_accessing > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $currently_accessing when calling File., must be smaller than or equal to 2147483647.');
-        }
-        if (($currently_accessing < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $currently_accessing when calling File., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['currently_accessing'] = $currently_accessing;
-
-        return $this;
-    }
-
-    /**
-     * Gets mtime
-     *
-     * @return \DateTime|null
-     */
-    public function getMtime()
-    {
-        return $this->container['mtime'];
-    }
-
-    /**
-     * Sets mtime
-     *
-     * @param \DateTime|null $mtime mtime
-     *
-     * @return self
-     */
-    public function setMtime($mtime)
-    {
-        $this->container['mtime'] = $mtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets utime
-     *
-     * @return \DateTime|null
-     */
-    public function getUtime()
-    {
-        return $this->container['utime'];
-    }
-
-    /**
-     * Sets utime
-     *
-     * @param \DateTime|null $utime utime
-     *
-     * @return self
-     */
-    public function setUtime($utime)
-    {
-        $this->container['utime'] = $utime;
-
-        return $this;
-    }
-
-    /**
-     * Gets lptime
-     *
-     * @return \DateTime|null
-     */
-    public function getLptime()
-    {
-        return $this->container['lptime'];
-    }
-
-    /**
-     * Sets lptime
-     *
-     * @param \DateTime|null $lptime lptime
-     *
-     * @return self
-     */
-    public function setLptime($lptime)
-    {
-        $this->container['lptime'] = $lptime;
-
-        return $this;
-    }
-
-    /**
      * Gets md5
      *
      * @return string|null
@@ -1194,57 +1086,177 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets track_title
+     * Gets hidden
      *
-     * @return string|null
+     * @return bool|null
      */
-    public function getTrackTitle()
+    public function getHidden()
     {
-        return $this->container['track_title'];
+        return $this->container['hidden'];
     }
 
     /**
-     * Sets track_title
+     * Sets hidden
      *
-     * @param string|null $track_title track_title
+     * @param bool|null $hidden hidden
      *
      * @return self
      */
-    public function setTrackTitle($track_title)
+    public function setHidden($hidden)
     {
-        if (!is_null($track_title) && (mb_strlen($track_title) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $track_title when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['track_title'] = $track_title;
+        $this->container['hidden'] = $hidden;
 
         return $this;
     }
 
     /**
-     * Gets artist_name
+     * Gets accessed
      *
-     * @return string|null
+     * @return int
      */
-    public function getArtistName()
+    public function getAccessed()
     {
-        return $this->container['artist_name'];
+        return $this->container['accessed'];
     }
 
     /**
-     * Sets artist_name
+     * Sets accessed
      *
-     * @param string|null $artist_name artist_name
+     * @param int $accessed accessed
      *
      * @return self
      */
-    public function setArtistName($artist_name)
+    public function setAccessed($accessed)
     {
-        if (!is_null($artist_name) && (mb_strlen($artist_name) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $artist_name when calling File., must be smaller than or equal to 512.');
+
+        if (($accessed > 2147483647)) {
+            throw new \InvalidArgumentException('invalid value for $accessed when calling File., must be smaller than or equal to 2147483647.');
+        }
+        if (($accessed < -2147483648)) {
+            throw new \InvalidArgumentException('invalid value for $accessed when calling File., must be bigger than or equal to -2147483648.');
         }
 
-        $this->container['artist_name'] = $artist_name;
+        $this->container['accessed'] = $accessed;
+
+        return $this;
+    }
+
+    /**
+     * Gets scheduled
+     *
+     * @return bool|null
+     */
+    public function getScheduled()
+    {
+        return $this->container['scheduled'];
+    }
+
+    /**
+     * Sets scheduled
+     *
+     * @param bool|null $scheduled scheduled
+     *
+     * @return self
+     */
+    public function setScheduled($scheduled)
+    {
+        $this->container['scheduled'] = $scheduled;
+
+        return $this;
+    }
+
+    /**
+     * Gets part_of_list
+     *
+     * @return bool|null
+     */
+    public function getPartOfList()
+    {
+        return $this->container['part_of_list'];
+    }
+
+    /**
+     * Sets part_of_list
+     *
+     * @param bool|null $part_of_list part_of_list
+     *
+     * @return self
+     */
+    public function setPartOfList($part_of_list)
+    {
+        $this->container['part_of_list'] = $part_of_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at created_at
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     *
+     * @param \DateTime|null $updated_at updated_at
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_played_at
+     *
+     * @return \DateTime|null
+     */
+    public function getLastPlayedAt()
+    {
+        return $this->container['last_played_at'];
+    }
+
+    /**
+     * Sets last_played_at
+     *
+     * @param \DateTime|null $last_played_at last_played_at
+     *
+     * @return self
+     */
+    public function setLastPlayedAt($last_played_at)
+    {
+        $this->container['last_played_at'] = $last_played_at;
 
         return $this;
     }
@@ -1342,170 +1354,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets length
-     *
-     * @return string|null
-     */
-    public function getLength()
-    {
-        return $this->container['length'];
-    }
-
-    /**
-     * Sets length
-     *
-     * @param string|null $length length
-     *
-     * @return self
-     */
-    public function setLength($length)
-    {
-        $this->container['length'] = $length;
-
-        return $this;
-    }
-
-    /**
-     * Gets album_title
-     *
-     * @return string|null
-     */
-    public function getAlbumTitle()
-    {
-        return $this->container['album_title'];
-    }
-
-    /**
-     * Sets album_title
-     *
-     * @param string|null $album_title album_title
-     *
-     * @return self
-     */
-    public function setAlbumTitle($album_title)
-    {
-        if (!is_null($album_title) && (mb_strlen($album_title) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $album_title when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['album_title'] = $album_title;
-
-        return $this;
-    }
-
-    /**
-     * Gets genre
-     *
-     * @return string|null
-     */
-    public function getGenre()
-    {
-        return $this->container['genre'];
-    }
-
-    /**
-     * Sets genre
-     *
-     * @param string|null $genre genre
-     *
-     * @return self
-     */
-    public function setGenre($genre)
-    {
-        if (!is_null($genre) && (mb_strlen($genre) > 64)) {
-            throw new \InvalidArgumentException('invalid length for $genre when calling File., must be smaller than or equal to 64.');
-        }
-
-        $this->container['genre'] = $genre;
-
-        return $this;
-    }
-
-    /**
-     * Gets comments
-     *
-     * @return string|null
-     */
-    public function getComments()
-    {
-        return $this->container['comments'];
-    }
-
-    /**
-     * Sets comments
-     *
-     * @param string|null $comments comments
-     *
-     * @return self
-     */
-    public function setComments($comments)
-    {
-        $this->container['comments'] = $comments;
-
-        return $this;
-    }
-
-    /**
-     * Gets year
-     *
-     * @return string|null
-     */
-    public function getYear()
-    {
-        return $this->container['year'];
-    }
-
-    /**
-     * Sets year
-     *
-     * @param string|null $year year
-     *
-     * @return self
-     */
-    public function setYear($year)
-    {
-        if (!is_null($year) && (mb_strlen($year) > 16)) {
-            throw new \InvalidArgumentException('invalid length for $year when calling File., must be smaller than or equal to 16.');
-        }
-
-        $this->container['year'] = $year;
-
-        return $this;
-    }
-
-    /**
-     * Gets track_number
-     *
-     * @return int|null
-     */
-    public function getTrackNumber()
-    {
-        return $this->container['track_number'];
-    }
-
-    /**
-     * Sets track_number
-     *
-     * @param int|null $track_number track_number
-     *
-     * @return self
-     */
-    public function setTrackNumber($track_number)
-    {
-
-        if (!is_null($track_number) && ($track_number > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $track_number when calling File., must be smaller than or equal to 2147483647.');
-        }
-        if (!is_null($track_number) && ($track_number < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $track_number when calling File., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['track_number'] = $track_number;
-
-        return $this;
-    }
-
-    /**
      * Gets channels
      *
      * @return int|null
@@ -1538,29 +1386,25 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets url
+     * Gets length
      *
      * @return string|null
      */
-    public function getUrl()
+    public function getLength()
     {
-        return $this->container['url'];
+        return $this->container['length'];
     }
 
     /**
-     * Sets url
+     * Sets length
      *
-     * @param string|null $url url
+     * @param string|null $length length
      *
      * @return self
      */
-    public function setUrl($url)
+    public function setLength($length)
     {
-        if (!is_null($url) && (mb_strlen($url) > 1024)) {
-            throw new \InvalidArgumentException('invalid length for $url when calling File., must be smaller than or equal to 1024.');
-        }
-
-        $this->container['url'] = $url;
+        $this->container['length'] = $length;
 
         return $this;
     }
@@ -1598,85 +1442,330 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets rating
+     * Gets replay_gain
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getRating()
+    public function getReplayGain()
     {
-        return $this->container['rating'];
+        return $this->container['replay_gain'];
     }
 
     /**
-     * Sets rating
+     * Sets replay_gain
      *
-     * @param string|null $rating rating
+     * @param float|null $replay_gain replay_gain
      *
      * @return self
      */
-    public function setRating($rating)
+    public function setReplayGain($replay_gain)
     {
-        if (!is_null($rating) && (mb_strlen($rating) > 8)) {
-            throw new \InvalidArgumentException('invalid length for $rating when calling File., must be smaller than or equal to 8.');
+
+        if (!is_null($replay_gain) && (!preg_match("/^-?\\d{0,6}(?:\\.\\d{0,2})?$/", $replay_gain))) {
+            throw new \InvalidArgumentException("invalid value for $replay_gain when calling File., must conform to the pattern /^-?\\d{0,6}(?:\\.\\d{0,2})?$/.");
         }
 
-        $this->container['rating'] = $rating;
+        $this->container['replay_gain'] = $replay_gain;
 
         return $this;
     }
 
     /**
-     * Gets encoded_by
+     * Gets cue_in
      *
      * @return string|null
      */
-    public function getEncodedBy()
+    public function getCueIn()
     {
-        return $this->container['encoded_by'];
+        return $this->container['cue_in'];
     }
 
     /**
-     * Sets encoded_by
+     * Sets cue_in
      *
-     * @param string|null $encoded_by encoded_by
+     * @param string|null $cue_in cue_in
      *
      * @return self
      */
-    public function setEncodedBy($encoded_by)
+    public function setCueIn($cue_in)
     {
-        if (!is_null($encoded_by) && (mb_strlen($encoded_by) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $encoded_by when calling File., must be smaller than or equal to 255.');
-        }
-
-        $this->container['encoded_by'] = $encoded_by;
+        $this->container['cue_in'] = $cue_in;
 
         return $this;
     }
 
     /**
-     * Gets disc_number
+     * Gets cue_out
      *
      * @return string|null
      */
-    public function getDiscNumber()
+    public function getCueOut()
     {
-        return $this->container['disc_number'];
+        return $this->container['cue_out'];
     }
 
     /**
-     * Sets disc_number
+     * Sets cue_out
      *
-     * @param string|null $disc_number disc_number
+     * @param string|null $cue_out cue_out
      *
      * @return self
      */
-    public function setDiscNumber($disc_number)
+    public function setCueOut($cue_out)
     {
-        if (!is_null($disc_number) && (mb_strlen($disc_number) > 8)) {
-            throw new \InvalidArgumentException('invalid length for $disc_number when calling File., must be smaller than or equal to 8.');
+        $this->container['cue_out'] = $cue_out;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        if ((mb_strlen($name) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling File., must be smaller than or equal to 255.');
         }
 
-        $this->container['disc_number'] = $disc_number;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string|null
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string|null $description description
+     *
+     * @return self
+     */
+    public function setDescription($description)
+    {
+        if (!is_null($description) && (mb_strlen($description) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets artwork
+     *
+     * @return string|null
+     */
+    public function getArtwork()
+    {
+        return $this->container['artwork'];
+    }
+
+    /**
+     * Sets artwork
+     *
+     * @param string|null $artwork artwork
+     *
+     * @return self
+     */
+    public function setArtwork($artwork)
+    {
+        if (!is_null($artwork) && (mb_strlen($artwork) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $artwork when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['artwork'] = $artwork;
+
+        return $this;
+    }
+
+    /**
+     * Gets artist_name
+     *
+     * @return string|null
+     */
+    public function getArtistName()
+    {
+        return $this->container['artist_name'];
+    }
+
+    /**
+     * Sets artist_name
+     *
+     * @param string|null $artist_name artist_name
+     *
+     * @return self
+     */
+    public function setArtistName($artist_name)
+    {
+        if (!is_null($artist_name) && (mb_strlen($artist_name) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $artist_name when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['artist_name'] = $artist_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets artist_url
+     *
+     * @return string|null
+     */
+    public function getArtistUrl()
+    {
+        return $this->container['artist_url'];
+    }
+
+    /**
+     * Sets artist_url
+     *
+     * @param string|null $artist_url artist_url
+     *
+     * @return self
+     */
+    public function setArtistUrl($artist_url)
+    {
+        if (!is_null($artist_url) && (mb_strlen($artist_url) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $artist_url when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['artist_url'] = $artist_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_artist
+     *
+     * @return string|null
+     */
+    public function getOriginalArtist()
+    {
+        return $this->container['original_artist'];
+    }
+
+    /**
+     * Sets original_artist
+     *
+     * @param string|null $original_artist original_artist
+     *
+     * @return self
+     */
+    public function setOriginalArtist($original_artist)
+    {
+        if (!is_null($original_artist) && (mb_strlen($original_artist) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $original_artist when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['original_artist'] = $original_artist;
+
+        return $this;
+    }
+
+    /**
+     * Gets album_title
+     *
+     * @return string|null
+     */
+    public function getAlbumTitle()
+    {
+        return $this->container['album_title'];
+    }
+
+    /**
+     * Sets album_title
+     *
+     * @param string|null $album_title album_title
+     *
+     * @return self
+     */
+    public function setAlbumTitle($album_title)
+    {
+        if (!is_null($album_title) && (mb_strlen($album_title) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $album_title when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['album_title'] = $album_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets track_title
+     *
+     * @return string|null
+     */
+    public function getTrackTitle()
+    {
+        return $this->container['track_title'];
+    }
+
+    /**
+     * Sets track_title
+     *
+     * @param string|null $track_title track_title
+     *
+     * @return self
+     */
+    public function setTrackTitle($track_title)
+    {
+        if (!is_null($track_title) && (mb_strlen($track_title) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $track_title when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['track_title'] = $track_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets genre
+     *
+     * @return string|null
+     */
+    public function getGenre()
+    {
+        return $this->container['genre'];
+    }
+
+    /**
+     * Sets genre
+     *
+     * @param string|null $genre genre
+     *
+     * @return self
+     */
+    public function setGenre($genre)
+    {
+        if (!is_null($genre) && (mb_strlen($genre) > 64)) {
+            throw new \InvalidArgumentException('invalid length for $genre when calling File., must be smaller than or equal to 64.');
+        }
+
+        $this->container['genre'] = $genre;
 
         return $this;
     }
@@ -1710,6 +1799,146 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets date
+     *
+     * @return string|null
+     */
+    public function getDate()
+    {
+        return $this->container['date'];
+    }
+
+    /**
+     * Sets date
+     *
+     * @param string|null $date date
+     *
+     * @return self
+     */
+    public function setDate($date)
+    {
+        if (!is_null($date) && (mb_strlen($date) > 16)) {
+            throw new \InvalidArgumentException('invalid length for $date when calling File., must be smaller than or equal to 16.');
+        }
+
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets track_number
+     *
+     * @return int|null
+     */
+    public function getTrackNumber()
+    {
+        return $this->container['track_number'];
+    }
+
+    /**
+     * Sets track_number
+     *
+     * @param int|null $track_number track_number
+     *
+     * @return self
+     */
+    public function setTrackNumber($track_number)
+    {
+
+        if (!is_null($track_number) && ($track_number > 2147483647)) {
+            throw new \InvalidArgumentException('invalid value for $track_number when calling File., must be smaller than or equal to 2147483647.');
+        }
+        if (!is_null($track_number) && ($track_number < -2147483648)) {
+            throw new \InvalidArgumentException('invalid value for $track_number when calling File., must be bigger than or equal to -2147483648.');
+        }
+
+        $this->container['track_number'] = $track_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets disc_number
+     *
+     * @return string|null
+     */
+    public function getDiscNumber()
+    {
+        return $this->container['disc_number'];
+    }
+
+    /**
+     * Sets disc_number
+     *
+     * @param string|null $disc_number disc_number
+     *
+     * @return self
+     */
+    public function setDiscNumber($disc_number)
+    {
+        if (!is_null($disc_number) && (mb_strlen($disc_number) > 8)) {
+            throw new \InvalidArgumentException('invalid length for $disc_number when calling File., must be smaller than or equal to 8.');
+        }
+
+        $this->container['disc_number'] = $disc_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets comment
+     *
+     * @return string|null
+     */
+    public function getComment()
+    {
+        return $this->container['comment'];
+    }
+
+    /**
+     * Sets comment
+     *
+     * @param string|null $comment comment
+     *
+     * @return self
+     */
+    public function setComment($comment)
+    {
+        $this->container['comment'] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return string|null
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param string|null $language language
+     *
+     * @return self
+     */
+    public function setLanguage($language)
+    {
+        if (!is_null($language) && (mb_strlen($language) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $language when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
      * Gets label
      *
      * @return string|null
@@ -1733,6 +1962,34 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets copyright
+     *
+     * @return string|null
+     */
+    public function getCopyright()
+    {
+        return $this->container['copyright'];
+    }
+
+    /**
+     * Sets copyright
+     *
+     * @param string|null $copyright copyright
+     *
+     * @return self
+     */
+    public function setCopyright($copyright)
+    {
+        if (!is_null($copyright) && (mb_strlen($copyright) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $copyright when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['copyright'] = $copyright;
 
         return $this;
     }
@@ -1766,81 +2023,29 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets encoder
+     * Gets conductor
      *
      * @return string|null
      */
-    public function getEncoder()
+    public function getConductor()
     {
-        return $this->container['encoder'];
+        return $this->container['conductor'];
     }
 
     /**
-     * Sets encoder
+     * Sets conductor
      *
-     * @param string|null $encoder encoder
+     * @param string|null $conductor conductor
      *
      * @return self
      */
-    public function setEncoder($encoder)
+    public function setConductor($conductor)
     {
-        if (!is_null($encoder) && (mb_strlen($encoder) > 64)) {
-            throw new \InvalidArgumentException('invalid length for $encoder when calling File., must be smaller than or equal to 64.');
+        if (!is_null($conductor) && (mb_strlen($conductor) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $conductor when calling File., must be smaller than or equal to 512.');
         }
 
-        $this->container['encoder'] = $encoder;
-
-        return $this;
-    }
-
-    /**
-     * Gets checksum
-     *
-     * @return string|null
-     */
-    public function getChecksum()
-    {
-        return $this->container['checksum'];
-    }
-
-    /**
-     * Sets checksum
-     *
-     * @param string|null $checksum checksum
-     *
-     * @return self
-     */
-    public function setChecksum($checksum)
-    {
-        if (!is_null($checksum) && (mb_strlen($checksum) > 256)) {
-            throw new \InvalidArgumentException('invalid length for $checksum when calling File., must be smaller than or equal to 256.');
-        }
-
-        $this->container['checksum'] = $checksum;
-
-        return $this;
-    }
-
-    /**
-     * Gets lyrics
-     *
-     * @return string|null
-     */
-    public function getLyrics()
-    {
-        return $this->container['lyrics'];
-    }
-
-    /**
-     * Sets lyrics
-     *
-     * @param string|null $lyrics lyrics
-     *
-     * @return self
-     */
-    public function setLyrics($lyrics)
-    {
-        $this->container['lyrics'] = $lyrics;
+        $this->container['conductor'] = $conductor;
 
         return $this;
     }
@@ -1874,29 +2079,109 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets conductor
+     * Gets encoder
      *
      * @return string|null
      */
-    public function getConductor()
+    public function getEncoder()
     {
-        return $this->container['conductor'];
+        return $this->container['encoder'];
     }
 
     /**
-     * Sets conductor
+     * Sets encoder
      *
-     * @param string|null $conductor conductor
+     * @param string|null $encoder encoder
      *
      * @return self
      */
-    public function setConductor($conductor)
+    public function setEncoder($encoder)
     {
-        if (!is_null($conductor) && (mb_strlen($conductor) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $conductor when calling File., must be smaller than or equal to 512.');
+        if (!is_null($encoder) && (mb_strlen($encoder) > 64)) {
+            throw new \InvalidArgumentException('invalid length for $encoder when calling File., must be smaller than or equal to 64.');
         }
 
-        $this->container['conductor'] = $conductor;
+        $this->container['encoder'] = $encoder;
+
+        return $this;
+    }
+
+    /**
+     * Gets encoded_by
+     *
+     * @return string|null
+     */
+    public function getEncodedBy()
+    {
+        return $this->container['encoded_by'];
+    }
+
+    /**
+     * Sets encoded_by
+     *
+     * @param string|null $encoded_by encoded_by
+     *
+     * @return self
+     */
+    public function setEncodedBy($encoded_by)
+    {
+        if (!is_null($encoded_by) && (mb_strlen($encoded_by) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $encoded_by when calling File., must be smaller than or equal to 255.');
+        }
+
+        $this->container['encoded_by'] = $encoded_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets isrc
+     *
+     * @return string|null
+     */
+    public function getIsrc()
+    {
+        return $this->container['isrc'];
+    }
+
+    /**
+     * Sets isrc
+     *
+     * @param string|null $isrc isrc
+     *
+     * @return self
+     */
+    public function setIsrc($isrc)
+    {
+        if (!is_null($isrc) && (mb_strlen($isrc) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $isrc when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['isrc'] = $isrc;
+
+        return $this;
+    }
+
+    /**
+     * Gets lyrics
+     *
+     * @return string|null
+     */
+    public function getLyrics()
+    {
+        return $this->container['lyrics'];
+    }
+
+    /**
+     * Sets lyrics
+     *
+     * @param string|null $lyrics lyrics
+     *
+     * @return self
+     */
+    public function setLyrics($lyrics)
+    {
+        $this->container['lyrics'] = $lyrics;
 
         return $this;
     }
@@ -1958,29 +2243,113 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets radio_station_name
+     * Gets subject
      *
      * @return string|null
      */
-    public function getRadioStationName()
+    public function getSubject()
     {
-        return $this->container['radio_station_name'];
+        return $this->container['subject'];
     }
 
     /**
-     * Sets radio_station_name
+     * Sets subject
      *
-     * @param string|null $radio_station_name radio_station_name
+     * @param string|null $subject subject
      *
      * @return self
      */
-    public function setRadioStationName($radio_station_name)
+    public function setSubject($subject)
     {
-        if (!is_null($radio_station_name) && (mb_strlen($radio_station_name) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $radio_station_name when calling File., must be smaller than or equal to 512.');
+        if (!is_null($subject) && (mb_strlen($subject) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $subject when calling File., must be smaller than or equal to 512.');
         }
 
-        $this->container['radio_station_name'] = $radio_station_name;
+        $this->container['subject'] = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Gets contributor
+     *
+     * @return string|null
+     */
+    public function getContributor()
+    {
+        return $this->container['contributor'];
+    }
+
+    /**
+     * Sets contributor
+     *
+     * @param string|null $contributor contributor
+     *
+     * @return self
+     */
+    public function setContributor($contributor)
+    {
+        if (!is_null($contributor) && (mb_strlen($contributor) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $contributor when calling File., must be smaller than or equal to 512.');
+        }
+
+        $this->container['contributor'] = $contributor;
+
+        return $this;
+    }
+
+    /**
+     * Gets rating
+     *
+     * @return string|null
+     */
+    public function getRating()
+    {
+        return $this->container['rating'];
+    }
+
+    /**
+     * Sets rating
+     *
+     * @param string|null $rating rating
+     *
+     * @return self
+     */
+    public function setRating($rating)
+    {
+        if (!is_null($rating) && (mb_strlen($rating) > 8)) {
+            throw new \InvalidArgumentException('invalid length for $rating when calling File., must be smaller than or equal to 8.');
+        }
+
+        $this->container['rating'] = $rating;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     *
+     * @return string|null
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     *
+     * @param string|null $url url
+     *
+     * @return self
+     */
+    public function setUrl($url)
+    {
+        if (!is_null($url) && (mb_strlen($url) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $url when calling File., must be smaller than or equal to 1024.');
+        }
+
+        $this->container['url'] = $url;
 
         return $this;
     }
@@ -2014,34 +2383,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets artist_url
-     *
-     * @return string|null
-     */
-    public function getArtistUrl()
-    {
-        return $this->container['artist_url'];
-    }
-
-    /**
-     * Sets artist_url
-     *
-     * @param string|null $artist_url artist_url
-     *
-     * @return self
-     */
-    public function setArtistUrl($artist_url)
-    {
-        if (!is_null($artist_url) && (mb_strlen($artist_url) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $artist_url when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['artist_url'] = $artist_url;
-
-        return $this;
-    }
-
-    /**
      * Gets audio_source_url
      *
      * @return string|null
@@ -2065,34 +2406,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['audio_source_url'] = $audio_source_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets radio_station_url
-     *
-     * @return string|null
-     */
-    public function getRadioStationUrl()
-    {
-        return $this->container['radio_station_url'];
-    }
-
-    /**
-     * Sets radio_station_url
-     *
-     * @param string|null $radio_station_url radio_station_url
-     *
-     * @return self
-     */
-    public function setRadioStationUrl($radio_station_url)
-    {
-        if (!is_null($radio_station_url) && (mb_strlen($radio_station_url) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $radio_station_url when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['radio_station_url'] = $radio_station_url;
 
         return $this;
     }
@@ -2126,34 +2439,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets isrc_number
-     *
-     * @return string|null
-     */
-    public function getIsrcNumber()
-    {
-        return $this->container['isrc_number'];
-    }
-
-    /**
-     * Sets isrc_number
-     *
-     * @param string|null $isrc_number isrc_number
-     *
-     * @return self
-     */
-    public function setIsrcNumber($isrc_number)
-    {
-        if (!is_null($isrc_number) && (mb_strlen($isrc_number) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $isrc_number when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['isrc_number'] = $isrc_number;
-
-        return $this;
-    }
-
-    /**
      * Gets catalog_number
      *
      * @return string|null
@@ -2182,57 +2467,57 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets original_artist
+     * Gets radio_station_name
      *
      * @return string|null
      */
-    public function getOriginalArtist()
+    public function getRadioStationName()
     {
-        return $this->container['original_artist'];
+        return $this->container['radio_station_name'];
     }
 
     /**
-     * Sets original_artist
+     * Sets radio_station_name
      *
-     * @param string|null $original_artist original_artist
+     * @param string|null $radio_station_name radio_station_name
      *
      * @return self
      */
-    public function setOriginalArtist($original_artist)
+    public function setRadioStationName($radio_station_name)
     {
-        if (!is_null($original_artist) && (mb_strlen($original_artist) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $original_artist when calling File., must be smaller than or equal to 512.');
+        if (!is_null($radio_station_name) && (mb_strlen($radio_station_name) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $radio_station_name when calling File., must be smaller than or equal to 512.');
         }
 
-        $this->container['original_artist'] = $original_artist;
+        $this->container['radio_station_name'] = $radio_station_name;
 
         return $this;
     }
 
     /**
-     * Gets copyright
+     * Gets radio_station_url
      *
      * @return string|null
      */
-    public function getCopyright()
+    public function getRadioStationUrl()
     {
-        return $this->container['copyright'];
+        return $this->container['radio_station_url'];
     }
 
     /**
-     * Sets copyright
+     * Sets radio_station_url
      *
-     * @param string|null $copyright copyright
+     * @param string|null $radio_station_url radio_station_url
      *
      * @return self
      */
-    public function setCopyright($copyright)
+    public function setRadioStationUrl($radio_station_url)
     {
-        if (!is_null($copyright) && (mb_strlen($copyright) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $copyright when calling File., must be smaller than or equal to 512.');
+        if (!is_null($radio_station_url) && (mb_strlen($radio_station_url) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $radio_station_url when calling File., must be smaller than or equal to 512.');
         }
 
-        $this->container['copyright'] = $copyright;
+        $this->container['radio_station_url'] = $radio_station_url;
 
         return $this;
     }
@@ -2322,398 +2607,25 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets subject
+     * Gets owner
      *
      * @return string|null
      */
-    public function getSubject()
+    public function getOwner()
     {
-        return $this->container['subject'];
+        return $this->container['owner'];
     }
 
     /**
-     * Sets subject
+     * Sets owner
      *
-     * @param string|null $subject subject
+     * @param string|null $owner owner
      *
      * @return self
      */
-    public function setSubject($subject)
+    public function setOwner($owner)
     {
-        if (!is_null($subject) && (mb_strlen($subject) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $subject when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['subject'] = $subject;
-
-        return $this;
-    }
-
-    /**
-     * Gets contributor
-     *
-     * @return string|null
-     */
-    public function getContributor()
-    {
-        return $this->container['contributor'];
-    }
-
-    /**
-     * Sets contributor
-     *
-     * @param string|null $contributor contributor
-     *
-     * @return self
-     */
-    public function setContributor($contributor)
-    {
-        if (!is_null($contributor) && (mb_strlen($contributor) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $contributor when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['contributor'] = $contributor;
-
-        return $this;
-    }
-
-    /**
-     * Gets language
-     *
-     * @return string|null
-     */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-     * Sets language
-     *
-     * @param string|null $language language
-     *
-     * @return self
-     */
-    public function setLanguage($language)
-    {
-        if (!is_null($language) && (mb_strlen($language) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $language when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['language'] = $language;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_exists
-     *
-     * @return bool|null
-     */
-    public function getFileExists()
-    {
-        return $this->container['file_exists'];
-    }
-
-    /**
-     * Sets file_exists
-     *
-     * @param bool|null $file_exists file_exists
-     *
-     * @return self
-     */
-    public function setFileExists($file_exists)
-    {
-        $this->container['file_exists'] = $file_exists;
-
-        return $this;
-    }
-
-    /**
-     * Gets replay_gain
-     *
-     * @return float|null
-     */
-    public function getReplayGain()
-    {
-        return $this->container['replay_gain'];
-    }
-
-    /**
-     * Sets replay_gain
-     *
-     * @param float|null $replay_gain replay_gain
-     *
-     * @return self
-     */
-    public function setReplayGain($replay_gain)
-    {
-
-        if (!is_null($replay_gain) && (!preg_match("/^-?\\d{0,6}(?:\\.\\d{0,2})?$/", $replay_gain))) {
-            throw new \InvalidArgumentException("invalid value for $replay_gain when calling File., must conform to the pattern /^-?\\d{0,6}(?:\\.\\d{0,2})?$/.");
-        }
-
-        $this->container['replay_gain'] = $replay_gain;
-
-        return $this;
-    }
-
-    /**
-     * Gets cuein
-     *
-     * @return string|null
-     */
-    public function getCuein()
-    {
-        return $this->container['cuein'];
-    }
-
-    /**
-     * Sets cuein
-     *
-     * @param string|null $cuein cuein
-     *
-     * @return self
-     */
-    public function setCuein($cuein)
-    {
-        $this->container['cuein'] = $cuein;
-
-        return $this;
-    }
-
-    /**
-     * Gets cueout
-     *
-     * @return string|null
-     */
-    public function getCueout()
-    {
-        return $this->container['cueout'];
-    }
-
-    /**
-     * Sets cueout
-     *
-     * @param string|null $cueout cueout
-     *
-     * @return self
-     */
-    public function setCueout($cueout)
-    {
-        $this->container['cueout'] = $cueout;
-
-        return $this;
-    }
-
-    /**
-     * Gets silan_check
-     *
-     * @return bool|null
-     */
-    public function getSilanCheck()
-    {
-        return $this->container['silan_check'];
-    }
-
-    /**
-     * Sets silan_check
-     *
-     * @param bool|null $silan_check silan_check
-     *
-     * @return self
-     */
-    public function setSilanCheck($silan_check)
-    {
-        $this->container['silan_check'] = $silan_check;
-
-        return $this;
-    }
-
-    /**
-     * Gets hidden
-     *
-     * @return bool|null
-     */
-    public function getHidden()
-    {
-        return $this->container['hidden'];
-    }
-
-    /**
-     * Sets hidden
-     *
-     * @param bool|null $hidden hidden
-     *
-     * @return self
-     */
-    public function setHidden($hidden)
-    {
-        $this->container['hidden'] = $hidden;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_scheduled
-     *
-     * @return bool|null
-     */
-    public function getIsScheduled()
-    {
-        return $this->container['is_scheduled'];
-    }
-
-    /**
-     * Sets is_scheduled
-     *
-     * @param bool|null $is_scheduled is_scheduled
-     *
-     * @return self
-     */
-    public function setIsScheduled($is_scheduled)
-    {
-        $this->container['is_scheduled'] = $is_scheduled;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_playlist
-     *
-     * @return bool|null
-     */
-    public function getIsPlaylist()
-    {
-        return $this->container['is_playlist'];
-    }
-
-    /**
-     * Sets is_playlist
-     *
-     * @param bool|null $is_playlist is_playlist
-     *
-     * @return self
-     */
-    public function setIsPlaylist($is_playlist)
-    {
-        $this->container['is_playlist'] = $is_playlist;
-
-        return $this;
-    }
-
-    /**
-     * Gets filesize
-     *
-     * @return int
-     */
-    public function getFilesize()
-    {
-        return $this->container['filesize'];
-    }
-
-    /**
-     * Sets filesize
-     *
-     * @param int $filesize filesize
-     *
-     * @return self
-     */
-    public function setFilesize($filesize)
-    {
-
-        if (($filesize > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $filesize when calling File., must be smaller than or equal to 2147483647.');
-        }
-        if (($filesize < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $filesize when calling File., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['filesize'] = $filesize;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string|null
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string|null $description description
-     *
-     * @return self
-     */
-    public function setDescription($description)
-    {
-        if (!is_null($description) && (mb_strlen($description) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $description when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets artwork
-     *
-     * @return string|null
-     */
-    public function getArtwork()
-    {
-        return $this->container['artwork'];
-    }
-
-    /**
-     * Sets artwork
-     *
-     * @param string|null $artwork artwork
-     *
-     * @return self
-     */
-    public function setArtwork($artwork)
-    {
-        if (!is_null($artwork) && (mb_strlen($artwork) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $artwork when calling File., must be smaller than or equal to 512.');
-        }
-
-        $this->container['artwork'] = $artwork;
-
-        return $this;
-    }
-
-    /**
-     * Gets track_type
-     *
-     * @return string|null
-     */
-    public function getTrackType()
-    {
-        return $this->container['track_type'];
-    }
-
-    /**
-     * Sets track_type
-     *
-     * @param string|null $track_type track_type
-     *
-     * @return self
-     */
-    public function setTrackType($track_type)
-    {
-        if (!is_null($track_type) && (mb_strlen($track_type) > 16)) {
-            throw new \InvalidArgumentException('invalid length for $track_type when calling File., must be smaller than or equal to 16.');
-        }
-
-        $this->container['track_type'] = $track_type;
+        $this->container['owner'] = $owner;
 
         return $this;
     }
@@ -2738,30 +2650,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setEditedBy($edited_by)
     {
         $this->container['edited_by'] = $edited_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets owner
-     *
-     * @return string|null
-     */
-    public function getOwner()
-    {
-        return $this->container['owner'];
-    }
-
-    /**
-     * Sets owner
-     *
-     * @param string|null $owner owner
-     *
-     * @return self
-     */
-    public function setOwner($owner)
-    {
-        $this->container['owner'] = $owner;
 
         return $this;
     }

@@ -8,6 +8,7 @@ docs/Api/CloudFilesApi.md
 docs/Api/CountriesApi.md
 docs/Api/FilesApi.md
 docs/Api/ImportedPodcastsApi.md
+docs/Api/LibrariesApi.md
 docs/Api/ListenerCountsApi.md
 docs/Api/LiveLogsApi.md
 docs/Api/LoginAttemptsApi.md
@@ -36,7 +37,6 @@ docs/Api/StationPodcastsApi.md
 docs/Api/StreamSettingsApi.md
 docs/Api/ThirdPartyTrackReferencesApi.md
 docs/Api/TimestampsApi.md
-docs/Api/TrackTypesApi.md
 docs/Api/UserTokensApi.md
 docs/Api/UsersApi.md
 docs/Api/VersionApi.md
@@ -46,7 +46,9 @@ docs/Model/CeleryTask.md
 docs/Model/CloudFile.md
 docs/Model/Country.md
 docs/Model/File.md
+docs/Model/ImportStatusEnum.md
 docs/Model/ImportedPodcast.md
+docs/Model/Library.md
 docs/Model/ListenerCount.md
 docs/Model/LiveLog.md
 docs/Model/LoginAttempt.md
@@ -56,6 +58,7 @@ docs/Model/PatchedCloudFile.md
 docs/Model/PatchedCountry.md
 docs/Model/PatchedFile.md
 docs/Model/PatchedImportedPodcast.md
+docs/Model/PatchedLibrary.md
 docs/Model/PatchedListenerCount.md
 docs/Model/PatchedLiveLog.md
 docs/Model/PatchedLoginAttempt.md
@@ -83,7 +86,6 @@ docs/Model/PatchedStationPodcast.md
 docs/Model/PatchedStreamSetting.md
 docs/Model/PatchedThirdPartyTrackReference.md
 docs/Model/PatchedTimestamp.md
-docs/Model/PatchedTrackType.md
 docs/Model/PatchedUser.md
 docs/Model/PatchedUserToken.md
 docs/Model/PatchedWebstream.md
@@ -112,7 +114,6 @@ docs/Model/StationPodcast.md
 docs/Model/StreamSetting.md
 docs/Model/ThirdPartyTrackReference.md
 docs/Model/Timestamp.md
-docs/Model/TrackType.md
 docs/Model/User.md
 docs/Model/UserToken.md
 docs/Model/Webstream.md
@@ -123,6 +124,7 @@ lib/Api/CloudFilesApi.php
 lib/Api/CountriesApi.php
 lib/Api/FilesApi.php
 lib/Api/ImportedPodcastsApi.php
+lib/Api/LibrariesApi.php
 lib/Api/ListenerCountsApi.php
 lib/Api/LiveLogsApi.php
 lib/Api/LoginAttemptsApi.php
@@ -151,7 +153,6 @@ lib/Api/StationPodcastsApi.php
 lib/Api/StreamSettingsApi.php
 lib/Api/ThirdPartyTrackReferencesApi.php
 lib/Api/TimestampsApi.php
-lib/Api/TrackTypesApi.php
 lib/Api/UserTokensApi.php
 lib/Api/UsersApi.php
 lib/Api/VersionApi.php
@@ -164,7 +165,9 @@ lib/Model/CeleryTask.php
 lib/Model/CloudFile.php
 lib/Model/Country.php
 lib/Model/File.php
+lib/Model/ImportStatusEnum.php
 lib/Model/ImportedPodcast.php
+lib/Model/Library.php
 lib/Model/ListenerCount.php
 lib/Model/LiveLog.php
 lib/Model/LoginAttempt.php
@@ -175,6 +178,7 @@ lib/Model/PatchedCloudFile.php
 lib/Model/PatchedCountry.php
 lib/Model/PatchedFile.php
 lib/Model/PatchedImportedPodcast.php
+lib/Model/PatchedLibrary.php
 lib/Model/PatchedListenerCount.php
 lib/Model/PatchedLiveLog.php
 lib/Model/PatchedLoginAttempt.php
@@ -202,7 +206,6 @@ lib/Model/PatchedStationPodcast.php
 lib/Model/PatchedStreamSetting.php
 lib/Model/PatchedThirdPartyTrackReference.php
 lib/Model/PatchedTimestamp.php
-lib/Model/PatchedTrackType.php
 lib/Model/PatchedUser.php
 lib/Model/PatchedUserToken.php
 lib/Model/PatchedWebstream.php
@@ -231,10 +234,13 @@ lib/Model/StationPodcast.php
 lib/Model/StreamSetting.php
 lib/Model/ThirdPartyTrackReference.php
 lib/Model/Timestamp.php
-lib/Model/TrackType.php
 lib/Model/User.php
 lib/Model/UserToken.php
 lib/Model/Webstream.php
 lib/Model/WebstreamMetadata.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/LibrariesApiTest.php
+test/Model/ImportStatusEnumTest.php
+test/Model/LibraryTest.php
+test/Model/PatchedLibraryTest.php

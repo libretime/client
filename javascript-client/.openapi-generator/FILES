@@ -7,6 +7,7 @@ api/cloud-files-api.ts
 api/countries-api.ts
 api/files-api.ts
 api/imported-podcasts-api.ts
+api/libraries-api.ts
 api/listener-counts-api.ts
 api/live-logs-api.ts
 api/login-attempts-api.ts
@@ -35,7 +36,6 @@ api/station-podcasts-api.ts
 api/stream-settings-api.ts
 api/third-party-track-references-api.ts
 api/timestamps-api.ts
-api/track-types-api.ts
 api/user-tokens-api.ts
 api/users-api.ts
 api/version-api.ts
@@ -49,8 +49,10 @@ index.ts
 model/celery-task.ts
 model/cloud-file.ts
 model/country.ts
+model/import-status-enum.ts
 model/imported-podcast.ts
 model/index.ts
+model/library.ts
 model/listener-count.ts
 model/live-log.ts
 model/login-attempt.ts
@@ -61,6 +63,7 @@ model/patched-cloud-file.ts
 model/patched-country.ts
 model/patched-file.ts
 model/patched-imported-podcast.ts
+model/patched-library.ts
 model/patched-listener-count.ts
 model/patched-live-log.ts
 model/patched-login-attempt.ts
@@ -88,7 +91,6 @@ model/patched-station-podcast.ts
 model/patched-stream-setting.ts
 model/patched-third-party-track-reference.ts
 model/patched-timestamp.ts
-model/patched-track-type.ts
 model/patched-user-token.ts
 model/patched-user.ts
 model/patched-webstream-metadata.ts
@@ -117,7 +119,6 @@ model/station-podcast.ts
 model/stream-setting.ts
 model/third-party-track-reference.ts
 model/timestamp.ts
-model/track-type.ts
 model/user-token.ts
 model/user.ts
 model/webstream-metadata.ts
