@@ -39,6 +39,9 @@ jobs:
         if: github.repository_owner == 'libretime' && github.event_name == 'push'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore: update clients"
+          commit_message: |
+            ${{ github.event.head_commit.message }}
+
+            ${{ github.repository }}@${{ github.sha }}
           commit_user_name: "libretime-bot"
           commit_user_email: "libretime-bot@users.noreply.github.com"
