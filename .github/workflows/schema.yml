@@ -35,10 +35,18 @@ jobs:
       - name: Generate PHP client
         run: make php-client
 
+      - name: Generate PHP client
+        run: |
+          echo 'chore: update clients ${{ github.sha }}'
+          echo '${{ github.event.head_commit.message }}'
+
       - name: Commit changes
         if: github.repository_owner == 'libretime' && github.event_name == 'push'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore: update clients"
+          commit_message: |
+            chore: update clients ${{ github.sha }}
+
+            ${{ github.event.head_commit.message }}
           commit_user_name: "libretime-bot"
           commit_user_email: "libretime-bot@users.noreply.github.com"
