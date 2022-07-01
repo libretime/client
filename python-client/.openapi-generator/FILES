@@ -248,8 +248,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_import_status_enum.py
-test/test_libraries_api.py
-test/test_library.py
-test/test_patched_library.py
 tox.ini

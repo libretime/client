@@ -94,7 +94,7 @@ class Library(ModelNormal):
             'code': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
-            'visible': (bool,),  # noqa: E501
+            'enabled': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -107,7 +107,7 @@ class Library(ModelNormal):
         'code': 'code',  # noqa: E501
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'visible': 'visible',  # noqa: E501
+        'enabled': 'enabled',  # noqa: E501
     }
 
     read_only_vars = {
@@ -158,7 +158,7 @@ class Library(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
-            visible (bool): [optional]  # noqa: E501
+            enabled (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -250,7 +250,7 @@ class Library(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
-            visible (bool): [optional]  # noqa: E501
+            enabled (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

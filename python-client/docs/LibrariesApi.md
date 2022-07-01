@@ -59,7 +59,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         code="code_example",
         description="description_example",
-        visible=True,
+        enabled=True,
     ) # Library | 
 
     # example passing only required values which don't have defaults set
@@ -306,7 +306,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         code="code_example",
         description="description_example",
-        visible=True,
+        enabled=True,
     ) # PatchedLibrary |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -485,7 +485,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         code="code_example",
         description="description_example",
-        visible=True,
+        enabled=True,
     ) # Library | 
 
     # example passing only required values which don't have defaults set

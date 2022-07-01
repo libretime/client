@@ -49,6 +49,6 @@ export interface PatchedLibrary {
      * @type {boolean}
      * @memberof PatchedLibrary
      */
-    'visible'?: boolean;
+    'enabled'?: boolean;
 }
 

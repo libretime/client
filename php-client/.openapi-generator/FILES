@@ -240,7 +240,3 @@ lib/Model/Webstream.php
 lib/Model/WebstreamMetadata.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/LibrariesApiTest.php
-test/Model/ImportStatusEnumTest.php
-test/Model/LibraryTest.php
-test/Model/PatchedLibraryTest.php

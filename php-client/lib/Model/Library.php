@@ -63,7 +63,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'code' => 'string',
         'description' => 'string',
-        'visible' => 'bool'
+        'enabled' => 'bool'
     ];
 
     /**
@@ -78,7 +78,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'code' => null,
         'description' => null,
-        'visible' => null
+        'enabled' => null
     ];
 
     /**
@@ -112,7 +112,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'code' => 'code',
         'description' => 'description',
-        'visible' => 'visible'
+        'enabled' => 'enabled'
     ];
 
     /**
@@ -125,7 +125,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'code' => 'setCode',
         'description' => 'setDescription',
-        'visible' => 'setVisible'
+        'enabled' => 'setEnabled'
     ];
 
     /**
@@ -138,7 +138,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'code' => 'getCode',
         'description' => 'getDescription',
-        'visible' => 'getVisible'
+        'enabled' => 'getEnabled'
     ];
 
     /**
@@ -202,7 +202,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['name'] = $data['name'] ?? null;
         $this->container['code'] = $data['code'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['visible'] = $data['visible'] ?? null;
+        $this->container['enabled'] = $data['enabled'] ?? null;
     }
 
     /**
@@ -356,25 +356,25 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets visible
+     * Gets enabled
      *
      * @return bool|null
      */
-    public function getVisible()
+    public function getEnabled()
     {
-        return $this->container['visible'];
+        return $this->container['enabled'];
     }
 
     /**
-     * Sets visible
+     * Sets enabled
      *
-     * @param bool|null $visible visible
+     * @param bool|null $enabled enabled
      *
      * @return self
      */
-    public function setVisible($visible)
+    public function setEnabled($enabled)
     {
-        $this->container['visible'] = $visible;
+        $this->container['enabled'] = $enabled;
 
         return $this;
     }

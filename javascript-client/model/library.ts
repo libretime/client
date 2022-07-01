@@ -49,6 +49,6 @@ export interface Library {
      * @type {boolean}
      * @memberof Library
      */
-    'visible'?: boolean;
+    'enabled'?: boolean;
 }
 
