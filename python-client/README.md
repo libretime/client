@@ -107,12 +107,6 @@ Class | Method | HTTP request | Description
 *CeleryTasksApi* | [**celery_tasks_partial_update**](docs/CeleryTasksApi.md#celery_tasks_partial_update) | **PATCH** /api/v2/celery-tasks/{id}/ | 
 *CeleryTasksApi* | [**celery_tasks_retrieve**](docs/CeleryTasksApi.md#celery_tasks_retrieve) | **GET** /api/v2/celery-tasks/{id}/ | 
 *CeleryTasksApi* | [**celery_tasks_update**](docs/CeleryTasksApi.md#celery_tasks_update) | **PUT** /api/v2/celery-tasks/{id}/ | 
-*CloudFilesApi* | [**cloud_files_create**](docs/CloudFilesApi.md#cloud_files_create) | **POST** /api/v2/cloud-files/ | 
-*CloudFilesApi* | [**cloud_files_destroy**](docs/CloudFilesApi.md#cloud_files_destroy) | **DELETE** /api/v2/cloud-files/{id}/ | 
-*CloudFilesApi* | [**cloud_files_list**](docs/CloudFilesApi.md#cloud_files_list) | **GET** /api/v2/cloud-files/ | 
-*CloudFilesApi* | [**cloud_files_partial_update**](docs/CloudFilesApi.md#cloud_files_partial_update) | **PATCH** /api/v2/cloud-files/{id}/ | 
-*CloudFilesApi* | [**cloud_files_retrieve**](docs/CloudFilesApi.md#cloud_files_retrieve) | **GET** /api/v2/cloud-files/{id}/ | 
-*CloudFilesApi* | [**cloud_files_update**](docs/CloudFilesApi.md#cloud_files_update) | **PUT** /api/v2/cloud-files/{id}/ | 
 *CountriesApi* | [**countries_create**](docs/CountriesApi.md#countries_create) | **POST** /api/v2/countries/ | 
 *CountriesApi* | [**countries_destroy**](docs/CountriesApi.md#countries_destroy) | **DELETE** /api/v2/countries/{iso_code}/ | 
 *CountriesApi* | [**countries_list**](docs/CountriesApi.md#countries_list) | **GET** /api/v2/countries/ | 
@@ -331,7 +325,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CeleryTask](docs/CeleryTask.md)
- - [CloudFile](docs/CloudFile.md)
  - [Country](docs/Country.md)
  - [File](docs/File.md)
  - [ImportStatusEnum](docs/ImportStatusEnum.md)
@@ -342,7 +335,6 @@ Class | Method | HTTP request | Description
  - [LoginAttempt](docs/LoginAttempt.md)
  - [MountName](docs/MountName.md)
  - [PatchedCeleryTask](docs/PatchedCeleryTask.md)
- - [PatchedCloudFile](docs/PatchedCloudFile.md)
  - [PatchedCountry](docs/PatchedCountry.md)
  - [PatchedFile](docs/PatchedFile.md)
  - [PatchedImportedPodcast](docs/PatchedImportedPodcast.md)

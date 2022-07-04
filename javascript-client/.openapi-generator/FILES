@@ -3,7 +3,6 @@
 README.md
 api.ts
 api/celery-tasks-api.ts
-api/cloud-files-api.ts
 api/countries-api.ts
 api/files-api.ts
 api/imported-podcasts-api.ts
@@ -47,7 +46,6 @@ configuration.ts
 git_push.sh
 index.ts
 model/celery-task.ts
-model/cloud-file.ts
 model/country.ts
 model/import-status-enum.ts
 model/imported-podcast.ts
@@ -59,7 +57,6 @@ model/login-attempt.ts
 model/model-file.ts
 model/mount-name.ts
 model/patched-celery-task.ts
-model/patched-cloud-file.ts
 model/patched-country.ts
 model/patched-file.ts
 model/patched-imported-podcast.ts

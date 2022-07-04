@@ -4,8 +4,6 @@
 README.md
 docs/CeleryTask.md
 docs/CeleryTasksApi.md
-docs/CloudFile.md
-docs/CloudFilesApi.md
 docs/CountriesApi.md
 docs/Country.md
 docs/File.md
@@ -24,7 +22,6 @@ docs/LoginAttemptsApi.md
 docs/MountName.md
 docs/MountNamesApi.md
 docs/PatchedCeleryTask.md
-docs/PatchedCloudFile.md
 docs/PatchedCountry.md
 docs/PatchedFile.md
 docs/PatchedImportedPodcast.md
@@ -121,7 +118,6 @@ git_push.sh
 libretime_client/__init__.py
 libretime_client/api/__init__.py
 libretime_client/api/celery_tasks_api.py
-libretime_client/api/cloud_files_api.py
 libretime_client/api/countries_api.py
 libretime_client/api/files_api.py
 libretime_client/api/imported_podcasts_api.py
@@ -165,7 +161,6 @@ libretime_client/configuration.py
 libretime_client/exceptions.py
 libretime_client/model/__init__.py
 libretime_client/model/celery_task.py
-libretime_client/model/cloud_file.py
 libretime_client/model/country.py
 libretime_client/model/file.py
 libretime_client/model/import_status_enum.py
@@ -176,7 +171,6 @@ libretime_client/model/live_log.py
 libretime_client/model/login_attempt.py
 libretime_client/model/mount_name.py
 libretime_client/model/patched_celery_task.py
-libretime_client/model/patched_cloud_file.py
 libretime_client/model/patched_country.py
 libretime_client/model/patched_file.py
 libretime_client/model/patched_imported_podcast.py

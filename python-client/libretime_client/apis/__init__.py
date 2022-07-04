@@ -15,7 +15,6 @@
 
 # Import APIs into API package:
 from libretime_client.api.celery_tasks_api import CeleryTasksApi
-from libretime_client.api.cloud_files_api import CloudFilesApi
 from libretime_client.api.countries_api import CountriesApi
 from libretime_client.api.files_api import FilesApi
 from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi

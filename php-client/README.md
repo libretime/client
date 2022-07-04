@@ -89,12 +89,6 @@ Class | Method | HTTP request | Description
 *CeleryTasksApi* | [**celeryTasksPartialUpdate**](docs/Api/CeleryTasksApi.md#celerytaskspartialupdate) | **PATCH** /api/v2/celery-tasks/{id}/ | 
 *CeleryTasksApi* | [**celeryTasksRetrieve**](docs/Api/CeleryTasksApi.md#celerytasksretrieve) | **GET** /api/v2/celery-tasks/{id}/ | 
 *CeleryTasksApi* | [**celeryTasksUpdate**](docs/Api/CeleryTasksApi.md#celerytasksupdate) | **PUT** /api/v2/celery-tasks/{id}/ | 
-*CloudFilesApi* | [**cloudFilesCreate**](docs/Api/CloudFilesApi.md#cloudfilescreate) | **POST** /api/v2/cloud-files/ | 
-*CloudFilesApi* | [**cloudFilesDestroy**](docs/Api/CloudFilesApi.md#cloudfilesdestroy) | **DELETE** /api/v2/cloud-files/{id}/ | 
-*CloudFilesApi* | [**cloudFilesList**](docs/Api/CloudFilesApi.md#cloudfileslist) | **GET** /api/v2/cloud-files/ | 
-*CloudFilesApi* | [**cloudFilesPartialUpdate**](docs/Api/CloudFilesApi.md#cloudfilespartialupdate) | **PATCH** /api/v2/cloud-files/{id}/ | 
-*CloudFilesApi* | [**cloudFilesRetrieve**](docs/Api/CloudFilesApi.md#cloudfilesretrieve) | **GET** /api/v2/cloud-files/{id}/ | 
-*CloudFilesApi* | [**cloudFilesUpdate**](docs/Api/CloudFilesApi.md#cloudfilesupdate) | **PUT** /api/v2/cloud-files/{id}/ | 
 *CountriesApi* | [**countriesCreate**](docs/Api/CountriesApi.md#countriescreate) | **POST** /api/v2/countries/ | 
 *CountriesApi* | [**countriesDestroy**](docs/Api/CountriesApi.md#countriesdestroy) | **DELETE** /api/v2/countries/{iso_code}/ | 
 *CountriesApi* | [**countriesList**](docs/Api/CountriesApi.md#countrieslist) | **GET** /api/v2/countries/ | 
@@ -312,7 +306,6 @@ Class | Method | HTTP request | Description
 ## Models
 
 - [CeleryTask](docs/Model/CeleryTask.md)
-- [CloudFile](docs/Model/CloudFile.md)
 - [Country](docs/Model/Country.md)
 - [File](docs/Model/File.md)
 - [ImportStatusEnum](docs/Model/ImportStatusEnum.md)
@@ -323,7 +316,6 @@ Class | Method | HTTP request | Description
 - [LoginAttempt](docs/Model/LoginAttempt.md)
 - [MountName](docs/Model/MountName.md)
 - [PatchedCeleryTask](docs/Model/PatchedCeleryTask.md)
-- [PatchedCloudFile](docs/Model/PatchedCloudFile.md)
 - [PatchedCountry](docs/Model/PatchedCountry.md)
 - [PatchedFile](docs/Model/PatchedFile.md)
 - [PatchedImportedPodcast](docs/Model/PatchedImportedPodcast.md)
