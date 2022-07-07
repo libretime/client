@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **mime** | **str** |  | 
 **accessed** | **int** |  | 
 **name** | **str** |  | 
-**library** | **str, none_type** |  | [optional] 
 **import_status** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **filepath** | **str, none_type** |  | [optional] 
 **exists** | **bool, none_type** |  | [optional] 
@@ -68,6 +67,7 @@ Name | Type | Description | Notes
 **report_datetime** | **str, none_type** |  | [optional] 
 **report_location** | **str, none_type** |  | [optional] 
 **report_organization** | **str, none_type** |  | [optional] 
+**library** | **str, none_type** |  | [optional] 
 **owner** | **str, none_type** |  | [optional] 
 **edited_by** | **str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

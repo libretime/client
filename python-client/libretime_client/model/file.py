@@ -76,9 +76,6 @@ class File(ModelNormal):
         ('name',): {
             'max_length': 255,
         },
-        ('library',): {
-            'max_length': 16,
-        },
         ('import_status',): {
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': -2147483648,
@@ -250,7 +247,6 @@ class File(ModelNormal):
             'mime': (str,),  # noqa: E501
             'accessed': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'library': (str, none_type,),  # noqa: E501
             'import_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'filepath': (str, none_type,),  # noqa: E501
             'exists': (bool, none_type,),  # noqa: E501
@@ -308,6 +304,7 @@ class File(ModelNormal):
             'report_datetime': (str, none_type,),  # noqa: E501
             'report_location': (str, none_type,),  # noqa: E501
             'report_organization': (str, none_type,),  # noqa: E501
+            'library': (str, none_type,),  # noqa: E501
             'owner': (str, none_type,),  # noqa: E501
             'edited_by': (str, none_type,),  # noqa: E501
         }
@@ -324,7 +321,6 @@ class File(ModelNormal):
         'mime': 'mime',  # noqa: E501
         'accessed': 'accessed',  # noqa: E501
         'name': 'name',  # noqa: E501
-        'library': 'library',  # noqa: E501
         'import_status': 'import_status',  # noqa: E501
         'filepath': 'filepath',  # noqa: E501
         'exists': 'exists',  # noqa: E501
@@ -382,6 +378,7 @@ class File(ModelNormal):
         'report_datetime': 'report_datetime',  # noqa: E501
         'report_location': 'report_location',  # noqa: E501
         'report_organization': 'report_organization',  # noqa: E501
+        'library': 'library',  # noqa: E501
         'owner': 'owner',  # noqa: E501
         'edited_by': 'edited_by',  # noqa: E501
     }
@@ -437,7 +434,6 @@ class File(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            library (str, none_type): [optional]  # noqa: E501
             import_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             filepath (str, none_type): [optional]  # noqa: E501
             exists (bool, none_type): [optional]  # noqa: E501
@@ -495,6 +491,7 @@ class File(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
+            library (str, none_type): [optional]  # noqa: E501
             owner (str, none_type): [optional]  # noqa: E501
             edited_by (str, none_type): [optional]  # noqa: E501
         """
@@ -593,7 +590,6 @@ class File(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            library (str, none_type): [optional]  # noqa: E501
             import_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             filepath (str, none_type): [optional]  # noqa: E501
             exists (bool, none_type): [optional]  # noqa: E501
@@ -651,6 +647,7 @@ class File(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
+            library (str, none_type): [optional]  # noqa: E501
             owner (str, none_type): [optional]  # noqa: E501
             edited_by (str, none_type): [optional]  # noqa: E501
         """

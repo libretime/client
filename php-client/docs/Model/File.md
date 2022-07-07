@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
 **id** | **int** |  | [readonly]
-**library** | **string** |  | [optional]
 **import_status** | [**ImportStatusEnum**](ImportStatusEnum.md) |  | [optional]
 **filepath** | **string** |  | [optional]
 **size** | **int** |  |
@@ -68,6 +67,7 @@ Name | Type | Description | Notes
 **report_datetime** | **string** |  | [optional]
 **report_location** | **string** |  | [optional]
 **report_organization** | **string** |  | [optional]
+**library** | **string** |  | [optional]
 **owner** | **string** |  | [optional]
 **edited_by** | **string** |  | [optional]
 

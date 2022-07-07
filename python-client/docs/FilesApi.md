@@ -57,7 +57,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = files_api.FilesApi(api_client)
     file = File(
-        library="library_example",
         import_status=None,
         filepath="filepath_example",
         size=-2147483648,
@@ -119,6 +118,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         report_datetime="report_datetime_example",
         report_location="report_location_example",
         report_organization="report_organization_example",
+        library="library_example",
         owner="owner_example",
         edited_by="edited_by_example",
     ) # File | 
@@ -446,7 +446,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = files_api.FilesApi(api_client)
     id = 1 # int | A unique integer value identifying this file.
     patched_file = PatchedFile(
-        library="library_example",
         import_status=None,
         filepath="filepath_example",
         size=-2147483648,
@@ -508,6 +507,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         report_datetime="report_datetime_example",
         report_location="report_location_example",
         report_organization="report_organization_example",
+        library="library_example",
         owner="owner_example",
         edited_by="edited_by_example",
     ) # PatchedFile |  (optional)
@@ -685,7 +685,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = files_api.FilesApi(api_client)
     id = 1 # int | A unique integer value identifying this file.
     file = File(
-        library="library_example",
         import_status=None,
         filepath="filepath_example",
         size=-2147483648,
@@ -747,6 +746,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         report_datetime="report_datetime_example",
         report_location="report_location_example",
         report_organization="report_organization_example",
+        library="library_example",
         owner="owner_example",
         edited_by="edited_by_example",
     ) # File | 

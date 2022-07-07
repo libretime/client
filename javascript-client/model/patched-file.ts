@@ -35,12 +35,6 @@ export interface PatchedFile {
     'id'?: number;
     /**
      * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'library'?: string | null;
-    /**
-     * 
      * @type {ImportStatusEnum}
      * @memberof PatchedFile
      */
@@ -405,6 +399,12 @@ export interface PatchedFile {
      * @memberof PatchedFile
      */
     'report_organization'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedFile
+     */
+    'library'?: string | null;
     /**
      * 
      * @type {string}

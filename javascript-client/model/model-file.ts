@@ -35,12 +35,6 @@ export interface ModelFile {
     'id': number;
     /**
      * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'library'?: string | null;
-    /**
-     * 
      * @type {ImportStatusEnum}
      * @memberof ModelFile
      */
@@ -405,6 +399,12 @@ export interface ModelFile {
      * @memberof ModelFile
      */
     'report_organization'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ModelFile
+     */
+    'library'?: string | null;
     /**
      * 
      * @type {string}

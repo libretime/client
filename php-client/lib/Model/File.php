@@ -61,7 +61,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'item_url' => 'string',
         'id' => 'int',
-        'library' => 'string',
         'import_status' => 'ImportStatusEnum',
         'filepath' => 'string',
         'size' => 'int',
@@ -123,6 +122,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => 'string',
         'report_location' => 'string',
         'report_organization' => 'string',
+        'library' => 'string',
         'owner' => 'string',
         'edited_by' => 'string'
     ];
@@ -137,7 +137,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'item_url' => 'uri',
         'id' => null,
-        'library' => null,
         'import_status' => null,
         'filepath' => null,
         'size' => null,
@@ -199,6 +198,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => null,
         'report_location' => null,
         'report_organization' => null,
+        'library' => 'uri',
         'owner' => 'uri',
         'edited_by' => 'uri'
     ];
@@ -232,7 +232,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'item_url' => 'item_url',
         'id' => 'id',
-        'library' => 'library',
         'import_status' => 'import_status',
         'filepath' => 'filepath',
         'size' => 'size',
@@ -294,6 +293,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => 'report_datetime',
         'report_location' => 'report_location',
         'report_organization' => 'report_organization',
+        'library' => 'library',
         'owner' => 'owner',
         'edited_by' => 'edited_by'
     ];
@@ -306,7 +306,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'item_url' => 'setItemUrl',
         'id' => 'setId',
-        'library' => 'setLibrary',
         'import_status' => 'setImportStatus',
         'filepath' => 'setFilepath',
         'size' => 'setSize',
@@ -368,6 +367,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => 'setReportDatetime',
         'report_location' => 'setReportLocation',
         'report_organization' => 'setReportOrganization',
+        'library' => 'setLibrary',
         'owner' => 'setOwner',
         'edited_by' => 'setEditedBy'
     ];
@@ -380,7 +380,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'item_url' => 'getItemUrl',
         'id' => 'getId',
-        'library' => 'getLibrary',
         'import_status' => 'getImportStatus',
         'filepath' => 'getFilepath',
         'size' => 'getSize',
@@ -442,6 +441,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => 'getReportDatetime',
         'report_location' => 'getReportLocation',
         'report_organization' => 'getReportOrganization',
+        'library' => 'getLibrary',
         'owner' => 'getOwner',
         'edited_by' => 'getEditedBy'
     ];
@@ -505,7 +505,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['library'] = $data['library'] ?? null;
         $this->container['import_status'] = $data['import_status'] ?? null;
         $this->container['filepath'] = $data['filepath'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
@@ -567,6 +566,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['report_datetime'] = $data['report_datetime'] ?? null;
         $this->container['report_location'] = $data['report_location'] ?? null;
         $this->container['report_organization'] = $data['report_organization'] ?? null;
+        $this->container['library'] = $data['library'] ?? null;
         $this->container['owner'] = $data['owner'] ?? null;
         $this->container['edited_by'] = $data['edited_by'] ?? null;
     }
@@ -586,10 +586,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if (!is_null($this->container['library']) && (mb_strlen($this->container['library']) > 16)) {
-            $invalidProperties[] = "invalid value for 'library', the character length must be smaller than or equal to 16.";
-        }
-
         if (!is_null($this->container['import_status']) && ($this->container['import_status'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'import_status', must be smaller than or equal to 2147483647.";
         }
@@ -885,34 +881,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets library
-     *
-     * @return string|null
-     */
-    public function getLibrary()
-    {
-        return $this->container['library'];
-    }
-
-    /**
-     * Sets library
-     *
-     * @param string|null $library library
-     *
-     * @return self
-     */
-    public function setLibrary($library)
-    {
-        if (!is_null($library) && (mb_strlen($library) > 16)) {
-            throw new \InvalidArgumentException('invalid length for $library when calling File., must be smaller than or equal to 16.');
-        }
-
-        $this->container['library'] = $library;
 
         return $this;
     }
@@ -2602,6 +2570,30 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['report_organization'] = $report_organization;
+
+        return $this;
+    }
+
+    /**
+     * Gets library
+     *
+     * @return string|null
+     */
+    public function getLibrary()
+    {
+        return $this->container['library'];
+    }
+
+    /**
+     * Sets library
+     *
+     * @param string|null $library library
+     *
+     * @return self
+     */
+    public function setLibrary($library)
+    {
+        $this->container['library'] = $library;
 
         return $this;
     }

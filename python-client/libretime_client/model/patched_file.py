@@ -62,9 +62,6 @@ class PatchedFile(ModelNormal):
     }
 
     validations = {
-        ('library',): {
-            'max_length': 16,
-        },
         ('import_status',): {
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': -2147483648,
@@ -246,7 +243,6 @@ class PatchedFile(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'library': (str, none_type,),  # noqa: E501
             'import_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'filepath': (str, none_type,),  # noqa: E501
             'size': (int,),  # noqa: E501
@@ -308,6 +304,7 @@ class PatchedFile(ModelNormal):
             'report_datetime': (str, none_type,),  # noqa: E501
             'report_location': (str, none_type,),  # noqa: E501
             'report_organization': (str, none_type,),  # noqa: E501
+            'library': (str, none_type,),  # noqa: E501
             'owner': (str, none_type,),  # noqa: E501
             'edited_by': (str, none_type,),  # noqa: E501
         }
@@ -320,7 +317,6 @@ class PatchedFile(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'library': 'library',  # noqa: E501
         'import_status': 'import_status',  # noqa: E501
         'filepath': 'filepath',  # noqa: E501
         'size': 'size',  # noqa: E501
@@ -382,6 +378,7 @@ class PatchedFile(ModelNormal):
         'report_datetime': 'report_datetime',  # noqa: E501
         'report_location': 'report_location',  # noqa: E501
         'report_organization': 'report_organization',  # noqa: E501
+        'library': 'library',  # noqa: E501
         'owner': 'owner',  # noqa: E501
         'edited_by': 'edited_by',  # noqa: E501
     }
@@ -431,7 +428,6 @@ class PatchedFile(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
-            library (str, none_type): [optional]  # noqa: E501
             import_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             filepath (str, none_type): [optional]  # noqa: E501
             size (int): [optional]  # noqa: E501
@@ -493,6 +489,7 @@ class PatchedFile(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
+            library (str, none_type): [optional]  # noqa: E501
             owner (str, none_type): [optional]  # noqa: E501
             edited_by (str, none_type): [optional]  # noqa: E501
         """
@@ -582,7 +579,6 @@ class PatchedFile(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
-            library (str, none_type): [optional]  # noqa: E501
             import_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             filepath (str, none_type): [optional]  # noqa: E501
             size (int): [optional]  # noqa: E501
@@ -644,6 +640,7 @@ class PatchedFile(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
+            library (str, none_type): [optional]  # noqa: E501
             owner (str, none_type): [optional]  # noqa: E501
             edited_by (str, none_type): [optional]  # noqa: E501
         """
