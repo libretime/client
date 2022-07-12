@@ -10,7 +10,6 @@
 # sys.setrecursionlimit(n)
 
 from libretime_client.model.celery_task import CeleryTask
-from libretime_client.model.country import Country
 from libretime_client.model.file import File
 from libretime_client.model.import_status_enum import ImportStatusEnum
 from libretime_client.model.imported_podcast import ImportedPodcast
@@ -20,7 +19,6 @@ from libretime_client.model.live_log import LiveLog
 from libretime_client.model.login_attempt import LoginAttempt
 from libretime_client.model.mount_name import MountName
 from libretime_client.model.patched_celery_task import PatchedCeleryTask
-from libretime_client.model.patched_country import PatchedCountry
 from libretime_client.model.patched_file import PatchedFile
 from libretime_client.model.patched_imported_podcast import PatchedImportedPodcast
 from libretime_client.model.patched_library import PatchedLibrary

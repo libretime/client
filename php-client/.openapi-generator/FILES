@@ -4,7 +4,6 @@
 README.md
 composer.json
 docs/Api/CeleryTasksApi.md
-docs/Api/CountriesApi.md
 docs/Api/FilesApi.md
 docs/Api/ImportedPodcastsApi.md
 docs/Api/LibrariesApi.md
@@ -42,7 +41,6 @@ docs/Api/VersionApi.md
 docs/Api/WebstreamMetadataApi.md
 docs/Api/WebstreamsApi.md
 docs/Model/CeleryTask.md
-docs/Model/Country.md
 docs/Model/File.md
 docs/Model/ImportStatusEnum.md
 docs/Model/ImportedPodcast.md
@@ -52,7 +50,6 @@ docs/Model/LiveLog.md
 docs/Model/LoginAttempt.md
 docs/Model/MountName.md
 docs/Model/PatchedCeleryTask.md
-docs/Model/PatchedCountry.md
 docs/Model/PatchedFile.md
 docs/Model/PatchedImportedPodcast.md
 docs/Model/PatchedLibrary.md
@@ -117,7 +114,6 @@ docs/Model/Webstream.md
 docs/Model/WebstreamMetadata.md
 git_push.sh
 lib/Api/CeleryTasksApi.php
-lib/Api/CountriesApi.php
 lib/Api/FilesApi.php
 lib/Api/ImportedPodcastsApi.php
 lib/Api/LibrariesApi.php
@@ -158,7 +154,6 @@ lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/CeleryTask.php
-lib/Model/Country.php
 lib/Model/File.php
 lib/Model/ImportStatusEnum.php
 lib/Model/ImportedPodcast.php
@@ -169,7 +164,6 @@ lib/Model/LoginAttempt.php
 lib/Model/ModelInterface.php
 lib/Model/MountName.php
 lib/Model/PatchedCeleryTask.php
-lib/Model/PatchedCountry.php
 lib/Model/PatchedFile.php
 lib/Model/PatchedImportedPodcast.php
 lib/Model/PatchedLibrary.php

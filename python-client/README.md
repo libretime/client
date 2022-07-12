@@ -107,12 +107,6 @@ Class | Method | HTTP request | Description
 *CeleryTasksApi* | [**celery_tasks_partial_update**](docs/CeleryTasksApi.md#celery_tasks_partial_update) | **PATCH** /api/v2/celery-tasks/{id}/ | 
 *CeleryTasksApi* | [**celery_tasks_retrieve**](docs/CeleryTasksApi.md#celery_tasks_retrieve) | **GET** /api/v2/celery-tasks/{id}/ | 
 *CeleryTasksApi* | [**celery_tasks_update**](docs/CeleryTasksApi.md#celery_tasks_update) | **PUT** /api/v2/celery-tasks/{id}/ | 
-*CountriesApi* | [**countries_create**](docs/CountriesApi.md#countries_create) | **POST** /api/v2/countries/ | 
-*CountriesApi* | [**countries_destroy**](docs/CountriesApi.md#countries_destroy) | **DELETE** /api/v2/countries/{iso_code}/ | 
-*CountriesApi* | [**countries_list**](docs/CountriesApi.md#countries_list) | **GET** /api/v2/countries/ | 
-*CountriesApi* | [**countries_partial_update**](docs/CountriesApi.md#countries_partial_update) | **PATCH** /api/v2/countries/{iso_code}/ | 
-*CountriesApi* | [**countries_retrieve**](docs/CountriesApi.md#countries_retrieve) | **GET** /api/v2/countries/{iso_code}/ | 
-*CountriesApi* | [**countries_update**](docs/CountriesApi.md#countries_update) | **PUT** /api/v2/countries/{iso_code}/ | 
 *FilesApi* | [**files_create**](docs/FilesApi.md#files_create) | **POST** /api/v2/files/ | 
 *FilesApi* | [**files_destroy**](docs/FilesApi.md#files_destroy) | **DELETE** /api/v2/files/{id}/ | 
 *FilesApi* | [**files_download_retrieve**](docs/FilesApi.md#files_download_retrieve) | **GET** /api/v2/files/{id}/download/ | 
@@ -325,7 +319,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CeleryTask](docs/CeleryTask.md)
- - [Country](docs/Country.md)
  - [File](docs/File.md)
  - [ImportStatusEnum](docs/ImportStatusEnum.md)
  - [ImportedPodcast](docs/ImportedPodcast.md)
@@ -335,7 +328,6 @@ Class | Method | HTTP request | Description
  - [LoginAttempt](docs/LoginAttempt.md)
  - [MountName](docs/MountName.md)
  - [PatchedCeleryTask](docs/PatchedCeleryTask.md)
- - [PatchedCountry](docs/PatchedCountry.md)
  - [PatchedFile](docs/PatchedFile.md)
  - [PatchedImportedPodcast](docs/PatchedImportedPodcast.md)
  - [PatchedLibrary](docs/PatchedLibrary.md)
