@@ -28,6 +28,12 @@ export interface SmartBlockCriteria {
     'item_url': string;
     /**
      * 
+     * @type {number}
+     * @memberof SmartBlockCriteria
+     */
+    'group'?: number | null;
+    /**
+     * 
      * @type {string}
      * @memberof SmartBlockCriteria
      */
@@ -37,7 +43,7 @@ export interface SmartBlockCriteria {
      * @type {string}
      * @memberof SmartBlockCriteria
      */
-    'modifier': string;
+    'condition': string;
     /**
      * 
      * @type {string}
@@ -50,12 +56,6 @@ export interface SmartBlockCriteria {
      * @memberof SmartBlockCriteria
      */
     'extra'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockCriteria
-     */
-    'criteriagroup'?: number | null;
     /**
      * 
      * @type {string}

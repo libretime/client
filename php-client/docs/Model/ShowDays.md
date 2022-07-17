@@ -5,15 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
-**first_show** | **\DateTime** |  |
-**last_show** | **\DateTime** |  | [optional]
+**first_show_on** | **\DateTime** |  |
+**last_show_on** | **\DateTime** |  | [optional]
 **start_time** | **string** |  |
 **timezone** | **string** |  |
 **duration** | **string** |  |
-**day** | **int** |  | [optional]
-**repeat_type** | **int** |  |
-**next_pop_date** | **\DateTime** |  | [optional]
-**record** | **int** |  | [optional]
+**record_enabled** | [**\Libretime\Client\Model\PatchedShowDaysRecordEnabled**](PatchedShowDaysRecordEnabled.md) |  | [optional]
+**week_day** | [**\Libretime\Client\Model\PatchedShowDaysWeekDay**](PatchedShowDaysWeekDay.md) |  | [optional]
+**repeat_kind** | [**RepeatKindEnum**](RepeatKindEnum.md) |  |
+**repeat_next_on** | **\DateTime** |  | [optional]
 **show** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -9,15 +9,18 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from libretime_client.model.blank_enum import BlankEnum
 from libretime_client.model.celery_task import CeleryTask
 from libretime_client.model.file import File
 from libretime_client.model.import_status_enum import ImportStatusEnum
 from libretime_client.model.imported_podcast import ImportedPodcast
+from libretime_client.model.kind1d2_enum import Kind1d2Enum
 from libretime_client.model.library import Library
 from libretime_client.model.listener_count import ListenerCount
 from libretime_client.model.live_log import LiveLog
 from libretime_client.model.login_attempt import LoginAttempt
 from libretime_client.model.mount_name import MountName
+from libretime_client.model.null_enum import NullEnum
 from libretime_client.model.patched_celery_task import PatchedCeleryTask
 from libretime_client.model.patched_file import PatchedFile
 from libretime_client.model.patched_imported_podcast import PatchedImportedPodcast
@@ -39,12 +42,15 @@ from libretime_client.model.patched_schedule import PatchedSchedule
 from libretime_client.model.patched_service_register import PatchedServiceRegister
 from libretime_client.model.patched_show import PatchedShow
 from libretime_client.model.patched_show_days import PatchedShowDays
+from libretime_client.model.patched_show_days_record_enabled import PatchedShowDaysRecordEnabled
+from libretime_client.model.patched_show_days_week_day import PatchedShowDaysWeekDay
 from libretime_client.model.patched_show_host import PatchedShowHost
 from libretime_client.model.patched_show_instance import PatchedShowInstance
 from libretime_client.model.patched_show_rebroadcast import PatchedShowRebroadcast
 from libretime_client.model.patched_smart_block import PatchedSmartBlock
 from libretime_client.model.patched_smart_block_content import PatchedSmartBlockContent
 from libretime_client.model.patched_smart_block_criteria import PatchedSmartBlockCriteria
+from libretime_client.model.patched_smart_block_kind import PatchedSmartBlockKind
 from libretime_client.model.patched_station_podcast import PatchedStationPodcast
 from libretime_client.model.patched_stream_setting import PatchedStreamSetting
 from libretime_client.model.patched_third_party_track_reference import PatchedThirdPartyTrackReference
@@ -61,7 +67,10 @@ from libretime_client.model.playout_history_template import PlayoutHistoryTempla
 from libretime_client.model.playout_history_template_field import PlayoutHistoryTemplateField
 from libretime_client.model.podcast import Podcast
 from libretime_client.model.podcast_episode import PodcastEpisode
+from libretime_client.model.position_status_enum import PositionStatusEnum
 from libretime_client.model.preference import Preference
+from libretime_client.model.record_enabled_enum import RecordEnabledEnum
+from libretime_client.model.repeat_kind_enum import RepeatKindEnum
 from libretime_client.model.role_enum import RoleEnum
 from libretime_client.model.schedule import Schedule
 from libretime_client.model.service_register import ServiceRegister
@@ -73,6 +82,7 @@ from libretime_client.model.show_rebroadcast import ShowRebroadcast
 from libretime_client.model.smart_block import SmartBlock
 from libretime_client.model.smart_block_content import SmartBlockContent
 from libretime_client.model.smart_block_criteria import SmartBlockCriteria
+from libretime_client.model.smart_block_kind_enum import SmartBlockKindEnum
 from libretime_client.model.station_podcast import StationPodcast
 from libretime_client.model.stream_setting import StreamSetting
 from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
@@ -81,3 +91,4 @@ from libretime_client.model.user import User
 from libretime_client.model.user_token import UserToken
 from libretime_client.model.webstream import Webstream
 from libretime_client.model.webstream_metadata import WebstreamMetadata
+from libretime_client.model.week_day_enum import WeekDayEnum

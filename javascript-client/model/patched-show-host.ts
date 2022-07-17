@@ -37,6 +37,6 @@ export interface PatchedShowHost {
      * @type {string}
      * @memberof PatchedShowHost
      */
-    'subjs'?: string;
+    'user'?: string;
 }
 

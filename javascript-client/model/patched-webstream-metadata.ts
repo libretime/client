@@ -31,18 +31,18 @@ export interface PatchedWebstreamMetadata {
      * @type {string}
      * @memberof PatchedWebstreamMetadata
      */
-    'start_time'?: string;
+    'starts_at'?: string;
     /**
      * 
      * @type {string}
      * @memberof PatchedWebstreamMetadata
      */
-    'liquidsoap_data'?: string;
+    'data'?: string;
     /**
      * 
      * @type {string}
      * @memberof PatchedWebstreamMetadata
      */
-    'instance'?: string;
+    'schedule'?: string;
 }
 

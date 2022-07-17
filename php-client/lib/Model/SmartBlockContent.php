@@ -61,12 +61,12 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'item_url' => 'string',
         'position' => 'int',
-        'trackoffset' => 'double',
-        'cliplength' => 'string',
-        'cuein' => 'string',
-        'cueout' => 'string',
-        'fadein' => 'string',
-        'fadeout' => 'string',
+        'offset' => 'double',
+        'length' => 'string',
+        'cue_in' => 'string',
+        'cue_out' => 'string',
+        'fade_in' => 'string',
+        'fade_out' => 'string',
         'block' => 'string',
         'file' => 'string'
     ];
@@ -81,12 +81,12 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPIFormats = [
         'item_url' => 'uri',
         'position' => null,
-        'trackoffset' => 'double',
-        'cliplength' => null,
-        'cuein' => null,
-        'cueout' => null,
-        'fadein' => 'time',
-        'fadeout' => 'time',
+        'offset' => 'double',
+        'length' => null,
+        'cue_in' => null,
+        'cue_out' => null,
+        'fade_in' => 'time',
+        'fade_out' => 'time',
         'block' => 'uri',
         'file' => 'uri'
     ];
@@ -120,12 +120,12 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $attributeMap = [
         'item_url' => 'item_url',
         'position' => 'position',
-        'trackoffset' => 'trackoffset',
-        'cliplength' => 'cliplength',
-        'cuein' => 'cuein',
-        'cueout' => 'cueout',
-        'fadein' => 'fadein',
-        'fadeout' => 'fadeout',
+        'offset' => 'offset',
+        'length' => 'length',
+        'cue_in' => 'cue_in',
+        'cue_out' => 'cue_out',
+        'fade_in' => 'fade_in',
+        'fade_out' => 'fade_out',
         'block' => 'block',
         'file' => 'file'
     ];
@@ -138,12 +138,12 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $setters = [
         'item_url' => 'setItemUrl',
         'position' => 'setPosition',
-        'trackoffset' => 'setTrackoffset',
-        'cliplength' => 'setCliplength',
-        'cuein' => 'setCuein',
-        'cueout' => 'setCueout',
-        'fadein' => 'setFadein',
-        'fadeout' => 'setFadeout',
+        'offset' => 'setOffset',
+        'length' => 'setLength',
+        'cue_in' => 'setCueIn',
+        'cue_out' => 'setCueOut',
+        'fade_in' => 'setFadeIn',
+        'fade_out' => 'setFadeOut',
         'block' => 'setBlock',
         'file' => 'setFile'
     ];
@@ -156,12 +156,12 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $getters = [
         'item_url' => 'getItemUrl',
         'position' => 'getPosition',
-        'trackoffset' => 'getTrackoffset',
-        'cliplength' => 'getCliplength',
-        'cuein' => 'getCuein',
-        'cueout' => 'getCueout',
-        'fadein' => 'getFadein',
-        'fadeout' => 'getFadeout',
+        'offset' => 'getOffset',
+        'length' => 'getLength',
+        'cue_in' => 'getCueIn',
+        'cue_out' => 'getCueOut',
+        'fade_in' => 'getFadeIn',
+        'fade_out' => 'getFadeOut',
         'block' => 'getBlock',
         'file' => 'getFile'
     ];
@@ -225,12 +225,12 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
-        $this->container['trackoffset'] = $data['trackoffset'] ?? null;
-        $this->container['cliplength'] = $data['cliplength'] ?? null;
-        $this->container['cuein'] = $data['cuein'] ?? null;
-        $this->container['cueout'] = $data['cueout'] ?? null;
-        $this->container['fadein'] = $data['fadein'] ?? null;
-        $this->container['fadeout'] = $data['fadeout'] ?? null;
+        $this->container['offset'] = $data['offset'] ?? null;
+        $this->container['length'] = $data['length'] ?? null;
+        $this->container['cue_in'] = $data['cue_in'] ?? null;
+        $this->container['cue_out'] = $data['cue_out'] ?? null;
+        $this->container['fade_in'] = $data['fade_in'] ?? null;
+        $this->container['fade_out'] = $data['fade_out'] ?? null;
         $this->container['block'] = $data['block'] ?? null;
         $this->container['file'] = $data['file'] ?? null;
     }
@@ -255,8 +255,8 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
             $invalidProperties[] = "invalid value for 'position', must be bigger than or equal to -2147483648.";
         }
 
-        if ($this->container['trackoffset'] === null) {
-            $invalidProperties[] = "'trackoffset' can't be null";
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
         }
         return $invalidProperties;
     }
@@ -330,145 +330,145 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets trackoffset
+     * Gets offset
      *
      * @return double
      */
-    public function getTrackoffset()
+    public function getOffset()
     {
-        return $this->container['trackoffset'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets trackoffset
+     * Sets offset
      *
-     * @param double $trackoffset trackoffset
+     * @param double $offset offset
      *
      * @return self
      */
-    public function setTrackoffset($trackoffset)
+    public function setOffset($offset)
     {
-        $this->container['trackoffset'] = $trackoffset;
+        $this->container['offset'] = $offset;
 
         return $this;
     }
 
     /**
-     * Gets cliplength
+     * Gets length
      *
      * @return string|null
      */
-    public function getCliplength()
+    public function getLength()
     {
-        return $this->container['cliplength'];
+        return $this->container['length'];
     }
 
     /**
-     * Sets cliplength
+     * Sets length
      *
-     * @param string|null $cliplength cliplength
+     * @param string|null $length length
      *
      * @return self
      */
-    public function setCliplength($cliplength)
+    public function setLength($length)
     {
-        $this->container['cliplength'] = $cliplength;
+        $this->container['length'] = $length;
 
         return $this;
     }
 
     /**
-     * Gets cuein
+     * Gets cue_in
      *
      * @return string|null
      */
-    public function getCuein()
+    public function getCueIn()
     {
-        return $this->container['cuein'];
+        return $this->container['cue_in'];
     }
 
     /**
-     * Sets cuein
+     * Sets cue_in
      *
-     * @param string|null $cuein cuein
+     * @param string|null $cue_in cue_in
      *
      * @return self
      */
-    public function setCuein($cuein)
+    public function setCueIn($cue_in)
     {
-        $this->container['cuein'] = $cuein;
+        $this->container['cue_in'] = $cue_in;
 
         return $this;
     }
 
     /**
-     * Gets cueout
+     * Gets cue_out
      *
      * @return string|null
      */
-    public function getCueout()
+    public function getCueOut()
     {
-        return $this->container['cueout'];
+        return $this->container['cue_out'];
     }
 
     /**
-     * Sets cueout
+     * Sets cue_out
      *
-     * @param string|null $cueout cueout
+     * @param string|null $cue_out cue_out
      *
      * @return self
      */
-    public function setCueout($cueout)
+    public function setCueOut($cue_out)
     {
-        $this->container['cueout'] = $cueout;
+        $this->container['cue_out'] = $cue_out;
 
         return $this;
     }
 
     /**
-     * Gets fadein
+     * Gets fade_in
      *
      * @return string|null
      */
-    public function getFadein()
+    public function getFadeIn()
     {
-        return $this->container['fadein'];
+        return $this->container['fade_in'];
     }
 
     /**
-     * Sets fadein
+     * Sets fade_in
      *
-     * @param string|null $fadein fadein
+     * @param string|null $fade_in fade_in
      *
      * @return self
      */
-    public function setFadein($fadein)
+    public function setFadeIn($fade_in)
     {
-        $this->container['fadein'] = $fadein;
+        $this->container['fade_in'] = $fade_in;
 
         return $this;
     }
 
     /**
-     * Gets fadeout
+     * Gets fade_out
      *
      * @return string|null
      */
-    public function getFadeout()
+    public function getFadeOut()
     {
-        return $this->container['fadeout'];
+        return $this->container['fade_out'];
     }
 
     /**
-     * Sets fadeout
+     * Sets fade_out
      *
-     * @param string|null $fadeout fadeout
+     * @param string|null $fade_out fade_out
      *
      * @return self
      */
-    public function setFadeout($fadeout)
+    public function setFadeOut($fade_out)
     {
-        $this->container['fadeout'] = $fadeout;
+        $this->container['fade_out'] = $fade_out;
 
         return $this;
     }

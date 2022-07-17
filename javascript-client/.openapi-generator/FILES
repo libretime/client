@@ -44,16 +44,19 @@ common.ts
 configuration.ts
 git_push.sh
 index.ts
+model/blank-enum.ts
 model/celery-task.ts
 model/import-status-enum.ts
 model/imported-podcast.ts
 model/index.ts
+model/kind1d2-enum.ts
 model/library.ts
 model/listener-count.ts
 model/live-log.ts
 model/login-attempt.ts
 model/model-file.ts
 model/mount-name.ts
+model/null-enum.ts
 model/patched-celery-task.ts
 model/patched-file.ts
 model/patched-imported-podcast.ts
@@ -73,6 +76,8 @@ model/patched-podcast.ts
 model/patched-preference.ts
 model/patched-schedule.ts
 model/patched-service-register.ts
+model/patched-show-days-record-enabled.ts
+model/patched-show-days-week-day.ts
 model/patched-show-days.ts
 model/patched-show-host.ts
 model/patched-show-instance.ts
@@ -80,6 +85,7 @@ model/patched-show-rebroadcast.ts
 model/patched-show.ts
 model/patched-smart-block-content.ts
 model/patched-smart-block-criteria.ts
+model/patched-smart-block-kind.ts
 model/patched-smart-block.ts
 model/patched-station-podcast.ts
 model/patched-stream-setting.ts
@@ -97,7 +103,10 @@ model/playout-history-template.ts
 model/playout-history.ts
 model/podcast-episode.ts
 model/podcast.ts
+model/position-status-enum.ts
 model/preference.ts
+model/record-enabled-enum.ts
+model/repeat-kind-enum.ts
 model/role-enum.ts
 model/schedule.ts
 model/service-register.ts
@@ -108,6 +117,7 @@ model/show-rebroadcast.ts
 model/show.ts
 model/smart-block-content.ts
 model/smart-block-criteria.ts
+model/smart-block-kind-enum.ts
 model/smart-block.ts
 model/station-podcast.ts
 model/stream-setting.ts
@@ -117,3 +127,4 @@ model/user-token.ts
 model/user.ts
 model/webstream-metadata.ts
 model/webstream.ts
+model/week-day-enum.ts

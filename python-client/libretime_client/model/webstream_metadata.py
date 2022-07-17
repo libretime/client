@@ -58,7 +58,7 @@ class WebstreamMetadata(ModelNormal):
     }
 
     validations = {
-        ('liquidsoap_data',): {
+        ('data',): {
             'max_length': 1024,
         },
     }
@@ -85,9 +85,9 @@ class WebstreamMetadata(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
-            'start_time': (datetime,),  # noqa: E501
-            'liquidsoap_data': (str,),  # noqa: E501
-            'instance': (str,),  # noqa: E501
+            'starts_at': (datetime,),  # noqa: E501
+            'data': (str,),  # noqa: E501
+            'schedule': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -97,9 +97,9 @@ class WebstreamMetadata(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
-        'start_time': 'start_time',  # noqa: E501
-        'liquidsoap_data': 'liquidsoap_data',  # noqa: E501
-        'instance': 'instance',  # noqa: E501
+        'starts_at': 'starts_at',  # noqa: E501
+        'data': 'data',  # noqa: E501
+        'schedule': 'schedule',  # noqa: E501
     }
 
     read_only_vars = {
@@ -110,14 +110,14 @@ class WebstreamMetadata(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, start_time, liquidsoap_data, instance, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, starts_at, data, schedule, *args, **kwargs):  # noqa: E501
         """WebstreamMetadata - a model defined in OpenAPI
 
         Args:
             item_url (str):
-            start_time (datetime):
-            liquidsoap_data (str):
-            instance (str):
+            starts_at (datetime):
+            data (str):
+            schedule (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -182,9 +182,9 @@ class WebstreamMetadata(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.item_url = item_url
-        self.start_time = start_time
-        self.liquidsoap_data = liquidsoap_data
-        self.instance = instance
+        self.starts_at = starts_at
+        self.data = data
+        self.schedule = schedule
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -205,12 +205,12 @@ class WebstreamMetadata(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, start_time, liquidsoap_data, instance, *args, **kwargs):  # noqa: E501
+    def __init__(self, starts_at, data, schedule, *args, **kwargs):  # noqa: E501
         """WebstreamMetadata - a model defined in OpenAPI
 
-            start_time (datetime):
-            liquidsoap_data (str):
-            instance (str):
+            starts_at (datetime):
+            data (str):
+            schedule (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -272,9 +272,9 @@ class WebstreamMetadata(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.start_time = start_time
-        self.liquidsoap_data = liquidsoap_data
-        self.instance = instance
+        self.starts_at = starts_at
+        self.data = data
+        self.schedule = schedule
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

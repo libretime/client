@@ -56,15 +56,15 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_days_api.ShowDaysApi(api_client)
     show_days = ShowDays(
-        first_show=dateutil_parser('1970-01-01').date(),
-        last_show=dateutil_parser('1970-01-01').date(),
+        first_show_on=dateutil_parser('1970-01-01').date(),
+        last_show_on=dateutil_parser('1970-01-01').date(),
         start_time="start_time_example",
         timezone="timezone_example",
         duration="duration_example",
-        day=-32768,
-        repeat_type=-32768,
-        next_pop_date=dateutil_parser('1970-01-01').date(),
-        record=-32768,
+        record_enabled=PatchedShowDaysRecordEnabled(None),
+        week_day=PatchedShowDaysWeekDay(None),
+        repeat_kind=None,
+        repeat_next_on=dateutil_parser('1970-01-01').date(),
         show="show_example",
     ) # ShowDays | 
 
@@ -309,15 +309,15 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_days_api.ShowDaysApi(api_client)
     id = 1 # int | A unique integer value identifying this show days.
     patched_show_days = PatchedShowDays(
-        first_show=dateutil_parser('1970-01-01').date(),
-        last_show=dateutil_parser('1970-01-01').date(),
+        first_show_on=dateutil_parser('1970-01-01').date(),
+        last_show_on=dateutil_parser('1970-01-01').date(),
         start_time="start_time_example",
         timezone="timezone_example",
         duration="duration_example",
-        day=-32768,
-        repeat_type=-32768,
-        next_pop_date=dateutil_parser('1970-01-01').date(),
-        record=-32768,
+        record_enabled=PatchedShowDaysRecordEnabled(None),
+        week_day=PatchedShowDaysWeekDay(None),
+        repeat_kind=None,
+        repeat_next_on=dateutil_parser('1970-01-01').date(),
         show="show_example",
     ) # PatchedShowDays |  (optional)
 
@@ -494,15 +494,15 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_days_api.ShowDaysApi(api_client)
     id = 1 # int | A unique integer value identifying this show days.
     show_days = ShowDays(
-        first_show=dateutil_parser('1970-01-01').date(),
-        last_show=dateutil_parser('1970-01-01').date(),
+        first_show_on=dateutil_parser('1970-01-01').date(),
+        last_show_on=dateutil_parser('1970-01-01').date(),
         start_time="start_time_example",
         timezone="timezone_example",
         duration="duration_example",
-        day=-32768,
-        repeat_type=-32768,
-        next_pop_date=dateutil_parser('1970-01-01').date(),
-        record=-32768,
+        record_enabled=PatchedShowDaysRecordEnabled(None),
+        week_day=PatchedShowDaysWeekDay(None),
+        repeat_kind=None,
+        repeat_next_on=dateutil_parser('1970-01-01').date(),
         show="show_example",
     ) # ShowDays | 
 

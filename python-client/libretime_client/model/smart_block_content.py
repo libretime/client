@@ -86,13 +86,13 @@ class SmartBlockContent(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
-            'trackoffset': (float,),  # noqa: E501
+            'offset': (float,),  # noqa: E501
             'position': (int, none_type,),  # noqa: E501
-            'cliplength': (str, none_type,),  # noqa: E501
-            'cuein': (str, none_type,),  # noqa: E501
-            'cueout': (str, none_type,),  # noqa: E501
-            'fadein': (str, none_type,),  # noqa: E501
-            'fadeout': (str, none_type,),  # noqa: E501
+            'length': (str, none_type,),  # noqa: E501
+            'cue_in': (str, none_type,),  # noqa: E501
+            'cue_out': (str, none_type,),  # noqa: E501
+            'fade_in': (str, none_type,),  # noqa: E501
+            'fade_out': (str, none_type,),  # noqa: E501
             'block': (str, none_type,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
         }
@@ -104,13 +104,13 @@ class SmartBlockContent(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
-        'trackoffset': 'trackoffset',  # noqa: E501
+        'offset': 'offset',  # noqa: E501
         'position': 'position',  # noqa: E501
-        'cliplength': 'cliplength',  # noqa: E501
-        'cuein': 'cuein',  # noqa: E501
-        'cueout': 'cueout',  # noqa: E501
-        'fadein': 'fadein',  # noqa: E501
-        'fadeout': 'fadeout',  # noqa: E501
+        'length': 'length',  # noqa: E501
+        'cue_in': 'cue_in',  # noqa: E501
+        'cue_out': 'cue_out',  # noqa: E501
+        'fade_in': 'fade_in',  # noqa: E501
+        'fade_out': 'fade_out',  # noqa: E501
         'block': 'block',  # noqa: E501
         'file': 'file',  # noqa: E501
     }
@@ -123,12 +123,12 @@ class SmartBlockContent(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, trackoffset, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, offset, *args, **kwargs):  # noqa: E501
         """SmartBlockContent - a model defined in OpenAPI
 
         Args:
             item_url (str):
-            trackoffset (float):
+            offset (float):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -162,11 +162,11 @@ class SmartBlockContent(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             position (int, none_type): [optional]  # noqa: E501
-            cliplength (str, none_type): [optional]  # noqa: E501
-            cuein (str, none_type): [optional]  # noqa: E501
-            cueout (str, none_type): [optional]  # noqa: E501
-            fadein (str, none_type): [optional]  # noqa: E501
-            fadeout (str, none_type): [optional]  # noqa: E501
+            length (str, none_type): [optional]  # noqa: E501
+            cue_in (str, none_type): [optional]  # noqa: E501
+            cue_out (str, none_type): [optional]  # noqa: E501
+            fade_in (str, none_type): [optional]  # noqa: E501
+            fade_out (str, none_type): [optional]  # noqa: E501
             block (str, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
         """
@@ -201,7 +201,7 @@ class SmartBlockContent(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.item_url = item_url
-        self.trackoffset = trackoffset
+        self.offset = offset
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -222,10 +222,10 @@ class SmartBlockContent(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, trackoffset, *args, **kwargs):  # noqa: E501
+    def __init__(self, offset, *args, **kwargs):  # noqa: E501
         """SmartBlockContent - a model defined in OpenAPI
 
-            trackoffset (float):
+            offset (float):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -259,11 +259,11 @@ class SmartBlockContent(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             position (int, none_type): [optional]  # noqa: E501
-            cliplength (str, none_type): [optional]  # noqa: E501
-            cuein (str, none_type): [optional]  # noqa: E501
-            cueout (str, none_type): [optional]  # noqa: E501
-            fadein (str, none_type): [optional]  # noqa: E501
-            fadeout (str, none_type): [optional]  # noqa: E501
+            length (str, none_type): [optional]  # noqa: E501
+            cue_in (str, none_type): [optional]  # noqa: E501
+            cue_out (str, none_type): [optional]  # noqa: E501
+            fade_in (str, none_type): [optional]  # noqa: E501
+            fade_out (str, none_type): [optional]  # noqa: E501
             block (str, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
         """
@@ -295,7 +295,7 @@ class SmartBlockContent(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.trackoffset = trackoffset
+        self.offset = offset
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

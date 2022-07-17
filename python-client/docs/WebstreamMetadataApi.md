@@ -56,9 +56,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstream_metadata_api.WebstreamMetadataApi(api_client)
     webstream_metadata = WebstreamMetadata(
-        start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        liquidsoap_data="liquidsoap_data_example",
-        instance="instance_example",
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        data="data_example",
+        schedule="schedule_example",
     ) # WebstreamMetadata | 
 
     # example passing only required values which don't have defaults set
@@ -302,9 +302,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = webstream_metadata_api.WebstreamMetadataApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream metadata.
     patched_webstream_metadata = PatchedWebstreamMetadata(
-        start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        liquidsoap_data="liquidsoap_data_example",
-        instance="instance_example",
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        data="data_example",
+        schedule="schedule_example",
     ) # PatchedWebstreamMetadata |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -480,9 +480,9 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = webstream_metadata_api.WebstreamMetadataApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream metadata.
     webstream_metadata = WebstreamMetadata(
-        start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        liquidsoap_data="liquidsoap_data_example",
-        instance="instance_example",
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        data="data_example",
+        schedule="schedule_example",
     ) # WebstreamMetadata | 
 
     # example passing only required values which don't have defaults set

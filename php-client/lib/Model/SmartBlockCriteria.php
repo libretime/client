@@ -60,11 +60,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
+        'group' => 'int',
         'criteria' => 'string',
-        'modifier' => 'string',
+        'condition' => 'string',
         'value' => 'string',
         'extra' => 'string',
-        'criteriagroup' => 'int',
         'block' => 'string'
     ];
 
@@ -77,11 +77,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
+        'group' => null,
         'criteria' => null,
-        'modifier' => null,
+        'condition' => null,
         'value' => null,
         'extra' => null,
-        'criteriagroup' => null,
         'block' => 'uri'
     ];
 
@@ -113,11 +113,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
+        'group' => 'group',
         'criteria' => 'criteria',
-        'modifier' => 'modifier',
+        'condition' => 'condition',
         'value' => 'value',
         'extra' => 'extra',
-        'criteriagroup' => 'criteriagroup',
         'block' => 'block'
     ];
 
@@ -128,11 +128,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
+        'group' => 'setGroup',
         'criteria' => 'setCriteria',
-        'modifier' => 'setModifier',
+        'condition' => 'setCondition',
         'value' => 'setValue',
         'extra' => 'setExtra',
-        'criteriagroup' => 'setCriteriagroup',
         'block' => 'setBlock'
     ];
 
@@ -143,11 +143,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
+        'group' => 'getGroup',
         'criteria' => 'getCriteria',
-        'modifier' => 'getModifier',
+        'condition' => 'getCondition',
         'value' => 'getValue',
         'extra' => 'getExtra',
-        'criteriagroup' => 'getCriteriagroup',
         'block' => 'getBlock'
     ];
 
@@ -209,11 +209,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['group'] = $data['group'] ?? null;
         $this->container['criteria'] = $data['criteria'] ?? null;
-        $this->container['modifier'] = $data['modifier'] ?? null;
+        $this->container['condition'] = $data['condition'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
         $this->container['extra'] = $data['extra'] ?? null;
-        $this->container['criteriagroup'] = $data['criteriagroup'] ?? null;
         $this->container['block'] = $data['block'] ?? null;
     }
 
@@ -229,6 +229,14 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
+        if (!is_null($this->container['group']) && ($this->container['group'] > 2147483647)) {
+            $invalidProperties[] = "invalid value for 'group', must be smaller than or equal to 2147483647.";
+        }
+
+        if (!is_null($this->container['group']) && ($this->container['group'] < -2147483648)) {
+            $invalidProperties[] = "invalid value for 'group', must be bigger than or equal to -2147483648.";
+        }
+
         if ($this->container['criteria'] === null) {
             $invalidProperties[] = "'criteria' can't be null";
         }
@@ -236,11 +244,11 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
             $invalidProperties[] = "invalid value for 'criteria', the character length must be smaller than or equal to 32.";
         }
 
-        if ($this->container['modifier'] === null) {
-            $invalidProperties[] = "'modifier' can't be null";
+        if ($this->container['condition'] === null) {
+            $invalidProperties[] = "'condition' can't be null";
         }
-        if ((mb_strlen($this->container['modifier']) > 16)) {
-            $invalidProperties[] = "invalid value for 'modifier', the character length must be smaller than or equal to 16.";
+        if ((mb_strlen($this->container['condition']) > 16)) {
+            $invalidProperties[] = "invalid value for 'condition', the character length must be smaller than or equal to 16.";
         }
 
         if ($this->container['value'] === null) {
@@ -252,14 +260,6 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
 
         if (!is_null($this->container['extra']) && (mb_strlen($this->container['extra']) > 512)) {
             $invalidProperties[] = "invalid value for 'extra', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['criteriagroup']) && ($this->container['criteriagroup'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'criteriagroup', must be smaller than or equal to 2147483647.";
-        }
-
-        if (!is_null($this->container['criteriagroup']) && ($this->container['criteriagroup'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'criteriagroup', must be bigger than or equal to -2147483648.";
         }
 
         if ($this->container['block'] === null) {
@@ -305,6 +305,38 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
+     * Gets group
+     *
+     * @return int|null
+     */
+    public function getGroup()
+    {
+        return $this->container['group'];
+    }
+
+    /**
+     * Sets group
+     *
+     * @param int|null $group group
+     *
+     * @return self
+     */
+    public function setGroup($group)
+    {
+
+        if (!is_null($group) && ($group > 2147483647)) {
+            throw new \InvalidArgumentException('invalid value for $group when calling SmartBlockCriteria., must be smaller than or equal to 2147483647.');
+        }
+        if (!is_null($group) && ($group < -2147483648)) {
+            throw new \InvalidArgumentException('invalid value for $group when calling SmartBlockCriteria., must be bigger than or equal to -2147483648.');
+        }
+
+        $this->container['group'] = $group;
+
+        return $this;
+    }
+
+    /**
      * Gets criteria
      *
      * @return string
@@ -333,29 +365,29 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets modifier
+     * Gets condition
      *
      * @return string
      */
-    public function getModifier()
+    public function getCondition()
     {
-        return $this->container['modifier'];
+        return $this->container['condition'];
     }
 
     /**
-     * Sets modifier
+     * Sets condition
      *
-     * @param string $modifier modifier
+     * @param string $condition condition
      *
      * @return self
      */
-    public function setModifier($modifier)
+    public function setCondition($condition)
     {
-        if ((mb_strlen($modifier) > 16)) {
-            throw new \InvalidArgumentException('invalid length for $modifier when calling SmartBlockCriteria., must be smaller than or equal to 16.');
+        if ((mb_strlen($condition) > 16)) {
+            throw new \InvalidArgumentException('invalid length for $condition when calling SmartBlockCriteria., must be smaller than or equal to 16.');
         }
 
-        $this->container['modifier'] = $modifier;
+        $this->container['condition'] = $condition;
 
         return $this;
     }
@@ -412,38 +444,6 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
         }
 
         $this->container['extra'] = $extra;
-
-        return $this;
-    }
-
-    /**
-     * Gets criteriagroup
-     *
-     * @return int|null
-     */
-    public function getCriteriagroup()
-    {
-        return $this->container['criteriagroup'];
-    }
-
-    /**
-     * Sets criteriagroup
-     *
-     * @param int|null $criteriagroup criteriagroup
-     *
-     * @return self
-     */
-    public function setCriteriagroup($criteriagroup)
-    {
-
-        if (!is_null($criteriagroup) && ($criteriagroup > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $criteriagroup when calling SmartBlockCriteria., must be smaller than or equal to 2147483647.');
-        }
-        if (!is_null($criteriagroup) && ($criteriagroup < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $criteriagroup when calling SmartBlockCriteria., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['criteriagroup'] = $criteriagroup;
 
         return $this;
     }

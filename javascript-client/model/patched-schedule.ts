@@ -13,6 +13,7 @@
  */
 
 
+import { PositionStatusEnum } from './position-status-enum';
 
 /**
  * 
@@ -37,13 +38,25 @@ export interface PatchedSchedule {
      * @type {string}
      * @memberof PatchedSchedule
      */
-    'starts'?: string;
+    'starts_at'?: string;
     /**
      * 
      * @type {string}
      * @memberof PatchedSchedule
      */
-    'ends'?: string;
+    'ends_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedSchedule
+     */
+    'instance'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedSchedule
+     */
+    'instance_id'?: number;
     /**
      * 
      * @type {string}
@@ -73,7 +86,7 @@ export interface PatchedSchedule {
      * @type {string}
      * @memberof PatchedSchedule
      */
-    'clip_length'?: string | null;
+    'length'?: string | null;
     /**
      * 
      * @type {string}
@@ -100,28 +113,16 @@ export interface PatchedSchedule {
     'cue_out'?: string;
     /**
      * 
-     * @type {boolean}
-     * @memberof PatchedSchedule
-     */
-    'media_item_played'?: boolean | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSchedule
-     */
-    'instance'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedSchedule
      */
-    'instance_id'?: number;
+    'position'?: number;
     /**
      * 
-     * @type {number}
+     * @type {PositionStatusEnum}
      * @memberof PatchedSchedule
      */
-    'playout_status'?: number;
+    'position_status'?: PositionStatusEnum;
     /**
      * 
      * @type {number}
@@ -130,9 +131,15 @@ export interface PatchedSchedule {
     'broadcasted'?: number;
     /**
      * 
-     * @type {number}
+     * @type {boolean}
      * @memberof PatchedSchedule
      */
-    'position'?: number;
+    'played'?: boolean | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedSchedule
+     */
+    'overbooked'?: string;
 }
 

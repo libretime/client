@@ -87,12 +87,12 @@ class PatchedSmartBlockContent(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'position': (int, none_type,),  # noqa: E501
-            'trackoffset': (float,),  # noqa: E501
-            'cliplength': (str, none_type,),  # noqa: E501
-            'cuein': (str, none_type,),  # noqa: E501
-            'cueout': (str, none_type,),  # noqa: E501
-            'fadein': (str, none_type,),  # noqa: E501
-            'fadeout': (str, none_type,),  # noqa: E501
+            'offset': (float,),  # noqa: E501
+            'length': (str, none_type,),  # noqa: E501
+            'cue_in': (str, none_type,),  # noqa: E501
+            'cue_out': (str, none_type,),  # noqa: E501
+            'fade_in': (str, none_type,),  # noqa: E501
+            'fade_out': (str, none_type,),  # noqa: E501
             'block': (str, none_type,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
         }
@@ -105,12 +105,12 @@ class PatchedSmartBlockContent(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'position': 'position',  # noqa: E501
-        'trackoffset': 'trackoffset',  # noqa: E501
-        'cliplength': 'cliplength',  # noqa: E501
-        'cuein': 'cuein',  # noqa: E501
-        'cueout': 'cueout',  # noqa: E501
-        'fadein': 'fadein',  # noqa: E501
-        'fadeout': 'fadeout',  # noqa: E501
+        'offset': 'offset',  # noqa: E501
+        'length': 'length',  # noqa: E501
+        'cue_in': 'cue_in',  # noqa: E501
+        'cue_out': 'cue_out',  # noqa: E501
+        'fade_in': 'fade_in',  # noqa: E501
+        'fade_out': 'fade_out',  # noqa: E501
         'block': 'block',  # noqa: E501
         'file': 'file',  # noqa: E501
     }
@@ -159,12 +159,12 @@ class PatchedSmartBlockContent(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             position (int, none_type): [optional]  # noqa: E501
-            trackoffset (float): [optional]  # noqa: E501
-            cliplength (str, none_type): [optional]  # noqa: E501
-            cuein (str, none_type): [optional]  # noqa: E501
-            cueout (str, none_type): [optional]  # noqa: E501
-            fadein (str, none_type): [optional]  # noqa: E501
-            fadeout (str, none_type): [optional]  # noqa: E501
+            offset (float): [optional]  # noqa: E501
+            length (str, none_type): [optional]  # noqa: E501
+            cue_in (str, none_type): [optional]  # noqa: E501
+            cue_out (str, none_type): [optional]  # noqa: E501
+            fade_in (str, none_type): [optional]  # noqa: E501
+            fade_out (str, none_type): [optional]  # noqa: E501
             block (str, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
         """
@@ -254,12 +254,12 @@ class PatchedSmartBlockContent(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             position (int, none_type): [optional]  # noqa: E501
-            trackoffset (float): [optional]  # noqa: E501
-            cliplength (str, none_type): [optional]  # noqa: E501
-            cuein (str, none_type): [optional]  # noqa: E501
-            cueout (str, none_type): [optional]  # noqa: E501
-            fadein (str, none_type): [optional]  # noqa: E501
-            fadeout (str, none_type): [optional]  # noqa: E501
+            offset (float): [optional]  # noqa: E501
+            length (str, none_type): [optional]  # noqa: E501
+            cue_in (str, none_type): [optional]  # noqa: E501
+            cue_out (str, none_type): [optional]  # noqa: E501
+            fade_in (str, none_type): [optional]  # noqa: E501
+            fade_out (str, none_type): [optional]  # noqa: E501
             block (str, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
         """

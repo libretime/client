@@ -60,12 +60,12 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
         'name' => 'string',
-        'mtime' => '\DateTime',
-        'utime' => '\DateTime',
         'description' => 'string',
         'length' => 'string',
-        'creator' => 'string'
+        'owner' => 'string'
     ];
 
     /**
@@ -77,12 +77,12 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
         'name' => null,
-        'mtime' => 'date-time',
-        'utime' => 'date-time',
         'description' => null,
         'length' => null,
-        'creator' => 'uri'
+        'owner' => 'uri'
     ];
 
     /**
@@ -113,12 +113,12 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
         'name' => 'name',
-        'mtime' => 'mtime',
-        'utime' => 'utime',
         'description' => 'description',
         'length' => 'length',
-        'creator' => 'creator'
+        'owner' => 'owner'
     ];
 
     /**
@@ -128,12 +128,12 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
         'name' => 'setName',
-        'mtime' => 'setMtime',
-        'utime' => 'setUtime',
         'description' => 'setDescription',
         'length' => 'setLength',
-        'creator' => 'setCreator'
+        'owner' => 'setOwner'
     ];
 
     /**
@@ -143,12 +143,12 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
         'name' => 'getName',
-        'mtime' => 'getMtime',
-        'utime' => 'getUtime',
         'description' => 'getDescription',
         'length' => 'getLength',
-        'creator' => 'getCreator'
+        'owner' => 'getOwner'
     ];
 
     /**
@@ -209,12 +209,12 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['mtime'] = $data['mtime'] ?? null;
-        $this->container['utime'] = $data['utime'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['length'] = $data['length'] ?? null;
-        $this->container['creator'] = $data['creator'] ?? null;
+        $this->container['owner'] = $data['owner'] ?? null;
     }
 
     /**
@@ -280,6 +280,54 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at created_at
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     *
+     * @param \DateTime|null $updated_at updated_at
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
      * @return string
@@ -303,54 +351,6 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets mtime
-     *
-     * @return \DateTime|null
-     */
-    public function getMtime()
-    {
-        return $this->container['mtime'];
-    }
-
-    /**
-     * Sets mtime
-     *
-     * @param \DateTime|null $mtime mtime
-     *
-     * @return self
-     */
-    public function setMtime($mtime)
-    {
-        $this->container['mtime'] = $mtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets utime
-     *
-     * @return \DateTime|null
-     */
-    public function getUtime()
-    {
-        return $this->container['utime'];
-    }
-
-    /**
-     * Sets utime
-     *
-     * @param \DateTime|null $utime utime
-     *
-     * @return self
-     */
-    public function setUtime($utime)
-    {
-        $this->container['utime'] = $utime;
 
         return $this;
     }
@@ -408,25 +408,25 @@ class Playlist implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets creator
+     * Gets owner
      *
      * @return string|null
      */
-    public function getCreator()
+    public function getOwner()
     {
-        return $this->container['creator'];
+        return $this->container['owner'];
     }
 
     /**
-     * Sets creator
+     * Sets owner
      *
-     * @param string|null $creator creator
+     * @param string|null $owner owner
      *
      * @return self
      */
-    public function setCreator($creator)
+    public function setOwner($owner)
     {
-        $this->container['creator'] = $creator;
+        $this->container['owner'] = $owner;
 
         return $this;
     }

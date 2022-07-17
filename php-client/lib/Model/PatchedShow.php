@@ -62,17 +62,17 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'item_url' => 'string',
         'id' => 'int',
         'name' => 'string',
-        'url' => 'string',
-        'genre' => 'string',
         'description' => 'string',
-        'color' => 'string',
+        'genre' => 'string',
+        'url' => 'string',
+        'image' => 'string',
+        'foreground_color' => 'string',
         'background_color' => 'string',
         'linked' => 'bool',
-        'is_linkable' => 'bool',
-        'image_path' => 'string',
-        'has_autoplaylist' => 'bool',
-        'autoplaylist_repeat' => 'bool',
-        'autoplaylist' => 'string'
+        'linkable' => 'bool',
+        'auto_playlist' => 'string',
+        'auto_playlist_enabled' => 'bool',
+        'auto_playlist_repeat' => 'bool'
     ];
 
     /**
@@ -86,17 +86,17 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'item_url' => 'uri',
         'id' => null,
         'name' => null,
-        'url' => null,
-        'genre' => null,
         'description' => null,
-        'color' => null,
+        'genre' => null,
+        'url' => null,
+        'image' => null,
+        'foreground_color' => null,
         'background_color' => null,
         'linked' => null,
-        'is_linkable' => null,
-        'image_path' => null,
-        'has_autoplaylist' => null,
-        'autoplaylist_repeat' => null,
-        'autoplaylist' => 'uri'
+        'linkable' => null,
+        'auto_playlist' => 'uri',
+        'auto_playlist_enabled' => null,
+        'auto_playlist_repeat' => null
     ];
 
     /**
@@ -129,17 +129,17 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'item_url' => 'item_url',
         'id' => 'id',
         'name' => 'name',
-        'url' => 'url',
-        'genre' => 'genre',
         'description' => 'description',
-        'color' => 'color',
+        'genre' => 'genre',
+        'url' => 'url',
+        'image' => 'image',
+        'foreground_color' => 'foreground_color',
         'background_color' => 'background_color',
         'linked' => 'linked',
-        'is_linkable' => 'is_linkable',
-        'image_path' => 'image_path',
-        'has_autoplaylist' => 'has_autoplaylist',
-        'autoplaylist_repeat' => 'autoplaylist_repeat',
-        'autoplaylist' => 'autoplaylist'
+        'linkable' => 'linkable',
+        'auto_playlist' => 'auto_playlist',
+        'auto_playlist_enabled' => 'auto_playlist_enabled',
+        'auto_playlist_repeat' => 'auto_playlist_repeat'
     ];
 
     /**
@@ -151,17 +151,17 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'item_url' => 'setItemUrl',
         'id' => 'setId',
         'name' => 'setName',
-        'url' => 'setUrl',
-        'genre' => 'setGenre',
         'description' => 'setDescription',
-        'color' => 'setColor',
+        'genre' => 'setGenre',
+        'url' => 'setUrl',
+        'image' => 'setImage',
+        'foreground_color' => 'setForegroundColor',
         'background_color' => 'setBackgroundColor',
         'linked' => 'setLinked',
-        'is_linkable' => 'setIsLinkable',
-        'image_path' => 'setImagePath',
-        'has_autoplaylist' => 'setHasAutoplaylist',
-        'autoplaylist_repeat' => 'setAutoplaylistRepeat',
-        'autoplaylist' => 'setAutoplaylist'
+        'linkable' => 'setLinkable',
+        'auto_playlist' => 'setAutoPlaylist',
+        'auto_playlist_enabled' => 'setAutoPlaylistEnabled',
+        'auto_playlist_repeat' => 'setAutoPlaylistRepeat'
     ];
 
     /**
@@ -173,17 +173,17 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'item_url' => 'getItemUrl',
         'id' => 'getId',
         'name' => 'getName',
-        'url' => 'getUrl',
-        'genre' => 'getGenre',
         'description' => 'getDescription',
-        'color' => 'getColor',
+        'genre' => 'getGenre',
+        'url' => 'getUrl',
+        'image' => 'getImage',
+        'foreground_color' => 'getForegroundColor',
         'background_color' => 'getBackgroundColor',
         'linked' => 'getLinked',
-        'is_linkable' => 'getIsLinkable',
-        'image_path' => 'getImagePath',
-        'has_autoplaylist' => 'getHasAutoplaylist',
-        'autoplaylist_repeat' => 'getAutoplaylistRepeat',
-        'autoplaylist' => 'getAutoplaylist'
+        'linkable' => 'getLinkable',
+        'auto_playlist' => 'getAutoPlaylist',
+        'auto_playlist_enabled' => 'getAutoPlaylistEnabled',
+        'auto_playlist_repeat' => 'getAutoPlaylistRepeat'
     ];
 
     /**
@@ -246,17 +246,17 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['url'] = $data['url'] ?? null;
-        $this->container['genre'] = $data['genre'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
-        $this->container['color'] = $data['color'] ?? null;
+        $this->container['genre'] = $data['genre'] ?? null;
+        $this->container['url'] = $data['url'] ?? null;
+        $this->container['image'] = $data['image'] ?? null;
+        $this->container['foreground_color'] = $data['foreground_color'] ?? null;
         $this->container['background_color'] = $data['background_color'] ?? null;
         $this->container['linked'] = $data['linked'] ?? null;
-        $this->container['is_linkable'] = $data['is_linkable'] ?? null;
-        $this->container['image_path'] = $data['image_path'] ?? null;
-        $this->container['has_autoplaylist'] = $data['has_autoplaylist'] ?? null;
-        $this->container['autoplaylist_repeat'] = $data['autoplaylist_repeat'] ?? null;
-        $this->container['autoplaylist'] = $data['autoplaylist'] ?? null;
+        $this->container['linkable'] = $data['linkable'] ?? null;
+        $this->container['auto_playlist'] = $data['auto_playlist'] ?? null;
+        $this->container['auto_playlist_enabled'] = $data['auto_playlist_enabled'] ?? null;
+        $this->container['auto_playlist_repeat'] = $data['auto_playlist_repeat'] ?? null;
     }
 
     /**
@@ -272,28 +272,28 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 255)) {
-            $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 255.";
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 8192)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 8192.";
         }
 
         if (!is_null($this->container['genre']) && (mb_strlen($this->container['genre']) > 255)) {
             $invalidProperties[] = "invalid value for 'genre', the character length must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 8192)) {
-            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 8192.";
+        if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 255)) {
+            $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 255.";
         }
 
-        if (!is_null($this->container['color']) && (mb_strlen($this->container['color']) > 6)) {
-            $invalidProperties[] = "invalid value for 'color', the character length must be smaller than or equal to 6.";
+        if (!is_null($this->container['image']) && (mb_strlen($this->container['image']) > 255)) {
+            $invalidProperties[] = "invalid value for 'image', the character length must be smaller than or equal to 255.";
+        }
+
+        if (!is_null($this->container['foreground_color']) && (mb_strlen($this->container['foreground_color']) > 6)) {
+            $invalidProperties[] = "invalid value for 'foreground_color', the character length must be smaller than or equal to 6.";
         }
 
         if (!is_null($this->container['background_color']) && (mb_strlen($this->container['background_color']) > 6)) {
             $invalidProperties[] = "invalid value for 'background_color', the character length must be smaller than or equal to 6.";
-        }
-
-        if (!is_null($this->container['image_path']) && (mb_strlen($this->container['image_path']) > 255)) {
-            $invalidProperties[] = "invalid value for 'image_path', the character length must be smaller than or equal to 255.";
         }
 
         return $invalidProperties;
@@ -388,29 +388,29 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets url
+     * Gets description
      *
      * @return string|null
      */
-    public function getUrl()
+    public function getDescription()
     {
-        return $this->container['url'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets url
+     * Sets description
      *
-     * @param string|null $url url
+     * @param string|null $description description
      *
      * @return self
      */
-    public function setUrl($url)
+    public function setDescription($description)
     {
-        if (!is_null($url) && (mb_strlen($url) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $url when calling PatchedShow., must be smaller than or equal to 255.');
+        if (!is_null($description) && (mb_strlen($description) > 8192)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling PatchedShow., must be smaller than or equal to 8192.');
         }
 
-        $this->container['url'] = $url;
+        $this->container['description'] = $description;
 
         return $this;
     }
@@ -444,57 +444,85 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets description
+     * Gets url
      *
      * @return string|null
      */
-    public function getDescription()
+    public function getUrl()
     {
-        return $this->container['description'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets description
+     * Sets url
      *
-     * @param string|null $description description
+     * @param string|null $url url
      *
      * @return self
      */
-    public function setDescription($description)
+    public function setUrl($url)
     {
-        if (!is_null($description) && (mb_strlen($description) > 8192)) {
-            throw new \InvalidArgumentException('invalid length for $description when calling PatchedShow., must be smaller than or equal to 8192.');
+        if (!is_null($url) && (mb_strlen($url) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $url when calling PatchedShow., must be smaller than or equal to 255.');
         }
 
-        $this->container['description'] = $description;
+        $this->container['url'] = $url;
 
         return $this;
     }
 
     /**
-     * Gets color
+     * Gets image
      *
      * @return string|null
      */
-    public function getColor()
+    public function getImage()
     {
-        return $this->container['color'];
+        return $this->container['image'];
     }
 
     /**
-     * Sets color
+     * Sets image
      *
-     * @param string|null $color color
+     * @param string|null $image image
      *
      * @return self
      */
-    public function setColor($color)
+    public function setImage($image)
     {
-        if (!is_null($color) && (mb_strlen($color) > 6)) {
-            throw new \InvalidArgumentException('invalid length for $color when calling PatchedShow., must be smaller than or equal to 6.');
+        if (!is_null($image) && (mb_strlen($image) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $image when calling PatchedShow., must be smaller than or equal to 255.');
         }
 
-        $this->container['color'] = $color;
+        $this->container['image'] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Gets foreground_color
+     *
+     * @return string|null
+     */
+    public function getForegroundColor()
+    {
+        return $this->container['foreground_color'];
+    }
+
+    /**
+     * Sets foreground_color
+     *
+     * @param string|null $foreground_color foreground_color
+     *
+     * @return self
+     */
+    public function setForegroundColor($foreground_color)
+    {
+        if (!is_null($foreground_color) && (mb_strlen($foreground_color) > 6)) {
+            throw new \InvalidArgumentException('invalid length for $foreground_color when calling PatchedShow., must be smaller than or equal to 6.');
+        }
+
+        $this->container['foreground_color'] = $foreground_color;
 
         return $this;
     }
@@ -552,125 +580,97 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_linkable
+     * Gets linkable
      *
      * @return bool|null
      */
-    public function getIsLinkable()
+    public function getLinkable()
     {
-        return $this->container['is_linkable'];
+        return $this->container['linkable'];
     }
 
     /**
-     * Sets is_linkable
+     * Sets linkable
      *
-     * @param bool|null $is_linkable is_linkable
+     * @param bool|null $linkable linkable
      *
      * @return self
      */
-    public function setIsLinkable($is_linkable)
+    public function setLinkable($linkable)
     {
-        $this->container['is_linkable'] = $is_linkable;
+        $this->container['linkable'] = $linkable;
 
         return $this;
     }
 
     /**
-     * Gets image_path
+     * Gets auto_playlist
      *
      * @return string|null
      */
-    public function getImagePath()
+    public function getAutoPlaylist()
     {
-        return $this->container['image_path'];
+        return $this->container['auto_playlist'];
     }
 
     /**
-     * Sets image_path
+     * Sets auto_playlist
      *
-     * @param string|null $image_path image_path
+     * @param string|null $auto_playlist auto_playlist
      *
      * @return self
      */
-    public function setImagePath($image_path)
+    public function setAutoPlaylist($auto_playlist)
     {
-        if (!is_null($image_path) && (mb_strlen($image_path) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $image_path when calling PatchedShow., must be smaller than or equal to 255.');
-        }
-
-        $this->container['image_path'] = $image_path;
+        $this->container['auto_playlist'] = $auto_playlist;
 
         return $this;
     }
 
     /**
-     * Gets has_autoplaylist
+     * Gets auto_playlist_enabled
      *
      * @return bool|null
      */
-    public function getHasAutoplaylist()
+    public function getAutoPlaylistEnabled()
     {
-        return $this->container['has_autoplaylist'];
+        return $this->container['auto_playlist_enabled'];
     }
 
     /**
-     * Sets has_autoplaylist
+     * Sets auto_playlist_enabled
      *
-     * @param bool|null $has_autoplaylist has_autoplaylist
+     * @param bool|null $auto_playlist_enabled auto_playlist_enabled
      *
      * @return self
      */
-    public function setHasAutoplaylist($has_autoplaylist)
+    public function setAutoPlaylistEnabled($auto_playlist_enabled)
     {
-        $this->container['has_autoplaylist'] = $has_autoplaylist;
+        $this->container['auto_playlist_enabled'] = $auto_playlist_enabled;
 
         return $this;
     }
 
     /**
-     * Gets autoplaylist_repeat
+     * Gets auto_playlist_repeat
      *
      * @return bool|null
      */
-    public function getAutoplaylistRepeat()
+    public function getAutoPlaylistRepeat()
     {
-        return $this->container['autoplaylist_repeat'];
+        return $this->container['auto_playlist_repeat'];
     }
 
     /**
-     * Sets autoplaylist_repeat
+     * Sets auto_playlist_repeat
      *
-     * @param bool|null $autoplaylist_repeat autoplaylist_repeat
+     * @param bool|null $auto_playlist_repeat auto_playlist_repeat
      *
      * @return self
      */
-    public function setAutoplaylistRepeat($autoplaylist_repeat)
+    public function setAutoPlaylistRepeat($auto_playlist_repeat)
     {
-        $this->container['autoplaylist_repeat'] = $autoplaylist_repeat;
-
-        return $this;
-    }
-
-    /**
-     * Gets autoplaylist
-     *
-     * @return string|null
-     */
-    public function getAutoplaylist()
-    {
-        return $this->container['autoplaylist'];
-    }
-
-    /**
-     * Sets autoplaylist
-     *
-     * @param string|null $autoplaylist autoplaylist
-     *
-     * @return self
-     */
-    public function setAutoplaylist($autoplaylist)
-    {
-        $this->container['autoplaylist'] = $autoplaylist;
+        $this->container['auto_playlist_repeat'] = $auto_playlist_repeat;
 
         return $this;
     }

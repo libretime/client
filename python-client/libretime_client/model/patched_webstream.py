@@ -67,10 +67,6 @@ class PatchedWebstream(ModelNormal):
         ('url',): {
             'max_length': 512,
         },
-        ('creator_id',): {
-            'inclusive_maximum': 2147483647,
-            'inclusive_minimum': -2147483648,
-        },
         ('mime',): {
             'max_length': 1024,
         },
@@ -99,15 +95,15 @@ class PatchedWebstream(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
+            'updated_at': (datetime,),  # noqa: E501
+            'last_played_at': (datetime, none_type,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'url': (str,),  # noqa: E501
             'length': (str,),  # noqa: E501
-            'creator_id': (int,),  # noqa: E501
-            'mtime': (datetime,),  # noqa: E501
-            'utime': (datetime,),  # noqa: E501
-            'lptime': (datetime, none_type,),  # noqa: E501
             'mime': (str, none_type,),  # noqa: E501
+            'owner': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -118,15 +114,15 @@ class PatchedWebstream(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
+        'created_at': 'created_at',  # noqa: E501
+        'updated_at': 'updated_at',  # noqa: E501
+        'last_played_at': 'last_played_at',  # noqa: E501
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'url': 'url',  # noqa: E501
         'length': 'length',  # noqa: E501
-        'creator_id': 'creator_id',  # noqa: E501
-        'mtime': 'mtime',  # noqa: E501
-        'utime': 'utime',  # noqa: E501
-        'lptime': 'lptime',  # noqa: E501
         'mime': 'mime',  # noqa: E501
+        'owner': 'owner',  # noqa: E501
     }
 
     read_only_vars = {
@@ -174,15 +170,15 @@ class PatchedWebstream(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
+            created_at (datetime): [optional]  # noqa: E501
+            updated_at (datetime): [optional]  # noqa: E501
+            last_played_at (datetime, none_type): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             url (str): [optional]  # noqa: E501
             length (str): [optional]  # noqa: E501
-            creator_id (int): [optional]  # noqa: E501
-            mtime (datetime): [optional]  # noqa: E501
-            utime (datetime): [optional]  # noqa: E501
-            lptime (datetime, none_type): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
+            owner (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -270,15 +266,15 @@ class PatchedWebstream(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
+            created_at (datetime): [optional]  # noqa: E501
+            updated_at (datetime): [optional]  # noqa: E501
+            last_played_at (datetime, none_type): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             url (str): [optional]  # noqa: E501
             length (str): [optional]  # noqa: E501
-            creator_id (int): [optional]  # noqa: E501
-            mtime (datetime): [optional]  # noqa: E501
-            utime (datetime): [optional]  # noqa: E501
-            lptime (datetime, none_type): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
+            owner (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

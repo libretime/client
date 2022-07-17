@@ -60,9 +60,9 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'start_time' => '\DateTime',
-        'liquidsoap_data' => 'string',
-        'instance' => 'string'
+        'starts_at' => '\DateTime',
+        'data' => 'string',
+        'schedule' => 'string'
     ];
 
     /**
@@ -74,9 +74,9 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
-        'start_time' => 'date-time',
-        'liquidsoap_data' => null,
-        'instance' => 'uri'
+        'starts_at' => 'date-time',
+        'data' => null,
+        'schedule' => 'uri'
     ];
 
     /**
@@ -107,9 +107,9 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
-        'start_time' => 'start_time',
-        'liquidsoap_data' => 'liquidsoap_data',
-        'instance' => 'instance'
+        'starts_at' => 'starts_at',
+        'data' => 'data',
+        'schedule' => 'schedule'
     ];
 
     /**
@@ -119,9 +119,9 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
-        'start_time' => 'setStartTime',
-        'liquidsoap_data' => 'setLiquidsoapData',
-        'instance' => 'setInstance'
+        'starts_at' => 'setStartsAt',
+        'data' => 'setData',
+        'schedule' => 'setSchedule'
     ];
 
     /**
@@ -131,9 +131,9 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
-        'start_time' => 'getStartTime',
-        'liquidsoap_data' => 'getLiquidsoapData',
-        'instance' => 'getInstance'
+        'starts_at' => 'getStartsAt',
+        'data' => 'getData',
+        'schedule' => 'getSchedule'
     ];
 
     /**
@@ -194,9 +194,9 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
-        $this->container['start_time'] = $data['start_time'] ?? null;
-        $this->container['liquidsoap_data'] = $data['liquidsoap_data'] ?? null;
-        $this->container['instance'] = $data['instance'] ?? null;
+        $this->container['starts_at'] = $data['starts_at'] ?? null;
+        $this->container['data'] = $data['data'] ?? null;
+        $this->container['schedule'] = $data['schedule'] ?? null;
     }
 
     /**
@@ -208,8 +208,8 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['liquidsoap_data']) && (mb_strlen($this->container['liquidsoap_data']) > 1024)) {
-            $invalidProperties[] = "invalid value for 'liquidsoap_data', the character length must be smaller than or equal to 1024.";
+        if (!is_null($this->container['data']) && (mb_strlen($this->container['data']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'data', the character length must be smaller than or equal to 1024.";
         }
 
         return $invalidProperties;
@@ -252,77 +252,77 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets start_time
+     * Gets starts_at
      *
      * @return \DateTime|null
      */
-    public function getStartTime()
+    public function getStartsAt()
     {
-        return $this->container['start_time'];
+        return $this->container['starts_at'];
     }
 
     /**
-     * Sets start_time
+     * Sets starts_at
      *
-     * @param \DateTime|null $start_time start_time
+     * @param \DateTime|null $starts_at starts_at
      *
      * @return self
      */
-    public function setStartTime($start_time)
+    public function setStartsAt($starts_at)
     {
-        $this->container['start_time'] = $start_time;
+        $this->container['starts_at'] = $starts_at;
 
         return $this;
     }
 
     /**
-     * Gets liquidsoap_data
+     * Gets data
      *
      * @return string|null
      */
-    public function getLiquidsoapData()
+    public function getData()
     {
-        return $this->container['liquidsoap_data'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets liquidsoap_data
+     * Sets data
      *
-     * @param string|null $liquidsoap_data liquidsoap_data
+     * @param string|null $data data
      *
      * @return self
      */
-    public function setLiquidsoapData($liquidsoap_data)
+    public function setData($data)
     {
-        if (!is_null($liquidsoap_data) && (mb_strlen($liquidsoap_data) > 1024)) {
-            throw new \InvalidArgumentException('invalid length for $liquidsoap_data when calling PatchedWebstreamMetadata., must be smaller than or equal to 1024.');
+        if (!is_null($data) && (mb_strlen($data) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $data when calling PatchedWebstreamMetadata., must be smaller than or equal to 1024.');
         }
 
-        $this->container['liquidsoap_data'] = $liquidsoap_data;
+        $this->container['data'] = $data;
 
         return $this;
     }
 
     /**
-     * Gets instance
+     * Gets schedule
      *
      * @return string|null
      */
-    public function getInstance()
+    public function getSchedule()
     {
-        return $this->container['instance'];
+        return $this->container['schedule'];
     }
 
     /**
-     * Sets instance
+     * Sets schedule
      *
-     * @param string|null $instance instance
+     * @param string|null $schedule schedule
      *
      * @return self
      */
-    public function setInstance($instance)
+    public function setSchedule($schedule)
     {
-        $this->container['instance'] = $instance;
+        $this->container['schedule'] = $schedule;
 
         return $this;
     }

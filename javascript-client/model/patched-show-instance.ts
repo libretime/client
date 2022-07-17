@@ -13,6 +13,7 @@
  */
 
 
+import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
 
 /**
  * 
@@ -37,61 +38,7 @@ export interface PatchedShowInstance {
      * @type {string}
      * @memberof PatchedShowInstance
      */
-    'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'starts'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'ends'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowInstance
-     */
-    'record'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowInstance
-     */
-    'rebroadcast'?: number | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'time_filled'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'created'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'last_scheduled'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShowInstance
-     */
-    'modified_instance'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShowInstance
-     */
-    'autoplaylist_built'?: boolean;
+    'created_at'?: string;
     /**
      * 
      * @type {string}
@@ -115,12 +62,66 @@ export interface PatchedShowInstance {
      * @type {string}
      * @memberof PatchedShowInstance
      */
-    'file'?: string | null;
+    'starts_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedShowInstance
+     */
+    'ends_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedShowInstance
+     */
+    'filled_time'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedShowInstance
+     */
+    'last_scheduled_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedShowInstance
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedShowInstance
+     */
+    'modified'?: boolean;
     /**
      * 
      * @type {number}
      * @memberof PatchedShowInstance
      */
-    'file_id'?: number;
+    'rebroadcast'?: number | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedShowInstance
+     */
+    'auto_playlist_built'?: boolean;
+    /**
+     * 
+     * @type {PatchedShowDaysRecordEnabled}
+     * @memberof PatchedShowInstance
+     */
+    'record_enabled'?: PatchedShowDaysRecordEnabled | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedShowInstance
+     */
+    'record_file'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedShowInstance
+     */
+    'record_file_id'?: number;
 }
 

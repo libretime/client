@@ -56,19 +56,19 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_instances_api.ShowInstancesApi(api_client)
     show_instance = ShowInstance(
-        description="description_example",
-        starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        ends=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        record=-32768,
-        rebroadcast=-32768,
-        time_filled="time_filled_example",
-        created=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        last_scheduled=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        modified_instance=True,
-        autoplaylist_built=True,
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         show="show_example",
         instance="instance_example",
-        file="file_example",
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        ends_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        filled_time="filled_time_example",
+        last_scheduled_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        description="description_example",
+        modified=True,
+        rebroadcast=-32768,
+        auto_playlist_built=True,
+        record_enabled=PatchedShowDaysRecordEnabled(None),
+        record_file="record_file_example",
     ) # ShowInstance | 
 
     # example passing only required values which don't have defaults set
@@ -312,19 +312,19 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_instances_api.ShowInstancesApi(api_client)
     id = 1 # int | A unique integer value identifying this show instance.
     patched_show_instance = PatchedShowInstance(
-        description="description_example",
-        starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        ends=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        record=-32768,
-        rebroadcast=-32768,
-        time_filled="time_filled_example",
-        created=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        last_scheduled=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        modified_instance=True,
-        autoplaylist_built=True,
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         show="show_example",
         instance="instance_example",
-        file="file_example",
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        ends_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        filled_time="filled_time_example",
+        last_scheduled_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        description="description_example",
+        modified=True,
+        rebroadcast=-32768,
+        auto_playlist_built=True,
+        record_enabled=PatchedShowDaysRecordEnabled(None),
+        record_file="record_file_example",
     ) # PatchedShowInstance |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -500,19 +500,19 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_instances_api.ShowInstancesApi(api_client)
     id = 1 # int | A unique integer value identifying this show instance.
     show_instance = ShowInstance(
-        description="description_example",
-        starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        ends=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        record=-32768,
-        rebroadcast=-32768,
-        time_filled="time_filled_example",
-        created=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        last_scheduled=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        modified_instance=True,
-        autoplaylist_built=True,
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         show="show_example",
         instance="instance_example",
-        file="file_example",
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        ends_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        filled_time="filled_time_example",
+        last_scheduled_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        description="description_example",
+        modified=True,
+        rebroadcast=-32768,
+        auto_playlist_built=True,
+        record_enabled=PatchedShowDaysRecordEnabled(None),
+        record_file="record_file_example",
     ) # ShowInstance | 
 
     # example passing only required values which don't have defaults set

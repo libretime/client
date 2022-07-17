@@ -43,7 +43,7 @@ export interface PatchedShow {
      * @type {string}
      * @memberof PatchedShow
      */
-    'url'?: string | null;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
@@ -55,13 +55,19 @@ export interface PatchedShow {
      * @type {string}
      * @memberof PatchedShow
      */
-    'description'?: string | null;
+    'url'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedShow
      */
-    'color'?: string | null;
+    'image'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedShow
+     */
+    'foreground_color'?: string | null;
     /**
      * 
      * @type {string}
@@ -79,30 +85,24 @@ export interface PatchedShow {
      * @type {boolean}
      * @memberof PatchedShow
      */
-    'is_linkable'?: boolean;
+    'linkable'?: boolean;
     /**
      * 
      * @type {string}
      * @memberof PatchedShow
      */
-    'image_path'?: string | null;
+    'auto_playlist'?: string | null;
     /**
      * 
      * @type {boolean}
      * @memberof PatchedShow
      */
-    'has_autoplaylist'?: boolean;
+    'auto_playlist_enabled'?: boolean;
     /**
      * 
      * @type {boolean}
      * @memberof PatchedShow
      */
-    'autoplaylist_repeat'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
-    'autoplaylist'?: string | null;
+    'auto_playlist_repeat'?: boolean;
 }
 

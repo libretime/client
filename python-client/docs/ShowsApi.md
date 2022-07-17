@@ -57,17 +57,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = shows_api.ShowsApi(api_client)
     show = Show(
         name="name_example",
-        url="url_example",
-        genre="genre_example",
         description="description_example",
-        color="color_example",
+        genre="genre_example",
+        url="url_example",
+        image="image_example",
+        foreground_color="foreground_color_example",
         background_color="background_color_example",
         linked=True,
-        is_linkable=True,
-        image_path="image_path_example",
-        has_autoplaylist=True,
-        autoplaylist_repeat=True,
-        autoplaylist="autoplaylist_example",
+        linkable=True,
+        auto_playlist="auto_playlist_example",
+        auto_playlist_enabled=True,
+        auto_playlist_repeat=True,
     ) # Show | 
 
     # example passing only required values which don't have defaults set
@@ -312,17 +312,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this show.
     patched_show = PatchedShow(
         name="name_example",
-        url="url_example",
-        genre="genre_example",
         description="description_example",
-        color="color_example",
+        genre="genre_example",
+        url="url_example",
+        image="image_example",
+        foreground_color="foreground_color_example",
         background_color="background_color_example",
         linked=True,
-        is_linkable=True,
-        image_path="image_path_example",
-        has_autoplaylist=True,
-        autoplaylist_repeat=True,
-        autoplaylist="autoplaylist_example",
+        linkable=True,
+        auto_playlist="auto_playlist_example",
+        auto_playlist_enabled=True,
+        auto_playlist_repeat=True,
     ) # PatchedShow |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -499,17 +499,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this show.
     show = Show(
         name="name_example",
-        url="url_example",
-        genre="genre_example",
         description="description_example",
-        color="color_example",
+        genre="genre_example",
+        url="url_example",
+        image="image_example",
+        foreground_color="foreground_color_example",
         background_color="background_color_example",
         linked=True,
-        is_linkable=True,
-        image_path="image_path_example",
-        has_autoplaylist=True,
-        autoplaylist_repeat=True,
-        autoplaylist="autoplaylist_example",
+        linkable=True,
+        auto_playlist="auto_playlist_example",
+        auto_playlist_enabled=True,
+        auto_playlist_repeat=True,
     ) # Show | 
 
     # example passing only required values which don't have defaults set

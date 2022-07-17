@@ -60,17 +60,17 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'stream_id' => 'int',
-        'type' => 'int',
+        'kind' => 'Kind1d2Enum',
         'position' => 'int',
-        'trackoffset' => 'double',
-        'cliplength' => 'string',
-        'cuein' => 'string',
-        'cueout' => 'string',
-        'fadein' => 'string',
-        'fadeout' => 'string',
+        'offset' => 'double',
+        'length' => 'string',
+        'cue_in' => 'string',
+        'cue_out' => 'string',
+        'fade_in' => 'string',
+        'fade_out' => 'string',
         'playlist' => 'string',
         'file' => 'string',
+        'stream' => 'string',
         'block' => 'string'
     ];
 
@@ -83,17 +83,17 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
-        'stream_id' => null,
-        'type' => null,
+        'kind' => null,
         'position' => null,
-        'trackoffset' => 'double',
-        'cliplength' => null,
-        'cuein' => null,
-        'cueout' => null,
-        'fadein' => 'time',
-        'fadeout' => 'time',
+        'offset' => 'double',
+        'length' => null,
+        'cue_in' => null,
+        'cue_out' => null,
+        'fade_in' => 'time',
+        'fade_out' => 'time',
         'playlist' => 'uri',
         'file' => 'uri',
+        'stream' => 'uri',
         'block' => 'uri'
     ];
 
@@ -125,17 +125,17 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
-        'stream_id' => 'stream_id',
-        'type' => 'type',
+        'kind' => 'kind',
         'position' => 'position',
-        'trackoffset' => 'trackoffset',
-        'cliplength' => 'cliplength',
-        'cuein' => 'cuein',
-        'cueout' => 'cueout',
-        'fadein' => 'fadein',
-        'fadeout' => 'fadeout',
+        'offset' => 'offset',
+        'length' => 'length',
+        'cue_in' => 'cue_in',
+        'cue_out' => 'cue_out',
+        'fade_in' => 'fade_in',
+        'fade_out' => 'fade_out',
         'playlist' => 'playlist',
         'file' => 'file',
+        'stream' => 'stream',
         'block' => 'block'
     ];
 
@@ -146,17 +146,17 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
-        'stream_id' => 'setStreamId',
-        'type' => 'setType',
+        'kind' => 'setKind',
         'position' => 'setPosition',
-        'trackoffset' => 'setTrackoffset',
-        'cliplength' => 'setCliplength',
-        'cuein' => 'setCuein',
-        'cueout' => 'setCueout',
-        'fadein' => 'setFadein',
-        'fadeout' => 'setFadeout',
+        'offset' => 'setOffset',
+        'length' => 'setLength',
+        'cue_in' => 'setCueIn',
+        'cue_out' => 'setCueOut',
+        'fade_in' => 'setFadeIn',
+        'fade_out' => 'setFadeOut',
         'playlist' => 'setPlaylist',
         'file' => 'setFile',
+        'stream' => 'setStream',
         'block' => 'setBlock'
     ];
 
@@ -167,17 +167,17 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
-        'stream_id' => 'getStreamId',
-        'type' => 'getType',
+        'kind' => 'getKind',
         'position' => 'getPosition',
-        'trackoffset' => 'getTrackoffset',
-        'cliplength' => 'getCliplength',
-        'cuein' => 'getCuein',
-        'cueout' => 'getCueout',
-        'fadein' => 'getFadein',
-        'fadeout' => 'getFadeout',
+        'offset' => 'getOffset',
+        'length' => 'getLength',
+        'cue_in' => 'getCueIn',
+        'cue_out' => 'getCueOut',
+        'fade_in' => 'getFadeIn',
+        'fade_out' => 'getFadeOut',
         'playlist' => 'getPlaylist',
         'file' => 'getFile',
+        'stream' => 'getStream',
         'block' => 'getBlock'
     ];
 
@@ -239,17 +239,17 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
-        $this->container['stream_id'] = $data['stream_id'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
+        $this->container['kind'] = $data['kind'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
-        $this->container['trackoffset'] = $data['trackoffset'] ?? null;
-        $this->container['cliplength'] = $data['cliplength'] ?? null;
-        $this->container['cuein'] = $data['cuein'] ?? null;
-        $this->container['cueout'] = $data['cueout'] ?? null;
-        $this->container['fadein'] = $data['fadein'] ?? null;
-        $this->container['fadeout'] = $data['fadeout'] ?? null;
+        $this->container['offset'] = $data['offset'] ?? null;
+        $this->container['length'] = $data['length'] ?? null;
+        $this->container['cue_in'] = $data['cue_in'] ?? null;
+        $this->container['cue_out'] = $data['cue_out'] ?? null;
+        $this->container['fade_in'] = $data['fade_in'] ?? null;
+        $this->container['fade_out'] = $data['fade_out'] ?? null;
         $this->container['playlist'] = $data['playlist'] ?? null;
         $this->container['file'] = $data['file'] ?? null;
+        $this->container['stream'] = $data['stream'] ?? null;
         $this->container['block'] = $data['block'] ?? null;
     }
 
@@ -265,23 +265,15 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
-        if (!is_null($this->container['stream_id']) && ($this->container['stream_id'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'stream_id', must be smaller than or equal to 2147483647.";
+        if ($this->container['kind'] === null) {
+            $invalidProperties[] = "'kind' can't be null";
+        }
+        if (($this->container['kind'] > 32767)) {
+            $invalidProperties[] = "invalid value for 'kind', must be smaller than or equal to 32767.";
         }
 
-        if (!is_null($this->container['stream_id']) && ($this->container['stream_id'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'stream_id', must be bigger than or equal to -2147483648.";
-        }
-
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        if (($this->container['type'] > 32767)) {
-            $invalidProperties[] = "invalid value for 'type', must be smaller than or equal to 32767.";
-        }
-
-        if (($this->container['type'] < -32768)) {
-            $invalidProperties[] = "invalid value for 'type', must be bigger than or equal to -32768.";
+        if (($this->container['kind'] < -32768)) {
+            $invalidProperties[] = "invalid value for 'kind', must be bigger than or equal to -32768.";
         }
 
         if (!is_null($this->container['position']) && ($this->container['position'] > 2147483647)) {
@@ -292,8 +284,8 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'position', must be bigger than or equal to -2147483648.";
         }
 
-        if ($this->container['trackoffset'] === null) {
-            $invalidProperties[] = "'trackoffset' can't be null";
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
         }
         return $invalidProperties;
     }
@@ -335,65 +327,33 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets stream_id
+     * Gets kind
      *
-     * @return int|null
+     * @return Kind1d2Enum
      */
-    public function getStreamId()
+    public function getKind()
     {
-        return $this->container['stream_id'];
+        return $this->container['kind'];
     }
 
     /**
-     * Sets stream_id
+     * Sets kind
      *
-     * @param int|null $stream_id stream_id
+     * @param Kind1d2Enum $kind kind
      *
      * @return self
      */
-    public function setStreamId($stream_id)
+    public function setKind($kind)
     {
 
-        if (!is_null($stream_id) && ($stream_id > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $stream_id when calling PlaylistContent., must be smaller than or equal to 2147483647.');
+        if (($kind > 32767)) {
+            throw new \InvalidArgumentException('invalid value for $kind when calling PlaylistContent., must be smaller than or equal to 32767.');
         }
-        if (!is_null($stream_id) && ($stream_id < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $stream_id when calling PlaylistContent., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['stream_id'] = $stream_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return int
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param int $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-
-        if (($type > 32767)) {
-            throw new \InvalidArgumentException('invalid value for $type when calling PlaylistContent., must be smaller than or equal to 32767.');
-        }
-        if (($type < -32768)) {
-            throw new \InvalidArgumentException('invalid value for $type when calling PlaylistContent., must be bigger than or equal to -32768.');
+        if (($kind < -32768)) {
+            throw new \InvalidArgumentException('invalid value for $kind when calling PlaylistContent., must be bigger than or equal to -32768.');
         }
 
-        $this->container['type'] = $type;
+        $this->container['kind'] = $kind;
 
         return $this;
     }
@@ -431,145 +391,145 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets trackoffset
+     * Gets offset
      *
      * @return double
      */
-    public function getTrackoffset()
+    public function getOffset()
     {
-        return $this->container['trackoffset'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets trackoffset
+     * Sets offset
      *
-     * @param double $trackoffset trackoffset
+     * @param double $offset offset
      *
      * @return self
      */
-    public function setTrackoffset($trackoffset)
+    public function setOffset($offset)
     {
-        $this->container['trackoffset'] = $trackoffset;
+        $this->container['offset'] = $offset;
 
         return $this;
     }
 
     /**
-     * Gets cliplength
+     * Gets length
      *
      * @return string|null
      */
-    public function getCliplength()
+    public function getLength()
     {
-        return $this->container['cliplength'];
+        return $this->container['length'];
     }
 
     /**
-     * Sets cliplength
+     * Sets length
      *
-     * @param string|null $cliplength cliplength
+     * @param string|null $length length
      *
      * @return self
      */
-    public function setCliplength($cliplength)
+    public function setLength($length)
     {
-        $this->container['cliplength'] = $cliplength;
+        $this->container['length'] = $length;
 
         return $this;
     }
 
     /**
-     * Gets cuein
+     * Gets cue_in
      *
      * @return string|null
      */
-    public function getCuein()
+    public function getCueIn()
     {
-        return $this->container['cuein'];
+        return $this->container['cue_in'];
     }
 
     /**
-     * Sets cuein
+     * Sets cue_in
      *
-     * @param string|null $cuein cuein
+     * @param string|null $cue_in cue_in
      *
      * @return self
      */
-    public function setCuein($cuein)
+    public function setCueIn($cue_in)
     {
-        $this->container['cuein'] = $cuein;
+        $this->container['cue_in'] = $cue_in;
 
         return $this;
     }
 
     /**
-     * Gets cueout
+     * Gets cue_out
      *
      * @return string|null
      */
-    public function getCueout()
+    public function getCueOut()
     {
-        return $this->container['cueout'];
+        return $this->container['cue_out'];
     }
 
     /**
-     * Sets cueout
+     * Sets cue_out
      *
-     * @param string|null $cueout cueout
+     * @param string|null $cue_out cue_out
      *
      * @return self
      */
-    public function setCueout($cueout)
+    public function setCueOut($cue_out)
     {
-        $this->container['cueout'] = $cueout;
+        $this->container['cue_out'] = $cue_out;
 
         return $this;
     }
 
     /**
-     * Gets fadein
+     * Gets fade_in
      *
      * @return string|null
      */
-    public function getFadein()
+    public function getFadeIn()
     {
-        return $this->container['fadein'];
+        return $this->container['fade_in'];
     }
 
     /**
-     * Sets fadein
+     * Sets fade_in
      *
-     * @param string|null $fadein fadein
+     * @param string|null $fade_in fade_in
      *
      * @return self
      */
-    public function setFadein($fadein)
+    public function setFadeIn($fade_in)
     {
-        $this->container['fadein'] = $fadein;
+        $this->container['fade_in'] = $fade_in;
 
         return $this;
     }
 
     /**
-     * Gets fadeout
+     * Gets fade_out
      *
      * @return string|null
      */
-    public function getFadeout()
+    public function getFadeOut()
     {
-        return $this->container['fadeout'];
+        return $this->container['fade_out'];
     }
 
     /**
-     * Sets fadeout
+     * Sets fade_out
      *
-     * @param string|null $fadeout fadeout
+     * @param string|null $fade_out fade_out
      *
      * @return self
      */
-    public function setFadeout($fadeout)
+    public function setFadeOut($fade_out)
     {
-        $this->container['fadeout'] = $fadeout;
+        $this->container['fade_out'] = $fade_out;
 
         return $this;
     }
@@ -618,6 +578,30 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setFile($file)
     {
         $this->container['file'] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Gets stream
+     *
+     * @return string|null
+     */
+    public function getStream()
+    {
+        return $this->container['stream'];
+    }
+
+    /**
+     * Sets stream
+     *
+     * @param string|null $stream stream
+     *
+     * @return self
+     */
+    public function setStream($stream)
+    {
+        $this->container['stream'] = $stream;
 
         return $this;
     }

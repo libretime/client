@@ -60,13 +60,13 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
         'name' => 'string',
-        'mtime' => '\DateTime',
-        'utime' => '\DateTime',
         'description' => 'string',
         'length' => 'string',
-        'type' => 'string',
-        'creator' => 'string'
+        'kind' => '\Libretime\Client\Model\PatchedSmartBlockKind',
+        'owner' => 'string'
     ];
 
     /**
@@ -78,13 +78,13 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
         'name' => null,
-        'mtime' => 'date-time',
-        'utime' => 'date-time',
         'description' => null,
         'length' => null,
-        'type' => null,
-        'creator' => 'uri'
+        'kind' => null,
+        'owner' => 'uri'
     ];
 
     /**
@@ -115,13 +115,13 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
         'name' => 'name',
-        'mtime' => 'mtime',
-        'utime' => 'utime',
         'description' => 'description',
         'length' => 'length',
-        'type' => 'type',
-        'creator' => 'creator'
+        'kind' => 'kind',
+        'owner' => 'owner'
     ];
 
     /**
@@ -131,13 +131,13 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
         'name' => 'setName',
-        'mtime' => 'setMtime',
-        'utime' => 'setUtime',
         'description' => 'setDescription',
         'length' => 'setLength',
-        'type' => 'setType',
-        'creator' => 'setCreator'
+        'kind' => 'setKind',
+        'owner' => 'setOwner'
     ];
 
     /**
@@ -147,13 +147,13 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
         'name' => 'getName',
-        'mtime' => 'getMtime',
-        'utime' => 'getUtime',
         'description' => 'getDescription',
         'length' => 'getLength',
-        'type' => 'getType',
-        'creator' => 'getCreator'
+        'kind' => 'getKind',
+        'owner' => 'getOwner'
     ];
 
     /**
@@ -214,13 +214,13 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['mtime'] = $data['mtime'] ?? null;
-        $this->container['utime'] = $data['utime'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['length'] = $data['length'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
-        $this->container['creator'] = $data['creator'] ?? null;
+        $this->container['kind'] = $data['kind'] ?? null;
+        $this->container['owner'] = $data['owner'] ?? null;
     }
 
     /**
@@ -244,10 +244,6 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
-        }
-
-        if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 7)) {
-            $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 7.";
         }
 
         return $invalidProperties;
@@ -290,6 +286,54 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at created_at
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     *
+     * @param \DateTime|null $updated_at updated_at
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
      * @return string
@@ -313,54 +357,6 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets mtime
-     *
-     * @return \DateTime|null
-     */
-    public function getMtime()
-    {
-        return $this->container['mtime'];
-    }
-
-    /**
-     * Sets mtime
-     *
-     * @param \DateTime|null $mtime mtime
-     *
-     * @return self
-     */
-    public function setMtime($mtime)
-    {
-        $this->container['mtime'] = $mtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets utime
-     *
-     * @return \DateTime|null
-     */
-    public function getUtime()
-    {
-        return $this->container['utime'];
-    }
-
-    /**
-     * Sets utime
-     *
-     * @param \DateTime|null $utime utime
-     *
-     * @return self
-     */
-    public function setUtime($utime)
-    {
-        $this->container['utime'] = $utime;
 
         return $this;
     }
@@ -418,53 +414,49 @@ class SmartBlock implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type
+     * Gets kind
      *
-     * @return string|null
+     * @return \Libretime\Client\Model\PatchedSmartBlockKind|null
      */
-    public function getType()
+    public function getKind()
     {
-        return $this->container['type'];
+        return $this->container['kind'];
     }
 
     /**
-     * Sets type
+     * Sets kind
      *
-     * @param string|null $type type
+     * @param \Libretime\Client\Model\PatchedSmartBlockKind|null $kind kind
      *
      * @return self
      */
-    public function setType($type)
+    public function setKind($kind)
     {
-        if (!is_null($type) && (mb_strlen($type) > 7)) {
-            throw new \InvalidArgumentException('invalid length for $type when calling SmartBlock., must be smaller than or equal to 7.');
-        }
-
-        $this->container['type'] = $type;
+        $this->container['kind'] = $kind;
 
         return $this;
     }
 
     /**
-     * Gets creator
+     * Gets owner
      *
      * @return string|null
      */
-    public function getCreator()
+    public function getOwner()
     {
-        return $this->container['creator'];
+        return $this->container['owner'];
     }
 
     /**
-     * Sets creator
+     * Sets owner
      *
-     * @param string|null $creator creator
+     * @param string|null $owner owner
      *
      * @return self
      */
-    public function setCreator($creator)
+    public function setOwner($owner)
     {
-        $this->container['creator'] = $creator;
+        $this->container['owner'] = $owner;
 
         return $this;
     }

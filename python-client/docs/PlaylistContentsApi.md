@@ -56,17 +56,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     playlist_content = PlaylistContent(
-        stream_id=-2147483648,
-        type=-32768,
+        kind=None,
         position=-2147483648,
-        trackoffset=3.14,
-        cliplength="cliplength_example",
-        cuein="cuein_example",
-        cueout="cueout_example",
-        fadein="fadein_example",
-        fadeout="fadeout_example",
+        offset=3.14,
+        length="length_example",
+        cue_in="cue_in_example",
+        cue_out="cue_out_example",
+        fade_in="fade_in_example",
+        fade_out="fade_out_example",
         playlist="playlist_example",
         file="file_example",
+        stream="stream_example",
         block="block_example",
     ) # PlaylistContent | 
 
@@ -311,17 +311,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist content.
     patched_playlist_content = PatchedPlaylistContent(
-        stream_id=-2147483648,
-        type=-32768,
+        kind=None,
         position=-2147483648,
-        trackoffset=3.14,
-        cliplength="cliplength_example",
-        cuein="cuein_example",
-        cueout="cueout_example",
-        fadein="fadein_example",
-        fadeout="fadeout_example",
+        offset=3.14,
+        length="length_example",
+        cue_in="cue_in_example",
+        cue_out="cue_out_example",
+        fade_in="fade_in_example",
+        fade_out="fade_out_example",
         playlist="playlist_example",
         file="file_example",
+        stream="stream_example",
         block="block_example",
     ) # PatchedPlaylistContent |  (optional)
 
@@ -498,17 +498,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = playlist_contents_api.PlaylistContentsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist content.
     playlist_content = PlaylistContent(
-        stream_id=-2147483648,
-        type=-32768,
+        kind=None,
         position=-2147483648,
-        trackoffset=3.14,
-        cliplength="cliplength_example",
-        cuein="cuein_example",
-        cueout="cueout_example",
-        fadein="fadein_example",
-        fadeout="fadeout_example",
+        offset=3.14,
+        length="length_example",
+        cue_in="cue_in_example",
+        cue_out="cue_out_example",
+        fade_in="fade_in_example",
+        fade_out="fade_out_example",
         playlist="playlist_example",
         file="file_example",
+        stream="stream_example",
         block="block_example",
     ) # PlaylistContent | 
 

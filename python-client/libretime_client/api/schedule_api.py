@@ -156,30 +156,12 @@ class ScheduleApi(object):
             params_map={
                 'all': [
                     'broadcasted',
-                    'broadcasted__gt',
-                    'broadcasted__gte',
-                    'broadcasted__lt',
-                    'broadcasted__lte',
-                    'broadcasted__range',
-                    'ends',
-                    'ends__gt',
-                    'ends__gte',
-                    'ends__lt',
-                    'ends__lte',
-                    'ends__range',
-                    'is_valid',
-                    'playout_status',
-                    'playout_status__gt',
-                    'playout_status__gte',
-                    'playout_status__lt',
-                    'playout_status__lte',
-                    'playout_status__range',
-                    'starts',
-                    'starts__gt',
-                    'starts__gte',
-                    'starts__lt',
-                    'starts__lte',
-                    'starts__range',
+                    'ends_after',
+                    'ends_before',
+                    'overbooked',
+                    'position_status',
+                    'starts_after',
+                    'starts_before',
                 ],
                 'required': [],
                 'nullable': [
@@ -197,114 +179,38 @@ class ScheduleApi(object):
                 'openapi_types': {
                     'broadcasted':
                         (int,),
-                    'broadcasted__gt':
-                        (int,),
-                    'broadcasted__gte':
-                        (int,),
-                    'broadcasted__lt':
-                        (int,),
-                    'broadcasted__lte':
-                        (int,),
-                    'broadcasted__range':
-                        ([int],),
-                    'ends':
+                    'ends_after':
                         (datetime,),
-                    'ends__gt':
+                    'ends_before':
                         (datetime,),
-                    'ends__gte':
-                        (datetime,),
-                    'ends__lt':
-                        (datetime,),
-                    'ends__lte':
-                        (datetime,),
-                    'ends__range':
-                        ([datetime],),
-                    'is_valid':
+                    'overbooked':
                         (bool,),
-                    'playout_status':
+                    'position_status':
                         (int,),
-                    'playout_status__gt':
-                        (int,),
-                    'playout_status__gte':
-                        (int,),
-                    'playout_status__lt':
-                        (int,),
-                    'playout_status__lte':
-                        (int,),
-                    'playout_status__range':
-                        ([int],),
-                    'starts':
+                    'starts_after':
                         (datetime,),
-                    'starts__gt':
+                    'starts_before':
                         (datetime,),
-                    'starts__gte':
-                        (datetime,),
-                    'starts__lt':
-                        (datetime,),
-                    'starts__lte':
-                        (datetime,),
-                    'starts__range':
-                        ([datetime],),
                 },
                 'attribute_map': {
                     'broadcasted': 'broadcasted',
-                    'broadcasted__gt': 'broadcasted__gt',
-                    'broadcasted__gte': 'broadcasted__gte',
-                    'broadcasted__lt': 'broadcasted__lt',
-                    'broadcasted__lte': 'broadcasted__lte',
-                    'broadcasted__range': 'broadcasted__range',
-                    'ends': 'ends',
-                    'ends__gt': 'ends__gt',
-                    'ends__gte': 'ends__gte',
-                    'ends__lt': 'ends__lt',
-                    'ends__lte': 'ends__lte',
-                    'ends__range': 'ends__range',
-                    'is_valid': 'is_valid',
-                    'playout_status': 'playout_status',
-                    'playout_status__gt': 'playout_status__gt',
-                    'playout_status__gte': 'playout_status__gte',
-                    'playout_status__lt': 'playout_status__lt',
-                    'playout_status__lte': 'playout_status__lte',
-                    'playout_status__range': 'playout_status__range',
-                    'starts': 'starts',
-                    'starts__gt': 'starts__gt',
-                    'starts__gte': 'starts__gte',
-                    'starts__lt': 'starts__lt',
-                    'starts__lte': 'starts__lte',
-                    'starts__range': 'starts__range',
+                    'ends_after': 'ends_after',
+                    'ends_before': 'ends_before',
+                    'overbooked': 'overbooked',
+                    'position_status': 'position_status',
+                    'starts_after': 'starts_after',
+                    'starts_before': 'starts_before',
                 },
                 'location_map': {
                     'broadcasted': 'query',
-                    'broadcasted__gt': 'query',
-                    'broadcasted__gte': 'query',
-                    'broadcasted__lt': 'query',
-                    'broadcasted__lte': 'query',
-                    'broadcasted__range': 'query',
-                    'ends': 'query',
-                    'ends__gt': 'query',
-                    'ends__gte': 'query',
-                    'ends__lt': 'query',
-                    'ends__lte': 'query',
-                    'ends__range': 'query',
-                    'is_valid': 'query',
-                    'playout_status': 'query',
-                    'playout_status__gt': 'query',
-                    'playout_status__gte': 'query',
-                    'playout_status__lt': 'query',
-                    'playout_status__lte': 'query',
-                    'playout_status__range': 'query',
-                    'starts': 'query',
-                    'starts__gt': 'query',
-                    'starts__gte': 'query',
-                    'starts__lt': 'query',
-                    'starts__lte': 'query',
-                    'starts__range': 'query',
+                    'ends_after': 'query',
+                    'ends_before': 'query',
+                    'overbooked': 'query',
+                    'position_status': 'query',
+                    'starts_after': 'query',
+                    'starts_before': 'query',
                 },
                 'collection_format_map': {
-                    'broadcasted__range': 'csv',
-                    'ends__range': 'csv',
-                    'playout_status__range': 'csv',
-                    'starts__range': 'csv',
                 }
             },
             headers_map={
@@ -668,30 +574,12 @@ class ScheduleApi(object):
 
         Keyword Args:
             broadcasted (int): [optional]
-            broadcasted__gt (int): [optional]
-            broadcasted__gte (int): [optional]
-            broadcasted__lt (int): [optional]
-            broadcasted__lte (int): [optional]
-            broadcasted__range ([int]): Multiple values may be separated by commas.. [optional]
-            ends (datetime): [optional]
-            ends__gt (datetime): [optional]
-            ends__gte (datetime): [optional]
-            ends__lt (datetime): [optional]
-            ends__lte (datetime): [optional]
-            ends__range ([datetime]): Multiple values may be separated by commas.. [optional]
-            is_valid (bool): Filter on valid instances. [optional]
-            playout_status (int): [optional]
-            playout_status__gt (int): [optional]
-            playout_status__gte (int): [optional]
-            playout_status__lt (int): [optional]
-            playout_status__lte (int): [optional]
-            playout_status__range ([int]): Multiple values may be separated by commas.. [optional]
-            starts (datetime): [optional]
-            starts__gt (datetime): [optional]
-            starts__gte (datetime): [optional]
-            starts__lt (datetime): [optional]
-            starts__lte (datetime): [optional]
-            starts__range ([datetime]): Multiple values may be separated by commas.. [optional]
+            ends_after (datetime): [optional]
+            ends_before (datetime): [optional]
+            overbooked (bool): [optional]
+            position_status (int): [optional]
+            starts_after (datetime): [optional]
+            starts_before (datetime): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

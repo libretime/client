@@ -61,7 +61,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'item_url' => 'string',
         'show' => 'string',
-        'subjs' => 'string'
+        'user' => 'string'
     ];
 
     /**
@@ -74,7 +74,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'item_url' => 'uri',
         'show' => 'uri',
-        'subjs' => 'uri'
+        'user' => 'uri'
     ];
 
     /**
@@ -106,7 +106,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'item_url' => 'item_url',
         'show' => 'show',
-        'subjs' => 'subjs'
+        'user' => 'user'
     ];
 
     /**
@@ -117,7 +117,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'item_url' => 'setItemUrl',
         'show' => 'setShow',
-        'subjs' => 'setSubjs'
+        'user' => 'setUser'
     ];
 
     /**
@@ -128,7 +128,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'item_url' => 'getItemUrl',
         'show' => 'getShow',
-        'subjs' => 'getSubjs'
+        'user' => 'getUser'
     ];
 
     /**
@@ -190,7 +190,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['show'] = $data['show'] ?? null;
-        $this->container['subjs'] = $data['subjs'] ?? null;
+        $this->container['user'] = $data['user'] ?? null;
     }
 
     /**
@@ -266,25 +266,25 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets subjs
+     * Gets user
      *
      * @return string|null
      */
-    public function getSubjs()
+    public function getUser()
     {
-        return $this->container['subjs'];
+        return $this->container['user'];
     }
 
     /**
-     * Sets subjs
+     * Sets user
      *
-     * @param string|null $subjs subjs
+     * @param string|null $user user
      *
      * @return self
      */
-    public function setSubjs($subjs)
+    public function setUser($user)
     {
-        $this->container['subjs'] = $subjs;
+        $this->container['user'] = $user;
 
         return $this;
     }

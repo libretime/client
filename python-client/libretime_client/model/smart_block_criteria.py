@@ -61,18 +61,18 @@ class SmartBlockCriteria(ModelNormal):
         ('criteria',): {
             'max_length': 32,
         },
-        ('modifier',): {
+        ('condition',): {
             'max_length': 16,
         },
         ('value',): {
             'max_length': 512,
         },
-        ('extra',): {
-            'max_length': 512,
-        },
-        ('criteriagroup',): {
+        ('group',): {
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': -2147483648,
+        },
+        ('extra',): {
+            'max_length': 512,
         },
     }
 
@@ -99,11 +99,11 @@ class SmartBlockCriteria(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'criteria': (str,),  # noqa: E501
-            'modifier': (str,),  # noqa: E501
+            'condition': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
             'block': (str,),  # noqa: E501
+            'group': (int, none_type,),  # noqa: E501
             'extra': (str, none_type,),  # noqa: E501
-            'criteriagroup': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -114,11 +114,11 @@ class SmartBlockCriteria(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'criteria': 'criteria',  # noqa: E501
-        'modifier': 'modifier',  # noqa: E501
+        'condition': 'condition',  # noqa: E501
         'value': 'value',  # noqa: E501
         'block': 'block',  # noqa: E501
+        'group': 'group',  # noqa: E501
         'extra': 'extra',  # noqa: E501
-        'criteriagroup': 'criteriagroup',  # noqa: E501
     }
 
     read_only_vars = {
@@ -129,13 +129,13 @@ class SmartBlockCriteria(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, criteria, modifier, value, block, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, criteria, condition, value, block, *args, **kwargs):  # noqa: E501
         """SmartBlockCriteria - a model defined in OpenAPI
 
         Args:
             item_url (str):
             criteria (str):
-            modifier (str):
+            condition (str):
             value (str):
             block (str):
 
@@ -170,8 +170,8 @@ class SmartBlockCriteria(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            group (int, none_type): [optional]  # noqa: E501
             extra (str, none_type): [optional]  # noqa: E501
-            criteriagroup (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -205,7 +205,7 @@ class SmartBlockCriteria(ModelNormal):
 
         self.item_url = item_url
         self.criteria = criteria
-        self.modifier = modifier
+        self.condition = condition
         self.value = value
         self.block = block
         for var_name, var_value in kwargs.items():
@@ -228,11 +228,11 @@ class SmartBlockCriteria(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, criteria, modifier, value, block, *args, **kwargs):  # noqa: E501
+    def __init__(self, criteria, condition, value, block, *args, **kwargs):  # noqa: E501
         """SmartBlockCriteria - a model defined in OpenAPI
 
             criteria (str):
-            modifier (str):
+            condition (str):
             value (str):
             block (str):
 
@@ -267,8 +267,8 @@ class SmartBlockCriteria(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            group (int, none_type): [optional]  # noqa: E501
             extra (str, none_type): [optional]  # noqa: E501
-            criteriagroup (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -299,7 +299,7 @@ class SmartBlockCriteria(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.criteria = criteria
-        self.modifier = modifier
+        self.condition = condition
         self.value = value
         self.block = block
         for var_name, var_value in kwargs.items():

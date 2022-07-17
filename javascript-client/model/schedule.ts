@@ -13,6 +13,7 @@
  */
 
 
+import { PositionStatusEnum } from './position-status-enum';
 
 /**
  * 
@@ -37,13 +38,25 @@ export interface Schedule {
      * @type {string}
      * @memberof Schedule
      */
-    'starts': string;
+    'starts_at': string;
     /**
      * 
      * @type {string}
      * @memberof Schedule
      */
-    'ends': string;
+    'ends_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Schedule
+     */
+    'instance': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof Schedule
+     */
+    'instance_id': number;
     /**
      * 
      * @type {string}
@@ -73,7 +86,7 @@ export interface Schedule {
      * @type {string}
      * @memberof Schedule
      */
-    'clip_length'?: string | null;
+    'length'?: string | null;
     /**
      * 
      * @type {string}
@@ -100,28 +113,16 @@ export interface Schedule {
     'cue_out': string;
     /**
      * 
-     * @type {boolean}
-     * @memberof Schedule
-     */
-    'media_item_played'?: boolean | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Schedule
-     */
-    'instance': string;
-    /**
-     * 
      * @type {number}
      * @memberof Schedule
      */
-    'instance_id': number;
+    'position': number;
     /**
      * 
-     * @type {number}
+     * @type {PositionStatusEnum}
      * @memberof Schedule
      */
-    'playout_status': number;
+    'position_status'?: PositionStatusEnum;
     /**
      * 
      * @type {number}
@@ -130,9 +131,15 @@ export interface Schedule {
     'broadcasted': number;
     /**
      * 
-     * @type {number}
+     * @type {boolean}
      * @memberof Schedule
      */
-    'position': number;
+    'played'?: boolean | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Schedule
+     */
+    'overbooked': string;
 }
 

@@ -28,6 +28,12 @@ export interface PatchedSmartBlockCriteria {
     'item_url'?: string;
     /**
      * 
+     * @type {number}
+     * @memberof PatchedSmartBlockCriteria
+     */
+    'group'?: number | null;
+    /**
+     * 
      * @type {string}
      * @memberof PatchedSmartBlockCriteria
      */
@@ -37,7 +43,7 @@ export interface PatchedSmartBlockCriteria {
      * @type {string}
      * @memberof PatchedSmartBlockCriteria
      */
-    'modifier'?: string;
+    'condition'?: string;
     /**
      * 
      * @type {string}
@@ -50,12 +56,6 @@ export interface PatchedSmartBlockCriteria {
      * @memberof PatchedSmartBlockCriteria
      */
     'extra'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockCriteria
-     */
-    'criteriagroup'?: number | null;
     /**
      * 
      * @type {string}

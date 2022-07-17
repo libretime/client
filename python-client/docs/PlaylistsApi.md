@@ -56,12 +56,12 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = playlists_api.PlaylistsApi(api_client)
     playlist = Playlist(
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        updated_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         name="name_example",
-        mtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        utime=dateutil_parser('1970-01-01T00:00:00.00Z'),
         description="description_example",
         length="length_example",
-        creator="creator_example",
+        owner="owner_example",
     ) # Playlist | 
 
     # example passing only required values which don't have defaults set
@@ -305,12 +305,12 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = playlists_api.PlaylistsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist.
     patched_playlist = PatchedPlaylist(
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        updated_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         name="name_example",
-        mtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        utime=dateutil_parser('1970-01-01T00:00:00.00Z'),
         description="description_example",
         length="length_example",
-        creator="creator_example",
+        owner="owner_example",
     ) # PatchedPlaylist |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -486,12 +486,12 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = playlists_api.PlaylistsApi(api_client)
     id = 1 # int | A unique integer value identifying this playlist.
     playlist = Playlist(
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        updated_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         name="name_example",
-        mtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        utime=dateutil_parser('1970-01-01T00:00:00.00Z'),
         description="description_example",
         length="length_example",
-        creator="creator_example",
+        owner="owner_example",
     ) # Playlist | 
 
     # example passing only required values which don't have defaults set

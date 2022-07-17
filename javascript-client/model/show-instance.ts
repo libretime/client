@@ -13,6 +13,7 @@
  */
 
 
+import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
 
 /**
  * 
@@ -37,61 +38,7 @@ export interface ShowInstance {
      * @type {string}
      * @memberof ShowInstance
      */
-    'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowInstance
-     */
-    'starts': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowInstance
-     */
-    'ends': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowInstance
-     */
-    'record'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowInstance
-     */
-    'rebroadcast'?: number | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowInstance
-     */
-    'time_filled'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowInstance
-     */
-    'created': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowInstance
-     */
-    'last_scheduled'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ShowInstance
-     */
-    'modified_instance': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ShowInstance
-     */
-    'autoplaylist_built': boolean;
+    'created_at': string;
     /**
      * 
      * @type {string}
@@ -115,12 +62,66 @@ export interface ShowInstance {
      * @type {string}
      * @memberof ShowInstance
      */
-    'file'?: string | null;
+    'starts_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ShowInstance
+     */
+    'ends_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ShowInstance
+     */
+    'filled_time'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ShowInstance
+     */
+    'last_scheduled_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ShowInstance
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ShowInstance
+     */
+    'modified': boolean;
     /**
      * 
      * @type {number}
      * @memberof ShowInstance
      */
-    'file_id': number;
+    'rebroadcast'?: number | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ShowInstance
+     */
+    'auto_playlist_built': boolean;
+    /**
+     * 
+     * @type {PatchedShowDaysRecordEnabled}
+     * @memberof ShowInstance
+     */
+    'record_enabled'?: PatchedShowDaysRecordEnabled | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ShowInstance
+     */
+    'record_file'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof ShowInstance
+     */
+    'record_file_id': number;
 }
 

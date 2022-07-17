@@ -56,18 +56,18 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     schedule = Schedule(
-        starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        instance="instance_example",
         file="file_example",
         stream="stream_example",
-        clip_length="clip_length_example",
+        length="length_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
         cue_in="cue_in_example",
-        media_item_played=True,
-        instance="instance_example",
-        playout_status=-32768,
-        broadcasted=-32768,
         position=-2147483648,
+        position_status=None,
+        broadcasted=-32768,
+        played=True,
     ) # Schedule | 
 
     # example passing only required values which don't have defaults set
@@ -231,43 +231,17 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = schedule_api.ScheduleApi(api_client)
     broadcasted = 1 # int |  (optional)
-    broadcasted__gt = 1 # int |  (optional)
-    broadcasted__gte = 1 # int |  (optional)
-    broadcasted__lt = 1 # int |  (optional)
-    broadcasted__lte = 1 # int |  (optional)
-    broadcasted__range = [
-        1,
-    ] # [int] | Multiple values may be separated by commas. (optional)
-    ends = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    ends__gt = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    ends__gte = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    ends__lt = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    ends__lte = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    ends__range = [
-        dateutil_parser('1970-01-01T00:00:00.00Z'),
-    ] # [datetime] | Multiple values may be separated by commas. (optional)
-    is_valid = True # bool | Filter on valid instances (optional)
-    playout_status = 1 # int |  (optional)
-    playout_status__gt = 1 # int |  (optional)
-    playout_status__gte = 1 # int |  (optional)
-    playout_status__lt = 1 # int |  (optional)
-    playout_status__lte = 1 # int |  (optional)
-    playout_status__range = [
-        1,
-    ] # [int] | Multiple values may be separated by commas. (optional)
-    starts = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    starts__gt = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    starts__gte = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    starts__lt = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    starts__lte = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    starts__range = [
-        dateutil_parser('1970-01-01T00:00:00.00Z'),
-    ] # [datetime] | Multiple values may be separated by commas. (optional)
+    ends_after = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    ends_before = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    overbooked = True # bool |  (optional)
+    position_status = 1 # int |  (optional)
+    starts_after = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
+    starts_before = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.schedule_list(broadcasted=broadcasted, broadcasted__gt=broadcasted__gt, broadcasted__gte=broadcasted__gte, broadcasted__lt=broadcasted__lt, broadcasted__lte=broadcasted__lte, broadcasted__range=broadcasted__range, ends=ends, ends__gt=ends__gt, ends__gte=ends__gte, ends__lt=ends__lt, ends__lte=ends__lte, ends__range=ends__range, is_valid=is_valid, playout_status=playout_status, playout_status__gt=playout_status__gt, playout_status__gte=playout_status__gte, playout_status__lt=playout_status__lt, playout_status__lte=playout_status__lte, playout_status__range=playout_status__range, starts=starts, starts__gt=starts__gt, starts__gte=starts__gte, starts__lt=starts__lt, starts__lte=starts__lte, starts__range=starts__range)
+        api_response = api_instance.schedule_list(broadcasted=broadcasted, ends_after=ends_after, ends_before=ends_before, overbooked=overbooked, position_status=position_status, starts_after=starts_after, starts_before=starts_before)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling ScheduleApi->schedule_list: %s\n" % e)
@@ -279,30 +253,12 @@ with libretime_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **broadcasted** | **int**|  | [optional]
- **broadcasted__gt** | **int**|  | [optional]
- **broadcasted__gte** | **int**|  | [optional]
- **broadcasted__lt** | **int**|  | [optional]
- **broadcasted__lte** | **int**|  | [optional]
- **broadcasted__range** | **[int]**| Multiple values may be separated by commas. | [optional]
- **ends** | **datetime**|  | [optional]
- **ends__gt** | **datetime**|  | [optional]
- **ends__gte** | **datetime**|  | [optional]
- **ends__lt** | **datetime**|  | [optional]
- **ends__lte** | **datetime**|  | [optional]
- **ends__range** | **[datetime]**| Multiple values may be separated by commas. | [optional]
- **is_valid** | **bool**| Filter on valid instances | [optional]
- **playout_status** | **int**|  | [optional]
- **playout_status__gt** | **int**|  | [optional]
- **playout_status__gte** | **int**|  | [optional]
- **playout_status__lt** | **int**|  | [optional]
- **playout_status__lte** | **int**|  | [optional]
- **playout_status__range** | **[int]**| Multiple values may be separated by commas. | [optional]
- **starts** | **datetime**|  | [optional]
- **starts__gt** | **datetime**|  | [optional]
- **starts__gte** | **datetime**|  | [optional]
- **starts__lt** | **datetime**|  | [optional]
- **starts__lte** | **datetime**|  | [optional]
- **starts__range** | **[datetime]**| Multiple values may be separated by commas. | [optional]
+ **ends_after** | **datetime**|  | [optional]
+ **ends_before** | **datetime**|  | [optional]
+ **overbooked** | **bool**|  | [optional]
+ **position_status** | **int**|  | [optional]
+ **starts_after** | **datetime**|  | [optional]
+ **starts_before** | **datetime**|  | [optional]
 
 ### Return type
 
@@ -372,18 +328,18 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = schedule_api.ScheduleApi(api_client)
     id = 1 # int | A unique integer value identifying this schedule.
     patched_schedule = PatchedSchedule(
-        starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        instance="instance_example",
         file="file_example",
         stream="stream_example",
-        clip_length="clip_length_example",
+        length="length_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
         cue_in="cue_in_example",
-        media_item_played=True,
-        instance="instance_example",
-        playout_status=-32768,
-        broadcasted=-32768,
         position=-2147483648,
+        position_status=None,
+        broadcasted=-32768,
+        played=True,
     ) # PatchedSchedule |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -559,18 +515,18 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = schedule_api.ScheduleApi(api_client)
     id = 1 # int | A unique integer value identifying this schedule.
     schedule = Schedule(
-        starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        instance="instance_example",
         file="file_example",
         stream="stream_example",
-        clip_length="clip_length_example",
+        length="length_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
         cue_in="cue_in_example",
-        media_item_played=True,
-        instance="instance_example",
-        playout_status=-32768,
-        broadcasted=-32768,
         position=-2147483648,
+        position_status=None,
+        broadcasted=-32768,
+        played=True,
     ) # Schedule | 
 
     # example passing only required values which don't have defaults set

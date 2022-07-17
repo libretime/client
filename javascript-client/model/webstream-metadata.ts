@@ -31,18 +31,18 @@ export interface WebstreamMetadata {
      * @type {string}
      * @memberof WebstreamMetadata
      */
-    'start_time': string;
+    'starts_at': string;
     /**
      * 
      * @type {string}
      * @memberof WebstreamMetadata
      */
-    'liquidsoap_data': string;
+    'data': string;
     /**
      * 
      * @type {string}
      * @memberof WebstreamMetadata
      */
-    'instance': string;
+    'schedule': string;
 }
 

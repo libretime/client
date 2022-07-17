@@ -13,6 +13,9 @@
  */
 
 
+import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
+import { PatchedShowDaysWeekDay } from './patched-show-days-week-day';
+import { RepeatKindEnum } from './repeat-kind-enum';
 
 /**
  * 
@@ -31,13 +34,13 @@ export interface PatchedShowDays {
      * @type {string}
      * @memberof PatchedShowDays
      */
-    'first_show'?: string;
+    'first_show_on'?: string;
     /**
      * 
      * @type {string}
      * @memberof PatchedShowDays
      */
-    'last_show'?: string | null;
+    'last_show_on'?: string | null;
     /**
      * 
      * @type {string}
@@ -58,28 +61,28 @@ export interface PatchedShowDays {
     'duration'?: string;
     /**
      * 
-     * @type {number}
+     * @type {PatchedShowDaysRecordEnabled}
      * @memberof PatchedShowDays
      */
-    'day'?: number | null;
+    'record_enabled'?: PatchedShowDaysRecordEnabled | null;
     /**
      * 
-     * @type {number}
+     * @type {PatchedShowDaysWeekDay}
      * @memberof PatchedShowDays
      */
-    'repeat_type'?: number;
+    'week_day'?: PatchedShowDaysWeekDay | null;
+    /**
+     * 
+     * @type {RepeatKindEnum}
+     * @memberof PatchedShowDays
+     */
+    'repeat_kind'?: RepeatKindEnum;
     /**
      * 
      * @type {string}
      * @memberof PatchedShowDays
      */
-    'next_pop_date'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowDays
-     */
-    'record'?: number | null;
+    'repeat_next_on'?: string | null;
     /**
      * 
      * @type {string}

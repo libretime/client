@@ -56,15 +56,15 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = webstreams_api.WebstreamsApi(api_client)
     webstream = Webstream(
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        updated_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_played_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         name="name_example",
         description="description_example",
         url="url_example",
         length="length_example",
-        creator_id=-2147483648,
-        mtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        utime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        lptime=dateutil_parser('1970-01-01T00:00:00.00Z'),
         mime="mime_example",
+        owner="owner_example",
     ) # Webstream | 
 
     # example passing only required values which don't have defaults set
@@ -308,15 +308,15 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = webstreams_api.WebstreamsApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream.
     patched_webstream = PatchedWebstream(
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        updated_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_played_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         name="name_example",
         description="description_example",
         url="url_example",
         length="length_example",
-        creator_id=-2147483648,
-        mtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        utime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        lptime=dateutil_parser('1970-01-01T00:00:00.00Z'),
         mime="mime_example",
+        owner="owner_example",
     ) # PatchedWebstream |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -492,15 +492,15 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = webstreams_api.WebstreamsApi(api_client)
     id = 1 # int | A unique integer value identifying this webstream.
     webstream = Webstream(
+        created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        updated_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        last_played_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         name="name_example",
         description="description_example",
         url="url_example",
         length="length_example",
-        creator_id=-2147483648,
-        mtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        utime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        lptime=dateutil_parser('1970-01-01T00:00:00.00Z'),
         mime="mime_example",
+        owner="owner_example",
     ) # Webstream | 
 
     # example passing only required values which don't have defaults set

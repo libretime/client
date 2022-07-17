@@ -6,12 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
 **position** | **int** |  | [optional]
-**trackoffset** | **double** |  |
-**cliplength** | **string** |  | [optional]
-**cuein** | **string** |  | [optional]
-**cueout** | **string** |  | [optional]
-**fadein** | **string** |  | [optional]
-**fadeout** | **string** |  | [optional]
+**offset** | **double** |  |
+**length** | **string** |  | [optional]
+**cue_in** | **string** |  | [optional]
+**cue_out** | **string** |  | [optional]
+**fade_in** | **string** |  | [optional]
+**fade_out** | **string** |  | [optional]
 **block** | **string** |  | [optional]
 **file** | **string** |  | [optional]
 

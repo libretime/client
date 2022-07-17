@@ -67,10 +67,6 @@ class Webstream(ModelNormal):
         ('url',): {
             'max_length': 512,
         },
-        ('creator_id',): {
-            'inclusive_maximum': 2147483647,
-            'inclusive_minimum': -2147483648,
-        },
         ('mime',): {
             'max_length': 1024,
         },
@@ -99,15 +95,15 @@ class Webstream(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
+            'created_at': (datetime,),  # noqa: E501
+            'updated_at': (datetime,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'url': (str,),  # noqa: E501
             'length': (str,),  # noqa: E501
-            'creator_id': (int,),  # noqa: E501
-            'mtime': (datetime,),  # noqa: E501
-            'utime': (datetime,),  # noqa: E501
-            'lptime': (datetime, none_type,),  # noqa: E501
+            'last_played_at': (datetime, none_type,),  # noqa: E501
             'mime': (str, none_type,),  # noqa: E501
+            'owner': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -118,15 +114,15 @@ class Webstream(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
+        'created_at': 'created_at',  # noqa: E501
+        'updated_at': 'updated_at',  # noqa: E501
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'url': 'url',  # noqa: E501
         'length': 'length',  # noqa: E501
-        'creator_id': 'creator_id',  # noqa: E501
-        'mtime': 'mtime',  # noqa: E501
-        'utime': 'utime',  # noqa: E501
-        'lptime': 'lptime',  # noqa: E501
+        'last_played_at': 'last_played_at',  # noqa: E501
         'mime': 'mime',  # noqa: E501
+        'owner': 'owner',  # noqa: E501
     }
 
     read_only_vars = {
@@ -138,19 +134,18 @@ class Webstream(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, name, description, url, length, creator_id, mtime, utime, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, id, created_at, updated_at, name, description, url, length, *args, **kwargs):  # noqa: E501
         """Webstream - a model defined in OpenAPI
 
         Args:
             item_url (str):
             id (int):
+            created_at (datetime):
+            updated_at (datetime):
             name (str):
             description (str):
             url (str):
             length (str):
-            creator_id (int):
-            mtime (datetime):
-            utime (datetime):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -183,8 +178,9 @@ class Webstream(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            lptime (datetime, none_type): [optional]  # noqa: E501
+            last_played_at (datetime, none_type): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
+            owner (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -218,13 +214,12 @@ class Webstream(ModelNormal):
 
         self.item_url = item_url
         self.id = id
+        self.created_at = created_at
+        self.updated_at = updated_at
         self.name = name
         self.description = description
         self.url = url
         self.length = length
-        self.creator_id = creator_id
-        self.mtime = mtime
-        self.utime = utime
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -245,16 +240,15 @@ class Webstream(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, description, url, length, creator_id, mtime, utime, *args, **kwargs):  # noqa: E501
+    def __init__(self, created_at, updated_at, name, description, url, length, *args, **kwargs):  # noqa: E501
         """Webstream - a model defined in OpenAPI
 
+            created_at (datetime):
+            updated_at (datetime):
             name (str):
             description (str):
             url (str):
             length (str):
-            creator_id (int):
-            mtime (datetime):
-            utime (datetime):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -287,8 +281,9 @@ class Webstream(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            lptime (datetime, none_type): [optional]  # noqa: E501
+            last_played_at (datetime, none_type): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
+            owner (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -318,13 +313,12 @@ class Webstream(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.created_at = created_at
+        self.updated_at = updated_at
         self.name = name
         self.description = description
         self.url = url
         self.length = length
-        self.creator_id = creator_id
-        self.mtime = mtime
-        self.utime = utime
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

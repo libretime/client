@@ -61,23 +61,24 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'item_url' => 'string',
         'id' => 'int',
-        'starts' => '\DateTime',
-        'ends' => '\DateTime',
+        'starts_at' => '\DateTime',
+        'ends_at' => '\DateTime',
+        'instance' => 'string',
+        'instance_id' => 'int',
         'file' => 'string',
         'file_id' => 'int',
         'stream' => 'string',
         'stream_id' => 'int',
-        'clip_length' => 'string',
+        'length' => 'string',
         'fade_in' => 'string',
         'fade_out' => 'string',
         'cue_in' => 'string',
         'cue_out' => 'string',
-        'media_item_played' => 'bool',
-        'instance' => 'string',
-        'instance_id' => 'int',
-        'playout_status' => 'int',
+        'position' => 'int',
+        'position_status' => 'PositionStatusEnum',
         'broadcasted' => 'int',
-        'position' => 'int'
+        'played' => 'bool',
+        'overbooked' => 'string'
     ];
 
     /**
@@ -90,23 +91,24 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'item_url' => 'uri',
         'id' => null,
-        'starts' => 'date-time',
-        'ends' => 'date-time',
+        'starts_at' => 'date-time',
+        'ends_at' => 'date-time',
+        'instance' => 'uri',
+        'instance_id' => null,
         'file' => 'uri',
         'file_id' => null,
         'stream' => 'uri',
         'stream_id' => null,
-        'clip_length' => null,
+        'length' => null,
         'fade_in' => 'time',
         'fade_out' => 'time',
         'cue_in' => null,
         'cue_out' => null,
-        'media_item_played' => null,
-        'instance' => 'uri',
-        'instance_id' => null,
-        'playout_status' => null,
+        'position' => null,
+        'position_status' => null,
         'broadcasted' => null,
-        'position' => null
+        'played' => null,
+        'overbooked' => null
     ];
 
     /**
@@ -138,23 +140,24 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'item_url' => 'item_url',
         'id' => 'id',
-        'starts' => 'starts',
-        'ends' => 'ends',
+        'starts_at' => 'starts_at',
+        'ends_at' => 'ends_at',
+        'instance' => 'instance',
+        'instance_id' => 'instance_id',
         'file' => 'file',
         'file_id' => 'file_id',
         'stream' => 'stream',
         'stream_id' => 'stream_id',
-        'clip_length' => 'clip_length',
+        'length' => 'length',
         'fade_in' => 'fade_in',
         'fade_out' => 'fade_out',
         'cue_in' => 'cue_in',
         'cue_out' => 'cue_out',
-        'media_item_played' => 'media_item_played',
-        'instance' => 'instance',
-        'instance_id' => 'instance_id',
-        'playout_status' => 'playout_status',
+        'position' => 'position',
+        'position_status' => 'position_status',
         'broadcasted' => 'broadcasted',
-        'position' => 'position'
+        'played' => 'played',
+        'overbooked' => 'overbooked'
     ];
 
     /**
@@ -165,23 +168,24 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'item_url' => 'setItemUrl',
         'id' => 'setId',
-        'starts' => 'setStarts',
-        'ends' => 'setEnds',
+        'starts_at' => 'setStartsAt',
+        'ends_at' => 'setEndsAt',
+        'instance' => 'setInstance',
+        'instance_id' => 'setInstanceId',
         'file' => 'setFile',
         'file_id' => 'setFileId',
         'stream' => 'setStream',
         'stream_id' => 'setStreamId',
-        'clip_length' => 'setClipLength',
+        'length' => 'setLength',
         'fade_in' => 'setFadeIn',
         'fade_out' => 'setFadeOut',
         'cue_in' => 'setCueIn',
         'cue_out' => 'setCueOut',
-        'media_item_played' => 'setMediaItemPlayed',
-        'instance' => 'setInstance',
-        'instance_id' => 'setInstanceId',
-        'playout_status' => 'setPlayoutStatus',
+        'position' => 'setPosition',
+        'position_status' => 'setPositionStatus',
         'broadcasted' => 'setBroadcasted',
-        'position' => 'setPosition'
+        'played' => 'setPlayed',
+        'overbooked' => 'setOverbooked'
     ];
 
     /**
@@ -192,23 +196,24 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'item_url' => 'getItemUrl',
         'id' => 'getId',
-        'starts' => 'getStarts',
-        'ends' => 'getEnds',
+        'starts_at' => 'getStartsAt',
+        'ends_at' => 'getEndsAt',
+        'instance' => 'getInstance',
+        'instance_id' => 'getInstanceId',
         'file' => 'getFile',
         'file_id' => 'getFileId',
         'stream' => 'getStream',
         'stream_id' => 'getStreamId',
-        'clip_length' => 'getClipLength',
+        'length' => 'getLength',
         'fade_in' => 'getFadeIn',
         'fade_out' => 'getFadeOut',
         'cue_in' => 'getCueIn',
         'cue_out' => 'getCueOut',
-        'media_item_played' => 'getMediaItemPlayed',
-        'instance' => 'getInstance',
-        'instance_id' => 'getInstanceId',
-        'playout_status' => 'getPlayoutStatus',
+        'position' => 'getPosition',
+        'position_status' => 'getPositionStatus',
         'broadcasted' => 'getBroadcasted',
-        'position' => 'getPosition'
+        'played' => 'getPlayed',
+        'overbooked' => 'getOverbooked'
     ];
 
     /**
@@ -270,23 +275,24 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['starts'] = $data['starts'] ?? null;
-        $this->container['ends'] = $data['ends'] ?? null;
+        $this->container['starts_at'] = $data['starts_at'] ?? null;
+        $this->container['ends_at'] = $data['ends_at'] ?? null;
+        $this->container['instance'] = $data['instance'] ?? null;
+        $this->container['instance_id'] = $data['instance_id'] ?? null;
         $this->container['file'] = $data['file'] ?? null;
         $this->container['file_id'] = $data['file_id'] ?? null;
         $this->container['stream'] = $data['stream'] ?? null;
         $this->container['stream_id'] = $data['stream_id'] ?? null;
-        $this->container['clip_length'] = $data['clip_length'] ?? null;
+        $this->container['length'] = $data['length'] ?? null;
         $this->container['fade_in'] = $data['fade_in'] ?? null;
         $this->container['fade_out'] = $data['fade_out'] ?? null;
         $this->container['cue_in'] = $data['cue_in'] ?? null;
         $this->container['cue_out'] = $data['cue_out'] ?? null;
-        $this->container['media_item_played'] = $data['media_item_played'] ?? null;
-        $this->container['instance'] = $data['instance'] ?? null;
-        $this->container['instance_id'] = $data['instance_id'] ?? null;
-        $this->container['playout_status'] = $data['playout_status'] ?? null;
-        $this->container['broadcasted'] = $data['broadcasted'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
+        $this->container['position_status'] = $data['position_status'] ?? null;
+        $this->container['broadcasted'] = $data['broadcasted'] ?? null;
+        $this->container['played'] = $data['played'] ?? null;
+        $this->container['overbooked'] = $data['overbooked'] ?? null;
     }
 
     /**
@@ -304,11 +310,17 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['starts'] === null) {
-            $invalidProperties[] = "'starts' can't be null";
+        if ($this->container['starts_at'] === null) {
+            $invalidProperties[] = "'starts_at' can't be null";
         }
-        if ($this->container['ends'] === null) {
-            $invalidProperties[] = "'ends' can't be null";
+        if ($this->container['ends_at'] === null) {
+            $invalidProperties[] = "'ends_at' can't be null";
+        }
+        if ($this->container['instance'] === null) {
+            $invalidProperties[] = "'instance' can't be null";
+        }
+        if ($this->container['instance_id'] === null) {
+            $invalidProperties[] = "'instance_id' can't be null";
         }
         if ($this->container['file_id'] === null) {
             $invalidProperties[] = "'file_id' can't be null";
@@ -322,21 +334,23 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['cue_out'] === null) {
             $invalidProperties[] = "'cue_out' can't be null";
         }
-        if ($this->container['instance'] === null) {
-            $invalidProperties[] = "'instance' can't be null";
+        if ($this->container['position'] === null) {
+            $invalidProperties[] = "'position' can't be null";
         }
-        if ($this->container['instance_id'] === null) {
-            $invalidProperties[] = "'instance_id' can't be null";
-        }
-        if ($this->container['playout_status'] === null) {
-            $invalidProperties[] = "'playout_status' can't be null";
-        }
-        if (($this->container['playout_status'] > 32767)) {
-            $invalidProperties[] = "invalid value for 'playout_status', must be smaller than or equal to 32767.";
+        if (($this->container['position'] > 2147483647)) {
+            $invalidProperties[] = "invalid value for 'position', must be smaller than or equal to 2147483647.";
         }
 
-        if (($this->container['playout_status'] < -32768)) {
-            $invalidProperties[] = "invalid value for 'playout_status', must be bigger than or equal to -32768.";
+        if (($this->container['position'] < -2147483648)) {
+            $invalidProperties[] = "invalid value for 'position', must be bigger than or equal to -2147483648.";
+        }
+
+        if (!is_null($this->container['position_status']) && ($this->container['position_status'] > 32767)) {
+            $invalidProperties[] = "invalid value for 'position_status', must be smaller than or equal to 32767.";
+        }
+
+        if (!is_null($this->container['position_status']) && ($this->container['position_status'] < -32768)) {
+            $invalidProperties[] = "invalid value for 'position_status', must be bigger than or equal to -32768.";
         }
 
         if ($this->container['broadcasted'] === null) {
@@ -350,17 +364,9 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'broadcasted', must be bigger than or equal to -32768.";
         }
 
-        if ($this->container['position'] === null) {
-            $invalidProperties[] = "'position' can't be null";
+        if ($this->container['overbooked'] === null) {
+            $invalidProperties[] = "'overbooked' can't be null";
         }
-        if (($this->container['position'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'position', must be smaller than or equal to 2147483647.";
-        }
-
-        if (($this->container['position'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'position', must be bigger than or equal to -2147483648.";
-        }
-
         return $invalidProperties;
     }
 
@@ -425,49 +431,97 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets starts
+     * Gets starts_at
      *
      * @return \DateTime
      */
-    public function getStarts()
+    public function getStartsAt()
     {
-        return $this->container['starts'];
+        return $this->container['starts_at'];
     }
 
     /**
-     * Sets starts
+     * Sets starts_at
      *
-     * @param \DateTime $starts starts
+     * @param \DateTime $starts_at starts_at
      *
      * @return self
      */
-    public function setStarts($starts)
+    public function setStartsAt($starts_at)
     {
-        $this->container['starts'] = $starts;
+        $this->container['starts_at'] = $starts_at;
 
         return $this;
     }
 
     /**
-     * Gets ends
+     * Gets ends_at
      *
      * @return \DateTime
      */
-    public function getEnds()
+    public function getEndsAt()
     {
-        return $this->container['ends'];
+        return $this->container['ends_at'];
     }
 
     /**
-     * Sets ends
+     * Sets ends_at
      *
-     * @param \DateTime $ends ends
+     * @param \DateTime $ends_at ends_at
      *
      * @return self
      */
-    public function setEnds($ends)
+    public function setEndsAt($ends_at)
     {
-        $this->container['ends'] = $ends;
+        $this->container['ends_at'] = $ends_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets instance
+     *
+     * @return string
+     */
+    public function getInstance()
+    {
+        return $this->container['instance'];
+    }
+
+    /**
+     * Sets instance
+     *
+     * @param string $instance instance
+     *
+     * @return self
+     */
+    public function setInstance($instance)
+    {
+        $this->container['instance'] = $instance;
+
+        return $this;
+    }
+
+    /**
+     * Gets instance_id
+     *
+     * @return int
+     */
+    public function getInstanceId()
+    {
+        return $this->container['instance_id'];
+    }
+
+    /**
+     * Sets instance_id
+     *
+     * @param int $instance_id instance_id
+     *
+     * @return self
+     */
+    public function setInstanceId($instance_id)
+    {
+        $this->container['instance_id'] = $instance_id;
 
         return $this;
     }
@@ -569,25 +623,25 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets clip_length
+     * Gets length
      *
      * @return string|null
      */
-    public function getClipLength()
+    public function getLength()
     {
-        return $this->container['clip_length'];
+        return $this->container['length'];
     }
 
     /**
-     * Sets clip_length
+     * Sets length
      *
-     * @param string|null $clip_length clip_length
+     * @param string|null $length length
      *
      * @return self
      */
-    public function setClipLength($clip_length)
+    public function setLength($length)
     {
-        $this->container['clip_length'] = $clip_length;
+        $this->container['length'] = $length;
 
         return $this;
     }
@@ -689,105 +743,65 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets media_item_played
-     *
-     * @return bool|null
-     */
-    public function getMediaItemPlayed()
-    {
-        return $this->container['media_item_played'];
-    }
-
-    /**
-     * Sets media_item_played
-     *
-     * @param bool|null $media_item_played media_item_played
-     *
-     * @return self
-     */
-    public function setMediaItemPlayed($media_item_played)
-    {
-        $this->container['media_item_played'] = $media_item_played;
-
-        return $this;
-    }
-
-    /**
-     * Gets instance
-     *
-     * @return string
-     */
-    public function getInstance()
-    {
-        return $this->container['instance'];
-    }
-
-    /**
-     * Sets instance
-     *
-     * @param string $instance instance
-     *
-     * @return self
-     */
-    public function setInstance($instance)
-    {
-        $this->container['instance'] = $instance;
-
-        return $this;
-    }
-
-    /**
-     * Gets instance_id
+     * Gets position
      *
      * @return int
      */
-    public function getInstanceId()
+    public function getPosition()
     {
-        return $this->container['instance_id'];
+        return $this->container['position'];
     }
 
     /**
-     * Sets instance_id
+     * Sets position
      *
-     * @param int $instance_id instance_id
+     * @param int $position position
      *
      * @return self
      */
-    public function setInstanceId($instance_id)
+    public function setPosition($position)
     {
-        $this->container['instance_id'] = $instance_id;
+
+        if (($position > 2147483647)) {
+            throw new \InvalidArgumentException('invalid value for $position when calling Schedule., must be smaller than or equal to 2147483647.');
+        }
+        if (($position < -2147483648)) {
+            throw new \InvalidArgumentException('invalid value for $position when calling Schedule., must be bigger than or equal to -2147483648.');
+        }
+
+        $this->container['position'] = $position;
 
         return $this;
     }
 
     /**
-     * Gets playout_status
+     * Gets position_status
      *
-     * @return int
+     * @return PositionStatusEnum|null
      */
-    public function getPlayoutStatus()
+    public function getPositionStatus()
     {
-        return $this->container['playout_status'];
+        return $this->container['position_status'];
     }
 
     /**
-     * Sets playout_status
+     * Sets position_status
      *
-     * @param int $playout_status playout_status
+     * @param PositionStatusEnum|null $position_status position_status
      *
      * @return self
      */
-    public function setPlayoutStatus($playout_status)
+    public function setPositionStatus($position_status)
     {
 
-        if (($playout_status > 32767)) {
-            throw new \InvalidArgumentException('invalid value for $playout_status when calling Schedule., must be smaller than or equal to 32767.');
+        if (!is_null($position_status) && ($position_status > 32767)) {
+            throw new \InvalidArgumentException('invalid value for $position_status when calling Schedule., must be smaller than or equal to 32767.');
         }
-        if (($playout_status < -32768)) {
-            throw new \InvalidArgumentException('invalid value for $playout_status when calling Schedule., must be bigger than or equal to -32768.');
+        if (!is_null($position_status) && ($position_status < -32768)) {
+            throw new \InvalidArgumentException('invalid value for $position_status when calling Schedule., must be bigger than or equal to -32768.');
         }
 
-        $this->container['playout_status'] = $playout_status;
+        $this->container['position_status'] = $position_status;
 
         return $this;
     }
@@ -825,33 +839,49 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets position
+     * Gets played
      *
-     * @return int
+     * @return bool|null
      */
-    public function getPosition()
+    public function getPlayed()
     {
-        return $this->container['position'];
+        return $this->container['played'];
     }
 
     /**
-     * Sets position
+     * Sets played
      *
-     * @param int $position position
+     * @param bool|null $played played
      *
      * @return self
      */
-    public function setPosition($position)
+    public function setPlayed($played)
     {
+        $this->container['played'] = $played;
 
-        if (($position > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $position when calling Schedule., must be smaller than or equal to 2147483647.');
-        }
-        if (($position < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $position when calling Schedule., must be bigger than or equal to -2147483648.');
-        }
+        return $this;
+    }
 
-        $this->container['position'] = $position;
+    /**
+     * Gets overbooked
+     *
+     * @return string
+     */
+    public function getOverbooked()
+    {
+        return $this->container['overbooked'];
+    }
+
+    /**
+     * Sets overbooked
+     *
+     * @param string $overbooked overbooked
+     *
+     * @return self
+     */
+    public function setOverbooked($overbooked)
+    {
+        $this->container['overbooked'] = $overbooked;
 
         return $this;
     }

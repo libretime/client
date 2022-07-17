@@ -13,6 +13,7 @@
  */
 
 
+import { PatchedSmartBlockKind } from './patched-smart-block-kind';
 
 /**
  * 
@@ -31,19 +32,19 @@ export interface PatchedSmartBlock {
      * @type {string}
      * @memberof PatchedSmartBlock
      */
+    'created_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedSmartBlock
+     */
+    'updated_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedSmartBlock
+     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlock
-     */
-    'mtime'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlock
-     */
-    'utime'?: string | null;
     /**
      * 
      * @type {string}
@@ -58,15 +59,15 @@ export interface PatchedSmartBlock {
     'length'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {PatchedSmartBlockKind}
      * @memberof PatchedSmartBlock
      */
-    'type'?: string | null;
+    'kind'?: PatchedSmartBlockKind | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedSmartBlock
      */
-    'creator'?: string | null;
+    'owner'?: string | null;
 }
 

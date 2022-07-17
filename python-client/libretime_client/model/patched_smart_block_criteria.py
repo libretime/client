@@ -58,10 +58,14 @@ class PatchedSmartBlockCriteria(ModelNormal):
     }
 
     validations = {
+        ('group',): {
+            'inclusive_maximum': 2147483647,
+            'inclusive_minimum': -2147483648,
+        },
         ('criteria',): {
             'max_length': 32,
         },
-        ('modifier',): {
+        ('condition',): {
             'max_length': 16,
         },
         ('value',): {
@@ -69,10 +73,6 @@ class PatchedSmartBlockCriteria(ModelNormal):
         },
         ('extra',): {
             'max_length': 512,
-        },
-        ('criteriagroup',): {
-            'inclusive_maximum': 2147483647,
-            'inclusive_minimum': -2147483648,
         },
     }
 
@@ -98,11 +98,11 @@ class PatchedSmartBlockCriteria(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
+            'group': (int, none_type,),  # noqa: E501
             'criteria': (str,),  # noqa: E501
-            'modifier': (str,),  # noqa: E501
+            'condition': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
             'extra': (str, none_type,),  # noqa: E501
-            'criteriagroup': (int, none_type,),  # noqa: E501
             'block': (str,),  # noqa: E501
         }
 
@@ -113,11 +113,11 @@ class PatchedSmartBlockCriteria(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
+        'group': 'group',  # noqa: E501
         'criteria': 'criteria',  # noqa: E501
-        'modifier': 'modifier',  # noqa: E501
+        'condition': 'condition',  # noqa: E501
         'value': 'value',  # noqa: E501
         'extra': 'extra',  # noqa: E501
-        'criteriagroup': 'criteriagroup',  # noqa: E501
         'block': 'block',  # noqa: E501
     }
 
@@ -164,11 +164,11 @@ class PatchedSmartBlockCriteria(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
+            group (int, none_type): [optional]  # noqa: E501
             criteria (str): [optional]  # noqa: E501
-            modifier (str): [optional]  # noqa: E501
+            condition (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
             extra (str, none_type): [optional]  # noqa: E501
-            criteriagroup (int, none_type): [optional]  # noqa: E501
             block (str): [optional]  # noqa: E501
         """
 
@@ -256,11 +256,11 @@ class PatchedSmartBlockCriteria(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
+            group (int, none_type): [optional]  # noqa: E501
             criteria (str): [optional]  # noqa: E501
-            modifier (str): [optional]  # noqa: E501
+            condition (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
             extra (str, none_type): [optional]  # noqa: E501
-            criteriagroup (int, none_type): [optional]  # noqa: E501
             block (str): [optional]  # noqa: E501
         """
 

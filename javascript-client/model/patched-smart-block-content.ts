@@ -37,37 +37,37 @@ export interface PatchedSmartBlockContent {
      * @type {number}
      * @memberof PatchedSmartBlockContent
      */
-    'trackoffset'?: number;
+    'offset'?: number;
     /**
      * 
      * @type {string}
      * @memberof PatchedSmartBlockContent
      */
-    'cliplength'?: string | null;
+    'length'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedSmartBlockContent
      */
-    'cuein'?: string | null;
+    'cue_in'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedSmartBlockContent
      */
-    'cueout'?: string | null;
+    'cue_out'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedSmartBlockContent
      */
-    'fadein'?: string | null;
+    'fade_in'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedSmartBlockContent
      */
-    'fadeout'?: string | null;
+    'fade_out'?: string | null;
     /**
      * 
      * @type {string}

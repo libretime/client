@@ -37,6 +37,6 @@ export interface ShowHost {
      * @type {string}
      * @memberof ShowHost
      */
-    'subjs': string;
+    'user': string;
 }
 

@@ -31,19 +31,19 @@ export interface PatchedPlaylist {
      * @type {string}
      * @memberof PatchedPlaylist
      */
+    'created_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedPlaylist
+     */
+    'updated_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedPlaylist
+     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
-    'mtime'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
-    'utime'?: string | null;
     /**
      * 
      * @type {string}
@@ -61,6 +61,6 @@ export interface PatchedPlaylist {
      * @type {string}
      * @memberof PatchedPlaylist
      */
-    'creator'?: string | null;
+    'owner'?: string | null;
 }
 

@@ -61,23 +61,23 @@ class Show(ModelNormal):
         ('name',): {
             'max_length': 255,
         },
-        ('url',): {
-            'max_length': 255,
+        ('description',): {
+            'max_length': 8192,
         },
         ('genre',): {
             'max_length': 255,
         },
-        ('description',): {
-            'max_length': 8192,
+        ('url',): {
+            'max_length': 255,
         },
-        ('color',): {
+        ('image',): {
+            'max_length': 255,
+        },
+        ('foreground_color',): {
             'max_length': 6,
         },
         ('background_color',): {
             'max_length': 6,
-        },
-        ('image_path',): {
-            'max_length': 255,
         },
     }
 
@@ -106,16 +106,16 @@ class Show(ModelNormal):
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'linked': (bool,),  # noqa: E501
-            'is_linkable': (bool,),  # noqa: E501
-            'has_autoplaylist': (bool,),  # noqa: E501
-            'autoplaylist_repeat': (bool,),  # noqa: E501
-            'url': (str, none_type,),  # noqa: E501
-            'genre': (str, none_type,),  # noqa: E501
+            'linkable': (bool,),  # noqa: E501
+            'auto_playlist_enabled': (bool,),  # noqa: E501
+            'auto_playlist_repeat': (bool,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
-            'color': (str, none_type,),  # noqa: E501
+            'genre': (str, none_type,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
+            'image': (str, none_type,),  # noqa: E501
+            'foreground_color': (str, none_type,),  # noqa: E501
             'background_color': (str, none_type,),  # noqa: E501
-            'image_path': (str, none_type,),  # noqa: E501
-            'autoplaylist': (str, none_type,),  # noqa: E501
+            'auto_playlist': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -128,16 +128,16 @@ class Show(ModelNormal):
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'linked': 'linked',  # noqa: E501
-        'is_linkable': 'is_linkable',  # noqa: E501
-        'has_autoplaylist': 'has_autoplaylist',  # noqa: E501
-        'autoplaylist_repeat': 'autoplaylist_repeat',  # noqa: E501
-        'url': 'url',  # noqa: E501
-        'genre': 'genre',  # noqa: E501
+        'linkable': 'linkable',  # noqa: E501
+        'auto_playlist_enabled': 'auto_playlist_enabled',  # noqa: E501
+        'auto_playlist_repeat': 'auto_playlist_repeat',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'color': 'color',  # noqa: E501
+        'genre': 'genre',  # noqa: E501
+        'url': 'url',  # noqa: E501
+        'image': 'image',  # noqa: E501
+        'foreground_color': 'foreground_color',  # noqa: E501
         'background_color': 'background_color',  # noqa: E501
-        'image_path': 'image_path',  # noqa: E501
-        'autoplaylist': 'autoplaylist',  # noqa: E501
+        'auto_playlist': 'auto_playlist',  # noqa: E501
     }
 
     read_only_vars = {
@@ -149,7 +149,7 @@ class Show(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, name, linked, is_linkable, has_autoplaylist, autoplaylist_repeat, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, item_url, id, name, linked, linkable, auto_playlist_enabled, auto_playlist_repeat, *args, **kwargs):  # noqa: E501
         """Show - a model defined in OpenAPI
 
         Args:
@@ -157,9 +157,9 @@ class Show(ModelNormal):
             id (int):
             name (str):
             linked (bool):
-            is_linkable (bool):
-            has_autoplaylist (bool):
-            autoplaylist_repeat (bool):
+            linkable (bool):
+            auto_playlist_enabled (bool):
+            auto_playlist_repeat (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -192,13 +192,13 @@ class Show(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            url (str, none_type): [optional]  # noqa: E501
-            genre (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            genre (str, none_type): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
+            image (str, none_type): [optional]  # noqa: E501
+            foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
-            image_path (str, none_type): [optional]  # noqa: E501
-            autoplaylist (str, none_type): [optional]  # noqa: E501
+            auto_playlist (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,9 +234,9 @@ class Show(ModelNormal):
         self.id = id
         self.name = name
         self.linked = linked
-        self.is_linkable = is_linkable
-        self.has_autoplaylist = has_autoplaylist
-        self.autoplaylist_repeat = autoplaylist_repeat
+        self.linkable = linkable
+        self.auto_playlist_enabled = auto_playlist_enabled
+        self.auto_playlist_repeat = auto_playlist_repeat
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -257,14 +257,14 @@ class Show(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, linked, is_linkable, has_autoplaylist, autoplaylist_repeat, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, linked, linkable, auto_playlist_enabled, auto_playlist_repeat, *args, **kwargs):  # noqa: E501
         """Show - a model defined in OpenAPI
 
             name (str):
             linked (bool):
-            is_linkable (bool):
-            has_autoplaylist (bool):
-            autoplaylist_repeat (bool):
+            linkable (bool):
+            auto_playlist_enabled (bool):
+            auto_playlist_repeat (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -297,13 +297,13 @@ class Show(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            url (str, none_type): [optional]  # noqa: E501
-            genre (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            genre (str, none_type): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
+            image (str, none_type): [optional]  # noqa: E501
+            foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
-            image_path (str, none_type): [optional]  # noqa: E501
-            autoplaylist (str, none_type): [optional]  # noqa: E501
+            auto_playlist (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -335,9 +335,9 @@ class Show(ModelNormal):
 
         self.name = name
         self.linked = linked
-        self.is_linkable = is_linkable
-        self.has_autoplaylist = has_autoplaylist
-        self.autoplaylist_repeat = autoplaylist_repeat
+        self.linkable = linkable
+        self.auto_playlist_enabled = auto_playlist_enabled
+        self.auto_playlist_repeat = auto_playlist_repeat
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

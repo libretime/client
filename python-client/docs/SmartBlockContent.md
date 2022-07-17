@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **str** |  | [readonly] 
-**trackoffset** | **float** |  | 
+**offset** | **float** |  | 
 **position** | **int, none_type** |  | [optional] 
-**cliplength** | **str, none_type** |  | [optional] 
-**cuein** | **str, none_type** |  | [optional] 
-**cueout** | **str, none_type** |  | [optional] 
-**fadein** | **str, none_type** |  | [optional] 
-**fadeout** | **str, none_type** |  | [optional] 
+**length** | **str, none_type** |  | [optional] 
+**cue_in** | **str, none_type** |  | [optional] 
+**cue_out** | **str, none_type** |  | [optional] 
+**fade_in** | **str, none_type** |  | [optional] 
+**fade_out** | **str, none_type** |  | [optional] 
 **block** | **str, none_type** |  | [optional] 
 **file** | **str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

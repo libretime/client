@@ -37,6 +37,24 @@ export interface PatchedWebstream {
      * @type {string}
      * @memberof PatchedWebstream
      */
+    'created_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedWebstream
+     */
+    'updated_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedWebstream
+     */
+    'last_played_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedWebstream
+     */
     'name'?: string;
     /**
      * 
@@ -58,33 +76,15 @@ export interface PatchedWebstream {
     'length'?: string;
     /**
      * 
-     * @type {number}
-     * @memberof PatchedWebstream
-     */
-    'creator_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
-    'mtime'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
-    'utime'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
-    'lptime'?: string | null;
-    /**
-     * 
      * @type {string}
      * @memberof PatchedWebstream
      */
     'mime'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedWebstream
+     */
+    'owner'?: string | null;
 }
 

@@ -5,15 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [optional] [readonly]
-**first_show** | **\DateTime** |  | [optional]
-**last_show** | **\DateTime** |  | [optional]
+**first_show_on** | **\DateTime** |  | [optional]
+**last_show_on** | **\DateTime** |  | [optional]
 **start_time** | **string** |  | [optional]
 **timezone** | **string** |  | [optional]
 **duration** | **string** |  | [optional]
-**day** | **int** |  | [optional]
-**repeat_type** | **int** |  | [optional]
-**next_pop_date** | **\DateTime** |  | [optional]
-**record** | **int** |  | [optional]
+**record_enabled** | [**\Libretime\Client\Model\PatchedShowDaysRecordEnabled**](PatchedShowDaysRecordEnabled.md) |  | [optional]
+**week_day** | [**\Libretime\Client\Model\PatchedShowDaysWeekDay**](PatchedShowDaysWeekDay.md) |  | [optional]
+**repeat_kind** | [**RepeatKindEnum**](RepeatKindEnum.md) |  | [optional]
+**repeat_next_on** | **\DateTime** |  | [optional]
 **show** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

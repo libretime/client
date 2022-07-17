@@ -61,23 +61,23 @@ class PatchedShow(ModelNormal):
         ('name',): {
             'max_length': 255,
         },
-        ('url',): {
-            'max_length': 255,
+        ('description',): {
+            'max_length': 8192,
         },
         ('genre',): {
             'max_length': 255,
         },
-        ('description',): {
-            'max_length': 8192,
+        ('url',): {
+            'max_length': 255,
         },
-        ('color',): {
+        ('image',): {
+            'max_length': 255,
+        },
+        ('foreground_color',): {
             'max_length': 6,
         },
         ('background_color',): {
             'max_length': 6,
-        },
-        ('image_path',): {
-            'max_length': 255,
         },
     }
 
@@ -105,17 +105,17 @@ class PatchedShow(ModelNormal):
             'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'url': (str, none_type,),  # noqa: E501
-            'genre': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
-            'color': (str, none_type,),  # noqa: E501
+            'genre': (str, none_type,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
+            'image': (str, none_type,),  # noqa: E501
+            'foreground_color': (str, none_type,),  # noqa: E501
             'background_color': (str, none_type,),  # noqa: E501
             'linked': (bool,),  # noqa: E501
-            'is_linkable': (bool,),  # noqa: E501
-            'image_path': (str, none_type,),  # noqa: E501
-            'has_autoplaylist': (bool,),  # noqa: E501
-            'autoplaylist_repeat': (bool,),  # noqa: E501
-            'autoplaylist': (str, none_type,),  # noqa: E501
+            'linkable': (bool,),  # noqa: E501
+            'auto_playlist': (str, none_type,),  # noqa: E501
+            'auto_playlist_enabled': (bool,),  # noqa: E501
+            'auto_playlist_repeat': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -127,17 +127,17 @@ class PatchedShow(ModelNormal):
         'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
-        'url': 'url',  # noqa: E501
-        'genre': 'genre',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'color': 'color',  # noqa: E501
+        'genre': 'genre',  # noqa: E501
+        'url': 'url',  # noqa: E501
+        'image': 'image',  # noqa: E501
+        'foreground_color': 'foreground_color',  # noqa: E501
         'background_color': 'background_color',  # noqa: E501
         'linked': 'linked',  # noqa: E501
-        'is_linkable': 'is_linkable',  # noqa: E501
-        'image_path': 'image_path',  # noqa: E501
-        'has_autoplaylist': 'has_autoplaylist',  # noqa: E501
-        'autoplaylist_repeat': 'autoplaylist_repeat',  # noqa: E501
-        'autoplaylist': 'autoplaylist',  # noqa: E501
+        'linkable': 'linkable',  # noqa: E501
+        'auto_playlist': 'auto_playlist',  # noqa: E501
+        'auto_playlist_enabled': 'auto_playlist_enabled',  # noqa: E501
+        'auto_playlist_repeat': 'auto_playlist_repeat',  # noqa: E501
     }
 
     read_only_vars = {
@@ -186,17 +186,17 @@ class PatchedShow(ModelNormal):
             item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            url (str, none_type): [optional]  # noqa: E501
-            genre (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            genre (str, none_type): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
+            image (str, none_type): [optional]  # noqa: E501
+            foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
             linked (bool): [optional]  # noqa: E501
-            is_linkable (bool): [optional]  # noqa: E501
-            image_path (str, none_type): [optional]  # noqa: E501
-            has_autoplaylist (bool): [optional]  # noqa: E501
-            autoplaylist_repeat (bool): [optional]  # noqa: E501
-            autoplaylist (str, none_type): [optional]  # noqa: E501
+            linkable (bool): [optional]  # noqa: E501
+            auto_playlist (str, none_type): [optional]  # noqa: E501
+            auto_playlist_enabled (bool): [optional]  # noqa: E501
+            auto_playlist_repeat (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -285,17 +285,17 @@ class PatchedShow(ModelNormal):
             item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            url (str, none_type): [optional]  # noqa: E501
-            genre (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
-            color (str, none_type): [optional]  # noqa: E501
+            genre (str, none_type): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
+            image (str, none_type): [optional]  # noqa: E501
+            foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
             linked (bool): [optional]  # noqa: E501
-            is_linkable (bool): [optional]  # noqa: E501
-            image_path (str, none_type): [optional]  # noqa: E501
-            has_autoplaylist (bool): [optional]  # noqa: E501
-            autoplaylist_repeat (bool): [optional]  # noqa: E501
-            autoplaylist (str, none_type): [optional]  # noqa: E501
+            linkable (bool): [optional]  # noqa: E501
+            auto_playlist (str, none_type): [optional]  # noqa: E501
+            auto_playlist_enabled (bool): [optional]  # noqa: E501
+            auto_playlist_repeat (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

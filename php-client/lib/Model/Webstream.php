@@ -61,15 +61,15 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'item_url' => 'string',
         'id' => 'int',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'last_played_at' => '\DateTime',
         'name' => 'string',
         'description' => 'string',
         'url' => 'string',
         'length' => 'string',
-        'creator_id' => 'int',
-        'mtime' => '\DateTime',
-        'utime' => '\DateTime',
-        'lptime' => '\DateTime',
-        'mime' => 'string'
+        'mime' => 'string',
+        'owner' => 'string'
     ];
 
     /**
@@ -82,15 +82,15 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'item_url' => 'uri',
         'id' => null,
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time',
+        'last_played_at' => 'date-time',
         'name' => null,
         'description' => null,
         'url' => null,
         'length' => null,
-        'creator_id' => null,
-        'mtime' => 'date-time',
-        'utime' => 'date-time',
-        'lptime' => 'date-time',
-        'mime' => null
+        'mime' => null,
+        'owner' => 'uri'
     ];
 
     /**
@@ -122,15 +122,15 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'item_url' => 'item_url',
         'id' => 'id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'last_played_at' => 'last_played_at',
         'name' => 'name',
         'description' => 'description',
         'url' => 'url',
         'length' => 'length',
-        'creator_id' => 'creator_id',
-        'mtime' => 'mtime',
-        'utime' => 'utime',
-        'lptime' => 'lptime',
-        'mime' => 'mime'
+        'mime' => 'mime',
+        'owner' => 'owner'
     ];
 
     /**
@@ -141,15 +141,15 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'item_url' => 'setItemUrl',
         'id' => 'setId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'last_played_at' => 'setLastPlayedAt',
         'name' => 'setName',
         'description' => 'setDescription',
         'url' => 'setUrl',
         'length' => 'setLength',
-        'creator_id' => 'setCreatorId',
-        'mtime' => 'setMtime',
-        'utime' => 'setUtime',
-        'lptime' => 'setLptime',
-        'mime' => 'setMime'
+        'mime' => 'setMime',
+        'owner' => 'setOwner'
     ];
 
     /**
@@ -160,15 +160,15 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'item_url' => 'getItemUrl',
         'id' => 'getId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'last_played_at' => 'getLastPlayedAt',
         'name' => 'getName',
         'description' => 'getDescription',
         'url' => 'getUrl',
         'length' => 'getLength',
-        'creator_id' => 'getCreatorId',
-        'mtime' => 'getMtime',
-        'utime' => 'getUtime',
-        'lptime' => 'getLptime',
-        'mime' => 'getMime'
+        'mime' => 'getMime',
+        'owner' => 'getOwner'
     ];
 
     /**
@@ -230,15 +230,15 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
+        $this->container['created_at'] = $data['created_at'] ?? null;
+        $this->container['updated_at'] = $data['updated_at'] ?? null;
+        $this->container['last_played_at'] = $data['last_played_at'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['length'] = $data['length'] ?? null;
-        $this->container['creator_id'] = $data['creator_id'] ?? null;
-        $this->container['mtime'] = $data['mtime'] ?? null;
-        $this->container['utime'] = $data['utime'] ?? null;
-        $this->container['lptime'] = $data['lptime'] ?? null;
         $this->container['mime'] = $data['mime'] ?? null;
+        $this->container['owner'] = $data['owner'] ?? null;
     }
 
     /**
@@ -255,6 +255,12 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['created_at'] === null) {
+            $invalidProperties[] = "'created_at' can't be null";
+        }
+        if ($this->container['updated_at'] === null) {
+            $invalidProperties[] = "'updated_at' can't be null";
         }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -279,23 +285,6 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if ($this->container['length'] === null) {
             $invalidProperties[] = "'length' can't be null";
-        }
-        if ($this->container['creator_id'] === null) {
-            $invalidProperties[] = "'creator_id' can't be null";
-        }
-        if (($this->container['creator_id'] > 2147483647)) {
-            $invalidProperties[] = "invalid value for 'creator_id', must be smaller than or equal to 2147483647.";
-        }
-
-        if (($this->container['creator_id'] < -2147483648)) {
-            $invalidProperties[] = "invalid value for 'creator_id', must be bigger than or equal to -2147483648.";
-        }
-
-        if ($this->container['mtime'] === null) {
-            $invalidProperties[] = "'mtime' can't be null";
-        }
-        if ($this->container['utime'] === null) {
-            $invalidProperties[] = "'utime' can't be null";
         }
         if (!is_null($this->container['mime']) && (mb_strlen($this->container['mime']) > 1024)) {
             $invalidProperties[] = "invalid value for 'mime', the character length must be smaller than or equal to 1024.";
@@ -360,6 +349,78 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime $created_at created_at
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     *
+     * @param \DateTime $updated_at updated_at
+     *
+     * @return self
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_played_at
+     *
+     * @return \DateTime|null
+     */
+    public function getLastPlayedAt()
+    {
+        return $this->container['last_played_at'];
+    }
+
+    /**
+     * Sets last_played_at
+     *
+     * @param \DateTime|null $last_played_at last_played_at
+     *
+     * @return self
+     */
+    public function setLastPlayedAt($last_played_at)
+    {
+        $this->container['last_played_at'] = $last_played_at;
 
         return $this;
     }
@@ -473,110 +534,6 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets creator_id
-     *
-     * @return int
-     */
-    public function getCreatorId()
-    {
-        return $this->container['creator_id'];
-    }
-
-    /**
-     * Sets creator_id
-     *
-     * @param int $creator_id creator_id
-     *
-     * @return self
-     */
-    public function setCreatorId($creator_id)
-    {
-
-        if (($creator_id > 2147483647)) {
-            throw new \InvalidArgumentException('invalid value for $creator_id when calling Webstream., must be smaller than or equal to 2147483647.');
-        }
-        if (($creator_id < -2147483648)) {
-            throw new \InvalidArgumentException('invalid value for $creator_id when calling Webstream., must be bigger than or equal to -2147483648.');
-        }
-
-        $this->container['creator_id'] = $creator_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets mtime
-     *
-     * @return \DateTime
-     */
-    public function getMtime()
-    {
-        return $this->container['mtime'];
-    }
-
-    /**
-     * Sets mtime
-     *
-     * @param \DateTime $mtime mtime
-     *
-     * @return self
-     */
-    public function setMtime($mtime)
-    {
-        $this->container['mtime'] = $mtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets utime
-     *
-     * @return \DateTime
-     */
-    public function getUtime()
-    {
-        return $this->container['utime'];
-    }
-
-    /**
-     * Sets utime
-     *
-     * @param \DateTime $utime utime
-     *
-     * @return self
-     */
-    public function setUtime($utime)
-    {
-        $this->container['utime'] = $utime;
-
-        return $this;
-    }
-
-    /**
-     * Gets lptime
-     *
-     * @return \DateTime|null
-     */
-    public function getLptime()
-    {
-        return $this->container['lptime'];
-    }
-
-    /**
-     * Sets lptime
-     *
-     * @param \DateTime|null $lptime lptime
-     *
-     * @return self
-     */
-    public function setLptime($lptime)
-    {
-        $this->container['lptime'] = $lptime;
-
-        return $this;
-    }
-
-    /**
      * Gets mime
      *
      * @return string|null
@@ -600,6 +557,30 @@ class Webstream implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['mime'] = $mime;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner
+     *
+     * @return string|null
+     */
+    public function getOwner()
+    {
+        return $this->container['owner'];
+    }
+
+    /**
+     * Sets owner
+     *
+     * @param string|null $owner owner
+     *
+     * @return self
+     */
+    public function setOwner($owner)
+    {
+        $this->container['owner'] = $owner;
 
         return $this;
     }

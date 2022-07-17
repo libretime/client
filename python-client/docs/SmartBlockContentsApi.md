@@ -57,12 +57,12 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = smart_block_contents_api.SmartBlockContentsApi(api_client)
     smart_block_content = SmartBlockContent(
         position=-2147483648,
-        trackoffset=3.14,
-        cliplength="cliplength_example",
-        cuein="cuein_example",
-        cueout="cueout_example",
-        fadein="fadein_example",
-        fadeout="fadeout_example",
+        offset=3.14,
+        length="length_example",
+        cue_in="cue_in_example",
+        cue_out="cue_out_example",
+        fade_in="fade_in_example",
+        fade_out="fade_out_example",
         block="block_example",
         file="file_example",
     ) # SmartBlockContent | 
@@ -309,12 +309,12 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this smart block content.
     patched_smart_block_content = PatchedSmartBlockContent(
         position=-2147483648,
-        trackoffset=3.14,
-        cliplength="cliplength_example",
-        cuein="cuein_example",
-        cueout="cueout_example",
-        fadein="fadein_example",
-        fadeout="fadeout_example",
+        offset=3.14,
+        length="length_example",
+        cue_in="cue_in_example",
+        cue_out="cue_out_example",
+        fade_in="fade_in_example",
+        fade_out="fade_out_example",
         block="block_example",
         file="file_example",
     ) # PatchedSmartBlockContent |  (optional)
@@ -493,12 +493,12 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this smart block content.
     smart_block_content = SmartBlockContent(
         position=-2147483648,
-        trackoffset=3.14,
-        cliplength="cliplength_example",
-        cuein="cuein_example",
-        cueout="cueout_example",
-        fadein="fadein_example",
-        fadeout="fadeout_example",
+        offset=3.14,
+        length="length_example",
+        cue_in="cue_in_example",
+        cue_out="cue_out_example",
+        fade_in="fade_in_example",
+        fade_out="fade_out_example",
         block="block_example",
         file="file_example",
     ) # SmartBlockContent | 

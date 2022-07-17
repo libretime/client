@@ -43,7 +43,7 @@ export interface Show {
      * @type {string}
      * @memberof Show
      */
-    'url'?: string | null;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
@@ -55,13 +55,19 @@ export interface Show {
      * @type {string}
      * @memberof Show
      */
-    'description'?: string | null;
+    'url'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Show
      */
-    'color'?: string | null;
+    'image'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Show
+     */
+    'foreground_color'?: string | null;
     /**
      * 
      * @type {string}
@@ -79,30 +85,24 @@ export interface Show {
      * @type {boolean}
      * @memberof Show
      */
-    'is_linkable': boolean;
+    'linkable': boolean;
     /**
      * 
      * @type {string}
      * @memberof Show
      */
-    'image_path'?: string | null;
+    'auto_playlist'?: string | null;
     /**
      * 
      * @type {boolean}
      * @memberof Show
      */
-    'has_autoplaylist': boolean;
+    'auto_playlist_enabled': boolean;
     /**
      * 
      * @type {boolean}
      * @memberof Show
      */
-    'autoplaylist_repeat': boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
-    'autoplaylist'?: string | null;
+    'auto_playlist_repeat': boolean;
 }
 

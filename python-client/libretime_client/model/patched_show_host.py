@@ -83,7 +83,7 @@ class PatchedShowHost(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'show': (str,),  # noqa: E501
-            'subjs': (str,),  # noqa: E501
+            'user': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -94,7 +94,7 @@ class PatchedShowHost(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'show': 'show',  # noqa: E501
-        'subjs': 'subjs',  # noqa: E501
+        'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
@@ -141,7 +141,7 @@ class PatchedShowHost(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             show (str): [optional]  # noqa: E501
-            subjs (str): [optional]  # noqa: E501
+            user (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -229,7 +229,7 @@ class PatchedShowHost(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
             show (str): [optional]  # noqa: E501
-            subjs (str): [optional]  # noqa: E501
+            user (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

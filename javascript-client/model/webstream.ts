@@ -37,6 +37,24 @@ export interface Webstream {
      * @type {string}
      * @memberof Webstream
      */
+    'created_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Webstream
+     */
+    'updated_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Webstream
+     */
+    'last_played_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Webstream
+     */
     'name': string;
     /**
      * 
@@ -58,33 +76,15 @@ export interface Webstream {
     'length': string;
     /**
      * 
-     * @type {number}
-     * @memberof Webstream
-     */
-    'creator_id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
-    'mtime': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
-    'utime': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
-    'lptime'?: string | null;
-    /**
-     * 
      * @type {string}
      * @memberof Webstream
      */
     'mime'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Webstream
+     */
+    'owner'?: string | null;
 }
 

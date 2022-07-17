@@ -31,19 +31,19 @@ export interface Playlist {
      * @type {string}
      * @memberof Playlist
      */
+    'created_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Playlist
+     */
+    'updated_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof Playlist
+     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
-    'mtime'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
-    'utime'?: string | null;
     /**
      * 
      * @type {string}
@@ -61,6 +61,6 @@ export interface Playlist {
      * @type {string}
      * @memberof Playlist
      */
-    'creator'?: string | null;
+    'owner'?: string | null;
 }
 

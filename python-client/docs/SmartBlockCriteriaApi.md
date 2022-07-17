@@ -56,11 +56,11 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = smart_block_criteria_api.SmartBlockCriteriaApi(api_client)
     smart_block_criteria = SmartBlockCriteria(
+        group=-2147483648,
         criteria="criteria_example",
-        modifier="modifier_example",
+        condition="condition_example",
         value="value_example",
         extra="extra_example",
-        criteriagroup=-2147483648,
         block="block_example",
     ) # SmartBlockCriteria | 
 
@@ -305,11 +305,11 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = smart_block_criteria_api.SmartBlockCriteriaApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block criteria.
     patched_smart_block_criteria = PatchedSmartBlockCriteria(
+        group=-2147483648,
         criteria="criteria_example",
-        modifier="modifier_example",
+        condition="condition_example",
         value="value_example",
         extra="extra_example",
-        criteriagroup=-2147483648,
         block="block_example",
     ) # PatchedSmartBlockCriteria |  (optional)
 
@@ -486,11 +486,11 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = smart_block_criteria_api.SmartBlockCriteriaApi(api_client)
     id = 1 # int | A unique integer value identifying this smart block criteria.
     smart_block_criteria = SmartBlockCriteria(
+        group=-2147483648,
         criteria="criteria_example",
-        modifier="modifier_example",
+        condition="condition_example",
         value="value_example",
         extra="extra_example",
-        criteriagroup=-2147483648,
         block="block_example",
     ) # SmartBlockCriteria | 
 

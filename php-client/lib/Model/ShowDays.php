@@ -60,15 +60,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'first_show' => '\DateTime',
-        'last_show' => '\DateTime',
+        'first_show_on' => '\DateTime',
+        'last_show_on' => '\DateTime',
         'start_time' => 'string',
         'timezone' => 'string',
         'duration' => 'string',
-        'day' => 'int',
-        'repeat_type' => 'int',
-        'next_pop_date' => '\DateTime',
-        'record' => 'int',
+        'record_enabled' => '\Libretime\Client\Model\PatchedShowDaysRecordEnabled',
+        'week_day' => '\Libretime\Client\Model\PatchedShowDaysWeekDay',
+        'repeat_kind' => 'RepeatKindEnum',
+        'repeat_next_on' => '\DateTime',
         'show' => 'string'
     ];
 
@@ -81,15 +81,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
-        'first_show' => 'date',
-        'last_show' => 'date',
+        'first_show_on' => 'date',
+        'last_show_on' => 'date',
         'start_time' => 'time',
         'timezone' => null,
         'duration' => null,
-        'day' => null,
-        'repeat_type' => null,
-        'next_pop_date' => 'date',
-        'record' => null,
+        'record_enabled' => null,
+        'week_day' => null,
+        'repeat_kind' => null,
+        'repeat_next_on' => 'date',
         'show' => 'uri'
     ];
 
@@ -121,15 +121,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
-        'first_show' => 'first_show',
-        'last_show' => 'last_show',
+        'first_show_on' => 'first_show_on',
+        'last_show_on' => 'last_show_on',
         'start_time' => 'start_time',
         'timezone' => 'timezone',
         'duration' => 'duration',
-        'day' => 'day',
-        'repeat_type' => 'repeat_type',
-        'next_pop_date' => 'next_pop_date',
-        'record' => 'record',
+        'record_enabled' => 'record_enabled',
+        'week_day' => 'week_day',
+        'repeat_kind' => 'repeat_kind',
+        'repeat_next_on' => 'repeat_next_on',
         'show' => 'show'
     ];
 
@@ -140,15 +140,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
-        'first_show' => 'setFirstShow',
-        'last_show' => 'setLastShow',
+        'first_show_on' => 'setFirstShowOn',
+        'last_show_on' => 'setLastShowOn',
         'start_time' => 'setStartTime',
         'timezone' => 'setTimezone',
         'duration' => 'setDuration',
-        'day' => 'setDay',
-        'repeat_type' => 'setRepeatType',
-        'next_pop_date' => 'setNextPopDate',
-        'record' => 'setRecord',
+        'record_enabled' => 'setRecordEnabled',
+        'week_day' => 'setWeekDay',
+        'repeat_kind' => 'setRepeatKind',
+        'repeat_next_on' => 'setRepeatNextOn',
         'show' => 'setShow'
     ];
 
@@ -159,15 +159,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
-        'first_show' => 'getFirstShow',
-        'last_show' => 'getLastShow',
+        'first_show_on' => 'getFirstShowOn',
+        'last_show_on' => 'getLastShowOn',
         'start_time' => 'getStartTime',
         'timezone' => 'getTimezone',
         'duration' => 'getDuration',
-        'day' => 'getDay',
-        'repeat_type' => 'getRepeatType',
-        'next_pop_date' => 'getNextPopDate',
-        'record' => 'getRecord',
+        'record_enabled' => 'getRecordEnabled',
+        'week_day' => 'getWeekDay',
+        'repeat_kind' => 'getRepeatKind',
+        'repeat_next_on' => 'getRepeatNextOn',
         'show' => 'getShow'
     ];
 
@@ -229,15 +229,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
-        $this->container['first_show'] = $data['first_show'] ?? null;
-        $this->container['last_show'] = $data['last_show'] ?? null;
+        $this->container['first_show_on'] = $data['first_show_on'] ?? null;
+        $this->container['last_show_on'] = $data['last_show_on'] ?? null;
         $this->container['start_time'] = $data['start_time'] ?? null;
         $this->container['timezone'] = $data['timezone'] ?? null;
         $this->container['duration'] = $data['duration'] ?? null;
-        $this->container['day'] = $data['day'] ?? null;
-        $this->container['repeat_type'] = $data['repeat_type'] ?? null;
-        $this->container['next_pop_date'] = $data['next_pop_date'] ?? null;
-        $this->container['record'] = $data['record'] ?? null;
+        $this->container['record_enabled'] = $data['record_enabled'] ?? null;
+        $this->container['week_day'] = $data['week_day'] ?? null;
+        $this->container['repeat_kind'] = $data['repeat_kind'] ?? null;
+        $this->container['repeat_next_on'] = $data['repeat_next_on'] ?? null;
         $this->container['show'] = $data['show'] ?? null;
     }
 
@@ -253,8 +253,8 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
-        if ($this->container['first_show'] === null) {
-            $invalidProperties[] = "'first_show' can't be null";
+        if ($this->container['first_show_on'] === null) {
+            $invalidProperties[] = "'first_show_on' can't be null";
         }
         if ($this->container['start_time'] === null) {
             $invalidProperties[] = "'start_time' can't be null";
@@ -273,31 +273,15 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'duration', the character length must be smaller than or equal to 1024.";
         }
 
-        if (!is_null($this->container['day']) && ($this->container['day'] > 32767)) {
-            $invalidProperties[] = "invalid value for 'day', must be smaller than or equal to 32767.";
+        if ($this->container['repeat_kind'] === null) {
+            $invalidProperties[] = "'repeat_kind' can't be null";
+        }
+        if (($this->container['repeat_kind'] > 32767)) {
+            $invalidProperties[] = "invalid value for 'repeat_kind', must be smaller than or equal to 32767.";
         }
 
-        if (!is_null($this->container['day']) && ($this->container['day'] < -32768)) {
-            $invalidProperties[] = "invalid value for 'day', must be bigger than or equal to -32768.";
-        }
-
-        if ($this->container['repeat_type'] === null) {
-            $invalidProperties[] = "'repeat_type' can't be null";
-        }
-        if (($this->container['repeat_type'] > 32767)) {
-            $invalidProperties[] = "invalid value for 'repeat_type', must be smaller than or equal to 32767.";
-        }
-
-        if (($this->container['repeat_type'] < -32768)) {
-            $invalidProperties[] = "invalid value for 'repeat_type', must be bigger than or equal to -32768.";
-        }
-
-        if (!is_null($this->container['record']) && ($this->container['record'] > 32767)) {
-            $invalidProperties[] = "invalid value for 'record', must be smaller than or equal to 32767.";
-        }
-
-        if (!is_null($this->container['record']) && ($this->container['record'] < -32768)) {
-            $invalidProperties[] = "invalid value for 'record', must be bigger than or equal to -32768.";
+        if (($this->container['repeat_kind'] < -32768)) {
+            $invalidProperties[] = "invalid value for 'repeat_kind', must be bigger than or equal to -32768.";
         }
 
         if ($this->container['show'] === null) {
@@ -343,49 +327,49 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets first_show
+     * Gets first_show_on
      *
      * @return \DateTime
      */
-    public function getFirstShow()
+    public function getFirstShowOn()
     {
-        return $this->container['first_show'];
+        return $this->container['first_show_on'];
     }
 
     /**
-     * Sets first_show
+     * Sets first_show_on
      *
-     * @param \DateTime $first_show first_show
+     * @param \DateTime $first_show_on first_show_on
      *
      * @return self
      */
-    public function setFirstShow($first_show)
+    public function setFirstShowOn($first_show_on)
     {
-        $this->container['first_show'] = $first_show;
+        $this->container['first_show_on'] = $first_show_on;
 
         return $this;
     }
 
     /**
-     * Gets last_show
+     * Gets last_show_on
      *
      * @return \DateTime|null
      */
-    public function getLastShow()
+    public function getLastShowOn()
     {
-        return $this->container['last_show'];
+        return $this->container['last_show_on'];
     }
 
     /**
-     * Sets last_show
+     * Sets last_show_on
      *
-     * @param \DateTime|null $last_show last_show
+     * @param \DateTime|null $last_show_on last_show_on
      *
      * @return self
      */
-    public function setLastShow($last_show)
+    public function setLastShowOn($last_show_on)
     {
-        $this->container['last_show'] = $last_show;
+        $this->container['last_show_on'] = $last_show_on;
 
         return $this;
     }
@@ -471,121 +455,105 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets day
+     * Gets record_enabled
      *
-     * @return int|null
+     * @return \Libretime\Client\Model\PatchedShowDaysRecordEnabled|null
      */
-    public function getDay()
+    public function getRecordEnabled()
     {
-        return $this->container['day'];
+        return $this->container['record_enabled'];
     }
 
     /**
-     * Sets day
+     * Sets record_enabled
      *
-     * @param int|null $day day
+     * @param \Libretime\Client\Model\PatchedShowDaysRecordEnabled|null $record_enabled record_enabled
      *
      * @return self
      */
-    public function setDay($day)
+    public function setRecordEnabled($record_enabled)
     {
-
-        if (!is_null($day) && ($day > 32767)) {
-            throw new \InvalidArgumentException('invalid value for $day when calling ShowDays., must be smaller than or equal to 32767.');
-        }
-        if (!is_null($day) && ($day < -32768)) {
-            throw new \InvalidArgumentException('invalid value for $day when calling ShowDays., must be bigger than or equal to -32768.');
-        }
-
-        $this->container['day'] = $day;
+        $this->container['record_enabled'] = $record_enabled;
 
         return $this;
     }
 
     /**
-     * Gets repeat_type
+     * Gets week_day
      *
-     * @return int
+     * @return \Libretime\Client\Model\PatchedShowDaysWeekDay|null
      */
-    public function getRepeatType()
+    public function getWeekDay()
     {
-        return $this->container['repeat_type'];
+        return $this->container['week_day'];
     }
 
     /**
-     * Sets repeat_type
+     * Sets week_day
      *
-     * @param int $repeat_type repeat_type
+     * @param \Libretime\Client\Model\PatchedShowDaysWeekDay|null $week_day week_day
      *
      * @return self
      */
-    public function setRepeatType($repeat_type)
+    public function setWeekDay($week_day)
     {
-
-        if (($repeat_type > 32767)) {
-            throw new \InvalidArgumentException('invalid value for $repeat_type when calling ShowDays., must be smaller than or equal to 32767.');
-        }
-        if (($repeat_type < -32768)) {
-            throw new \InvalidArgumentException('invalid value for $repeat_type when calling ShowDays., must be bigger than or equal to -32768.');
-        }
-
-        $this->container['repeat_type'] = $repeat_type;
+        $this->container['week_day'] = $week_day;
 
         return $this;
     }
 
     /**
-     * Gets next_pop_date
+     * Gets repeat_kind
+     *
+     * @return RepeatKindEnum
+     */
+    public function getRepeatKind()
+    {
+        return $this->container['repeat_kind'];
+    }
+
+    /**
+     * Sets repeat_kind
+     *
+     * @param RepeatKindEnum $repeat_kind repeat_kind
+     *
+     * @return self
+     */
+    public function setRepeatKind($repeat_kind)
+    {
+
+        if (($repeat_kind > 32767)) {
+            throw new \InvalidArgumentException('invalid value for $repeat_kind when calling ShowDays., must be smaller than or equal to 32767.');
+        }
+        if (($repeat_kind < -32768)) {
+            throw new \InvalidArgumentException('invalid value for $repeat_kind when calling ShowDays., must be bigger than or equal to -32768.');
+        }
+
+        $this->container['repeat_kind'] = $repeat_kind;
+
+        return $this;
+    }
+
+    /**
+     * Gets repeat_next_on
      *
      * @return \DateTime|null
      */
-    public function getNextPopDate()
+    public function getRepeatNextOn()
     {
-        return $this->container['next_pop_date'];
+        return $this->container['repeat_next_on'];
     }
 
     /**
-     * Sets next_pop_date
+     * Sets repeat_next_on
      *
-     * @param \DateTime|null $next_pop_date next_pop_date
+     * @param \DateTime|null $repeat_next_on repeat_next_on
      *
      * @return self
      */
-    public function setNextPopDate($next_pop_date)
+    public function setRepeatNextOn($repeat_next_on)
     {
-        $this->container['next_pop_date'] = $next_pop_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets record
-     *
-     * @return int|null
-     */
-    public function getRecord()
-    {
-        return $this->container['record'];
-    }
-
-    /**
-     * Sets record
-     *
-     * @param int|null $record record
-     *
-     * @return self
-     */
-    public function setRecord($record)
-    {
-
-        if (!is_null($record) && ($record > 32767)) {
-            throw new \InvalidArgumentException('invalid value for $record when calling ShowDays., must be smaller than or equal to 32767.');
-        }
-        if (!is_null($record) && ($record < -32768)) {
-            throw new \InvalidArgumentException('invalid value for $record when calling ShowDays., must be bigger than or equal to -32768.');
-        }
-
-        $this->container['record'] = $record;
+        $this->container['repeat_next_on'] = $repeat_next_on;
 
         return $this;
     }

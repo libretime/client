@@ -13,6 +13,7 @@
  */
 
 
+import { Kind1d2Enum } from './kind1d2-enum';
 
 /**
  * 
@@ -28,16 +29,10 @@ export interface PatchedPlaylistContent {
     'item_url'?: string;
     /**
      * 
-     * @type {number}
+     * @type {Kind1d2Enum}
      * @memberof PatchedPlaylistContent
      */
-    'stream_id'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlaylistContent
-     */
-    'type'?: number;
+    'kind'?: Kind1d2Enum;
     /**
      * 
      * @type {number}
@@ -49,37 +44,37 @@ export interface PatchedPlaylistContent {
      * @type {number}
      * @memberof PatchedPlaylistContent
      */
-    'trackoffset'?: number;
+    'offset'?: number;
     /**
      * 
      * @type {string}
      * @memberof PatchedPlaylistContent
      */
-    'cliplength'?: string | null;
+    'length'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedPlaylistContent
      */
-    'cuein'?: string | null;
+    'cue_in'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedPlaylistContent
      */
-    'cueout'?: string | null;
+    'cue_out'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedPlaylistContent
      */
-    'fadein'?: string | null;
+    'fade_in'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PatchedPlaylistContent
      */
-    'fadeout'?: string | null;
+    'fade_out'?: string | null;
     /**
      * 
      * @type {string}
@@ -92,6 +87,12 @@ export interface PatchedPlaylistContent {
      * @memberof PatchedPlaylistContent
      */
     'file'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof PatchedPlaylistContent
+     */
+    'stream'?: string | null;
     /**
      * 
      * @type {string}

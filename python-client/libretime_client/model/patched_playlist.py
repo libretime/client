@@ -88,12 +88,12 @@ class PatchedPlaylist(ModelNormal):
         """
         return {
             'item_url': (str,),  # noqa: E501
+            'created_at': (datetime, none_type,),  # noqa: E501
+            'updated_at': (datetime, none_type,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'mtime': (datetime, none_type,),  # noqa: E501
-            'utime': (datetime, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
-            'creator': (str, none_type,),  # noqa: E501
+            'owner': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -103,12 +103,12 @@ class PatchedPlaylist(ModelNormal):
 
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
+        'created_at': 'created_at',  # noqa: E501
+        'updated_at': 'updated_at',  # noqa: E501
         'name': 'name',  # noqa: E501
-        'mtime': 'mtime',  # noqa: E501
-        'utime': 'utime',  # noqa: E501
         'description': 'description',  # noqa: E501
         'length': 'length',  # noqa: E501
-        'creator': 'creator',  # noqa: E501
+        'owner': 'owner',  # noqa: E501
     }
 
     read_only_vars = {
@@ -154,12 +154,12 @@ class PatchedPlaylist(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
+            created_at (datetime, none_type): [optional]  # noqa: E501
+            updated_at (datetime, none_type): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            mtime (datetime, none_type): [optional]  # noqa: E501
-            utime (datetime, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
-            creator (str, none_type): [optional]  # noqa: E501
+            owner (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -246,12 +246,12 @@ class PatchedPlaylist(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item_url (str): [optional]  # noqa: E501
+            created_at (datetime, none_type): [optional]  # noqa: E501
+            updated_at (datetime, none_type): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            mtime (datetime, none_type): [optional]  # noqa: E501
-            utime (datetime, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
-            creator (str, none_type): [optional]  # noqa: E501
+            owner (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
