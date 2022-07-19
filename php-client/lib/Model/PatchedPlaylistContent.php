@@ -60,7 +60,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'kind' => 'Kind1d2Enum',
+        'kind' => 'PlaylistContentKindEnum',
         'position' => 'int',
         'offset' => 'double',
         'length' => 'string',
@@ -320,7 +320,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets kind
      *
-     * @return Kind1d2Enum|null
+     * @return PlaylistContentKindEnum|null
      */
     public function getKind()
     {
@@ -330,7 +330,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets kind
      *
-     * @param Kind1d2Enum|null $kind kind
+     * @param PlaylistContentKindEnum|null $kind kind
      *
      * @return self
      */

@@ -137,9 +137,9 @@ export interface Schedule {
     'played'?: boolean | null;
     /**
      * 
-     * @type {string}
+     * @type {boolean}
      * @memberof Schedule
      */
-    'overbooked': string;
+    'overbooked': boolean;
 }
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
 **id** | **int** |  | [readonly]
-**import_status** | [**ImportStatusEnum**](ImportStatusEnum.md) |  | [optional]
+**import_status** | [**PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  | [optional]
 **filepath** | **string** |  | [optional]
 **size** | **int** |  |
 **exists** | **bool** |  | [optional]

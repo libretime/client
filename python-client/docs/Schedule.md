@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **cue_out** | **str** |  | [readonly] 
 **position** | **int** |  | 
 **broadcasted** | **int** |  | 
-**overbooked** | **str** |  | [readonly] 
+**overbooked** | **bool** |  | [readonly] 
 **file** | **str, none_type** |  | [optional] 
 **stream** | **str, none_type** |  | [optional] 
 **length** | **str, none_type** |  | [optional] 

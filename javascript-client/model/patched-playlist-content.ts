@@ -13,7 +13,7 @@
  */
 
 
-import { Kind1d2Enum } from './kind1d2-enum';
+import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 
 /**
  * 
@@ -29,10 +29,10 @@ export interface PatchedPlaylistContent {
     'item_url'?: string;
     /**
      * 
-     * @type {Kind1d2Enum}
+     * @type {PlaylistContentKindEnum}
      * @memberof PatchedPlaylistContent
      */
-    'kind'?: Kind1d2Enum;
+    'kind'?: PlaylistContentKindEnum;
     /**
      * 
      * @type {number}

@@ -46,10 +46,8 @@ git_push.sh
 index.ts
 model/blank-enum.ts
 model/celery-task.ts
-model/import-status-enum.ts
 model/imported-podcast.ts
 model/index.ts
-model/kind1d2-enum.ts
 model/library.ts
 model/listener-count.ts
 model/live-log.ts
@@ -95,6 +93,7 @@ model/patched-user-token.ts
 model/patched-user.ts
 model/patched-webstream-metadata.ts
 model/patched-webstream.ts
+model/playlist-content-kind-enum.ts
 model/playlist-content.ts
 model/playlist.ts
 model/playout-history-metadata.ts
@@ -125,6 +124,7 @@ model/third-party-track-reference.ts
 model/timestamp.ts
 model/user-token.ts
 model/user.ts
+model/version.ts
 model/webstream-metadata.ts
 model/webstream.ts
 model/week-day-enum.ts

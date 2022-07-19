@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `versionRetrieve()`
 
 ```php
-versionRetrieve()
+versionRetrieve(): \Libretime\Client\Model\Version
 ```
 
 
@@ -41,7 +41,8 @@ $apiInstance = new Libretime\Client\Api\VersionApi(
 );
 
 try {
-    $apiInstance->versionRetrieve();
+    $result = $apiInstance->versionRetrieve();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VersionApi->versionRetrieve: ', $e->getMessage(), PHP_EOL;
 }
@@ -53,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\Libretime\Client\Model\Version**](../Model/Version.md)
 
 ### Authorization
 
@@ -62,7 +63,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

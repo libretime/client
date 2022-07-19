@@ -21,6 +21,7 @@ from libretime_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
+from libretime_client.model.version import Version
 
 
 class VersionApi(object):
@@ -36,7 +37,7 @@ class VersionApi(object):
         self.api_client = api_client
         self.version_retrieve_endpoint = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': (Version,),
                 'auth': [
                     'basicAuth',
                     'cookieAuth'
@@ -72,7 +73,9 @@ class VersionApi(object):
                 }
             },
             headers_map={
-                'accept': [],
+                'accept': [
+                    'application/json'
+                ],
                 'content_type': [],
             },
             api_client=api_client
@@ -124,7 +127,7 @@ class VersionApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            None
+            Version
                 If the method is called asynchronously, returns the request
                 thread.
         """

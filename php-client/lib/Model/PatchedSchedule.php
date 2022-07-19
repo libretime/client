@@ -78,7 +78,7 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
         'position_status' => 'PositionStatusEnum',
         'broadcasted' => 'int',
         'played' => 'bool',
-        'overbooked' => 'string'
+        'overbooked' => 'bool'
     ];
 
     /**
@@ -826,7 +826,7 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets overbooked
      *
-     * @return string|null
+     * @return bool|null
      */
     public function getOverbooked()
     {
@@ -836,7 +836,7 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets overbooked
      *
-     * @param string|null $overbooked overbooked
+     * @param bool|null $overbooked overbooked
      *
      * @return self
      */

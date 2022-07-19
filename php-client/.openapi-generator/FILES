@@ -43,9 +43,7 @@ docs/Api/WebstreamsApi.md
 docs/Model/BlankEnum.md
 docs/Model/CeleryTask.md
 docs/Model/File.md
-docs/Model/ImportStatusEnum.md
 docs/Model/ImportedPodcast.md
-docs/Model/Kind1d2Enum.md
 docs/Model/Library.md
 docs/Model/ListenerCount.md
 docs/Model/LiveLog.md
@@ -92,6 +90,7 @@ docs/Model/PatchedWebstream.md
 docs/Model/PatchedWebstreamMetadata.md
 docs/Model/Playlist.md
 docs/Model/PlaylistContent.md
+docs/Model/PlaylistContentKindEnum.md
 docs/Model/PlayoutHistory.md
 docs/Model/PlayoutHistoryMetadata.md
 docs/Model/PlayoutHistoryTemplate.md
@@ -120,6 +119,7 @@ docs/Model/ThirdPartyTrackReference.md
 docs/Model/Timestamp.md
 docs/Model/User.md
 docs/Model/UserToken.md
+docs/Model/Version.md
 docs/Model/Webstream.md
 docs/Model/WebstreamMetadata.md
 docs/Model/WeekDayEnum.md
@@ -167,9 +167,7 @@ lib/HeaderSelector.php
 lib/Model/BlankEnum.php
 lib/Model/CeleryTask.php
 lib/Model/File.php
-lib/Model/ImportStatusEnum.php
 lib/Model/ImportedPodcast.php
-lib/Model/Kind1d2Enum.php
 lib/Model/Library.php
 lib/Model/ListenerCount.php
 lib/Model/LiveLog.php
@@ -217,6 +215,7 @@ lib/Model/PatchedWebstream.php
 lib/Model/PatchedWebstreamMetadata.php
 lib/Model/Playlist.php
 lib/Model/PlaylistContent.php
+lib/Model/PlaylistContentKindEnum.php
 lib/Model/PlayoutHistory.php
 lib/Model/PlayoutHistoryMetadata.php
 lib/Model/PlayoutHistoryTemplate.php
@@ -245,19 +244,11 @@ lib/Model/ThirdPartyTrackReference.php
 lib/Model/Timestamp.php
 lib/Model/User.php
 lib/Model/UserToken.php
+lib/Model/Version.php
 lib/Model/Webstream.php
 lib/Model/WebstreamMetadata.php
 lib/Model/WeekDayEnum.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/BlankEnumTest.php
-test/Model/Kind1d2EnumTest.php
-test/Model/NullEnumTest.php
-test/Model/PatchedShowDaysRecordEnabledTest.php
-test/Model/PatchedShowDaysWeekDayTest.php
-test/Model/PatchedSmartBlockKindTest.php
-test/Model/PositionStatusEnumTest.php
-test/Model/RecordEnabledEnumTest.php
-test/Model/RepeatKindEnumTest.php
-test/Model/SmartBlockKindEnumTest.php
-test/Model/WeekDayEnumTest.php
+test/Model/PlaylistContentKindEnumTest.php
+test/Model/VersionTest.php

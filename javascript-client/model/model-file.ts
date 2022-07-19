@@ -13,7 +13,7 @@
  */
 
 
-import { ImportStatusEnum } from './import-status-enum';
+import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 
 /**
  * 
@@ -35,10 +35,10 @@ export interface ModelFile {
     'id': number;
     /**
      * 
-     * @type {ImportStatusEnum}
+     * @type {PlaylistContentKindEnum}
      * @memberof ModelFile
      */
-    'import_status'?: ImportStatusEnum;
+    'import_status'?: PlaylistContentKindEnum;
     /**
      * 
      * @type {string}

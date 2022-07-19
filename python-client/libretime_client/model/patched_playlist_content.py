@@ -30,8 +30,8 @@ from libretime_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from libretime_client.model.kind1d2_enum import Kind1d2Enum
-    globals()['Kind1d2Enum'] = Kind1d2Enum
+    from libretime_client.model.playlist_content_kind_enum import PlaylistContentKindEnum
+    globals()['PlaylistContentKindEnum'] = PlaylistContentKindEnum
 
 
 class PatchedPlaylistContent(ModelNormal):

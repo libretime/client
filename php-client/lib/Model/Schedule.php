@@ -78,7 +78,7 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
         'position_status' => 'PositionStatusEnum',
         'broadcasted' => 'int',
         'played' => 'bool',
-        'overbooked' => 'string'
+        'overbooked' => 'bool'
     ];
 
     /**
@@ -865,7 +865,7 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets overbooked
      *
-     * @return string
+     * @return bool
      */
     public function getOverbooked()
     {
@@ -875,7 +875,7 @@ class Schedule implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets overbooked
      *
-     * @param string $overbooked overbooked
+     * @param bool $overbooked overbooked
      *
      * @return self
      */

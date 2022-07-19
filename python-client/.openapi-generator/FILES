@@ -7,10 +7,8 @@ docs/CeleryTask.md
 docs/CeleryTasksApi.md
 docs/File.md
 docs/FilesApi.md
-docs/ImportStatusEnum.md
 docs/ImportedPodcast.md
 docs/ImportedPodcastsApi.md
-docs/Kind1d2Enum.md
 docs/LibrariesApi.md
 docs/Library.md
 docs/ListenerCount.md
@@ -62,6 +60,7 @@ docs/PatchedWebstream.md
 docs/PatchedWebstreamMetadata.md
 docs/Playlist.md
 docs/PlaylistContent.md
+docs/PlaylistContentKindEnum.md
 docs/PlaylistContentsApi.md
 docs/PlaylistsApi.md
 docs/PlayoutHistory.md
@@ -116,6 +115,7 @@ docs/User.md
 docs/UserToken.md
 docs/UserTokensApi.md
 docs/UsersApi.md
+docs/Version.md
 docs/VersionApi.md
 docs/Webstream.md
 docs/WebstreamMetadata.md
@@ -170,9 +170,7 @@ libretime_client/model/__init__.py
 libretime_client/model/blank_enum.py
 libretime_client/model/celery_task.py
 libretime_client/model/file.py
-libretime_client/model/import_status_enum.py
 libretime_client/model/imported_podcast.py
-libretime_client/model/kind1d2_enum.py
 libretime_client/model/library.py
 libretime_client/model/listener_count.py
 libretime_client/model/live_log.py
@@ -219,6 +217,7 @@ libretime_client/model/patched_webstream.py
 libretime_client/model/patched_webstream_metadata.py
 libretime_client/model/playlist.py
 libretime_client/model/playlist_content.py
+libretime_client/model/playlist_content_kind_enum.py
 libretime_client/model/playout_history.py
 libretime_client/model/playout_history_metadata.py
 libretime_client/model/playout_history_template.py
@@ -247,6 +246,7 @@ libretime_client/model/third_party_track_reference.py
 libretime_client/model/timestamp.py
 libretime_client/model/user.py
 libretime_client/model/user_token.py
+libretime_client/model/version.py
 libretime_client/model/webstream.py
 libretime_client/model/webstream_metadata.py
 libretime_client/model/week_day_enum.py
@@ -258,15 +258,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_blank_enum.py
-test/test_kind1d2_enum.py
-test/test_null_enum.py
-test/test_patched_show_days_record_enabled.py
-test/test_patched_show_days_week_day.py
-test/test_patched_smart_block_kind.py
-test/test_position_status_enum.py
-test/test_record_enabled_enum.py
-test/test_repeat_kind_enum.py
-test/test_smart_block_kind_enum.py
-test/test_week_day_enum.py
+test/test_playlist_content_kind_enum.py
+test/test_version.py
 tox.ini

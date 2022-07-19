@@ -23,6 +23,6 @@ Name | Type | Description | Notes
 **position_status** | [**PositionStatusEnum**](PositionStatusEnum.md) |  | [optional]
 **broadcasted** | **int** |  |
 **played** | **bool** |  | [optional]
-**overbooked** | **string** |  | [readonly]
+**overbooked** | **bool** |  | [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -111,7 +111,7 @@ class Schedule(ModelNormal):
             'cue_out': (str,),  # noqa: E501
             'position': (int,),  # noqa: E501
             'broadcasted': (int,),  # noqa: E501
-            'overbooked': (str,),  # noqa: E501
+            'overbooked': (bool,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
             'stream': (str, none_type,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
@@ -180,7 +180,7 @@ class Schedule(ModelNormal):
             cue_out (str):
             position (int):
             broadcasted (int):
-            overbooked (str):
+            overbooked (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

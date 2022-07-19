@@ -137,9 +137,9 @@ export interface PatchedSchedule {
     'played'?: boolean | null;
     /**
      * 
-     * @type {string}
+     * @type {boolean}
      * @memberof PatchedSchedule
      */
-    'overbooked'?: string;
+    'overbooked'?: boolean;
 }
 

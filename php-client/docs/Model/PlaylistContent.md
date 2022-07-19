@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **string** |  | [readonly]
-**kind** | [**Kind1d2Enum**](Kind1d2Enum.md) |  |
+**kind** | [**PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  |
 **position** | **int** |  | [optional]
 **offset** | **double** |  |
 **length** | **string** |  | [optional]

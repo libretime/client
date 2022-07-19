@@ -60,7 +60,7 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'kind' => 'Kind1d2Enum',
+        'kind' => 'PlaylistContentKindEnum',
         'position' => 'int',
         'offset' => 'double',
         'length' => 'string',
@@ -329,7 +329,7 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets kind
      *
-     * @return Kind1d2Enum
+     * @return PlaylistContentKindEnum
      */
     public function getKind()
     {
@@ -339,7 +339,7 @@ class PlaylistContent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets kind
      *
-     * @param Kind1d2Enum $kind kind
+     * @param PlaylistContentKindEnum $kind kind
      *
      * @return self
      */

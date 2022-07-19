@@ -61,7 +61,7 @@ class PatchedFile implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'item_url' => 'string',
         'id' => 'int',
-        'import_status' => 'ImportStatusEnum',
+        'import_status' => 'PlaylistContentKindEnum',
         'filepath' => 'string',
         'size' => 'int',
         'exists' => 'bool',
@@ -870,7 +870,7 @@ class PatchedFile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets import_status
      *
-     * @return ImportStatusEnum|null
+     * @return PlaylistContentKindEnum|null
      */
     public function getImportStatus()
     {
@@ -880,7 +880,7 @@ class PatchedFile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets import_status
      *
-     * @param ImportStatusEnum|null $import_status import_status
+     * @param PlaylistContentKindEnum|null $import_status import_status
      *
      * @return self
      */
