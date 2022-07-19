@@ -5070,7 +5070,11 @@ paths:
         - {}
       responses:
         "200":
-          description: No response body
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Version"
+          description: ""
   /api/v2/webstream-metadata/:
     get:
       operationId: webstream_metadata_list
@@ -5411,7 +5415,7 @@ components:
           readOnly: true
         import_status:
           allOf:
-            - $ref: "#/components/schemas/ImportStatusEnum"
+            - $ref: "#/components/schemas/PlaylistContentKindEnum"
           minimum: -2147483648
           maximum: 2147483647
         filepath:
@@ -5667,12 +5671,6 @@ components:
         - mime
         - name
         - size
-    ImportStatusEnum:
-      enum:
-        - 0
-        - 1
-        - 2
-      type: integer
     ImportedPodcast:
       type: object
       properties:
@@ -5696,12 +5694,6 @@ components:
         - item_url
         - override_album
         - podcast
-    Kind1d2Enum:
-      enum:
-        - 0
-        - 1
-        - 2
-      type: integer
     Library:
       type: object
       properties:
@@ -5834,7 +5826,7 @@ components:
           readOnly: true
         import_status:
           allOf:
-            - $ref: "#/components/schemas/ImportStatusEnum"
+            - $ref: "#/components/schemas/PlaylistContentKindEnum"
           minimum: -2147483648
           maximum: 2147483647
         filepath:
@@ -6215,7 +6207,7 @@ components:
           readOnly: true
         kind:
           allOf:
-            - $ref: "#/components/schemas/Kind1d2Enum"
+            - $ref: "#/components/schemas/PlaylistContentKindEnum"
           minimum: -32768
           maximum: 32767
         position:
@@ -6512,7 +6504,7 @@ components:
           type: boolean
           nullable: true
         overbooked:
-          type: string
+          type: boolean
           readOnly: true
     PatchedServiceRegister:
       type: object
@@ -7039,7 +7031,7 @@ components:
           readOnly: true
         kind:
           allOf:
-            - $ref: "#/components/schemas/Kind1d2Enum"
+            - $ref: "#/components/schemas/PlaylistContentKindEnum"
           minimum: -32768
           maximum: 32767
         position:
@@ -7087,6 +7079,12 @@ components:
         - item_url
         - kind
         - offset
+    PlaylistContentKindEnum:
+      enum:
+        - 0
+        - 1
+        - 2
+      type: integer
     PlayoutHistory:
       type: object
       properties:
@@ -7403,7 +7401,7 @@ components:
           type: boolean
           nullable: true
         overbooked:
-          type: string
+          type: boolean
           readOnly: true
       required:
         - broadcasted
@@ -7928,6 +7926,13 @@ components:
         - item_url
         - token
         - user
+    Version:
+      type: object
+      properties:
+        api_version:
+          type: string
+      required:
+        - api_version
     Webstream:
       type: object
       properties:
