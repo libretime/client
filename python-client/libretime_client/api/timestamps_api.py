@@ -43,7 +43,7 @@ class TimestampsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/timestamps/',
+                'endpoint_path': '/api/v2/timestamps',
                 'operation_id': 'timestamps_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class TimestampsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/timestamps/{id}/',
+                'endpoint_path': '/api/v2/timestamps/{id}',
                 'operation_id': 'timestamps_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class TimestampsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/timestamps/',
+                'endpoint_path': '/api/v2/timestamps',
                 'operation_id': 'timestamps_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class TimestampsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/timestamps/{id}/',
+                'endpoint_path': '/api/v2/timestamps/{id}',
                 'operation_id': 'timestamps_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class TimestampsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/timestamps/{id}/',
+                'endpoint_path': '/api/v2/timestamps/{id}',
                 'operation_id': 'timestamps_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class TimestampsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/timestamps/{id}/',
+                'endpoint_path': '/api/v2/timestamps/{id}',
                 'operation_id': 'timestamps_update',
                 'http_method': 'PUT',
                 'servers': None,

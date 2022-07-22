@@ -311,7 +311,7 @@ class LibrariesApi
             );
         }
 
-        $resourcePath = '/api/v2/libraries/';
+        $resourcePath = '/api/v2/libraries';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class LibrariesApi
             );
         }
 
-        $resourcePath = '/api/v2/libraries/{id}/';
+        $resourcePath = '/api/v2/libraries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class LibrariesApi
     public function librariesListRequest()
     {
 
-        $resourcePath = '/api/v2/libraries/';
+        $resourcePath = '/api/v2/libraries';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class LibrariesApi
             );
         }
 
-        $resourcePath = '/api/v2/libraries/{id}/';
+        $resourcePath = '/api/v2/libraries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class LibrariesApi
             );
         }
 
-        $resourcePath = '/api/v2/libraries/{id}/';
+        $resourcePath = '/api/v2/libraries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class LibrariesApi
             );
         }
 
-        $resourcePath = '/api/v2/libraries/{id}/';
+        $resourcePath = '/api/v2/libraries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

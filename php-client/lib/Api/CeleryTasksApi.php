@@ -311,7 +311,7 @@ class CeleryTasksApi
             );
         }
 
-        $resourcePath = '/api/v2/celery-tasks/';
+        $resourcePath = '/api/v2/celery-tasks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class CeleryTasksApi
             );
         }
 
-        $resourcePath = '/api/v2/celery-tasks/{id}/';
+        $resourcePath = '/api/v2/celery-tasks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class CeleryTasksApi
     public function celeryTasksListRequest()
     {
 
-        $resourcePath = '/api/v2/celery-tasks/';
+        $resourcePath = '/api/v2/celery-tasks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class CeleryTasksApi
             );
         }
 
-        $resourcePath = '/api/v2/celery-tasks/{id}/';
+        $resourcePath = '/api/v2/celery-tasks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class CeleryTasksApi
             );
         }
 
-        $resourcePath = '/api/v2/celery-tasks/{id}/';
+        $resourcePath = '/api/v2/celery-tasks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class CeleryTasksApi
             );
         }
 
-        $resourcePath = '/api/v2/celery-tasks/{id}/';
+        $resourcePath = '/api/v2/celery-tasks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -300,7 +300,7 @@ class VersionApi
     public function versionRetrieveRequest()
     {
 
-        $resourcePath = '/api/v2/version/';
+        $resourcePath = '/api/v2/version';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

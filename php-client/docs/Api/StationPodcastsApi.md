@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stationPodcastsCreate()**](StationPodcastsApi.md#stationPodcastsCreate) | **POST** /api/v2/station-podcasts/ | 
-[**stationPodcastsDestroy()**](StationPodcastsApi.md#stationPodcastsDestroy) | **DELETE** /api/v2/station-podcasts/{id}/ | 
-[**stationPodcastsList()**](StationPodcastsApi.md#stationPodcastsList) | **GET** /api/v2/station-podcasts/ | 
-[**stationPodcastsPartialUpdate()**](StationPodcastsApi.md#stationPodcastsPartialUpdate) | **PATCH** /api/v2/station-podcasts/{id}/ | 
-[**stationPodcastsRetrieve()**](StationPodcastsApi.md#stationPodcastsRetrieve) | **GET** /api/v2/station-podcasts/{id}/ | 
-[**stationPodcastsUpdate()**](StationPodcastsApi.md#stationPodcastsUpdate) | **PUT** /api/v2/station-podcasts/{id}/ | 
+[**stationPodcastsCreate()**](StationPodcastsApi.md#stationPodcastsCreate) | **POST** /api/v2/station-podcasts | 
+[**stationPodcastsDestroy()**](StationPodcastsApi.md#stationPodcastsDestroy) | **DELETE** /api/v2/station-podcasts/{id} | 
+[**stationPodcastsList()**](StationPodcastsApi.md#stationPodcastsList) | **GET** /api/v2/station-podcasts | 
+[**stationPodcastsPartialUpdate()**](StationPodcastsApi.md#stationPodcastsPartialUpdate) | **PATCH** /api/v2/station-podcasts/{id} | 
+[**stationPodcastsRetrieve()**](StationPodcastsApi.md#stationPodcastsRetrieve) | **GET** /api/v2/station-podcasts/{id} | 
+[**stationPodcastsUpdate()**](StationPodcastsApi.md#stationPodcastsUpdate) | **PUT** /api/v2/station-podcasts/{id} | 
 
 
 ## `stationPodcastsCreate()`

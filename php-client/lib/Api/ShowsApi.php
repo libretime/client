@@ -311,7 +311,7 @@ class ShowsApi
             );
         }
 
-        $resourcePath = '/api/v2/shows/';
+        $resourcePath = '/api/v2/shows';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ShowsApi
             );
         }
 
-        $resourcePath = '/api/v2/shows/{id}/';
+        $resourcePath = '/api/v2/shows/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ShowsApi
     public function showsListRequest()
     {
 
-        $resourcePath = '/api/v2/shows/';
+        $resourcePath = '/api/v2/shows';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ShowsApi
             );
         }
 
-        $resourcePath = '/api/v2/shows/{id}/';
+        $resourcePath = '/api/v2/shows/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ShowsApi
             );
         }
 
-        $resourcePath = '/api/v2/shows/{id}/';
+        $resourcePath = '/api/v2/shows/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ShowsApi
             );
         }
 
-        $resourcePath = '/api/v2/shows/{id}/';
+        $resourcePath = '/api/v2/shows/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

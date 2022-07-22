@@ -311,7 +311,7 @@ class ThirdPartyTrackReferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/third-party-track-references/';
+        $resourcePath = '/api/v2/third-party-track-references';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ThirdPartyTrackReferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/third-party-track-references/{id}/';
+        $resourcePath = '/api/v2/third-party-track-references/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ThirdPartyTrackReferencesApi
     public function thirdPartyTrackReferencesListRequest()
     {
 
-        $resourcePath = '/api/v2/third-party-track-references/';
+        $resourcePath = '/api/v2/third-party-track-references';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ThirdPartyTrackReferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/third-party-track-references/{id}/';
+        $resourcePath = '/api/v2/third-party-track-references/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ThirdPartyTrackReferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/third-party-track-references/{id}/';
+        $resourcePath = '/api/v2/third-party-track-references/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ThirdPartyTrackReferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/third-party-track-references/{id}/';
+        $resourcePath = '/api/v2/third-party-track-references/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

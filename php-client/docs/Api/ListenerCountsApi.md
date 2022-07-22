@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listenerCountsCreate()**](ListenerCountsApi.md#listenerCountsCreate) | **POST** /api/v2/listener-counts/ | 
-[**listenerCountsDestroy()**](ListenerCountsApi.md#listenerCountsDestroy) | **DELETE** /api/v2/listener-counts/{id}/ | 
-[**listenerCountsList()**](ListenerCountsApi.md#listenerCountsList) | **GET** /api/v2/listener-counts/ | 
-[**listenerCountsPartialUpdate()**](ListenerCountsApi.md#listenerCountsPartialUpdate) | **PATCH** /api/v2/listener-counts/{id}/ | 
-[**listenerCountsRetrieve()**](ListenerCountsApi.md#listenerCountsRetrieve) | **GET** /api/v2/listener-counts/{id}/ | 
-[**listenerCountsUpdate()**](ListenerCountsApi.md#listenerCountsUpdate) | **PUT** /api/v2/listener-counts/{id}/ | 
+[**listenerCountsCreate()**](ListenerCountsApi.md#listenerCountsCreate) | **POST** /api/v2/listener-counts | 
+[**listenerCountsDestroy()**](ListenerCountsApi.md#listenerCountsDestroy) | **DELETE** /api/v2/listener-counts/{id} | 
+[**listenerCountsList()**](ListenerCountsApi.md#listenerCountsList) | **GET** /api/v2/listener-counts | 
+[**listenerCountsPartialUpdate()**](ListenerCountsApi.md#listenerCountsPartialUpdate) | **PATCH** /api/v2/listener-counts/{id} | 
+[**listenerCountsRetrieve()**](ListenerCountsApi.md#listenerCountsRetrieve) | **GET** /api/v2/listener-counts/{id} | 
+[**listenerCountsUpdate()**](ListenerCountsApi.md#listenerCountsUpdate) | **PUT** /api/v2/listener-counts/{id} | 
 
 
 ## `listenerCountsCreate()`

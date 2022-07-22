@@ -311,7 +311,7 @@ class PlayoutHistoryTemplateFieldsApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-template-fields/';
+        $resourcePath = '/api/v2/playout-history-template-fields';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PlayoutHistoryTemplateFieldsApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-template-fields/{id}/';
+        $resourcePath = '/api/v2/playout-history-template-fields/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PlayoutHistoryTemplateFieldsApi
     public function playoutHistoryTemplateFieldsListRequest()
     {
 
-        $resourcePath = '/api/v2/playout-history-template-fields/';
+        $resourcePath = '/api/v2/playout-history-template-fields';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PlayoutHistoryTemplateFieldsApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-template-fields/{id}/';
+        $resourcePath = '/api/v2/playout-history-template-fields/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PlayoutHistoryTemplateFieldsApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-template-fields/{id}/';
+        $resourcePath = '/api/v2/playout-history-template-fields/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PlayoutHistoryTemplateFieldsApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-template-fields/{id}/';
+        $resourcePath = '/api/v2/playout-history-template-fields/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

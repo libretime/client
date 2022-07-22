@@ -311,7 +311,7 @@ class UsersApi
             );
         }
 
-        $resourcePath = '/api/v2/users/';
+        $resourcePath = '/api/v2/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class UsersApi
             );
         }
 
-        $resourcePath = '/api/v2/users/{id}/';
+        $resourcePath = '/api/v2/users/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class UsersApi
     public function usersListRequest()
     {
 
-        $resourcePath = '/api/v2/users/';
+        $resourcePath = '/api/v2/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class UsersApi
             );
         }
 
-        $resourcePath = '/api/v2/users/{id}/';
+        $resourcePath = '/api/v2/users/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class UsersApi
             );
         }
 
-        $resourcePath = '/api/v2/users/{id}/';
+        $resourcePath = '/api/v2/users/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class UsersApi
             );
         }
 
-        $resourcePath = '/api/v2/users/{id}/';
+        $resourcePath = '/api/v2/users/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

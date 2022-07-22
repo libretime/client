@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**showsCreate()**](ShowsApi.md#showsCreate) | **POST** /api/v2/shows/ | 
-[**showsDestroy()**](ShowsApi.md#showsDestroy) | **DELETE** /api/v2/shows/{id}/ | 
-[**showsList()**](ShowsApi.md#showsList) | **GET** /api/v2/shows/ | 
-[**showsPartialUpdate()**](ShowsApi.md#showsPartialUpdate) | **PATCH** /api/v2/shows/{id}/ | 
-[**showsRetrieve()**](ShowsApi.md#showsRetrieve) | **GET** /api/v2/shows/{id}/ | 
-[**showsUpdate()**](ShowsApi.md#showsUpdate) | **PUT** /api/v2/shows/{id}/ | 
+[**showsCreate()**](ShowsApi.md#showsCreate) | **POST** /api/v2/shows | 
+[**showsDestroy()**](ShowsApi.md#showsDestroy) | **DELETE** /api/v2/shows/{id} | 
+[**showsList()**](ShowsApi.md#showsList) | **GET** /api/v2/shows | 
+[**showsPartialUpdate()**](ShowsApi.md#showsPartialUpdate) | **PATCH** /api/v2/shows/{id} | 
+[**showsRetrieve()**](ShowsApi.md#showsRetrieve) | **GET** /api/v2/shows/{id} | 
+[**showsUpdate()**](ShowsApi.md#showsUpdate) | **PUT** /api/v2/shows/{id} | 
 
 
 ## `showsCreate()`

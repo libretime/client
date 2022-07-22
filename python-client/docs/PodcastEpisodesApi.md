@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**podcast_episodes_create**](PodcastEpisodesApi.md#podcast_episodes_create) | **POST** /api/v2/podcast-episodes/ | 
-[**podcast_episodes_destroy**](PodcastEpisodesApi.md#podcast_episodes_destroy) | **DELETE** /api/v2/podcast-episodes/{id}/ | 
-[**podcast_episodes_list**](PodcastEpisodesApi.md#podcast_episodes_list) | **GET** /api/v2/podcast-episodes/ | 
-[**podcast_episodes_partial_update**](PodcastEpisodesApi.md#podcast_episodes_partial_update) | **PATCH** /api/v2/podcast-episodes/{id}/ | 
-[**podcast_episodes_retrieve**](PodcastEpisodesApi.md#podcast_episodes_retrieve) | **GET** /api/v2/podcast-episodes/{id}/ | 
-[**podcast_episodes_update**](PodcastEpisodesApi.md#podcast_episodes_update) | **PUT** /api/v2/podcast-episodes/{id}/ | 
+[**podcast_episodes_create**](PodcastEpisodesApi.md#podcast_episodes_create) | **POST** /api/v2/podcast-episodes | 
+[**podcast_episodes_destroy**](PodcastEpisodesApi.md#podcast_episodes_destroy) | **DELETE** /api/v2/podcast-episodes/{id} | 
+[**podcast_episodes_list**](PodcastEpisodesApi.md#podcast_episodes_list) | **GET** /api/v2/podcast-episodes | 
+[**podcast_episodes_partial_update**](PodcastEpisodesApi.md#podcast_episodes_partial_update) | **PATCH** /api/v2/podcast-episodes/{id} | 
+[**podcast_episodes_retrieve**](PodcastEpisodesApi.md#podcast_episodes_retrieve) | **GET** /api/v2/podcast-episodes/{id} | 
+[**podcast_episodes_update**](PodcastEpisodesApi.md#podcast_episodes_update) | **PUT** /api/v2/podcast-episodes/{id} | 
 
 
 # **podcast_episodes_create**

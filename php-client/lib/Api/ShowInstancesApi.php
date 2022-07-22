@@ -311,7 +311,7 @@ class ShowInstancesApi
             );
         }
 
-        $resourcePath = '/api/v2/show-instances/';
+        $resourcePath = '/api/v2/show-instances';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ShowInstancesApi
             );
         }
 
-        $resourcePath = '/api/v2/show-instances/{id}/';
+        $resourcePath = '/api/v2/show-instances/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ShowInstancesApi
     public function showInstancesListRequest()
     {
 
-        $resourcePath = '/api/v2/show-instances/';
+        $resourcePath = '/api/v2/show-instances';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ShowInstancesApi
             );
         }
 
-        $resourcePath = '/api/v2/show-instances/{id}/';
+        $resourcePath = '/api/v2/show-instances/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ShowInstancesApi
             );
         }
 
-        $resourcePath = '/api/v2/show-instances/{id}/';
+        $resourcePath = '/api/v2/show-instances/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ShowInstancesApi
             );
         }
 
-        $resourcePath = '/api/v2/show-instances/{id}/';
+        $resourcePath = '/api/v2/show-instances/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

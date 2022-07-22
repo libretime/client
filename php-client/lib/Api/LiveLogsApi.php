@@ -311,7 +311,7 @@ class LiveLogsApi
             );
         }
 
-        $resourcePath = '/api/v2/live-logs/';
+        $resourcePath = '/api/v2/live-logs';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class LiveLogsApi
             );
         }
 
-        $resourcePath = '/api/v2/live-logs/{id}/';
+        $resourcePath = '/api/v2/live-logs/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class LiveLogsApi
     public function liveLogsListRequest()
     {
 
-        $resourcePath = '/api/v2/live-logs/';
+        $resourcePath = '/api/v2/live-logs';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class LiveLogsApi
             );
         }
 
-        $resourcePath = '/api/v2/live-logs/{id}/';
+        $resourcePath = '/api/v2/live-logs/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class LiveLogsApi
             );
         }
 
-        $resourcePath = '/api/v2/live-logs/{id}/';
+        $resourcePath = '/api/v2/live-logs/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class LiveLogsApi
             );
         }
 
-        $resourcePath = '/api/v2/live-logs/{id}/';
+        $resourcePath = '/api/v2/live-logs/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

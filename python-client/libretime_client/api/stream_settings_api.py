@@ -43,7 +43,7 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/',
+                'endpoint_path': '/api/v2/stream-settings',
                 'operation_id': 'stream_settings_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{key}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}',
                 'operation_id': 'stream_settings_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/',
+                'endpoint_path': '/api/v2/stream-settings',
                 'operation_id': 'stream_settings_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{key}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}',
                 'operation_id': 'stream_settings_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{key}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}',
                 'operation_id': 'stream_settings_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class StreamSettingsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/stream-settings/{key}/',
+                'endpoint_path': '/api/v2/stream-settings/{key}',
                 'operation_id': 'stream_settings_update',
                 'http_method': 'PUT',
                 'servers': None,

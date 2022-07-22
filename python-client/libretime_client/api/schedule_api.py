@@ -43,7 +43,7 @@ class ScheduleApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schedule/',
+                'endpoint_path': '/api/v2/schedule',
                 'operation_id': 'schedule_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ScheduleApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schedule/{id}/',
+                'endpoint_path': '/api/v2/schedule/{id}',
                 'operation_id': 'schedule_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ScheduleApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schedule/',
+                'endpoint_path': '/api/v2/schedule',
                 'operation_id': 'schedule_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -228,7 +228,7 @@ class ScheduleApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schedule/{id}/',
+                'endpoint_path': '/api/v2/schedule/{id}',
                 'operation_id': 'schedule_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -288,7 +288,7 @@ class ScheduleApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schedule/{id}/',
+                'endpoint_path': '/api/v2/schedule/{id}',
                 'operation_id': 'schedule_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -340,7 +340,7 @@ class ScheduleApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schedule/{id}/',
+                'endpoint_path': '/api/v2/schedule/{id}',
                 'operation_id': 'schedule_update',
                 'http_method': 'PUT',
                 'servers': None,

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**show_hosts_create**](ShowHostsApi.md#show_hosts_create) | **POST** /api/v2/show-hosts/ | 
-[**show_hosts_destroy**](ShowHostsApi.md#show_hosts_destroy) | **DELETE** /api/v2/show-hosts/{id}/ | 
-[**show_hosts_list**](ShowHostsApi.md#show_hosts_list) | **GET** /api/v2/show-hosts/ | 
-[**show_hosts_partial_update**](ShowHostsApi.md#show_hosts_partial_update) | **PATCH** /api/v2/show-hosts/{id}/ | 
-[**show_hosts_retrieve**](ShowHostsApi.md#show_hosts_retrieve) | **GET** /api/v2/show-hosts/{id}/ | 
-[**show_hosts_update**](ShowHostsApi.md#show_hosts_update) | **PUT** /api/v2/show-hosts/{id}/ | 
+[**show_hosts_create**](ShowHostsApi.md#show_hosts_create) | **POST** /api/v2/show-hosts | 
+[**show_hosts_destroy**](ShowHostsApi.md#show_hosts_destroy) | **DELETE** /api/v2/show-hosts/{id} | 
+[**show_hosts_list**](ShowHostsApi.md#show_hosts_list) | **GET** /api/v2/show-hosts | 
+[**show_hosts_partial_update**](ShowHostsApi.md#show_hosts_partial_update) | **PATCH** /api/v2/show-hosts/{id} | 
+[**show_hosts_retrieve**](ShowHostsApi.md#show_hosts_retrieve) | **GET** /api/v2/show-hosts/{id} | 
+[**show_hosts_update**](ShowHostsApi.md#show_hosts_update) | **PUT** /api/v2/show-hosts/{id} | 
 
 
 # **show_hosts_create**

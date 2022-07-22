@@ -43,7 +43,7 @@ class PlayoutHistoryApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history/',
+                'endpoint_path': '/api/v2/playout-history',
                 'operation_id': 'playout_history_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class PlayoutHistoryApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history/{id}/',
+                'endpoint_path': '/api/v2/playout-history/{id}',
                 'operation_id': 'playout_history_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class PlayoutHistoryApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history/',
+                'endpoint_path': '/api/v2/playout-history',
                 'operation_id': 'playout_history_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class PlayoutHistoryApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history/{id}/',
+                'endpoint_path': '/api/v2/playout-history/{id}',
                 'operation_id': 'playout_history_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class PlayoutHistoryApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history/{id}/',
+                'endpoint_path': '/api/v2/playout-history/{id}',
                 'operation_id': 'playout_history_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class PlayoutHistoryApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history/{id}/',
+                'endpoint_path': '/api/v2/playout-history/{id}',
                 'operation_id': 'playout_history_update',
                 'http_method': 'PUT',
                 'servers': None,

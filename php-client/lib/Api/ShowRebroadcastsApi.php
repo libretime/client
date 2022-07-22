@@ -311,7 +311,7 @@ class ShowRebroadcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-rebroadcasts/';
+        $resourcePath = '/api/v2/show-rebroadcasts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ShowRebroadcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-rebroadcasts/{id}/';
+        $resourcePath = '/api/v2/show-rebroadcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ShowRebroadcastsApi
     public function showRebroadcastsListRequest()
     {
 
-        $resourcePath = '/api/v2/show-rebroadcasts/';
+        $resourcePath = '/api/v2/show-rebroadcasts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ShowRebroadcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-rebroadcasts/{id}/';
+        $resourcePath = '/api/v2/show-rebroadcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ShowRebroadcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-rebroadcasts/{id}/';
+        $resourcePath = '/api/v2/show-rebroadcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ShowRebroadcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-rebroadcasts/{id}/';
+        $resourcePath = '/api/v2/show-rebroadcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

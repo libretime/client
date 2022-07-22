@@ -43,7 +43,7 @@ class PlaylistsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlists/',
+                'endpoint_path': '/api/v2/playlists',
                 'operation_id': 'playlists_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class PlaylistsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlists/{id}/',
+                'endpoint_path': '/api/v2/playlists/{id}',
                 'operation_id': 'playlists_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class PlaylistsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlists/',
+                'endpoint_path': '/api/v2/playlists',
                 'operation_id': 'playlists_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class PlaylistsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlists/{id}/',
+                'endpoint_path': '/api/v2/playlists/{id}',
                 'operation_id': 'playlists_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class PlaylistsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlists/{id}/',
+                'endpoint_path': '/api/v2/playlists/{id}',
                 'operation_id': 'playlists_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class PlaylistsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlists/{id}/',
+                'endpoint_path': '/api/v2/playlists/{id}',
                 'operation_id': 'playlists_update',
                 'http_method': 'PUT',
                 'servers': None,

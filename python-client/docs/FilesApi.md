@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**files_create**](FilesApi.md#files_create) | **POST** /api/v2/files/ | 
-[**files_destroy**](FilesApi.md#files_destroy) | **DELETE** /api/v2/files/{id}/ | 
-[**files_download_retrieve**](FilesApi.md#files_download_retrieve) | **GET** /api/v2/files/{id}/download/ | 
-[**files_list**](FilesApi.md#files_list) | **GET** /api/v2/files/ | 
-[**files_partial_update**](FilesApi.md#files_partial_update) | **PATCH** /api/v2/files/{id}/ | 
-[**files_retrieve**](FilesApi.md#files_retrieve) | **GET** /api/v2/files/{id}/ | 
-[**files_update**](FilesApi.md#files_update) | **PUT** /api/v2/files/{id}/ | 
+[**files_create**](FilesApi.md#files_create) | **POST** /api/v2/files | 
+[**files_destroy**](FilesApi.md#files_destroy) | **DELETE** /api/v2/files/{id} | 
+[**files_download_retrieve**](FilesApi.md#files_download_retrieve) | **GET** /api/v2/files/{id}/download | 
+[**files_list**](FilesApi.md#files_list) | **GET** /api/v2/files | 
+[**files_partial_update**](FilesApi.md#files_partial_update) | **PATCH** /api/v2/files/{id} | 
+[**files_retrieve**](FilesApi.md#files_retrieve) | **GET** /api/v2/files/{id} | 
+[**files_update**](FilesApi.md#files_update) | **PUT** /api/v2/files/{id} | 
 
 
 # **files_create**

@@ -43,7 +43,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/',
+                'endpoint_path': '/api/v2/files',
                 'operation_id': 'files_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/{id}/',
+                'endpoint_path': '/api/v2/files/{id}',
                 'operation_id': 'files_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/{id}/download/',
+                'endpoint_path': '/api/v2/files/{id}/download',
                 'operation_id': 'files_download_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -200,7 +200,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/',
+                'endpoint_path': '/api/v2/files',
                 'operation_id': 'files_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -245,7 +245,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/{id}/',
+                'endpoint_path': '/api/v2/files/{id}',
                 'operation_id': 'files_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -305,7 +305,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/{id}/',
+                'endpoint_path': '/api/v2/files/{id}',
                 'operation_id': 'files_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -357,7 +357,7 @@ class FilesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/files/{id}/',
+                'endpoint_path': '/api/v2/files/{id}',
                 'operation_id': 'files_update',
                 'http_method': 'PUT',
                 'servers': None,

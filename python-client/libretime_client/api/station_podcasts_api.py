@@ -43,7 +43,7 @@ class StationPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/station-podcasts/',
+                'endpoint_path': '/api/v2/station-podcasts',
                 'operation_id': 'station_podcasts_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class StationPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/station-podcasts/{id}/',
+                'endpoint_path': '/api/v2/station-podcasts/{id}',
                 'operation_id': 'station_podcasts_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class StationPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/station-podcasts/',
+                'endpoint_path': '/api/v2/station-podcasts',
                 'operation_id': 'station_podcasts_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class StationPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/station-podcasts/{id}/',
+                'endpoint_path': '/api/v2/station-podcasts/{id}',
                 'operation_id': 'station_podcasts_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class StationPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/station-podcasts/{id}/',
+                'endpoint_path': '/api/v2/station-podcasts/{id}',
                 'operation_id': 'station_podcasts_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class StationPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/station-podcasts/{id}/',
+                'endpoint_path': '/api/v2/station-podcasts/{id}',
                 'operation_id': 'station_podcasts_update',
                 'http_method': 'PUT',
                 'servers': None,

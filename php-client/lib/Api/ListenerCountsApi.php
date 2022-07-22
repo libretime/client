@@ -311,7 +311,7 @@ class ListenerCountsApi
             );
         }
 
-        $resourcePath = '/api/v2/listener-counts/';
+        $resourcePath = '/api/v2/listener-counts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ListenerCountsApi
             );
         }
 
-        $resourcePath = '/api/v2/listener-counts/{id}/';
+        $resourcePath = '/api/v2/listener-counts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ListenerCountsApi
     public function listenerCountsListRequest()
     {
 
-        $resourcePath = '/api/v2/listener-counts/';
+        $resourcePath = '/api/v2/listener-counts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ListenerCountsApi
             );
         }
 
-        $resourcePath = '/api/v2/listener-counts/{id}/';
+        $resourcePath = '/api/v2/listener-counts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ListenerCountsApi
             );
         }
 
-        $resourcePath = '/api/v2/listener-counts/{id}/';
+        $resourcePath = '/api/v2/listener-counts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ListenerCountsApi
             );
         }
 
-        $resourcePath = '/api/v2/listener-counts/{id}/';
+        $resourcePath = '/api/v2/listener-counts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

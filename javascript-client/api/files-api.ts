@@ -39,7 +39,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
         filesCreate: async (modelFile: ModelFile, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'modelFile' is not null or undefined
             assertParamExists('filesCreate', 'modelFile', modelFile)
-            const localVarPath = `/api/v2/files/`;
+            const localVarPath = `/api/v2/files`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
         filesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesDestroy', 'id', id)
-            const localVarPath = `/api/v2/files/{id}/`
+            const localVarPath = `/api/v2/files/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -119,7 +119,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
         filesDownloadRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesDownloadRetrieve', 'id', id)
-            const localVarPath = `/api/v2/files/{id}/download/`
+            const localVarPath = `/api/v2/files/{id}/download`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -155,7 +155,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         filesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/files/`;
+            const localVarPath = `/api/v2/files`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -194,7 +194,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
         filesPartialUpdate: async (id: number, patchedFile?: PatchedFile, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/files/{id}/`
+            const localVarPath = `/api/v2/files/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -236,7 +236,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
         filesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesRetrieve', 'id', id)
-            const localVarPath = `/api/v2/files/{id}/`
+            const localVarPath = `/api/v2/files/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -278,7 +278,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('filesUpdate', 'id', id)
             // verify required parameter 'modelFile' is not null or undefined
             assertParamExists('filesUpdate', 'modelFile', modelFile)
-            const localVarPath = `/api/v2/files/{id}/`
+            const localVarPath = `/api/v2/files/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

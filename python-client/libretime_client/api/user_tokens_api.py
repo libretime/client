@@ -43,7 +43,7 @@ class UserTokensApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/user-tokens/',
+                'endpoint_path': '/api/v2/user-tokens',
                 'operation_id': 'user_tokens_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class UserTokensApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/user-tokens/{id}/',
+                'endpoint_path': '/api/v2/user-tokens/{id}',
                 'operation_id': 'user_tokens_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class UserTokensApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/user-tokens/',
+                'endpoint_path': '/api/v2/user-tokens',
                 'operation_id': 'user_tokens_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class UserTokensApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/user-tokens/{id}/',
+                'endpoint_path': '/api/v2/user-tokens/{id}',
                 'operation_id': 'user_tokens_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class UserTokensApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/user-tokens/{id}/',
+                'endpoint_path': '/api/v2/user-tokens/{id}',
                 'operation_id': 'user_tokens_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class UserTokensApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/user-tokens/{id}/',
+                'endpoint_path': '/api/v2/user-tokens/{id}',
                 'operation_id': 'user_tokens_update',
                 'http_method': 'PUT',
                 'servers': None,

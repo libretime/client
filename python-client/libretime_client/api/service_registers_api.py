@@ -43,7 +43,7 @@ class ServiceRegistersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/service-registers/',
+                'endpoint_path': '/api/v2/service-registers',
                 'operation_id': 'service_registers_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ServiceRegistersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/service-registers/{name}/',
+                'endpoint_path': '/api/v2/service-registers/{name}',
                 'operation_id': 'service_registers_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ServiceRegistersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/service-registers/',
+                'endpoint_path': '/api/v2/service-registers',
                 'operation_id': 'service_registers_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ServiceRegistersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/service-registers/{name}/',
+                'endpoint_path': '/api/v2/service-registers/{name}',
                 'operation_id': 'service_registers_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ServiceRegistersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/service-registers/{name}/',
+                'endpoint_path': '/api/v2/service-registers/{name}',
                 'operation_id': 'service_registers_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ServiceRegistersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/service-registers/{name}/',
+                'endpoint_path': '/api/v2/service-registers/{name}',
                 'operation_id': 'service_registers_update',
                 'http_method': 'PUT',
                 'servers': None,

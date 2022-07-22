@@ -43,7 +43,7 @@ class ShowHostsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-hosts/',
+                'endpoint_path': '/api/v2/show-hosts',
                 'operation_id': 'show_hosts_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ShowHostsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-hosts/{id}/',
+                'endpoint_path': '/api/v2/show-hosts/{id}',
                 'operation_id': 'show_hosts_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ShowHostsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-hosts/',
+                'endpoint_path': '/api/v2/show-hosts',
                 'operation_id': 'show_hosts_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ShowHostsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-hosts/{id}/',
+                'endpoint_path': '/api/v2/show-hosts/{id}',
                 'operation_id': 'show_hosts_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ShowHostsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-hosts/{id}/',
+                'endpoint_path': '/api/v2/show-hosts/{id}',
                 'operation_id': 'show_hosts_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ShowHostsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-hosts/{id}/',
+                'endpoint_path': '/api/v2/show-hosts/{id}',
                 'operation_id': 'show_hosts_update',
                 'http_method': 'PUT',
                 'servers': None,

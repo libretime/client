@@ -311,7 +311,7 @@ class UserTokensApi
             );
         }
 
-        $resourcePath = '/api/v2/user-tokens/';
+        $resourcePath = '/api/v2/user-tokens';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class UserTokensApi
             );
         }
 
-        $resourcePath = '/api/v2/user-tokens/{id}/';
+        $resourcePath = '/api/v2/user-tokens/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class UserTokensApi
     public function userTokensListRequest()
     {
 
-        $resourcePath = '/api/v2/user-tokens/';
+        $resourcePath = '/api/v2/user-tokens';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class UserTokensApi
             );
         }
 
-        $resourcePath = '/api/v2/user-tokens/{id}/';
+        $resourcePath = '/api/v2/user-tokens/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class UserTokensApi
             );
         }
 
-        $resourcePath = '/api/v2/user-tokens/{id}/';
+        $resourcePath = '/api/v2/user-tokens/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class UserTokensApi
             );
         }
 
-        $resourcePath = '/api/v2/user-tokens/{id}/';
+        $resourcePath = '/api/v2/user-tokens/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

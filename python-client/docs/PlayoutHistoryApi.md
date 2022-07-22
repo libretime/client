@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playout_history_create**](PlayoutHistoryApi.md#playout_history_create) | **POST** /api/v2/playout-history/ | 
-[**playout_history_destroy**](PlayoutHistoryApi.md#playout_history_destroy) | **DELETE** /api/v2/playout-history/{id}/ | 
-[**playout_history_list**](PlayoutHistoryApi.md#playout_history_list) | **GET** /api/v2/playout-history/ | 
-[**playout_history_partial_update**](PlayoutHistoryApi.md#playout_history_partial_update) | **PATCH** /api/v2/playout-history/{id}/ | 
-[**playout_history_retrieve**](PlayoutHistoryApi.md#playout_history_retrieve) | **GET** /api/v2/playout-history/{id}/ | 
-[**playout_history_update**](PlayoutHistoryApi.md#playout_history_update) | **PUT** /api/v2/playout-history/{id}/ | 
+[**playout_history_create**](PlayoutHistoryApi.md#playout_history_create) | **POST** /api/v2/playout-history | 
+[**playout_history_destroy**](PlayoutHistoryApi.md#playout_history_destroy) | **DELETE** /api/v2/playout-history/{id} | 
+[**playout_history_list**](PlayoutHistoryApi.md#playout_history_list) | **GET** /api/v2/playout-history | 
+[**playout_history_partial_update**](PlayoutHistoryApi.md#playout_history_partial_update) | **PATCH** /api/v2/playout-history/{id} | 
+[**playout_history_retrieve**](PlayoutHistoryApi.md#playout_history_retrieve) | **GET** /api/v2/playout-history/{id} | 
+[**playout_history_update**](PlayoutHistoryApi.md#playout_history_update) | **PUT** /api/v2/playout-history/{id} | 
 
 
 # **playout_history_create**

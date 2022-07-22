@@ -39,7 +39,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
         userTokensCreate: async (userToken: UserToken, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'userToken' is not null or undefined
             assertParamExists('userTokensCreate', 'userToken', userToken)
-            const localVarPath = `/api/v2/user-tokens/`;
+            const localVarPath = `/api/v2/user-tokens`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
         userTokensDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensDestroy', 'id', id)
-            const localVarPath = `/api/v2/user-tokens/{id}/`
+            const localVarPath = `/api/v2/user-tokens/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @throws {RequiredError}
          */
         userTokensList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/user-tokens/`;
+            const localVarPath = `/api/v2/user-tokens`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
         userTokensPartialUpdate: async (id: number, patchedUserToken?: PatchedUserToken, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/user-tokens/{id}/`
+            const localVarPath = `/api/v2/user-tokens/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
         userTokensRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensRetrieve', 'id', id)
-            const localVarPath = `/api/v2/user-tokens/{id}/`
+            const localVarPath = `/api/v2/user-tokens/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('userTokensUpdate', 'id', id)
             // verify required parameter 'userToken' is not null or undefined
             assertParamExists('userTokensUpdate', 'userToken', userToken)
-            const localVarPath = `/api/v2/user-tokens/{id}/`
+            const localVarPath = `/api/v2/user-tokens/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

@@ -311,7 +311,7 @@ class PlayoutHistoryMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-metadata/';
+        $resourcePath = '/api/v2/playout-history-metadata';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PlayoutHistoryMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-metadata/{id}/';
+        $resourcePath = '/api/v2/playout-history-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PlayoutHistoryMetadataApi
     public function playoutHistoryMetadataListRequest()
     {
 
-        $resourcePath = '/api/v2/playout-history-metadata/';
+        $resourcePath = '/api/v2/playout-history-metadata';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PlayoutHistoryMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-metadata/{id}/';
+        $resourcePath = '/api/v2/playout-history-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PlayoutHistoryMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-metadata/{id}/';
+        $resourcePath = '/api/v2/playout-history-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PlayoutHistoryMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-metadata/{id}/';
+        $resourcePath = '/api/v2/playout-history-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -43,7 +43,7 @@ class ImportedPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/imported-podcasts/',
+                'endpoint_path': '/api/v2/imported-podcasts',
                 'operation_id': 'imported_podcasts_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ImportedPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/imported-podcasts/{id}/',
+                'endpoint_path': '/api/v2/imported-podcasts/{id}',
                 'operation_id': 'imported_podcasts_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ImportedPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/imported-podcasts/',
+                'endpoint_path': '/api/v2/imported-podcasts',
                 'operation_id': 'imported_podcasts_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ImportedPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/imported-podcasts/{id}/',
+                'endpoint_path': '/api/v2/imported-podcasts/{id}',
                 'operation_id': 'imported_podcasts_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ImportedPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/imported-podcasts/{id}/',
+                'endpoint_path': '/api/v2/imported-podcasts/{id}',
                 'operation_id': 'imported_podcasts_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ImportedPodcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/imported-podcasts/{id}/',
+                'endpoint_path': '/api/v2/imported-podcasts/{id}',
                 'operation_id': 'imported_podcasts_update',
                 'http_method': 'PUT',
                 'servers': None,

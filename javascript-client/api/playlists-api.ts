@@ -39,7 +39,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
         playlistsCreate: async (playlist: Playlist, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playlist' is not null or undefined
             assertParamExists('playlistsCreate', 'playlist', playlist)
-            const localVarPath = `/api/v2/playlists/`;
+            const localVarPath = `/api/v2/playlists`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
         playlistsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsDestroy', 'id', id)
-            const localVarPath = `/api/v2/playlists/{id}/`
+            const localVarPath = `/api/v2/playlists/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         playlistsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/playlists/`;
+            const localVarPath = `/api/v2/playlists`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
         playlistsPartialUpdate: async (id: number, patchedPlaylist?: PatchedPlaylist, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/playlists/{id}/`
+            const localVarPath = `/api/v2/playlists/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
         playlistsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/playlists/{id}/`
+            const localVarPath = `/api/v2/playlists/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             assertParamExists('playlistsUpdate', 'id', id)
             // verify required parameter 'playlist' is not null or undefined
             assertParamExists('playlistsUpdate', 'playlist', playlist)
-            const localVarPath = `/api/v2/playlists/{id}/`
+            const localVarPath = `/api/v2/playlists/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playoutHistoryTemplatesCreate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesCreate) | **POST** /api/v2/playout-history-templates/ | 
-[**playoutHistoryTemplatesDestroy()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesDestroy) | **DELETE** /api/v2/playout-history-templates/{id}/ | 
-[**playoutHistoryTemplatesList()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesList) | **GET** /api/v2/playout-history-templates/ | 
-[**playoutHistoryTemplatesPartialUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesPartialUpdate) | **PATCH** /api/v2/playout-history-templates/{id}/ | 
-[**playoutHistoryTemplatesRetrieve()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesRetrieve) | **GET** /api/v2/playout-history-templates/{id}/ | 
-[**playoutHistoryTemplatesUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesUpdate) | **PUT** /api/v2/playout-history-templates/{id}/ | 
+[**playoutHistoryTemplatesCreate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesCreate) | **POST** /api/v2/playout-history-templates | 
+[**playoutHistoryTemplatesDestroy()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesDestroy) | **DELETE** /api/v2/playout-history-templates/{id} | 
+[**playoutHistoryTemplatesList()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesList) | **GET** /api/v2/playout-history-templates | 
+[**playoutHistoryTemplatesPartialUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesPartialUpdate) | **PATCH** /api/v2/playout-history-templates/{id} | 
+[**playoutHistoryTemplatesRetrieve()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesRetrieve) | **GET** /api/v2/playout-history-templates/{id} | 
+[**playoutHistoryTemplatesUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesUpdate) | **PUT** /api/v2/playout-history-templates/{id} | 
 
 
 ## `playoutHistoryTemplatesCreate()`

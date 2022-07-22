@@ -43,7 +43,7 @@ class ShowRebroadcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-rebroadcasts/',
+                'endpoint_path': '/api/v2/show-rebroadcasts',
                 'operation_id': 'show_rebroadcasts_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ShowRebroadcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-rebroadcasts/{id}/',
+                'endpoint_path': '/api/v2/show-rebroadcasts/{id}',
                 'operation_id': 'show_rebroadcasts_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ShowRebroadcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-rebroadcasts/',
+                'endpoint_path': '/api/v2/show-rebroadcasts',
                 'operation_id': 'show_rebroadcasts_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ShowRebroadcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-rebroadcasts/{id}/',
+                'endpoint_path': '/api/v2/show-rebroadcasts/{id}',
                 'operation_id': 'show_rebroadcasts_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ShowRebroadcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-rebroadcasts/{id}/',
+                'endpoint_path': '/api/v2/show-rebroadcasts/{id}',
                 'operation_id': 'show_rebroadcasts_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ShowRebroadcastsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-rebroadcasts/{id}/',
+                'endpoint_path': '/api/v2/show-rebroadcasts/{id}',
                 'operation_id': 'show_rebroadcasts_update',
                 'http_method': 'PUT',
                 'servers': None,

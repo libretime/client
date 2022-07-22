@@ -43,7 +43,7 @@ class LiveLogsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/live-logs/',
+                'endpoint_path': '/api/v2/live-logs',
                 'operation_id': 'live_logs_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class LiveLogsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/live-logs/{id}/',
+                'endpoint_path': '/api/v2/live-logs/{id}',
                 'operation_id': 'live_logs_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class LiveLogsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/live-logs/',
+                'endpoint_path': '/api/v2/live-logs',
                 'operation_id': 'live_logs_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class LiveLogsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/live-logs/{id}/',
+                'endpoint_path': '/api/v2/live-logs/{id}',
                 'operation_id': 'live_logs_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class LiveLogsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/live-logs/{id}/',
+                'endpoint_path': '/api/v2/live-logs/{id}',
                 'operation_id': 'live_logs_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class LiveLogsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/live-logs/{id}/',
+                'endpoint_path': '/api/v2/live-logs/{id}',
                 'operation_id': 'live_logs_update',
                 'http_method': 'PUT',
                 'servers': None,

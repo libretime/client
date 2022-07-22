@@ -43,7 +43,7 @@ class ShowInstancesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-instances/',
+                'endpoint_path': '/api/v2/show-instances',
                 'operation_id': 'show_instances_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ShowInstancesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-instances/{id}/',
+                'endpoint_path': '/api/v2/show-instances/{id}',
                 'operation_id': 'show_instances_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ShowInstancesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-instances/',
+                'endpoint_path': '/api/v2/show-instances',
                 'operation_id': 'show_instances_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ShowInstancesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-instances/{id}/',
+                'endpoint_path': '/api/v2/show-instances/{id}',
                 'operation_id': 'show_instances_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ShowInstancesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-instances/{id}/',
+                'endpoint_path': '/api/v2/show-instances/{id}',
                 'operation_id': 'show_instances_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ShowInstancesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-instances/{id}/',
+                'endpoint_path': '/api/v2/show-instances/{id}',
                 'operation_id': 'show_instances_update',
                 'http_method': 'PUT',
                 'servers': None,

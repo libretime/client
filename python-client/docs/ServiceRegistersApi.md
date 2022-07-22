@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**service_registers_create**](ServiceRegistersApi.md#service_registers_create) | **POST** /api/v2/service-registers/ | 
-[**service_registers_destroy**](ServiceRegistersApi.md#service_registers_destroy) | **DELETE** /api/v2/service-registers/{name}/ | 
-[**service_registers_list**](ServiceRegistersApi.md#service_registers_list) | **GET** /api/v2/service-registers/ | 
-[**service_registers_partial_update**](ServiceRegistersApi.md#service_registers_partial_update) | **PATCH** /api/v2/service-registers/{name}/ | 
-[**service_registers_retrieve**](ServiceRegistersApi.md#service_registers_retrieve) | **GET** /api/v2/service-registers/{name}/ | 
-[**service_registers_update**](ServiceRegistersApi.md#service_registers_update) | **PUT** /api/v2/service-registers/{name}/ | 
+[**service_registers_create**](ServiceRegistersApi.md#service_registers_create) | **POST** /api/v2/service-registers | 
+[**service_registers_destroy**](ServiceRegistersApi.md#service_registers_destroy) | **DELETE** /api/v2/service-registers/{name} | 
+[**service_registers_list**](ServiceRegistersApi.md#service_registers_list) | **GET** /api/v2/service-registers | 
+[**service_registers_partial_update**](ServiceRegistersApi.md#service_registers_partial_update) | **PATCH** /api/v2/service-registers/{name} | 
+[**service_registers_retrieve**](ServiceRegistersApi.md#service_registers_retrieve) | **GET** /api/v2/service-registers/{name} | 
+[**service_registers_update**](ServiceRegistersApi.md#service_registers_update) | **PUT** /api/v2/service-registers/{name} | 
 
 
 # **service_registers_create**

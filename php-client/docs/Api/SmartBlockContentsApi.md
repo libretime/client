@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smartBlockContentsCreate()**](SmartBlockContentsApi.md#smartBlockContentsCreate) | **POST** /api/v2/smart-block-contents/ | 
-[**smartBlockContentsDestroy()**](SmartBlockContentsApi.md#smartBlockContentsDestroy) | **DELETE** /api/v2/smart-block-contents/{id}/ | 
-[**smartBlockContentsList()**](SmartBlockContentsApi.md#smartBlockContentsList) | **GET** /api/v2/smart-block-contents/ | 
-[**smartBlockContentsPartialUpdate()**](SmartBlockContentsApi.md#smartBlockContentsPartialUpdate) | **PATCH** /api/v2/smart-block-contents/{id}/ | 
-[**smartBlockContentsRetrieve()**](SmartBlockContentsApi.md#smartBlockContentsRetrieve) | **GET** /api/v2/smart-block-contents/{id}/ | 
-[**smartBlockContentsUpdate()**](SmartBlockContentsApi.md#smartBlockContentsUpdate) | **PUT** /api/v2/smart-block-contents/{id}/ | 
+[**smartBlockContentsCreate()**](SmartBlockContentsApi.md#smartBlockContentsCreate) | **POST** /api/v2/smart-block-contents | 
+[**smartBlockContentsDestroy()**](SmartBlockContentsApi.md#smartBlockContentsDestroy) | **DELETE** /api/v2/smart-block-contents/{id} | 
+[**smartBlockContentsList()**](SmartBlockContentsApi.md#smartBlockContentsList) | **GET** /api/v2/smart-block-contents | 
+[**smartBlockContentsPartialUpdate()**](SmartBlockContentsApi.md#smartBlockContentsPartialUpdate) | **PATCH** /api/v2/smart-block-contents/{id} | 
+[**smartBlockContentsRetrieve()**](SmartBlockContentsApi.md#smartBlockContentsRetrieve) | **GET** /api/v2/smart-block-contents/{id} | 
+[**smartBlockContentsUpdate()**](SmartBlockContentsApi.md#smartBlockContentsUpdate) | **PUT** /api/v2/smart-block-contents/{id} | 
 
 
 ## `smartBlockContentsCreate()`

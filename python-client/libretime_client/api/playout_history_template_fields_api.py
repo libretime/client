@@ -43,7 +43,7 @@ class PlayoutHistoryTemplateFieldsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-template-fields/',
+                'endpoint_path': '/api/v2/playout-history-template-fields',
                 'operation_id': 'playout_history_template_fields_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class PlayoutHistoryTemplateFieldsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-template-fields/{id}/',
+                'endpoint_path': '/api/v2/playout-history-template-fields/{id}',
                 'operation_id': 'playout_history_template_fields_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class PlayoutHistoryTemplateFieldsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-template-fields/',
+                'endpoint_path': '/api/v2/playout-history-template-fields',
                 'operation_id': 'playout_history_template_fields_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class PlayoutHistoryTemplateFieldsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-template-fields/{id}/',
+                'endpoint_path': '/api/v2/playout-history-template-fields/{id}',
                 'operation_id': 'playout_history_template_fields_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class PlayoutHistoryTemplateFieldsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-template-fields/{id}/',
+                'endpoint_path': '/api/v2/playout-history-template-fields/{id}',
                 'operation_id': 'playout_history_template_fields_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class PlayoutHistoryTemplateFieldsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-template-fields/{id}/',
+                'endpoint_path': '/api/v2/playout-history-template-fields/{id}',
                 'operation_id': 'playout_history_template_fields_update',
                 'http_method': 'PUT',
                 'servers': None,

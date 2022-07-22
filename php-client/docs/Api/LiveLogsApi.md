@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**liveLogsCreate()**](LiveLogsApi.md#liveLogsCreate) | **POST** /api/v2/live-logs/ | 
-[**liveLogsDestroy()**](LiveLogsApi.md#liveLogsDestroy) | **DELETE** /api/v2/live-logs/{id}/ | 
-[**liveLogsList()**](LiveLogsApi.md#liveLogsList) | **GET** /api/v2/live-logs/ | 
-[**liveLogsPartialUpdate()**](LiveLogsApi.md#liveLogsPartialUpdate) | **PATCH** /api/v2/live-logs/{id}/ | 
-[**liveLogsRetrieve()**](LiveLogsApi.md#liveLogsRetrieve) | **GET** /api/v2/live-logs/{id}/ | 
-[**liveLogsUpdate()**](LiveLogsApi.md#liveLogsUpdate) | **PUT** /api/v2/live-logs/{id}/ | 
+[**liveLogsCreate()**](LiveLogsApi.md#liveLogsCreate) | **POST** /api/v2/live-logs | 
+[**liveLogsDestroy()**](LiveLogsApi.md#liveLogsDestroy) | **DELETE** /api/v2/live-logs/{id} | 
+[**liveLogsList()**](LiveLogsApi.md#liveLogsList) | **GET** /api/v2/live-logs | 
+[**liveLogsPartialUpdate()**](LiveLogsApi.md#liveLogsPartialUpdate) | **PATCH** /api/v2/live-logs/{id} | 
+[**liveLogsRetrieve()**](LiveLogsApi.md#liveLogsRetrieve) | **GET** /api/v2/live-logs/{id} | 
+[**liveLogsUpdate()**](LiveLogsApi.md#liveLogsUpdate) | **PUT** /api/v2/live-logs/{id} | 
 
 
 ## `liveLogsCreate()`

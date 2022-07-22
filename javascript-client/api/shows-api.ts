@@ -39,7 +39,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
         showsCreate: async (show: Show, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'show' is not null or undefined
             assertParamExists('showsCreate', 'show', show)
-            const localVarPath = `/api/v2/shows/`;
+            const localVarPath = `/api/v2/shows`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
         showsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showsDestroy', 'id', id)
-            const localVarPath = `/api/v2/shows/{id}/`
+            const localVarPath = `/api/v2/shows/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         showsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/shows/`;
+            const localVarPath = `/api/v2/shows`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
         showsPartialUpdate: async (id: number, patchedShow?: PatchedShow, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/shows/{id}/`
+            const localVarPath = `/api/v2/shows/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
         showsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/shows/{id}/`
+            const localVarPath = `/api/v2/shows/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
             assertParamExists('showsUpdate', 'id', id)
             // verify required parameter 'show' is not null or undefined
             assertParamExists('showsUpdate', 'show', show)
-            const localVarPath = `/api/v2/shows/{id}/`
+            const localVarPath = `/api/v2/shows/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

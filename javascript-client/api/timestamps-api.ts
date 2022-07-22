@@ -39,7 +39,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
         timestampsCreate: async (timestamp: Timestamp, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'timestamp' is not null or undefined
             assertParamExists('timestampsCreate', 'timestamp', timestamp)
-            const localVarPath = `/api/v2/timestamps/`;
+            const localVarPath = `/api/v2/timestamps`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
         timestampsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsDestroy', 'id', id)
-            const localVarPath = `/api/v2/timestamps/{id}/`
+            const localVarPath = `/api/v2/timestamps/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @throws {RequiredError}
          */
         timestampsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/timestamps/`;
+            const localVarPath = `/api/v2/timestamps`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
         timestampsPartialUpdate: async (id: number, patchedTimestamp?: PatchedTimestamp, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/timestamps/{id}/`
+            const localVarPath = `/api/v2/timestamps/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
         timestampsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/timestamps/{id}/`
+            const localVarPath = `/api/v2/timestamps/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('timestampsUpdate', 'id', id)
             // verify required parameter 'timestamp' is not null or undefined
             assertParamExists('timestampsUpdate', 'timestamp', timestamp)
-            const localVarPath = `/api/v2/timestamps/{id}/`
+            const localVarPath = `/api/v2/timestamps/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

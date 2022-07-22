@@ -39,7 +39,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
         thirdPartyTrackReferencesCreate: async (thirdPartyTrackReference: ThirdPartyTrackReference, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'thirdPartyTrackReference' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesCreate', 'thirdPartyTrackReference', thirdPartyTrackReference)
-            const localVarPath = `/api/v2/third-party-track-references/`;
+            const localVarPath = `/api/v2/third-party-track-references`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
         thirdPartyTrackReferencesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesDestroy', 'id', id)
-            const localVarPath = `/api/v2/third-party-track-references/{id}/`
+            const localVarPath = `/api/v2/third-party-track-references/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
          * @throws {RequiredError}
          */
         thirdPartyTrackReferencesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/third-party-track-references/`;
+            const localVarPath = `/api/v2/third-party-track-references`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
         thirdPartyTrackReferencesPartialUpdate: async (id: number, patchedThirdPartyTrackReference?: PatchedThirdPartyTrackReference, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/third-party-track-references/{id}/`
+            const localVarPath = `/api/v2/third-party-track-references/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
         thirdPartyTrackReferencesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesRetrieve', 'id', id)
-            const localVarPath = `/api/v2/third-party-track-references/{id}/`
+            const localVarPath = `/api/v2/third-party-track-references/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
             assertParamExists('thirdPartyTrackReferencesUpdate', 'id', id)
             // verify required parameter 'thirdPartyTrackReference' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesUpdate', 'thirdPartyTrackReference', thirdPartyTrackReference)
-            const localVarPath = `/api/v2/third-party-track-references/{id}/`
+            const localVarPath = `/api/v2/third-party-track-references/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

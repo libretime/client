@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playout_history_metadata_create**](PlayoutHistoryMetadataApi.md#playout_history_metadata_create) | **POST** /api/v2/playout-history-metadata/ | 
-[**playout_history_metadata_destroy**](PlayoutHistoryMetadataApi.md#playout_history_metadata_destroy) | **DELETE** /api/v2/playout-history-metadata/{id}/ | 
-[**playout_history_metadata_list**](PlayoutHistoryMetadataApi.md#playout_history_metadata_list) | **GET** /api/v2/playout-history-metadata/ | 
-[**playout_history_metadata_partial_update**](PlayoutHistoryMetadataApi.md#playout_history_metadata_partial_update) | **PATCH** /api/v2/playout-history-metadata/{id}/ | 
-[**playout_history_metadata_retrieve**](PlayoutHistoryMetadataApi.md#playout_history_metadata_retrieve) | **GET** /api/v2/playout-history-metadata/{id}/ | 
-[**playout_history_metadata_update**](PlayoutHistoryMetadataApi.md#playout_history_metadata_update) | **PUT** /api/v2/playout-history-metadata/{id}/ | 
+[**playout_history_metadata_create**](PlayoutHistoryMetadataApi.md#playout_history_metadata_create) | **POST** /api/v2/playout-history-metadata | 
+[**playout_history_metadata_destroy**](PlayoutHistoryMetadataApi.md#playout_history_metadata_destroy) | **DELETE** /api/v2/playout-history-metadata/{id} | 
+[**playout_history_metadata_list**](PlayoutHistoryMetadataApi.md#playout_history_metadata_list) | **GET** /api/v2/playout-history-metadata | 
+[**playout_history_metadata_partial_update**](PlayoutHistoryMetadataApi.md#playout_history_metadata_partial_update) | **PATCH** /api/v2/playout-history-metadata/{id} | 
+[**playout_history_metadata_retrieve**](PlayoutHistoryMetadataApi.md#playout_history_metadata_retrieve) | **GET** /api/v2/playout-history-metadata/{id} | 
+[**playout_history_metadata_update**](PlayoutHistoryMetadataApi.md#playout_history_metadata_update) | **PUT** /api/v2/playout-history-metadata/{id} | 
 
 
 # **playout_history_metadata_create**

@@ -311,7 +311,7 @@ class ShowDaysApi
             );
         }
 
-        $resourcePath = '/api/v2/show-days/';
+        $resourcePath = '/api/v2/show-days';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ShowDaysApi
             );
         }
 
-        $resourcePath = '/api/v2/show-days/{id}/';
+        $resourcePath = '/api/v2/show-days/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ShowDaysApi
     public function showDaysListRequest()
     {
 
-        $resourcePath = '/api/v2/show-days/';
+        $resourcePath = '/api/v2/show-days';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ShowDaysApi
             );
         }
 
-        $resourcePath = '/api/v2/show-days/{id}/';
+        $resourcePath = '/api/v2/show-days/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ShowDaysApi
             );
         }
 
-        $resourcePath = '/api/v2/show-days/{id}/';
+        $resourcePath = '/api/v2/show-days/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ShowDaysApi
             );
         }
 
-        $resourcePath = '/api/v2/show-days/{id}/';
+        $resourcePath = '/api/v2/show-days/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

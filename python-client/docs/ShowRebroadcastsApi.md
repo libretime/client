@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**show_rebroadcasts_create**](ShowRebroadcastsApi.md#show_rebroadcasts_create) | **POST** /api/v2/show-rebroadcasts/ | 
-[**show_rebroadcasts_destroy**](ShowRebroadcastsApi.md#show_rebroadcasts_destroy) | **DELETE** /api/v2/show-rebroadcasts/{id}/ | 
-[**show_rebroadcasts_list**](ShowRebroadcastsApi.md#show_rebroadcasts_list) | **GET** /api/v2/show-rebroadcasts/ | 
-[**show_rebroadcasts_partial_update**](ShowRebroadcastsApi.md#show_rebroadcasts_partial_update) | **PATCH** /api/v2/show-rebroadcasts/{id}/ | 
-[**show_rebroadcasts_retrieve**](ShowRebroadcastsApi.md#show_rebroadcasts_retrieve) | **GET** /api/v2/show-rebroadcasts/{id}/ | 
-[**show_rebroadcasts_update**](ShowRebroadcastsApi.md#show_rebroadcasts_update) | **PUT** /api/v2/show-rebroadcasts/{id}/ | 
+[**show_rebroadcasts_create**](ShowRebroadcastsApi.md#show_rebroadcasts_create) | **POST** /api/v2/show-rebroadcasts | 
+[**show_rebroadcasts_destroy**](ShowRebroadcastsApi.md#show_rebroadcasts_destroy) | **DELETE** /api/v2/show-rebroadcasts/{id} | 
+[**show_rebroadcasts_list**](ShowRebroadcastsApi.md#show_rebroadcasts_list) | **GET** /api/v2/show-rebroadcasts | 
+[**show_rebroadcasts_partial_update**](ShowRebroadcastsApi.md#show_rebroadcasts_partial_update) | **PATCH** /api/v2/show-rebroadcasts/{id} | 
+[**show_rebroadcasts_retrieve**](ShowRebroadcastsApi.md#show_rebroadcasts_retrieve) | **GET** /api/v2/show-rebroadcasts/{id} | 
+[**show_rebroadcasts_update**](ShowRebroadcastsApi.md#show_rebroadcasts_update) | **PUT** /api/v2/show-rebroadcasts/{id} | 
 
 
 # **show_rebroadcasts_create**

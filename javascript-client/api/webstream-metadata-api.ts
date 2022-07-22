@@ -39,7 +39,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
         webstreamMetadataCreate: async (webstreamMetadata: WebstreamMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'webstreamMetadata' is not null or undefined
             assertParamExists('webstreamMetadataCreate', 'webstreamMetadata', webstreamMetadata)
-            const localVarPath = `/api/v2/webstream-metadata/`;
+            const localVarPath = `/api/v2/webstream-metadata`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
         webstreamMetadataDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataDestroy', 'id', id)
-            const localVarPath = `/api/v2/webstream-metadata/{id}/`
+            const localVarPath = `/api/v2/webstream-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @throws {RequiredError}
          */
         webstreamMetadataList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/webstream-metadata/`;
+            const localVarPath = `/api/v2/webstream-metadata`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
         webstreamMetadataPartialUpdate: async (id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/webstream-metadata/{id}/`
+            const localVarPath = `/api/v2/webstream-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
         webstreamMetadataRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataRetrieve', 'id', id)
-            const localVarPath = `/api/v2/webstream-metadata/{id}/`
+            const localVarPath = `/api/v2/webstream-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
             assertParamExists('webstreamMetadataUpdate', 'id', id)
             // verify required parameter 'webstreamMetadata' is not null or undefined
             assertParamExists('webstreamMetadataUpdate', 'webstreamMetadata', webstreamMetadata)
-            const localVarPath = `/api/v2/webstream-metadata/{id}/`
+            const localVarPath = `/api/v2/webstream-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

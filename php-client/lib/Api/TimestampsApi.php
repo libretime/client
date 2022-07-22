@@ -311,7 +311,7 @@ class TimestampsApi
             );
         }
 
-        $resourcePath = '/api/v2/timestamps/';
+        $resourcePath = '/api/v2/timestamps';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class TimestampsApi
             );
         }
 
-        $resourcePath = '/api/v2/timestamps/{id}/';
+        $resourcePath = '/api/v2/timestamps/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class TimestampsApi
     public function timestampsListRequest()
     {
 
-        $resourcePath = '/api/v2/timestamps/';
+        $resourcePath = '/api/v2/timestamps';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class TimestampsApi
             );
         }
 
-        $resourcePath = '/api/v2/timestamps/{id}/';
+        $resourcePath = '/api/v2/timestamps/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class TimestampsApi
             );
         }
 
-        $resourcePath = '/api/v2/timestamps/{id}/';
+        $resourcePath = '/api/v2/timestamps/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class TimestampsApi
             );
         }
 
-        $resourcePath = '/api/v2/timestamps/{id}/';
+        $resourcePath = '/api/v2/timestamps/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

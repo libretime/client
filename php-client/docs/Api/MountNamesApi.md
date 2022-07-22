@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mountNamesCreate()**](MountNamesApi.md#mountNamesCreate) | **POST** /api/v2/mount-names/ | 
-[**mountNamesDestroy()**](MountNamesApi.md#mountNamesDestroy) | **DELETE** /api/v2/mount-names/{id}/ | 
-[**mountNamesList()**](MountNamesApi.md#mountNamesList) | **GET** /api/v2/mount-names/ | 
-[**mountNamesPartialUpdate()**](MountNamesApi.md#mountNamesPartialUpdate) | **PATCH** /api/v2/mount-names/{id}/ | 
-[**mountNamesRetrieve()**](MountNamesApi.md#mountNamesRetrieve) | **GET** /api/v2/mount-names/{id}/ | 
-[**mountNamesUpdate()**](MountNamesApi.md#mountNamesUpdate) | **PUT** /api/v2/mount-names/{id}/ | 
+[**mountNamesCreate()**](MountNamesApi.md#mountNamesCreate) | **POST** /api/v2/mount-names | 
+[**mountNamesDestroy()**](MountNamesApi.md#mountNamesDestroy) | **DELETE** /api/v2/mount-names/{id} | 
+[**mountNamesList()**](MountNamesApi.md#mountNamesList) | **GET** /api/v2/mount-names | 
+[**mountNamesPartialUpdate()**](MountNamesApi.md#mountNamesPartialUpdate) | **PATCH** /api/v2/mount-names/{id} | 
+[**mountNamesRetrieve()**](MountNamesApi.md#mountNamesRetrieve) | **GET** /api/v2/mount-names/{id} | 
+[**mountNamesUpdate()**](MountNamesApi.md#mountNamesUpdate) | **PUT** /api/v2/mount-names/{id} | 
 
 
 ## `mountNamesCreate()`

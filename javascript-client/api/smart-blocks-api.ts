@@ -39,7 +39,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
         smartBlocksCreate: async (smartBlock: SmartBlock, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'smartBlock' is not null or undefined
             assertParamExists('smartBlocksCreate', 'smartBlock', smartBlock)
-            const localVarPath = `/api/v2/smart-blocks/`;
+            const localVarPath = `/api/v2/smart-blocks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
         smartBlocksDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlocksDestroy', 'id', id)
-            const localVarPath = `/api/v2/smart-blocks/{id}/`
+            const localVarPath = `/api/v2/smart-blocks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         smartBlocksList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/smart-blocks/`;
+            const localVarPath = `/api/v2/smart-blocks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
         smartBlocksPartialUpdate: async (id: number, patchedSmartBlock?: PatchedSmartBlock, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlocksPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/smart-blocks/{id}/`
+            const localVarPath = `/api/v2/smart-blocks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
         smartBlocksRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlocksRetrieve', 'id', id)
-            const localVarPath = `/api/v2/smart-blocks/{id}/`
+            const localVarPath = `/api/v2/smart-blocks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
             assertParamExists('smartBlocksUpdate', 'id', id)
             // verify required parameter 'smartBlock' is not null or undefined
             assertParamExists('smartBlocksUpdate', 'smartBlock', smartBlock)
-            const localVarPath = `/api/v2/smart-blocks/{id}/`
+            const localVarPath = `/api/v2/smart-blocks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

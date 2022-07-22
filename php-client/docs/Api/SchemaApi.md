@@ -4,7 +4,7 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**schemaRetrieve()**](SchemaApi.md#schemaRetrieve) | **GET** /api/v2/schema/ | 
+[**schemaRetrieve()**](SchemaApi.md#schemaRetrieve) | **GET** /api/v2/schema | 
 
 
 ## `schemaRetrieve()`

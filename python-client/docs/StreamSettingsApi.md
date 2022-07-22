@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stream_settings_create**](StreamSettingsApi.md#stream_settings_create) | **POST** /api/v2/stream-settings/ | 
-[**stream_settings_destroy**](StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{key}/ | 
-[**stream_settings_list**](StreamSettingsApi.md#stream_settings_list) | **GET** /api/v2/stream-settings/ | 
-[**stream_settings_partial_update**](StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{key}/ | 
-[**stream_settings_retrieve**](StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{key}/ | 
-[**stream_settings_update**](StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{key}/ | 
+[**stream_settings_create**](StreamSettingsApi.md#stream_settings_create) | **POST** /api/v2/stream-settings | 
+[**stream_settings_destroy**](StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{key} | 
+[**stream_settings_list**](StreamSettingsApi.md#stream_settings_list) | **GET** /api/v2/stream-settings | 
+[**stream_settings_partial_update**](StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{key} | 
+[**stream_settings_retrieve**](StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{key} | 
+[**stream_settings_update**](StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{key} | 
 
 
 # **stream_settings_create**

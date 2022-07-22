@@ -37,7 +37,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
          * @throws {RequiredError}
          */
         loginAttemptsCreate: async (loginAttempt?: LoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/login-attempts/`;
+            const localVarPath = `/api/v2/login-attempts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -78,7 +78,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
         loginAttemptsDestroy: async (ip: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsDestroy', 'ip', ip)
-            const localVarPath = `/api/v2/login-attempts/{ip}/`
+            const localVarPath = `/api/v2/login-attempts/{ip}`
                 .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -114,7 +114,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
          * @throws {RequiredError}
          */
         loginAttemptsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/login-attempts/`;
+            const localVarPath = `/api/v2/login-attempts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -153,7 +153,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
         loginAttemptsPartialUpdate: async (ip: string, patchedLoginAttempt?: PatchedLoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsPartialUpdate', 'ip', ip)
-            const localVarPath = `/api/v2/login-attempts/{ip}/`
+            const localVarPath = `/api/v2/login-attempts/{ip}`
                 .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -195,7 +195,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
         loginAttemptsRetrieve: async (ip: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsRetrieve', 'ip', ip)
-            const localVarPath = `/api/v2/login-attempts/{ip}/`
+            const localVarPath = `/api/v2/login-attempts/{ip}`
                 .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -235,7 +235,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
         loginAttemptsUpdate: async (ip: string, loginAttempt?: LoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsUpdate', 'ip', ip)
-            const localVarPath = `/api/v2/login-attempts/{ip}/`
+            const localVarPath = `/api/v2/login-attempts/{ip}`
                 .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

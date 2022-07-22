@@ -311,7 +311,7 @@ class PreferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/preferences/';
+        $resourcePath = '/api/v2/preferences';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PreferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/preferences/{id}/';
+        $resourcePath = '/api/v2/preferences/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PreferencesApi
     public function preferencesListRequest()
     {
 
-        $resourcePath = '/api/v2/preferences/';
+        $resourcePath = '/api/v2/preferences';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PreferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/preferences/{id}/';
+        $resourcePath = '/api/v2/preferences/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PreferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/preferences/{id}/';
+        $resourcePath = '/api/v2/preferences/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PreferencesApi
             );
         }
 
-        $resourcePath = '/api/v2/preferences/{id}/';
+        $resourcePath = '/api/v2/preferences/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

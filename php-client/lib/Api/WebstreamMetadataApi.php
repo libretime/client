@@ -311,7 +311,7 @@ class WebstreamMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/webstream-metadata/';
+        $resourcePath = '/api/v2/webstream-metadata';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class WebstreamMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/webstream-metadata/{id}/';
+        $resourcePath = '/api/v2/webstream-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class WebstreamMetadataApi
     public function webstreamMetadataListRequest()
     {
 
-        $resourcePath = '/api/v2/webstream-metadata/';
+        $resourcePath = '/api/v2/webstream-metadata';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class WebstreamMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/webstream-metadata/{id}/';
+        $resourcePath = '/api/v2/webstream-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class WebstreamMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/webstream-metadata/{id}/';
+        $resourcePath = '/api/v2/webstream-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class WebstreamMetadataApi
             );
         }
 
-        $resourcePath = '/api/v2/webstream-metadata/{id}/';
+        $resourcePath = '/api/v2/webstream-metadata/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

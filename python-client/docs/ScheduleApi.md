@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**schedule_create**](ScheduleApi.md#schedule_create) | **POST** /api/v2/schedule/ | 
-[**schedule_destroy**](ScheduleApi.md#schedule_destroy) | **DELETE** /api/v2/schedule/{id}/ | 
-[**schedule_list**](ScheduleApi.md#schedule_list) | **GET** /api/v2/schedule/ | 
-[**schedule_partial_update**](ScheduleApi.md#schedule_partial_update) | **PATCH** /api/v2/schedule/{id}/ | 
-[**schedule_retrieve**](ScheduleApi.md#schedule_retrieve) | **GET** /api/v2/schedule/{id}/ | 
-[**schedule_update**](ScheduleApi.md#schedule_update) | **PUT** /api/v2/schedule/{id}/ | 
+[**schedule_create**](ScheduleApi.md#schedule_create) | **POST** /api/v2/schedule | 
+[**schedule_destroy**](ScheduleApi.md#schedule_destroy) | **DELETE** /api/v2/schedule/{id} | 
+[**schedule_list**](ScheduleApi.md#schedule_list) | **GET** /api/v2/schedule | 
+[**schedule_partial_update**](ScheduleApi.md#schedule_partial_update) | **PATCH** /api/v2/schedule/{id} | 
+[**schedule_retrieve**](ScheduleApi.md#schedule_retrieve) | **GET** /api/v2/schedule/{id} | 
+[**schedule_update**](ScheduleApi.md#schedule_update) | **PUT** /api/v2/schedule/{id} | 
 
 
 # **schedule_create**

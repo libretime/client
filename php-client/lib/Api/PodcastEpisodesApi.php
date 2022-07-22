@@ -311,7 +311,7 @@ class PodcastEpisodesApi
             );
         }
 
-        $resourcePath = '/api/v2/podcast-episodes/';
+        $resourcePath = '/api/v2/podcast-episodes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PodcastEpisodesApi
             );
         }
 
-        $resourcePath = '/api/v2/podcast-episodes/{id}/';
+        $resourcePath = '/api/v2/podcast-episodes/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PodcastEpisodesApi
     public function podcastEpisodesListRequest()
     {
 
-        $resourcePath = '/api/v2/podcast-episodes/';
+        $resourcePath = '/api/v2/podcast-episodes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PodcastEpisodesApi
             );
         }
 
-        $resourcePath = '/api/v2/podcast-episodes/{id}/';
+        $resourcePath = '/api/v2/podcast-episodes/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PodcastEpisodesApi
             );
         }
 
-        $resourcePath = '/api/v2/podcast-episodes/{id}/';
+        $resourcePath = '/api/v2/podcast-episodes/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PodcastEpisodesApi
             );
         }
 
-        $resourcePath = '/api/v2/podcast-episodes/{id}/';
+        $resourcePath = '/api/v2/podcast-episodes/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

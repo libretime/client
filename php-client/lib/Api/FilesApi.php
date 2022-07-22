@@ -311,7 +311,7 @@ class FilesApi
             );
         }
 
-        $resourcePath = '/api/v2/files/';
+        $resourcePath = '/api/v2/files';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class FilesApi
             );
         }
 
-        $resourcePath = '/api/v2/files/{id}/';
+        $resourcePath = '/api/v2/files/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -817,7 +817,7 @@ class FilesApi
             );
         }
 
-        $resourcePath = '/api/v2/files/{id}/download/';
+        $resourcePath = '/api/v2/files/{id}/download';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1087,7 +1087,7 @@ class FilesApi
     public function filesListRequest()
     {
 
-        $resourcePath = '/api/v2/files/';
+        $resourcePath = '/api/v2/files';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1365,7 +1365,7 @@ class FilesApi
             );
         }
 
-        $resourcePath = '/api/v2/files/{id}/';
+        $resourcePath = '/api/v2/files/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1652,7 +1652,7 @@ class FilesApi
             );
         }
 
-        $resourcePath = '/api/v2/files/{id}/';
+        $resourcePath = '/api/v2/files/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1944,7 +1944,7 @@ class FilesApi
             );
         }
 
-        $resourcePath = '/api/v2/files/{id}/';
+        $resourcePath = '/api/v2/files/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

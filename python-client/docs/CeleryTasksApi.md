@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**celery_tasks_create**](CeleryTasksApi.md#celery_tasks_create) | **POST** /api/v2/celery-tasks/ | 
-[**celery_tasks_destroy**](CeleryTasksApi.md#celery_tasks_destroy) | **DELETE** /api/v2/celery-tasks/{id}/ | 
-[**celery_tasks_list**](CeleryTasksApi.md#celery_tasks_list) | **GET** /api/v2/celery-tasks/ | 
-[**celery_tasks_partial_update**](CeleryTasksApi.md#celery_tasks_partial_update) | **PATCH** /api/v2/celery-tasks/{id}/ | 
-[**celery_tasks_retrieve**](CeleryTasksApi.md#celery_tasks_retrieve) | **GET** /api/v2/celery-tasks/{id}/ | 
-[**celery_tasks_update**](CeleryTasksApi.md#celery_tasks_update) | **PUT** /api/v2/celery-tasks/{id}/ | 
+[**celery_tasks_create**](CeleryTasksApi.md#celery_tasks_create) | **POST** /api/v2/celery-tasks | 
+[**celery_tasks_destroy**](CeleryTasksApi.md#celery_tasks_destroy) | **DELETE** /api/v2/celery-tasks/{id} | 
+[**celery_tasks_list**](CeleryTasksApi.md#celery_tasks_list) | **GET** /api/v2/celery-tasks | 
+[**celery_tasks_partial_update**](CeleryTasksApi.md#celery_tasks_partial_update) | **PATCH** /api/v2/celery-tasks/{id} | 
+[**celery_tasks_retrieve**](CeleryTasksApi.md#celery_tasks_retrieve) | **GET** /api/v2/celery-tasks/{id} | 
+[**celery_tasks_update**](CeleryTasksApi.md#celery_tasks_update) | **PUT** /api/v2/celery-tasks/{id} | 
 
 
 # **celery_tasks_create**

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**webstream_metadata_create**](WebstreamMetadataApi.md#webstream_metadata_create) | **POST** /api/v2/webstream-metadata/ | 
-[**webstream_metadata_destroy**](WebstreamMetadataApi.md#webstream_metadata_destroy) | **DELETE** /api/v2/webstream-metadata/{id}/ | 
-[**webstream_metadata_list**](WebstreamMetadataApi.md#webstream_metadata_list) | **GET** /api/v2/webstream-metadata/ | 
-[**webstream_metadata_partial_update**](WebstreamMetadataApi.md#webstream_metadata_partial_update) | **PATCH** /api/v2/webstream-metadata/{id}/ | 
-[**webstream_metadata_retrieve**](WebstreamMetadataApi.md#webstream_metadata_retrieve) | **GET** /api/v2/webstream-metadata/{id}/ | 
-[**webstream_metadata_update**](WebstreamMetadataApi.md#webstream_metadata_update) | **PUT** /api/v2/webstream-metadata/{id}/ | 
+[**webstream_metadata_create**](WebstreamMetadataApi.md#webstream_metadata_create) | **POST** /api/v2/webstream-metadata | 
+[**webstream_metadata_destroy**](WebstreamMetadataApi.md#webstream_metadata_destroy) | **DELETE** /api/v2/webstream-metadata/{id} | 
+[**webstream_metadata_list**](WebstreamMetadataApi.md#webstream_metadata_list) | **GET** /api/v2/webstream-metadata | 
+[**webstream_metadata_partial_update**](WebstreamMetadataApi.md#webstream_metadata_partial_update) | **PATCH** /api/v2/webstream-metadata/{id} | 
+[**webstream_metadata_retrieve**](WebstreamMetadataApi.md#webstream_metadata_retrieve) | **GET** /api/v2/webstream-metadata/{id} | 
+[**webstream_metadata_update**](WebstreamMetadataApi.md#webstream_metadata_update) | **PUT** /api/v2/webstream-metadata/{id} | 
 
 
 # **webstream_metadata_create**

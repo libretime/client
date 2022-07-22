@@ -311,7 +311,7 @@ class ImportedPodcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/imported-podcasts/';
+        $resourcePath = '/api/v2/imported-podcasts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ImportedPodcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/imported-podcasts/{id}/';
+        $resourcePath = '/api/v2/imported-podcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ImportedPodcastsApi
     public function importedPodcastsListRequest()
     {
 
-        $resourcePath = '/api/v2/imported-podcasts/';
+        $resourcePath = '/api/v2/imported-podcasts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ImportedPodcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/imported-podcasts/{id}/';
+        $resourcePath = '/api/v2/imported-podcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ImportedPodcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/imported-podcasts/{id}/';
+        $resourcePath = '/api/v2/imported-podcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ImportedPodcastsApi
             );
         }
 
-        $resourcePath = '/api/v2/imported-podcasts/{id}/';
+        $resourcePath = '/api/v2/imported-podcasts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

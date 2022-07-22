@@ -311,7 +311,7 @@ class PlaylistContentsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlist-contents/';
+        $resourcePath = '/api/v2/playlist-contents';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PlaylistContentsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlist-contents/{id}/';
+        $resourcePath = '/api/v2/playlist-contents/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PlaylistContentsApi
     public function playlistContentsListRequest()
     {
 
-        $resourcePath = '/api/v2/playlist-contents/';
+        $resourcePath = '/api/v2/playlist-contents';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PlaylistContentsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlist-contents/{id}/';
+        $resourcePath = '/api/v2/playlist-contents/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PlaylistContentsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlist-contents/{id}/';
+        $resourcePath = '/api/v2/playlist-contents/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PlaylistContentsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlist-contents/{id}/';
+        $resourcePath = '/api/v2/playlist-contents/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**users_create**](UsersApi.md#users_create) | **POST** /api/v2/users/ | 
-[**users_destroy**](UsersApi.md#users_destroy) | **DELETE** /api/v2/users/{id}/ | 
-[**users_list**](UsersApi.md#users_list) | **GET** /api/v2/users/ | 
-[**users_partial_update**](UsersApi.md#users_partial_update) | **PATCH** /api/v2/users/{id}/ | 
-[**users_retrieve**](UsersApi.md#users_retrieve) | **GET** /api/v2/users/{id}/ | 
-[**users_update**](UsersApi.md#users_update) | **PUT** /api/v2/users/{id}/ | 
+[**users_create**](UsersApi.md#users_create) | **POST** /api/v2/users | 
+[**users_destroy**](UsersApi.md#users_destroy) | **DELETE** /api/v2/users/{id} | 
+[**users_list**](UsersApi.md#users_list) | **GET** /api/v2/users | 
+[**users_partial_update**](UsersApi.md#users_partial_update) | **PATCH** /api/v2/users/{id} | 
+[**users_retrieve**](UsersApi.md#users_retrieve) | **GET** /api/v2/users/{id} | 
+[**users_update**](UsersApi.md#users_update) | **PUT** /api/v2/users/{id} | 
 
 
 # **users_create**

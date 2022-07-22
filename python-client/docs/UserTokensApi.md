@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**user_tokens_create**](UserTokensApi.md#user_tokens_create) | **POST** /api/v2/user-tokens/ | 
-[**user_tokens_destroy**](UserTokensApi.md#user_tokens_destroy) | **DELETE** /api/v2/user-tokens/{id}/ | 
-[**user_tokens_list**](UserTokensApi.md#user_tokens_list) | **GET** /api/v2/user-tokens/ | 
-[**user_tokens_partial_update**](UserTokensApi.md#user_tokens_partial_update) | **PATCH** /api/v2/user-tokens/{id}/ | 
-[**user_tokens_retrieve**](UserTokensApi.md#user_tokens_retrieve) | **GET** /api/v2/user-tokens/{id}/ | 
-[**user_tokens_update**](UserTokensApi.md#user_tokens_update) | **PUT** /api/v2/user-tokens/{id}/ | 
+[**user_tokens_create**](UserTokensApi.md#user_tokens_create) | **POST** /api/v2/user-tokens | 
+[**user_tokens_destroy**](UserTokensApi.md#user_tokens_destroy) | **DELETE** /api/v2/user-tokens/{id} | 
+[**user_tokens_list**](UserTokensApi.md#user_tokens_list) | **GET** /api/v2/user-tokens | 
+[**user_tokens_partial_update**](UserTokensApi.md#user_tokens_partial_update) | **PATCH** /api/v2/user-tokens/{id} | 
+[**user_tokens_retrieve**](UserTokensApi.md#user_tokens_retrieve) | **GET** /api/v2/user-tokens/{id} | 
+[**user_tokens_update**](UserTokensApi.md#user_tokens_update) | **PUT** /api/v2/user-tokens/{id} | 
 
 
 # **user_tokens_create**

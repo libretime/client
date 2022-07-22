@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smartBlockCriteriaCreate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaCreate) | **POST** /api/v2/smart-block-criteria/ | 
-[**smartBlockCriteriaDestroy()**](SmartBlockCriteriaApi.md#smartBlockCriteriaDestroy) | **DELETE** /api/v2/smart-block-criteria/{id}/ | 
-[**smartBlockCriteriaList()**](SmartBlockCriteriaApi.md#smartBlockCriteriaList) | **GET** /api/v2/smart-block-criteria/ | 
-[**smartBlockCriteriaPartialUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaPartialUpdate) | **PATCH** /api/v2/smart-block-criteria/{id}/ | 
-[**smartBlockCriteriaRetrieve()**](SmartBlockCriteriaApi.md#smartBlockCriteriaRetrieve) | **GET** /api/v2/smart-block-criteria/{id}/ | 
-[**smartBlockCriteriaUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaUpdate) | **PUT** /api/v2/smart-block-criteria/{id}/ | 
+[**smartBlockCriteriaCreate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaCreate) | **POST** /api/v2/smart-block-criteria | 
+[**smartBlockCriteriaDestroy()**](SmartBlockCriteriaApi.md#smartBlockCriteriaDestroy) | **DELETE** /api/v2/smart-block-criteria/{id} | 
+[**smartBlockCriteriaList()**](SmartBlockCriteriaApi.md#smartBlockCriteriaList) | **GET** /api/v2/smart-block-criteria | 
+[**smartBlockCriteriaPartialUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaPartialUpdate) | **PATCH** /api/v2/smart-block-criteria/{id} | 
+[**smartBlockCriteriaRetrieve()**](SmartBlockCriteriaApi.md#smartBlockCriteriaRetrieve) | **GET** /api/v2/smart-block-criteria/{id} | 
+[**smartBlockCriteriaUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaUpdate) | **PUT** /api/v2/smart-block-criteria/{id} | 
 
 
 ## `smartBlockCriteriaCreate()`

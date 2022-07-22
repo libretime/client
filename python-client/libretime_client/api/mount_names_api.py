@@ -43,7 +43,7 @@ class MountNamesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/mount-names/',
+                'endpoint_path': '/api/v2/mount-names',
                 'operation_id': 'mount_names_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class MountNamesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/mount-names/{id}/',
+                'endpoint_path': '/api/v2/mount-names/{id}',
                 'operation_id': 'mount_names_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class MountNamesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/mount-names/',
+                'endpoint_path': '/api/v2/mount-names',
                 'operation_id': 'mount_names_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class MountNamesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/mount-names/{id}/',
+                'endpoint_path': '/api/v2/mount-names/{id}',
                 'operation_id': 'mount_names_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class MountNamesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/mount-names/{id}/',
+                'endpoint_path': '/api/v2/mount-names/{id}',
                 'operation_id': 'mount_names_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class MountNamesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/mount-names/{id}/',
+                'endpoint_path': '/api/v2/mount-names/{id}',
                 'operation_id': 'mount_names_update',
                 'http_method': 'PUT',
                 'servers': None,

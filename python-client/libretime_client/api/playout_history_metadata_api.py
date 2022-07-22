@@ -43,7 +43,7 @@ class PlayoutHistoryMetadataApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-metadata/',
+                'endpoint_path': '/api/v2/playout-history-metadata',
                 'operation_id': 'playout_history_metadata_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class PlayoutHistoryMetadataApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-metadata/{id}/',
+                'endpoint_path': '/api/v2/playout-history-metadata/{id}',
                 'operation_id': 'playout_history_metadata_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class PlayoutHistoryMetadataApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-metadata/',
+                'endpoint_path': '/api/v2/playout-history-metadata',
                 'operation_id': 'playout_history_metadata_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class PlayoutHistoryMetadataApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-metadata/{id}/',
+                'endpoint_path': '/api/v2/playout-history-metadata/{id}',
                 'operation_id': 'playout_history_metadata_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class PlayoutHistoryMetadataApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-metadata/{id}/',
+                'endpoint_path': '/api/v2/playout-history-metadata/{id}',
                 'operation_id': 'playout_history_metadata_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class PlayoutHistoryMetadataApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playout-history-metadata/{id}/',
+                'endpoint_path': '/api/v2/playout-history-metadata/{id}',
                 'operation_id': 'playout_history_metadata_update',
                 'http_method': 'PUT',
                 'servers': None,

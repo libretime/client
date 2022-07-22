@@ -39,7 +39,7 @@ export const ShowInstancesApiAxiosParamCreator = function (configuration?: Confi
         showInstancesCreate: async (showInstance: ShowInstance, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'showInstance' is not null or undefined
             assertParamExists('showInstancesCreate', 'showInstance', showInstance)
-            const localVarPath = `/api/v2/show-instances/`;
+            const localVarPath = `/api/v2/show-instances`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const ShowInstancesApiAxiosParamCreator = function (configuration?: Confi
         showInstancesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showInstancesDestroy', 'id', id)
-            const localVarPath = `/api/v2/show-instances/{id}/`
+            const localVarPath = `/api/v2/show-instances/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const ShowInstancesApiAxiosParamCreator = function (configuration?: Confi
          * @throws {RequiredError}
          */
         showInstancesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/show-instances/`;
+            const localVarPath = `/api/v2/show-instances`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const ShowInstancesApiAxiosParamCreator = function (configuration?: Confi
         showInstancesPartialUpdate: async (id: number, patchedShowInstance?: PatchedShowInstance, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showInstancesPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/show-instances/{id}/`
+            const localVarPath = `/api/v2/show-instances/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const ShowInstancesApiAxiosParamCreator = function (configuration?: Confi
         showInstancesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showInstancesRetrieve', 'id', id)
-            const localVarPath = `/api/v2/show-instances/{id}/`
+            const localVarPath = `/api/v2/show-instances/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const ShowInstancesApiAxiosParamCreator = function (configuration?: Confi
             assertParamExists('showInstancesUpdate', 'id', id)
             // verify required parameter 'showInstance' is not null or undefined
             assertParamExists('showInstancesUpdate', 'showInstance', showInstance)
-            const localVarPath = `/api/v2/show-instances/{id}/`
+            const localVarPath = `/api/v2/show-instances/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

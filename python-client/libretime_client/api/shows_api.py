@@ -43,7 +43,7 @@ class ShowsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/shows/',
+                'endpoint_path': '/api/v2/shows',
                 'operation_id': 'shows_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ShowsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/shows/{id}/',
+                'endpoint_path': '/api/v2/shows/{id}',
                 'operation_id': 'shows_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ShowsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/shows/',
+                'endpoint_path': '/api/v2/shows',
                 'operation_id': 'shows_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ShowsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/shows/{id}/',
+                'endpoint_path': '/api/v2/shows/{id}',
                 'operation_id': 'shows_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ShowsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/shows/{id}/',
+                'endpoint_path': '/api/v2/shows/{id}',
                 'operation_id': 'shows_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ShowsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/shows/{id}/',
+                'endpoint_path': '/api/v2/shows/{id}',
                 'operation_id': 'shows_update',
                 'http_method': 'PUT',
                 'servers': None,

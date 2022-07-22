@@ -39,7 +39,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
         liveLogsCreate: async (liveLog: LiveLog, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'liveLog' is not null or undefined
             assertParamExists('liveLogsCreate', 'liveLog', liveLog)
-            const localVarPath = `/api/v2/live-logs/`;
+            const localVarPath = `/api/v2/live-logs`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
         liveLogsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsDestroy', 'id', id)
-            const localVarPath = `/api/v2/live-logs/{id}/`
+            const localVarPath = `/api/v2/live-logs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @throws {RequiredError}
          */
         liveLogsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/live-logs/`;
+            const localVarPath = `/api/v2/live-logs`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
         liveLogsPartialUpdate: async (id: number, patchedLiveLog?: PatchedLiveLog, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/live-logs/{id}/`
+            const localVarPath = `/api/v2/live-logs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
         liveLogsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/live-logs/{id}/`
+            const localVarPath = `/api/v2/live-logs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('liveLogsUpdate', 'id', id)
             // verify required parameter 'liveLog' is not null or undefined
             assertParamExists('liveLogsUpdate', 'liveLog', liveLog)
-            const localVarPath = `/api/v2/live-logs/{id}/`
+            const localVarPath = `/api/v2/live-logs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

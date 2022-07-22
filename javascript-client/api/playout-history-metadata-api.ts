@@ -39,7 +39,7 @@ export const PlayoutHistoryMetadataApiAxiosParamCreator = function (configuratio
         playoutHistoryMetadataCreate: async (playoutHistoryMetadata: PlayoutHistoryMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playoutHistoryMetadata' is not null or undefined
             assertParamExists('playoutHistoryMetadataCreate', 'playoutHistoryMetadata', playoutHistoryMetadata)
-            const localVarPath = `/api/v2/playout-history-metadata/`;
+            const localVarPath = `/api/v2/playout-history-metadata`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const PlayoutHistoryMetadataApiAxiosParamCreator = function (configuratio
         playoutHistoryMetadataDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryMetadataDestroy', 'id', id)
-            const localVarPath = `/api/v2/playout-history-metadata/{id}/`
+            const localVarPath = `/api/v2/playout-history-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const PlayoutHistoryMetadataApiAxiosParamCreator = function (configuratio
          * @throws {RequiredError}
          */
         playoutHistoryMetadataList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/playout-history-metadata/`;
+            const localVarPath = `/api/v2/playout-history-metadata`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const PlayoutHistoryMetadataApiAxiosParamCreator = function (configuratio
         playoutHistoryMetadataPartialUpdate: async (id: number, patchedPlayoutHistoryMetadata?: PatchedPlayoutHistoryMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryMetadataPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/playout-history-metadata/{id}/`
+            const localVarPath = `/api/v2/playout-history-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const PlayoutHistoryMetadataApiAxiosParamCreator = function (configuratio
         playoutHistoryMetadataRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryMetadataRetrieve', 'id', id)
-            const localVarPath = `/api/v2/playout-history-metadata/{id}/`
+            const localVarPath = `/api/v2/playout-history-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const PlayoutHistoryMetadataApiAxiosParamCreator = function (configuratio
             assertParamExists('playoutHistoryMetadataUpdate', 'id', id)
             // verify required parameter 'playoutHistoryMetadata' is not null or undefined
             assertParamExists('playoutHistoryMetadataUpdate', 'playoutHistoryMetadata', playoutHistoryMetadata)
-            const localVarPath = `/api/v2/playout-history-metadata/{id}/`
+            const localVarPath = `/api/v2/playout-history-metadata/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

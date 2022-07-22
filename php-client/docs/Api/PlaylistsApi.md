@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playlistsCreate()**](PlaylistsApi.md#playlistsCreate) | **POST** /api/v2/playlists/ | 
-[**playlistsDestroy()**](PlaylistsApi.md#playlistsDestroy) | **DELETE** /api/v2/playlists/{id}/ | 
-[**playlistsList()**](PlaylistsApi.md#playlistsList) | **GET** /api/v2/playlists/ | 
-[**playlistsPartialUpdate()**](PlaylistsApi.md#playlistsPartialUpdate) | **PATCH** /api/v2/playlists/{id}/ | 
-[**playlistsRetrieve()**](PlaylistsApi.md#playlistsRetrieve) | **GET** /api/v2/playlists/{id}/ | 
-[**playlistsUpdate()**](PlaylistsApi.md#playlistsUpdate) | **PUT** /api/v2/playlists/{id}/ | 
+[**playlistsCreate()**](PlaylistsApi.md#playlistsCreate) | **POST** /api/v2/playlists | 
+[**playlistsDestroy()**](PlaylistsApi.md#playlistsDestroy) | **DELETE** /api/v2/playlists/{id} | 
+[**playlistsList()**](PlaylistsApi.md#playlistsList) | **GET** /api/v2/playlists | 
+[**playlistsPartialUpdate()**](PlaylistsApi.md#playlistsPartialUpdate) | **PATCH** /api/v2/playlists/{id} | 
+[**playlistsRetrieve()**](PlaylistsApi.md#playlistsRetrieve) | **GET** /api/v2/playlists/{id} | 
+[**playlistsUpdate()**](PlaylistsApi.md#playlistsUpdate) | **PUT** /api/v2/playlists/{id} | 
 
 
 ## `playlistsCreate()`

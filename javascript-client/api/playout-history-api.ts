@@ -39,7 +39,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
         playoutHistoryCreate: async (playoutHistory: PlayoutHistory, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playoutHistory' is not null or undefined
             assertParamExists('playoutHistoryCreate', 'playoutHistory', playoutHistory)
-            const localVarPath = `/api/v2/playout-history/`;
+            const localVarPath = `/api/v2/playout-history`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
         playoutHistoryDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryDestroy', 'id', id)
-            const localVarPath = `/api/v2/playout-history/{id}/`
+            const localVarPath = `/api/v2/playout-history/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
          * @throws {RequiredError}
          */
         playoutHistoryList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/playout-history/`;
+            const localVarPath = `/api/v2/playout-history`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
         playoutHistoryPartialUpdate: async (id: number, patchedPlayoutHistory?: PatchedPlayoutHistory, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/playout-history/{id}/`
+            const localVarPath = `/api/v2/playout-history/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
         playoutHistoryRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryRetrieve', 'id', id)
-            const localVarPath = `/api/v2/playout-history/{id}/`
+            const localVarPath = `/api/v2/playout-history/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
             assertParamExists('playoutHistoryUpdate', 'id', id)
             // verify required parameter 'playoutHistory' is not null or undefined
             assertParamExists('playoutHistoryUpdate', 'playoutHistory', playoutHistory)
-            const localVarPath = `/api/v2/playout-history/{id}/`
+            const localVarPath = `/api/v2/playout-history/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

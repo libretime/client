@@ -43,7 +43,7 @@ class SmartBlockCriteriaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-block-criteria/',
+                'endpoint_path': '/api/v2/smart-block-criteria',
                 'operation_id': 'smart_block_criteria_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class SmartBlockCriteriaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-block-criteria/{id}/',
+                'endpoint_path': '/api/v2/smart-block-criteria/{id}',
                 'operation_id': 'smart_block_criteria_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class SmartBlockCriteriaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-block-criteria/',
+                'endpoint_path': '/api/v2/smart-block-criteria',
                 'operation_id': 'smart_block_criteria_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class SmartBlockCriteriaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-block-criteria/{id}/',
+                'endpoint_path': '/api/v2/smart-block-criteria/{id}',
                 'operation_id': 'smart_block_criteria_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class SmartBlockCriteriaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-block-criteria/{id}/',
+                'endpoint_path': '/api/v2/smart-block-criteria/{id}',
                 'operation_id': 'smart_block_criteria_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class SmartBlockCriteriaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-block-criteria/{id}/',
+                'endpoint_path': '/api/v2/smart-block-criteria/{id}',
                 'operation_id': 'smart_block_criteria_update',
                 'http_method': 'PUT',
                 'servers': None,

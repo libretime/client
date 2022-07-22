@@ -43,7 +43,7 @@ class UsersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/users/',
+                'endpoint_path': '/api/v2/users',
                 'operation_id': 'users_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class UsersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/users/{id}/',
+                'endpoint_path': '/api/v2/users/{id}',
                 'operation_id': 'users_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class UsersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/users/',
+                'endpoint_path': '/api/v2/users',
                 'operation_id': 'users_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class UsersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/users/{id}/',
+                'endpoint_path': '/api/v2/users/{id}',
                 'operation_id': 'users_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class UsersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/users/{id}/',
+                'endpoint_path': '/api/v2/users/{id}',
                 'operation_id': 'users_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class UsersApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/users/{id}/',
+                'endpoint_path': '/api/v2/users/{id}',
                 'operation_id': 'users_update',
                 'http_method': 'PUT',
                 'servers': None,

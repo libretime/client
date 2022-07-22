@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**show_instances_create**](ShowInstancesApi.md#show_instances_create) | **POST** /api/v2/show-instances/ | 
-[**show_instances_destroy**](ShowInstancesApi.md#show_instances_destroy) | **DELETE** /api/v2/show-instances/{id}/ | 
-[**show_instances_list**](ShowInstancesApi.md#show_instances_list) | **GET** /api/v2/show-instances/ | 
-[**show_instances_partial_update**](ShowInstancesApi.md#show_instances_partial_update) | **PATCH** /api/v2/show-instances/{id}/ | 
-[**show_instances_retrieve**](ShowInstancesApi.md#show_instances_retrieve) | **GET** /api/v2/show-instances/{id}/ | 
-[**show_instances_update**](ShowInstancesApi.md#show_instances_update) | **PUT** /api/v2/show-instances/{id}/ | 
+[**show_instances_create**](ShowInstancesApi.md#show_instances_create) | **POST** /api/v2/show-instances | 
+[**show_instances_destroy**](ShowInstancesApi.md#show_instances_destroy) | **DELETE** /api/v2/show-instances/{id} | 
+[**show_instances_list**](ShowInstancesApi.md#show_instances_list) | **GET** /api/v2/show-instances | 
+[**show_instances_partial_update**](ShowInstancesApi.md#show_instances_partial_update) | **PATCH** /api/v2/show-instances/{id} | 
+[**show_instances_retrieve**](ShowInstancesApi.md#show_instances_retrieve) | **GET** /api/v2/show-instances/{id} | 
+[**show_instances_update**](ShowInstancesApi.md#show_instances_update) | **PUT** /api/v2/show-instances/{id} | 
 
 
 # **show_instances_create**

@@ -43,7 +43,7 @@ class CeleryTasksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/celery-tasks/',
+                'endpoint_path': '/api/v2/celery-tasks',
                 'operation_id': 'celery_tasks_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class CeleryTasksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/celery-tasks/{id}/',
+                'endpoint_path': '/api/v2/celery-tasks/{id}',
                 'operation_id': 'celery_tasks_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class CeleryTasksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/celery-tasks/',
+                'endpoint_path': '/api/v2/celery-tasks',
                 'operation_id': 'celery_tasks_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class CeleryTasksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/celery-tasks/{id}/',
+                'endpoint_path': '/api/v2/celery-tasks/{id}',
                 'operation_id': 'celery_tasks_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class CeleryTasksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/celery-tasks/{id}/',
+                'endpoint_path': '/api/v2/celery-tasks/{id}',
                 'operation_id': 'celery_tasks_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class CeleryTasksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/celery-tasks/{id}/',
+                'endpoint_path': '/api/v2/celery-tasks/{id}',
                 'operation_id': 'celery_tasks_update',
                 'http_method': 'PUT',
                 'servers': None,

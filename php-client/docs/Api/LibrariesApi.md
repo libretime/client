@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**librariesCreate()**](LibrariesApi.md#librariesCreate) | **POST** /api/v2/libraries/ | 
-[**librariesDestroy()**](LibrariesApi.md#librariesDestroy) | **DELETE** /api/v2/libraries/{id}/ | 
-[**librariesList()**](LibrariesApi.md#librariesList) | **GET** /api/v2/libraries/ | 
-[**librariesPartialUpdate()**](LibrariesApi.md#librariesPartialUpdate) | **PATCH** /api/v2/libraries/{id}/ | 
-[**librariesRetrieve()**](LibrariesApi.md#librariesRetrieve) | **GET** /api/v2/libraries/{id}/ | 
-[**librariesUpdate()**](LibrariesApi.md#librariesUpdate) | **PUT** /api/v2/libraries/{id}/ | 
+[**librariesCreate()**](LibrariesApi.md#librariesCreate) | **POST** /api/v2/libraries | 
+[**librariesDestroy()**](LibrariesApi.md#librariesDestroy) | **DELETE** /api/v2/libraries/{id} | 
+[**librariesList()**](LibrariesApi.md#librariesList) | **GET** /api/v2/libraries | 
+[**librariesPartialUpdate()**](LibrariesApi.md#librariesPartialUpdate) | **PATCH** /api/v2/libraries/{id} | 
+[**librariesRetrieve()**](LibrariesApi.md#librariesRetrieve) | **GET** /api/v2/libraries/{id} | 
+[**librariesUpdate()**](LibrariesApi.md#librariesUpdate) | **PUT** /api/v2/libraries/{id} | 
 
 
 ## `librariesCreate()`

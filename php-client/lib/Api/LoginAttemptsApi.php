@@ -305,7 +305,7 @@ class LoginAttemptsApi
     public function loginAttemptsCreateRequest($login_attempt = null)
     {
 
-        $resourcePath = '/api/v2/login-attempts/';
+        $resourcePath = '/api/v2/login-attempts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -530,7 +530,7 @@ class LoginAttemptsApi
             );
         }
 
-        $resourcePath = '/api/v2/login-attempts/{ip}/';
+        $resourcePath = '/api/v2/login-attempts/{ip}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -800,7 +800,7 @@ class LoginAttemptsApi
     public function loginAttemptsListRequest()
     {
 
-        $resourcePath = '/api/v2/login-attempts/';
+        $resourcePath = '/api/v2/login-attempts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1078,7 +1078,7 @@ class LoginAttemptsApi
             );
         }
 
-        $resourcePath = '/api/v2/login-attempts/{ip}/';
+        $resourcePath = '/api/v2/login-attempts/{ip}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1365,7 +1365,7 @@ class LoginAttemptsApi
             );
         }
 
-        $resourcePath = '/api/v2/login-attempts/{ip}/';
+        $resourcePath = '/api/v2/login-attempts/{ip}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1651,7 +1651,7 @@ class LoginAttemptsApi
             );
         }
 
-        $resourcePath = '/api/v2/login-attempts/{ip}/';
+        $resourcePath = '/api/v2/login-attempts/{ip}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

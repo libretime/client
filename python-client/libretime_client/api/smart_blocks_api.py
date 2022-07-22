@@ -43,7 +43,7 @@ class SmartBlocksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-blocks/',
+                'endpoint_path': '/api/v2/smart-blocks',
                 'operation_id': 'smart_blocks_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class SmartBlocksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-blocks/{id}/',
+                'endpoint_path': '/api/v2/smart-blocks/{id}',
                 'operation_id': 'smart_blocks_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class SmartBlocksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-blocks/',
+                'endpoint_path': '/api/v2/smart-blocks',
                 'operation_id': 'smart_blocks_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class SmartBlocksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-blocks/{id}/',
+                'endpoint_path': '/api/v2/smart-blocks/{id}',
                 'operation_id': 'smart_blocks_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class SmartBlocksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-blocks/{id}/',
+                'endpoint_path': '/api/v2/smart-blocks/{id}',
                 'operation_id': 'smart_blocks_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class SmartBlocksApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/smart-blocks/{id}/',
+                'endpoint_path': '/api/v2/smart-blocks/{id}',
                 'operation_id': 'smart_blocks_update',
                 'http_method': 'PUT',
                 'servers': None,

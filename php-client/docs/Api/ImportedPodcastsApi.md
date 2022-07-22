@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**importedPodcastsCreate()**](ImportedPodcastsApi.md#importedPodcastsCreate) | **POST** /api/v2/imported-podcasts/ | 
-[**importedPodcastsDestroy()**](ImportedPodcastsApi.md#importedPodcastsDestroy) | **DELETE** /api/v2/imported-podcasts/{id}/ | 
-[**importedPodcastsList()**](ImportedPodcastsApi.md#importedPodcastsList) | **GET** /api/v2/imported-podcasts/ | 
-[**importedPodcastsPartialUpdate()**](ImportedPodcastsApi.md#importedPodcastsPartialUpdate) | **PATCH** /api/v2/imported-podcasts/{id}/ | 
-[**importedPodcastsRetrieve()**](ImportedPodcastsApi.md#importedPodcastsRetrieve) | **GET** /api/v2/imported-podcasts/{id}/ | 
-[**importedPodcastsUpdate()**](ImportedPodcastsApi.md#importedPodcastsUpdate) | **PUT** /api/v2/imported-podcasts/{id}/ | 
+[**importedPodcastsCreate()**](ImportedPodcastsApi.md#importedPodcastsCreate) | **POST** /api/v2/imported-podcasts | 
+[**importedPodcastsDestroy()**](ImportedPodcastsApi.md#importedPodcastsDestroy) | **DELETE** /api/v2/imported-podcasts/{id} | 
+[**importedPodcastsList()**](ImportedPodcastsApi.md#importedPodcastsList) | **GET** /api/v2/imported-podcasts | 
+[**importedPodcastsPartialUpdate()**](ImportedPodcastsApi.md#importedPodcastsPartialUpdate) | **PATCH** /api/v2/imported-podcasts/{id} | 
+[**importedPodcastsRetrieve()**](ImportedPodcastsApi.md#importedPodcastsRetrieve) | **GET** /api/v2/imported-podcasts/{id} | 
+[**importedPodcastsUpdate()**](ImportedPodcastsApi.md#importedPodcastsUpdate) | **PUT** /api/v2/imported-podcasts/{id} | 
 
 
 ## `importedPodcastsCreate()`

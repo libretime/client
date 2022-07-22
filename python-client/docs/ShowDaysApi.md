@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**show_days_create**](ShowDaysApi.md#show_days_create) | **POST** /api/v2/show-days/ | 
-[**show_days_destroy**](ShowDaysApi.md#show_days_destroy) | **DELETE** /api/v2/show-days/{id}/ | 
-[**show_days_list**](ShowDaysApi.md#show_days_list) | **GET** /api/v2/show-days/ | 
-[**show_days_partial_update**](ShowDaysApi.md#show_days_partial_update) | **PATCH** /api/v2/show-days/{id}/ | 
-[**show_days_retrieve**](ShowDaysApi.md#show_days_retrieve) | **GET** /api/v2/show-days/{id}/ | 
-[**show_days_update**](ShowDaysApi.md#show_days_update) | **PUT** /api/v2/show-days/{id}/ | 
+[**show_days_create**](ShowDaysApi.md#show_days_create) | **POST** /api/v2/show-days | 
+[**show_days_destroy**](ShowDaysApi.md#show_days_destroy) | **DELETE** /api/v2/show-days/{id} | 
+[**show_days_list**](ShowDaysApi.md#show_days_list) | **GET** /api/v2/show-days | 
+[**show_days_partial_update**](ShowDaysApi.md#show_days_partial_update) | **PATCH** /api/v2/show-days/{id} | 
+[**show_days_retrieve**](ShowDaysApi.md#show_days_retrieve) | **GET** /api/v2/show-days/{id} | 
+[**show_days_update**](ShowDaysApi.md#show_days_update) | **PUT** /api/v2/show-days/{id} | 
 
 
 # **show_days_create**

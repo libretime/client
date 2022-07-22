@@ -311,7 +311,7 @@ class PlaylistsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlists/';
+        $resourcePath = '/api/v2/playlists';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PlaylistsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlists/{id}/';
+        $resourcePath = '/api/v2/playlists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PlaylistsApi
     public function playlistsListRequest()
     {
 
-        $resourcePath = '/api/v2/playlists/';
+        $resourcePath = '/api/v2/playlists';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PlaylistsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlists/{id}/';
+        $resourcePath = '/api/v2/playlists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PlaylistsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlists/{id}/';
+        $resourcePath = '/api/v2/playlists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PlaylistsApi
             );
         }
 
-        $resourcePath = '/api/v2/playlists/{id}/';
+        $resourcePath = '/api/v2/playlists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playoutHistoryMetadataCreate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataCreate) | **POST** /api/v2/playout-history-metadata/ | 
-[**playoutHistoryMetadataDestroy()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataDestroy) | **DELETE** /api/v2/playout-history-metadata/{id}/ | 
-[**playoutHistoryMetadataList()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataList) | **GET** /api/v2/playout-history-metadata/ | 
-[**playoutHistoryMetadataPartialUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataPartialUpdate) | **PATCH** /api/v2/playout-history-metadata/{id}/ | 
-[**playoutHistoryMetadataRetrieve()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataRetrieve) | **GET** /api/v2/playout-history-metadata/{id}/ | 
-[**playoutHistoryMetadataUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataUpdate) | **PUT** /api/v2/playout-history-metadata/{id}/ | 
+[**playoutHistoryMetadataCreate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataCreate) | **POST** /api/v2/playout-history-metadata | 
+[**playoutHistoryMetadataDestroy()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataDestroy) | **DELETE** /api/v2/playout-history-metadata/{id} | 
+[**playoutHistoryMetadataList()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataList) | **GET** /api/v2/playout-history-metadata | 
+[**playoutHistoryMetadataPartialUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataPartialUpdate) | **PATCH** /api/v2/playout-history-metadata/{id} | 
+[**playoutHistoryMetadataRetrieve()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataRetrieve) | **GET** /api/v2/playout-history-metadata/{id} | 
+[**playoutHistoryMetadataUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataUpdate) | **PUT** /api/v2/playout-history-metadata/{id} | 
 
 
 ## `playoutHistoryMetadataCreate()`

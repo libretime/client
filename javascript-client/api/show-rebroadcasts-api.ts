@@ -39,7 +39,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
         showRebroadcastsCreate: async (showRebroadcast: ShowRebroadcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'showRebroadcast' is not null or undefined
             assertParamExists('showRebroadcastsCreate', 'showRebroadcast', showRebroadcast)
-            const localVarPath = `/api/v2/show-rebroadcasts/`;
+            const localVarPath = `/api/v2/show-rebroadcasts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
         showRebroadcastsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsDestroy', 'id', id)
-            const localVarPath = `/api/v2/show-rebroadcasts/{id}/`
+            const localVarPath = `/api/v2/show-rebroadcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @throws {RequiredError}
          */
         showRebroadcastsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/show-rebroadcasts/`;
+            const localVarPath = `/api/v2/show-rebroadcasts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
         showRebroadcastsPartialUpdate: async (id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/show-rebroadcasts/{id}/`
+            const localVarPath = `/api/v2/show-rebroadcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
         showRebroadcastsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/show-rebroadcasts/{id}/`
+            const localVarPath = `/api/v2/show-rebroadcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
             assertParamExists('showRebroadcastsUpdate', 'id', id)
             // verify required parameter 'showRebroadcast' is not null or undefined
             assertParamExists('showRebroadcastsUpdate', 'showRebroadcast', showRebroadcast)
-            const localVarPath = `/api/v2/show-rebroadcasts/{id}/`
+            const localVarPath = `/api/v2/show-rebroadcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

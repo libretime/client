@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**webstreams_create**](WebstreamsApi.md#webstreams_create) | **POST** /api/v2/webstreams/ | 
-[**webstreams_destroy**](WebstreamsApi.md#webstreams_destroy) | **DELETE** /api/v2/webstreams/{id}/ | 
-[**webstreams_list**](WebstreamsApi.md#webstreams_list) | **GET** /api/v2/webstreams/ | 
-[**webstreams_partial_update**](WebstreamsApi.md#webstreams_partial_update) | **PATCH** /api/v2/webstreams/{id}/ | 
-[**webstreams_retrieve**](WebstreamsApi.md#webstreams_retrieve) | **GET** /api/v2/webstreams/{id}/ | 
-[**webstreams_update**](WebstreamsApi.md#webstreams_update) | **PUT** /api/v2/webstreams/{id}/ | 
+[**webstreams_create**](WebstreamsApi.md#webstreams_create) | **POST** /api/v2/webstreams | 
+[**webstreams_destroy**](WebstreamsApi.md#webstreams_destroy) | **DELETE** /api/v2/webstreams/{id} | 
+[**webstreams_list**](WebstreamsApi.md#webstreams_list) | **GET** /api/v2/webstreams | 
+[**webstreams_partial_update**](WebstreamsApi.md#webstreams_partial_update) | **PATCH** /api/v2/webstreams/{id} | 
+[**webstreams_retrieve**](WebstreamsApi.md#webstreams_retrieve) | **GET** /api/v2/webstreams/{id} | 
+[**webstreams_update**](WebstreamsApi.md#webstreams_update) | **PUT** /api/v2/webstreams/{id} | 
 
 
 # **webstreams_create**

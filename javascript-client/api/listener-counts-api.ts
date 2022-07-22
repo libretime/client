@@ -39,7 +39,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
         listenerCountsCreate: async (listenerCount: ListenerCount, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'listenerCount' is not null or undefined
             assertParamExists('listenerCountsCreate', 'listenerCount', listenerCount)
-            const localVarPath = `/api/v2/listener-counts/`;
+            const localVarPath = `/api/v2/listener-counts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
         listenerCountsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsDestroy', 'id', id)
-            const localVarPath = `/api/v2/listener-counts/{id}/`
+            const localVarPath = `/api/v2/listener-counts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @throws {RequiredError}
          */
         listenerCountsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/listener-counts/`;
+            const localVarPath = `/api/v2/listener-counts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
         listenerCountsPartialUpdate: async (id: number, patchedListenerCount?: PatchedListenerCount, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/listener-counts/{id}/`
+            const localVarPath = `/api/v2/listener-counts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
         listenerCountsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/listener-counts/{id}/`
+            const localVarPath = `/api/v2/listener-counts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
             assertParamExists('listenerCountsUpdate', 'id', id)
             // verify required parameter 'listenerCount' is not null or undefined
             assertParamExists('listenerCountsUpdate', 'listenerCount', listenerCount)
-            const localVarPath = `/api/v2/listener-counts/{id}/`
+            const localVarPath = `/api/v2/listener-counts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

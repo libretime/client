@@ -39,7 +39,7 @@ export const PlayoutHistoryTemplateFieldsApiAxiosParamCreator = function (config
         playoutHistoryTemplateFieldsCreate: async (playoutHistoryTemplateField: PlayoutHistoryTemplateField, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playoutHistoryTemplateField' is not null or undefined
             assertParamExists('playoutHistoryTemplateFieldsCreate', 'playoutHistoryTemplateField', playoutHistoryTemplateField)
-            const localVarPath = `/api/v2/playout-history-template-fields/`;
+            const localVarPath = `/api/v2/playout-history-template-fields`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const PlayoutHistoryTemplateFieldsApiAxiosParamCreator = function (config
         playoutHistoryTemplateFieldsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplateFieldsDestroy', 'id', id)
-            const localVarPath = `/api/v2/playout-history-template-fields/{id}/`
+            const localVarPath = `/api/v2/playout-history-template-fields/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const PlayoutHistoryTemplateFieldsApiAxiosParamCreator = function (config
          * @throws {RequiredError}
          */
         playoutHistoryTemplateFieldsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/playout-history-template-fields/`;
+            const localVarPath = `/api/v2/playout-history-template-fields`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const PlayoutHistoryTemplateFieldsApiAxiosParamCreator = function (config
         playoutHistoryTemplateFieldsPartialUpdate: async (id: number, patchedPlayoutHistoryTemplateField?: PatchedPlayoutHistoryTemplateField, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplateFieldsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/playout-history-template-fields/{id}/`
+            const localVarPath = `/api/v2/playout-history-template-fields/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const PlayoutHistoryTemplateFieldsApiAxiosParamCreator = function (config
         playoutHistoryTemplateFieldsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplateFieldsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/playout-history-template-fields/{id}/`
+            const localVarPath = `/api/v2/playout-history-template-fields/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const PlayoutHistoryTemplateFieldsApiAxiosParamCreator = function (config
             assertParamExists('playoutHistoryTemplateFieldsUpdate', 'id', id)
             // verify required parameter 'playoutHistoryTemplateField' is not null or undefined
             assertParamExists('playoutHistoryTemplateFieldsUpdate', 'playoutHistoryTemplateField', playoutHistoryTemplateField)
-            const localVarPath = `/api/v2/playout-history-template-fields/{id}/`
+            const localVarPath = `/api/v2/playout-history-template-fields/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

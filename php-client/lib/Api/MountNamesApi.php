@@ -311,7 +311,7 @@ class MountNamesApi
             );
         }
 
-        $resourcePath = '/api/v2/mount-names/';
+        $resourcePath = '/api/v2/mount-names';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class MountNamesApi
             );
         }
 
-        $resourcePath = '/api/v2/mount-names/{id}/';
+        $resourcePath = '/api/v2/mount-names/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class MountNamesApi
     public function mountNamesListRequest()
     {
 
-        $resourcePath = '/api/v2/mount-names/';
+        $resourcePath = '/api/v2/mount-names';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class MountNamesApi
             );
         }
 
-        $resourcePath = '/api/v2/mount-names/{id}/';
+        $resourcePath = '/api/v2/mount-names/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class MountNamesApi
             );
         }
 
-        $resourcePath = '/api/v2/mount-names/{id}/';
+        $resourcePath = '/api/v2/mount-names/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class MountNamesApi
             );
         }
 
-        $resourcePath = '/api/v2/mount-names/{id}/';
+        $resourcePath = '/api/v2/mount-names/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

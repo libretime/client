@@ -39,7 +39,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
         mountNamesCreate: async (mountName: MountName, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'mountName' is not null or undefined
             assertParamExists('mountNamesCreate', 'mountName', mountName)
-            const localVarPath = `/api/v2/mount-names/`;
+            const localVarPath = `/api/v2/mount-names`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
         mountNamesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesDestroy', 'id', id)
-            const localVarPath = `/api/v2/mount-names/{id}/`
+            const localVarPath = `/api/v2/mount-names/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @throws {RequiredError}
          */
         mountNamesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/mount-names/`;
+            const localVarPath = `/api/v2/mount-names`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
         mountNamesPartialUpdate: async (id: number, patchedMountName?: PatchedMountName, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/mount-names/{id}/`
+            const localVarPath = `/api/v2/mount-names/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
         mountNamesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesRetrieve', 'id', id)
-            const localVarPath = `/api/v2/mount-names/{id}/`
+            const localVarPath = `/api/v2/mount-names/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('mountNamesUpdate', 'id', id)
             // verify required parameter 'mountName' is not null or undefined
             assertParamExists('mountNamesUpdate', 'mountName', mountName)
-            const localVarPath = `/api/v2/mount-names/{id}/`
+            const localVarPath = `/api/v2/mount-names/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

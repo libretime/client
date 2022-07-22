@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smart_blocks_create**](SmartBlocksApi.md#smart_blocks_create) | **POST** /api/v2/smart-blocks/ | 
-[**smart_blocks_destroy**](SmartBlocksApi.md#smart_blocks_destroy) | **DELETE** /api/v2/smart-blocks/{id}/ | 
-[**smart_blocks_list**](SmartBlocksApi.md#smart_blocks_list) | **GET** /api/v2/smart-blocks/ | 
-[**smart_blocks_partial_update**](SmartBlocksApi.md#smart_blocks_partial_update) | **PATCH** /api/v2/smart-blocks/{id}/ | 
-[**smart_blocks_retrieve**](SmartBlocksApi.md#smart_blocks_retrieve) | **GET** /api/v2/smart-blocks/{id}/ | 
-[**smart_blocks_update**](SmartBlocksApi.md#smart_blocks_update) | **PUT** /api/v2/smart-blocks/{id}/ | 
+[**smart_blocks_create**](SmartBlocksApi.md#smart_blocks_create) | **POST** /api/v2/smart-blocks | 
+[**smart_blocks_destroy**](SmartBlocksApi.md#smart_blocks_destroy) | **DELETE** /api/v2/smart-blocks/{id} | 
+[**smart_blocks_list**](SmartBlocksApi.md#smart_blocks_list) | **GET** /api/v2/smart-blocks | 
+[**smart_blocks_partial_update**](SmartBlocksApi.md#smart_blocks_partial_update) | **PATCH** /api/v2/smart-blocks/{id} | 
+[**smart_blocks_retrieve**](SmartBlocksApi.md#smart_blocks_retrieve) | **GET** /api/v2/smart-blocks/{id} | 
+[**smart_blocks_update**](SmartBlocksApi.md#smart_blocks_update) | **PUT** /api/v2/smart-blocks/{id} | 
 
 
 # **smart_blocks_create**

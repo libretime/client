@@ -250,5 +250,3 @@ lib/Model/WebstreamMetadata.php
 lib/Model/WeekDayEnum.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/PlaylistContentKindEnumTest.php
-test/Model/VersionTest.php

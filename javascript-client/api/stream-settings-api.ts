@@ -39,7 +39,7 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         streamSettingsCreate: async (streamSetting: StreamSetting, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'streamSetting' is not null or undefined
             assertParamExists('streamSettingsCreate', 'streamSetting', streamSetting)
-            const localVarPath = `/api/v2/stream-settings/`;
+            const localVarPath = `/api/v2/stream-settings`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         streamSettingsDestroy: async (key: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'key' is not null or undefined
             assertParamExists('streamSettingsDestroy', 'key', key)
-            const localVarPath = `/api/v2/stream-settings/{key}/`
+            const localVarPath = `/api/v2/stream-settings/{key}`
                 .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
          * @throws {RequiredError}
          */
         streamSettingsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/stream-settings/`;
+            const localVarPath = `/api/v2/stream-settings`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         streamSettingsPartialUpdate: async (key: string, patchedStreamSetting?: PatchedStreamSetting, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'key' is not null or undefined
             assertParamExists('streamSettingsPartialUpdate', 'key', key)
-            const localVarPath = `/api/v2/stream-settings/{key}/`
+            const localVarPath = `/api/v2/stream-settings/{key}`
                 .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
         streamSettingsRetrieve: async (key: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'key' is not null or undefined
             assertParamExists('streamSettingsRetrieve', 'key', key)
-            const localVarPath = `/api/v2/stream-settings/{key}/`
+            const localVarPath = `/api/v2/stream-settings/{key}`
                 .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const StreamSettingsApiAxiosParamCreator = function (configuration?: Conf
             assertParamExists('streamSettingsUpdate', 'key', key)
             // verify required parameter 'streamSetting' is not null or undefined
             assertParamExists('streamSettingsUpdate', 'streamSetting', streamSetting)
-            const localVarPath = `/api/v2/stream-settings/{key}/`
+            const localVarPath = `/api/v2/stream-settings/{key}`
                 .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

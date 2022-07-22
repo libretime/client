@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playoutHistoryTemplateFieldsCreate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsCreate) | **POST** /api/v2/playout-history-template-fields/ | 
-[**playoutHistoryTemplateFieldsDestroy()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsDestroy) | **DELETE** /api/v2/playout-history-template-fields/{id}/ | 
-[**playoutHistoryTemplateFieldsList()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsList) | **GET** /api/v2/playout-history-template-fields/ | 
-[**playoutHistoryTemplateFieldsPartialUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsPartialUpdate) | **PATCH** /api/v2/playout-history-template-fields/{id}/ | 
-[**playoutHistoryTemplateFieldsRetrieve()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsRetrieve) | **GET** /api/v2/playout-history-template-fields/{id}/ | 
-[**playoutHistoryTemplateFieldsUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsUpdate) | **PUT** /api/v2/playout-history-template-fields/{id}/ | 
+[**playoutHistoryTemplateFieldsCreate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsCreate) | **POST** /api/v2/playout-history-template-fields | 
+[**playoutHistoryTemplateFieldsDestroy()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsDestroy) | **DELETE** /api/v2/playout-history-template-fields/{id} | 
+[**playoutHistoryTemplateFieldsList()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsList) | **GET** /api/v2/playout-history-template-fields | 
+[**playoutHistoryTemplateFieldsPartialUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsPartialUpdate) | **PATCH** /api/v2/playout-history-template-fields/{id} | 
+[**playoutHistoryTemplateFieldsRetrieve()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsRetrieve) | **GET** /api/v2/playout-history-template-fields/{id} | 
+[**playoutHistoryTemplateFieldsUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsUpdate) | **PUT** /api/v2/playout-history-template-fields/{id} | 
 
 
 ## `playoutHistoryTemplateFieldsCreate()`

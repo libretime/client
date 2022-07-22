@@ -311,7 +311,7 @@ class PlayoutHistoryTemplatesApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-templates/';
+        $resourcePath = '/api/v2/playout-history-templates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class PlayoutHistoryTemplatesApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-templates/{id}/';
+        $resourcePath = '/api/v2/playout-history-templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class PlayoutHistoryTemplatesApi
     public function playoutHistoryTemplatesListRequest()
     {
 
-        $resourcePath = '/api/v2/playout-history-templates/';
+        $resourcePath = '/api/v2/playout-history-templates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class PlayoutHistoryTemplatesApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-templates/{id}/';
+        $resourcePath = '/api/v2/playout-history-templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class PlayoutHistoryTemplatesApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-templates/{id}/';
+        $resourcePath = '/api/v2/playout-history-templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class PlayoutHistoryTemplatesApi
             );
         }
 
-        $resourcePath = '/api/v2/playout-history-templates/{id}/';
+        $resourcePath = '/api/v2/playout-history-templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

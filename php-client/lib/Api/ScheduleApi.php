@@ -311,7 +311,7 @@ class ScheduleApi
             );
         }
 
-        $resourcePath = '/api/v2/schedule/';
+        $resourcePath = '/api/v2/schedule';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ScheduleApi
             );
         }
 
-        $resourcePath = '/api/v2/schedule/{id}/';
+        $resourcePath = '/api/v2/schedule/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -841,7 +841,7 @@ class ScheduleApi
     public function scheduleListRequest($broadcasted = null, $ends_after = null, $ends_before = null, $overbooked = null, $position_status = null, $starts_after = null, $starts_before = null)
     {
 
-        $resourcePath = '/api/v2/schedule/';
+        $resourcePath = '/api/v2/schedule';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1182,7 +1182,7 @@ class ScheduleApi
             );
         }
 
-        $resourcePath = '/api/v2/schedule/{id}/';
+        $resourcePath = '/api/v2/schedule/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1469,7 +1469,7 @@ class ScheduleApi
             );
         }
 
-        $resourcePath = '/api/v2/schedule/{id}/';
+        $resourcePath = '/api/v2/schedule/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1761,7 +1761,7 @@ class ScheduleApi
             );
         }
 
-        $resourcePath = '/api/v2/schedule/{id}/';
+        $resourcePath = '/api/v2/schedule/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

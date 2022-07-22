@@ -39,7 +39,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
         preferencesCreate: async (preference: Preference, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'preference' is not null or undefined
             assertParamExists('preferencesCreate', 'preference', preference)
-            const localVarPath = `/api/v2/preferences/`;
+            const localVarPath = `/api/v2/preferences`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
         preferencesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesDestroy', 'id', id)
-            const localVarPath = `/api/v2/preferences/{id}/`
+            const localVarPath = `/api/v2/preferences/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         preferencesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/preferences/`;
+            const localVarPath = `/api/v2/preferences`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
         preferencesPartialUpdate: async (id: number, patchedPreference?: PatchedPreference, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/preferences/{id}/`
+            const localVarPath = `/api/v2/preferences/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
         preferencesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesRetrieve', 'id', id)
-            const localVarPath = `/api/v2/preferences/{id}/`
+            const localVarPath = `/api/v2/preferences/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
             assertParamExists('preferencesUpdate', 'id', id)
             // verify required parameter 'preference' is not null or undefined
             assertParamExists('preferencesUpdate', 'preference', preference)
-            const localVarPath = `/api/v2/preferences/{id}/`
+            const localVarPath = `/api/v2/preferences/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

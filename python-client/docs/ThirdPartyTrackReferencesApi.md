@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**third_party_track_references_create**](ThirdPartyTrackReferencesApi.md#third_party_track_references_create) | **POST** /api/v2/third-party-track-references/ | 
-[**third_party_track_references_destroy**](ThirdPartyTrackReferencesApi.md#third_party_track_references_destroy) | **DELETE** /api/v2/third-party-track-references/{id}/ | 
-[**third_party_track_references_list**](ThirdPartyTrackReferencesApi.md#third_party_track_references_list) | **GET** /api/v2/third-party-track-references/ | 
-[**third_party_track_references_partial_update**](ThirdPartyTrackReferencesApi.md#third_party_track_references_partial_update) | **PATCH** /api/v2/third-party-track-references/{id}/ | 
-[**third_party_track_references_retrieve**](ThirdPartyTrackReferencesApi.md#third_party_track_references_retrieve) | **GET** /api/v2/third-party-track-references/{id}/ | 
-[**third_party_track_references_update**](ThirdPartyTrackReferencesApi.md#third_party_track_references_update) | **PUT** /api/v2/third-party-track-references/{id}/ | 
+[**third_party_track_references_create**](ThirdPartyTrackReferencesApi.md#third_party_track_references_create) | **POST** /api/v2/third-party-track-references | 
+[**third_party_track_references_destroy**](ThirdPartyTrackReferencesApi.md#third_party_track_references_destroy) | **DELETE** /api/v2/third-party-track-references/{id} | 
+[**third_party_track_references_list**](ThirdPartyTrackReferencesApi.md#third_party_track_references_list) | **GET** /api/v2/third-party-track-references | 
+[**third_party_track_references_partial_update**](ThirdPartyTrackReferencesApi.md#third_party_track_references_partial_update) | **PATCH** /api/v2/third-party-track-references/{id} | 
+[**third_party_track_references_retrieve**](ThirdPartyTrackReferencesApi.md#third_party_track_references_retrieve) | **GET** /api/v2/third-party-track-references/{id} | 
+[**third_party_track_references_update**](ThirdPartyTrackReferencesApi.md#third_party_track_references_update) | **PUT** /api/v2/third-party-track-references/{id} | 
 
 
 # **third_party_track_references_create**

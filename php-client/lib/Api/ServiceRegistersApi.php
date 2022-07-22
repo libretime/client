@@ -311,7 +311,7 @@ class ServiceRegistersApi
             );
         }
 
-        $resourcePath = '/api/v2/service-registers/';
+        $resourcePath = '/api/v2/service-registers';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ServiceRegistersApi
             );
         }
 
-        $resourcePath = '/api/v2/service-registers/{name}/';
+        $resourcePath = '/api/v2/service-registers/{name}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ServiceRegistersApi
     public function serviceRegistersListRequest()
     {
 
-        $resourcePath = '/api/v2/service-registers/';
+        $resourcePath = '/api/v2/service-registers';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ServiceRegistersApi
             );
         }
 
-        $resourcePath = '/api/v2/service-registers/{name}/';
+        $resourcePath = '/api/v2/service-registers/{name}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ServiceRegistersApi
             );
         }
 
-        $resourcePath = '/api/v2/service-registers/{name}/';
+        $resourcePath = '/api/v2/service-registers/{name}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ServiceRegistersApi
             );
         }
 
-        $resourcePath = '/api/v2/service-registers/{name}/';
+        $resourcePath = '/api/v2/service-registers/{name}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

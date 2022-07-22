@@ -39,7 +39,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
         librariesCreate: async (library: Library, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'library' is not null or undefined
             assertParamExists('librariesCreate', 'library', library)
-            const localVarPath = `/api/v2/libraries/`;
+            const localVarPath = `/api/v2/libraries`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
         librariesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesDestroy', 'id', id)
-            const localVarPath = `/api/v2/libraries/{id}/`
+            const localVarPath = `/api/v2/libraries/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         librariesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/libraries/`;
+            const localVarPath = `/api/v2/libraries`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
         librariesPartialUpdate: async (id: number, patchedLibrary?: PatchedLibrary, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/libraries/{id}/`
+            const localVarPath = `/api/v2/libraries/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
         librariesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesRetrieve', 'id', id)
-            const localVarPath = `/api/v2/libraries/{id}/`
+            const localVarPath = `/api/v2/libraries/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
             assertParamExists('librariesUpdate', 'id', id)
             // verify required parameter 'library' is not null or undefined
             assertParamExists('librariesUpdate', 'library', library)
-            const localVarPath = `/api/v2/libraries/{id}/`
+            const localVarPath = `/api/v2/libraries/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

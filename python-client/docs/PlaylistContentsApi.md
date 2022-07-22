@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playlist_contents_create**](PlaylistContentsApi.md#playlist_contents_create) | **POST** /api/v2/playlist-contents/ | 
-[**playlist_contents_destroy**](PlaylistContentsApi.md#playlist_contents_destroy) | **DELETE** /api/v2/playlist-contents/{id}/ | 
-[**playlist_contents_list**](PlaylistContentsApi.md#playlist_contents_list) | **GET** /api/v2/playlist-contents/ | 
-[**playlist_contents_partial_update**](PlaylistContentsApi.md#playlist_contents_partial_update) | **PATCH** /api/v2/playlist-contents/{id}/ | 
-[**playlist_contents_retrieve**](PlaylistContentsApi.md#playlist_contents_retrieve) | **GET** /api/v2/playlist-contents/{id}/ | 
-[**playlist_contents_update**](PlaylistContentsApi.md#playlist_contents_update) | **PUT** /api/v2/playlist-contents/{id}/ | 
+[**playlist_contents_create**](PlaylistContentsApi.md#playlist_contents_create) | **POST** /api/v2/playlist-contents | 
+[**playlist_contents_destroy**](PlaylistContentsApi.md#playlist_contents_destroy) | **DELETE** /api/v2/playlist-contents/{id} | 
+[**playlist_contents_list**](PlaylistContentsApi.md#playlist_contents_list) | **GET** /api/v2/playlist-contents | 
+[**playlist_contents_partial_update**](PlaylistContentsApi.md#playlist_contents_partial_update) | **PATCH** /api/v2/playlist-contents/{id} | 
+[**playlist_contents_retrieve**](PlaylistContentsApi.md#playlist_contents_retrieve) | **GET** /api/v2/playlist-contents/{id} | 
+[**playlist_contents_update**](PlaylistContentsApi.md#playlist_contents_update) | **PUT** /api/v2/playlist-contents/{id} | 
 
 
 # **playlist_contents_create**

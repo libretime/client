@@ -311,7 +311,7 @@ class ShowHostsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-hosts/';
+        $resourcePath = '/api/v2/show-hosts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class ShowHostsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-hosts/{id}/';
+        $resourcePath = '/api/v2/show-hosts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class ShowHostsApi
     public function showHostsListRequest()
     {
 
-        $resourcePath = '/api/v2/show-hosts/';
+        $resourcePath = '/api/v2/show-hosts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class ShowHostsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-hosts/{id}/';
+        $resourcePath = '/api/v2/show-hosts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class ShowHostsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-hosts/{id}/';
+        $resourcePath = '/api/v2/show-hosts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class ShowHostsApi
             );
         }
 
-        $resourcePath = '/api/v2/show-hosts/{id}/';
+        $resourcePath = '/api/v2/show-hosts/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

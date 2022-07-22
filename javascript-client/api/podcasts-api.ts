@@ -39,7 +39,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
         podcastsCreate: async (podcast: Podcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'podcast' is not null or undefined
             assertParamExists('podcastsCreate', 'podcast', podcast)
-            const localVarPath = `/api/v2/podcasts/`;
+            const localVarPath = `/api/v2/podcasts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
         podcastsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('podcastsDestroy', 'id', id)
-            const localVarPath = `/api/v2/podcasts/{id}/`
+            const localVarPath = `/api/v2/podcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
          * @throws {RequiredError}
          */
         podcastsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/podcasts/`;
+            const localVarPath = `/api/v2/podcasts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
         podcastsPartialUpdate: async (id: number, patchedPodcast?: PatchedPodcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('podcastsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/podcasts/{id}/`
+            const localVarPath = `/api/v2/podcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
         podcastsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('podcastsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/podcasts/{id}/`
+            const localVarPath = `/api/v2/podcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('podcastsUpdate', 'id', id)
             // verify required parameter 'podcast' is not null or undefined
             assertParamExists('podcastsUpdate', 'podcast', podcast)
-            const localVarPath = `/api/v2/podcasts/{id}/`
+            const localVarPath = `/api/v2/podcasts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

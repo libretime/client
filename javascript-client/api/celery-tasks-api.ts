@@ -39,7 +39,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
         celeryTasksCreate: async (celeryTask: CeleryTask, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'celeryTask' is not null or undefined
             assertParamExists('celeryTasksCreate', 'celeryTask', celeryTask)
-            const localVarPath = `/api/v2/celery-tasks/`;
+            const localVarPath = `/api/v2/celery-tasks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
         celeryTasksDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksDestroy', 'id', id)
-            const localVarPath = `/api/v2/celery-tasks/{id}/`
+            const localVarPath = `/api/v2/celery-tasks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @throws {RequiredError}
          */
         celeryTasksList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/celery-tasks/`;
+            const localVarPath = `/api/v2/celery-tasks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
         celeryTasksPartialUpdate: async (id: number, patchedCeleryTask?: PatchedCeleryTask, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/celery-tasks/{id}/`
+            const localVarPath = `/api/v2/celery-tasks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
         celeryTasksRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksRetrieve', 'id', id)
-            const localVarPath = `/api/v2/celery-tasks/{id}/`
+            const localVarPath = `/api/v2/celery-tasks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
             assertParamExists('celeryTasksUpdate', 'id', id)
             // verify required parameter 'celeryTask' is not null or undefined
             assertParamExists('celeryTasksUpdate', 'celeryTask', celeryTask)
-            const localVarPath = `/api/v2/celery-tasks/{id}/`
+            const localVarPath = `/api/v2/celery-tasks/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

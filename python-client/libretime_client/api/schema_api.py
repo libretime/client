@@ -41,7 +41,7 @@ class SchemaApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/schema/',
+                'endpoint_path': '/api/v2/schema',
                 'operation_id': 'schema_retrieve',
                 'http_method': 'GET',
                 'servers': None,

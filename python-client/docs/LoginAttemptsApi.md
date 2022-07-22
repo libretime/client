@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**login_attempts_create**](LoginAttemptsApi.md#login_attempts_create) | **POST** /api/v2/login-attempts/ | 
-[**login_attempts_destroy**](LoginAttemptsApi.md#login_attempts_destroy) | **DELETE** /api/v2/login-attempts/{ip}/ | 
-[**login_attempts_list**](LoginAttemptsApi.md#login_attempts_list) | **GET** /api/v2/login-attempts/ | 
-[**login_attempts_partial_update**](LoginAttemptsApi.md#login_attempts_partial_update) | **PATCH** /api/v2/login-attempts/{ip}/ | 
-[**login_attempts_retrieve**](LoginAttemptsApi.md#login_attempts_retrieve) | **GET** /api/v2/login-attempts/{ip}/ | 
-[**login_attempts_update**](LoginAttemptsApi.md#login_attempts_update) | **PUT** /api/v2/login-attempts/{ip}/ | 
+[**login_attempts_create**](LoginAttemptsApi.md#login_attempts_create) | **POST** /api/v2/login-attempts | 
+[**login_attempts_destroy**](LoginAttemptsApi.md#login_attempts_destroy) | **DELETE** /api/v2/login-attempts/{ip} | 
+[**login_attempts_list**](LoginAttemptsApi.md#login_attempts_list) | **GET** /api/v2/login-attempts | 
+[**login_attempts_partial_update**](LoginAttemptsApi.md#login_attempts_partial_update) | **PATCH** /api/v2/login-attempts/{ip} | 
+[**login_attempts_retrieve**](LoginAttemptsApi.md#login_attempts_retrieve) | **GET** /api/v2/login-attempts/{ip} | 
+[**login_attempts_update**](LoginAttemptsApi.md#login_attempts_update) | **PUT** /api/v2/login-attempts/{ip} | 
 
 
 # **login_attempts_create**

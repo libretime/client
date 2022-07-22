@@ -43,7 +43,7 @@ class ListenerCountsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/listener-counts/',
+                'endpoint_path': '/api/v2/listener-counts',
                 'operation_id': 'listener_counts_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ListenerCountsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/listener-counts/{id}/',
+                'endpoint_path': '/api/v2/listener-counts/{id}',
                 'operation_id': 'listener_counts_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ListenerCountsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/listener-counts/',
+                'endpoint_path': '/api/v2/listener-counts',
                 'operation_id': 'listener_counts_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ListenerCountsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/listener-counts/{id}/',
+                'endpoint_path': '/api/v2/listener-counts/{id}',
                 'operation_id': 'listener_counts_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ListenerCountsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/listener-counts/{id}/',
+                'endpoint_path': '/api/v2/listener-counts/{id}',
                 'operation_id': 'listener_counts_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ListenerCountsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/listener-counts/{id}/',
+                'endpoint_path': '/api/v2/listener-counts/{id}',
                 'operation_id': 'listener_counts_update',
                 'http_method': 'PUT',
                 'servers': None,

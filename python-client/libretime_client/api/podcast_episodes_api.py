@@ -43,7 +43,7 @@ class PodcastEpisodesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/podcast-episodes/',
+                'endpoint_path': '/api/v2/podcast-episodes',
                 'operation_id': 'podcast_episodes_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class PodcastEpisodesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/podcast-episodes/{id}/',
+                'endpoint_path': '/api/v2/podcast-episodes/{id}',
                 'operation_id': 'podcast_episodes_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class PodcastEpisodesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/podcast-episodes/',
+                'endpoint_path': '/api/v2/podcast-episodes',
                 'operation_id': 'podcast_episodes_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class PodcastEpisodesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/podcast-episodes/{id}/',
+                'endpoint_path': '/api/v2/podcast-episodes/{id}',
                 'operation_id': 'podcast_episodes_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class PodcastEpisodesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/podcast-episodes/{id}/',
+                'endpoint_path': '/api/v2/podcast-episodes/{id}',
                 'operation_id': 'podcast_episodes_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class PodcastEpisodesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/podcast-episodes/{id}/',
+                'endpoint_path': '/api/v2/podcast-episodes/{id}',
                 'operation_id': 'podcast_episodes_update',
                 'http_method': 'PUT',
                 'servers': None,

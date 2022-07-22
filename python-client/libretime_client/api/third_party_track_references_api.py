@@ -43,7 +43,7 @@ class ThirdPartyTrackReferencesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/third-party-track-references/',
+                'endpoint_path': '/api/v2/third-party-track-references',
                 'operation_id': 'third_party_track_references_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ThirdPartyTrackReferencesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/third-party-track-references/{id}/',
+                'endpoint_path': '/api/v2/third-party-track-references/{id}',
                 'operation_id': 'third_party_track_references_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ThirdPartyTrackReferencesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/third-party-track-references/',
+                'endpoint_path': '/api/v2/third-party-track-references',
                 'operation_id': 'third_party_track_references_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ThirdPartyTrackReferencesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/third-party-track-references/{id}/',
+                'endpoint_path': '/api/v2/third-party-track-references/{id}',
                 'operation_id': 'third_party_track_references_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ThirdPartyTrackReferencesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/third-party-track-references/{id}/',
+                'endpoint_path': '/api/v2/third-party-track-references/{id}',
                 'operation_id': 'third_party_track_references_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ThirdPartyTrackReferencesApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/third-party-track-references/{id}/',
+                'endpoint_path': '/api/v2/third-party-track-references/{id}',
                 'operation_id': 'third_party_track_references_update',
                 'http_method': 'PUT',
                 'servers': None,

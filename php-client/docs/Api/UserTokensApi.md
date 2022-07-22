@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userTokensCreate()**](UserTokensApi.md#userTokensCreate) | **POST** /api/v2/user-tokens/ | 
-[**userTokensDestroy()**](UserTokensApi.md#userTokensDestroy) | **DELETE** /api/v2/user-tokens/{id}/ | 
-[**userTokensList()**](UserTokensApi.md#userTokensList) | **GET** /api/v2/user-tokens/ | 
-[**userTokensPartialUpdate()**](UserTokensApi.md#userTokensPartialUpdate) | **PATCH** /api/v2/user-tokens/{id}/ | 
-[**userTokensRetrieve()**](UserTokensApi.md#userTokensRetrieve) | **GET** /api/v2/user-tokens/{id}/ | 
-[**userTokensUpdate()**](UserTokensApi.md#userTokensUpdate) | **PUT** /api/v2/user-tokens/{id}/ | 
+[**userTokensCreate()**](UserTokensApi.md#userTokensCreate) | **POST** /api/v2/user-tokens | 
+[**userTokensDestroy()**](UserTokensApi.md#userTokensDestroy) | **DELETE** /api/v2/user-tokens/{id} | 
+[**userTokensList()**](UserTokensApi.md#userTokensList) | **GET** /api/v2/user-tokens | 
+[**userTokensPartialUpdate()**](UserTokensApi.md#userTokensPartialUpdate) | **PATCH** /api/v2/user-tokens/{id} | 
+[**userTokensRetrieve()**](UserTokensApi.md#userTokensRetrieve) | **GET** /api/v2/user-tokens/{id} | 
+[**userTokensUpdate()**](UserTokensApi.md#userTokensUpdate) | **PUT** /api/v2/user-tokens/{id} | 
 
 
 ## `userTokensCreate()`

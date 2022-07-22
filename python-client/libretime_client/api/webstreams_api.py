@@ -43,7 +43,7 @@ class WebstreamsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/webstreams/',
+                'endpoint_path': '/api/v2/webstreams',
                 'operation_id': 'webstreams_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class WebstreamsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/webstreams/{id}/',
+                'endpoint_path': '/api/v2/webstreams/{id}',
                 'operation_id': 'webstreams_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class WebstreamsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/webstreams/',
+                'endpoint_path': '/api/v2/webstreams',
                 'operation_id': 'webstreams_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class WebstreamsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/webstreams/{id}/',
+                'endpoint_path': '/api/v2/webstreams/{id}',
                 'operation_id': 'webstreams_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class WebstreamsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/webstreams/{id}/',
+                'endpoint_path': '/api/v2/webstreams/{id}',
                 'operation_id': 'webstreams_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class WebstreamsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/webstreams/{id}/',
+                'endpoint_path': '/api/v2/webstreams/{id}',
                 'operation_id': 'webstreams_update',
                 'http_method': 'PUT',
                 'servers': None,

@@ -43,7 +43,7 @@ class ShowDaysApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-days/',
+                'endpoint_path': '/api/v2/show-days',
                 'operation_id': 'show_days_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class ShowDaysApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-days/{id}/',
+                'endpoint_path': '/api/v2/show-days/{id}',
                 'operation_id': 'show_days_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class ShowDaysApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-days/',
+                'endpoint_path': '/api/v2/show-days',
                 'operation_id': 'show_days_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class ShowDaysApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-days/{id}/',
+                'endpoint_path': '/api/v2/show-days/{id}',
                 'operation_id': 'show_days_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class ShowDaysApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-days/{id}/',
+                'endpoint_path': '/api/v2/show-days/{id}',
                 'operation_id': 'show_days_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class ShowDaysApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/show-days/{id}/',
+                'endpoint_path': '/api/v2/show-days/{id}',
                 'operation_id': 'show_days_update',
                 'http_method': 'PUT',
                 'servers': None,

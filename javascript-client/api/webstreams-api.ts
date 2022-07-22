@@ -39,7 +39,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
         webstreamsCreate: async (webstream: Webstream, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'webstream' is not null or undefined
             assertParamExists('webstreamsCreate', 'webstream', webstream)
-            const localVarPath = `/api/v2/webstreams/`;
+            const localVarPath = `/api/v2/webstreams`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
         webstreamsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsDestroy', 'id', id)
-            const localVarPath = `/api/v2/webstreams/{id}/`
+            const localVarPath = `/api/v2/webstreams/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @throws {RequiredError}
          */
         webstreamsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/webstreams/`;
+            const localVarPath = `/api/v2/webstreams`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
         webstreamsPartialUpdate: async (id: number, patchedWebstream?: PatchedWebstream, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/webstreams/{id}/`
+            const localVarPath = `/api/v2/webstreams/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
         webstreamsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/webstreams/{id}/`
+            const localVarPath = `/api/v2/webstreams/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('webstreamsUpdate', 'id', id)
             // verify required parameter 'webstream' is not null or undefined
             assertParamExists('webstreamsUpdate', 'webstream', webstream)
-            const localVarPath = `/api/v2/webstreams/{id}/`
+            const localVarPath = `/api/v2/webstreams/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

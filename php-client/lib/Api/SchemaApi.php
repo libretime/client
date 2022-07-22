@@ -310,7 +310,7 @@ class SchemaApi
     public function schemaRetrieveRequest($format = null, $lang = null)
     {
 
-        $resourcePath = '/api/v2/schema/';
+        $resourcePath = '/api/v2/schema';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -311,7 +311,7 @@ class StreamSettingsApi
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/';
+        $resourcePath = '/api/v2/stream-settings';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class StreamSettingsApi
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{key}/';
+        $resourcePath = '/api/v2/stream-settings/{key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class StreamSettingsApi
     public function streamSettingsListRequest()
     {
 
-        $resourcePath = '/api/v2/stream-settings/';
+        $resourcePath = '/api/v2/stream-settings';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class StreamSettingsApi
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{key}/';
+        $resourcePath = '/api/v2/stream-settings/{key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class StreamSettingsApi
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{key}/';
+        $resourcePath = '/api/v2/stream-settings/{key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class StreamSettingsApi
             );
         }
 
-        $resourcePath = '/api/v2/stream-settings/{key}/';
+        $resourcePath = '/api/v2/stream-settings/{key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

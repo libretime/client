@@ -43,7 +43,7 @@ class PlaylistContentsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlist-contents/',
+                'endpoint_path': '/api/v2/playlist-contents',
                 'operation_id': 'playlist_contents_create',
                 'http_method': 'POST',
                 'servers': None,
@@ -98,7 +98,7 @@ class PlaylistContentsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlist-contents/{id}/',
+                'endpoint_path': '/api/v2/playlist-contents/{id}',
                 'operation_id': 'playlist_contents_destroy',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -148,7 +148,7 @@ class PlaylistContentsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlist-contents/',
+                'endpoint_path': '/api/v2/playlist-contents',
                 'operation_id': 'playlist_contents_list',
                 'http_method': 'GET',
                 'servers': None,
@@ -193,7 +193,7 @@ class PlaylistContentsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlist-contents/{id}/',
+                'endpoint_path': '/api/v2/playlist-contents/{id}',
                 'operation_id': 'playlist_contents_partial_update',
                 'http_method': 'PATCH',
                 'servers': None,
@@ -253,7 +253,7 @@ class PlaylistContentsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlist-contents/{id}/',
+                'endpoint_path': '/api/v2/playlist-contents/{id}',
                 'operation_id': 'playlist_contents_retrieve',
                 'http_method': 'GET',
                 'servers': None,
@@ -305,7 +305,7 @@ class PlaylistContentsApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/playlist-contents/{id}/',
+                'endpoint_path': '/api/v2/playlist-contents/{id}',
                 'operation_id': 'playlist_contents_update',
                 'http_method': 'PUT',
                 'servers': None,

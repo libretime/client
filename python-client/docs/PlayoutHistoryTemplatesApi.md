@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**playout_history_templates_create**](PlayoutHistoryTemplatesApi.md#playout_history_templates_create) | **POST** /api/v2/playout-history-templates/ | 
-[**playout_history_templates_destroy**](PlayoutHistoryTemplatesApi.md#playout_history_templates_destroy) | **DELETE** /api/v2/playout-history-templates/{id}/ | 
-[**playout_history_templates_list**](PlayoutHistoryTemplatesApi.md#playout_history_templates_list) | **GET** /api/v2/playout-history-templates/ | 
-[**playout_history_templates_partial_update**](PlayoutHistoryTemplatesApi.md#playout_history_templates_partial_update) | **PATCH** /api/v2/playout-history-templates/{id}/ | 
-[**playout_history_templates_retrieve**](PlayoutHistoryTemplatesApi.md#playout_history_templates_retrieve) | **GET** /api/v2/playout-history-templates/{id}/ | 
-[**playout_history_templates_update**](PlayoutHistoryTemplatesApi.md#playout_history_templates_update) | **PUT** /api/v2/playout-history-templates/{id}/ | 
+[**playout_history_templates_create**](PlayoutHistoryTemplatesApi.md#playout_history_templates_create) | **POST** /api/v2/playout-history-templates | 
+[**playout_history_templates_destroy**](PlayoutHistoryTemplatesApi.md#playout_history_templates_destroy) | **DELETE** /api/v2/playout-history-templates/{id} | 
+[**playout_history_templates_list**](PlayoutHistoryTemplatesApi.md#playout_history_templates_list) | **GET** /api/v2/playout-history-templates | 
+[**playout_history_templates_partial_update**](PlayoutHistoryTemplatesApi.md#playout_history_templates_partial_update) | **PATCH** /api/v2/playout-history-templates/{id} | 
+[**playout_history_templates_retrieve**](PlayoutHistoryTemplatesApi.md#playout_history_templates_retrieve) | **GET** /api/v2/playout-history-templates/{id} | 
+[**playout_history_templates_update**](PlayoutHistoryTemplatesApi.md#playout_history_templates_update) | **PUT** /api/v2/playout-history-templates/{id} | 
 
 
 # **playout_history_templates_create**

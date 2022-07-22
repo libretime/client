@@ -311,7 +311,7 @@ class SmartBlocksApi
             );
         }
 
-        $resourcePath = '/api/v2/smart-blocks/';
+        $resourcePath = '/api/v2/smart-blocks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -536,7 +536,7 @@ class SmartBlocksApi
             );
         }
 
-        $resourcePath = '/api/v2/smart-blocks/{id}/';
+        $resourcePath = '/api/v2/smart-blocks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -806,7 +806,7 @@ class SmartBlocksApi
     public function smartBlocksListRequest()
     {
 
-        $resourcePath = '/api/v2/smart-blocks/';
+        $resourcePath = '/api/v2/smart-blocks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1084,7 +1084,7 @@ class SmartBlocksApi
             );
         }
 
-        $resourcePath = '/api/v2/smart-blocks/{id}/';
+        $resourcePath = '/api/v2/smart-blocks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1371,7 +1371,7 @@ class SmartBlocksApi
             );
         }
 
-        $resourcePath = '/api/v2/smart-blocks/{id}/';
+        $resourcePath = '/api/v2/smart-blocks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1663,7 @@ class SmartBlocksApi
             );
         }
 
-        $resourcePath = '/api/v2/smart-blocks/{id}/';
+        $resourcePath = '/api/v2/smart-blocks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

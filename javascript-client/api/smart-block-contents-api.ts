@@ -39,7 +39,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
         smartBlockContentsCreate: async (smartBlockContent: SmartBlockContent, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'smartBlockContent' is not null or undefined
             assertParamExists('smartBlockContentsCreate', 'smartBlockContent', smartBlockContent)
-            const localVarPath = `/api/v2/smart-block-contents/`;
+            const localVarPath = `/api/v2/smart-block-contents`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -80,7 +80,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
         smartBlockContentsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsDestroy', 'id', id)
-            const localVarPath = `/api/v2/smart-block-contents/{id}/`
+            const localVarPath = `/api/v2/smart-block-contents/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,7 +116,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @throws {RequiredError}
          */
         smartBlockContentsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/v2/smart-block-contents/`;
+            const localVarPath = `/api/v2/smart-block-contents`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -155,7 +155,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
         smartBlockContentsPartialUpdate: async (id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsPartialUpdate', 'id', id)
-            const localVarPath = `/api/v2/smart-block-contents/{id}/`
+            const localVarPath = `/api/v2/smart-block-contents/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -197,7 +197,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
         smartBlockContentsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsRetrieve', 'id', id)
-            const localVarPath = `/api/v2/smart-block-contents/{id}/`
+            const localVarPath = `/api/v2/smart-block-contents/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -239,7 +239,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
             assertParamExists('smartBlockContentsUpdate', 'id', id)
             // verify required parameter 'smartBlockContent' is not null or undefined
             assertParamExists('smartBlockContentsUpdate', 'smartBlockContent', smartBlockContent)
-            const localVarPath = `/api/v2/smart-block-contents/{id}/`
+            const localVarPath = `/api/v2/smart-block-contents/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);

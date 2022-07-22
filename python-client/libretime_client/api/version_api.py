@@ -42,7 +42,7 @@ class VersionApi(object):
                     'basicAuth',
                     'cookieAuth'
                 ],
-                'endpoint_path': '/api/v2/version/',
+                'endpoint_path': '/api/v2/version',
                 'operation_id': 'version_retrieve',
                 'http_method': 'GET',
                 'servers': None,

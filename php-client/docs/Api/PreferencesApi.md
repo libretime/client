@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**preferencesCreate()**](PreferencesApi.md#preferencesCreate) | **POST** /api/v2/preferences/ | 
-[**preferencesDestroy()**](PreferencesApi.md#preferencesDestroy) | **DELETE** /api/v2/preferences/{id}/ | 
-[**preferencesList()**](PreferencesApi.md#preferencesList) | **GET** /api/v2/preferences/ | 
-[**preferencesPartialUpdate()**](PreferencesApi.md#preferencesPartialUpdate) | **PATCH** /api/v2/preferences/{id}/ | 
-[**preferencesRetrieve()**](PreferencesApi.md#preferencesRetrieve) | **GET** /api/v2/preferences/{id}/ | 
-[**preferencesUpdate()**](PreferencesApi.md#preferencesUpdate) | **PUT** /api/v2/preferences/{id}/ | 
+[**preferencesCreate()**](PreferencesApi.md#preferencesCreate) | **POST** /api/v2/preferences | 
+[**preferencesDestroy()**](PreferencesApi.md#preferencesDestroy) | **DELETE** /api/v2/preferences/{id} | 
+[**preferencesList()**](PreferencesApi.md#preferencesList) | **GET** /api/v2/preferences | 
+[**preferencesPartialUpdate()**](PreferencesApi.md#preferencesPartialUpdate) | **PATCH** /api/v2/preferences/{id} | 
+[**preferencesRetrieve()**](PreferencesApi.md#preferencesRetrieve) | **GET** /api/v2/preferences/{id} | 
+[**preferencesUpdate()**](PreferencesApi.md#preferencesUpdate) | **PUT** /api/v2/preferences/{id} | 
 
 
 ## `preferencesCreate()`

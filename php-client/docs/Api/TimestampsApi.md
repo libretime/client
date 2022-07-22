@@ -4,12 +4,12 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**timestampsCreate()**](TimestampsApi.md#timestampsCreate) | **POST** /api/v2/timestamps/ | 
-[**timestampsDestroy()**](TimestampsApi.md#timestampsDestroy) | **DELETE** /api/v2/timestamps/{id}/ | 
-[**timestampsList()**](TimestampsApi.md#timestampsList) | **GET** /api/v2/timestamps/ | 
-[**timestampsPartialUpdate()**](TimestampsApi.md#timestampsPartialUpdate) | **PATCH** /api/v2/timestamps/{id}/ | 
-[**timestampsRetrieve()**](TimestampsApi.md#timestampsRetrieve) | **GET** /api/v2/timestamps/{id}/ | 
-[**timestampsUpdate()**](TimestampsApi.md#timestampsUpdate) | **PUT** /api/v2/timestamps/{id}/ | 
+[**timestampsCreate()**](TimestampsApi.md#timestampsCreate) | **POST** /api/v2/timestamps | 
+[**timestampsDestroy()**](TimestampsApi.md#timestampsDestroy) | **DELETE** /api/v2/timestamps/{id} | 
+[**timestampsList()**](TimestampsApi.md#timestampsList) | **GET** /api/v2/timestamps | 
+[**timestampsPartialUpdate()**](TimestampsApi.md#timestampsPartialUpdate) | **PATCH** /api/v2/timestamps/{id} | 
+[**timestampsRetrieve()**](TimestampsApi.md#timestampsRetrieve) | **GET** /api/v2/timestamps/{id} | 
+[**timestampsUpdate()**](TimestampsApi.md#timestampsUpdate) | **PUT** /api/v2/timestamps/{id} | 
 
 
 ## `timestampsCreate()`
