@@ -60,7 +60,7 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'item_url' => 'string',
-        'value' => 'string',
+        'raw_value' => 'string',
         'type' => 'string'
     ];
 
@@ -73,7 +73,7 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'item_url' => 'uri',
-        'value' => null,
+        'raw_value' => null,
         'type' => null
     ];
 
@@ -105,7 +105,7 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'item_url' => 'item_url',
-        'value' => 'value',
+        'raw_value' => 'raw_value',
         'type' => 'type'
     ];
 
@@ -116,7 +116,7 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'item_url' => 'setItemUrl',
-        'value' => 'setValue',
+        'raw_value' => 'setRawValue',
         'type' => 'setType'
     ];
 
@@ -127,7 +127,7 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'item_url' => 'getItemUrl',
-        'value' => 'getValue',
+        'raw_value' => 'getRawValue',
         'type' => 'getType'
     ];
 
@@ -189,7 +189,7 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->container['item_url'] = $data['item_url'] ?? null;
-        $this->container['value'] = $data['value'] ?? null;
+        $this->container['raw_value'] = $data['raw_value'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
     }
 
@@ -205,8 +205,8 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['item_url'] === null) {
             $invalidProperties[] = "'item_url' can't be null";
         }
-        if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
-            $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
+        if (!is_null($this->container['raw_value']) && (mb_strlen($this->container['raw_value']) > 255)) {
+            $invalidProperties[] = "invalid value for 'raw_value', the character length must be smaller than or equal to 255.";
         }
 
         if ($this->container['type'] === null) {
@@ -256,29 +256,29 @@ class StreamSetting implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets value
+     * Gets raw_value
      *
      * @return string|null
      */
-    public function getValue()
+    public function getRawValue()
     {
-        return $this->container['value'];
+        return $this->container['raw_value'];
     }
 
     /**
-     * Sets value
+     * Sets raw_value
      *
-     * @param string|null $value value
+     * @param string|null $raw_value raw_value
      *
      * @return self
      */
-    public function setValue($value)
+    public function setRawValue($raw_value)
     {
-        if (!is_null($value) && (mb_strlen($value) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $value when calling StreamSetting., must be smaller than or equal to 255.');
+        if (!is_null($raw_value) && (mb_strlen($raw_value) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $raw_value when calling StreamSetting., must be smaller than or equal to 255.');
         }
 
-        $this->container['value'] = $value;
+        $this->container['raw_value'] = $raw_value;
 
         return $this;
     }

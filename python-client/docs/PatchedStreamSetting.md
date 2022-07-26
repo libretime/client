@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_url** | **str** |  | [optional] [readonly] 
-**value** | **str, none_type** |  | [optional] 
+**raw_value** | **str, none_type** |  | [optional] 
 **type** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

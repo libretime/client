@@ -31,7 +31,7 @@ export interface PatchedStreamSetting {
      * @type {string}
      * @memberof PatchedStreamSetting
      */
-    'value'?: string | null;
+    'raw_value'?: string | null;
     /**
      * 
      * @type {string}

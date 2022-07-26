@@ -31,7 +31,7 @@ export interface StreamSetting {
      * @type {string}
      * @memberof StreamSetting
      */
-    'value'?: string | null;
+    'raw_value'?: string | null;
     /**
      * 
      * @type {string}

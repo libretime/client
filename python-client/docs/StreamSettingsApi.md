@@ -56,7 +56,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     stream_setting = StreamSetting(
-        value="value_example",
+        raw_value="raw_value_example",
         type="type_example",
     ) # StreamSetting | 
 
@@ -301,7 +301,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     key = "key_example" # str | A unique value identifying this stream setting.
     patched_stream_setting = PatchedStreamSetting(
-        value="value_example",
+        raw_value="raw_value_example",
         type="type_example",
     ) # PatchedStreamSetting |  (optional)
 
@@ -478,7 +478,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = stream_settings_api.StreamSettingsApi(api_client)
     key = "key_example" # str | A unique value identifying this stream setting.
     stream_setting = StreamSetting(
-        value="value_example",
+        raw_value="raw_value_example",
         type="type_example",
     ) # StreamSetting | 
 

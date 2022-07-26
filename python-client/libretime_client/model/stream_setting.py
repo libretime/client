@@ -61,7 +61,7 @@ class StreamSetting(ModelNormal):
         ('type',): {
             'max_length': 16,
         },
-        ('value',): {
+        ('raw_value',): {
             'max_length': 255,
         },
     }
@@ -89,7 +89,7 @@ class StreamSetting(ModelNormal):
         return {
             'item_url': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
-            'value': (str, none_type,),  # noqa: E501
+            'raw_value': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -100,7 +100,7 @@ class StreamSetting(ModelNormal):
     attribute_map = {
         'item_url': 'item_url',  # noqa: E501
         'type': 'type',  # noqa: E501
-        'value': 'value',  # noqa: E501
+        'raw_value': 'raw_value',  # noqa: E501
     }
 
     read_only_vars = {
@@ -149,7 +149,7 @@ class StreamSetting(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            value (str, none_type): [optional]  # noqa: E501
+            raw_value (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,7 +239,7 @@ class StreamSetting(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            value (str, none_type): [optional]  # noqa: E501
+            raw_value (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
