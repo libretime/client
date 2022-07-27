@@ -90,14 +90,14 @@ class PodcastEpisode(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'published_at': (datetime,),  # noqa: E501
             'download_url': (str,),  # noqa: E501
             'episode_guid': (str,),  # noqa: E501
             'episode_title': (str,),  # noqa: E501
             'episode_description': (str,),  # noqa: E501
-            'podcast': (str,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
+            'podcast': (int,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -106,7 +106,7 @@ class PodcastEpisode(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'published_at': 'published_at',  # noqa: E501
         'download_url': 'download_url',  # noqa: E501
         'episode_guid': 'episode_guid',  # noqa: E501
@@ -117,24 +117,24 @@ class PodcastEpisode(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, published_at, download_url, episode_guid, episode_title, episode_description, podcast, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, published_at, download_url, episode_guid, episode_title, episode_description, podcast, *args, **kwargs):  # noqa: E501
         """PodcastEpisode - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             published_at (datetime):
             download_url (str):
             episode_guid (str):
             episode_title (str):
             episode_description (str):
-            podcast (str):
+            podcast (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -167,7 +167,7 @@ class PodcastEpisode(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -199,7 +199,7 @@ class PodcastEpisode(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.published_at = published_at
         self.download_url = download_url
         self.episode_guid = episode_guid
@@ -234,7 +234,7 @@ class PodcastEpisode(ModelNormal):
             episode_guid (str):
             episode_title (str):
             episode_description (str):
-            podcast (str):
+            podcast (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -267,7 +267,7 @@ class PodcastEpisode(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

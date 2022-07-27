@@ -22,12 +22,6 @@
 export interface Webstream {
     /**
      * 
-     * @type {string}
-     * @memberof Webstream
-     */
-    'item_url': string;
-    /**
-     * 
      * @type {number}
      * @memberof Webstream
      */
@@ -82,9 +76,9 @@ export interface Webstream {
     'mime'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Webstream
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

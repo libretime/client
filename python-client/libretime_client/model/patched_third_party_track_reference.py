@@ -90,12 +90,12 @@ class PatchedThirdPartyTrackReference(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'service': (str,),  # noqa: E501
             'foreign_id': (str, none_type,),  # noqa: E501
             'upload_time': (datetime, none_type,),  # noqa: E501
             'status': (str, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -104,7 +104,7 @@ class PatchedThirdPartyTrackReference(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'service': 'service',  # noqa: E501
         'foreign_id': 'foreign_id',  # noqa: E501
         'upload_time': 'upload_time',  # noqa: E501
@@ -113,7 +113,7 @@ class PatchedThirdPartyTrackReference(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -154,12 +154,12 @@ class PatchedThirdPartyTrackReference(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             service (str): [optional]  # noqa: E501
             foreign_id (str, none_type): [optional]  # noqa: E501
             upload_time (datetime, none_type): [optional]  # noqa: E501
             status (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,12 +245,12 @@ class PatchedThirdPartyTrackReference(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             service (str): [optional]  # noqa: E501
             foreign_id (str, none_type): [optional]  # noqa: E501
             upload_time (datetime, none_type): [optional]  # noqa: E501
             status (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

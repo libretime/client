@@ -22,12 +22,6 @@
 export interface PatchedWebstream {
     /**
      * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
-    'item_url'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedWebstream
      */
@@ -82,9 +76,9 @@ export interface PatchedWebstream {
     'mime'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedWebstream
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

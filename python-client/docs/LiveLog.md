@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **str** |  | [readonly] 
+**id** | **int** |  | [readonly] 
 **state** | **str** |  | 
 **start_time** | **datetime** |  | 
 **end_time** | **datetime, none_type** |  | [optional] 

@@ -59,7 +59,7 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'name' => 'string',
         'ip' => 'string'
     ];
 
@@ -71,7 +71,7 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'name' => null,
         'ip' => null
     ];
 
@@ -102,7 +102,7 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'name' => 'name',
         'ip' => 'ip'
     ];
 
@@ -112,7 +112,7 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'name' => 'setName',
         'ip' => 'setIp'
     ];
 
@@ -122,7 +122,7 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'name' => 'getName',
         'ip' => 'getIp'
     ];
 
@@ -183,7 +183,7 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
         $this->container['ip'] = $data['ip'] ?? null;
     }
 
@@ -195,6 +195,10 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 32)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 32.";
+        }
 
         if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 45)) {
             $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 45.";
@@ -216,25 +220,29 @@ class PatchedServiceRegister implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_url
+     * Gets name
      *
      * @return string|null
      */
-    public function getItemUrl()
+    public function getName()
     {
-        return $this->container['item_url'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets item_url
+     * Sets name
      *
-     * @param string|null $item_url item_url
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setName($name)
     {
-        $this->container['item_url'] = $item_url;
+        if (!is_null($name) && (mb_strlen($name) > 32)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling PatchedServiceRegister., must be smaller than or equal to 32.');
+        }
+
+        $this->container['name'] = $name;
 
         return $this;
     }

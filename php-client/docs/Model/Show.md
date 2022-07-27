@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
 **id** | **int** |  | [readonly]
 **name** | **string** |  |
 **description** | **string** |  | [optional]
@@ -15,7 +14,7 @@ Name | Type | Description | Notes
 **background_color** | **string** |  | [optional]
 **linked** | **bool** |  |
 **linkable** | **bool** |  |
-**auto_playlist** | **string** |  | [optional]
+**auto_playlist** | **int** |  | [optional]
 **auto_playlist_enabled** | **bool** |  |
 **auto_playlist_repeat** | **bool** |  |
 

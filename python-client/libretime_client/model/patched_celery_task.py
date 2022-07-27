@@ -90,12 +90,12 @@ class PatchedCeleryTask(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'task_id': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'dispatch_time': (datetime, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'track_reference': (str,),  # noqa: E501
+            'track_reference': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -104,7 +104,7 @@ class PatchedCeleryTask(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'task_id': 'task_id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'dispatch_time': 'dispatch_time',  # noqa: E501
@@ -113,7 +113,7 @@ class PatchedCeleryTask(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -154,12 +154,12 @@ class PatchedCeleryTask(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             task_id (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             dispatch_time (datetime, none_type): [optional]  # noqa: E501
             status (str): [optional]  # noqa: E501
-            track_reference (str): [optional]  # noqa: E501
+            track_reference (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,12 +245,12 @@ class PatchedCeleryTask(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             task_id (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             dispatch_time (datetime, none_type): [optional]  # noqa: E501
             status (str): [optional]  # noqa: E501
-            track_reference (str): [optional]  # noqa: E501
+            track_reference (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

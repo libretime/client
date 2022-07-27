@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
 **url** | **string** |  |
 **title** | **string** |  |
 **creator** | **string** |  | [optional]
@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **itunes_subtitle** | **string** |  | [optional]
 **itunes_category** | **string** |  | [optional]
 **itunes_explicit** | **string** |  | [optional]
-**owner** | **string** |  | [optional]
+**owner** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -85,10 +85,10 @@ class ListenerCount(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'listener_count': (int,),  # noqa: E501
-            'timestamp': (str,),  # noqa: E501
-            'mount_name': (str,),  # noqa: E501
+            'timestamp': (int,),  # noqa: E501
+            'mount_name': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -97,28 +97,28 @@ class ListenerCount(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'listener_count': 'listener_count',  # noqa: E501
         'timestamp': 'timestamp',  # noqa: E501
         'mount_name': 'mount_name',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, listener_count, timestamp, mount_name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, listener_count, timestamp, mount_name, *args, **kwargs):  # noqa: E501
         """ListenerCount - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             listener_count (int):
-            timestamp (str):
-            mount_name (str):
+            timestamp (int):
+            mount_name (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -182,7 +182,7 @@ class ListenerCount(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.listener_count = listener_count
         self.timestamp = timestamp
         self.mount_name = mount_name
@@ -210,8 +210,8 @@ class ListenerCount(ModelNormal):
         """ListenerCount - a model defined in OpenAPI
 
             listener_count (int):
-            timestamp (str):
-            mount_name (str):
+            timestamp (int):
+            mount_name (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

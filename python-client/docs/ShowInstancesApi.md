@@ -57,8 +57,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_instances_api.ShowInstancesApi(api_client)
     show_instance = ShowInstance(
         created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        show="show_example",
-        instance="instance_example",
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ends_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         filled_time="filled_time_example",
@@ -68,7 +66,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         rebroadcast=-32768,
         auto_playlist_built=True,
         record_enabled=PatchedShowDaysRecordEnabled(None),
-        record_file="record_file_example",
+        show=1,
+        instance=1,
+        record_file=1,
     ) # ShowInstance | 
 
     # example passing only required values which don't have defaults set
@@ -313,8 +313,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this show instance.
     patched_show_instance = PatchedShowInstance(
         created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        show="show_example",
-        instance="instance_example",
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ends_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         filled_time="filled_time_example",
@@ -324,7 +322,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         rebroadcast=-32768,
         auto_playlist_built=True,
         record_enabled=PatchedShowDaysRecordEnabled(None),
-        record_file="record_file_example",
+        show=1,
+        instance=1,
+        record_file=1,
     ) # PatchedShowInstance |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -501,8 +501,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this show instance.
     show_instance = ShowInstance(
         created_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        show="show_example",
-        instance="instance_example",
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ends_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         filled_time="filled_time_example",
@@ -512,7 +510,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         rebroadcast=-32768,
         auto_playlist_built=True,
         record_enabled=PatchedShowDaysRecordEnabled(None),
-        record_file="record_file_example",
+        show=1,
+        instance=1,
+        record_file=1,
     ) # ShowInstance | 
 
     # example passing only required values which don't have defaults set

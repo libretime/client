@@ -59,13 +59,13 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'name' => 'string',
         'label' => 'string',
         'type' => 'string',
         'is_file_md' => 'bool',
         'position' => 'int',
-        'template' => 'string'
+        'template' => 'int'
     ];
 
     /**
@@ -76,13 +76,13 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'name' => null,
         'label' => null,
         'type' => null,
         'is_file_md' => null,
         'position' => null,
-        'template' => 'uri'
+        'template' => null
     ];
 
     /**
@@ -112,7 +112,7 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'name' => 'name',
         'label' => 'label',
         'type' => 'type',
@@ -127,7 +127,7 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'name' => 'setName',
         'label' => 'setLabel',
         'type' => 'setType',
@@ -142,7 +142,7 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'name' => 'getName',
         'label' => 'getLabel',
         'type' => 'getType',
@@ -208,7 +208,7 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
@@ -262,25 +262,25 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -428,7 +428,7 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
     /**
      * Gets template
      *
-     * @return string|null
+     * @return int|null
      */
     public function getTemplate()
     {
@@ -438,7 +438,7 @@ class PatchedPlayoutHistoryTemplateField implements ModelInterface, ArrayAccess,
     /**
      * Sets template
      *
-     * @param string|null $template template
+     * @param int|null $template template
      *
      * @return self
      */

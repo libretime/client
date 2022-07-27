@@ -25,7 +25,7 @@ export interface StreamSetting {
      * @type {string}
      * @memberof StreamSetting
      */
-    'item_url': string;
+    'key': string;
     /**
      * 
      * @type {string}

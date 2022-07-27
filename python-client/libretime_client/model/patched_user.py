@@ -112,7 +112,7 @@ class PatchedUser(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'role': (RoleEnum,),  # noqa: E501
             'username': (str,),  # noqa: E501
             'email': (str, none_type,),  # noqa: E501
@@ -132,7 +132,7 @@ class PatchedUser(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'role': 'role',  # noqa: E501
         'username': 'username',  # noqa: E501
         'email': 'email',  # noqa: E501
@@ -147,7 +147,7 @@ class PatchedUser(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -188,7 +188,7 @@ class PatchedUser(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             role (RoleEnum): [optional]  # noqa: E501
             username (str): [optional]  # noqa: E501
             email (str, none_type): [optional]  # noqa: E501
@@ -285,7 +285,7 @@ class PatchedUser(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             role (RoleEnum): [optional]  # noqa: E501
             username (str): [optional]  # noqa: E501
             email (str, none_type): [optional]  # noqa: E501

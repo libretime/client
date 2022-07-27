@@ -22,10 +22,10 @@
 export interface PatchedPodcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPodcast
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -106,9 +106,9 @@ export interface PatchedPodcast {
     'itunes_explicit'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPodcast
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

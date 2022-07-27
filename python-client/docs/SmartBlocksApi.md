@@ -62,7 +62,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         description="description_example",
         length="length_example",
         kind=PatchedSmartBlockKind(None),
-        owner="owner_example",
+        owner=1,
     ) # SmartBlock | 
 
     # example passing only required values which don't have defaults set
@@ -312,7 +312,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         description="description_example",
         length="length_example",
         kind=PatchedSmartBlockKind(None),
-        owner="owner_example",
+        owner=1,
     ) # PatchedSmartBlock |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -494,7 +494,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         description="description_example",
         length="length_example",
         kind=PatchedSmartBlockKind(None),
-        owner="owner_example",
+        owner=1,
     ) # SmartBlock | 
 
     # example passing only required values which don't have defaults set

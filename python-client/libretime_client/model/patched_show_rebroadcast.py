@@ -84,10 +84,10 @@ class PatchedShowRebroadcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'day_offset': (str,),  # noqa: E501
             'start_time': (str,),  # noqa: E501
-            'show': (str,),  # noqa: E501
+            'show': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -96,14 +96,14 @@ class PatchedShowRebroadcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'day_offset': 'day_offset',  # noqa: E501
         'start_time': 'start_time',  # noqa: E501
         'show': 'show',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -144,10 +144,10 @@ class PatchedShowRebroadcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             day_offset (str): [optional]  # noqa: E501
             start_time (str): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,10 +233,10 @@ class PatchedShowRebroadcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             day_offset (str): [optional]  # noqa: E501
             start_time (str): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

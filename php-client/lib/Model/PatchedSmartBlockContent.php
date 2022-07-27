@@ -59,7 +59,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'position' => 'int',
         'offset' => 'double',
         'length' => 'string',
@@ -67,8 +67,8 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
         'cue_out' => 'string',
         'fade_in' => 'string',
         'fade_out' => 'string',
-        'block' => 'string',
-        'file' => 'string'
+        'block' => 'int',
+        'file' => 'int'
     ];
 
     /**
@@ -79,7 +79,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'position' => null,
         'offset' => 'double',
         'length' => null,
@@ -87,8 +87,8 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
         'cue_out' => null,
         'fade_in' => 'time',
         'fade_out' => 'time',
-        'block' => 'uri',
-        'file' => 'uri'
+        'block' => null,
+        'file' => null
     ];
 
     /**
@@ -118,7 +118,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'position' => 'position',
         'offset' => 'offset',
         'length' => 'length',
@@ -136,7 +136,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'position' => 'setPosition',
         'offset' => 'setOffset',
         'length' => 'setLength',
@@ -154,7 +154,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'position' => 'getPosition',
         'offset' => 'getOffset',
         'length' => 'getLength',
@@ -223,7 +223,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
         $this->container['offset'] = $data['offset'] ?? null;
         $this->container['length'] = $data['length'] ?? null;
@@ -268,25 +268,25 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -470,7 +470,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets block
      *
-     * @return string|null
+     * @return int|null
      */
     public function getBlock()
     {
@@ -480,7 +480,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets block
      *
-     * @param string|null $block block
+     * @param int|null $block block
      *
      * @return self
      */
@@ -494,7 +494,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getFile()
     {
@@ -504,7 +504,7 @@ class PatchedSmartBlockContent implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets file
      *
-     * @param string|null $file file
+     * @param int|null $file file
      *
      * @return self
      */

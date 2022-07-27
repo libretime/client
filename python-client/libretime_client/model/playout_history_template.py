@@ -87,7 +87,7 @@ class PlayoutHistoryTemplate(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
@@ -98,24 +98,24 @@ class PlayoutHistoryTemplate(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, name, type, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, type, *args, **kwargs):  # noqa: E501
         """PlayoutHistoryTemplate - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             name (str):
             type (str):
 
@@ -181,7 +181,7 @@ class PlayoutHistoryTemplate(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.name = name
         self.type = type
         for var_name, var_value in kwargs.items():

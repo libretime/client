@@ -57,9 +57,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = schedule_api.ScheduleApi(api_client)
     schedule = Schedule(
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        instance="instance_example",
-        file="file_example",
-        stream="stream_example",
         length="length_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
@@ -68,6 +65,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         position_status=None,
         broadcasted=-32768,
         played=True,
+        instance=1,
+        file=1,
+        stream=1,
     ) # Schedule | 
 
     # example passing only required values which don't have defaults set
@@ -329,9 +329,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this schedule.
     patched_schedule = PatchedSchedule(
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        instance="instance_example",
-        file="file_example",
-        stream="stream_example",
         length="length_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
@@ -340,6 +337,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         position_status=None,
         broadcasted=-32768,
         played=True,
+        instance=1,
+        file=1,
+        stream=1,
     ) # PatchedSchedule |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -516,9 +516,6 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this schedule.
     schedule = Schedule(
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        instance="instance_example",
-        file="file_example",
-        stream="stream_example",
         length="length_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
@@ -527,6 +524,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         position_status=None,
         broadcasted=-32768,
         played=True,
+        instance=1,
+        file=1,
+        stream=1,
     ) # Schedule | 
 
     # example passing only required values which don't have defaults set

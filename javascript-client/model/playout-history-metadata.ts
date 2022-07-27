@@ -22,10 +22,10 @@
 export interface PlayoutHistoryMetadata {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistoryMetadata
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface PlayoutHistoryMetadata {
     'value': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistoryMetadata
      */
-    'history': string;
+    'history': number;
 }
 

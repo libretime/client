@@ -59,10 +59,10 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'day_offset' => 'string',
         'start_time' => 'string',
-        'show' => 'string'
+        'show' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'day_offset' => null,
         'start_time' => 'time',
-        'show' => 'uri'
+        'show' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'day_offset' => 'day_offset',
         'start_time' => 'start_time',
         'show' => 'show'
@@ -118,7 +118,7 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'day_offset' => 'setDayOffset',
         'start_time' => 'setStartTime',
         'show' => 'setShow'
@@ -130,7 +130,7 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'day_offset' => 'getDayOffset',
         'start_time' => 'getStartTime',
         'show' => 'getShow'
@@ -193,7 +193,7 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['day_offset'] = $data['day_offset'] ?? null;
         $this->container['start_time'] = $data['start_time'] ?? null;
         $this->container['show'] = $data['show'] ?? null;
@@ -228,25 +228,25 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -306,7 +306,7 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets show
      *
-     * @return string|null
+     * @return int|null
      */
     public function getShow()
     {
@@ -316,7 +316,7 @@ class PatchedShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets show
      *
-     * @param string|null $show show
+     * @param int|null $show show
      *
      * @return self
      */

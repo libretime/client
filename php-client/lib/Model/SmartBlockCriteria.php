@@ -59,13 +59,13 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'group' => 'int',
         'criteria' => 'string',
         'condition' => 'string',
         'value' => 'string',
         'extra' => 'string',
-        'block' => 'string'
+        'block' => 'int'
     ];
 
     /**
@@ -76,13 +76,13 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'group' => null,
         'criteria' => null,
         'condition' => null,
         'value' => null,
         'extra' => null,
-        'block' => 'uri'
+        'block' => null
     ];
 
     /**
@@ -112,7 +112,7 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'group' => 'group',
         'criteria' => 'criteria',
         'condition' => 'condition',
@@ -127,7 +127,7 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'group' => 'setGroup',
         'criteria' => 'setCriteria',
         'condition' => 'setCondition',
@@ -142,7 +142,7 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'group' => 'getGroup',
         'criteria' => 'getCriteria',
         'condition' => 'getCondition',
@@ -208,7 +208,7 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['group'] = $data['group'] ?? null;
         $this->container['criteria'] = $data['criteria'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
@@ -226,8 +226,8 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if (!is_null($this->container['group']) && ($this->container['group'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'group', must be smaller than or equal to 2147483647.";
@@ -281,25 +281,25 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -451,7 +451,7 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets block
      *
-     * @return string
+     * @return int
      */
     public function getBlock()
     {
@@ -461,7 +461,7 @@ class SmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets block
      *
-     * @param string $block block
+     * @param int $block block
      *
      * @return self
      */

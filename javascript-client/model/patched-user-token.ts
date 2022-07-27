@@ -22,10 +22,10 @@
 export interface PatchedUserToken {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedUserToken
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -46,9 +46,9 @@ export interface PatchedUserToken {
     'created'?: string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedUserToken
      */
-    'user'?: string;
+    'user'?: number;
 }
 

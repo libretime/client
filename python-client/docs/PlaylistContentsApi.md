@@ -64,10 +64,10 @@ with libretime_client.ApiClient(configuration) as api_client:
         cue_out="cue_out_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
-        playlist="playlist_example",
-        file="file_example",
-        stream="stream_example",
-        block="block_example",
+        playlist=1,
+        file=1,
+        stream=1,
+        block=1,
     ) # PlaylistContent | 
 
     # example passing only required values which don't have defaults set
@@ -319,10 +319,10 @@ with libretime_client.ApiClient(configuration) as api_client:
         cue_out="cue_out_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
-        playlist="playlist_example",
-        file="file_example",
-        stream="stream_example",
-        block="block_example",
+        playlist=1,
+        file=1,
+        stream=1,
+        block=1,
     ) # PatchedPlaylistContent |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -506,10 +506,10 @@ with libretime_client.ApiClient(configuration) as api_client:
         cue_out="cue_out_example",
         fade_in="fade_in_example",
         fade_out="fade_out_example",
-        playlist="playlist_example",
-        file="file_example",
-        stream="stream_example",
-        block="block_example",
+        playlist=1,
+        file=1,
+        stream=1,
+        block=1,
     ) # PlaylistContent | 
 
     # example passing only required values which don't have defaults set

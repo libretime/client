@@ -59,10 +59,10 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'listener_count' => 'int',
-        'timestamp' => 'string',
-        'mount_name' => 'string'
+        'timestamp' => 'int',
+        'mount_name' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'listener_count' => null,
-        'timestamp' => 'uri',
-        'mount_name' => 'uri'
+        'timestamp' => null,
+        'mount_name' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'listener_count' => 'listener_count',
         'timestamp' => 'timestamp',
         'mount_name' => 'mount_name'
@@ -118,7 +118,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'listener_count' => 'setListenerCount',
         'timestamp' => 'setTimestamp',
         'mount_name' => 'setMountName'
@@ -130,7 +130,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'listener_count' => 'getListenerCount',
         'timestamp' => 'getTimestamp',
         'mount_name' => 'getMountName'
@@ -193,7 +193,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['listener_count'] = $data['listener_count'] ?? null;
         $this->container['timestamp'] = $data['timestamp'] ?? null;
         $this->container['mount_name'] = $data['mount_name'] ?? null;
@@ -208,8 +208,8 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['listener_count'] === null) {
             $invalidProperties[] = "'listener_count' can't be null";
@@ -244,25 +244,25 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -302,7 +302,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets timestamp
      *
-     * @return string
+     * @return int
      */
     public function getTimestamp()
     {
@@ -312,7 +312,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timestamp
      *
-     * @param string $timestamp timestamp
+     * @param int $timestamp timestamp
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets mount_name
      *
-     * @return string
+     * @return int
      */
     public function getMountName()
     {
@@ -336,7 +336,7 @@ class ListenerCount implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets mount_name
      *
-     * @param string $mount_name mount_name
+     * @param int $mount_name mount_name
      *
      * @return self
      */

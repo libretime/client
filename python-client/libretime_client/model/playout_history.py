@@ -81,11 +81,11 @@ class PlayoutHistory(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'starts': (datetime,),  # noqa: E501
             'ends': (datetime, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
-            'instance': (str, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
+            'instance': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -94,7 +94,7 @@ class PlayoutHistory(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'starts': 'starts',  # noqa: E501
         'ends': 'ends',  # noqa: E501
         'file': 'file',  # noqa: E501
@@ -102,18 +102,18 @@ class PlayoutHistory(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, starts, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, starts, *args, **kwargs):  # noqa: E501
         """PlayoutHistory - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             starts (datetime):
 
         Keyword Args:
@@ -148,8 +148,8 @@ class PlayoutHistory(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             ends (datetime, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            instance (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -181,7 +181,7 @@ class PlayoutHistory(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.starts = starts
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -240,8 +240,8 @@ class PlayoutHistory(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             ends (datetime, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            instance (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

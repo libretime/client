@@ -59,7 +59,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
         'id' => 'int',
         'name' => 'string',
         'description' => 'string',
@@ -70,7 +69,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'background_color' => 'string',
         'linked' => 'bool',
         'linkable' => 'bool',
-        'auto_playlist' => 'string',
+        'auto_playlist' => 'int',
         'auto_playlist_enabled' => 'bool',
         'auto_playlist_repeat' => 'bool'
     ];
@@ -83,7 +82,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
         'id' => null,
         'name' => null,
         'description' => null,
@@ -94,7 +92,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'background_color' => null,
         'linked' => null,
         'linkable' => null,
-        'auto_playlist' => 'uri',
+        'auto_playlist' => null,
         'auto_playlist_enabled' => null,
         'auto_playlist_repeat' => null
     ];
@@ -126,7 +124,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
         'id' => 'id',
         'name' => 'name',
         'description' => 'description',
@@ -148,7 +145,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
         'id' => 'setId',
         'name' => 'setName',
         'description' => 'setDescription',
@@ -170,7 +166,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
         'id' => 'getId',
         'name' => 'getName',
         'description' => 'getDescription',
@@ -243,7 +238,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['description'] = $data['description'] ?? null;
@@ -310,30 +304,6 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets item_url
-     *
-     * @return string|null
-     */
-    public function getItemUrl()
-    {
-        return $this->container['item_url'];
-    }
-
-    /**
-     * Sets item_url
-     *
-     * @param string|null $item_url item_url
-     *
-     * @return self
-     */
-    public function setItemUrl($item_url)
-    {
-        $this->container['item_url'] = $item_url;
-
-        return $this;
-    }
 
     /**
      * Gets id
@@ -606,7 +576,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets auto_playlist
      *
-     * @return string|null
+     * @return int|null
      */
     public function getAutoPlaylist()
     {
@@ -616,7 +586,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets auto_playlist
      *
-     * @param string|null $auto_playlist auto_playlist
+     * @param int|null $auto_playlist auto_playlist
      *
      * @return self
      */

@@ -99,26 +99,21 @@ class Schedule(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'starts_at': (datetime,),  # noqa: E501
-            'ends_at': (datetime,),  # noqa: E501
-            'instance': (str,),  # noqa: E501
-            'instance_id': (int,),  # noqa: E501
-            'file_id': (int,),  # noqa: E501
-            'stream_id': (int,),  # noqa: E501
-            'cue_in': (str,),  # noqa: E501
             'cue_out': (str,),  # noqa: E501
+            'ends_at': (datetime,),  # noqa: E501
+            'starts_at': (datetime,),  # noqa: E501
+            'cue_in': (str,),  # noqa: E501
             'position': (int,),  # noqa: E501
             'broadcasted': (int,),  # noqa: E501
-            'overbooked': (bool,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
-            'stream': (str, none_type,),  # noqa: E501
+            'instance': (int,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
             'fade_in': (str, none_type,),  # noqa: E501
             'fade_out': (str, none_type,),  # noqa: E501
             'position_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'played': (bool, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
+            'stream': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -127,60 +122,45 @@ class Schedule(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'starts_at': 'starts_at',  # noqa: E501
-        'ends_at': 'ends_at',  # noqa: E501
-        'instance': 'instance',  # noqa: E501
-        'instance_id': 'instance_id',  # noqa: E501
-        'file_id': 'file_id',  # noqa: E501
-        'stream_id': 'stream_id',  # noqa: E501
-        'cue_in': 'cue_in',  # noqa: E501
         'cue_out': 'cue_out',  # noqa: E501
+        'ends_at': 'ends_at',  # noqa: E501
+        'starts_at': 'starts_at',  # noqa: E501
+        'cue_in': 'cue_in',  # noqa: E501
         'position': 'position',  # noqa: E501
         'broadcasted': 'broadcasted',  # noqa: E501
-        'overbooked': 'overbooked',  # noqa: E501
-        'file': 'file',  # noqa: E501
-        'stream': 'stream',  # noqa: E501
+        'instance': 'instance',  # noqa: E501
         'length': 'length',  # noqa: E501
         'fade_in': 'fade_in',  # noqa: E501
         'fade_out': 'fade_out',  # noqa: E501
         'position_status': 'position_status',  # noqa: E501
         'played': 'played',  # noqa: E501
+        'file': 'file',  # noqa: E501
+        'stream': 'stream',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
-        'ends_at',  # noqa: E501
-        'instance_id',  # noqa: E501
-        'file_id',  # noqa: E501
-        'stream_id',  # noqa: E501
         'cue_out',  # noqa: E501
-        'overbooked',  # noqa: E501
+        'ends_at',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, starts_at, ends_at, instance, instance_id, file_id, stream_id, cue_in, cue_out, position, broadcasted, overbooked, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, cue_out, ends_at, starts_at, cue_in, position, broadcasted, instance, *args, **kwargs):  # noqa: E501
         """Schedule - a model defined in OpenAPI
 
         Args:
-            item_url (str):
             id (int):
-            starts_at (datetime):
-            ends_at (datetime):
-            instance (str):
-            instance_id (int):
-            file_id (int):
-            stream_id (int):
-            cue_in (str):
             cue_out (str):
+            ends_at (datetime):
+            starts_at (datetime):
+            cue_in (str):
             position (int):
             broadcasted (int):
-            overbooked (bool):
+            instance (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -213,13 +193,13 @@ class Schedule(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file (str, none_type): [optional]  # noqa: E501
-            stream (str, none_type): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
             position_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             played (bool, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            stream (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,19 +231,14 @@ class Schedule(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
         self.id = id
-        self.starts_at = starts_at
-        self.ends_at = ends_at
-        self.instance = instance
-        self.instance_id = instance_id
-        self.file_id = file_id
-        self.stream_id = stream_id
-        self.cue_in = cue_in
         self.cue_out = cue_out
+        self.ends_at = ends_at
+        self.starts_at = starts_at
+        self.cue_in = cue_in
         self.position = position
         self.broadcasted = broadcasted
-        self.overbooked = overbooked
+        self.instance = instance
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -284,14 +259,15 @@ class Schedule(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, starts_at, instance, cue_in, position, broadcasted, *args, **kwargs):  # noqa: E501
+    def __init__(self, starts_at, cue_in, position, broadcasted, instance, *args, **kwargs):  # noqa: E501
         """Schedule - a model defined in OpenAPI
 
             starts_at (datetime):
-            instance (str):
             cue_in (str):
             position (int):
             broadcasted (int):
+            instance (int):
+
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -323,13 +299,13 @@ class Schedule(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            file (str, none_type): [optional]  # noqa: E501
-            stream (str, none_type): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
             position_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             played (bool, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            stream (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -360,10 +336,10 @@ class Schedule(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.starts_at = starts_at
-        self.instance = instance
         self.cue_in = cue_in
         self.position = position
         self.broadcasted = broadcasted
+        self.instance = instance
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

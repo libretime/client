@@ -22,10 +22,10 @@
 export interface PatchedPlayoutHistory {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistory
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -40,15 +40,15 @@ export interface PatchedPlayoutHistory {
     'ends'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistory
      */
-    'file'?: string | null;
+    'file'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistory
      */
-    'instance'?: string | null;
+    'instance'?: number | null;
 }
 

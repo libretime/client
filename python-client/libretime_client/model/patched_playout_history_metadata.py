@@ -87,10 +87,10 @@ class PatchedPlayoutHistoryMetadata(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'key': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
-            'history': (str,),  # noqa: E501
+            'history': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -99,14 +99,14 @@ class PatchedPlayoutHistoryMetadata(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'key': 'key',  # noqa: E501
         'value': 'value',  # noqa: E501
         'history': 'history',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -147,10 +147,10 @@ class PatchedPlayoutHistoryMetadata(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             key (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
-            history (str): [optional]  # noqa: E501
+            history (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,10 +236,10 @@ class PatchedPlayoutHistoryMetadata(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             key (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
-            history (str): [optional]  # noqa: E501
+            history (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

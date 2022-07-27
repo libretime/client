@@ -59,7 +59,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'position' => 'int',
         'offset' => 'double',
         'length' => 'string',
@@ -67,8 +67,8 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
         'cue_out' => 'string',
         'fade_in' => 'string',
         'fade_out' => 'string',
-        'block' => 'string',
-        'file' => 'string'
+        'block' => 'int',
+        'file' => 'int'
     ];
 
     /**
@@ -79,7 +79,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'position' => null,
         'offset' => 'double',
         'length' => null,
@@ -87,8 +87,8 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
         'cue_out' => null,
         'fade_in' => 'time',
         'fade_out' => 'time',
-        'block' => 'uri',
-        'file' => 'uri'
+        'block' => null,
+        'file' => null
     ];
 
     /**
@@ -118,7 +118,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'position' => 'position',
         'offset' => 'offset',
         'length' => 'length',
@@ -136,7 +136,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'position' => 'setPosition',
         'offset' => 'setOffset',
         'length' => 'setLength',
@@ -154,7 +154,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'position' => 'getPosition',
         'offset' => 'getOffset',
         'length' => 'getLength',
@@ -223,7 +223,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
         $this->container['offset'] = $data['offset'] ?? null;
         $this->container['length'] = $data['length'] ?? null;
@@ -244,8 +244,8 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if (!is_null($this->container['position']) && ($this->container['position'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'position', must be smaller than or equal to 2147483647.";
@@ -274,25 +274,25 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -476,7 +476,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets block
      *
-     * @return string|null
+     * @return int|null
      */
     public function getBlock()
     {
@@ -486,7 +486,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets block
      *
-     * @param string|null $block block
+     * @param int|null $block block
      *
      * @return self
      */
@@ -500,7 +500,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getFile()
     {
@@ -510,7 +510,7 @@ class SmartBlockContent implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets file
      *
-     * @param string|null $file file
+     * @param int|null $file file
      *
      * @return self
      */

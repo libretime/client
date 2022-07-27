@@ -58,7 +58,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | [optional]
+ **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  |
 
 ### Return type
 
@@ -383,7 +383,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ip** | **string**| A unique value identifying this login attempt. |
- **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | [optional]
+ **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  |
 
 ### Return type
 

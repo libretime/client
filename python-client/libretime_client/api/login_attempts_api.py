@@ -52,7 +52,9 @@ class LoginAttemptsApi(object):
                 'all': [
                     'login_attempt',
                 ],
-                'required': [],
+                'required': [
+                    'login_attempt',
+                ],
                 'nullable': [
                 ],
                 'enum': [
@@ -315,6 +317,7 @@ class LoginAttemptsApi(object):
                 ],
                 'required': [
                     'ip',
+                    'login_attempt',
                 ],
                 'nullable': [
                 ],
@@ -359,6 +362,7 @@ class LoginAttemptsApi(object):
 
     def login_attempts_create(
         self,
+        login_attempt,
         **kwargs
     ):
         """login_attempts_create  # noqa: E501
@@ -366,12 +370,13 @@ class LoginAttemptsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.login_attempts_create(async_req=True)
+        >>> thread = api.login_attempts_create(login_attempt, async_req=True)
         >>> result = thread.get()
 
+        Args:
+            login_attempt (LoginAttempt):
 
         Keyword Args:
-            login_attempt (LoginAttempt): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -433,6 +438,8 @@ class LoginAttemptsApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        kwargs['login_attempt'] = \
+            login_attempt
         return self.login_attempts_create_endpoint.call_with_http_info(**kwargs)
 
     def login_attempts_destroy(
@@ -762,6 +769,7 @@ class LoginAttemptsApi(object):
     def login_attempts_update(
         self,
         ip,
+        login_attempt,
         **kwargs
     ):
         """login_attempts_update  # noqa: E501
@@ -769,14 +777,14 @@ class LoginAttemptsApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.login_attempts_update(ip, async_req=True)
+        >>> thread = api.login_attempts_update(ip, login_attempt, async_req=True)
         >>> result = thread.get()
 
         Args:
             ip (str): A unique value identifying this login attempt.
+            login_attempt (LoginAttempt):
 
         Keyword Args:
-            login_attempt (LoginAttempt): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -840,5 +848,7 @@ class LoginAttemptsApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['ip'] = \
             ip
+        kwargs['login_attempt'] = \
+            login_attempt
         return self.login_attempts_update_endpoint.call_with_http_info(**kwargs)
 

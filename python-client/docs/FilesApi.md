@@ -118,9 +118,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         report_datetime="report_datetime_example",
         report_location="report_location_example",
         report_organization="report_organization_example",
-        library="library_example",
-        owner="owner_example",
-        edited_by="edited_by_example",
+        library=1,
+        owner=1,
+        edited_by=1,
     ) # File | 
 
     # example passing only required values which don't have defaults set
@@ -507,9 +507,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         report_datetime="report_datetime_example",
         report_location="report_location_example",
         report_organization="report_organization_example",
-        library="library_example",
-        owner="owner_example",
-        edited_by="edited_by_example",
+        library=1,
+        owner=1,
+        edited_by=1,
     ) # PatchedFile |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -746,9 +746,9 @@ with libretime_client.ApiClient(configuration) as api_client:
         report_datetime="report_datetime_example",
         report_location="report_location_example",
         report_organization="report_organization_example",
-        library="library_example",
-        owner="owner_example",
-        edited_by="edited_by_example",
+        library=1,
+        owner=1,
+        edited_by=1,
     ) # File | 
 
     # example passing only required values which don't have defaults set

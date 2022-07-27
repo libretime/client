@@ -84,10 +84,10 @@ class PatchedWebstreamMetadata(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'starts_at': (datetime,),  # noqa: E501
             'data': (str,),  # noqa: E501
-            'schedule': (str,),  # noqa: E501
+            'schedule': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -96,14 +96,14 @@ class PatchedWebstreamMetadata(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'starts_at': 'starts_at',  # noqa: E501
         'data': 'data',  # noqa: E501
         'schedule': 'schedule',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -144,10 +144,10 @@ class PatchedWebstreamMetadata(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             starts_at (datetime): [optional]  # noqa: E501
             data (str): [optional]  # noqa: E501
-            schedule (str): [optional]  # noqa: E501
+            schedule (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,10 +233,10 @@ class PatchedWebstreamMetadata(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             starts_at (datetime): [optional]  # noqa: E501
             data (str): [optional]  # noqa: E501
-            schedule (str): [optional]  # noqa: E501
+            schedule (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

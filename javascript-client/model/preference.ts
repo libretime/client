@@ -22,10 +22,10 @@
 export interface Preference {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Preference
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface Preference {
     'value'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Preference
      */
-    'user': string | null;
+    'user': number | null;
 }
 

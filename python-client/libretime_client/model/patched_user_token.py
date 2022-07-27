@@ -87,11 +87,11 @@ class PatchedUserToken(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'action': (str,),  # noqa: E501
             'token': (str,),  # noqa: E501
             'created': (datetime,),  # noqa: E501
-            'user': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -100,7 +100,7 @@ class PatchedUserToken(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'action': 'action',  # noqa: E501
         'token': 'token',  # noqa: E501
         'created': 'created',  # noqa: E501
@@ -108,7 +108,7 @@ class PatchedUserToken(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -149,11 +149,11 @@ class PatchedUserToken(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             action (str): [optional]  # noqa: E501
             token (str): [optional]  # noqa: E501
             created (datetime): [optional]  # noqa: E501
-            user (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -239,11 +239,11 @@ class PatchedUserToken(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             action (str): [optional]  # noqa: E501
             token (str): [optional]  # noqa: E501
             created (datetime): [optional]  # noqa: E501
-            user (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

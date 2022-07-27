@@ -120,7 +120,7 @@ class Podcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'url': (str,),  # noqa: E501
             'title': (str,),  # noqa: E501
             'creator': (str, none_type,),  # noqa: E501
@@ -134,7 +134,7 @@ class Podcast(ModelNormal):
             'itunes_subtitle': (str, none_type,),  # noqa: E501
             'itunes_category': (str, none_type,),  # noqa: E501
             'itunes_explicit': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -143,7 +143,7 @@ class Podcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'url': 'url',  # noqa: E501
         'title': 'title',  # noqa: E501
         'creator': 'creator',  # noqa: E501
@@ -161,18 +161,18 @@ class Podcast(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, url, title, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, url, title, *args, **kwargs):  # noqa: E501
         """Podcast - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             url (str):
             title (str):
 
@@ -218,7 +218,7 @@ class Podcast(ModelNormal):
             itunes_subtitle (str, none_type): [optional]  # noqa: E501
             itunes_category (str, none_type): [optional]  # noqa: E501
             itunes_explicit (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -250,7 +250,7 @@ class Podcast(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.url = url
         self.title = title
         for var_name, var_value in kwargs.items():
@@ -321,7 +321,7 @@ class Podcast(ModelNormal):
             itunes_subtitle (str, none_type): [optional]  # noqa: E501
             itunes_category (str, none_type): [optional]  # noqa: E501
             itunes_explicit (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

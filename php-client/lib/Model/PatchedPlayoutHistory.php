@@ -59,11 +59,11 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'starts' => '\DateTime',
         'ends' => '\DateTime',
-        'file' => 'string',
-        'instance' => 'string'
+        'file' => 'int',
+        'instance' => 'int'
     ];
 
     /**
@@ -74,11 +74,11 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'starts' => 'date-time',
         'ends' => 'date-time',
-        'file' => 'uri',
-        'instance' => 'uri'
+        'file' => null,
+        'instance' => null
     ];
 
     /**
@@ -108,7 +108,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'starts' => 'starts',
         'ends' => 'ends',
         'file' => 'file',
@@ -121,7 +121,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'starts' => 'setStarts',
         'ends' => 'setEnds',
         'file' => 'setFile',
@@ -134,7 +134,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'starts' => 'getStarts',
         'ends' => 'getEnds',
         'file' => 'getFile',
@@ -198,7 +198,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['starts'] = $data['starts'] ?? null;
         $this->container['ends'] = $data['ends'] ?? null;
         $this->container['file'] = $data['file'] ?? null;
@@ -230,25 +230,25 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -304,7 +304,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getFile()
     {
@@ -314,7 +314,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets file
      *
-     * @param string|null $file file
+     * @param int|null $file file
      *
      * @return self
      */
@@ -328,7 +328,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets instance
      *
-     * @return string|null
+     * @return int|null
      */
     public function getInstance()
     {
@@ -338,7 +338,7 @@ class PatchedPlayoutHistory implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets instance
      *
-     * @param string|null $instance instance
+     * @param int|null $instance instance
      *
      * @return self
      */

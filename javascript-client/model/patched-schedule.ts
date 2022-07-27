@@ -23,12 +23,6 @@ import { PositionStatusEnum } from './position-status-enum';
 export interface PatchedSchedule {
     /**
      * 
-     * @type {string}
-     * @memberof PatchedSchedule
-     */
-    'item_url'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedSchedule
      */
@@ -38,7 +32,7 @@ export interface PatchedSchedule {
      * @type {string}
      * @memberof PatchedSchedule
      */
-    'starts_at'?: string;
+    'cue_out'?: string;
     /**
      * 
      * @type {string}
@@ -50,37 +44,7 @@ export interface PatchedSchedule {
      * @type {string}
      * @memberof PatchedSchedule
      */
-    'instance'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSchedule
-     */
-    'instance_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSchedule
-     */
-    'file'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSchedule
-     */
-    'file_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSchedule
-     */
-    'stream'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSchedule
-     */
-    'stream_id'?: number;
+    'starts_at'?: string;
     /**
      * 
      * @type {string}
@@ -107,12 +71,6 @@ export interface PatchedSchedule {
     'cue_in'?: string;
     /**
      * 
-     * @type {string}
-     * @memberof PatchedSchedule
-     */
-    'cue_out'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedSchedule
      */
@@ -137,9 +95,21 @@ export interface PatchedSchedule {
     'played'?: boolean | null;
     /**
      * 
-     * @type {boolean}
+     * @type {number}
      * @memberof PatchedSchedule
      */
-    'overbooked'?: boolean;
+    'instance'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedSchedule
+     */
+    'file'?: number | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedSchedule
+     */
+    'stream'?: number | null;
 }
 

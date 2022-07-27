@@ -22,10 +22,10 @@
 export interface WebstreamMetadata {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof WebstreamMetadata
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface WebstreamMetadata {
     'data': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof WebstreamMetadata
      */
-    'schedule': string;
+    'schedule': number;
 }
 

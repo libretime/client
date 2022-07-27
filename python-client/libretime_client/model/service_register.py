@@ -58,6 +58,9 @@ class ServiceRegister(ModelNormal):
     }
 
     validations = {
+        ('name',): {
+            'max_length': 32,
+        },
         ('ip',): {
             'max_length': 45,
         },
@@ -84,7 +87,7 @@ class ServiceRegister(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'name': (str,),  # noqa: E501
             'ip': (str,),  # noqa: E501
         }
 
@@ -94,23 +97,22 @@ class ServiceRegister(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'name': 'name',  # noqa: E501
         'ip': 'ip',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, ip, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, name, ip, *args, **kwargs):  # noqa: E501
         """ServiceRegister - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            name (str):
             ip (str):
 
         Keyword Args:
@@ -175,7 +177,7 @@ class ServiceRegister(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.name = name
         self.ip = ip
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -197,9 +199,11 @@ class ServiceRegister(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, ip, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, ip, *args, **kwargs):  # noqa: E501
         """ServiceRegister - a model defined in OpenAPI
 
+        Args:
+            name (str):
             ip (str):
 
         Keyword Args:
@@ -262,6 +266,7 @@ class ServiceRegister(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.name = name
         self.ip = ip
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

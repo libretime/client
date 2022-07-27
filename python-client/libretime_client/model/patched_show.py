@@ -102,7 +102,6 @@ class PatchedShow(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -113,7 +112,7 @@ class PatchedShow(ModelNormal):
             'background_color': (str, none_type,),  # noqa: E501
             'linked': (bool,),  # noqa: E501
             'linkable': (bool,),  # noqa: E501
-            'auto_playlist': (str, none_type,),  # noqa: E501
+            'auto_playlist': (int, none_type,),  # noqa: E501
             'auto_playlist_enabled': (bool,),  # noqa: E501
             'auto_playlist_repeat': (bool,),  # noqa: E501
         }
@@ -124,7 +123,6 @@ class PatchedShow(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -141,7 +139,6 @@ class PatchedShow(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
     }
 
@@ -183,7 +180,6 @@ class PatchedShow(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
@@ -194,7 +190,7 @@ class PatchedShow(ModelNormal):
             background_color (str, none_type): [optional]  # noqa: E501
             linked (bool): [optional]  # noqa: E501
             linkable (bool): [optional]  # noqa: E501
-            auto_playlist (str, none_type): [optional]  # noqa: E501
+            auto_playlist (int, none_type): [optional]  # noqa: E501
             auto_playlist_enabled (bool): [optional]  # noqa: E501
             auto_playlist_repeat (bool): [optional]  # noqa: E501
         """
@@ -282,7 +278,6 @@ class PatchedShow(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
@@ -293,7 +288,7 @@ class PatchedShow(ModelNormal):
             background_color (str, none_type): [optional]  # noqa: E501
             linked (bool): [optional]  # noqa: E501
             linkable (bool): [optional]  # noqa: E501
-            auto_playlist (str, none_type): [optional]  # noqa: E501
+            auto_playlist (int, none_type): [optional]  # noqa: E501
             auto_playlist_enabled (bool): [optional]  # noqa: E501
             auto_playlist_repeat (bool): [optional]  # noqa: E501
         """

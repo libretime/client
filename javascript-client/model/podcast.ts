@@ -22,10 +22,10 @@
 export interface Podcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Podcast
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -106,9 +106,9 @@ export interface Podcast {
     'itunes_explicit'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Podcast
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

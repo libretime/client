@@ -22,10 +22,10 @@
 export interface ThirdPartyTrackReference {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ThirdPartyTrackReference
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -52,9 +52,9 @@ export interface ThirdPartyTrackReference {
     'status'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ThirdPartyTrackReference
      */
-    'file'?: string | null;
+    'file'?: number | null;
 }
 

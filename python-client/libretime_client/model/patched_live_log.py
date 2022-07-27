@@ -84,7 +84,7 @@ class PatchedLiveLog(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'state': (str,),  # noqa: E501
             'start_time': (datetime,),  # noqa: E501
             'end_time': (datetime, none_type,),  # noqa: E501
@@ -96,14 +96,14 @@ class PatchedLiveLog(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'state': 'state',  # noqa: E501
         'start_time': 'start_time',  # noqa: E501
         'end_time': 'end_time',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -144,7 +144,7 @@ class PatchedLiveLog(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             state (str): [optional]  # noqa: E501
             start_time (datetime): [optional]  # noqa: E501
             end_time (datetime, none_type): [optional]  # noqa: E501
@@ -233,7 +233,7 @@ class PatchedLiveLog(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             state (str): [optional]  # noqa: E501
             start_time (datetime): [optional]  # noqa: E501
             end_time (datetime, none_type): [optional]  # noqa: E501

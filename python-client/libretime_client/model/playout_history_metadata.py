@@ -87,10 +87,10 @@ class PlayoutHistoryMetadata(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'key': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
-            'history': (str,),  # noqa: E501
+            'history': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -99,28 +99,28 @@ class PlayoutHistoryMetadata(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'key': 'key',  # noqa: E501
         'value': 'value',  # noqa: E501
         'history': 'history',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, key, value, history, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, key, value, history, *args, **kwargs):  # noqa: E501
         """PlayoutHistoryMetadata - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             key (str):
             value (str):
-            history (str):
+            history (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -184,7 +184,7 @@ class PlayoutHistoryMetadata(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.key = key
         self.value = value
         self.history = history
@@ -213,7 +213,7 @@ class PlayoutHistoryMetadata(ModelNormal):
 
             key (str):
             value (str):
-            history (str):
+            history (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

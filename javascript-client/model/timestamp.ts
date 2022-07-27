@@ -22,10 +22,10 @@
 export interface Timestamp {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Timestamp
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}

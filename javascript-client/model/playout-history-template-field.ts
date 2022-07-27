@@ -22,10 +22,10 @@
 export interface PlayoutHistoryTemplateField {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistoryTemplateField
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -58,9 +58,9 @@ export interface PlayoutHistoryTemplateField {
     'position': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistoryTemplateField
      */
-    'template': string;
+    'template': number;
 }
 

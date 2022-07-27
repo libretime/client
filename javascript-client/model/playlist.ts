@@ -22,10 +22,10 @@
 export interface Playlist {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Playlist
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -58,9 +58,9 @@ export interface Playlist {
     'length'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Playlist
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

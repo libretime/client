@@ -59,26 +59,21 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
         'id' => 'int',
-        'starts_at' => '\DateTime',
+        'cue_out' => 'string',
         'ends_at' => '\DateTime',
-        'instance' => 'string',
-        'instance_id' => 'int',
-        'file' => 'string',
-        'file_id' => 'int',
-        'stream' => 'string',
-        'stream_id' => 'int',
+        'starts_at' => '\DateTime',
         'length' => 'string',
         'fade_in' => 'string',
         'fade_out' => 'string',
         'cue_in' => 'string',
-        'cue_out' => 'string',
         'position' => 'int',
         'position_status' => 'PositionStatusEnum',
         'broadcasted' => 'int',
         'played' => 'bool',
-        'overbooked' => 'bool'
+        'instance' => 'int',
+        'file' => 'int',
+        'stream' => 'int'
     ];
 
     /**
@@ -89,26 +84,21 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
         'id' => null,
-        'starts_at' => 'date-time',
+        'cue_out' => null,
         'ends_at' => 'date-time',
-        'instance' => 'uri',
-        'instance_id' => null,
-        'file' => 'uri',
-        'file_id' => null,
-        'stream' => 'uri',
-        'stream_id' => null,
+        'starts_at' => 'date-time',
         'length' => null,
         'fade_in' => 'time',
         'fade_out' => 'time',
         'cue_in' => null,
-        'cue_out' => null,
         'position' => null,
         'position_status' => null,
         'broadcasted' => null,
         'played' => null,
-        'overbooked' => null
+        'instance' => null,
+        'file' => null,
+        'stream' => null
     ];
 
     /**
@@ -138,26 +128,21 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
         'id' => 'id',
-        'starts_at' => 'starts_at',
+        'cue_out' => 'cue_out',
         'ends_at' => 'ends_at',
-        'instance' => 'instance',
-        'instance_id' => 'instance_id',
-        'file' => 'file',
-        'file_id' => 'file_id',
-        'stream' => 'stream',
-        'stream_id' => 'stream_id',
+        'starts_at' => 'starts_at',
         'length' => 'length',
         'fade_in' => 'fade_in',
         'fade_out' => 'fade_out',
         'cue_in' => 'cue_in',
-        'cue_out' => 'cue_out',
         'position' => 'position',
         'position_status' => 'position_status',
         'broadcasted' => 'broadcasted',
         'played' => 'played',
-        'overbooked' => 'overbooked'
+        'instance' => 'instance',
+        'file' => 'file',
+        'stream' => 'stream'
     ];
 
     /**
@@ -166,26 +151,21 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
         'id' => 'setId',
-        'starts_at' => 'setStartsAt',
+        'cue_out' => 'setCueOut',
         'ends_at' => 'setEndsAt',
-        'instance' => 'setInstance',
-        'instance_id' => 'setInstanceId',
-        'file' => 'setFile',
-        'file_id' => 'setFileId',
-        'stream' => 'setStream',
-        'stream_id' => 'setStreamId',
+        'starts_at' => 'setStartsAt',
         'length' => 'setLength',
         'fade_in' => 'setFadeIn',
         'fade_out' => 'setFadeOut',
         'cue_in' => 'setCueIn',
-        'cue_out' => 'setCueOut',
         'position' => 'setPosition',
         'position_status' => 'setPositionStatus',
         'broadcasted' => 'setBroadcasted',
         'played' => 'setPlayed',
-        'overbooked' => 'setOverbooked'
+        'instance' => 'setInstance',
+        'file' => 'setFile',
+        'stream' => 'setStream'
     ];
 
     /**
@@ -194,26 +174,21 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
         'id' => 'getId',
-        'starts_at' => 'getStartsAt',
+        'cue_out' => 'getCueOut',
         'ends_at' => 'getEndsAt',
-        'instance' => 'getInstance',
-        'instance_id' => 'getInstanceId',
-        'file' => 'getFile',
-        'file_id' => 'getFileId',
-        'stream' => 'getStream',
-        'stream_id' => 'getStreamId',
+        'starts_at' => 'getStartsAt',
         'length' => 'getLength',
         'fade_in' => 'getFadeIn',
         'fade_out' => 'getFadeOut',
         'cue_in' => 'getCueIn',
-        'cue_out' => 'getCueOut',
         'position' => 'getPosition',
         'position_status' => 'getPositionStatus',
         'broadcasted' => 'getBroadcasted',
         'played' => 'getPlayed',
-        'overbooked' => 'getOverbooked'
+        'instance' => 'getInstance',
+        'file' => 'getFile',
+        'stream' => 'getStream'
     ];
 
     /**
@@ -273,26 +248,21 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['starts_at'] = $data['starts_at'] ?? null;
+        $this->container['cue_out'] = $data['cue_out'] ?? null;
         $this->container['ends_at'] = $data['ends_at'] ?? null;
-        $this->container['instance'] = $data['instance'] ?? null;
-        $this->container['instance_id'] = $data['instance_id'] ?? null;
-        $this->container['file'] = $data['file'] ?? null;
-        $this->container['file_id'] = $data['file_id'] ?? null;
-        $this->container['stream'] = $data['stream'] ?? null;
-        $this->container['stream_id'] = $data['stream_id'] ?? null;
+        $this->container['starts_at'] = $data['starts_at'] ?? null;
         $this->container['length'] = $data['length'] ?? null;
         $this->container['fade_in'] = $data['fade_in'] ?? null;
         $this->container['fade_out'] = $data['fade_out'] ?? null;
         $this->container['cue_in'] = $data['cue_in'] ?? null;
-        $this->container['cue_out'] = $data['cue_out'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
         $this->container['position_status'] = $data['position_status'] ?? null;
         $this->container['broadcasted'] = $data['broadcasted'] ?? null;
         $this->container['played'] = $data['played'] ?? null;
-        $this->container['overbooked'] = $data['overbooked'] ?? null;
+        $this->container['instance'] = $data['instance'] ?? null;
+        $this->container['file'] = $data['file'] ?? null;
+        $this->container['stream'] = $data['stream'] ?? null;
     }
 
     /**
@@ -344,30 +314,6 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
-     *
-     * @return string|null
-     */
-    public function getItemUrl()
-    {
-        return $this->container['item_url'];
-    }
-
-    /**
-     * Sets item_url
-     *
-     * @param string|null $item_url item_url
-     *
-     * @return self
-     */
-    public function setItemUrl($item_url)
-    {
-        $this->container['item_url'] = $item_url;
-
-        return $this;
-    }
-
-    /**
      * Gets id
      *
      * @return int|null
@@ -392,25 +338,25 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets starts_at
+     * Gets cue_out
      *
-     * @return \DateTime|null
+     * @return string|null
      */
-    public function getStartsAt()
+    public function getCueOut()
     {
-        return $this->container['starts_at'];
+        return $this->container['cue_out'];
     }
 
     /**
-     * Sets starts_at
+     * Sets cue_out
      *
-     * @param \DateTime|null $starts_at starts_at
+     * @param string|null $cue_out cue_out
      *
      * @return self
      */
-    public function setStartsAt($starts_at)
+    public function setCueOut($cue_out)
     {
-        $this->container['starts_at'] = $starts_at;
+        $this->container['cue_out'] = $cue_out;
 
         return $this;
     }
@@ -440,145 +386,25 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets instance
+     * Gets starts_at
      *
-     * @return string|null
+     * @return \DateTime|null
      */
-    public function getInstance()
+    public function getStartsAt()
     {
-        return $this->container['instance'];
+        return $this->container['starts_at'];
     }
 
     /**
-     * Sets instance
+     * Sets starts_at
      *
-     * @param string|null $instance instance
+     * @param \DateTime|null $starts_at starts_at
      *
      * @return self
      */
-    public function setInstance($instance)
+    public function setStartsAt($starts_at)
     {
-        $this->container['instance'] = $instance;
-
-        return $this;
-    }
-
-    /**
-     * Gets instance_id
-     *
-     * @return int|null
-     */
-    public function getInstanceId()
-    {
-        return $this->container['instance_id'];
-    }
-
-    /**
-     * Sets instance_id
-     *
-     * @param int|null $instance_id instance_id
-     *
-     * @return self
-     */
-    public function setInstanceId($instance_id)
-    {
-        $this->container['instance_id'] = $instance_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets file
-     *
-     * @return string|null
-     */
-    public function getFile()
-    {
-        return $this->container['file'];
-    }
-
-    /**
-     * Sets file
-     *
-     * @param string|null $file file
-     *
-     * @return self
-     */
-    public function setFile($file)
-    {
-        $this->container['file'] = $file;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_id
-     *
-     * @return int|null
-     */
-    public function getFileId()
-    {
-        return $this->container['file_id'];
-    }
-
-    /**
-     * Sets file_id
-     *
-     * @param int|null $file_id file_id
-     *
-     * @return self
-     */
-    public function setFileId($file_id)
-    {
-        $this->container['file_id'] = $file_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets stream
-     *
-     * @return string|null
-     */
-    public function getStream()
-    {
-        return $this->container['stream'];
-    }
-
-    /**
-     * Sets stream
-     *
-     * @param string|null $stream stream
-     *
-     * @return self
-     */
-    public function setStream($stream)
-    {
-        $this->container['stream'] = $stream;
-
-        return $this;
-    }
-
-    /**
-     * Gets stream_id
-     *
-     * @return int|null
-     */
-    public function getStreamId()
-    {
-        return $this->container['stream_id'];
-    }
-
-    /**
-     * Sets stream_id
-     *
-     * @param int|null $stream_id stream_id
-     *
-     * @return self
-     */
-    public function setStreamId($stream_id)
-    {
-        $this->container['stream_id'] = $stream_id;
+        $this->container['starts_at'] = $starts_at;
 
         return $this;
     }
@@ -675,30 +501,6 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCueIn($cue_in)
     {
         $this->container['cue_in'] = $cue_in;
-
-        return $this;
-    }
-
-    /**
-     * Gets cue_out
-     *
-     * @return string|null
-     */
-    public function getCueOut()
-    {
-        return $this->container['cue_out'];
-    }
-
-    /**
-     * Sets cue_out
-     *
-     * @param string|null $cue_out cue_out
-     *
-     * @return self
-     */
-    public function setCueOut($cue_out)
-    {
-        $this->container['cue_out'] = $cue_out;
 
         return $this;
     }
@@ -824,25 +626,73 @@ class PatchedSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets overbooked
+     * Gets instance
      *
-     * @return bool|null
+     * @return int|null
      */
-    public function getOverbooked()
+    public function getInstance()
     {
-        return $this->container['overbooked'];
+        return $this->container['instance'];
     }
 
     /**
-     * Sets overbooked
+     * Sets instance
      *
-     * @param bool|null $overbooked overbooked
+     * @param int|null $instance instance
      *
      * @return self
      */
-    public function setOverbooked($overbooked)
+    public function setInstance($instance)
     {
-        $this->container['overbooked'] = $overbooked;
+        $this->container['instance'] = $instance;
+
+        return $this;
+    }
+
+    /**
+     * Gets file
+     *
+     * @return int|null
+     */
+    public function getFile()
+    {
+        return $this->container['file'];
+    }
+
+    /**
+     * Sets file
+     *
+     * @param int|null $file file
+     *
+     * @return self
+     */
+    public function setFile($file)
+    {
+        $this->container['file'] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Gets stream
+     *
+     * @return int|null
+     */
+    public function getStream()
+    {
+        return $this->container['stream'];
+    }
+
+    /**
+     * Sets stream
+     *
+     * @param int|null $stream stream
+     *
+     * @return self
+     */
+    public function setStream($stream)
+    {
+        $this->container['stream'] = $stream;
 
         return $this;
     }

@@ -22,10 +22,10 @@
 export interface CeleryTask {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof CeleryTask
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -52,9 +52,9 @@ export interface CeleryTask {
     'status': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof CeleryTask
      */
-    'track_reference': string;
+    'track_reference': number;
 }
 

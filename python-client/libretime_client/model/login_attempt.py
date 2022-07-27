@@ -58,6 +58,9 @@ class LoginAttempt(ModelNormal):
     }
 
     validations = {
+        ('ip',): {
+            'max_length': 32,
+        },
         ('attempts',): {
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': -2147483648,
@@ -85,7 +88,7 @@ class LoginAttempt(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'ip': (str,),  # noqa: E501
             'attempts': (int, none_type,),  # noqa: E501
         }
 
@@ -95,23 +98,22 @@ class LoginAttempt(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'ip': 'ip',  # noqa: E501
         'attempts': 'attempts',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, ip, *args, **kwargs):  # noqa: E501
         """LoginAttempt - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            ip (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -176,7 +178,7 @@ class LoginAttempt(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.ip = ip
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -197,8 +199,11 @@ class LoginAttempt(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, *args, **kwargs):  # noqa: E501
+    def __init__(self, ip, *args, **kwargs):  # noqa: E501
         """LoginAttempt - a model defined in OpenAPI
+
+        Args:
+            ip (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -261,6 +266,7 @@ class LoginAttempt(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.ip = ip
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

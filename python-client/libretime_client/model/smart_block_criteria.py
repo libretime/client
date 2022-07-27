@@ -97,11 +97,11 @@ class SmartBlockCriteria(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'criteria': (str,),  # noqa: E501
             'condition': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
-            'block': (str,),  # noqa: E501
+            'block': (int,),  # noqa: E501
             'group': (int, none_type,),  # noqa: E501
             'extra': (str, none_type,),  # noqa: E501
         }
@@ -112,7 +112,7 @@ class SmartBlockCriteria(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'criteria': 'criteria',  # noqa: E501
         'condition': 'condition',  # noqa: E501
         'value': 'value',  # noqa: E501
@@ -122,22 +122,22 @@ class SmartBlockCriteria(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, criteria, condition, value, block, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, criteria, condition, value, block, *args, **kwargs):  # noqa: E501
         """SmartBlockCriteria - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             criteria (str):
             condition (str):
             value (str):
-            block (str):
+            block (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -203,7 +203,7 @@ class SmartBlockCriteria(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.criteria = criteria
         self.condition = condition
         self.value = value
@@ -234,7 +234,7 @@ class SmartBlockCriteria(ModelNormal):
             criteria (str):
             condition (str):
             value (str):
-            block (str):
+            block (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

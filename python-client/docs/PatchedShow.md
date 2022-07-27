@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **str** |  | [optional] [readonly] 
 **id** | **int** |  | [optional] [readonly] 
 **name** | **str** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 
@@ -15,7 +14,7 @@ Name | Type | Description | Notes
 **background_color** | **str, none_type** |  | [optional] 
 **linked** | **bool** |  | [optional] 
 **linkable** | **bool** |  | [optional] 
-**auto_playlist** | **str, none_type** |  | [optional] 
+**auto_playlist** | **int, none_type** |  | [optional] 
 **auto_playlist_enabled** | **bool** |  | [optional] 
 **auto_playlist_repeat** | **bool** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

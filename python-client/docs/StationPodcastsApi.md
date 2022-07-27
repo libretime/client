@@ -56,7 +56,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = station_podcasts_api.StationPodcastsApi(api_client)
     station_podcast = StationPodcast(
-        podcast="podcast_example",
+        podcast=1,
     ) # StationPodcast | 
 
     # example passing only required values which don't have defaults set
@@ -300,7 +300,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = station_podcasts_api.StationPodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this station podcast.
     patched_station_podcast = PatchedStationPodcast(
-        podcast="podcast_example",
+        podcast=1,
     ) # PatchedStationPodcast |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -476,7 +476,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = station_podcasts_api.StationPodcastsApi(api_client)
     id = 1 # int | A unique integer value identifying this station podcast.
     station_podcast = StationPodcast(
-        podcast="podcast_example",
+        podcast=1,
     ) # StationPodcast | 
 
     # example passing only required values which don't have defaults set

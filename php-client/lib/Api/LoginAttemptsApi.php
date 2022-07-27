@@ -118,13 +118,13 @@ class LoginAttemptsApi
     /**
      * Operation loginAttemptsCreate
      *
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt login_attempt (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\LoginAttempt
      */
-    public function loginAttemptsCreate($login_attempt = null)
+    public function loginAttemptsCreate($login_attempt)
     {
         list($response) = $this->loginAttemptsCreateWithHttpInfo($login_attempt);
         return $response;
@@ -133,13 +133,13 @@ class LoginAttemptsApi
     /**
      * Operation loginAttemptsCreateWithHttpInfo
      *
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\LoginAttempt, HTTP status code, HTTP response headers (array of strings)
      */
-    public function loginAttemptsCreateWithHttpInfo($login_attempt = null)
+    public function loginAttemptsCreateWithHttpInfo($login_attempt)
     {
         $request = $this->loginAttemptsCreateRequest($login_attempt);
 
@@ -230,12 +230,12 @@ class LoginAttemptsApi
     /**
      * Operation loginAttemptsCreateAsync
      *
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function loginAttemptsCreateAsync($login_attempt = null)
+    public function loginAttemptsCreateAsync($login_attempt)
     {
         return $this->loginAttemptsCreateAsyncWithHttpInfo($login_attempt)
             ->then(
@@ -248,12 +248,12 @@ class LoginAttemptsApi
     /**
      * Operation loginAttemptsCreateAsyncWithHttpInfo
      *
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function loginAttemptsCreateAsyncWithHttpInfo($login_attempt = null)
+    public function loginAttemptsCreateAsyncWithHttpInfo($login_attempt)
     {
         $returnType = '\Libretime\Client\Model\LoginAttempt';
         $request = $this->loginAttemptsCreateRequest($login_attempt);
@@ -297,13 +297,19 @@ class LoginAttemptsApi
     /**
      * Create request for operation 'loginAttemptsCreate'
      *
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function loginAttemptsCreateRequest($login_attempt = null)
+    public function loginAttemptsCreateRequest($login_attempt)
     {
+        // verify the required parameter 'login_attempt' is set
+        if ($login_attempt === null || (is_array($login_attempt) && count($login_attempt) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $login_attempt when calling loginAttemptsCreate'
+            );
+        }
 
         $resourcePath = '/api/v2/login-attempts';
         $formParams = [];
@@ -1454,13 +1460,13 @@ class LoginAttemptsApi
      * Operation loginAttemptsUpdate
      *
      * @param  string $ip A unique value identifying this login attempt. (required)
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt login_attempt (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\LoginAttempt
      */
-    public function loginAttemptsUpdate($ip, $login_attempt = null)
+    public function loginAttemptsUpdate($ip, $login_attempt)
     {
         list($response) = $this->loginAttemptsUpdateWithHttpInfo($ip, $login_attempt);
         return $response;
@@ -1470,13 +1476,13 @@ class LoginAttemptsApi
      * Operation loginAttemptsUpdateWithHttpInfo
      *
      * @param  string $ip A unique value identifying this login attempt. (required)
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \Libretime\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\LoginAttempt, HTTP status code, HTTP response headers (array of strings)
      */
-    public function loginAttemptsUpdateWithHttpInfo($ip, $login_attempt = null)
+    public function loginAttemptsUpdateWithHttpInfo($ip, $login_attempt)
     {
         $request = $this->loginAttemptsUpdateRequest($ip, $login_attempt);
 
@@ -1568,12 +1574,12 @@ class LoginAttemptsApi
      * Operation loginAttemptsUpdateAsync
      *
      * @param  string $ip A unique value identifying this login attempt. (required)
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function loginAttemptsUpdateAsync($ip, $login_attempt = null)
+    public function loginAttemptsUpdateAsync($ip, $login_attempt)
     {
         return $this->loginAttemptsUpdateAsyncWithHttpInfo($ip, $login_attempt)
             ->then(
@@ -1587,12 +1593,12 @@ class LoginAttemptsApi
      * Operation loginAttemptsUpdateAsyncWithHttpInfo
      *
      * @param  string $ip A unique value identifying this login attempt. (required)
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function loginAttemptsUpdateAsyncWithHttpInfo($ip, $login_attempt = null)
+    public function loginAttemptsUpdateAsyncWithHttpInfo($ip, $login_attempt)
     {
         $returnType = '\Libretime\Client\Model\LoginAttempt';
         $request = $this->loginAttemptsUpdateRequest($ip, $login_attempt);
@@ -1637,17 +1643,23 @@ class LoginAttemptsApi
      * Create request for operation 'loginAttemptsUpdate'
      *
      * @param  string $ip A unique value identifying this login attempt. (required)
-     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (optional)
+     * @param  \Libretime\Client\Model\LoginAttempt $login_attempt (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function loginAttemptsUpdateRequest($ip, $login_attempt = null)
+    public function loginAttemptsUpdateRequest($ip, $login_attempt)
     {
         // verify the required parameter 'ip' is set
         if ($ip === null || (is_array($ip) && count($ip) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $ip when calling loginAttemptsUpdate'
+            );
+        }
+        // verify the required parameter 'login_attempt' is set
+        if ($login_attempt === null || (is_array($login_attempt) && count($login_attempt) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $login_attempt when calling loginAttemptsUpdate'
             );
         }
 

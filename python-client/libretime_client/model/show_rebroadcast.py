@@ -84,10 +84,10 @@ class ShowRebroadcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'day_offset': (str,),  # noqa: E501
             'start_time': (str,),  # noqa: E501
-            'show': (str,),  # noqa: E501
+            'show': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -96,28 +96,28 @@ class ShowRebroadcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'day_offset': 'day_offset',  # noqa: E501
         'start_time': 'start_time',  # noqa: E501
         'show': 'show',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, day_offset, start_time, show, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, day_offset, start_time, show, *args, **kwargs):  # noqa: E501
         """ShowRebroadcast - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             day_offset (str):
             start_time (str):
-            show (str):
+            show (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -181,7 +181,7 @@ class ShowRebroadcast(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.day_offset = day_offset
         self.start_time = start_time
         self.show = show
@@ -210,7 +210,7 @@ class ShowRebroadcast(ModelNormal):
 
             day_offset (str):
             start_time (str):
-            show (str):
+            show (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

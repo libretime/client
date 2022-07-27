@@ -22,10 +22,10 @@
 export interface SmartBlockCriteria {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlockCriteria
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {number}
@@ -58,9 +58,9 @@ export interface SmartBlockCriteria {
     'extra'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlockCriteria
      */
-    'block': string;
+    'block': number;
 }
 

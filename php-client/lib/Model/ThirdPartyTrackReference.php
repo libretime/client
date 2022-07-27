@@ -59,12 +59,12 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'service' => 'string',
         'foreign_id' => 'string',
         'upload_time' => '\DateTime',
         'status' => 'string',
-        'file' => 'string'
+        'file' => 'int'
     ];
 
     /**
@@ -75,12 +75,12 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'service' => null,
         'foreign_id' => null,
         'upload_time' => 'date-time',
         'status' => null,
-        'file' => 'uri'
+        'file' => null
     ];
 
     /**
@@ -110,7 +110,7 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'service' => 'service',
         'foreign_id' => 'foreign_id',
         'upload_time' => 'upload_time',
@@ -124,7 +124,7 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'service' => 'setService',
         'foreign_id' => 'setForeignId',
         'upload_time' => 'setUploadTime',
@@ -138,7 +138,7 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'service' => 'getService',
         'foreign_id' => 'getForeignId',
         'upload_time' => 'getUploadTime',
@@ -203,7 +203,7 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['service'] = $data['service'] ?? null;
         $this->container['foreign_id'] = $data['foreign_id'] ?? null;
         $this->container['upload_time'] = $data['upload_time'] ?? null;
@@ -220,8 +220,8 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['service'] === null) {
             $invalidProperties[] = "'service' can't be null";
@@ -254,25 +254,25 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -388,7 +388,7 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getFile()
     {
@@ -398,7 +398,7 @@ class ThirdPartyTrackReference implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets file
      *
-     * @param string|null $file file
+     * @param int|null $file file
      *
      * @return self
      */

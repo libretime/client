@@ -22,10 +22,10 @@
 export interface PatchedWebstreamMetadata {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedWebstreamMetadata
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface PatchedWebstreamMetadata {
     'data'?: string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedWebstreamMetadata
      */
-    'schedule'?: string;
+    'schedule'?: number;
 }
 

@@ -22,10 +22,10 @@
 export interface PatchedThirdPartyTrackReference {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedThirdPartyTrackReference
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -52,9 +52,9 @@ export interface PatchedThirdPartyTrackReference {
     'status'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedThirdPartyTrackReference
      */
-    'file'?: string | null;
+    'file'?: number | null;
 }
 

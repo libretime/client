@@ -81,11 +81,11 @@ class PatchedImportedPodcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'override_album': (bool,),  # noqa: E501
             'auto_ingest': (bool,),  # noqa: E501
             'auto_ingested_at': (datetime, none_type,),  # noqa: E501
-            'podcast': (str,),  # noqa: E501
+            'podcast': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -94,7 +94,7 @@ class PatchedImportedPodcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'override_album': 'override_album',  # noqa: E501
         'auto_ingest': 'auto_ingest',  # noqa: E501
         'auto_ingested_at': 'auto_ingested_at',  # noqa: E501
@@ -102,7 +102,7 @@ class PatchedImportedPodcast(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -143,11 +143,11 @@ class PatchedImportedPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             override_album (bool): [optional]  # noqa: E501
             auto_ingest (bool): [optional]  # noqa: E501
             auto_ingested_at (datetime, none_type): [optional]  # noqa: E501
-            podcast (str): [optional]  # noqa: E501
+            podcast (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +233,11 @@ class PatchedImportedPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             override_album (bool): [optional]  # noqa: E501
             auto_ingest (bool): [optional]  # noqa: E501
             auto_ingested_at (datetime, none_type): [optional]  # noqa: E501
-            podcast (str): [optional]  # noqa: E501
+            podcast (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -81,8 +81,8 @@ class StationPodcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
-            'podcast': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'podcast': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -91,24 +91,24 @@ class StationPodcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'podcast': 'podcast',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, podcast, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, podcast, *args, **kwargs):  # noqa: E501
         """StationPodcast - a model defined in OpenAPI
 
         Args:
-            item_url (str):
-            podcast (str):
+            id (int):
+            podcast (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -172,7 +172,7 @@ class StationPodcast(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.podcast = podcast
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -197,7 +197,7 @@ class StationPodcast(ModelNormal):
     def __init__(self, podcast, *args, **kwargs):  # noqa: E501
         """StationPodcast - a model defined in OpenAPI
 
-            podcast (str):
+            podcast (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

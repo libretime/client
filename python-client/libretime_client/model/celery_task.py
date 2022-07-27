@@ -90,10 +90,10 @@ class CeleryTask(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'task_id': (str,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'track_reference': (str,),  # noqa: E501
+            'track_reference': (int,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'dispatch_time': (datetime, none_type,),  # noqa: E501
         }
@@ -104,7 +104,7 @@ class CeleryTask(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'task_id': 'task_id',  # noqa: E501
         'status': 'status',  # noqa: E501
         'track_reference': 'track_reference',  # noqa: E501
@@ -113,21 +113,21 @@ class CeleryTask(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, task_id, status, track_reference, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, task_id, status, track_reference, *args, **kwargs):  # noqa: E501
         """CeleryTask - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             task_id (str):
             status (str):
-            track_reference (str):
+            track_reference (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -193,7 +193,7 @@ class CeleryTask(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.task_id = task_id
         self.status = status
         self.track_reference = track_reference
@@ -222,7 +222,7 @@ class CeleryTask(ModelNormal):
 
             task_id (str):
             status (str):
-            track_reference (str):
+            track_reference (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

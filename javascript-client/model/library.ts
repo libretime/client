@@ -22,10 +22,10 @@
 export interface Library {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Library
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}

@@ -102,7 +102,6 @@ class Show(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'linked': (bool,),  # noqa: E501
@@ -115,7 +114,7 @@ class Show(ModelNormal):
             'image': (str, none_type,),  # noqa: E501
             'foreground_color': (str, none_type,),  # noqa: E501
             'background_color': (str, none_type,),  # noqa: E501
-            'auto_playlist': (str, none_type,),  # noqa: E501
+            'auto_playlist': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -124,7 +123,6 @@ class Show(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'linked': 'linked',  # noqa: E501
@@ -141,7 +139,6 @@ class Show(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
     }
 
@@ -149,11 +146,10 @@ class Show(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, name, linked, linkable, auto_playlist_enabled, auto_playlist_repeat, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, linked, linkable, auto_playlist_enabled, auto_playlist_repeat, *args, **kwargs):  # noqa: E501
         """Show - a model defined in OpenAPI
 
         Args:
-            item_url (str):
             id (int):
             name (str):
             linked (bool):
@@ -198,7 +194,7 @@ class Show(ModelNormal):
             image (str, none_type): [optional]  # noqa: E501
             foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
-            auto_playlist (str, none_type): [optional]  # noqa: E501
+            auto_playlist (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -230,7 +226,6 @@ class Show(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
         self.id = id
         self.name = name
         self.linked = linked
@@ -303,7 +298,7 @@ class Show(ModelNormal):
             image (str, none_type): [optional]  # noqa: E501
             foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
-            auto_playlist (str, none_type): [optional]  # noqa: E501
+            auto_playlist (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

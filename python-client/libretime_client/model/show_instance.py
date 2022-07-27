@@ -94,23 +94,20 @@ class ShowInstance(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'show': (str,),  # noqa: E501
-            'show_id': (int,),  # noqa: E501
             'starts_at': (datetime,),  # noqa: E501
             'ends_at': (datetime,),  # noqa: E501
             'modified': (bool,),  # noqa: E501
             'auto_playlist_built': (bool,),  # noqa: E501
-            'record_file_id': (int,),  # noqa: E501
-            'instance': (str, none_type,),  # noqa: E501
+            'show': (int,),  # noqa: E501
             'filled_time': (str, none_type,),  # noqa: E501
             'last_scheduled_at': (datetime, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'rebroadcast': (int, none_type,),  # noqa: E501
             'record_enabled': (PatchedShowDaysRecordEnabled,),  # noqa: E501
-            'record_file': (str, none_type,),  # noqa: E501
+            'instance': (int, none_type,),  # noqa: E501
+            'record_file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -119,50 +116,41 @@ class ShowInstance(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
-        'show': 'show',  # noqa: E501
-        'show_id': 'show_id',  # noqa: E501
         'starts_at': 'starts_at',  # noqa: E501
         'ends_at': 'ends_at',  # noqa: E501
         'modified': 'modified',  # noqa: E501
         'auto_playlist_built': 'auto_playlist_built',  # noqa: E501
-        'record_file_id': 'record_file_id',  # noqa: E501
-        'instance': 'instance',  # noqa: E501
+        'show': 'show',  # noqa: E501
         'filled_time': 'filled_time',  # noqa: E501
         'last_scheduled_at': 'last_scheduled_at',  # noqa: E501
         'description': 'description',  # noqa: E501
         'rebroadcast': 'rebroadcast',  # noqa: E501
         'record_enabled': 'record_enabled',  # noqa: E501
+        'instance': 'instance',  # noqa: E501
         'record_file': 'record_file',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
-        'show_id',  # noqa: E501
-        'record_file_id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, created_at, show, show_id, starts_at, ends_at, modified, auto_playlist_built, record_file_id, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_at, starts_at, ends_at, modified, auto_playlist_built, show, *args, **kwargs):  # noqa: E501
         """ShowInstance - a model defined in OpenAPI
 
         Args:
-            item_url (str):
             id (int):
             created_at (datetime):
-            show (str):
-            show_id (int):
             starts_at (datetime):
             ends_at (datetime):
             modified (bool):
             auto_playlist_built (bool):
-            record_file_id (int):
+            show (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -195,13 +183,13 @@ class ShowInstance(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            instance (str, none_type): [optional]  # noqa: E501
             filled_time (str, none_type): [optional]  # noqa: E501
             last_scheduled_at (datetime, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             rebroadcast (int, none_type): [optional]  # noqa: E501
             record_enabled (PatchedShowDaysRecordEnabled): [optional]  # noqa: E501
-            record_file (str, none_type): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
+            record_file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,16 +221,13 @@ class ShowInstance(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
         self.id = id
         self.created_at = created_at
-        self.show = show
-        self.show_id = show_id
         self.starts_at = starts_at
         self.ends_at = ends_at
         self.modified = modified
         self.auto_playlist_built = auto_playlist_built
-        self.record_file_id = record_file_id
+        self.show = show
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -263,15 +248,16 @@ class ShowInstance(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, created_at, show, starts_at, ends_at, modified, auto_playlist_built, *args, **kwargs):  # noqa: E501
+    def __init__(self, created_at, starts_at, ends_at, modified, auto_playlist_built, show, *args, **kwargs):  # noqa: E501
         """ShowInstance - a model defined in OpenAPI
 
             created_at (datetime):
-            show (str):
             starts_at (datetime):
             ends_at (datetime):
             modified (bool):
             auto_playlist_built (bool):
+            show (int):
+
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -303,13 +289,13 @@ class ShowInstance(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            instance (str, none_type): [optional]  # noqa: E501
             filled_time (str, none_type): [optional]  # noqa: E501
             last_scheduled_at (datetime, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             rebroadcast (int, none_type): [optional]  # noqa: E501
             record_enabled (PatchedShowDaysRecordEnabled): [optional]  # noqa: E501
-            record_file (str, none_type): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
+            record_file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -340,11 +326,11 @@ class ShowInstance(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.created_at = created_at
-        self.show = show
         self.starts_at = starts_at
         self.ends_at = ends_at
         self.modified = modified
         self.auto_playlist_built = auto_playlist_built
+        self.show = show
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

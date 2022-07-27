@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [optional] [readonly]
+**id** | **int** |  | [optional] [readonly]
 **state** | **string** |  | [optional]
 **start_time** | **\DateTime** |  | [optional]
 **end_time** | **\DateTime** |  | [optional]

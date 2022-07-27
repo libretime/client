@@ -59,7 +59,7 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'name' => 'string',
         'type' => 'string'
     ];
@@ -72,7 +72,7 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'name' => null,
         'type' => null
     ];
@@ -104,7 +104,7 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'name' => 'name',
         'type' => 'type'
     ];
@@ -115,7 +115,7 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'name' => 'setName',
         'type' => 'setType'
     ];
@@ -126,7 +126,7 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'name' => 'getName',
         'type' => 'getType'
     ];
@@ -188,7 +188,7 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
     }
@@ -226,25 +226,25 @@ class PatchedPlayoutHistoryTemplate implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }

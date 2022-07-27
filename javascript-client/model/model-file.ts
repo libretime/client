@@ -23,12 +23,6 @@ import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 export interface ModelFile {
     /**
      * 
-     * @type {string}
-     * @memberof ModelFile
-     */
-    'item_url': string;
-    /**
-     * 
      * @type {number}
      * @memberof ModelFile
      */
@@ -401,21 +395,21 @@ export interface ModelFile {
     'report_organization'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ModelFile
      */
-    'library'?: string | null;
+    'library'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ModelFile
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ModelFile
      */
-    'edited_by'?: string | null;
+    'edited_by'?: number | null;
 }
 

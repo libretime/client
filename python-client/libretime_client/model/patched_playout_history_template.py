@@ -87,7 +87,7 @@ class PatchedPlayoutHistoryTemplate(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
@@ -98,13 +98,13 @@ class PatchedPlayoutHistoryTemplate(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -145,7 +145,7 @@ class PatchedPlayoutHistoryTemplate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
@@ -233,7 +233,7 @@ class PatchedPlayoutHistoryTemplate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """

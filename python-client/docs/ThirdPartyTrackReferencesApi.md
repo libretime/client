@@ -60,7 +60,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         foreign_id="foreign_id_example",
         upload_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         status="status_example",
-        file="file_example",
+        file=1,
     ) # ThirdPartyTrackReference | 
 
     # example passing only required values which don't have defaults set
@@ -308,7 +308,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         foreign_id="foreign_id_example",
         upload_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         status="status_example",
-        file="file_example",
+        file=1,
     ) # PatchedThirdPartyTrackReference |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -488,7 +488,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         foreign_id="foreign_id_example",
         upload_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         status="status_example",
-        file="file_example",
+        file=1,
     ) # ThirdPartyTrackReference | 
 
     # example passing only required values which don't have defaults set

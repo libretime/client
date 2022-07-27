@@ -59,7 +59,7 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'name' => 'string',
         'ip' => 'string'
     ];
 
@@ -71,7 +71,7 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'name' => null,
         'ip' => null
     ];
 
@@ -102,7 +102,7 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'name' => 'name',
         'ip' => 'ip'
     ];
 
@@ -112,7 +112,7 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'name' => 'setName',
         'ip' => 'setIp'
     ];
 
@@ -122,7 +122,7 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'name' => 'getName',
         'ip' => 'getIp'
     ];
 
@@ -183,7 +183,7 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
         $this->container['ip'] = $data['ip'] ?? null;
     }
 
@@ -196,9 +196,13 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
         }
+        if ((mb_strlen($this->container['name']) > 32)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 32.";
+        }
+
         if ($this->container['ip'] === null) {
             $invalidProperties[] = "'ip' can't be null";
         }
@@ -222,25 +226,29 @@ class ServiceRegister implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets name
      *
      * @return string
      */
-    public function getItemUrl()
+    public function getName()
     {
-        return $this->container['item_url'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets item_url
+     * Sets name
      *
-     * @param string $item_url item_url
+     * @param string $name name
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setName($name)
     {
-        $this->container['item_url'] = $item_url;
+        if ((mb_strlen($name) > 32)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling ServiceRegister., must be smaller than or equal to 32.');
+        }
+
+        $this->container['name'] = $name;
 
         return $this;
     }

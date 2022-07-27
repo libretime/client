@@ -84,10 +84,10 @@ class WebstreamMetadata(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'starts_at': (datetime,),  # noqa: E501
             'data': (str,),  # noqa: E501
-            'schedule': (str,),  # noqa: E501
+            'schedule': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -96,28 +96,28 @@ class WebstreamMetadata(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'starts_at': 'starts_at',  # noqa: E501
         'data': 'data',  # noqa: E501
         'schedule': 'schedule',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, starts_at, data, schedule, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, starts_at, data, schedule, *args, **kwargs):  # noqa: E501
         """WebstreamMetadata - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             starts_at (datetime):
             data (str):
-            schedule (str):
+            schedule (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -181,7 +181,7 @@ class WebstreamMetadata(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.starts_at = starts_at
         self.data = data
         self.schedule = schedule
@@ -210,7 +210,7 @@ class WebstreamMetadata(ModelNormal):
 
             starts_at (datetime):
             data (str):
-            schedule (str):
+            schedule (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

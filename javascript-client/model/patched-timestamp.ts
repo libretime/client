@@ -22,10 +22,10 @@
 export interface PatchedTimestamp {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedTimestamp
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}

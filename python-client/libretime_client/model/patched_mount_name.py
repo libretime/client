@@ -84,7 +84,7 @@ class PatchedMountName(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'mount_name': (str,),  # noqa: E501
         }
 
@@ -94,12 +94,12 @@ class PatchedMountName(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'mount_name': 'mount_name',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -140,7 +140,7 @@ class PatchedMountName(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             mount_name (str): [optional]  # noqa: E501
         """
 
@@ -227,7 +227,7 @@ class PatchedMountName(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             mount_name (str): [optional]  # noqa: E501
         """
 

@@ -59,7 +59,7 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'ip' => 'string',
         'attempts' => 'int'
     ];
 
@@ -71,7 +71,7 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'ip' => null,
         'attempts' => null
     ];
 
@@ -102,7 +102,7 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'ip' => 'ip',
         'attempts' => 'attempts'
     ];
 
@@ -112,7 +112,7 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'ip' => 'setIp',
         'attempts' => 'setAttempts'
     ];
 
@@ -122,7 +122,7 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'ip' => 'getIp',
         'attempts' => 'getAttempts'
     ];
 
@@ -183,7 +183,7 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['ip'] = $data['ip'] ?? null;
         $this->container['attempts'] = $data['attempts'] ?? null;
     }
 
@@ -196,9 +196,13 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['ip'] === null) {
+            $invalidProperties[] = "'ip' can't be null";
         }
+        if ((mb_strlen($this->container['ip']) > 32)) {
+            $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 32.";
+        }
+
         if (!is_null($this->container['attempts']) && ($this->container['attempts'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'attempts', must be smaller than or equal to 2147483647.";
         }
@@ -223,25 +227,29 @@ class LoginAttempt implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets ip
      *
      * @return string
      */
-    public function getItemUrl()
+    public function getIp()
     {
-        return $this->container['item_url'];
+        return $this->container['ip'];
     }
 
     /**
-     * Sets item_url
+     * Sets ip
      *
-     * @param string $item_url item_url
+     * @param string $ip ip
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setIp($ip)
     {
-        $this->container['item_url'] = $item_url;
+        if ((mb_strlen($ip) > 32)) {
+            throw new \InvalidArgumentException('invalid length for $ip when calling LoginAttempt., must be smaller than or equal to 32.');
+        }
+
+        $this->container['ip'] = $ip;
 
         return $this;
     }

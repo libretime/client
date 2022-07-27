@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **login_attempts_create**
-> LoginAttempt login_attempts_create()
+> LoginAttempt login_attempts_create(login_attempt)
 
 
 
@@ -56,13 +56,13 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     login_attempt = LoginAttempt(
+        ip="ip_example",
         attempts=-2147483648,
-    ) # LoginAttempt |  (optional)
+    ) # LoginAttempt | 
 
     # example passing only required values which don't have defaults set
-    # and optional values
     try:
-        api_response = api_instance.login_attempts_create(login_attempt=login_attempt)
+        api_response = api_instance.login_attempts_create(login_attempt)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_create: %s\n" % e)
@@ -73,7 +73,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_attempt** | [**LoginAttempt**](LoginAttempt.md)|  | [optional]
+ **login_attempt** | [**LoginAttempt**](LoginAttempt.md)|  |
 
 ### Return type
 
@@ -301,6 +301,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     ip = "ip_example" # str | A unique value identifying this login attempt.
     patched_login_attempt = PatchedLoginAttempt(
+        ip="ip_example",
         attempts=-2147483648,
     ) # PatchedLoginAttempt |  (optional)
 
@@ -433,7 +434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **login_attempts_update**
-> LoginAttempt login_attempts_update(ip)
+> LoginAttempt login_attempts_update(ip, login_attempt)
 
 
 
@@ -477,20 +478,13 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = login_attempts_api.LoginAttemptsApi(api_client)
     ip = "ip_example" # str | A unique value identifying this login attempt.
     login_attempt = LoginAttempt(
+        ip="ip_example",
         attempts=-2147483648,
-    ) # LoginAttempt |  (optional)
+    ) # LoginAttempt | 
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.login_attempts_update(ip)
-        pprint(api_response)
-    except libretime_client.ApiException as e:
-        print("Exception when calling LoginAttemptsApi->login_attempts_update: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        api_response = api_instance.login_attempts_update(ip, login_attempt=login_attempt)
+        api_response = api_instance.login_attempts_update(ip, login_attempt)
         pprint(api_response)
     except libretime_client.ApiException as e:
         print("Exception when calling LoginAttemptsApi->login_attempts_update: %s\n" % e)
@@ -502,7 +496,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ip** | **str**| A unique value identifying this login attempt. |
- **login_attempt** | [**LoginAttempt**](LoginAttempt.md)|  | [optional]
+ **login_attempt** | [**LoginAttempt**](LoginAttempt.md)|  |
 
 ### Return type
 

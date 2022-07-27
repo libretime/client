@@ -22,10 +22,10 @@
 export interface ShowRebroadcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ShowRebroadcast
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface ShowRebroadcast {
     'start_time': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ShowRebroadcast
      */
-    'show': string;
+    'show': number;
 }
 

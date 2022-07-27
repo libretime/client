@@ -56,8 +56,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     show_host = ShowHost(
-        show="show_example",
-        user="user_example",
+        show=1,
+        user=1,
     ) # ShowHost | 
 
     # example passing only required values which don't have defaults set
@@ -301,8 +301,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     id = 1 # int | A unique integer value identifying this show host.
     patched_show_host = PatchedShowHost(
-        show="show_example",
-        user="user_example",
+        show=1,
+        user=1,
     ) # PatchedShowHost |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -478,8 +478,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = show_hosts_api.ShowHostsApi(api_client)
     id = 1 # int | A unique integer value identifying this show host.
     show_host = ShowHost(
-        show="show_example",
-        user="user_example",
+        show=1,
+        user=1,
     ) # ShowHost | 
 
     # example passing only required values which don't have defaults set

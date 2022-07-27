@@ -25,7 +25,7 @@ export interface PatchedStreamSetting {
      * @type {string}
      * @memberof PatchedStreamSetting
      */
-    'item_url'?: string;
+    'key'?: string;
     /**
      * 
      * @type {string}

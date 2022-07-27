@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
 **action** | **string** |  |
 **token** | **string** |  |
 **created** | **\DateTime** |  |
-**user** | **string** |  |
+**user** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -25,7 +25,7 @@ export interface PatchedLoginAttempt {
      * @type {string}
      * @memberof PatchedLoginAttempt
      */
-    'item_url'?: string;
+    'ip'?: string;
     /**
      * 
      * @type {number}

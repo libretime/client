@@ -22,10 +22,10 @@
 export interface PatchedListenerCount {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedListenerCount
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {number}
@@ -34,15 +34,15 @@ export interface PatchedListenerCount {
     'listener_count'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedListenerCount
      */
-    'timestamp'?: string;
+    'timestamp'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedListenerCount
      */
-    'mount_name'?: string;
+    'mount_name'?: number;
 }
 

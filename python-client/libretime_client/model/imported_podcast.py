@@ -81,10 +81,10 @@ class ImportedPodcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'override_album': (bool,),  # noqa: E501
             'auto_ingest': (bool,),  # noqa: E501
-            'podcast': (str,),  # noqa: E501
+            'podcast': (int,),  # noqa: E501
             'auto_ingested_at': (datetime, none_type,),  # noqa: E501
         }
 
@@ -94,7 +94,7 @@ class ImportedPodcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'override_album': 'override_album',  # noqa: E501
         'auto_ingest': 'auto_ingest',  # noqa: E501
         'podcast': 'podcast',  # noqa: E501
@@ -102,21 +102,21 @@ class ImportedPodcast(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, override_album, auto_ingest, podcast, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, override_album, auto_ingest, podcast, *args, **kwargs):  # noqa: E501
         """ImportedPodcast - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             override_album (bool):
             auto_ingest (bool):
-            podcast (str):
+            podcast (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -181,7 +181,7 @@ class ImportedPodcast(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.override_album = override_album
         self.auto_ingest = auto_ingest
         self.podcast = podcast
@@ -210,7 +210,7 @@ class ImportedPodcast(ModelNormal):
 
             override_album (bool):
             auto_ingest (bool):
-            podcast (str):
+            podcast (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

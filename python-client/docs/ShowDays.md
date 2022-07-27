@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **str** |  | [readonly] 
+**id** | **int** |  | [readonly] 
 **first_show_on** | **date** |  | 
 **start_time** | **str** |  | 
 **timezone** | **str** |  | 
 **duration** | **str** |  | 
 **repeat_kind** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | 
-**show** | **str** |  | 
+**show** | **int** |  | 
 **last_show_on** | **date, none_type** |  | [optional] 
 **record_enabled** | [**PatchedShowDaysRecordEnabled**](PatchedShowDaysRecordEnabled.md) |  | [optional] 
 **week_day** | [**PatchedShowDaysWeekDay**](PatchedShowDaysWeekDay.md) |  | [optional] 

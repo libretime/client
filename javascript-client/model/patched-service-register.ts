@@ -25,7 +25,7 @@ export interface PatchedServiceRegister {
      * @type {string}
      * @memberof PatchedServiceRegister
      */
-    'item_url'?: string;
+    'name'?: string;
     /**
      * 
      * @type {string}

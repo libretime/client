@@ -58,7 +58,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     show_rebroadcast = ShowRebroadcast(
         day_offset="day_offset_example",
         start_time="start_time_example",
-        show="show_example",
+        show=1,
     ) # ShowRebroadcast | 
 
     # example passing only required values which don't have defaults set
@@ -304,7 +304,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     patched_show_rebroadcast = PatchedShowRebroadcast(
         day_offset="day_offset_example",
         start_time="start_time_example",
-        show="show_example",
+        show=1,
     ) # PatchedShowRebroadcast |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -482,7 +482,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     show_rebroadcast = ShowRebroadcast(
         day_offset="day_offset_example",
         start_time="start_time_example",
-        show="show_example",
+        show=1,
     ) # ShowRebroadcast | 
 
     # example passing only required values which don't have defaults set

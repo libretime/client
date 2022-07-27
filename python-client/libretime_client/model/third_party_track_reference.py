@@ -90,12 +90,12 @@ class ThirdPartyTrackReference(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'service': (str,),  # noqa: E501
             'foreign_id': (str, none_type,),  # noqa: E501
             'upload_time': (datetime, none_type,),  # noqa: E501
             'status': (str, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -104,7 +104,7 @@ class ThirdPartyTrackReference(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'service': 'service',  # noqa: E501
         'foreign_id': 'foreign_id',  # noqa: E501
         'upload_time': 'upload_time',  # noqa: E501
@@ -113,18 +113,18 @@ class ThirdPartyTrackReference(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, service, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, service, *args, **kwargs):  # noqa: E501
         """ThirdPartyTrackReference - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             service (str):
 
         Keyword Args:
@@ -161,7 +161,7 @@ class ThirdPartyTrackReference(ModelNormal):
             foreign_id (str, none_type): [optional]  # noqa: E501
             upload_time (datetime, none_type): [optional]  # noqa: E501
             status (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -193,7 +193,7 @@ class ThirdPartyTrackReference(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.service = service
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -254,7 +254,7 @@ class ThirdPartyTrackReference(ModelNormal):
             foreign_id (str, none_type): [optional]  # noqa: E501
             upload_time (datetime, none_type): [optional]  # noqa: E501
             status (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -23,10 +23,10 @@ import { RoleEnum } from './role-enum';
 export interface User {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof User
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {RoleEnum}

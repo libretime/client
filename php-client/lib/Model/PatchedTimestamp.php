@@ -59,7 +59,7 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'timestamp' => '\DateTime'
     ];
 
@@ -71,7 +71,7 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'timestamp' => 'date-time'
     ];
 
@@ -102,7 +102,7 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'timestamp' => 'timestamp'
     ];
 
@@ -112,7 +112,7 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'timestamp' => 'setTimestamp'
     ];
 
@@ -122,7 +122,7 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'timestamp' => 'getTimestamp'
     ];
 
@@ -183,7 +183,7 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['timestamp'] = $data['timestamp'] ?? null;
     }
 
@@ -212,25 +212,25 @@ class PatchedTimestamp implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }

@@ -101,7 +101,7 @@ class PatchedShowDays(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'first_show_on': (date,),  # noqa: E501
             'last_show_on': (date, none_type,),  # noqa: E501
             'start_time': (str,),  # noqa: E501
@@ -111,7 +111,7 @@ class PatchedShowDays(ModelNormal):
             'week_day': (PatchedShowDaysWeekDay,),  # noqa: E501
             'repeat_kind': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'repeat_next_on': (date, none_type,),  # noqa: E501
-            'show': (str,),  # noqa: E501
+            'show': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -120,7 +120,7 @@ class PatchedShowDays(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'first_show_on': 'first_show_on',  # noqa: E501
         'last_show_on': 'last_show_on',  # noqa: E501
         'start_time': 'start_time',  # noqa: E501
@@ -134,7 +134,7 @@ class PatchedShowDays(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -175,7 +175,7 @@ class PatchedShowDays(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             first_show_on (date): [optional]  # noqa: E501
             last_show_on (date, none_type): [optional]  # noqa: E501
             start_time (str): [optional]  # noqa: E501
@@ -185,7 +185,7 @@ class PatchedShowDays(ModelNormal):
             week_day (PatchedShowDaysWeekDay): [optional]  # noqa: E501
             repeat_kind (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             repeat_next_on (date, none_type): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -271,7 +271,7 @@ class PatchedShowDays(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             first_show_on (date): [optional]  # noqa: E501
             last_show_on (date, none_type): [optional]  # noqa: E501
             start_time (str): [optional]  # noqa: E501
@@ -281,7 +281,7 @@ class PatchedShowDays(ModelNormal):
             week_day (PatchedShowDaysWeekDay): [optional]  # noqa: E501
             repeat_kind (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             repeat_next_on (date, none_type): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -59,8 +59,8 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
-        'podcast' => 'string'
+        'id' => 'int',
+        'podcast' => 'int'
     ];
 
     /**
@@ -71,8 +71,8 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
-        'podcast' => 'uri'
+        'id' => null,
+        'podcast' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'podcast' => 'podcast'
     ];
 
@@ -112,7 +112,7 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'podcast' => 'setPodcast'
     ];
 
@@ -122,7 +122,7 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'podcast' => 'getPodcast'
     ];
 
@@ -183,7 +183,7 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['podcast'] = $data['podcast'] ?? null;
     }
 
@@ -212,25 +212,25 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -238,7 +238,7 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets podcast
      *
-     * @return string|null
+     * @return int|null
      */
     public function getPodcast()
     {
@@ -248,7 +248,7 @@ class PatchedStationPodcast implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets podcast
      *
-     * @param string|null $podcast podcast
+     * @param int|null $podcast podcast
      *
      * @return self
      */

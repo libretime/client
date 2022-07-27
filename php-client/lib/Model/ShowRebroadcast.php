@@ -59,10 +59,10 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'day_offset' => 'string',
         'start_time' => 'string',
-        'show' => 'string'
+        'show' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'day_offset' => null,
         'start_time' => 'time',
-        'show' => 'uri'
+        'show' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'day_offset' => 'day_offset',
         'start_time' => 'start_time',
         'show' => 'show'
@@ -118,7 +118,7 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'day_offset' => 'setDayOffset',
         'start_time' => 'setStartTime',
         'show' => 'setShow'
@@ -130,7 +130,7 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'day_offset' => 'getDayOffset',
         'start_time' => 'getStartTime',
         'show' => 'getShow'
@@ -193,7 +193,7 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['day_offset'] = $data['day_offset'] ?? null;
         $this->container['start_time'] = $data['start_time'] ?? null;
         $this->container['show'] = $data['show'] ?? null;
@@ -208,8 +208,8 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['day_offset'] === null) {
             $invalidProperties[] = "'day_offset' can't be null";
@@ -240,25 +240,25 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -318,7 +318,7 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets show
      *
-     * @return string
+     * @return int
      */
     public function getShow()
     {
@@ -328,7 +328,7 @@ class ShowRebroadcast implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets show
      *
-     * @param string $show show
+     * @param int $show show
      *
      * @return self
      */

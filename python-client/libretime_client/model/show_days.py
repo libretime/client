@@ -101,13 +101,13 @@ class ShowDays(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'first_show_on': (date,),  # noqa: E501
             'start_time': (str,),  # noqa: E501
             'timezone': (str,),  # noqa: E501
             'duration': (str,),  # noqa: E501
             'repeat_kind': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'show': (str,),  # noqa: E501
+            'show': (int,),  # noqa: E501
             'last_show_on': (date, none_type,),  # noqa: E501
             'record_enabled': (PatchedShowDaysRecordEnabled,),  # noqa: E501
             'week_day': (PatchedShowDaysWeekDay,),  # noqa: E501
@@ -120,7 +120,7 @@ class ShowDays(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'first_show_on': 'first_show_on',  # noqa: E501
         'start_time': 'start_time',  # noqa: E501
         'timezone': 'timezone',  # noqa: E501
@@ -134,24 +134,24 @@ class ShowDays(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, first_show_on, start_time, timezone, duration, repeat_kind, show, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, first_show_on, start_time, timezone, duration, repeat_kind, show, *args, **kwargs):  # noqa: E501
         """ShowDays - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             first_show_on (date):
             start_time (str):
             timezone (str):
             duration (str):
             repeat_kind (bool, date, datetime, dict, float, int, list, str, none_type):
-            show (str):
+            show (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -219,7 +219,7 @@ class ShowDays(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.first_show_on = first_show_on
         self.start_time = start_time
         self.timezone = timezone
@@ -254,7 +254,7 @@ class ShowDays(ModelNormal):
             timezone (str):
             duration (str):
             repeat_kind (bool, date, datetime, dict, float, int, list, str, none_type):
-            show (str):
+            show (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

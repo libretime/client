@@ -81,11 +81,11 @@ class PatchedPlayoutHistory(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'starts': (datetime,),  # noqa: E501
             'ends': (datetime, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
-            'instance': (str, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
+            'instance': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -94,7 +94,7 @@ class PatchedPlayoutHistory(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'starts': 'starts',  # noqa: E501
         'ends': 'ends',  # noqa: E501
         'file': 'file',  # noqa: E501
@@ -102,7 +102,7 @@ class PatchedPlayoutHistory(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -143,11 +143,11 @@ class PatchedPlayoutHistory(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             starts (datetime): [optional]  # noqa: E501
             ends (datetime, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            instance (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,11 +233,11 @@ class PatchedPlayoutHistory(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             starts (datetime): [optional]  # noqa: E501
             ends (datetime, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            instance (str, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

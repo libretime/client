@@ -61,8 +61,8 @@ with libretime_client.ApiClient(configuration) as api_client:
         episode_guid="episode_guid_example",
         episode_title="episode_title_example",
         episode_description="episode_description_example",
-        podcast="podcast_example",
-        file="file_example",
+        podcast=1,
+        file=1,
     ) # PodcastEpisode | 
 
     # example passing only required values which don't have defaults set
@@ -311,8 +311,8 @@ with libretime_client.ApiClient(configuration) as api_client:
         episode_guid="episode_guid_example",
         episode_title="episode_title_example",
         episode_description="episode_description_example",
-        podcast="podcast_example",
-        file="file_example",
+        podcast=1,
+        file=1,
     ) # PatchedPodcastEpisode |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -493,8 +493,8 @@ with libretime_client.ApiClient(configuration) as api_client:
         episode_guid="episode_guid_example",
         episode_title="episode_title_example",
         episode_description="episode_description_example",
-        podcast="podcast_example",
-        file="file_example",
+        podcast=1,
+        file=1,
     ) # PodcastEpisode | 
 
     # example passing only required values which don't have defaults set

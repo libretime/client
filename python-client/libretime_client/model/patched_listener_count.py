@@ -85,10 +85,10 @@ class PatchedListenerCount(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'listener_count': (int,),  # noqa: E501
-            'timestamp': (str,),  # noqa: E501
-            'mount_name': (str,),  # noqa: E501
+            'timestamp': (int,),  # noqa: E501
+            'mount_name': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -97,14 +97,14 @@ class PatchedListenerCount(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'listener_count': 'listener_count',  # noqa: E501
         'timestamp': 'timestamp',  # noqa: E501
         'mount_name': 'mount_name',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -145,10 +145,10 @@ class PatchedListenerCount(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             listener_count (int): [optional]  # noqa: E501
-            timestamp (str): [optional]  # noqa: E501
-            mount_name (str): [optional]  # noqa: E501
+            timestamp (int): [optional]  # noqa: E501
+            mount_name (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,10 +234,10 @@ class PatchedListenerCount(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             listener_count (int): [optional]  # noqa: E501
-            timestamp (str): [optional]  # noqa: E501
-            mount_name (str): [optional]  # noqa: E501
+            timestamp (int): [optional]  # noqa: E501
+            mount_name (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

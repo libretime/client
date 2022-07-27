@@ -22,21 +22,21 @@
 export interface PatchedShowHost {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowHost
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowHost
      */
-    'show'?: string;
+    'show'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowHost
      */
-    'user'?: string;
+    'user'?: number;
 }
 

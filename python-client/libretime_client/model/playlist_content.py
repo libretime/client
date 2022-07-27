@@ -95,7 +95,7 @@ class PlaylistContent(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'kind': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'offset': (float,),  # noqa: E501
             'position': (int, none_type,),  # noqa: E501
@@ -104,10 +104,10 @@ class PlaylistContent(ModelNormal):
             'cue_out': (str, none_type,),  # noqa: E501
             'fade_in': (str, none_type,),  # noqa: E501
             'fade_out': (str, none_type,),  # noqa: E501
-            'playlist': (str, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
-            'stream': (str, none_type,),  # noqa: E501
-            'block': (str, none_type,),  # noqa: E501
+            'playlist': (int, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
+            'stream': (int, none_type,),  # noqa: E501
+            'block': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -116,7 +116,7 @@ class PlaylistContent(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'kind': 'kind',  # noqa: E501
         'offset': 'offset',  # noqa: E501
         'position': 'position',  # noqa: E501
@@ -132,18 +132,18 @@ class PlaylistContent(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, kind, offset, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, kind, offset, *args, **kwargs):  # noqa: E501
         """PlaylistContent - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             kind (bool, date, datetime, dict, float, int, list, str, none_type):
             offset (float):
 
@@ -184,10 +184,10 @@ class PlaylistContent(ModelNormal):
             cue_out (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
-            playlist (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            stream (str, none_type): [optional]  # noqa: E501
-            block (str, none_type): [optional]  # noqa: E501
+            playlist (int, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            stream (int, none_type): [optional]  # noqa: E501
+            block (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -219,7 +219,7 @@ class PlaylistContent(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.kind = kind
         self.offset = offset
         for var_name, var_value in kwargs.items():
@@ -285,10 +285,10 @@ class PlaylistContent(ModelNormal):
             cue_out (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
-            playlist (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            stream (str, none_type): [optional]  # noqa: E501
-            block (str, none_type): [optional]  # noqa: E501
+            playlist (int, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            stream (int, none_type): [optional]  # noqa: E501
+            block (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -61,7 +61,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         description="description_example",
         length="length_example",
-        owner="owner_example",
+        owner=1,
     ) # Playlist | 
 
     # example passing only required values which don't have defaults set
@@ -310,7 +310,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         description="description_example",
         length="length_example",
-        owner="owner_example",
+        owner=1,
     ) # PatchedPlaylist |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -491,7 +491,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         description="description_example",
         length="length_example",
-        owner="owner_example",
+        owner=1,
     ) # Playlist | 
 
     # example passing only required values which don't have defaults set

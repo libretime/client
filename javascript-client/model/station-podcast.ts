@@ -22,15 +22,15 @@
 export interface StationPodcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof StationPodcast
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof StationPodcast
      */
-    'podcast': string;
+    'podcast': number;
 }
 

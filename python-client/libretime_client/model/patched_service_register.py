@@ -58,6 +58,9 @@ class PatchedServiceRegister(ModelNormal):
     }
 
     validations = {
+        ('name',): {
+            'max_length': 32,
+        },
         ('ip',): {
             'max_length': 45,
         },
@@ -84,7 +87,7 @@ class PatchedServiceRegister(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'name': (str,),  # noqa: E501
             'ip': (str,),  # noqa: E501
         }
 
@@ -94,12 +97,11 @@ class PatchedServiceRegister(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'name': 'name',  # noqa: E501
         'ip': 'ip',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -140,7 +142,7 @@ class PatchedServiceRegister(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            name (str): [optional]  # noqa: E501
             ip (str): [optional]  # noqa: E501
         """
 
@@ -227,7 +229,7 @@ class PatchedServiceRegister(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            name (str): [optional]  # noqa: E501
             ip (str): [optional]  # noqa: E501
         """
 

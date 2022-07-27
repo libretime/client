@@ -90,7 +90,7 @@ class PatchedLibrary(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'code': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -103,7 +103,7 @@ class PatchedLibrary(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'code': 'code',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -111,7 +111,7 @@ class PatchedLibrary(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -152,7 +152,7 @@ class PatchedLibrary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             code (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
@@ -242,7 +242,7 @@ class PatchedLibrary(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             code (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501

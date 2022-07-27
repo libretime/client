@@ -22,10 +22,10 @@
 export interface PatchedPlayoutHistoryTemplateField {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistoryTemplateField
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -58,9 +58,9 @@ export interface PatchedPlayoutHistoryTemplateField {
     'position'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistoryTemplateField
      */
-    'template'?: string;
+    'template'?: number;
 }
 

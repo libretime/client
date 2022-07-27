@@ -59,10 +59,10 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'starts_at' => '\DateTime',
         'data' => 'string',
-        'schedule' => 'string'
+        'schedule' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'starts_at' => 'date-time',
         'data' => null,
-        'schedule' => 'uri'
+        'schedule' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'starts_at' => 'starts_at',
         'data' => 'data',
         'schedule' => 'schedule'
@@ -118,7 +118,7 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'starts_at' => 'setStartsAt',
         'data' => 'setData',
         'schedule' => 'setSchedule'
@@ -130,7 +130,7 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'starts_at' => 'getStartsAt',
         'data' => 'getData',
         'schedule' => 'getSchedule'
@@ -193,7 +193,7 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['starts_at'] = $data['starts_at'] ?? null;
         $this->container['data'] = $data['data'] ?? null;
         $this->container['schedule'] = $data['schedule'] ?? null;
@@ -208,8 +208,8 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['starts_at'] === null) {
             $invalidProperties[] = "'starts_at' can't be null";
@@ -240,25 +240,25 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -318,7 +318,7 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets schedule
      *
-     * @return string
+     * @return int
      */
     public function getSchedule()
     {
@@ -328,7 +328,7 @@ class WebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets schedule
      *
-     * @param string $schedule schedule
+     * @param int $schedule schedule
      *
      * @return self
      */

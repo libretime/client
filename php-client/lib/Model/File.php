@@ -59,7 +59,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
         'id' => 'int',
         'import_status' => 'PlaylistContentKindEnum',
         'filepath' => 'string',
@@ -122,9 +121,9 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => 'string',
         'report_location' => 'string',
         'report_organization' => 'string',
-        'library' => 'string',
-        'owner' => 'string',
-        'edited_by' => 'string'
+        'library' => 'int',
+        'owner' => 'int',
+        'edited_by' => 'int'
     ];
 
     /**
@@ -135,7 +134,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
         'id' => null,
         'import_status' => null,
         'filepath' => null,
@@ -198,9 +196,9 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         'report_datetime' => null,
         'report_location' => null,
         'report_organization' => null,
-        'library' => 'uri',
-        'owner' => 'uri',
-        'edited_by' => 'uri'
+        'library' => null,
+        'owner' => null,
+        'edited_by' => null
     ];
 
     /**
@@ -230,7 +228,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
         'id' => 'id',
         'import_status' => 'import_status',
         'filepath' => 'filepath',
@@ -304,7 +301,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
         'id' => 'setId',
         'import_status' => 'setImportStatus',
         'filepath' => 'setFilepath',
@@ -378,7 +374,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
         'id' => 'getId',
         'import_status' => 'getImportStatus',
         'filepath' => 'getFilepath',
@@ -503,7 +498,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['import_status'] = $data['import_status'] ?? null;
         $this->container['filepath'] = $data['filepath'] ?? null;
@@ -580,9 +574,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
-        }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
@@ -836,30 +827,6 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets item_url
-     *
-     * @return string
-     */
-    public function getItemUrl()
-    {
-        return $this->container['item_url'];
-    }
-
-    /**
-     * Sets item_url
-     *
-     * @param string $item_url item_url
-     *
-     * @return self
-     */
-    public function setItemUrl($item_url)
-    {
-        $this->container['item_url'] = $item_url;
-
-        return $this;
-    }
 
     /**
      * Gets id
@@ -2577,7 +2544,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets library
      *
-     * @return string|null
+     * @return int|null
      */
     public function getLibrary()
     {
@@ -2587,7 +2554,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets library
      *
-     * @param string|null $library library
+     * @param int|null $library library
      *
      * @return self
      */
@@ -2601,7 +2568,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets owner
      *
-     * @return string|null
+     * @return int|null
      */
     public function getOwner()
     {
@@ -2611,7 +2578,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param int|null $owner owner
      *
      * @return self
      */
@@ -2625,7 +2592,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets edited_by
      *
-     * @return string|null
+     * @return int|null
      */
     public function getEditedBy()
     {
@@ -2635,7 +2602,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets edited_by
      *
-     * @param string|null $edited_by edited_by
+     * @param int|null $edited_by edited_by
      *
      * @return self
      */

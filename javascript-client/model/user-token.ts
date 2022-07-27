@@ -22,10 +22,10 @@
 export interface UserToken {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof UserToken
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -46,9 +46,9 @@ export interface UserToken {
     'created': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof UserToken
      */
-    'user': string;
+    'user': number;
 }
 

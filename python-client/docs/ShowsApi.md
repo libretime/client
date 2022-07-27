@@ -65,7 +65,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         background_color="background_color_example",
         linked=True,
         linkable=True,
-        auto_playlist="auto_playlist_example",
+        auto_playlist=1,
         auto_playlist_enabled=True,
         auto_playlist_repeat=True,
     ) # Show | 
@@ -320,7 +320,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         background_color="background_color_example",
         linked=True,
         linkable=True,
-        auto_playlist="auto_playlist_example",
+        auto_playlist=1,
         auto_playlist_enabled=True,
         auto_playlist_repeat=True,
     ) # PatchedShow |  (optional)
@@ -507,7 +507,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         background_color="background_color_example",
         linked=True,
         linkable=True,
-        auto_playlist="auto_playlist_example",
+        auto_playlist=1,
         auto_playlist_enabled=True,
         auto_playlist_repeat=True,
     ) # Show | 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
 **listener_count** | **int** |  |
-**timestamp** | **string** |  |
-**mount_name** | **string** |  |
+**timestamp** | **int** |  |
+**mount_name** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

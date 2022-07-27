@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
 **id** | **int** |  | [readonly]
 **created_at** | **\DateTime** |  |
 **updated_at** | **\DateTime** |  |
@@ -14,6 +13,6 @@ Name | Type | Description | Notes
 **url** | **string** |  |
 **length** | **string** |  |
 **mime** | **string** |  | [optional]
-**owner** | **string** |  | [optional]
+**owner** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

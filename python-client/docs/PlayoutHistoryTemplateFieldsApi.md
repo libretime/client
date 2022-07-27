@@ -61,7 +61,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         type="type_example",
         is_file_md=True,
         position=-2147483648,
-        template="template_example",
+        template=1,
     ) # PlayoutHistoryTemplateField | 
 
     # example passing only required values which don't have defaults set
@@ -310,7 +310,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         type="type_example",
         is_file_md=True,
         position=-2147483648,
-        template="template_example",
+        template=1,
     ) # PatchedPlayoutHistoryTemplateField |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -491,7 +491,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         type="type_example",
         is_file_md=True,
         position=-2147483648,
-        template="template_example",
+        template=1,
     ) # PlayoutHistoryTemplateField | 
 
     # example passing only required values which don't have defaults set

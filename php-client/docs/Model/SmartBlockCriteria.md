@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
 **group** | **int** |  | [optional]
 **criteria** | **string** |  |
 **condition** | **string** |  |
 **value** | **string** |  |
 **extra** | **string** |  | [optional]
-**block** | **string** |  |
+**block** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

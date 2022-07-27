@@ -112,7 +112,7 @@ class User(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'role': (RoleEnum,),  # noqa: E501
             'username': (str,),  # noqa: E501
             'first_name': (str,),  # noqa: E501
@@ -132,7 +132,7 @@ class User(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'role': 'role',  # noqa: E501
         'username': 'username',  # noqa: E501
         'first_name': 'first_name',  # noqa: E501
@@ -147,18 +147,18 @@ class User(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, role, username, first_name, last_name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, role, username, first_name, last_name, *args, **kwargs):  # noqa: E501
         """User - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             role (RoleEnum):
             username (str):
             first_name (str):
@@ -233,7 +233,7 @@ class User(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.role = role
         self.username = username
         self.first_name = first_name

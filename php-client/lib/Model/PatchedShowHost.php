@@ -59,9 +59,9 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
-        'show' => 'string',
-        'user' => 'string'
+        'id' => 'int',
+        'show' => 'int',
+        'user' => 'int'
     ];
 
     /**
@@ -72,9 +72,9 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
-        'show' => 'uri',
-        'user' => 'uri'
+        'id' => null,
+        'show' => null,
+        'user' => null
     ];
 
     /**
@@ -104,7 +104,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'show' => 'show',
         'user' => 'user'
     ];
@@ -115,7 +115,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'show' => 'setShow',
         'user' => 'setUser'
     ];
@@ -126,7 +126,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'show' => 'getShow',
         'user' => 'getUser'
     ];
@@ -188,7 +188,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['show'] = $data['show'] ?? null;
         $this->container['user'] = $data['user'] ?? null;
     }
@@ -218,25 +218,25 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets show
      *
-     * @return string|null
+     * @return int|null
      */
     public function getShow()
     {
@@ -254,7 +254,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets show
      *
-     * @param string|null $show show
+     * @param int|null $show show
      *
      * @return self
      */
@@ -268,7 +268,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user
      *
-     * @return string|null
+     * @return int|null
      */
     public function getUser()
     {
@@ -278,7 +278,7 @@ class PatchedShowHost implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user
      *
-     * @param string|null $user user
+     * @param int|null $user user
      *
      * @return self
      */

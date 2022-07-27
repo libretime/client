@@ -22,10 +22,10 @@
 export interface MountName {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof MountName
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}

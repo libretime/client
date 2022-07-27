@@ -241,7 +241,6 @@ class PatchedFile(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'import_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'filepath': (str, none_type,),  # noqa: E501
@@ -304,9 +303,9 @@ class PatchedFile(ModelNormal):
             'report_datetime': (str, none_type,),  # noqa: E501
             'report_location': (str, none_type,),  # noqa: E501
             'report_organization': (str, none_type,),  # noqa: E501
-            'library': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
-            'edited_by': (str, none_type,),  # noqa: E501
+            'library': (int, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
+            'edited_by': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -315,7 +314,6 @@ class PatchedFile(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'import_status': 'import_status',  # noqa: E501
         'filepath': 'filepath',  # noqa: E501
@@ -384,7 +382,6 @@ class PatchedFile(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
     }
 
@@ -426,7 +423,6 @@ class PatchedFile(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             import_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             filepath (str, none_type): [optional]  # noqa: E501
@@ -489,9 +485,9 @@ class PatchedFile(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
-            library (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
-            edited_by (str, none_type): [optional]  # noqa: E501
+            library (int, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
+            edited_by (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -577,7 +573,6 @@ class PatchedFile(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             import_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             filepath (str, none_type): [optional]  # noqa: E501
@@ -640,9 +635,9 @@ class PatchedFile(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
-            library (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
-            edited_by (str, none_type): [optional]  # noqa: E501
+            library (int, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
+            edited_by (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

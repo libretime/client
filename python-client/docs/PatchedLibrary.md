@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **str** |  | [optional] [readonly] 
+**id** | **int** |  | [optional] [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **code** | **str** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 

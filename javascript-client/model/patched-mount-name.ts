@@ -22,10 +22,10 @@
 export interface PatchedMountName {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedMountName
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}

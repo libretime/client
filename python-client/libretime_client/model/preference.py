@@ -84,9 +84,9 @@ class Preference(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'key': (str, none_type,),  # noqa: E501
-            'user': (str, none_type,),  # noqa: E501
+            'user': (int, none_type,),  # noqa: E501
             'value': (str, none_type,),  # noqa: E501
         }
 
@@ -96,27 +96,27 @@ class Preference(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'key': 'key',  # noqa: E501
         'user': 'user',  # noqa: E501
         'value': 'value',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, key, user, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, key, user, *args, **kwargs):  # noqa: E501
         """Preference - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             key (str, none_type):
-            user (str, none_type):
+            user (int, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -181,7 +181,7 @@ class Preference(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.key = key
         self.user = user
         for var_name, var_value in kwargs.items():
@@ -208,7 +208,7 @@ class Preference(ModelNormal):
         """Preference - a model defined in OpenAPI
 
             key (str, none_type):
-            user (str, none_type):
+            user (int, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

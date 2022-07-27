@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
 **id** | **int** |  | [readonly]
 **import_status** | [**PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  | [optional]
 **filepath** | **string** |  | [optional]
@@ -67,8 +66,8 @@ Name | Type | Description | Notes
 **report_datetime** | **string** |  | [optional]
 **report_location** | **string** |  | [optional]
 **report_organization** | **string** |  | [optional]
-**library** | **string** |  | [optional]
-**owner** | **string** |  | [optional]
-**edited_by** | **string** |  | [optional]
+**library** | **int** |  | [optional]
+**owner** | **int** |  | [optional]
+**edited_by** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

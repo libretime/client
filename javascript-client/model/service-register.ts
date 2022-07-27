@@ -25,7 +25,7 @@ export interface ServiceRegister {
      * @type {string}
      * @memberof ServiceRegister
      */
-    'item_url': string;
+    'name': string;
     /**
      * 
      * @type {string}

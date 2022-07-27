@@ -58,7 +58,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     playout_history_metadata = PlayoutHistoryMetadata(
         key="key_example",
         value="value_example",
-        history="history_example",
+        history=1,
     ) # PlayoutHistoryMetadata | 
 
     # example passing only required values which don't have defaults set
@@ -304,7 +304,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     patched_playout_history_metadata = PatchedPlayoutHistoryMetadata(
         key="key_example",
         value="value_example",
-        history="history_example",
+        history=1,
     ) # PatchedPlayoutHistoryMetadata |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -482,7 +482,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     playout_history_metadata = PlayoutHistoryMetadata(
         key="key_example",
         value="value_example",
-        history="history_example",
+        history=1,
     ) # PlayoutHistoryMetadata | 
 
     # example passing only required values which don't have defaults set

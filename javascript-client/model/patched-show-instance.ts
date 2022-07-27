@@ -23,12 +23,6 @@ import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled
 export interface PatchedShowInstance {
     /**
      * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'item_url'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedShowInstance
      */
@@ -39,24 +33,6 @@ export interface PatchedShowInstance {
      * @memberof PatchedShowInstance
      */
     'created_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'show'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowInstance
-     */
-    'show_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowInstance
-     */
-    'instance'?: string | null;
     /**
      * 
      * @type {string}
@@ -113,15 +89,21 @@ export interface PatchedShowInstance {
     'record_enabled'?: PatchedShowDaysRecordEnabled | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowInstance
      */
-    'record_file'?: string | null;
+    'show'?: number;
     /**
      * 
      * @type {number}
      * @memberof PatchedShowInstance
      */
-    'record_file_id'?: number;
+    'instance'?: number | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedShowInstance
+     */
+    'record_file'?: number | null;
 }
 

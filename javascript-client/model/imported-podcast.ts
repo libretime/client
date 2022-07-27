@@ -22,10 +22,10 @@
 export interface ImportedPodcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ImportedPodcast
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {boolean}
@@ -46,9 +46,9 @@ export interface ImportedPodcast {
     'auto_ingested_at'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ImportedPodcast
      */
-    'podcast': string;
+    'podcast': number;
 }
 

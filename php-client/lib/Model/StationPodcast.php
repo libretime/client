@@ -59,8 +59,8 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
-        'podcast' => 'string'
+        'id' => 'int',
+        'podcast' => 'int'
     ];
 
     /**
@@ -71,8 +71,8 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
-        'podcast' => 'uri'
+        'id' => null,
+        'podcast' => null
     ];
 
     /**
@@ -102,7 +102,7 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'podcast' => 'podcast'
     ];
 
@@ -112,7 +112,7 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'podcast' => 'setPodcast'
     ];
 
@@ -122,7 +122,7 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'podcast' => 'getPodcast'
     ];
 
@@ -183,7 +183,7 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['podcast'] = $data['podcast'] ?? null;
     }
 
@@ -196,8 +196,8 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['podcast'] === null) {
             $invalidProperties[] = "'podcast' can't be null";
@@ -218,25 +218,25 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets podcast
      *
-     * @return string
+     * @return int
      */
     public function getPodcast()
     {
@@ -254,7 +254,7 @@ class StationPodcast implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets podcast
      *
-     * @param string $podcast podcast
+     * @param int $podcast podcast
      *
      * @return self
      */

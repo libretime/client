@@ -59,14 +59,14 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'published_at' => '\DateTime',
         'download_url' => 'string',
         'episode_guid' => 'string',
         'episode_title' => 'string',
         'episode_description' => 'string',
-        'podcast' => 'string',
-        'file' => 'string'
+        'podcast' => 'int',
+        'file' => 'int'
     ];
 
     /**
@@ -77,14 +77,14 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'published_at' => 'date-time',
         'download_url' => null,
         'episode_guid' => null,
         'episode_title' => null,
         'episode_description' => null,
-        'podcast' => 'uri',
-        'file' => 'uri'
+        'podcast' => null,
+        'file' => null
     ];
 
     /**
@@ -114,7 +114,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'published_at' => 'published_at',
         'download_url' => 'download_url',
         'episode_guid' => 'episode_guid',
@@ -130,7 +130,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'published_at' => 'setPublishedAt',
         'download_url' => 'setDownloadUrl',
         'episode_guid' => 'setEpisodeGuid',
@@ -146,7 +146,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'published_at' => 'getPublishedAt',
         'download_url' => 'getDownloadUrl',
         'episode_guid' => 'getEpisodeGuid',
@@ -213,7 +213,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['published_at'] = $data['published_at'] ?? null;
         $this->container['download_url'] = $data['download_url'] ?? null;
         $this->container['episode_guid'] = $data['episode_guid'] ?? null;
@@ -260,25 +260,25 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -418,7 +418,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets podcast
      *
-     * @return string|null
+     * @return int|null
      */
     public function getPodcast()
     {
@@ -428,7 +428,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets podcast
      *
-     * @param string|null $podcast podcast
+     * @param int|null $podcast podcast
      *
      * @return self
      */
@@ -442,7 +442,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getFile()
     {
@@ -452,7 +452,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets file
      *
-     * @param string|null $file file
+     * @param int|null $file file
      *
      * @return self
      */

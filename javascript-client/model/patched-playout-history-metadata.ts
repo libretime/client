@@ -22,10 +22,10 @@
 export interface PatchedPlayoutHistoryMetadata {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistoryMetadata
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface PatchedPlayoutHistoryMetadata {
     'value'?: string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistoryMetadata
      */
-    'history'?: string;
+    'history'?: number;
 }
 

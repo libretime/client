@@ -59,7 +59,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'url' => 'string',
         'title' => 'string',
         'creator' => 'string',
@@ -73,7 +73,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
         'itunes_subtitle' => 'string',
         'itunes_category' => 'string',
         'itunes_explicit' => 'string',
-        'owner' => 'string'
+        'owner' => 'int'
     ];
 
     /**
@@ -84,7 +84,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'url' => null,
         'title' => null,
         'creator' => null,
@@ -98,7 +98,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
         'itunes_subtitle' => null,
         'itunes_category' => null,
         'itunes_explicit' => null,
-        'owner' => 'uri'
+        'owner' => null
     ];
 
     /**
@@ -128,7 +128,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'url' => 'url',
         'title' => 'title',
         'creator' => 'creator',
@@ -151,7 +151,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'url' => 'setUrl',
         'title' => 'setTitle',
         'creator' => 'setCreator',
@@ -174,7 +174,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'url' => 'getUrl',
         'title' => 'getTitle',
         'creator' => 'getCreator',
@@ -248,7 +248,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['title'] = $data['title'] ?? null;
         $this->container['creator'] = $data['creator'] ?? null;
@@ -274,8 +274,8 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
@@ -351,25 +351,25 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -741,7 +741,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets owner
      *
-     * @return string|null
+     * @return int|null
      */
     public function getOwner()
     {
@@ -751,7 +751,7 @@ class Podcast implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param int|null $owner owner
      *
      * @return self
      */

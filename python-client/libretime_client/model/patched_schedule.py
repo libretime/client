@@ -99,26 +99,21 @@ class PatchedSchedule(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'starts_at': (datetime,),  # noqa: E501
+            'cue_out': (str,),  # noqa: E501
             'ends_at': (datetime,),  # noqa: E501
-            'instance': (str,),  # noqa: E501
-            'instance_id': (int,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
-            'file_id': (int,),  # noqa: E501
-            'stream': (str, none_type,),  # noqa: E501
-            'stream_id': (int,),  # noqa: E501
+            'starts_at': (datetime,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
             'fade_in': (str, none_type,),  # noqa: E501
             'fade_out': (str, none_type,),  # noqa: E501
             'cue_in': (str,),  # noqa: E501
-            'cue_out': (str,),  # noqa: E501
             'position': (int,),  # noqa: E501
             'position_status': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'broadcasted': (int,),  # noqa: E501
             'played': (bool, none_type,),  # noqa: E501
-            'overbooked': (bool,),  # noqa: E501
+            'instance': (int,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
+            'stream': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -127,37 +122,27 @@ class PatchedSchedule(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'starts_at': 'starts_at',  # noqa: E501
+        'cue_out': 'cue_out',  # noqa: E501
         'ends_at': 'ends_at',  # noqa: E501
-        'instance': 'instance',  # noqa: E501
-        'instance_id': 'instance_id',  # noqa: E501
-        'file': 'file',  # noqa: E501
-        'file_id': 'file_id',  # noqa: E501
-        'stream': 'stream',  # noqa: E501
-        'stream_id': 'stream_id',  # noqa: E501
+        'starts_at': 'starts_at',  # noqa: E501
         'length': 'length',  # noqa: E501
         'fade_in': 'fade_in',  # noqa: E501
         'fade_out': 'fade_out',  # noqa: E501
         'cue_in': 'cue_in',  # noqa: E501
-        'cue_out': 'cue_out',  # noqa: E501
         'position': 'position',  # noqa: E501
         'position_status': 'position_status',  # noqa: E501
         'broadcasted': 'broadcasted',  # noqa: E501
         'played': 'played',  # noqa: E501
-        'overbooked': 'overbooked',  # noqa: E501
+        'instance': 'instance',  # noqa: E501
+        'file': 'file',  # noqa: E501
+        'stream': 'stream',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
-        'ends_at',  # noqa: E501
-        'instance_id',  # noqa: E501
-        'file_id',  # noqa: E501
-        'stream_id',  # noqa: E501
         'cue_out',  # noqa: E501
-        'overbooked',  # noqa: E501
+        'ends_at',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -198,26 +183,21 @@ class PatchedSchedule(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
-            starts_at (datetime): [optional]  # noqa: E501
+            cue_out (str): [optional]  # noqa: E501
             ends_at (datetime): [optional]  # noqa: E501
-            instance (str): [optional]  # noqa: E501
-            instance_id (int): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            file_id (int): [optional]  # noqa: E501
-            stream (str, none_type): [optional]  # noqa: E501
-            stream_id (int): [optional]  # noqa: E501
+            starts_at (datetime): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
             cue_in (str): [optional]  # noqa: E501
-            cue_out (str): [optional]  # noqa: E501
             position (int): [optional]  # noqa: E501
             position_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             broadcasted (int): [optional]  # noqa: E501
             played (bool, none_type): [optional]  # noqa: E501
-            overbooked (bool): [optional]  # noqa: E501
+            instance (int): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            stream (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -303,26 +283,21 @@ class PatchedSchedule(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
-            starts_at (datetime): [optional]  # noqa: E501
+            cue_out (str): [optional]  # noqa: E501
             ends_at (datetime): [optional]  # noqa: E501
-            instance (str): [optional]  # noqa: E501
-            instance_id (int): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
-            file_id (int): [optional]  # noqa: E501
-            stream (str, none_type): [optional]  # noqa: E501
-            stream_id (int): [optional]  # noqa: E501
+            starts_at (datetime): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
             cue_in (str): [optional]  # noqa: E501
-            cue_out (str): [optional]  # noqa: E501
             position (int): [optional]  # noqa: E501
             position_status (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             broadcasted (int): [optional]  # noqa: E501
             played (bool, none_type): [optional]  # noqa: E501
-            overbooked (bool): [optional]  # noqa: E501
+            instance (int): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
+            stream (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -22,10 +22,10 @@
 export interface PatchedSmartBlockContent {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedSmartBlockContent
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {number}
@@ -70,15 +70,15 @@ export interface PatchedSmartBlockContent {
     'fade_out'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedSmartBlockContent
      */
-    'block'?: string | null;
+    'block'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedSmartBlockContent
      */
-    'file'?: string | null;
+    'file'?: number | null;
 }
 

@@ -32,11 +32,13 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
     return {
         /**
          * 
-         * @param {LoginAttempt} [loginAttempt] 
+         * @param {LoginAttempt} loginAttempt 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsCreate: async (loginAttempt?: LoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        loginAttemptsCreate: async (loginAttempt: LoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'loginAttempt' is not null or undefined
+            assertParamExists('loginAttemptsCreate', 'loginAttempt', loginAttempt)
             const localVarPath = `/api/v2/login-attempts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -228,13 +230,15 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
         /**
          * 
          * @param {string} ip A unique value identifying this login attempt.
-         * @param {LoginAttempt} [loginAttempt] 
+         * @param {LoginAttempt} loginAttempt 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsUpdate: async (ip: string, loginAttempt?: LoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        loginAttemptsUpdate: async (ip: string, loginAttempt: LoginAttempt, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsUpdate', 'ip', ip)
+            // verify required parameter 'loginAttempt' is not null or undefined
+            assertParamExists('loginAttemptsUpdate', 'loginAttempt', loginAttempt)
             const localVarPath = `/api/v2/login-attempts/{ip}`
                 .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -280,11 +284,11 @@ export const LoginAttemptsApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {LoginAttempt} [loginAttempt] 
+         * @param {LoginAttempt} loginAttempt 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async loginAttemptsCreate(loginAttempt?: LoginAttempt, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginAttempt>> {
+        async loginAttemptsCreate(loginAttempt: LoginAttempt, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginAttempt>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.loginAttemptsCreate(loginAttempt, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -331,11 +335,11 @@ export const LoginAttemptsApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} ip A unique value identifying this login attempt.
-         * @param {LoginAttempt} [loginAttempt] 
+         * @param {LoginAttempt} loginAttempt 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async loginAttemptsUpdate(ip: string, loginAttempt?: LoginAttempt, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginAttempt>> {
+        async loginAttemptsUpdate(ip: string, loginAttempt: LoginAttempt, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LoginAttempt>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.loginAttemptsUpdate(ip, loginAttempt, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -351,11 +355,11 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
     return {
         /**
          * 
-         * @param {LoginAttempt} [loginAttempt] 
+         * @param {LoginAttempt} loginAttempt 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsCreate(loginAttempt?: LoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
+        loginAttemptsCreate(loginAttempt: LoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
             return localVarFp.loginAttemptsCreate(loginAttempt, options).then((request) => request(axios, basePath));
         },
         /**
@@ -397,11 +401,11 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
         /**
          * 
          * @param {string} ip A unique value identifying this login attempt.
-         * @param {LoginAttempt} [loginAttempt] 
+         * @param {LoginAttempt} loginAttempt 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsUpdate(ip: string, loginAttempt?: LoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
+        loginAttemptsUpdate(ip: string, loginAttempt: LoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
             return localVarFp.loginAttemptsUpdate(ip, loginAttempt, options).then((request) => request(axios, basePath));
         },
     };
@@ -416,12 +420,12 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
 export class LoginAttemptsApi extends BaseAPI {
     /**
      * 
-     * @param {LoginAttempt} [loginAttempt] 
+     * @param {LoginAttempt} loginAttempt 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LoginAttemptsApi
      */
-    public loginAttemptsCreate(loginAttempt?: LoginAttempt, options?: AxiosRequestConfig) {
+    public loginAttemptsCreate(loginAttempt: LoginAttempt, options?: AxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsCreate(loginAttempt, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -472,12 +476,12 @@ export class LoginAttemptsApi extends BaseAPI {
     /**
      * 
      * @param {string} ip A unique value identifying this login attempt.
-     * @param {LoginAttempt} [loginAttempt] 
+     * @param {LoginAttempt} loginAttempt 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LoginAttemptsApi
      */
-    public loginAttemptsUpdate(ip: string, loginAttempt?: LoginAttempt, options?: AxiosRequestConfig) {
+    public loginAttemptsUpdate(ip: string, loginAttempt: LoginAttempt, options?: AxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsUpdate(ip, loginAttempt, options).then((request) => request(this.axios, this.basePath));
     }
 }

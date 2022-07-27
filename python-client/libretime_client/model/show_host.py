@@ -81,9 +81,9 @@ class ShowHost(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
-            'show': (str,),  # noqa: E501
-            'user': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'show': (int,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -92,26 +92,26 @@ class ShowHost(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'show': 'show',  # noqa: E501
         'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, show, user, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, show, user, *args, **kwargs):  # noqa: E501
         """ShowHost - a model defined in OpenAPI
 
         Args:
-            item_url (str):
-            show (str):
-            user (str):
+            id (int):
+            show (int):
+            user (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -175,7 +175,7 @@ class ShowHost(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.show = show
         self.user = user
         for var_name, var_value in kwargs.items():
@@ -201,8 +201,8 @@ class ShowHost(ModelNormal):
     def __init__(self, show, user, *args, **kwargs):  # noqa: E501
         """ShowHost - a model defined in OpenAPI
 
-            show (str):
-            user (str):
+            show (int):
+            user (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

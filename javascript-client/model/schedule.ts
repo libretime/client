@@ -23,12 +23,6 @@ import { PositionStatusEnum } from './position-status-enum';
 export interface Schedule {
     /**
      * 
-     * @type {string}
-     * @memberof Schedule
-     */
-    'item_url': string;
-    /**
-     * 
      * @type {number}
      * @memberof Schedule
      */
@@ -38,7 +32,7 @@ export interface Schedule {
      * @type {string}
      * @memberof Schedule
      */
-    'starts_at': string;
+    'cue_out': string;
     /**
      * 
      * @type {string}
@@ -50,37 +44,7 @@ export interface Schedule {
      * @type {string}
      * @memberof Schedule
      */
-    'instance': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof Schedule
-     */
-    'instance_id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Schedule
-     */
-    'file'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof Schedule
-     */
-    'file_id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Schedule
-     */
-    'stream'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof Schedule
-     */
-    'stream_id': number;
+    'starts_at': string;
     /**
      * 
      * @type {string}
@@ -107,12 +71,6 @@ export interface Schedule {
     'cue_in': string;
     /**
      * 
-     * @type {string}
-     * @memberof Schedule
-     */
-    'cue_out': string;
-    /**
-     * 
      * @type {number}
      * @memberof Schedule
      */
@@ -137,9 +95,21 @@ export interface Schedule {
     'played'?: boolean | null;
     /**
      * 
-     * @type {boolean}
+     * @type {number}
      * @memberof Schedule
      */
-    'overbooked': boolean;
+    'instance': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof Schedule
+     */
+    'file'?: number | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof Schedule
+     */
+    'stream'?: number | null;
 }
 

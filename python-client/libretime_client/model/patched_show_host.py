@@ -81,9 +81,9 @@ class PatchedShowHost(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
-            'show': (str,),  # noqa: E501
-            'user': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'show': (int,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -92,13 +92,13 @@ class PatchedShowHost(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'show': 'show',  # noqa: E501
         'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -139,9 +139,9 @@ class PatchedShowHost(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
-            user (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,9 +227,9 @@ class PatchedShowHost(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
-            user (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

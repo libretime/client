@@ -22,10 +22,10 @@
 export interface PatchedImportedPodcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedImportedPodcast
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {boolean}
@@ -46,9 +46,9 @@ export interface PatchedImportedPodcast {
     'auto_ingested_at'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedImportedPodcast
      */
-    'podcast'?: string;
+    'podcast'?: number;
 }
 

@@ -85,7 +85,7 @@ class PatchedSmartBlockContent(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'position': (int, none_type,),  # noqa: E501
             'offset': (float,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
@@ -93,8 +93,8 @@ class PatchedSmartBlockContent(ModelNormal):
             'cue_out': (str, none_type,),  # noqa: E501
             'fade_in': (str, none_type,),  # noqa: E501
             'fade_out': (str, none_type,),  # noqa: E501
-            'block': (str, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
+            'block': (int, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -103,7 +103,7 @@ class PatchedSmartBlockContent(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'position': 'position',  # noqa: E501
         'offset': 'offset',  # noqa: E501
         'length': 'length',  # noqa: E501
@@ -116,7 +116,7 @@ class PatchedSmartBlockContent(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -157,7 +157,7 @@ class PatchedSmartBlockContent(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             position (int, none_type): [optional]  # noqa: E501
             offset (float): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
@@ -165,8 +165,8 @@ class PatchedSmartBlockContent(ModelNormal):
             cue_out (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
-            block (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            block (int, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,7 +252,7 @@ class PatchedSmartBlockContent(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             position (int, none_type): [optional]  # noqa: E501
             offset (float): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
@@ -260,8 +260,8 @@ class PatchedSmartBlockContent(ModelNormal):
             cue_out (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
-            block (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            block (int, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

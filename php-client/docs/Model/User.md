@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
 **role** | [**\Libretime\Client\Model\RoleEnum**](RoleEnum.md) |  |
 **username** | **string** |  |
 **email** | **string** |  | [optional]

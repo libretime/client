@@ -94,13 +94,13 @@ class PatchedPlayoutHistoryTemplateField(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'label': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'is_file_md': (bool,),  # noqa: E501
             'position': (int,),  # noqa: E501
-            'template': (str,),  # noqa: E501
+            'template': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -109,7 +109,7 @@ class PatchedPlayoutHistoryTemplateField(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'label': 'label',  # noqa: E501
         'type': 'type',  # noqa: E501
@@ -119,7 +119,7 @@ class PatchedPlayoutHistoryTemplateField(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -160,13 +160,13 @@ class PatchedPlayoutHistoryTemplateField(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             label (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
             is_file_md (bool): [optional]  # noqa: E501
             position (int): [optional]  # noqa: E501
-            template (str): [optional]  # noqa: E501
+            template (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,13 +252,13 @@ class PatchedPlayoutHistoryTemplateField(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             label (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
             is_file_md (bool): [optional]  # noqa: E501
             position (int): [optional]  # noqa: E501
-            template (str): [optional]  # noqa: E501
+            template (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

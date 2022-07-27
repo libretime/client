@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **str** |  | [readonly] 
+**id** | **int** |  | [readonly] 
 **role** | [**RoleEnum**](RoleEnum.md) |  | 
 **username** | **str** |  | 
 **first_name** | **str** |  | 

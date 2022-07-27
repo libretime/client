@@ -59,10 +59,10 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'listener_count' => 'int',
-        'timestamp' => 'string',
-        'mount_name' => 'string'
+        'timestamp' => 'int',
+        'mount_name' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'listener_count' => null,
-        'timestamp' => 'uri',
-        'mount_name' => 'uri'
+        'timestamp' => null,
+        'mount_name' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'listener_count' => 'listener_count',
         'timestamp' => 'timestamp',
         'mount_name' => 'mount_name'
@@ -118,7 +118,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'listener_count' => 'setListenerCount',
         'timestamp' => 'setTimestamp',
         'mount_name' => 'setMountName'
@@ -130,7 +130,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'listener_count' => 'getListenerCount',
         'timestamp' => 'getTimestamp',
         'mount_name' => 'getMountName'
@@ -193,7 +193,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['listener_count'] = $data['listener_count'] ?? null;
         $this->container['timestamp'] = $data['timestamp'] ?? null;
         $this->container['mount_name'] = $data['mount_name'] ?? null;
@@ -232,25 +232,25 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -290,7 +290,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets timestamp
      *
-     * @return string|null
+     * @return int|null
      */
     public function getTimestamp()
     {
@@ -300,7 +300,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets timestamp
      *
-     * @param string|null $timestamp timestamp
+     * @param int|null $timestamp timestamp
      *
      * @return self
      */
@@ -314,7 +314,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets mount_name
      *
-     * @return string|null
+     * @return int|null
      */
     public function getMountName()
     {
@@ -324,7 +324,7 @@ class PatchedListenerCount implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets mount_name
      *
-     * @param string|null $mount_name mount_name
+     * @param int|null $mount_name mount_name
      *
      * @return self
      */

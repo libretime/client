@@ -81,7 +81,7 @@ class Timestamp(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'timestamp': (datetime,),  # noqa: E501
         }
 
@@ -91,23 +91,23 @@ class Timestamp(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'timestamp': 'timestamp',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, timestamp, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, timestamp, *args, **kwargs):  # noqa: E501
         """Timestamp - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             timestamp (datetime):
 
         Keyword Args:
@@ -172,7 +172,7 @@ class Timestamp(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.timestamp = timestamp
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

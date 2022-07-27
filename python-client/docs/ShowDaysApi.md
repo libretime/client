@@ -65,7 +65,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         week_day=PatchedShowDaysWeekDay(None),
         repeat_kind=None,
         repeat_next_on=dateutil_parser('1970-01-01').date(),
-        show="show_example",
+        show=1,
     ) # ShowDays | 
 
     # example passing only required values which don't have defaults set
@@ -318,7 +318,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         week_day=PatchedShowDaysWeekDay(None),
         repeat_kind=None,
         repeat_next_on=dateutil_parser('1970-01-01').date(),
-        show="show_example",
+        show=1,
     ) # PatchedShowDays |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -503,7 +503,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         week_day=PatchedShowDaysWeekDay(None),
         repeat_kind=None,
         repeat_next_on=dateutil_parser('1970-01-01').date(),
-        show="show_example",
+        show=1,
     ) # ShowDays | 
 
     # example passing only required values which don't have defaults set

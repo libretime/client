@@ -22,10 +22,10 @@
 export interface PodcastEpisode {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PodcastEpisode
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -58,15 +58,15 @@ export interface PodcastEpisode {
     'episode_description': string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PodcastEpisode
      */
-    'podcast': string;
+    'podcast': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PodcastEpisode
      */
-    'file'?: string | null;
+    'file'?: number | null;
 }
 

@@ -84,7 +84,7 @@ class MountName(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'mount_name': (str,),  # noqa: E501
         }
 
@@ -94,23 +94,23 @@ class MountName(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'mount_name': 'mount_name',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, mount_name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, mount_name, *args, **kwargs):  # noqa: E501
         """MountName - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             mount_name (str):
 
         Keyword Args:
@@ -175,7 +175,7 @@ class MountName(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.mount_name = mount_name
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

@@ -58,6 +58,9 @@ class PatchedStreamSetting(ModelNormal):
     }
 
     validations = {
+        ('key',): {
+            'max_length': 64,
+        },
         ('raw_value',): {
             'max_length': 255,
         },
@@ -87,7 +90,7 @@ class PatchedStreamSetting(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'key': (str,),  # noqa: E501
             'raw_value': (str, none_type,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
@@ -98,13 +101,12 @@ class PatchedStreamSetting(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'key': 'key',  # noqa: E501
         'raw_value': 'raw_value',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -145,7 +147,7 @@ class PatchedStreamSetting(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            key (str): [optional]  # noqa: E501
             raw_value (str, none_type): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
@@ -233,7 +235,7 @@ class PatchedStreamSetting(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            key (str): [optional]  # noqa: E501
             raw_value (str, none_type): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """

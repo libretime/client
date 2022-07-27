@@ -23,12 +23,6 @@ import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 export interface PatchedFile {
     /**
      * 
-     * @type {string}
-     * @memberof PatchedFile
-     */
-    'item_url'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedFile
      */
@@ -401,21 +395,21 @@ export interface PatchedFile {
     'report_organization'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedFile
      */
-    'library'?: string | null;
+    'library'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedFile
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedFile
      */
-    'edited_by'?: string | null;
+    'edited_by'?: number | null;
 }
 

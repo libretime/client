@@ -22,10 +22,10 @@
 export interface SmartBlockContent {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlockContent
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {number}
@@ -70,15 +70,15 @@ export interface SmartBlockContent {
     'fade_out'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlockContent
      */
-    'block'?: string | null;
+    'block'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlockContent
      */
-    'file'?: string | null;
+    'file'?: number | null;
 }
 

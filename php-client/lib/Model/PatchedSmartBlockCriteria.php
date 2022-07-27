@@ -59,13 +59,13 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'group' => 'int',
         'criteria' => 'string',
         'condition' => 'string',
         'value' => 'string',
         'extra' => 'string',
-        'block' => 'string'
+        'block' => 'int'
     ];
 
     /**
@@ -76,13 +76,13 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'group' => null,
         'criteria' => null,
         'condition' => null,
         'value' => null,
         'extra' => null,
-        'block' => 'uri'
+        'block' => null
     ];
 
     /**
@@ -112,7 +112,7 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'group' => 'group',
         'criteria' => 'criteria',
         'condition' => 'condition',
@@ -127,7 +127,7 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'group' => 'setGroup',
         'criteria' => 'setCriteria',
         'condition' => 'setCondition',
@@ -142,7 +142,7 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'group' => 'getGroup',
         'criteria' => 'getCriteria',
         'condition' => 'getCondition',
@@ -208,7 +208,7 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['group'] = $data['group'] ?? null;
         $this->container['criteria'] = $data['criteria'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
@@ -266,25 +266,25 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -436,7 +436,7 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets block
      *
-     * @return string|null
+     * @return int|null
      */
     public function getBlock()
     {
@@ -446,7 +446,7 @@ class PatchedSmartBlockCriteria implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets block
      *
-     * @param string|null $block block
+     * @param int|null $block block
      *
      * @return self
      */

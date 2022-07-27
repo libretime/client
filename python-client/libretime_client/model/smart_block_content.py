@@ -85,7 +85,7 @@ class SmartBlockContent(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'offset': (float,),  # noqa: E501
             'position': (int, none_type,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
@@ -93,8 +93,8 @@ class SmartBlockContent(ModelNormal):
             'cue_out': (str, none_type,),  # noqa: E501
             'fade_in': (str, none_type,),  # noqa: E501
             'fade_out': (str, none_type,),  # noqa: E501
-            'block': (str, none_type,),  # noqa: E501
-            'file': (str, none_type,),  # noqa: E501
+            'block': (int, none_type,),  # noqa: E501
+            'file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -103,7 +103,7 @@ class SmartBlockContent(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'offset': 'offset',  # noqa: E501
         'position': 'position',  # noqa: E501
         'length': 'length',  # noqa: E501
@@ -116,18 +116,18 @@ class SmartBlockContent(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, offset, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, offset, *args, **kwargs):  # noqa: E501
         """SmartBlockContent - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             offset (float):
 
         Keyword Args:
@@ -167,8 +167,8 @@ class SmartBlockContent(ModelNormal):
             cue_out (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
-            block (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            block (int, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -200,7 +200,7 @@ class SmartBlockContent(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.offset = offset
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -264,8 +264,8 @@ class SmartBlockContent(ModelNormal):
             cue_out (str, none_type): [optional]  # noqa: E501
             fade_in (str, none_type): [optional]  # noqa: E501
             fade_out (str, none_type): [optional]  # noqa: E501
-            block (str, none_type): [optional]  # noqa: E501
-            file (str, none_type): [optional]  # noqa: E501
+            block (int, none_type): [optional]  # noqa: E501
+            file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

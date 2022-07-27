@@ -58,6 +58,9 @@ class StreamSetting(ModelNormal):
     }
 
     validations = {
+        ('key',): {
+            'max_length': 64,
+        },
         ('type',): {
             'max_length': 16,
         },
@@ -87,7 +90,7 @@ class StreamSetting(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'key': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'raw_value': (str, none_type,),  # noqa: E501
         }
@@ -98,24 +101,23 @@ class StreamSetting(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'key': 'key',  # noqa: E501
         'type': 'type',  # noqa: E501
         'raw_value': 'raw_value',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, type, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, key, type, *args, **kwargs):  # noqa: E501
         """StreamSetting - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            key (str):
             type (str):
 
         Keyword Args:
@@ -181,7 +183,7 @@ class StreamSetting(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.key = key
         self.type = type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -203,9 +205,11 @@ class StreamSetting(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, type, *args, **kwargs):  # noqa: E501
+    def __init__(self, key, type, *args, **kwargs):  # noqa: E501
         """StreamSetting - a model defined in OpenAPI
 
+        Args:
+            key (str):
             type (str):
 
         Keyword Args:
@@ -269,6 +273,7 @@ class StreamSetting(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.key = key
         self.type = type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

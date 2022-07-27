@@ -93,7 +93,6 @@ class PatchedWebstream(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -103,7 +102,7 @@ class PatchedWebstream(ModelNormal):
             'url': (str,),  # noqa: E501
             'length': (str,),  # noqa: E501
             'mime': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -112,7 +111,6 @@ class PatchedWebstream(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
@@ -126,7 +124,6 @@ class PatchedWebstream(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
     }
 
@@ -168,7 +165,6 @@ class PatchedWebstream(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
@@ -178,7 +174,7 @@ class PatchedWebstream(ModelNormal):
             url (str): [optional]  # noqa: E501
             length (str): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -264,7 +260,6 @@ class PatchedWebstream(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
@@ -274,7 +269,7 @@ class PatchedWebstream(ModelNormal):
             url (str): [optional]  # noqa: E501
             length (str): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -61,7 +61,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         condition="condition_example",
         value="value_example",
         extra="extra_example",
-        block="block_example",
+        block=1,
     ) # SmartBlockCriteria | 
 
     # example passing only required values which don't have defaults set
@@ -310,7 +310,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         condition="condition_example",
         value="value_example",
         extra="extra_example",
-        block="block_example",
+        block=1,
     ) # PatchedSmartBlockCriteria |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -491,7 +491,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         condition="condition_example",
         value="value_example",
         extra="extra_example",
-        block="block_example",
+        block=1,
     ) # SmartBlockCriteria | 
 
     # example passing only required values which don't have defaults set

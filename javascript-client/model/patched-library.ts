@@ -22,10 +22,10 @@
 export interface PatchedLibrary {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedLibrary
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}

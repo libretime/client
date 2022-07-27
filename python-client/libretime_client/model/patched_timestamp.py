@@ -81,7 +81,7 @@ class PatchedTimestamp(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'timestamp': (datetime,),  # noqa: E501
         }
 
@@ -91,12 +91,12 @@ class PatchedTimestamp(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'timestamp': 'timestamp',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -137,7 +137,7 @@ class PatchedTimestamp(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             timestamp (datetime): [optional]  # noqa: E501
         """
 
@@ -224,7 +224,7 @@ class PatchedTimestamp(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             timestamp (datetime): [optional]  # noqa: E501
         """
 

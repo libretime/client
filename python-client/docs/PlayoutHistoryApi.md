@@ -58,8 +58,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     playout_history = PlayoutHistory(
         starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ends=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        file="file_example",
-        instance="instance_example",
+        file=1,
+        instance=1,
     ) # PlayoutHistory | 
 
     # example passing only required values which don't have defaults set
@@ -305,8 +305,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     patched_playout_history = PatchedPlayoutHistory(
         starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ends=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        file="file_example",
-        instance="instance_example",
+        file=1,
+        instance=1,
     ) # PatchedPlayoutHistory |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -484,8 +484,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     playout_history = PlayoutHistory(
         starts=dateutil_parser('1970-01-01T00:00:00.00Z'),
         ends=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        file="file_example",
-        instance="instance_example",
+        file=1,
+        instance=1,
     ) # PlayoutHistory | 
 
     # example passing only required values which don't have defaults set

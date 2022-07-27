@@ -56,6 +56,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = service_registers_api.ServiceRegistersApi(api_client)
     service_register = ServiceRegister(
+        name="name_example",
         ip="ip_example",
     ) # ServiceRegister | 
 
@@ -300,6 +301,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = service_registers_api.ServiceRegistersApi(api_client)
     name = "name_example" # str | A unique value identifying this service register.
     patched_service_register = PatchedServiceRegister(
+        name="name_example",
         ip="ip_example",
     ) # PatchedServiceRegister |  (optional)
 
@@ -476,6 +478,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = service_registers_api.ServiceRegistersApi(api_client)
     name = "name_example" # str | A unique value identifying this service register.
     service_register = ServiceRegister(
+        name="name_example",
         ip="ip_example",
     ) # ServiceRegister | 
 

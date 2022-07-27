@@ -22,12 +22,6 @@
 export interface PatchedShow {
     /**
      * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
-    'item_url'?: string;
-    /**
-     * 
      * @type {number}
      * @memberof PatchedShow
      */
@@ -88,10 +82,10 @@ export interface PatchedShow {
     'linkable'?: boolean;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShow
      */
-    'auto_playlist'?: string | null;
+    'auto_playlist'?: number | null;
     /**
      * 
      * @type {boolean}

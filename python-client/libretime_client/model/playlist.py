@@ -87,13 +87,13 @@ class Playlist(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'created_at': (datetime, none_type,),  # noqa: E501
             'updated_at': (datetime, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'length': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -102,7 +102,7 @@ class Playlist(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
@@ -112,18 +112,18 @@ class Playlist(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, *args, **kwargs):  # noqa: E501
         """Playlist - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             name (str):
 
         Keyword Args:
@@ -161,7 +161,7 @@ class Playlist(ModelNormal):
             updated_at (datetime, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -193,7 +193,7 @@ class Playlist(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.name = name
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -255,7 +255,7 @@ class Playlist(ModelNormal):
             updated_at (datetime, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             length (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

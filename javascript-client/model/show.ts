@@ -22,12 +22,6 @@
 export interface Show {
     /**
      * 
-     * @type {string}
-     * @memberof Show
-     */
-    'item_url': string;
-    /**
-     * 
      * @type {number}
      * @memberof Show
      */
@@ -88,10 +82,10 @@ export interface Show {
     'linkable': boolean;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof Show
      */
-    'auto_playlist'?: string | null;
+    'auto_playlist'?: number | null;
     /**
      * 
      * @type {boolean}

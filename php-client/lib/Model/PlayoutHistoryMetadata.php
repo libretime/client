@@ -59,10 +59,10 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'key' => 'string',
         'value' => 'string',
-        'history' => 'string'
+        'history' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'key' => null,
         'value' => null,
-        'history' => 'uri'
+        'history' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'key' => 'key',
         'value' => 'value',
         'history' => 'history'
@@ -118,7 +118,7 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'key' => 'setKey',
         'value' => 'setValue',
         'history' => 'setHistory'
@@ -130,7 +130,7 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'key' => 'getKey',
         'value' => 'getValue',
         'history' => 'getHistory'
@@ -193,7 +193,7 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['key'] = $data['key'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
         $this->container['history'] = $data['history'] ?? null;
@@ -208,8 +208,8 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
@@ -244,25 +244,25 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -326,7 +326,7 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets history
      *
-     * @return string
+     * @return int
      */
     public function getHistory()
     {
@@ -336,7 +336,7 @@ class PlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets history
      *
-     * @param string $history history
+     * @param int $history history
      *
      * @return self
      */

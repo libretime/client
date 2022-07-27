@@ -58,6 +58,9 @@ class PatchedLoginAttempt(ModelNormal):
     }
 
     validations = {
+        ('ip',): {
+            'max_length': 32,
+        },
         ('attempts',): {
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': -2147483648,
@@ -85,7 +88,7 @@ class PatchedLoginAttempt(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'ip': (str,),  # noqa: E501
             'attempts': (int, none_type,),  # noqa: E501
         }
 
@@ -95,12 +98,11 @@ class PatchedLoginAttempt(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'ip': 'ip',  # noqa: E501
         'attempts': 'attempts',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -141,7 +143,7 @@ class PatchedLoginAttempt(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            ip (str): [optional]  # noqa: E501
             attempts (int, none_type): [optional]  # noqa: E501
         """
 
@@ -228,7 +230,7 @@ class PatchedLoginAttempt(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            ip (str): [optional]  # noqa: E501
             attempts (int, none_type): [optional]  # noqa: E501
         """
 

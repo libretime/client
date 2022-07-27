@@ -57,8 +57,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     api_instance = listener_counts_api.ListenerCountsApi(api_client)
     listener_count = ListenerCount(
         listener_count=-2147483648,
-        timestamp="timestamp_example",
-        mount_name="mount_name_example",
+        timestamp=1,
+        mount_name=1,
     ) # ListenerCount | 
 
     # example passing only required values which don't have defaults set
@@ -303,8 +303,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this listener count.
     patched_listener_count = PatchedListenerCount(
         listener_count=-2147483648,
-        timestamp="timestamp_example",
-        mount_name="mount_name_example",
+        timestamp=1,
+        mount_name=1,
     ) # PatchedListenerCount |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -481,8 +481,8 @@ with libretime_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this listener count.
     listener_count = ListenerCount(
         listener_count=-2147483648,
-        timestamp="timestamp_example",
-        mount_name="mount_name_example",
+        timestamp=1,
+        mount_name=1,
     ) # ListenerCount | 
 
     # example passing only required values which don't have defaults set

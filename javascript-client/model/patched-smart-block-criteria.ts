@@ -22,10 +22,10 @@
 export interface PatchedSmartBlockCriteria {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedSmartBlockCriteria
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {number}
@@ -58,9 +58,9 @@ export interface PatchedSmartBlockCriteria {
     'extra'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedSmartBlockCriteria
      */
-    'block'?: string;
+    'block'?: number;
 }
 

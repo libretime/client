@@ -94,13 +94,13 @@ class PlayoutHistoryTemplateField(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'label': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'is_file_md': (bool,),  # noqa: E501
             'position': (int,),  # noqa: E501
-            'template': (str,),  # noqa: E501
+            'template': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -109,7 +109,7 @@ class PlayoutHistoryTemplateField(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'label': 'label',  # noqa: E501
         'type': 'type',  # noqa: E501
@@ -119,24 +119,24 @@ class PlayoutHistoryTemplateField(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, name, label, type, is_file_md, position, template, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, label, type, is_file_md, position, template, *args, **kwargs):  # noqa: E501
         """PlayoutHistoryTemplateField - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             name (str):
             label (str):
             type (str):
             is_file_md (bool):
             position (int):
-            template (str):
+            template (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -200,7 +200,7 @@ class PlayoutHistoryTemplateField(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.name = name
         self.label = label
         self.type = type
@@ -235,7 +235,7 @@ class PlayoutHistoryTemplateField(ModelNormal):
             type (str):
             is_file_md (bool):
             position (int):
-            template (str):
+            template (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

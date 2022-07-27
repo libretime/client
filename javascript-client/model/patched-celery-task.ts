@@ -22,10 +22,10 @@
 export interface PatchedCeleryTask {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedCeleryTask
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -52,9 +52,9 @@ export interface PatchedCeleryTask {
     'status'?: string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedCeleryTask
      */
-    'track_reference'?: string;
+    'track_reference'?: number;
 }
 

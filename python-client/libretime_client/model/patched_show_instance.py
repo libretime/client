@@ -94,12 +94,8 @@ class PatchedShowInstance(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'show': (str,),  # noqa: E501
-            'show_id': (int,),  # noqa: E501
-            'instance': (str, none_type,),  # noqa: E501
             'starts_at': (datetime,),  # noqa: E501
             'ends_at': (datetime,),  # noqa: E501
             'filled_time': (str, none_type,),  # noqa: E501
@@ -109,8 +105,9 @@ class PatchedShowInstance(ModelNormal):
             'rebroadcast': (int, none_type,),  # noqa: E501
             'auto_playlist_built': (bool,),  # noqa: E501
             'record_enabled': (PatchedShowDaysRecordEnabled,),  # noqa: E501
-            'record_file': (str, none_type,),  # noqa: E501
-            'record_file_id': (int,),  # noqa: E501
+            'show': (int,),  # noqa: E501
+            'instance': (int, none_type,),  # noqa: E501
+            'record_file': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -119,12 +116,8 @@ class PatchedShowInstance(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
-        'show': 'show',  # noqa: E501
-        'show_id': 'show_id',  # noqa: E501
-        'instance': 'instance',  # noqa: E501
         'starts_at': 'starts_at',  # noqa: E501
         'ends_at': 'ends_at',  # noqa: E501
         'filled_time': 'filled_time',  # noqa: E501
@@ -134,15 +127,13 @@ class PatchedShowInstance(ModelNormal):
         'rebroadcast': 'rebroadcast',  # noqa: E501
         'auto_playlist_built': 'auto_playlist_built',  # noqa: E501
         'record_enabled': 'record_enabled',  # noqa: E501
+        'show': 'show',  # noqa: E501
+        'instance': 'instance',  # noqa: E501
         'record_file': 'record_file',  # noqa: E501
-        'record_file_id': 'record_file_id',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
-        'show_id',  # noqa: E501
-        'record_file_id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -183,12 +174,8 @@ class PatchedShowInstance(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
-            show_id (int): [optional]  # noqa: E501
-            instance (str, none_type): [optional]  # noqa: E501
             starts_at (datetime): [optional]  # noqa: E501
             ends_at (datetime): [optional]  # noqa: E501
             filled_time (str, none_type): [optional]  # noqa: E501
@@ -198,8 +185,9 @@ class PatchedShowInstance(ModelNormal):
             rebroadcast (int, none_type): [optional]  # noqa: E501
             auto_playlist_built (bool): [optional]  # noqa: E501
             record_enabled (PatchedShowDaysRecordEnabled): [optional]  # noqa: E501
-            record_file (str, none_type): [optional]  # noqa: E501
-            record_file_id (int): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
+            record_file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -285,12 +273,8 @@ class PatchedShowInstance(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            show (str): [optional]  # noqa: E501
-            show_id (int): [optional]  # noqa: E501
-            instance (str, none_type): [optional]  # noqa: E501
             starts_at (datetime): [optional]  # noqa: E501
             ends_at (datetime): [optional]  # noqa: E501
             filled_time (str, none_type): [optional]  # noqa: E501
@@ -300,8 +284,9 @@ class PatchedShowInstance(ModelNormal):
             rebroadcast (int, none_type): [optional]  # noqa: E501
             auto_playlist_built (bool): [optional]  # noqa: E501
             record_enabled (PatchedShowDaysRecordEnabled): [optional]  # noqa: E501
-            record_file (str, none_type): [optional]  # noqa: E501
-            record_file_id (int): [optional]  # noqa: E501
+            show (int): [optional]  # noqa: E501
+            instance (int, none_type): [optional]  # noqa: E501
+            record_file (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -23,10 +23,10 @@ import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 export interface PlaylistContent {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlaylistContent
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {PlaylistContentKindEnum}
@@ -77,27 +77,27 @@ export interface PlaylistContent {
     'fade_out'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlaylistContent
      */
-    'playlist'?: string | null;
+    'playlist'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlaylistContent
      */
-    'file'?: string | null;
+    'file'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlaylistContent
      */
-    'stream'?: string | null;
+    'stream'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlaylistContent
      */
-    'block'?: string | null;
+    'block'?: number | null;
 }
 

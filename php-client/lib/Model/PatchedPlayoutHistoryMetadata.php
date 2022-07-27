@@ -59,10 +59,10 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'key' => 'string',
         'value' => 'string',
-        'history' => 'string'
+        'history' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'key' => null,
         'value' => null,
-        'history' => 'uri'
+        'history' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'key' => 'key',
         'value' => 'value',
         'history' => 'history'
@@ -118,7 +118,7 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'key' => 'setKey',
         'value' => 'setValue',
         'history' => 'setHistory'
@@ -130,7 +130,7 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'key' => 'getKey',
         'value' => 'getValue',
         'history' => 'getHistory'
@@ -193,7 +193,7 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['key'] = $data['key'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
         $this->container['history'] = $data['history'] ?? null;
@@ -232,25 +232,25 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -314,7 +314,7 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets history
      *
-     * @return string|null
+     * @return int|null
      */
     public function getHistory()
     {
@@ -324,7 +324,7 @@ class PatchedPlayoutHistoryMetadata implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets history
      *
-     * @param string|null $history history
+     * @param int|null $history history
      *
      * @return self
      */

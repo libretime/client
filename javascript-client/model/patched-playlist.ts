@@ -22,10 +22,10 @@
 export interface PatchedPlaylist {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlaylist
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -58,9 +58,9 @@ export interface PatchedPlaylist {
     'length'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlaylist
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

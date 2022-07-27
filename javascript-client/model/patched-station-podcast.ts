@@ -22,15 +22,15 @@
 export interface PatchedStationPodcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedStationPodcast
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedStationPodcast
      */
-    'podcast'?: string;
+    'podcast'?: number;
 }
 

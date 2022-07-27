@@ -22,21 +22,21 @@
 export interface ShowHost {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ShowHost
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ShowHost
      */
-    'show': string;
+    'show': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ShowHost
      */
-    'user': string;
+    'user': number;
 }
 

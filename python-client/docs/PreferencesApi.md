@@ -58,7 +58,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     preference = Preference(
         key="key_example",
         value="value_example",
-        user="user_example",
+        user=1,
     ) # Preference | 
 
     # example passing only required values which don't have defaults set
@@ -304,7 +304,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     patched_preference = PatchedPreference(
         key="key_example",
         value="value_example",
-        user="user_example",
+        user=1,
     ) # PatchedPreference |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -482,7 +482,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     preference = Preference(
         key="key_example",
         value="value_example",
-        user="user_example",
+        user=1,
     ) # Preference | 
 
     # example passing only required values which don't have defaults set

@@ -22,10 +22,10 @@
 export interface PlayoutHistoryTemplate {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistoryTemplate
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}

@@ -59,7 +59,7 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'key' => 'string',
         'raw_value' => 'string',
         'type' => 'string'
     ];
@@ -72,7 +72,7 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'key' => null,
         'raw_value' => null,
         'type' => null
     ];
@@ -104,7 +104,7 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'key' => 'key',
         'raw_value' => 'raw_value',
         'type' => 'type'
     ];
@@ -115,7 +115,7 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'key' => 'setKey',
         'raw_value' => 'setRawValue',
         'type' => 'setType'
     ];
@@ -126,7 +126,7 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'key' => 'getKey',
         'raw_value' => 'getRawValue',
         'type' => 'getType'
     ];
@@ -188,7 +188,7 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['key'] = $data['key'] ?? null;
         $this->container['raw_value'] = $data['raw_value'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
     }
@@ -201,6 +201,10 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 64)) {
+            $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 64.";
+        }
 
         if (!is_null($this->container['raw_value']) && (mb_strlen($this->container['raw_value']) > 255)) {
             $invalidProperties[] = "invalid value for 'raw_value', the character length must be smaller than or equal to 255.";
@@ -226,25 +230,29 @@ class PatchedStreamSetting implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets item_url
+     * Gets key
      *
      * @return string|null
      */
-    public function getItemUrl()
+    public function getKey()
     {
-        return $this->container['item_url'];
+        return $this->container['key'];
     }
 
     /**
-     * Sets item_url
+     * Sets key
      *
-     * @param string|null $item_url item_url
+     * @param string|null $key key
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setKey($key)
     {
-        $this->container['item_url'] = $item_url;
+        if (!is_null($key) && (mb_strlen($key) > 64)) {
+            throw new \InvalidArgumentException('invalid length for $key when calling PatchedStreamSetting., must be smaller than or equal to 64.');
+        }
+
+        $this->container['key'] = $key;
 
         return $this;
     }

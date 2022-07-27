@@ -59,14 +59,14 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'name' => 'string',
         'description' => 'string',
         'length' => 'string',
         'kind' => '\Libretime\Client\Model\PatchedSmartBlockKind',
-        'owner' => 'string'
+        'owner' => 'int'
     ];
 
     /**
@@ -77,14 +77,14 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
         'name' => null,
         'description' => null,
         'length' => null,
         'kind' => null,
-        'owner' => 'uri'
+        'owner' => null
     ];
 
     /**
@@ -114,7 +114,7 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'name' => 'name',
@@ -130,7 +130,7 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'name' => 'setName',
@@ -146,7 +146,7 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'name' => 'getName',
@@ -213,7 +213,7 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
         $this->container['updated_at'] = $data['updated_at'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
@@ -256,25 +256,25 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -434,7 +434,7 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets owner
      *
-     * @return string|null
+     * @return int|null
      */
     public function getOwner()
     {
@@ -444,7 +444,7 @@ class PatchedSmartBlock implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets owner
      *
-     * @param string|null $owner owner
+     * @param int|null $owner owner
      *
      * @return self
      */

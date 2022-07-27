@@ -87,11 +87,11 @@ class UserToken(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'action': (str,),  # noqa: E501
             'token': (str,),  # noqa: E501
             'created': (datetime,),  # noqa: E501
-            'user': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -100,7 +100,7 @@ class UserToken(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'action': 'action',  # noqa: E501
         'token': 'token',  # noqa: E501
         'created': 'created',  # noqa: E501
@@ -108,22 +108,22 @@ class UserToken(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, action, token, created, user, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, action, token, created, user, *args, **kwargs):  # noqa: E501
         """UserToken - a model defined in OpenAPI
 
         Args:
-            item_url (str):
+            id (int):
             action (str):
             token (str):
             created (datetime):
-            user (str):
+            user (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -187,7 +187,7 @@ class UserToken(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
+        self.id = id
         self.action = action
         self.token = token
         self.created = created
@@ -218,7 +218,7 @@ class UserToken(ModelNormal):
             action (str):
             token (str):
             created (datetime):
-            user (str):
+            user (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

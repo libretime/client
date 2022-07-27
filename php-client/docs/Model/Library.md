@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_url** | **string** |  | [readonly]
+**id** | **int** |  | [readonly]
 **name** | **string** |  | [optional]
 **code** | **string** |  |
 **description** | **string** |  | [optional]

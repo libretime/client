@@ -23,10 +23,10 @@ import { PatchedSmartBlockKind } from './patched-smart-block-kind';
 export interface SmartBlock {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlock
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -65,9 +65,9 @@ export interface SmartBlock {
     'kind'?: PatchedSmartBlockKind | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof SmartBlock
      */
-    'owner'?: string | null;
+    'owner'?: number | null;
 }
 

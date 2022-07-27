@@ -59,10 +59,10 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'starts_at' => '\DateTime',
         'data' => 'string',
-        'schedule' => 'string'
+        'schedule' => 'int'
     ];
 
     /**
@@ -73,10 +73,10 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'starts_at' => 'date-time',
         'data' => null,
-        'schedule' => 'uri'
+        'schedule' => null
     ];
 
     /**
@@ -106,7 +106,7 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'starts_at' => 'starts_at',
         'data' => 'data',
         'schedule' => 'schedule'
@@ -118,7 +118,7 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'starts_at' => 'setStartsAt',
         'data' => 'setData',
         'schedule' => 'setSchedule'
@@ -130,7 +130,7 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'starts_at' => 'getStartsAt',
         'data' => 'getData',
         'schedule' => 'getSchedule'
@@ -193,7 +193,7 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['starts_at'] = $data['starts_at'] ?? null;
         $this->container['data'] = $data['data'] ?? null;
         $this->container['schedule'] = $data['schedule'] ?? null;
@@ -228,25 +228,25 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -306,7 +306,7 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets schedule
      *
-     * @return string|null
+     * @return int|null
      */
     public function getSchedule()
     {
@@ -316,7 +316,7 @@ class PatchedWebstreamMetadata implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets schedule
      *
-     * @param string|null $schedule schedule
+     * @param int|null $schedule schedule
      *
      * @return self
      */

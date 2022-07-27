@@ -22,10 +22,10 @@
 export interface PatchedPlayoutHistoryTemplate {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPlayoutHistoryTemplate
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}

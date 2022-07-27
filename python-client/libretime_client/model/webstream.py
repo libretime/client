@@ -93,7 +93,6 @@ class Webstream(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -103,7 +102,7 @@ class Webstream(ModelNormal):
             'length': (str,),  # noqa: E501
             'last_played_at': (datetime, none_type,),  # noqa: E501
             'mime': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -112,7 +111,6 @@ class Webstream(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
@@ -126,7 +124,6 @@ class Webstream(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
     }
 
@@ -134,11 +131,10 @@ class Webstream(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, created_at, updated_at, name, description, url, length, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_at, updated_at, name, description, url, length, *args, **kwargs):  # noqa: E501
         """Webstream - a model defined in OpenAPI
 
         Args:
-            item_url (str):
             id (int):
             created_at (datetime):
             updated_at (datetime):
@@ -180,7 +176,7 @@ class Webstream(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             last_played_at (datetime, none_type): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -212,7 +208,6 @@ class Webstream(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
         self.id = id
         self.created_at = created_at
         self.updated_at = updated_at
@@ -283,7 +278,7 @@ class Webstream(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             last_played_at (datetime, none_type): [optional]  # noqa: E501
             mime (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

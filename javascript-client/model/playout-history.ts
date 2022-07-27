@@ -22,10 +22,10 @@
 export interface PlayoutHistory {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistory
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}
@@ -40,15 +40,15 @@ export interface PlayoutHistory {
     'ends'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistory
      */
-    'file'?: string | null;
+    'file'?: number | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PlayoutHistory
      */
-    'instance'?: string | null;
+    'instance'?: number | null;
 }
 

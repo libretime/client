@@ -241,7 +241,6 @@ class File(ModelNormal):
         """
         lazy_import()
         return {
-            'item_url': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'size': (int,),  # noqa: E501
             'mime': (str,),  # noqa: E501
@@ -304,9 +303,9 @@ class File(ModelNormal):
             'report_datetime': (str, none_type,),  # noqa: E501
             'report_location': (str, none_type,),  # noqa: E501
             'report_organization': (str, none_type,),  # noqa: E501
-            'library': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
-            'edited_by': (str, none_type,),  # noqa: E501
+            'library': (int, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
+            'edited_by': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -315,7 +314,6 @@ class File(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
         'id': 'id',  # noqa: E501
         'size': 'size',  # noqa: E501
         'mime': 'mime',  # noqa: E501
@@ -384,7 +382,6 @@ class File(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
         'id',  # noqa: E501
     }
 
@@ -392,11 +389,10 @@ class File(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, item_url, id, size, mime, accessed, name, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, size, mime, accessed, name, *args, **kwargs):  # noqa: E501
         """File - a model defined in OpenAPI
 
         Args:
-            item_url (str):
             id (int):
             size (int):
             mime (str):
@@ -491,9 +487,9 @@ class File(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
-            library (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
-            edited_by (str, none_type): [optional]  # noqa: E501
+            library (int, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
+            edited_by (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -525,7 +521,6 @@ class File(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.item_url = item_url
         self.id = id
         self.size = size
         self.mime = mime
@@ -647,9 +642,9 @@ class File(ModelNormal):
             report_datetime (str, none_type): [optional]  # noqa: E501
             report_location (str, none_type): [optional]  # noqa: E501
             report_organization (str, none_type): [optional]  # noqa: E501
-            library (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
-            edited_by (str, none_type): [optional]  # noqa: E501
+            library (int, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
+            edited_by (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

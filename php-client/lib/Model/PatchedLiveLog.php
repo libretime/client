@@ -59,7 +59,7 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'state' => 'string',
         'start_time' => '\DateTime',
         'end_time' => '\DateTime'
@@ -73,7 +73,7 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'state' => null,
         'start_time' => 'date-time',
         'end_time' => 'date-time'
@@ -106,7 +106,7 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'state' => 'state',
         'start_time' => 'start_time',
         'end_time' => 'end_time'
@@ -118,7 +118,7 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'state' => 'setState',
         'start_time' => 'setStartTime',
         'end_time' => 'setEndTime'
@@ -130,7 +130,7 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'state' => 'getState',
         'start_time' => 'getStartTime',
         'end_time' => 'getEndTime'
@@ -193,7 +193,7 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
         $this->container['start_time'] = $data['start_time'] ?? null;
         $this->container['end_time'] = $data['end_time'] ?? null;
@@ -228,25 +228,25 @@ class PatchedLiveLog implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }

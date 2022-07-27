@@ -59,12 +59,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
         'id' => 'int',
         'created_at' => '\DateTime',
-        'show' => 'string',
-        'show_id' => 'int',
-        'instance' => 'string',
         'starts_at' => '\DateTime',
         'ends_at' => '\DateTime',
         'filled_time' => 'string',
@@ -74,8 +70,9 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         'rebroadcast' => 'int',
         'auto_playlist_built' => 'bool',
         'record_enabled' => '\Libretime\Client\Model\PatchedShowDaysRecordEnabled',
-        'record_file' => 'string',
-        'record_file_id' => 'int'
+        'show' => 'int',
+        'instance' => 'int',
+        'record_file' => 'int'
     ];
 
     /**
@@ -86,12 +83,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
         'id' => null,
         'created_at' => 'date-time',
-        'show' => 'uri',
-        'show_id' => null,
-        'instance' => 'uri',
         'starts_at' => 'date-time',
         'ends_at' => 'date-time',
         'filled_time' => null,
@@ -101,8 +94,9 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         'rebroadcast' => null,
         'auto_playlist_built' => null,
         'record_enabled' => null,
-        'record_file' => 'uri',
-        'record_file_id' => null
+        'show' => null,
+        'instance' => null,
+        'record_file' => null
     ];
 
     /**
@@ -132,12 +126,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
         'id' => 'id',
         'created_at' => 'created_at',
-        'show' => 'show',
-        'show_id' => 'show_id',
-        'instance' => 'instance',
         'starts_at' => 'starts_at',
         'ends_at' => 'ends_at',
         'filled_time' => 'filled_time',
@@ -147,8 +137,9 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         'rebroadcast' => 'rebroadcast',
         'auto_playlist_built' => 'auto_playlist_built',
         'record_enabled' => 'record_enabled',
-        'record_file' => 'record_file',
-        'record_file_id' => 'record_file_id'
+        'show' => 'show',
+        'instance' => 'instance',
+        'record_file' => 'record_file'
     ];
 
     /**
@@ -157,12 +148,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
         'id' => 'setId',
         'created_at' => 'setCreatedAt',
-        'show' => 'setShow',
-        'show_id' => 'setShowId',
-        'instance' => 'setInstance',
         'starts_at' => 'setStartsAt',
         'ends_at' => 'setEndsAt',
         'filled_time' => 'setFilledTime',
@@ -172,8 +159,9 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         'rebroadcast' => 'setRebroadcast',
         'auto_playlist_built' => 'setAutoPlaylistBuilt',
         'record_enabled' => 'setRecordEnabled',
-        'record_file' => 'setRecordFile',
-        'record_file_id' => 'setRecordFileId'
+        'show' => 'setShow',
+        'instance' => 'setInstance',
+        'record_file' => 'setRecordFile'
     ];
 
     /**
@@ -182,12 +170,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
         'id' => 'getId',
         'created_at' => 'getCreatedAt',
-        'show' => 'getShow',
-        'show_id' => 'getShowId',
-        'instance' => 'getInstance',
         'starts_at' => 'getStartsAt',
         'ends_at' => 'getEndsAt',
         'filled_time' => 'getFilledTime',
@@ -197,8 +181,9 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         'rebroadcast' => 'getRebroadcast',
         'auto_playlist_built' => 'getAutoPlaylistBuilt',
         'record_enabled' => 'getRecordEnabled',
-        'record_file' => 'getRecordFile',
-        'record_file_id' => 'getRecordFileId'
+        'show' => 'getShow',
+        'instance' => 'getInstance',
+        'record_file' => 'getRecordFile'
     ];
 
     /**
@@ -258,12 +243,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['created_at'] = $data['created_at'] ?? null;
-        $this->container['show'] = $data['show'] ?? null;
-        $this->container['show_id'] = $data['show_id'] ?? null;
-        $this->container['instance'] = $data['instance'] ?? null;
         $this->container['starts_at'] = $data['starts_at'] ?? null;
         $this->container['ends_at'] = $data['ends_at'] ?? null;
         $this->container['filled_time'] = $data['filled_time'] ?? null;
@@ -273,8 +254,9 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['rebroadcast'] = $data['rebroadcast'] ?? null;
         $this->container['auto_playlist_built'] = $data['auto_playlist_built'] ?? null;
         $this->container['record_enabled'] = $data['record_enabled'] ?? null;
+        $this->container['show'] = $data['show'] ?? null;
+        $this->container['instance'] = $data['instance'] ?? null;
         $this->container['record_file'] = $data['record_file'] ?? null;
-        $this->container['record_file_id'] = $data['record_file_id'] ?? null;
     }
 
     /**
@@ -286,20 +268,11 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
-        }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['created_at'] === null) {
             $invalidProperties[] = "'created_at' can't be null";
-        }
-        if ($this->container['show'] === null) {
-            $invalidProperties[] = "'show' can't be null";
-        }
-        if ($this->container['show_id'] === null) {
-            $invalidProperties[] = "'show_id' can't be null";
         }
         if ($this->container['starts_at'] === null) {
             $invalidProperties[] = "'starts_at' can't be null";
@@ -325,8 +298,8 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['auto_playlist_built'] === null) {
             $invalidProperties[] = "'auto_playlist_built' can't be null";
         }
-        if ($this->container['record_file_id'] === null) {
-            $invalidProperties[] = "'record_file_id' can't be null";
+        if ($this->container['show'] === null) {
+            $invalidProperties[] = "'show' can't be null";
         }
         return $invalidProperties;
     }
@@ -342,30 +315,6 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets item_url
-     *
-     * @return string
-     */
-    public function getItemUrl()
-    {
-        return $this->container['item_url'];
-    }
-
-    /**
-     * Sets item_url
-     *
-     * @param string $item_url item_url
-     *
-     * @return self
-     */
-    public function setItemUrl($item_url)
-    {
-        $this->container['item_url'] = $item_url;
-
-        return $this;
-    }
 
     /**
      * Gets id
@@ -411,78 +360,6 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets show
-     *
-     * @return string
-     */
-    public function getShow()
-    {
-        return $this->container['show'];
-    }
-
-    /**
-     * Sets show
-     *
-     * @param string $show show
-     *
-     * @return self
-     */
-    public function setShow($show)
-    {
-        $this->container['show'] = $show;
-
-        return $this;
-    }
-
-    /**
-     * Gets show_id
-     *
-     * @return int
-     */
-    public function getShowId()
-    {
-        return $this->container['show_id'];
-    }
-
-    /**
-     * Sets show_id
-     *
-     * @param int $show_id show_id
-     *
-     * @return self
-     */
-    public function setShowId($show_id)
-    {
-        $this->container['show_id'] = $show_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets instance
-     *
-     * @return string|null
-     */
-    public function getInstance()
-    {
-        return $this->container['instance'];
-    }
-
-    /**
-     * Sets instance
-     *
-     * @param string|null $instance instance
-     *
-     * @return self
-     */
-    public function setInstance($instance)
-    {
-        $this->container['instance'] = $instance;
 
         return $this;
     }
@@ -716,9 +593,57 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets show
+     *
+     * @return int
+     */
+    public function getShow()
+    {
+        return $this->container['show'];
+    }
+
+    /**
+     * Sets show
+     *
+     * @param int $show show
+     *
+     * @return self
+     */
+    public function setShow($show)
+    {
+        $this->container['show'] = $show;
+
+        return $this;
+    }
+
+    /**
+     * Gets instance
+     *
+     * @return int|null
+     */
+    public function getInstance()
+    {
+        return $this->container['instance'];
+    }
+
+    /**
+     * Sets instance
+     *
+     * @param int|null $instance instance
+     *
+     * @return self
+     */
+    public function setInstance($instance)
+    {
+        $this->container['instance'] = $instance;
+
+        return $this;
+    }
+
+    /**
      * Gets record_file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getRecordFile()
     {
@@ -728,37 +653,13 @@ class ShowInstance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets record_file
      *
-     * @param string|null $record_file record_file
+     * @param int|null $record_file record_file
      *
      * @return self
      */
     public function setRecordFile($record_file)
     {
         $this->container['record_file'] = $record_file;
-
-        return $this;
-    }
-
-    /**
-     * Gets record_file_id
-     *
-     * @return int
-     */
-    public function getRecordFileId()
-    {
-        return $this->container['record_file_id'];
-    }
-
-    /**
-     * Sets record_file_id
-     *
-     * @param int $record_file_id record_file_id
-     *
-     * @return self
-     */
-    public function setRecordFileId($record_file_id)
-    {
-        $this->container['record_file_id'] = $record_file_id;
 
         return $this;
     }

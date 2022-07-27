@@ -60,7 +60,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         dispatch_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         status="status_example",
-        track_reference="track_reference_example",
+        track_reference=1,
     ) # CeleryTask | 
 
     # example passing only required values which don't have defaults set
@@ -308,7 +308,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         dispatch_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         status="status_example",
-        track_reference="track_reference_example",
+        track_reference=1,
     ) # PatchedCeleryTask |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -488,7 +488,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         name="name_example",
         dispatch_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         status="status_example",
-        track_reference="track_reference_example",
+        track_reference=1,
     ) # CeleryTask | 
 
     # example passing only required values which don't have defaults set

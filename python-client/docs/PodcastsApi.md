@@ -69,7 +69,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         itunes_subtitle="itunes_subtitle_example",
         itunes_category="itunes_category_example",
         itunes_explicit="itunes_explicit_example",
-        owner="owner_example",
+        owner=1,
     ) # Podcast | 
 
     # example passing only required values which don't have defaults set
@@ -326,7 +326,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         itunes_subtitle="itunes_subtitle_example",
         itunes_category="itunes_category_example",
         itunes_explicit="itunes_explicit_example",
-        owner="owner_example",
+        owner=1,
     ) # PatchedPodcast |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -515,7 +515,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         itunes_subtitle="itunes_subtitle_example",
         itunes_category="itunes_category_example",
         itunes_explicit="itunes_explicit_example",
-        owner="owner_example",
+        owner=1,
     ) # Podcast | 
 
     # example passing only required values which don't have defaults set

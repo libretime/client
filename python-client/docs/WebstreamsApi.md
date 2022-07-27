@@ -64,7 +64,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         url="url_example",
         length="length_example",
         mime="mime_example",
-        owner="owner_example",
+        owner=1,
     ) # Webstream | 
 
     # example passing only required values which don't have defaults set
@@ -316,7 +316,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         url="url_example",
         length="length_example",
         mime="mime_example",
-        owner="owner_example",
+        owner=1,
     ) # PatchedWebstream |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -500,7 +500,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         url="url_example",
         length="length_example",
         mime="mime_example",
-        owner="owner_example",
+        owner=1,
     ) # Webstream | 
 
     # example passing only required values which don't have defaults set

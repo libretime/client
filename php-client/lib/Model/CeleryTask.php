@@ -59,12 +59,12 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'task_id' => 'string',
         'name' => 'string',
         'dispatch_time' => '\DateTime',
         'status' => 'string',
-        'track_reference' => 'string'
+        'track_reference' => 'int'
     ];
 
     /**
@@ -75,12 +75,12 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'task_id' => null,
         'name' => null,
         'dispatch_time' => 'date-time',
         'status' => null,
-        'track_reference' => 'uri'
+        'track_reference' => null
     ];
 
     /**
@@ -110,7 +110,7 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'task_id' => 'task_id',
         'name' => 'name',
         'dispatch_time' => 'dispatch_time',
@@ -124,7 +124,7 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'task_id' => 'setTaskId',
         'name' => 'setName',
         'dispatch_time' => 'setDispatchTime',
@@ -138,7 +138,7 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'task_id' => 'getTaskId',
         'name' => 'getName',
         'dispatch_time' => 'getDispatchTime',
@@ -203,7 +203,7 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['task_id'] = $data['task_id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['dispatch_time'] = $data['dispatch_time'] ?? null;
@@ -220,8 +220,8 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['task_id'] === null) {
             $invalidProperties[] = "'task_id' can't be null";
@@ -260,25 +260,25 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -394,7 +394,7 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets track_reference
      *
-     * @return string
+     * @return int
      */
     public function getTrackReference()
     {
@@ -404,7 +404,7 @@ class CeleryTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets track_reference
      *
-     * @param string $track_reference track_reference
+     * @param int $track_reference track_reference
      *
      * @return self
      */

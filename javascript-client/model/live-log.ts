@@ -22,10 +22,10 @@
 export interface LiveLog {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof LiveLog
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {string}

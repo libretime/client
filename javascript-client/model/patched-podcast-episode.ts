@@ -22,10 +22,10 @@
 export interface PatchedPodcastEpisode {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPodcastEpisode
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -58,15 +58,15 @@ export interface PatchedPodcastEpisode {
     'episode_description'?: string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPodcastEpisode
      */
-    'podcast'?: string;
+    'podcast'?: number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPodcastEpisode
      */
-    'file'?: string | null;
+    'file'?: number | null;
 }
 

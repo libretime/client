@@ -25,7 +25,7 @@ export interface LoginAttempt {
      * @type {string}
      * @memberof LoginAttempt
      */
-    'item_url': string;
+    'ip': string;
     /**
      * 
      * @type {number}

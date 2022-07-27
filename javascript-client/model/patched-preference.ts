@@ -22,10 +22,10 @@
 export interface PatchedPreference {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPreference
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface PatchedPreference {
     'value'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedPreference
      */
-    'user'?: string | null;
+    'user'?: number | null;
 }
 

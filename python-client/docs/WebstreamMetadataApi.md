@@ -58,7 +58,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     webstream_metadata = WebstreamMetadata(
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         data="data_example",
-        schedule="schedule_example",
+        schedule=1,
     ) # WebstreamMetadata | 
 
     # example passing only required values which don't have defaults set
@@ -304,7 +304,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     patched_webstream_metadata = PatchedWebstreamMetadata(
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         data="data_example",
-        schedule="schedule_example",
+        schedule=1,
     ) # PatchedWebstreamMetadata |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -482,7 +482,7 @@ with libretime_client.ApiClient(configuration) as api_client:
     webstream_metadata = WebstreamMetadata(
         starts_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
         data="data_example",
-        schedule="schedule_example",
+        schedule=1,
     ) # WebstreamMetadata | 
 
     # example passing only required values which don't have defaults set

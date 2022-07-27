@@ -22,10 +22,10 @@
 export interface PatchedLiveLog {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedLiveLog
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}

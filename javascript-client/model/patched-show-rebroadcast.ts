@@ -22,10 +22,10 @@
 export interface PatchedShowRebroadcast {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowRebroadcast
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -40,9 +40,9 @@ export interface PatchedShowRebroadcast {
     'start_time'?: string;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowRebroadcast
      */
-    'show'?: string;
+    'show'?: number;
 }
 

@@ -59,11 +59,11 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'override_album' => 'bool',
         'auto_ingest' => 'bool',
         'auto_ingested_at' => '\DateTime',
-        'podcast' => 'string'
+        'podcast' => 'int'
     ];
 
     /**
@@ -74,11 +74,11 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'override_album' => null,
         'auto_ingest' => null,
         'auto_ingested_at' => 'date-time',
-        'podcast' => 'uri'
+        'podcast' => null
     ];
 
     /**
@@ -108,7 +108,7 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'override_album' => 'override_album',
         'auto_ingest' => 'auto_ingest',
         'auto_ingested_at' => 'auto_ingested_at',
@@ -121,7 +121,7 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'override_album' => 'setOverrideAlbum',
         'auto_ingest' => 'setAutoIngest',
         'auto_ingested_at' => 'setAutoIngestedAt',
@@ -134,7 +134,7 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'override_album' => 'getOverrideAlbum',
         'auto_ingest' => 'getAutoIngest',
         'auto_ingested_at' => 'getAutoIngestedAt',
@@ -198,7 +198,7 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['override_album'] = $data['override_album'] ?? null;
         $this->container['auto_ingest'] = $data['auto_ingest'] ?? null;
         $this->container['auto_ingested_at'] = $data['auto_ingested_at'] ?? null;
@@ -230,25 +230,25 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -328,7 +328,7 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets podcast
      *
-     * @return string|null
+     * @return int|null
      */
     public function getPodcast()
     {
@@ -338,7 +338,7 @@ class PatchedImportedPodcast implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets podcast
      *
-     * @param string|null $podcast podcast
+     * @param int|null $podcast podcast
      *
      * @return self
      */

@@ -25,10 +25,10 @@ import { RepeatKindEnum } from './repeat-kind-enum';
 export interface PatchedShowDays {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowDays
      */
-    'item_url'?: string;
+    'id'?: number;
     /**
      * 
      * @type {string}
@@ -85,9 +85,9 @@ export interface PatchedShowDays {
     'repeat_next_on'?: string | null;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof PatchedShowDays
      */
-    'show'?: string;
+    'show'?: number;
 }
 

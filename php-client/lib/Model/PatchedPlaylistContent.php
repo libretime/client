@@ -59,7 +59,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'kind' => 'PlaylistContentKindEnum',
         'position' => 'int',
         'offset' => 'double',
@@ -68,10 +68,10 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
         'cue_out' => 'string',
         'fade_in' => 'string',
         'fade_out' => 'string',
-        'playlist' => 'string',
-        'file' => 'string',
-        'stream' => 'string',
-        'block' => 'string'
+        'playlist' => 'int',
+        'file' => 'int',
+        'stream' => 'int',
+        'block' => 'int'
     ];
 
     /**
@@ -82,7 +82,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'kind' => null,
         'position' => null,
         'offset' => 'double',
@@ -91,10 +91,10 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
         'cue_out' => null,
         'fade_in' => 'time',
         'fade_out' => 'time',
-        'playlist' => 'uri',
-        'file' => 'uri',
-        'stream' => 'uri',
-        'block' => 'uri'
+        'playlist' => null,
+        'file' => null,
+        'stream' => null,
+        'block' => null
     ];
 
     /**
@@ -124,7 +124,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'kind' => 'kind',
         'position' => 'position',
         'offset' => 'offset',
@@ -145,7 +145,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'kind' => 'setKind',
         'position' => 'setPosition',
         'offset' => 'setOffset',
@@ -166,7 +166,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'kind' => 'getKind',
         'position' => 'getPosition',
         'offset' => 'getOffset',
@@ -238,7 +238,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['kind'] = $data['kind'] ?? null;
         $this->container['position'] = $data['position'] ?? null;
         $this->container['offset'] = $data['offset'] ?? null;
@@ -294,25 +294,25 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string|null $item_url item_url
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -528,7 +528,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets playlist
      *
-     * @return string|null
+     * @return int|null
      */
     public function getPlaylist()
     {
@@ -538,7 +538,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets playlist
      *
-     * @param string|null $playlist playlist
+     * @param int|null $playlist playlist
      *
      * @return self
      */
@@ -552,7 +552,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets file
      *
-     * @return string|null
+     * @return int|null
      */
     public function getFile()
     {
@@ -562,7 +562,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets file
      *
-     * @param string|null $file file
+     * @param int|null $file file
      *
      * @return self
      */
@@ -576,7 +576,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets stream
      *
-     * @return string|null
+     * @return int|null
      */
     public function getStream()
     {
@@ -586,7 +586,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets stream
      *
-     * @param string|null $stream stream
+     * @param int|null $stream stream
      *
      * @return self
      */
@@ -600,7 +600,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets block
      *
-     * @return string|null
+     * @return int|null
      */
     public function getBlock()
     {
@@ -610,7 +610,7 @@ class PatchedPlaylistContent implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets block
      *
-     * @param string|null $block block
+     * @param int|null $block block
      *
      * @return self
      */

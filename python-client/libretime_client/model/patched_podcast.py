@@ -120,7 +120,7 @@ class PatchedPodcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'url': (str,),  # noqa: E501
             'title': (str,),  # noqa: E501
             'creator': (str, none_type,),  # noqa: E501
@@ -134,7 +134,7 @@ class PatchedPodcast(ModelNormal):
             'itunes_subtitle': (str, none_type,),  # noqa: E501
             'itunes_category': (str, none_type,),  # noqa: E501
             'itunes_explicit': (str, none_type,),  # noqa: E501
-            'owner': (str, none_type,),  # noqa: E501
+            'owner': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -143,7 +143,7 @@ class PatchedPodcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'url': 'url',  # noqa: E501
         'title': 'title',  # noqa: E501
         'creator': 'creator',  # noqa: E501
@@ -161,7 +161,7 @@ class PatchedPodcast(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -202,7 +202,7 @@ class PatchedPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             url (str): [optional]  # noqa: E501
             title (str): [optional]  # noqa: E501
             creator (str, none_type): [optional]  # noqa: E501
@@ -216,7 +216,7 @@ class PatchedPodcast(ModelNormal):
             itunes_subtitle (str, none_type): [optional]  # noqa: E501
             itunes_category (str, none_type): [optional]  # noqa: E501
             itunes_explicit (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -302,7 +302,7 @@ class PatchedPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             url (str): [optional]  # noqa: E501
             title (str): [optional]  # noqa: E501
             creator (str, none_type): [optional]  # noqa: E501
@@ -316,7 +316,7 @@ class PatchedPodcast(ModelNormal):
             itunes_subtitle (str, none_type): [optional]  # noqa: E501
             itunes_category (str, none_type): [optional]  # noqa: E501
             itunes_explicit (str, none_type): [optional]  # noqa: E501
-            owner (str, none_type): [optional]  # noqa: E501
+            owner (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

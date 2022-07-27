@@ -97,13 +97,13 @@ class PatchedSmartBlockCriteria(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
             'group': (int, none_type,),  # noqa: E501
             'criteria': (str,),  # noqa: E501
             'condition': (str,),  # noqa: E501
             'value': (str,),  # noqa: E501
             'extra': (str, none_type,),  # noqa: E501
-            'block': (str,),  # noqa: E501
+            'block': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -112,7 +112,7 @@ class PatchedSmartBlockCriteria(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'group': 'group',  # noqa: E501
         'criteria': 'criteria',  # noqa: E501
         'condition': 'condition',  # noqa: E501
@@ -122,7 +122,7 @@ class PatchedSmartBlockCriteria(ModelNormal):
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -163,13 +163,13 @@ class PatchedSmartBlockCriteria(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             group (int, none_type): [optional]  # noqa: E501
             criteria (str): [optional]  # noqa: E501
             condition (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
             extra (str, none_type): [optional]  # noqa: E501
-            block (str): [optional]  # noqa: E501
+            block (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -255,13 +255,13 @@ class PatchedSmartBlockCriteria(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
             group (int, none_type): [optional]  # noqa: E501
             criteria (str): [optional]  # noqa: E501
             condition (str): [optional]  # noqa: E501
             value (str): [optional]  # noqa: E501
             extra (str, none_type): [optional]  # noqa: E501
-            block (str): [optional]  # noqa: E501
+            block (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

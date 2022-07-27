@@ -81,8 +81,8 @@ class PatchedStationPodcast(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'item_url': (str,),  # noqa: E501
-            'podcast': (str,),  # noqa: E501
+            'id': (int,),  # noqa: E501
+            'podcast': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -91,12 +91,12 @@ class PatchedStationPodcast(ModelNormal):
 
 
     attribute_map = {
-        'item_url': 'item_url',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'podcast': 'podcast',  # noqa: E501
     }
 
     read_only_vars = {
-        'item_url',  # noqa: E501
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -137,8 +137,8 @@ class PatchedStationPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
-            podcast (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
+            podcast (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,8 +224,8 @@ class PatchedStationPodcast(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_url (str): [optional]  # noqa: E501
-            podcast (str): [optional]  # noqa: E501
+            id (int): [optional]  # noqa: E501
+            podcast (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -59,7 +59,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'item_url' => 'string',
+        'id' => 'int',
         'first_show_on' => '\DateTime',
         'last_show_on' => '\DateTime',
         'start_time' => 'string',
@@ -69,7 +69,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
         'week_day' => '\Libretime\Client\Model\PatchedShowDaysWeekDay',
         'repeat_kind' => 'RepeatKindEnum',
         'repeat_next_on' => '\DateTime',
-        'show' => 'string'
+        'show' => 'int'
     ];
 
     /**
@@ -80,7 +80,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'item_url' => 'uri',
+        'id' => null,
         'first_show_on' => 'date',
         'last_show_on' => 'date',
         'start_time' => 'time',
@@ -90,7 +90,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
         'week_day' => null,
         'repeat_kind' => null,
         'repeat_next_on' => 'date',
-        'show' => 'uri'
+        'show' => null
     ];
 
     /**
@@ -120,7 +120,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'item_url' => 'item_url',
+        'id' => 'id',
         'first_show_on' => 'first_show_on',
         'last_show_on' => 'last_show_on',
         'start_time' => 'start_time',
@@ -139,7 +139,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'item_url' => 'setItemUrl',
+        'id' => 'setId',
         'first_show_on' => 'setFirstShowOn',
         'last_show_on' => 'setLastShowOn',
         'start_time' => 'setStartTime',
@@ -158,7 +158,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'item_url' => 'getItemUrl',
+        'id' => 'getId',
         'first_show_on' => 'getFirstShowOn',
         'last_show_on' => 'getLastShowOn',
         'start_time' => 'getStartTime',
@@ -228,7 +228,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['item_url'] = $data['item_url'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['first_show_on'] = $data['first_show_on'] ?? null;
         $this->container['last_show_on'] = $data['last_show_on'] ?? null;
         $this->container['start_time'] = $data['start_time'] ?? null;
@@ -250,8 +250,8 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['item_url'] === null) {
-            $invalidProperties[] = "'item_url' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['first_show_on'] === null) {
             $invalidProperties[] = "'first_show_on' can't be null";
@@ -303,25 +303,25 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets item_url
+     * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getItemUrl()
+    public function getId()
     {
-        return $this->container['item_url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets item_url
+     * Sets id
      *
-     * @param string $item_url item_url
+     * @param int $id id
      *
      * @return self
      */
-    public function setItemUrl($item_url)
+    public function setId($id)
     {
-        $this->container['item_url'] = $item_url;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -561,7 +561,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets show
      *
-     * @return string
+     * @return int
      */
     public function getShow()
     {
@@ -571,7 +571,7 @@ class ShowDays implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets show
      *
-     * @param string $show show
+     * @param int $show show
      *
      * @return self
      */

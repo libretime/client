@@ -22,10 +22,10 @@
 export interface ListenerCount {
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ListenerCount
      */
-    'item_url': string;
+    'id': number;
     /**
      * 
      * @type {number}
@@ -34,15 +34,15 @@ export interface ListenerCount {
     'listener_count': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ListenerCount
      */
-    'timestamp': string;
+    'timestamp': number;
     /**
      * 
-     * @type {string}
+     * @type {number}
      * @memberof ListenerCount
      */
-    'mount_name': string;
+    'mount_name': number;
 }
 
