@@ -5,6 +5,7 @@ api.ts
 api/celery-tasks-api.ts
 api/files-api.ts
 api/imported-podcasts-api.ts
+api/info-api.ts
 api/libraries-api.ts
 api/listener-counts-api.ts
 api/live-logs-api.ts
@@ -31,7 +32,7 @@ api/smart-block-contents-api.ts
 api/smart-block-criteria-api.ts
 api/smart-blocks-api.ts
 api/station-podcasts-api.ts
-api/stream-settings-api.ts
+api/stream-api.ts
 api/third-party-track-references-api.ts
 api/timestamps-api.ts
 api/user-tokens-api.ts
@@ -48,6 +49,7 @@ model/blank-enum.ts
 model/celery-task.ts
 model/imported-podcast.ts
 model/index.ts
+model/info.ts
 model/library.ts
 model/listener-count.ts
 model/live-log.ts
@@ -86,7 +88,6 @@ model/patched-smart-block-criteria.ts
 model/patched-smart-block-kind.ts
 model/patched-smart-block.ts
 model/patched-station-podcast.ts
-model/patched-stream-setting.ts
 model/patched-third-party-track-reference.ts
 model/patched-timestamp.ts
 model/patched-user-token.ts
@@ -119,7 +120,8 @@ model/smart-block-criteria.ts
 model/smart-block-kind-enum.ts
 model/smart-block.ts
 model/station-podcast.ts
-model/stream-setting.ts
+model/stream-preferences.ts
+model/stream-state.ts
 model/third-party-track-reference.ts
 model/timestamp.ts
 model/user-token.ts

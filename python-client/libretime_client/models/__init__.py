@@ -13,6 +13,7 @@ from libretime_client.model.blank_enum import BlankEnum
 from libretime_client.model.celery_task import CeleryTask
 from libretime_client.model.file import File
 from libretime_client.model.imported_podcast import ImportedPodcast
+from libretime_client.model.info import Info
 from libretime_client.model.library import Library
 from libretime_client.model.listener_count import ListenerCount
 from libretime_client.model.live_log import LiveLog
@@ -50,7 +51,6 @@ from libretime_client.model.patched_smart_block_content import PatchedSmartBlock
 from libretime_client.model.patched_smart_block_criteria import PatchedSmartBlockCriteria
 from libretime_client.model.patched_smart_block_kind import PatchedSmartBlockKind
 from libretime_client.model.patched_station_podcast import PatchedStationPodcast
-from libretime_client.model.patched_stream_setting import PatchedStreamSetting
 from libretime_client.model.patched_third_party_track_reference import PatchedThirdPartyTrackReference
 from libretime_client.model.patched_timestamp import PatchedTimestamp
 from libretime_client.model.patched_user import PatchedUser
@@ -83,7 +83,8 @@ from libretime_client.model.smart_block_content import SmartBlockContent
 from libretime_client.model.smart_block_criteria import SmartBlockCriteria
 from libretime_client.model.smart_block_kind_enum import SmartBlockKindEnum
 from libretime_client.model.station_podcast import StationPodcast
-from libretime_client.model.stream_setting import StreamSetting
+from libretime_client.model.stream_preferences import StreamPreferences
+from libretime_client.model.stream_state import StreamState
 from libretime_client.model.third_party_track_reference import ThirdPartyTrackReference
 from libretime_client.model.timestamp import Timestamp
 from libretime_client.model.user import User

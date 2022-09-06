@@ -17,6 +17,7 @@
 export * from './api/celery-tasks-api';
 export * from './api/files-api';
 export * from './api/imported-podcasts-api';
+export * from './api/info-api';
 export * from './api/libraries-api';
 export * from './api/listener-counts-api';
 export * from './api/live-logs-api';
@@ -43,7 +44,7 @@ export * from './api/smart-block-contents-api';
 export * from './api/smart-block-criteria-api';
 export * from './api/smart-blocks-api';
 export * from './api/station-podcasts-api';
-export * from './api/stream-settings-api';
+export * from './api/stream-api';
 export * from './api/third-party-track-references-api';
 export * from './api/timestamps-api';
 export * from './api/user-tokens-api';

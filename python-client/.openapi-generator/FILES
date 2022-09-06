@@ -9,6 +9,8 @@ docs/File.md
 docs/FilesApi.md
 docs/ImportedPodcast.md
 docs/ImportedPodcastsApi.md
+docs/Info.md
+docs/InfoApi.md
 docs/LibrariesApi.md
 docs/Library.md
 docs/ListenerCount.md
@@ -51,7 +53,6 @@ docs/PatchedSmartBlockContent.md
 docs/PatchedSmartBlockCriteria.md
 docs/PatchedSmartBlockKind.md
 docs/PatchedStationPodcast.md
-docs/PatchedStreamSetting.md
 docs/PatchedThirdPartyTrackReference.md
 docs/PatchedTimestamp.md
 docs/PatchedUser.md
@@ -105,8 +106,9 @@ docs/SmartBlockKindEnum.md
 docs/SmartBlocksApi.md
 docs/StationPodcast.md
 docs/StationPodcastsApi.md
-docs/StreamSetting.md
-docs/StreamSettingsApi.md
+docs/StreamApi.md
+docs/StreamPreferences.md
+docs/StreamState.md
 docs/ThirdPartyTrackReference.md
 docs/ThirdPartyTrackReferencesApi.md
 docs/Timestamp.md
@@ -128,6 +130,7 @@ libretime_client/api/__init__.py
 libretime_client/api/celery_tasks_api.py
 libretime_client/api/files_api.py
 libretime_client/api/imported_podcasts_api.py
+libretime_client/api/info_api.py
 libretime_client/api/libraries_api.py
 libretime_client/api/listener_counts_api.py
 libretime_client/api/live_logs_api.py
@@ -154,7 +157,7 @@ libretime_client/api/smart_block_contents_api.py
 libretime_client/api/smart_block_criteria_api.py
 libretime_client/api/smart_blocks_api.py
 libretime_client/api/station_podcasts_api.py
-libretime_client/api/stream_settings_api.py
+libretime_client/api/stream_api.py
 libretime_client/api/third_party_track_references_api.py
 libretime_client/api/timestamps_api.py
 libretime_client/api/user_tokens_api.py
@@ -171,6 +174,7 @@ libretime_client/model/blank_enum.py
 libretime_client/model/celery_task.py
 libretime_client/model/file.py
 libretime_client/model/imported_podcast.py
+libretime_client/model/info.py
 libretime_client/model/library.py
 libretime_client/model/listener_count.py
 libretime_client/model/live_log.py
@@ -208,7 +212,6 @@ libretime_client/model/patched_smart_block_content.py
 libretime_client/model/patched_smart_block_criteria.py
 libretime_client/model/patched_smart_block_kind.py
 libretime_client/model/patched_station_podcast.py
-libretime_client/model/patched_stream_setting.py
 libretime_client/model/patched_third_party_track_reference.py
 libretime_client/model/patched_timestamp.py
 libretime_client/model/patched_user.py
@@ -241,7 +244,8 @@ libretime_client/model/smart_block_content.py
 libretime_client/model/smart_block_criteria.py
 libretime_client/model/smart_block_kind_enum.py
 libretime_client/model/station_podcast.py
-libretime_client/model/stream_setting.py
+libretime_client/model/stream_preferences.py
+libretime_client/model/stream_state.py
 libretime_client/model/third_party_track_reference.py
 libretime_client/model/timestamp.py
 libretime_client/model/user.py
@@ -258,4 +262,9 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_info.py
+test/test_info_api.py
+test/test_stream_api.py
+test/test_stream_preferences.py
+test/test_stream_state.py
 tox.ini

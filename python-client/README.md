@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 *ImportedPodcastsApi* | [**imported_podcasts_partial_update**](docs/ImportedPodcastsApi.md#imported_podcasts_partial_update) | **PATCH** /api/v2/imported-podcasts/{id} | 
 *ImportedPodcastsApi* | [**imported_podcasts_retrieve**](docs/ImportedPodcastsApi.md#imported_podcasts_retrieve) | **GET** /api/v2/imported-podcasts/{id} | 
 *ImportedPodcastsApi* | [**imported_podcasts_update**](docs/ImportedPodcastsApi.md#imported_podcasts_update) | **PUT** /api/v2/imported-podcasts/{id} | 
+*InfoApi* | [**info_retrieve**](docs/InfoApi.md#info_retrieve) | **GET** /api/v2/info | 
 *LibrariesApi* | [**libraries_create**](docs/LibrariesApi.md#libraries_create) | **POST** /api/v2/libraries | 
 *LibrariesApi* | [**libraries_destroy**](docs/LibrariesApi.md#libraries_destroy) | **DELETE** /api/v2/libraries/{id} | 
 *LibrariesApi* | [**libraries_list**](docs/LibrariesApi.md#libraries_list) | **GET** /api/v2/libraries | 
@@ -271,12 +272,8 @@ Class | Method | HTTP request | Description
 *StationPodcastsApi* | [**station_podcasts_partial_update**](docs/StationPodcastsApi.md#station_podcasts_partial_update) | **PATCH** /api/v2/station-podcasts/{id} | 
 *StationPodcastsApi* | [**station_podcasts_retrieve**](docs/StationPodcastsApi.md#station_podcasts_retrieve) | **GET** /api/v2/station-podcasts/{id} | 
 *StationPodcastsApi* | [**station_podcasts_update**](docs/StationPodcastsApi.md#station_podcasts_update) | **PUT** /api/v2/station-podcasts/{id} | 
-*StreamSettingsApi* | [**stream_settings_create**](docs/StreamSettingsApi.md#stream_settings_create) | **POST** /api/v2/stream-settings | 
-*StreamSettingsApi* | [**stream_settings_destroy**](docs/StreamSettingsApi.md#stream_settings_destroy) | **DELETE** /api/v2/stream-settings/{key} | 
-*StreamSettingsApi* | [**stream_settings_list**](docs/StreamSettingsApi.md#stream_settings_list) | **GET** /api/v2/stream-settings | 
-*StreamSettingsApi* | [**stream_settings_partial_update**](docs/StreamSettingsApi.md#stream_settings_partial_update) | **PATCH** /api/v2/stream-settings/{key} | 
-*StreamSettingsApi* | [**stream_settings_retrieve**](docs/StreamSettingsApi.md#stream_settings_retrieve) | **GET** /api/v2/stream-settings/{key} | 
-*StreamSettingsApi* | [**stream_settings_update**](docs/StreamSettingsApi.md#stream_settings_update) | **PUT** /api/v2/stream-settings/{key} | 
+*StreamApi* | [**stream_preferences_retrieve**](docs/StreamApi.md#stream_preferences_retrieve) | **GET** /api/v2/stream/preferences | 
+*StreamApi* | [**stream_state_retrieve**](docs/StreamApi.md#stream_state_retrieve) | **GET** /api/v2/stream/state | 
 *ThirdPartyTrackReferencesApi* | [**third_party_track_references_create**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_create) | **POST** /api/v2/third-party-track-references | 
 *ThirdPartyTrackReferencesApi* | [**third_party_track_references_destroy**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_destroy) | **DELETE** /api/v2/third-party-track-references/{id} | 
 *ThirdPartyTrackReferencesApi* | [**third_party_track_references_list**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_list) | **GET** /api/v2/third-party-track-references | 
@@ -322,6 +319,7 @@ Class | Method | HTTP request | Description
  - [CeleryTask](docs/CeleryTask.md)
  - [File](docs/File.md)
  - [ImportedPodcast](docs/ImportedPodcast.md)
+ - [Info](docs/Info.md)
  - [Library](docs/Library.md)
  - [ListenerCount](docs/ListenerCount.md)
  - [LiveLog](docs/LiveLog.md)
@@ -359,7 +357,6 @@ Class | Method | HTTP request | Description
  - [PatchedSmartBlockCriteria](docs/PatchedSmartBlockCriteria.md)
  - [PatchedSmartBlockKind](docs/PatchedSmartBlockKind.md)
  - [PatchedStationPodcast](docs/PatchedStationPodcast.md)
- - [PatchedStreamSetting](docs/PatchedStreamSetting.md)
  - [PatchedThirdPartyTrackReference](docs/PatchedThirdPartyTrackReference.md)
  - [PatchedTimestamp](docs/PatchedTimestamp.md)
  - [PatchedUser](docs/PatchedUser.md)
@@ -392,7 +389,8 @@ Class | Method | HTTP request | Description
  - [SmartBlockCriteria](docs/SmartBlockCriteria.md)
  - [SmartBlockKindEnum](docs/SmartBlockKindEnum.md)
  - [StationPodcast](docs/StationPodcast.md)
- - [StreamSetting](docs/StreamSetting.md)
+ - [StreamPreferences](docs/StreamPreferences.md)
+ - [StreamState](docs/StreamState.md)
  - [ThirdPartyTrackReference](docs/ThirdPartyTrackReference.md)
  - [Timestamp](docs/Timestamp.md)
  - [User](docs/User.md)

@@ -6,6 +6,7 @@ composer.json
 docs/Api/CeleryTasksApi.md
 docs/Api/FilesApi.md
 docs/Api/ImportedPodcastsApi.md
+docs/Api/InfoApi.md
 docs/Api/LibrariesApi.md
 docs/Api/ListenerCountsApi.md
 docs/Api/LiveLogsApi.md
@@ -32,7 +33,7 @@ docs/Api/SmartBlockContentsApi.md
 docs/Api/SmartBlockCriteriaApi.md
 docs/Api/SmartBlocksApi.md
 docs/Api/StationPodcastsApi.md
-docs/Api/StreamSettingsApi.md
+docs/Api/StreamApi.md
 docs/Api/ThirdPartyTrackReferencesApi.md
 docs/Api/TimestampsApi.md
 docs/Api/UserTokensApi.md
@@ -44,6 +45,7 @@ docs/Model/BlankEnum.md
 docs/Model/CeleryTask.md
 docs/Model/File.md
 docs/Model/ImportedPodcast.md
+docs/Model/Info.md
 docs/Model/Library.md
 docs/Model/ListenerCount.md
 docs/Model/LiveLog.md
@@ -81,7 +83,6 @@ docs/Model/PatchedSmartBlockContent.md
 docs/Model/PatchedSmartBlockCriteria.md
 docs/Model/PatchedSmartBlockKind.md
 docs/Model/PatchedStationPodcast.md
-docs/Model/PatchedStreamSetting.md
 docs/Model/PatchedThirdPartyTrackReference.md
 docs/Model/PatchedTimestamp.md
 docs/Model/PatchedUser.md
@@ -114,7 +115,8 @@ docs/Model/SmartBlockContent.md
 docs/Model/SmartBlockCriteria.md
 docs/Model/SmartBlockKindEnum.md
 docs/Model/StationPodcast.md
-docs/Model/StreamSetting.md
+docs/Model/StreamPreferences.md
+docs/Model/StreamState.md
 docs/Model/ThirdPartyTrackReference.md
 docs/Model/Timestamp.md
 docs/Model/User.md
@@ -127,6 +129,7 @@ git_push.sh
 lib/Api/CeleryTasksApi.php
 lib/Api/FilesApi.php
 lib/Api/ImportedPodcastsApi.php
+lib/Api/InfoApi.php
 lib/Api/LibrariesApi.php
 lib/Api/ListenerCountsApi.php
 lib/Api/LiveLogsApi.php
@@ -153,7 +156,7 @@ lib/Api/SmartBlockContentsApi.php
 lib/Api/SmartBlockCriteriaApi.php
 lib/Api/SmartBlocksApi.php
 lib/Api/StationPodcastsApi.php
-lib/Api/StreamSettingsApi.php
+lib/Api/StreamApi.php
 lib/Api/ThirdPartyTrackReferencesApi.php
 lib/Api/TimestampsApi.php
 lib/Api/UserTokensApi.php
@@ -168,6 +171,7 @@ lib/Model/BlankEnum.php
 lib/Model/CeleryTask.php
 lib/Model/File.php
 lib/Model/ImportedPodcast.php
+lib/Model/Info.php
 lib/Model/Library.php
 lib/Model/ListenerCount.php
 lib/Model/LiveLog.php
@@ -206,7 +210,6 @@ lib/Model/PatchedSmartBlockContent.php
 lib/Model/PatchedSmartBlockCriteria.php
 lib/Model/PatchedSmartBlockKind.php
 lib/Model/PatchedStationPodcast.php
-lib/Model/PatchedStreamSetting.php
 lib/Model/PatchedThirdPartyTrackReference.php
 lib/Model/PatchedTimestamp.php
 lib/Model/PatchedUser.php
@@ -239,7 +242,8 @@ lib/Model/SmartBlockContent.php
 lib/Model/SmartBlockCriteria.php
 lib/Model/SmartBlockKindEnum.php
 lib/Model/StationPodcast.php
-lib/Model/StreamSetting.php
+lib/Model/StreamPreferences.php
+lib/Model/StreamState.php
 lib/Model/ThirdPartyTrackReference.php
 lib/Model/Timestamp.php
 lib/Model/User.php
@@ -250,3 +254,8 @@ lib/Model/WebstreamMetadata.php
 lib/Model/WeekDayEnum.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/InfoApiTest.php
+test/Api/StreamApiTest.php
+test/Model/InfoTest.php
+test/Model/StreamPreferencesTest.php
+test/Model/StreamStateTest.php
