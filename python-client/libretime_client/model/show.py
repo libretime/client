@@ -104,6 +104,7 @@ class Show(ModelNormal):
         return {
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
+            'live_enabled': (bool,),  # noqa: E501
             'linked': (bool,),  # noqa: E501
             'linkable': (bool,),  # noqa: E501
             'auto_playlist_enabled': (bool,),  # noqa: E501
@@ -125,6 +126,7 @@ class Show(ModelNormal):
     attribute_map = {
         'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
+        'live_enabled': 'live_enabled',  # noqa: E501
         'linked': 'linked',  # noqa: E501
         'linkable': 'linkable',  # noqa: E501
         'auto_playlist_enabled': 'auto_playlist_enabled',  # noqa: E501
@@ -140,18 +142,20 @@ class Show(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
+        'live_enabled',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, linked, linkable, auto_playlist_enabled, auto_playlist_repeat, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, live_enabled, linked, linkable, auto_playlist_enabled, auto_playlist_repeat, *args, **kwargs):  # noqa: E501
         """Show - a model defined in OpenAPI
 
         Args:
             id (int):
             name (str):
+            live_enabled (bool):
             linked (bool):
             linkable (bool):
             auto_playlist_enabled (bool):
@@ -228,6 +232,7 @@ class Show(ModelNormal):
 
         self.id = id
         self.name = name
+        self.live_enabled = live_enabled
         self.linked = linked
         self.linkable = linkable
         self.auto_playlist_enabled = auto_playlist_enabled

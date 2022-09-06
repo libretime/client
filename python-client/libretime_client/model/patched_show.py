@@ -110,6 +110,7 @@ class PatchedShow(ModelNormal):
             'image': (str, none_type,),  # noqa: E501
             'foreground_color': (str, none_type,),  # noqa: E501
             'background_color': (str, none_type,),  # noqa: E501
+            'live_enabled': (bool,),  # noqa: E501
             'linked': (bool,),  # noqa: E501
             'linkable': (bool,),  # noqa: E501
             'auto_playlist': (int, none_type,),  # noqa: E501
@@ -131,6 +132,7 @@ class PatchedShow(ModelNormal):
         'image': 'image',  # noqa: E501
         'foreground_color': 'foreground_color',  # noqa: E501
         'background_color': 'background_color',  # noqa: E501
+        'live_enabled': 'live_enabled',  # noqa: E501
         'linked': 'linked',  # noqa: E501
         'linkable': 'linkable',  # noqa: E501
         'auto_playlist': 'auto_playlist',  # noqa: E501
@@ -140,6 +142,7 @@ class PatchedShow(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
+        'live_enabled',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -188,6 +191,7 @@ class PatchedShow(ModelNormal):
             image (str, none_type): [optional]  # noqa: E501
             foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
+            live_enabled (bool): [optional]  # noqa: E501
             linked (bool): [optional]  # noqa: E501
             linkable (bool): [optional]  # noqa: E501
             auto_playlist (int, none_type): [optional]  # noqa: E501
@@ -286,6 +290,7 @@ class PatchedShow(ModelNormal):
             image (str, none_type): [optional]  # noqa: E501
             foreground_color (str, none_type): [optional]  # noqa: E501
             background_color (str, none_type): [optional]  # noqa: E501
+            live_enabled (bool): [optional]  # noqa: E501
             linked (bool): [optional]  # noqa: E501
             linkable (bool): [optional]  # noqa: E501
             auto_playlist (int, none_type): [optional]  # noqa: E501

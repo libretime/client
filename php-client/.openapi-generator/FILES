@@ -254,8 +254,3 @@ lib/Model/WebstreamMetadata.php
 lib/Model/WeekDayEnum.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/InfoApiTest.php
-test/Api/StreamApiTest.php
-test/Model/InfoTest.php
-test/Model/StreamPreferencesTest.php
-test/Model/StreamStateTest.php

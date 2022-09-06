@@ -262,9 +262,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_info.py
-test/test_info_api.py
-test/test_stream_api.py
-test/test_stream_preferences.py
-test/test_stream_state.py
 tox.ini

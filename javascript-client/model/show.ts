@@ -73,6 +73,12 @@ export interface Show {
      * @type {boolean}
      * @memberof Show
      */
+    'live_enabled': boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof Show
+     */
     'linked': boolean;
     /**
      * 

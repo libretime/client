@@ -67,6 +67,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'image' => 'string',
         'foreground_color' => 'string',
         'background_color' => 'string',
+        'live_enabled' => 'bool',
         'linked' => 'bool',
         'linkable' => 'bool',
         'auto_playlist' => 'int',
@@ -90,6 +91,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'image' => null,
         'foreground_color' => null,
         'background_color' => null,
+        'live_enabled' => null,
         'linked' => null,
         'linkable' => null,
         'auto_playlist' => null,
@@ -132,6 +134,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'image' => 'image',
         'foreground_color' => 'foreground_color',
         'background_color' => 'background_color',
+        'live_enabled' => 'live_enabled',
         'linked' => 'linked',
         'linkable' => 'linkable',
         'auto_playlist' => 'auto_playlist',
@@ -153,6 +156,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'image' => 'setImage',
         'foreground_color' => 'setForegroundColor',
         'background_color' => 'setBackgroundColor',
+        'live_enabled' => 'setLiveEnabled',
         'linked' => 'setLinked',
         'linkable' => 'setLinkable',
         'auto_playlist' => 'setAutoPlaylist',
@@ -174,6 +178,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         'image' => 'getImage',
         'foreground_color' => 'getForegroundColor',
         'background_color' => 'getBackgroundColor',
+        'live_enabled' => 'getLiveEnabled',
         'linked' => 'getLinked',
         'linkable' => 'getLinkable',
         'auto_playlist' => 'getAutoPlaylist',
@@ -246,6 +251,7 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['image'] = $data['image'] ?? null;
         $this->container['foreground_color'] = $data['foreground_color'] ?? null;
         $this->container['background_color'] = $data['background_color'] ?? null;
+        $this->container['live_enabled'] = $data['live_enabled'] ?? null;
         $this->container['linked'] = $data['linked'] ?? null;
         $this->container['linkable'] = $data['linkable'] ?? null;
         $this->container['auto_playlist'] = $data['auto_playlist'] ?? null;
@@ -521,6 +527,30 @@ class PatchedShow implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['background_color'] = $background_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets live_enabled
+     *
+     * @return bool|null
+     */
+    public function getLiveEnabled()
+    {
+        return $this->container['live_enabled'];
+    }
+
+    /**
+     * Sets live_enabled
+     *
+     * @param bool|null $live_enabled live_enabled
+     *
+     * @return self
+     */
+    public function setLiveEnabled($live_enabled)
+    {
+        $this->container['live_enabled'] = $live_enabled;
 
         return $this;
     }

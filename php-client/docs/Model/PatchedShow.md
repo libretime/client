@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **image** | **string** |  | [optional]
 **foreground_color** | **string** |  | [optional]
 **background_color** | **string** |  | [optional]
+**live_enabled** | **bool** |  | [optional] [readonly]
 **linked** | **bool** |  | [optional]
 **linkable** | **bool** |  | [optional]
 **auto_playlist** | **int** |  | [optional]

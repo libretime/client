@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
 **name** | **str** |  | 
+**live_enabled** | **bool** |  | [readonly] 
 **linked** | **bool** |  | 
 **linkable** | **bool** |  | 
 **auto_playlist_enabled** | **bool** |  | 

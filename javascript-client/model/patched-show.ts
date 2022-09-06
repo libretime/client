@@ -73,6 +73,12 @@ export interface PatchedShow {
      * @type {boolean}
      * @memberof PatchedShow
      */
+    'live_enabled'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedShow
+     */
     'linked'?: boolean;
     /**
      * 
