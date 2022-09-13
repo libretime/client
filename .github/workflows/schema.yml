@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/schema.yml
+      - Dockerfile
       - Makefile
       - schema.yml
 
@@ -12,6 +13,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/schema.yml
+      - Dockerfile
       - Makefile
       - schema.yml
 
