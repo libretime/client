@@ -13,8 +13,14 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
+// May contain unused imports in some cases
+// @ts-ignore
 import { PatchedShowDaysWeekDay } from './patched-show-days-week-day';
+// May contain unused imports in some cases
+// @ts-ignore
 import { RepeatKindEnum } from './repeat-kind-enum';
 
 /**

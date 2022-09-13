@@ -1,15 +1,15 @@
 # Libretime\Client\PodcastEpisodesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**podcastEpisodesCreate()**](PodcastEpisodesApi.md#podcastEpisodesCreate) | **POST** /api/v2/podcast-episodes | 
-[**podcastEpisodesDestroy()**](PodcastEpisodesApi.md#podcastEpisodesDestroy) | **DELETE** /api/v2/podcast-episodes/{id} | 
-[**podcastEpisodesList()**](PodcastEpisodesApi.md#podcastEpisodesList) | **GET** /api/v2/podcast-episodes | 
-[**podcastEpisodesPartialUpdate()**](PodcastEpisodesApi.md#podcastEpisodesPartialUpdate) | **PATCH** /api/v2/podcast-episodes/{id} | 
-[**podcastEpisodesRetrieve()**](PodcastEpisodesApi.md#podcastEpisodesRetrieve) | **GET** /api/v2/podcast-episodes/{id} | 
-[**podcastEpisodesUpdate()**](PodcastEpisodesApi.md#podcastEpisodesUpdate) | **PUT** /api/v2/podcast-episodes/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**podcastEpisodesCreate()**](PodcastEpisodesApi.md#podcastEpisodesCreate) | **POST** /api/v2/podcast-episodes |  |
+| [**podcastEpisodesDestroy()**](PodcastEpisodesApi.md#podcastEpisodesDestroy) | **DELETE** /api/v2/podcast-episodes/{id} |  |
+| [**podcastEpisodesList()**](PodcastEpisodesApi.md#podcastEpisodesList) | **GET** /api/v2/podcast-episodes |  |
+| [**podcastEpisodesPartialUpdate()**](PodcastEpisodesApi.md#podcastEpisodesPartialUpdate) | **PATCH** /api/v2/podcast-episodes/{id} |  |
+| [**podcastEpisodesRetrieve()**](PodcastEpisodesApi.md#podcastEpisodesRetrieve) | **GET** /api/v2/podcast-episodes/{id} |  |
+| [**podcastEpisodesUpdate()**](PodcastEpisodesApi.md#podcastEpisodesUpdate) | **PUT** /api/v2/podcast-episodes/{id} |  |
 
 
 ## `podcastEpisodesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **podcast_episode** | [**\Libretime\Client\Model\PodcastEpisode**](../Model/PodcastEpisode.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **podcast_episode** | [**\Libretime\Client\Model\PodcastEpisode**](../Model/PodcastEpisode.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast episode. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast episode. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast episode. |
- **patched_podcast_episode** | [**\Libretime\Client\Model\PatchedPodcastEpisode**](../Model/PatchedPodcastEpisode.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast episode. | |
+| **patched_podcast_episode** | [**\Libretime\Client\Model\PatchedPodcastEpisode**](../Model/PatchedPodcastEpisode.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast episode. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast episode. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast episode. |
- **podcast_episode** | [**\Libretime\Client\Model\PodcastEpisode**](../Model/PodcastEpisode.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast episode. | |
+| **podcast_episode** | [**\Libretime\Client\Model\PodcastEpisode**](../Model/PodcastEpisode.md)|  | |
 
 ### Return type
 

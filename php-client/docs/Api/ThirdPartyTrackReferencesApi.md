@@ -1,15 +1,15 @@
 # Libretime\Client\ThirdPartyTrackReferencesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**thirdPartyTrackReferencesCreate()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesCreate) | **POST** /api/v2/third-party-track-references | 
-[**thirdPartyTrackReferencesDestroy()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesDestroy) | **DELETE** /api/v2/third-party-track-references/{id} | 
-[**thirdPartyTrackReferencesList()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesList) | **GET** /api/v2/third-party-track-references | 
-[**thirdPartyTrackReferencesPartialUpdate()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesPartialUpdate) | **PATCH** /api/v2/third-party-track-references/{id} | 
-[**thirdPartyTrackReferencesRetrieve()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesRetrieve) | **GET** /api/v2/third-party-track-references/{id} | 
-[**thirdPartyTrackReferencesUpdate()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesUpdate) | **PUT** /api/v2/third-party-track-references/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**thirdPartyTrackReferencesCreate()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesCreate) | **POST** /api/v2/third-party-track-references |  |
+| [**thirdPartyTrackReferencesDestroy()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesDestroy) | **DELETE** /api/v2/third-party-track-references/{id} |  |
+| [**thirdPartyTrackReferencesList()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesList) | **GET** /api/v2/third-party-track-references |  |
+| [**thirdPartyTrackReferencesPartialUpdate()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesPartialUpdate) | **PATCH** /api/v2/third-party-track-references/{id} |  |
+| [**thirdPartyTrackReferencesRetrieve()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesRetrieve) | **GET** /api/v2/third-party-track-references/{id} |  |
+| [**thirdPartyTrackReferencesUpdate()**](ThirdPartyTrackReferencesApi.md#thirdPartyTrackReferencesUpdate) | **PUT** /api/v2/third-party-track-references/{id} |  |
 
 
 ## `thirdPartyTrackReferencesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **third_party_track_reference** | [**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **third_party_track_reference** | [**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this third party track reference. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this third party track reference. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this third party track reference. |
- **patched_third_party_track_reference** | [**\Libretime\Client\Model\PatchedThirdPartyTrackReference**](../Model/PatchedThirdPartyTrackReference.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this third party track reference. | |
+| **patched_third_party_track_reference** | [**\Libretime\Client\Model\PatchedThirdPartyTrackReference**](../Model/PatchedThirdPartyTrackReference.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this third party track reference. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this third party track reference. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this third party track reference. |
- **third_party_track_reference** | [**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this third party track reference. | |
+| **third_party_track_reference** | [**\Libretime\Client\Model\ThirdPartyTrackReference**](../Model/ThirdPartyTrackReference.md)|  | |
 
 ### Return type
 

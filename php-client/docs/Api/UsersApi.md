@@ -1,15 +1,15 @@
 # Libretime\Client\UsersApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**usersCreate()**](UsersApi.md#usersCreate) | **POST** /api/v2/users | 
-[**usersDestroy()**](UsersApi.md#usersDestroy) | **DELETE** /api/v2/users/{id} | 
-[**usersList()**](UsersApi.md#usersList) | **GET** /api/v2/users | 
-[**usersPartialUpdate()**](UsersApi.md#usersPartialUpdate) | **PATCH** /api/v2/users/{id} | 
-[**usersRetrieve()**](UsersApi.md#usersRetrieve) | **GET** /api/v2/users/{id} | 
-[**usersUpdate()**](UsersApi.md#usersUpdate) | **PUT** /api/v2/users/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**usersCreate()**](UsersApi.md#usersCreate) | **POST** /api/v2/users |  |
+| [**usersDestroy()**](UsersApi.md#usersDestroy) | **DELETE** /api/v2/users/{id} |  |
+| [**usersList()**](UsersApi.md#usersList) | **GET** /api/v2/users |  |
+| [**usersPartialUpdate()**](UsersApi.md#usersPartialUpdate) | **PATCH** /api/v2/users/{id} |  |
+| [**usersRetrieve()**](UsersApi.md#usersRetrieve) | **GET** /api/v2/users/{id} |  |
+| [**usersUpdate()**](UsersApi.md#usersUpdate) | **PUT** /api/v2/users/{id} |  |
 
 
 ## `usersCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user** | [**\Libretime\Client\Model\User**](../Model/User.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user** | [**\Libretime\Client\Model\User**](../Model/User.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user. |
- **patched_user** | [**\Libretime\Client\Model\PatchedUser**](../Model/PatchedUser.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user. | |
+| **patched_user** | [**\Libretime\Client\Model\PatchedUser**](../Model/PatchedUser.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user. |
- **user** | [**\Libretime\Client\Model\User**](../Model/User.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user. | |
+| **user** | [**\Libretime\Client\Model\User**](../Model/User.md)|  | |
 
 ### Return type
 

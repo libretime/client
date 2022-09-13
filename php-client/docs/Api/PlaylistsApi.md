@@ -1,15 +1,15 @@
 # Libretime\Client\PlaylistsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**playlistsCreate()**](PlaylistsApi.md#playlistsCreate) | **POST** /api/v2/playlists | 
-[**playlistsDestroy()**](PlaylistsApi.md#playlistsDestroy) | **DELETE** /api/v2/playlists/{id} | 
-[**playlistsList()**](PlaylistsApi.md#playlistsList) | **GET** /api/v2/playlists | 
-[**playlistsPartialUpdate()**](PlaylistsApi.md#playlistsPartialUpdate) | **PATCH** /api/v2/playlists/{id} | 
-[**playlistsRetrieve()**](PlaylistsApi.md#playlistsRetrieve) | **GET** /api/v2/playlists/{id} | 
-[**playlistsUpdate()**](PlaylistsApi.md#playlistsUpdate) | **PUT** /api/v2/playlists/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**playlistsCreate()**](PlaylistsApi.md#playlistsCreate) | **POST** /api/v2/playlists |  |
+| [**playlistsDestroy()**](PlaylistsApi.md#playlistsDestroy) | **DELETE** /api/v2/playlists/{id} |  |
+| [**playlistsList()**](PlaylistsApi.md#playlistsList) | **GET** /api/v2/playlists |  |
+| [**playlistsPartialUpdate()**](PlaylistsApi.md#playlistsPartialUpdate) | **PATCH** /api/v2/playlists/{id} |  |
+| [**playlistsRetrieve()**](PlaylistsApi.md#playlistsRetrieve) | **GET** /api/v2/playlists/{id} |  |
+| [**playlistsUpdate()**](PlaylistsApi.md#playlistsUpdate) | **PUT** /api/v2/playlists/{id} |  |
 
 
 ## `playlistsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **playlist** | [**\Libretime\Client\Model\Playlist**](../Model/Playlist.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **playlist** | [**\Libretime\Client\Model\Playlist**](../Model/Playlist.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist. |
- **patched_playlist** | [**\Libretime\Client\Model\PatchedPlaylist**](../Model/PatchedPlaylist.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist. | |
+| **patched_playlist** | [**\Libretime\Client\Model\PatchedPlaylist**](../Model/PatchedPlaylist.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist. |
- **playlist** | [**\Libretime\Client\Model\Playlist**](../Model/Playlist.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist. | |
+| **playlist** | [**\Libretime\Client\Model\Playlist**](../Model/Playlist.md)|  | |
 
 ### Return type
 

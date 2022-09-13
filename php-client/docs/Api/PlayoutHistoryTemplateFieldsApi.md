@@ -1,15 +1,15 @@
 # Libretime\Client\PlayoutHistoryTemplateFieldsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**playoutHistoryTemplateFieldsCreate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsCreate) | **POST** /api/v2/playout-history-template-fields | 
-[**playoutHistoryTemplateFieldsDestroy()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsDestroy) | **DELETE** /api/v2/playout-history-template-fields/{id} | 
-[**playoutHistoryTemplateFieldsList()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsList) | **GET** /api/v2/playout-history-template-fields | 
-[**playoutHistoryTemplateFieldsPartialUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsPartialUpdate) | **PATCH** /api/v2/playout-history-template-fields/{id} | 
-[**playoutHistoryTemplateFieldsRetrieve()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsRetrieve) | **GET** /api/v2/playout-history-template-fields/{id} | 
-[**playoutHistoryTemplateFieldsUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsUpdate) | **PUT** /api/v2/playout-history-template-fields/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**playoutHistoryTemplateFieldsCreate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsCreate) | **POST** /api/v2/playout-history-template-fields |  |
+| [**playoutHistoryTemplateFieldsDestroy()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsDestroy) | **DELETE** /api/v2/playout-history-template-fields/{id} |  |
+| [**playoutHistoryTemplateFieldsList()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsList) | **GET** /api/v2/playout-history-template-fields |  |
+| [**playoutHistoryTemplateFieldsPartialUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsPartialUpdate) | **PATCH** /api/v2/playout-history-template-fields/{id} |  |
+| [**playoutHistoryTemplateFieldsRetrieve()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsRetrieve) | **GET** /api/v2/playout-history-template-fields/{id} |  |
+| [**playoutHistoryTemplateFieldsUpdate()**](PlayoutHistoryTemplateFieldsApi.md#playoutHistoryTemplateFieldsUpdate) | **PUT** /api/v2/playout-history-template-fields/{id} |  |
 
 
 ## `playoutHistoryTemplateFieldsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **playout_history_template_field** | [**\Libretime\Client\Model\PlayoutHistoryTemplateField**](../Model/PlayoutHistoryTemplateField.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **playout_history_template_field** | [**\Libretime\Client\Model\PlayoutHistoryTemplateField**](../Model/PlayoutHistoryTemplateField.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template field. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template field. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template field. |
- **patched_playout_history_template_field** | [**\Libretime\Client\Model\PatchedPlayoutHistoryTemplateField**](../Model/PatchedPlayoutHistoryTemplateField.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template field. | |
+| **patched_playout_history_template_field** | [**\Libretime\Client\Model\PatchedPlayoutHistoryTemplateField**](../Model/PatchedPlayoutHistoryTemplateField.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template field. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template field. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template field. |
- **playout_history_template_field** | [**\Libretime\Client\Model\PlayoutHistoryTemplateField**](../Model/PlayoutHistoryTemplateField.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template field. | |
+| **playout_history_template_field** | [**\Libretime\Client\Model\PlayoutHistoryTemplateField**](../Model/PlayoutHistoryTemplateField.md)|  | |
 
 ### Return type
 

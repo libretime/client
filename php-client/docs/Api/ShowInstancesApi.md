@@ -1,15 +1,15 @@
 # Libretime\Client\ShowInstancesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**showInstancesCreate()**](ShowInstancesApi.md#showInstancesCreate) | **POST** /api/v2/show-instances | 
-[**showInstancesDestroy()**](ShowInstancesApi.md#showInstancesDestroy) | **DELETE** /api/v2/show-instances/{id} | 
-[**showInstancesList()**](ShowInstancesApi.md#showInstancesList) | **GET** /api/v2/show-instances | 
-[**showInstancesPartialUpdate()**](ShowInstancesApi.md#showInstancesPartialUpdate) | **PATCH** /api/v2/show-instances/{id} | 
-[**showInstancesRetrieve()**](ShowInstancesApi.md#showInstancesRetrieve) | **GET** /api/v2/show-instances/{id} | 
-[**showInstancesUpdate()**](ShowInstancesApi.md#showInstancesUpdate) | **PUT** /api/v2/show-instances/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**showInstancesCreate()**](ShowInstancesApi.md#showInstancesCreate) | **POST** /api/v2/show-instances |  |
+| [**showInstancesDestroy()**](ShowInstancesApi.md#showInstancesDestroy) | **DELETE** /api/v2/show-instances/{id} |  |
+| [**showInstancesList()**](ShowInstancesApi.md#showInstancesList) | **GET** /api/v2/show-instances |  |
+| [**showInstancesPartialUpdate()**](ShowInstancesApi.md#showInstancesPartialUpdate) | **PATCH** /api/v2/show-instances/{id} |  |
+| [**showInstancesRetrieve()**](ShowInstancesApi.md#showInstancesRetrieve) | **GET** /api/v2/show-instances/{id} |  |
+| [**showInstancesUpdate()**](ShowInstancesApi.md#showInstancesUpdate) | **PUT** /api/v2/show-instances/{id} |  |
 
 
 ## `showInstancesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **show_instance** | [**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **show_instance** | [**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show instance. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show instance. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show instance. |
- **patched_show_instance** | [**\Libretime\Client\Model\PatchedShowInstance**](../Model/PatchedShowInstance.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show instance. | |
+| **patched_show_instance** | [**\Libretime\Client\Model\PatchedShowInstance**](../Model/PatchedShowInstance.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show instance. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show instance. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show instance. |
- **show_instance** | [**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show instance. | |
+| **show_instance** | [**\Libretime\Client\Model\ShowInstance**](../Model/ShowInstance.md)|  | |
 
 ### Return type
 

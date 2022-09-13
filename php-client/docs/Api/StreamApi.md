@@ -1,11 +1,11 @@
 # Libretime\Client\StreamApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**streamPreferencesRetrieve()**](StreamApi.md#streamPreferencesRetrieve) | **GET** /api/v2/stream/preferences | 
-[**streamStateRetrieve()**](StreamApi.md#streamStateRetrieve) | **GET** /api/v2/stream/state | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**streamPreferencesRetrieve()**](StreamApi.md#streamPreferencesRetrieve) | **GET** /api/v2/stream/preferences |  |
+| [**streamStateRetrieve()**](StreamApi.md#streamStateRetrieve) | **GET** /api/v2/stream/state |  |
 
 
 ## `streamPreferencesRetrieve()`

@@ -1,10 +1,10 @@
 # Libretime\Client\VersionApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**versionRetrieve()**](VersionApi.md#versionRetrieve) | **GET** /api/v2/version | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**versionRetrieve()**](VersionApi.md#versionRetrieve) | **GET** /api/v2/version |  |
 
 
 ## `versionRetrieve()`

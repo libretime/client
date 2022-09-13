@@ -1,15 +1,15 @@
 # Libretime\Client\UserTokensApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**userTokensCreate()**](UserTokensApi.md#userTokensCreate) | **POST** /api/v2/user-tokens | 
-[**userTokensDestroy()**](UserTokensApi.md#userTokensDestroy) | **DELETE** /api/v2/user-tokens/{id} | 
-[**userTokensList()**](UserTokensApi.md#userTokensList) | **GET** /api/v2/user-tokens | 
-[**userTokensPartialUpdate()**](UserTokensApi.md#userTokensPartialUpdate) | **PATCH** /api/v2/user-tokens/{id} | 
-[**userTokensRetrieve()**](UserTokensApi.md#userTokensRetrieve) | **GET** /api/v2/user-tokens/{id} | 
-[**userTokensUpdate()**](UserTokensApi.md#userTokensUpdate) | **PUT** /api/v2/user-tokens/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**userTokensCreate()**](UserTokensApi.md#userTokensCreate) | **POST** /api/v2/user-tokens |  |
+| [**userTokensDestroy()**](UserTokensApi.md#userTokensDestroy) | **DELETE** /api/v2/user-tokens/{id} |  |
+| [**userTokensList()**](UserTokensApi.md#userTokensList) | **GET** /api/v2/user-tokens |  |
+| [**userTokensPartialUpdate()**](UserTokensApi.md#userTokensPartialUpdate) | **PATCH** /api/v2/user-tokens/{id} |  |
+| [**userTokensRetrieve()**](UserTokensApi.md#userTokensRetrieve) | **GET** /api/v2/user-tokens/{id} |  |
+| [**userTokensUpdate()**](UserTokensApi.md#userTokensUpdate) | **PUT** /api/v2/user-tokens/{id} |  |
 
 
 ## `userTokensCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_token** | [**\Libretime\Client\Model\UserToken**](../Model/UserToken.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_token** | [**\Libretime\Client\Model\UserToken**](../Model/UserToken.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user token. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user token. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user token. |
- **patched_user_token** | [**\Libretime\Client\Model\PatchedUserToken**](../Model/PatchedUserToken.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user token. | |
+| **patched_user_token** | [**\Libretime\Client\Model\PatchedUserToken**](../Model/PatchedUserToken.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user token. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user token. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this user token. |
- **user_token** | [**\Libretime\Client\Model\UserToken**](../Model/UserToken.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this user token. | |
+| **user_token** | [**\Libretime\Client\Model\UserToken**](../Model/UserToken.md)|  | |
 
 ### Return type
 

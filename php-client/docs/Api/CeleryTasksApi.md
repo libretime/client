@@ -1,15 +1,15 @@
 # Libretime\Client\CeleryTasksApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**celeryTasksCreate()**](CeleryTasksApi.md#celeryTasksCreate) | **POST** /api/v2/celery-tasks | 
-[**celeryTasksDestroy()**](CeleryTasksApi.md#celeryTasksDestroy) | **DELETE** /api/v2/celery-tasks/{id} | 
-[**celeryTasksList()**](CeleryTasksApi.md#celeryTasksList) | **GET** /api/v2/celery-tasks | 
-[**celeryTasksPartialUpdate()**](CeleryTasksApi.md#celeryTasksPartialUpdate) | **PATCH** /api/v2/celery-tasks/{id} | 
-[**celeryTasksRetrieve()**](CeleryTasksApi.md#celeryTasksRetrieve) | **GET** /api/v2/celery-tasks/{id} | 
-[**celeryTasksUpdate()**](CeleryTasksApi.md#celeryTasksUpdate) | **PUT** /api/v2/celery-tasks/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**celeryTasksCreate()**](CeleryTasksApi.md#celeryTasksCreate) | **POST** /api/v2/celery-tasks |  |
+| [**celeryTasksDestroy()**](CeleryTasksApi.md#celeryTasksDestroy) | **DELETE** /api/v2/celery-tasks/{id} |  |
+| [**celeryTasksList()**](CeleryTasksApi.md#celeryTasksList) | **GET** /api/v2/celery-tasks |  |
+| [**celeryTasksPartialUpdate()**](CeleryTasksApi.md#celeryTasksPartialUpdate) | **PATCH** /api/v2/celery-tasks/{id} |  |
+| [**celeryTasksRetrieve()**](CeleryTasksApi.md#celeryTasksRetrieve) | **GET** /api/v2/celery-tasks/{id} |  |
+| [**celeryTasksUpdate()**](CeleryTasksApi.md#celeryTasksUpdate) | **PUT** /api/v2/celery-tasks/{id} |  |
 
 
 ## `celeryTasksCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **celery_task** | [**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **celery_task** | [**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this celery task. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this celery task. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this celery task. |
- **patched_celery_task** | [**\Libretime\Client\Model\PatchedCeleryTask**](../Model/PatchedCeleryTask.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this celery task. | |
+| **patched_celery_task** | [**\Libretime\Client\Model\PatchedCeleryTask**](../Model/PatchedCeleryTask.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this celery task. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this celery task. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this celery task. |
- **celery_task** | [**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this celery task. | |
+| **celery_task** | [**\Libretime\Client\Model\CeleryTask**](../Model/CeleryTask.md)|  | |
 
 ### Return type
 

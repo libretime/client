@@ -1,15 +1,15 @@
 # Libretime\Client\LoginAttemptsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**loginAttemptsCreate()**](LoginAttemptsApi.md#loginAttemptsCreate) | **POST** /api/v2/login-attempts | 
-[**loginAttemptsDestroy()**](LoginAttemptsApi.md#loginAttemptsDestroy) | **DELETE** /api/v2/login-attempts/{ip} | 
-[**loginAttemptsList()**](LoginAttemptsApi.md#loginAttemptsList) | **GET** /api/v2/login-attempts | 
-[**loginAttemptsPartialUpdate()**](LoginAttemptsApi.md#loginAttemptsPartialUpdate) | **PATCH** /api/v2/login-attempts/{ip} | 
-[**loginAttemptsRetrieve()**](LoginAttemptsApi.md#loginAttemptsRetrieve) | **GET** /api/v2/login-attempts/{ip} | 
-[**loginAttemptsUpdate()**](LoginAttemptsApi.md#loginAttemptsUpdate) | **PUT** /api/v2/login-attempts/{ip} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**loginAttemptsCreate()**](LoginAttemptsApi.md#loginAttemptsCreate) | **POST** /api/v2/login-attempts |  |
+| [**loginAttemptsDestroy()**](LoginAttemptsApi.md#loginAttemptsDestroy) | **DELETE** /api/v2/login-attempts/{ip} |  |
+| [**loginAttemptsList()**](LoginAttemptsApi.md#loginAttemptsList) | **GET** /api/v2/login-attempts |  |
+| [**loginAttemptsPartialUpdate()**](LoginAttemptsApi.md#loginAttemptsPartialUpdate) | **PATCH** /api/v2/login-attempts/{ip} |  |
+| [**loginAttemptsRetrieve()**](LoginAttemptsApi.md#loginAttemptsRetrieve) | **GET** /api/v2/login-attempts/{ip} |  |
+| [**loginAttemptsUpdate()**](LoginAttemptsApi.md#loginAttemptsUpdate) | **PUT** /api/v2/login-attempts/{ip} |  |
 
 
 ## `loginAttemptsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ip** | **string**| A unique value identifying this login attempt. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ip** | **string**| A unique value identifying this login attempt. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ip** | **string**| A unique value identifying this login attempt. |
- **patched_login_attempt** | [**\Libretime\Client\Model\PatchedLoginAttempt**](../Model/PatchedLoginAttempt.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ip** | **string**| A unique value identifying this login attempt. | |
+| **patched_login_attempt** | [**\Libretime\Client\Model\PatchedLoginAttempt**](../Model/PatchedLoginAttempt.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ip** | **string**| A unique value identifying this login attempt. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ip** | **string**| A unique value identifying this login attempt. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ip** | **string**| A unique value identifying this login attempt. |
- **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ip** | **string**| A unique value identifying this login attempt. | |
+| **login_attempt** | [**\Libretime\Client\Model\LoginAttempt**](../Model/LoginAttempt.md)|  | |
 
 ### Return type
 

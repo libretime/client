@@ -1,15 +1,15 @@
 # Libretime\Client\SmartBlockContentsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**smartBlockContentsCreate()**](SmartBlockContentsApi.md#smartBlockContentsCreate) | **POST** /api/v2/smart-block-contents | 
-[**smartBlockContentsDestroy()**](SmartBlockContentsApi.md#smartBlockContentsDestroy) | **DELETE** /api/v2/smart-block-contents/{id} | 
-[**smartBlockContentsList()**](SmartBlockContentsApi.md#smartBlockContentsList) | **GET** /api/v2/smart-block-contents | 
-[**smartBlockContentsPartialUpdate()**](SmartBlockContentsApi.md#smartBlockContentsPartialUpdate) | **PATCH** /api/v2/smart-block-contents/{id} | 
-[**smartBlockContentsRetrieve()**](SmartBlockContentsApi.md#smartBlockContentsRetrieve) | **GET** /api/v2/smart-block-contents/{id} | 
-[**smartBlockContentsUpdate()**](SmartBlockContentsApi.md#smartBlockContentsUpdate) | **PUT** /api/v2/smart-block-contents/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**smartBlockContentsCreate()**](SmartBlockContentsApi.md#smartBlockContentsCreate) | **POST** /api/v2/smart-block-contents |  |
+| [**smartBlockContentsDestroy()**](SmartBlockContentsApi.md#smartBlockContentsDestroy) | **DELETE** /api/v2/smart-block-contents/{id} |  |
+| [**smartBlockContentsList()**](SmartBlockContentsApi.md#smartBlockContentsList) | **GET** /api/v2/smart-block-contents |  |
+| [**smartBlockContentsPartialUpdate()**](SmartBlockContentsApi.md#smartBlockContentsPartialUpdate) | **PATCH** /api/v2/smart-block-contents/{id} |  |
+| [**smartBlockContentsRetrieve()**](SmartBlockContentsApi.md#smartBlockContentsRetrieve) | **GET** /api/v2/smart-block-contents/{id} |  |
+| [**smartBlockContentsUpdate()**](SmartBlockContentsApi.md#smartBlockContentsUpdate) | **PUT** /api/v2/smart-block-contents/{id} |  |
 
 
 ## `smartBlockContentsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **smart_block_content** | [**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **smart_block_content** | [**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block content. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block content. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block content. |
- **patched_smart_block_content** | [**\Libretime\Client\Model\PatchedSmartBlockContent**](../Model/PatchedSmartBlockContent.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block content. | |
+| **patched_smart_block_content** | [**\Libretime\Client\Model\PatchedSmartBlockContent**](../Model/PatchedSmartBlockContent.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block content. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block content. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block content. |
- **smart_block_content** | [**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block content. | |
+| **smart_block_content** | [**\Libretime\Client\Model\SmartBlockContent**](../Model/SmartBlockContent.md)|  | |
 
 ### Return type
 

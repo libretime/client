@@ -1,15 +1,15 @@
 # Libretime\Client\MountNamesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**mountNamesCreate()**](MountNamesApi.md#mountNamesCreate) | **POST** /api/v2/mount-names | 
-[**mountNamesDestroy()**](MountNamesApi.md#mountNamesDestroy) | **DELETE** /api/v2/mount-names/{id} | 
-[**mountNamesList()**](MountNamesApi.md#mountNamesList) | **GET** /api/v2/mount-names | 
-[**mountNamesPartialUpdate()**](MountNamesApi.md#mountNamesPartialUpdate) | **PATCH** /api/v2/mount-names/{id} | 
-[**mountNamesRetrieve()**](MountNamesApi.md#mountNamesRetrieve) | **GET** /api/v2/mount-names/{id} | 
-[**mountNamesUpdate()**](MountNamesApi.md#mountNamesUpdate) | **PUT** /api/v2/mount-names/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**mountNamesCreate()**](MountNamesApi.md#mountNamesCreate) | **POST** /api/v2/mount-names |  |
+| [**mountNamesDestroy()**](MountNamesApi.md#mountNamesDestroy) | **DELETE** /api/v2/mount-names/{id} |  |
+| [**mountNamesList()**](MountNamesApi.md#mountNamesList) | **GET** /api/v2/mount-names |  |
+| [**mountNamesPartialUpdate()**](MountNamesApi.md#mountNamesPartialUpdate) | **PATCH** /api/v2/mount-names/{id} |  |
+| [**mountNamesRetrieve()**](MountNamesApi.md#mountNamesRetrieve) | **GET** /api/v2/mount-names/{id} |  |
+| [**mountNamesUpdate()**](MountNamesApi.md#mountNamesUpdate) | **PUT** /api/v2/mount-names/{id} |  |
 
 
 ## `mountNamesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mount_name** | [**\Libretime\Client\Model\MountName**](../Model/MountName.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mount_name** | [**\Libretime\Client\Model\MountName**](../Model/MountName.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this mount name. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this mount name. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this mount name. |
- **patched_mount_name** | [**\Libretime\Client\Model\PatchedMountName**](../Model/PatchedMountName.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this mount name. | |
+| **patched_mount_name** | [**\Libretime\Client\Model\PatchedMountName**](../Model/PatchedMountName.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this mount name. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this mount name. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this mount name. |
- **mount_name** | [**\Libretime\Client\Model\MountName**](../Model/MountName.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this mount name. | |
+| **mount_name** | [**\Libretime\Client\Model\MountName**](../Model/MountName.md)|  | |
 
 ### Return type
 

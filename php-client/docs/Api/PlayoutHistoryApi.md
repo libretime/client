@@ -1,15 +1,15 @@
 # Libretime\Client\PlayoutHistoryApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**playoutHistoryCreate()**](PlayoutHistoryApi.md#playoutHistoryCreate) | **POST** /api/v2/playout-history | 
-[**playoutHistoryDestroy()**](PlayoutHistoryApi.md#playoutHistoryDestroy) | **DELETE** /api/v2/playout-history/{id} | 
-[**playoutHistoryList()**](PlayoutHistoryApi.md#playoutHistoryList) | **GET** /api/v2/playout-history | 
-[**playoutHistoryPartialUpdate()**](PlayoutHistoryApi.md#playoutHistoryPartialUpdate) | **PATCH** /api/v2/playout-history/{id} | 
-[**playoutHistoryRetrieve()**](PlayoutHistoryApi.md#playoutHistoryRetrieve) | **GET** /api/v2/playout-history/{id} | 
-[**playoutHistoryUpdate()**](PlayoutHistoryApi.md#playoutHistoryUpdate) | **PUT** /api/v2/playout-history/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**playoutHistoryCreate()**](PlayoutHistoryApi.md#playoutHistoryCreate) | **POST** /api/v2/playout-history |  |
+| [**playoutHistoryDestroy()**](PlayoutHistoryApi.md#playoutHistoryDestroy) | **DELETE** /api/v2/playout-history/{id} |  |
+| [**playoutHistoryList()**](PlayoutHistoryApi.md#playoutHistoryList) | **GET** /api/v2/playout-history |  |
+| [**playoutHistoryPartialUpdate()**](PlayoutHistoryApi.md#playoutHistoryPartialUpdate) | **PATCH** /api/v2/playout-history/{id} |  |
+| [**playoutHistoryRetrieve()**](PlayoutHistoryApi.md#playoutHistoryRetrieve) | **GET** /api/v2/playout-history/{id} |  |
+| [**playoutHistoryUpdate()**](PlayoutHistoryApi.md#playoutHistoryUpdate) | **PUT** /api/v2/playout-history/{id} |  |
 
 
 ## `playoutHistoryCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **playout_history** | [**\Libretime\Client\Model\PlayoutHistory**](../Model/PlayoutHistory.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **playout_history** | [**\Libretime\Client\Model\PlayoutHistory**](../Model/PlayoutHistory.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history. |
- **patched_playout_history** | [**\Libretime\Client\Model\PatchedPlayoutHistory**](../Model/PatchedPlayoutHistory.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history. | |
+| **patched_playout_history** | [**\Libretime\Client\Model\PatchedPlayoutHistory**](../Model/PatchedPlayoutHistory.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history. |
- **playout_history** | [**\Libretime\Client\Model\PlayoutHistory**](../Model/PlayoutHistory.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history. | |
+| **playout_history** | [**\Libretime\Client\Model\PlayoutHistory**](../Model/PlayoutHistory.md)|  | |
 
 ### Return type
 

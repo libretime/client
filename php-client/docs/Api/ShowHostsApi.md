@@ -1,15 +1,15 @@
 # Libretime\Client\ShowHostsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**showHostsCreate()**](ShowHostsApi.md#showHostsCreate) | **POST** /api/v2/show-hosts | 
-[**showHostsDestroy()**](ShowHostsApi.md#showHostsDestroy) | **DELETE** /api/v2/show-hosts/{id} | 
-[**showHostsList()**](ShowHostsApi.md#showHostsList) | **GET** /api/v2/show-hosts | 
-[**showHostsPartialUpdate()**](ShowHostsApi.md#showHostsPartialUpdate) | **PATCH** /api/v2/show-hosts/{id} | 
-[**showHostsRetrieve()**](ShowHostsApi.md#showHostsRetrieve) | **GET** /api/v2/show-hosts/{id} | 
-[**showHostsUpdate()**](ShowHostsApi.md#showHostsUpdate) | **PUT** /api/v2/show-hosts/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**showHostsCreate()**](ShowHostsApi.md#showHostsCreate) | **POST** /api/v2/show-hosts |  |
+| [**showHostsDestroy()**](ShowHostsApi.md#showHostsDestroy) | **DELETE** /api/v2/show-hosts/{id} |  |
+| [**showHostsList()**](ShowHostsApi.md#showHostsList) | **GET** /api/v2/show-hosts |  |
+| [**showHostsPartialUpdate()**](ShowHostsApi.md#showHostsPartialUpdate) | **PATCH** /api/v2/show-hosts/{id} |  |
+| [**showHostsRetrieve()**](ShowHostsApi.md#showHostsRetrieve) | **GET** /api/v2/show-hosts/{id} |  |
+| [**showHostsUpdate()**](ShowHostsApi.md#showHostsUpdate) | **PUT** /api/v2/show-hosts/{id} |  |
 
 
 ## `showHostsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **show_host** | [**\Libretime\Client\Model\ShowHost**](../Model/ShowHost.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **show_host** | [**\Libretime\Client\Model\ShowHost**](../Model/ShowHost.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show host. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show host. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show host. |
- **patched_show_host** | [**\Libretime\Client\Model\PatchedShowHost**](../Model/PatchedShowHost.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show host. | |
+| **patched_show_host** | [**\Libretime\Client\Model\PatchedShowHost**](../Model/PatchedShowHost.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show host. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show host. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show host. |
- **show_host** | [**\Libretime\Client\Model\ShowHost**](../Model/ShowHost.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show host. | |
+| **show_host** | [**\Libretime\Client\Model\ShowHost**](../Model/ShowHost.md)|  | |
 
 ### Return type
 

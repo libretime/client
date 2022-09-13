@@ -1,15 +1,15 @@
 # Libretime\Client\ShowRebroadcastsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**showRebroadcastsCreate()**](ShowRebroadcastsApi.md#showRebroadcastsCreate) | **POST** /api/v2/show-rebroadcasts | 
-[**showRebroadcastsDestroy()**](ShowRebroadcastsApi.md#showRebroadcastsDestroy) | **DELETE** /api/v2/show-rebroadcasts/{id} | 
-[**showRebroadcastsList()**](ShowRebroadcastsApi.md#showRebroadcastsList) | **GET** /api/v2/show-rebroadcasts | 
-[**showRebroadcastsPartialUpdate()**](ShowRebroadcastsApi.md#showRebroadcastsPartialUpdate) | **PATCH** /api/v2/show-rebroadcasts/{id} | 
-[**showRebroadcastsRetrieve()**](ShowRebroadcastsApi.md#showRebroadcastsRetrieve) | **GET** /api/v2/show-rebroadcasts/{id} | 
-[**showRebroadcastsUpdate()**](ShowRebroadcastsApi.md#showRebroadcastsUpdate) | **PUT** /api/v2/show-rebroadcasts/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**showRebroadcastsCreate()**](ShowRebroadcastsApi.md#showRebroadcastsCreate) | **POST** /api/v2/show-rebroadcasts |  |
+| [**showRebroadcastsDestroy()**](ShowRebroadcastsApi.md#showRebroadcastsDestroy) | **DELETE** /api/v2/show-rebroadcasts/{id} |  |
+| [**showRebroadcastsList()**](ShowRebroadcastsApi.md#showRebroadcastsList) | **GET** /api/v2/show-rebroadcasts |  |
+| [**showRebroadcastsPartialUpdate()**](ShowRebroadcastsApi.md#showRebroadcastsPartialUpdate) | **PATCH** /api/v2/show-rebroadcasts/{id} |  |
+| [**showRebroadcastsRetrieve()**](ShowRebroadcastsApi.md#showRebroadcastsRetrieve) | **GET** /api/v2/show-rebroadcasts/{id} |  |
+| [**showRebroadcastsUpdate()**](ShowRebroadcastsApi.md#showRebroadcastsUpdate) | **PUT** /api/v2/show-rebroadcasts/{id} |  |
 
 
 ## `showRebroadcastsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **show_rebroadcast** | [**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **show_rebroadcast** | [**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show rebroadcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show rebroadcast. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show rebroadcast. |
- **patched_show_rebroadcast** | [**\Libretime\Client\Model\PatchedShowRebroadcast**](../Model/PatchedShowRebroadcast.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show rebroadcast. | |
+| **patched_show_rebroadcast** | [**\Libretime\Client\Model\PatchedShowRebroadcast**](../Model/PatchedShowRebroadcast.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show rebroadcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show rebroadcast. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show rebroadcast. |
- **show_rebroadcast** | [**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show rebroadcast. | |
+| **show_rebroadcast** | [**\Libretime\Client\Model\ShowRebroadcast**](../Model/ShowRebroadcast.md)|  | |
 
 ### Return type
 

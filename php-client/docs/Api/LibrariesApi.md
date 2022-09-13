@@ -1,15 +1,15 @@
 # Libretime\Client\LibrariesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**librariesCreate()**](LibrariesApi.md#librariesCreate) | **POST** /api/v2/libraries | 
-[**librariesDestroy()**](LibrariesApi.md#librariesDestroy) | **DELETE** /api/v2/libraries/{id} | 
-[**librariesList()**](LibrariesApi.md#librariesList) | **GET** /api/v2/libraries | 
-[**librariesPartialUpdate()**](LibrariesApi.md#librariesPartialUpdate) | **PATCH** /api/v2/libraries/{id} | 
-[**librariesRetrieve()**](LibrariesApi.md#librariesRetrieve) | **GET** /api/v2/libraries/{id} | 
-[**librariesUpdate()**](LibrariesApi.md#librariesUpdate) | **PUT** /api/v2/libraries/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**librariesCreate()**](LibrariesApi.md#librariesCreate) | **POST** /api/v2/libraries |  |
+| [**librariesDestroy()**](LibrariesApi.md#librariesDestroy) | **DELETE** /api/v2/libraries/{id} |  |
+| [**librariesList()**](LibrariesApi.md#librariesList) | **GET** /api/v2/libraries |  |
+| [**librariesPartialUpdate()**](LibrariesApi.md#librariesPartialUpdate) | **PATCH** /api/v2/libraries/{id} |  |
+| [**librariesRetrieve()**](LibrariesApi.md#librariesRetrieve) | **GET** /api/v2/libraries/{id} |  |
+| [**librariesUpdate()**](LibrariesApi.md#librariesUpdate) | **PUT** /api/v2/libraries/{id} |  |
 
 
 ## `librariesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **library** | [**\Libretime\Client\Model\Library**](../Model/Library.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **library** | [**\Libretime\Client\Model\Library**](../Model/Library.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this library. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this library. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this library. |
- **patched_library** | [**\Libretime\Client\Model\PatchedLibrary**](../Model/PatchedLibrary.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this library. | |
+| **patched_library** | [**\Libretime\Client\Model\PatchedLibrary**](../Model/PatchedLibrary.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this library. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this library. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this library. |
- **library** | [**\Libretime\Client\Model\Library**](../Model/Library.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this library. | |
+| **library** | [**\Libretime\Client\Model\Library**](../Model/Library.md)|  | |
 
 ### Return type
 

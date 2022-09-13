@@ -1,15 +1,15 @@
 # Libretime\Client\ServiceRegistersApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**serviceRegistersCreate()**](ServiceRegistersApi.md#serviceRegistersCreate) | **POST** /api/v2/service-registers | 
-[**serviceRegistersDestroy()**](ServiceRegistersApi.md#serviceRegistersDestroy) | **DELETE** /api/v2/service-registers/{name} | 
-[**serviceRegistersList()**](ServiceRegistersApi.md#serviceRegistersList) | **GET** /api/v2/service-registers | 
-[**serviceRegistersPartialUpdate()**](ServiceRegistersApi.md#serviceRegistersPartialUpdate) | **PATCH** /api/v2/service-registers/{name} | 
-[**serviceRegistersRetrieve()**](ServiceRegistersApi.md#serviceRegistersRetrieve) | **GET** /api/v2/service-registers/{name} | 
-[**serviceRegistersUpdate()**](ServiceRegistersApi.md#serviceRegistersUpdate) | **PUT** /api/v2/service-registers/{name} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**serviceRegistersCreate()**](ServiceRegistersApi.md#serviceRegistersCreate) | **POST** /api/v2/service-registers |  |
+| [**serviceRegistersDestroy()**](ServiceRegistersApi.md#serviceRegistersDestroy) | **DELETE** /api/v2/service-registers/{name} |  |
+| [**serviceRegistersList()**](ServiceRegistersApi.md#serviceRegistersList) | **GET** /api/v2/service-registers |  |
+| [**serviceRegistersPartialUpdate()**](ServiceRegistersApi.md#serviceRegistersPartialUpdate) | **PATCH** /api/v2/service-registers/{name} |  |
+| [**serviceRegistersRetrieve()**](ServiceRegistersApi.md#serviceRegistersRetrieve) | **GET** /api/v2/service-registers/{name} |  |
+| [**serviceRegistersUpdate()**](ServiceRegistersApi.md#serviceRegistersUpdate) | **PUT** /api/v2/service-registers/{name} |  |
 
 
 ## `serviceRegistersCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **service_register** | [**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **service_register** | [**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| A unique value identifying this service register. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **string**| A unique value identifying this service register. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| A unique value identifying this service register. |
- **patched_service_register** | [**\Libretime\Client\Model\PatchedServiceRegister**](../Model/PatchedServiceRegister.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **string**| A unique value identifying this service register. | |
+| **patched_service_register** | [**\Libretime\Client\Model\PatchedServiceRegister**](../Model/PatchedServiceRegister.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| A unique value identifying this service register. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **string**| A unique value identifying this service register. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| A unique value identifying this service register. |
- **service_register** | [**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **string**| A unique value identifying this service register. | |
+| **service_register** | [**\Libretime\Client\Model\ServiceRegister**](../Model/ServiceRegister.md)|  | |
 
 ### Return type
 

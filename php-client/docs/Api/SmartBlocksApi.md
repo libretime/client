@@ -1,15 +1,15 @@
 # Libretime\Client\SmartBlocksApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**smartBlocksCreate()**](SmartBlocksApi.md#smartBlocksCreate) | **POST** /api/v2/smart-blocks | 
-[**smartBlocksDestroy()**](SmartBlocksApi.md#smartBlocksDestroy) | **DELETE** /api/v2/smart-blocks/{id} | 
-[**smartBlocksList()**](SmartBlocksApi.md#smartBlocksList) | **GET** /api/v2/smart-blocks | 
-[**smartBlocksPartialUpdate()**](SmartBlocksApi.md#smartBlocksPartialUpdate) | **PATCH** /api/v2/smart-blocks/{id} | 
-[**smartBlocksRetrieve()**](SmartBlocksApi.md#smartBlocksRetrieve) | **GET** /api/v2/smart-blocks/{id} | 
-[**smartBlocksUpdate()**](SmartBlocksApi.md#smartBlocksUpdate) | **PUT** /api/v2/smart-blocks/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**smartBlocksCreate()**](SmartBlocksApi.md#smartBlocksCreate) | **POST** /api/v2/smart-blocks |  |
+| [**smartBlocksDestroy()**](SmartBlocksApi.md#smartBlocksDestroy) | **DELETE** /api/v2/smart-blocks/{id} |  |
+| [**smartBlocksList()**](SmartBlocksApi.md#smartBlocksList) | **GET** /api/v2/smart-blocks |  |
+| [**smartBlocksPartialUpdate()**](SmartBlocksApi.md#smartBlocksPartialUpdate) | **PATCH** /api/v2/smart-blocks/{id} |  |
+| [**smartBlocksRetrieve()**](SmartBlocksApi.md#smartBlocksRetrieve) | **GET** /api/v2/smart-blocks/{id} |  |
+| [**smartBlocksUpdate()**](SmartBlocksApi.md#smartBlocksUpdate) | **PUT** /api/v2/smart-blocks/{id} |  |
 
 
 ## `smartBlocksCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **smart_block** | [**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **smart_block** | [**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block. |
- **patched_smart_block** | [**\Libretime\Client\Model\PatchedSmartBlock**](../Model/PatchedSmartBlock.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block. | |
+| **patched_smart_block** | [**\Libretime\Client\Model\PatchedSmartBlock**](../Model/PatchedSmartBlock.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block. |
- **smart_block** | [**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block. | |
+| **smart_block** | [**\Libretime\Client\Model\SmartBlock**](../Model/SmartBlock.md)|  | |
 
 ### Return type
 

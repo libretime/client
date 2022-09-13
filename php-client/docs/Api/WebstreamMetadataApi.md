@@ -1,15 +1,15 @@
 # Libretime\Client\WebstreamMetadataApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**webstreamMetadataCreate()**](WebstreamMetadataApi.md#webstreamMetadataCreate) | **POST** /api/v2/webstream-metadata | 
-[**webstreamMetadataDestroy()**](WebstreamMetadataApi.md#webstreamMetadataDestroy) | **DELETE** /api/v2/webstream-metadata/{id} | 
-[**webstreamMetadataList()**](WebstreamMetadataApi.md#webstreamMetadataList) | **GET** /api/v2/webstream-metadata | 
-[**webstreamMetadataPartialUpdate()**](WebstreamMetadataApi.md#webstreamMetadataPartialUpdate) | **PATCH** /api/v2/webstream-metadata/{id} | 
-[**webstreamMetadataRetrieve()**](WebstreamMetadataApi.md#webstreamMetadataRetrieve) | **GET** /api/v2/webstream-metadata/{id} | 
-[**webstreamMetadataUpdate()**](WebstreamMetadataApi.md#webstreamMetadataUpdate) | **PUT** /api/v2/webstream-metadata/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**webstreamMetadataCreate()**](WebstreamMetadataApi.md#webstreamMetadataCreate) | **POST** /api/v2/webstream-metadata |  |
+| [**webstreamMetadataDestroy()**](WebstreamMetadataApi.md#webstreamMetadataDestroy) | **DELETE** /api/v2/webstream-metadata/{id} |  |
+| [**webstreamMetadataList()**](WebstreamMetadataApi.md#webstreamMetadataList) | **GET** /api/v2/webstream-metadata |  |
+| [**webstreamMetadataPartialUpdate()**](WebstreamMetadataApi.md#webstreamMetadataPartialUpdate) | **PATCH** /api/v2/webstream-metadata/{id} |  |
+| [**webstreamMetadataRetrieve()**](WebstreamMetadataApi.md#webstreamMetadataRetrieve) | **GET** /api/v2/webstream-metadata/{id} |  |
+| [**webstreamMetadataUpdate()**](WebstreamMetadataApi.md#webstreamMetadataUpdate) | **PUT** /api/v2/webstream-metadata/{id} |  |
 
 
 ## `webstreamMetadataCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webstream_metadata** | [**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **webstream_metadata** | [**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream metadata. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream metadata. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream metadata. |
- **patched_webstream_metadata** | [**\Libretime\Client\Model\PatchedWebstreamMetadata**](../Model/PatchedWebstreamMetadata.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream metadata. | |
+| **patched_webstream_metadata** | [**\Libretime\Client\Model\PatchedWebstreamMetadata**](../Model/PatchedWebstreamMetadata.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream metadata. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream metadata. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream metadata. |
- **webstream_metadata** | [**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream metadata. | |
+| **webstream_metadata** | [**\Libretime\Client\Model\WebstreamMetadata**](../Model/WebstreamMetadata.md)|  | |
 
 ### Return type
 

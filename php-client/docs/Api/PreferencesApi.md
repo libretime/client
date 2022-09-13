@@ -1,15 +1,15 @@
 # Libretime\Client\PreferencesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**preferencesCreate()**](PreferencesApi.md#preferencesCreate) | **POST** /api/v2/preferences | 
-[**preferencesDestroy()**](PreferencesApi.md#preferencesDestroy) | **DELETE** /api/v2/preferences/{id} | 
-[**preferencesList()**](PreferencesApi.md#preferencesList) | **GET** /api/v2/preferences | 
-[**preferencesPartialUpdate()**](PreferencesApi.md#preferencesPartialUpdate) | **PATCH** /api/v2/preferences/{id} | 
-[**preferencesRetrieve()**](PreferencesApi.md#preferencesRetrieve) | **GET** /api/v2/preferences/{id} | 
-[**preferencesUpdate()**](PreferencesApi.md#preferencesUpdate) | **PUT** /api/v2/preferences/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**preferencesCreate()**](PreferencesApi.md#preferencesCreate) | **POST** /api/v2/preferences |  |
+| [**preferencesDestroy()**](PreferencesApi.md#preferencesDestroy) | **DELETE** /api/v2/preferences/{id} |  |
+| [**preferencesList()**](PreferencesApi.md#preferencesList) | **GET** /api/v2/preferences |  |
+| [**preferencesPartialUpdate()**](PreferencesApi.md#preferencesPartialUpdate) | **PATCH** /api/v2/preferences/{id} |  |
+| [**preferencesRetrieve()**](PreferencesApi.md#preferencesRetrieve) | **GET** /api/v2/preferences/{id} |  |
+| [**preferencesUpdate()**](PreferencesApi.md#preferencesUpdate) | **PUT** /api/v2/preferences/{id} |  |
 
 
 ## `preferencesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this preference. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this preference. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this preference. |
- **patched_preference** | [**\Libretime\Client\Model\PatchedPreference**](../Model/PatchedPreference.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this preference. | |
+| **patched_preference** | [**\Libretime\Client\Model\PatchedPreference**](../Model/PatchedPreference.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this preference. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this preference. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this preference. |
- **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this preference. | |
+| **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  | |
 
 ### Return type
 

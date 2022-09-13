@@ -1,15 +1,15 @@
 # Libretime\Client\PodcastsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**podcastsCreate()**](PodcastsApi.md#podcastsCreate) | **POST** /api/v2/podcasts | 
-[**podcastsDestroy()**](PodcastsApi.md#podcastsDestroy) | **DELETE** /api/v2/podcasts/{id} | 
-[**podcastsList()**](PodcastsApi.md#podcastsList) | **GET** /api/v2/podcasts | 
-[**podcastsPartialUpdate()**](PodcastsApi.md#podcastsPartialUpdate) | **PATCH** /api/v2/podcasts/{id} | 
-[**podcastsRetrieve()**](PodcastsApi.md#podcastsRetrieve) | **GET** /api/v2/podcasts/{id} | 
-[**podcastsUpdate()**](PodcastsApi.md#podcastsUpdate) | **PUT** /api/v2/podcasts/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**podcastsCreate()**](PodcastsApi.md#podcastsCreate) | **POST** /api/v2/podcasts |  |
+| [**podcastsDestroy()**](PodcastsApi.md#podcastsDestroy) | **DELETE** /api/v2/podcasts/{id} |  |
+| [**podcastsList()**](PodcastsApi.md#podcastsList) | **GET** /api/v2/podcasts |  |
+| [**podcastsPartialUpdate()**](PodcastsApi.md#podcastsPartialUpdate) | **PATCH** /api/v2/podcasts/{id} |  |
+| [**podcastsRetrieve()**](PodcastsApi.md#podcastsRetrieve) | **GET** /api/v2/podcasts/{id} |  |
+| [**podcastsUpdate()**](PodcastsApi.md#podcastsUpdate) | **PUT** /api/v2/podcasts/{id} |  |
 
 
 ## `podcastsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **podcast** | [**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **podcast** | [**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast. |
- **patched_podcast** | [**\Libretime\Client\Model\PatchedPodcast**](../Model/PatchedPodcast.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast. | |
+| **patched_podcast** | [**\Libretime\Client\Model\PatchedPodcast**](../Model/PatchedPodcast.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this podcast. |
- **podcast** | [**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this podcast. | |
+| **podcast** | [**\Libretime\Client\Model\Podcast**](../Model/Podcast.md)|  | |
 
 ### Return type
 

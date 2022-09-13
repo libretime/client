@@ -1,15 +1,15 @@
 # Libretime\Client\ListenerCountsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**listenerCountsCreate()**](ListenerCountsApi.md#listenerCountsCreate) | **POST** /api/v2/listener-counts | 
-[**listenerCountsDestroy()**](ListenerCountsApi.md#listenerCountsDestroy) | **DELETE** /api/v2/listener-counts/{id} | 
-[**listenerCountsList()**](ListenerCountsApi.md#listenerCountsList) | **GET** /api/v2/listener-counts | 
-[**listenerCountsPartialUpdate()**](ListenerCountsApi.md#listenerCountsPartialUpdate) | **PATCH** /api/v2/listener-counts/{id} | 
-[**listenerCountsRetrieve()**](ListenerCountsApi.md#listenerCountsRetrieve) | **GET** /api/v2/listener-counts/{id} | 
-[**listenerCountsUpdate()**](ListenerCountsApi.md#listenerCountsUpdate) | **PUT** /api/v2/listener-counts/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**listenerCountsCreate()**](ListenerCountsApi.md#listenerCountsCreate) | **POST** /api/v2/listener-counts |  |
+| [**listenerCountsDestroy()**](ListenerCountsApi.md#listenerCountsDestroy) | **DELETE** /api/v2/listener-counts/{id} |  |
+| [**listenerCountsList()**](ListenerCountsApi.md#listenerCountsList) | **GET** /api/v2/listener-counts |  |
+| [**listenerCountsPartialUpdate()**](ListenerCountsApi.md#listenerCountsPartialUpdate) | **PATCH** /api/v2/listener-counts/{id} |  |
+| [**listenerCountsRetrieve()**](ListenerCountsApi.md#listenerCountsRetrieve) | **GET** /api/v2/listener-counts/{id} |  |
+| [**listenerCountsUpdate()**](ListenerCountsApi.md#listenerCountsUpdate) | **PUT** /api/v2/listener-counts/{id} |  |
 
 
 ## `listenerCountsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **listener_count** | [**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **listener_count** | [**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this listener count. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this listener count. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this listener count. |
- **patched_listener_count** | [**\Libretime\Client\Model\PatchedListenerCount**](../Model/PatchedListenerCount.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this listener count. | |
+| **patched_listener_count** | [**\Libretime\Client\Model\PatchedListenerCount**](../Model/PatchedListenerCount.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this listener count. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this listener count. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this listener count. |
- **listener_count** | [**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this listener count. | |
+| **listener_count** | [**\Libretime\Client\Model\ListenerCount**](../Model/ListenerCount.md)|  | |
 
 ### Return type
 

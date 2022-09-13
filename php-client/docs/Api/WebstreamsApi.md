@@ -1,15 +1,15 @@
 # Libretime\Client\WebstreamsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**webstreamsCreate()**](WebstreamsApi.md#webstreamsCreate) | **POST** /api/v2/webstreams | 
-[**webstreamsDestroy()**](WebstreamsApi.md#webstreamsDestroy) | **DELETE** /api/v2/webstreams/{id} | 
-[**webstreamsList()**](WebstreamsApi.md#webstreamsList) | **GET** /api/v2/webstreams | 
-[**webstreamsPartialUpdate()**](WebstreamsApi.md#webstreamsPartialUpdate) | **PATCH** /api/v2/webstreams/{id} | 
-[**webstreamsRetrieve()**](WebstreamsApi.md#webstreamsRetrieve) | **GET** /api/v2/webstreams/{id} | 
-[**webstreamsUpdate()**](WebstreamsApi.md#webstreamsUpdate) | **PUT** /api/v2/webstreams/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**webstreamsCreate()**](WebstreamsApi.md#webstreamsCreate) | **POST** /api/v2/webstreams |  |
+| [**webstreamsDestroy()**](WebstreamsApi.md#webstreamsDestroy) | **DELETE** /api/v2/webstreams/{id} |  |
+| [**webstreamsList()**](WebstreamsApi.md#webstreamsList) | **GET** /api/v2/webstreams |  |
+| [**webstreamsPartialUpdate()**](WebstreamsApi.md#webstreamsPartialUpdate) | **PATCH** /api/v2/webstreams/{id} |  |
+| [**webstreamsRetrieve()**](WebstreamsApi.md#webstreamsRetrieve) | **GET** /api/v2/webstreams/{id} |  |
+| [**webstreamsUpdate()**](WebstreamsApi.md#webstreamsUpdate) | **PUT** /api/v2/webstreams/{id} |  |
 
 
 ## `webstreamsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webstream** | [**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **webstream** | [**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream. |
- **patched_webstream** | [**\Libretime\Client\Model\PatchedWebstream**](../Model/PatchedWebstream.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream. | |
+| **patched_webstream** | [**\Libretime\Client\Model\PatchedWebstream**](../Model/PatchedWebstream.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this webstream. |
- **webstream** | [**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this webstream. | |
+| **webstream** | [**\Libretime\Client\Model\Webstream**](../Model/Webstream.md)|  | |
 
 ### Return type
 

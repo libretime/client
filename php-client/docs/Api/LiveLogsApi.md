@@ -1,15 +1,15 @@
 # Libretime\Client\LiveLogsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**liveLogsCreate()**](LiveLogsApi.md#liveLogsCreate) | **POST** /api/v2/live-logs | 
-[**liveLogsDestroy()**](LiveLogsApi.md#liveLogsDestroy) | **DELETE** /api/v2/live-logs/{id} | 
-[**liveLogsList()**](LiveLogsApi.md#liveLogsList) | **GET** /api/v2/live-logs | 
-[**liveLogsPartialUpdate()**](LiveLogsApi.md#liveLogsPartialUpdate) | **PATCH** /api/v2/live-logs/{id} | 
-[**liveLogsRetrieve()**](LiveLogsApi.md#liveLogsRetrieve) | **GET** /api/v2/live-logs/{id} | 
-[**liveLogsUpdate()**](LiveLogsApi.md#liveLogsUpdate) | **PUT** /api/v2/live-logs/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**liveLogsCreate()**](LiveLogsApi.md#liveLogsCreate) | **POST** /api/v2/live-logs |  |
+| [**liveLogsDestroy()**](LiveLogsApi.md#liveLogsDestroy) | **DELETE** /api/v2/live-logs/{id} |  |
+| [**liveLogsList()**](LiveLogsApi.md#liveLogsList) | **GET** /api/v2/live-logs |  |
+| [**liveLogsPartialUpdate()**](LiveLogsApi.md#liveLogsPartialUpdate) | **PATCH** /api/v2/live-logs/{id} |  |
+| [**liveLogsRetrieve()**](LiveLogsApi.md#liveLogsRetrieve) | **GET** /api/v2/live-logs/{id} |  |
+| [**liveLogsUpdate()**](LiveLogsApi.md#liveLogsUpdate) | **PUT** /api/v2/live-logs/{id} |  |
 
 
 ## `liveLogsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **live_log** | [**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **live_log** | [**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this live log. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this live log. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this live log. |
- **patched_live_log** | [**\Libretime\Client\Model\PatchedLiveLog**](../Model/PatchedLiveLog.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this live log. | |
+| **patched_live_log** | [**\Libretime\Client\Model\PatchedLiveLog**](../Model/PatchedLiveLog.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this live log. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this live log. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this live log. |
- **live_log** | [**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this live log. | |
+| **live_log** | [**\Libretime\Client\Model\LiveLog**](../Model/LiveLog.md)|  | |
 
 ### Return type
 

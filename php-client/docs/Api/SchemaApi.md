@@ -1,10 +1,10 @@
 # Libretime\Client\SchemaApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**schemaRetrieve()**](SchemaApi.md#schemaRetrieve) | **GET** /api/v2/schema | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**schemaRetrieve()**](SchemaApi.md#schemaRetrieve) | **GET** /api/v2/schema |  |
 
 
 ## `schemaRetrieve()`
@@ -54,10 +54,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **string**|  | [optional]
- **lang** | **string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **format** | **string**|  | [optional] |
+| **lang** | **string**|  | [optional] |
 
 ### Return type
 

@@ -1,15 +1,15 @@
 # Libretime\Client\SmartBlockCriteriaApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**smartBlockCriteriaCreate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaCreate) | **POST** /api/v2/smart-block-criteria | 
-[**smartBlockCriteriaDestroy()**](SmartBlockCriteriaApi.md#smartBlockCriteriaDestroy) | **DELETE** /api/v2/smart-block-criteria/{id} | 
-[**smartBlockCriteriaList()**](SmartBlockCriteriaApi.md#smartBlockCriteriaList) | **GET** /api/v2/smart-block-criteria | 
-[**smartBlockCriteriaPartialUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaPartialUpdate) | **PATCH** /api/v2/smart-block-criteria/{id} | 
-[**smartBlockCriteriaRetrieve()**](SmartBlockCriteriaApi.md#smartBlockCriteriaRetrieve) | **GET** /api/v2/smart-block-criteria/{id} | 
-[**smartBlockCriteriaUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaUpdate) | **PUT** /api/v2/smart-block-criteria/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**smartBlockCriteriaCreate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaCreate) | **POST** /api/v2/smart-block-criteria |  |
+| [**smartBlockCriteriaDestroy()**](SmartBlockCriteriaApi.md#smartBlockCriteriaDestroy) | **DELETE** /api/v2/smart-block-criteria/{id} |  |
+| [**smartBlockCriteriaList()**](SmartBlockCriteriaApi.md#smartBlockCriteriaList) | **GET** /api/v2/smart-block-criteria |  |
+| [**smartBlockCriteriaPartialUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaPartialUpdate) | **PATCH** /api/v2/smart-block-criteria/{id} |  |
+| [**smartBlockCriteriaRetrieve()**](SmartBlockCriteriaApi.md#smartBlockCriteriaRetrieve) | **GET** /api/v2/smart-block-criteria/{id} |  |
+| [**smartBlockCriteriaUpdate()**](SmartBlockCriteriaApi.md#smartBlockCriteriaUpdate) | **PUT** /api/v2/smart-block-criteria/{id} |  |
 
 
 ## `smartBlockCriteriaCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **smart_block_criteria** | [**\Libretime\Client\Model\SmartBlockCriteria**](../Model/SmartBlockCriteria.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **smart_block_criteria** | [**\Libretime\Client\Model\SmartBlockCriteria**](../Model/SmartBlockCriteria.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block criteria. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block criteria. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block criteria. |
- **patched_smart_block_criteria** | [**\Libretime\Client\Model\PatchedSmartBlockCriteria**](../Model/PatchedSmartBlockCriteria.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block criteria. | |
+| **patched_smart_block_criteria** | [**\Libretime\Client\Model\PatchedSmartBlockCriteria**](../Model/PatchedSmartBlockCriteria.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block criteria. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block criteria. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this smart block criteria. |
- **smart_block_criteria** | [**\Libretime\Client\Model\SmartBlockCriteria**](../Model/SmartBlockCriteria.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this smart block criteria. | |
+| **smart_block_criteria** | [**\Libretime\Client\Model\SmartBlockCriteria**](../Model/SmartBlockCriteria.md)|  | |
 
 ### Return type
 

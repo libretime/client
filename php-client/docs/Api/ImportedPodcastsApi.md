@@ -1,15 +1,15 @@
 # Libretime\Client\ImportedPodcastsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**importedPodcastsCreate()**](ImportedPodcastsApi.md#importedPodcastsCreate) | **POST** /api/v2/imported-podcasts | 
-[**importedPodcastsDestroy()**](ImportedPodcastsApi.md#importedPodcastsDestroy) | **DELETE** /api/v2/imported-podcasts/{id} | 
-[**importedPodcastsList()**](ImportedPodcastsApi.md#importedPodcastsList) | **GET** /api/v2/imported-podcasts | 
-[**importedPodcastsPartialUpdate()**](ImportedPodcastsApi.md#importedPodcastsPartialUpdate) | **PATCH** /api/v2/imported-podcasts/{id} | 
-[**importedPodcastsRetrieve()**](ImportedPodcastsApi.md#importedPodcastsRetrieve) | **GET** /api/v2/imported-podcasts/{id} | 
-[**importedPodcastsUpdate()**](ImportedPodcastsApi.md#importedPodcastsUpdate) | **PUT** /api/v2/imported-podcasts/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**importedPodcastsCreate()**](ImportedPodcastsApi.md#importedPodcastsCreate) | **POST** /api/v2/imported-podcasts |  |
+| [**importedPodcastsDestroy()**](ImportedPodcastsApi.md#importedPodcastsDestroy) | **DELETE** /api/v2/imported-podcasts/{id} |  |
+| [**importedPodcastsList()**](ImportedPodcastsApi.md#importedPodcastsList) | **GET** /api/v2/imported-podcasts |  |
+| [**importedPodcastsPartialUpdate()**](ImportedPodcastsApi.md#importedPodcastsPartialUpdate) | **PATCH** /api/v2/imported-podcasts/{id} |  |
+| [**importedPodcastsRetrieve()**](ImportedPodcastsApi.md#importedPodcastsRetrieve) | **GET** /api/v2/imported-podcasts/{id} |  |
+| [**importedPodcastsUpdate()**](ImportedPodcastsApi.md#importedPodcastsUpdate) | **PUT** /api/v2/imported-podcasts/{id} |  |
 
 
 ## `importedPodcastsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imported_podcast** | [**\Libretime\Client\Model\ImportedPodcast**](../Model/ImportedPodcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **imported_podcast** | [**\Libretime\Client\Model\ImportedPodcast**](../Model/ImportedPodcast.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this imported podcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this imported podcast. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this imported podcast. |
- **patched_imported_podcast** | [**\Libretime\Client\Model\PatchedImportedPodcast**](../Model/PatchedImportedPodcast.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this imported podcast. | |
+| **patched_imported_podcast** | [**\Libretime\Client\Model\PatchedImportedPodcast**](../Model/PatchedImportedPodcast.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this imported podcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this imported podcast. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this imported podcast. |
- **imported_podcast** | [**\Libretime\Client\Model\ImportedPodcast**](../Model/ImportedPodcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this imported podcast. | |
+| **imported_podcast** | [**\Libretime\Client\Model\ImportedPodcast**](../Model/ImportedPodcast.md)|  | |
 
 ### Return type
 

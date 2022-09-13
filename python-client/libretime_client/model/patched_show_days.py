@@ -32,10 +32,8 @@ from libretime_client.exceptions import ApiAttributeError
 def lazy_import():
     from libretime_client.model.patched_show_days_record_enabled import PatchedShowDaysRecordEnabled
     from libretime_client.model.patched_show_days_week_day import PatchedShowDaysWeekDay
-    from libretime_client.model.repeat_kind_enum import RepeatKindEnum
     globals()['PatchedShowDaysRecordEnabled'] = PatchedShowDaysRecordEnabled
     globals()['PatchedShowDaysWeekDay'] = PatchedShowDaysWeekDay
-    globals()['RepeatKindEnum'] = RepeatKindEnum
 
 
 class PatchedShowDays(ModelNormal):

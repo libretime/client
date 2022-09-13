@@ -1,15 +1,15 @@
 # Libretime\Client\PlayoutHistoryMetadataApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**playoutHistoryMetadataCreate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataCreate) | **POST** /api/v2/playout-history-metadata | 
-[**playoutHistoryMetadataDestroy()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataDestroy) | **DELETE** /api/v2/playout-history-metadata/{id} | 
-[**playoutHistoryMetadataList()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataList) | **GET** /api/v2/playout-history-metadata | 
-[**playoutHistoryMetadataPartialUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataPartialUpdate) | **PATCH** /api/v2/playout-history-metadata/{id} | 
-[**playoutHistoryMetadataRetrieve()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataRetrieve) | **GET** /api/v2/playout-history-metadata/{id} | 
-[**playoutHistoryMetadataUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataUpdate) | **PUT** /api/v2/playout-history-metadata/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**playoutHistoryMetadataCreate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataCreate) | **POST** /api/v2/playout-history-metadata |  |
+| [**playoutHistoryMetadataDestroy()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataDestroy) | **DELETE** /api/v2/playout-history-metadata/{id} |  |
+| [**playoutHistoryMetadataList()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataList) | **GET** /api/v2/playout-history-metadata |  |
+| [**playoutHistoryMetadataPartialUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataPartialUpdate) | **PATCH** /api/v2/playout-history-metadata/{id} |  |
+| [**playoutHistoryMetadataRetrieve()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataRetrieve) | **GET** /api/v2/playout-history-metadata/{id} |  |
+| [**playoutHistoryMetadataUpdate()**](PlayoutHistoryMetadataApi.md#playoutHistoryMetadataUpdate) | **PUT** /api/v2/playout-history-metadata/{id} |  |
 
 
 ## `playoutHistoryMetadataCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **playout_history_metadata** | [**\Libretime\Client\Model\PlayoutHistoryMetadata**](../Model/PlayoutHistoryMetadata.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **playout_history_metadata** | [**\Libretime\Client\Model\PlayoutHistoryMetadata**](../Model/PlayoutHistoryMetadata.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history metadata. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history metadata. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history metadata. |
- **patched_playout_history_metadata** | [**\Libretime\Client\Model\PatchedPlayoutHistoryMetadata**](../Model/PatchedPlayoutHistoryMetadata.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history metadata. | |
+| **patched_playout_history_metadata** | [**\Libretime\Client\Model\PatchedPlayoutHistoryMetadata**](../Model/PatchedPlayoutHistoryMetadata.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history metadata. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history metadata. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history metadata. |
- **playout_history_metadata** | [**\Libretime\Client\Model\PlayoutHistoryMetadata**](../Model/PlayoutHistoryMetadata.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history metadata. | |
+| **playout_history_metadata** | [**\Libretime\Client\Model\PlayoutHistoryMetadata**](../Model/PlayoutHistoryMetadata.md)|  | |
 
 ### Return type
 

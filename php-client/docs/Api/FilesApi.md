@@ -1,16 +1,16 @@
 # Libretime\Client\FilesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**filesCreate()**](FilesApi.md#filesCreate) | **POST** /api/v2/files | 
-[**filesDestroy()**](FilesApi.md#filesDestroy) | **DELETE** /api/v2/files/{id} | 
-[**filesDownloadRetrieve()**](FilesApi.md#filesDownloadRetrieve) | **GET** /api/v2/files/{id}/download | 
-[**filesList()**](FilesApi.md#filesList) | **GET** /api/v2/files | 
-[**filesPartialUpdate()**](FilesApi.md#filesPartialUpdate) | **PATCH** /api/v2/files/{id} | 
-[**filesRetrieve()**](FilesApi.md#filesRetrieve) | **GET** /api/v2/files/{id} | 
-[**filesUpdate()**](FilesApi.md#filesUpdate) | **PUT** /api/v2/files/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**filesCreate()**](FilesApi.md#filesCreate) | **POST** /api/v2/files |  |
+| [**filesDestroy()**](FilesApi.md#filesDestroy) | **DELETE** /api/v2/files/{id} |  |
+| [**filesDownloadRetrieve()**](FilesApi.md#filesDownloadRetrieve) | **GET** /api/v2/files/{id}/download |  |
+| [**filesList()**](FilesApi.md#filesList) | **GET** /api/v2/files |  |
+| [**filesPartialUpdate()**](FilesApi.md#filesPartialUpdate) | **PATCH** /api/v2/files/{id} |  |
+| [**filesRetrieve()**](FilesApi.md#filesRetrieve) | **GET** /api/v2/files/{id} |  |
+| [**filesUpdate()**](FilesApi.md#filesUpdate) | **PUT** /api/v2/files/{id} |  |
 
 
 ## `filesCreate()`
@@ -57,9 +57,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | [**\Libretime\Client\Model\File**](../Model/File.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **file** | [**\Libretime\Client\Model\File**](../Model/File.md)|  | |
 
 ### Return type
 
@@ -121,9 +121,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this file. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this file. | |
 
 ### Return type
 
@@ -186,9 +186,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this file. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this file. | |
 
 ### Return type
 
@@ -314,10 +314,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this file. |
- **patched_file** | [**\Libretime\Client\Model\PatchedFile**](../Model/PatchedFile.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this file. | |
+| **patched_file** | [**\Libretime\Client\Model\PatchedFile**](../Model/PatchedFile.md)|  | [optional] |
 
 ### Return type
 
@@ -380,9 +380,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this file. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this file. | |
 
 ### Return type
 
@@ -446,10 +446,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this file. |
- **file** | [**\Libretime\Client\Model\File**](../Model/File.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this file. | |
+| **file** | [**\Libretime\Client\Model\File**](../Model/File.md)|  | |
 
 ### Return type
 

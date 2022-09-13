@@ -1,10 +1,10 @@
 # Libretime\Client\InfoApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**infoRetrieve()**](InfoApi.md#infoRetrieve) | **GET** /api/v2/info | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**infoRetrieve()**](InfoApi.md#infoRetrieve) | **GET** /api/v2/info |  |
 
 
 ## `infoRetrieve()`

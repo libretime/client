@@ -1,15 +1,15 @@
 # Libretime\Client\PlayoutHistoryTemplatesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**playoutHistoryTemplatesCreate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesCreate) | **POST** /api/v2/playout-history-templates | 
-[**playoutHistoryTemplatesDestroy()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesDestroy) | **DELETE** /api/v2/playout-history-templates/{id} | 
-[**playoutHistoryTemplatesList()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesList) | **GET** /api/v2/playout-history-templates | 
-[**playoutHistoryTemplatesPartialUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesPartialUpdate) | **PATCH** /api/v2/playout-history-templates/{id} | 
-[**playoutHistoryTemplatesRetrieve()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesRetrieve) | **GET** /api/v2/playout-history-templates/{id} | 
-[**playoutHistoryTemplatesUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesUpdate) | **PUT** /api/v2/playout-history-templates/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**playoutHistoryTemplatesCreate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesCreate) | **POST** /api/v2/playout-history-templates |  |
+| [**playoutHistoryTemplatesDestroy()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesDestroy) | **DELETE** /api/v2/playout-history-templates/{id} |  |
+| [**playoutHistoryTemplatesList()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesList) | **GET** /api/v2/playout-history-templates |  |
+| [**playoutHistoryTemplatesPartialUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesPartialUpdate) | **PATCH** /api/v2/playout-history-templates/{id} |  |
+| [**playoutHistoryTemplatesRetrieve()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesRetrieve) | **GET** /api/v2/playout-history-templates/{id} |  |
+| [**playoutHistoryTemplatesUpdate()**](PlayoutHistoryTemplatesApi.md#playoutHistoryTemplatesUpdate) | **PUT** /api/v2/playout-history-templates/{id} |  |
 
 
 ## `playoutHistoryTemplatesCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **playout_history_template** | [**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **playout_history_template** | [**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template. |
- **patched_playout_history_template** | [**\Libretime\Client\Model\PatchedPlayoutHistoryTemplate**](../Model/PatchedPlayoutHistoryTemplate.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template. | |
+| **patched_playout_history_template** | [**\Libretime\Client\Model\PatchedPlayoutHistoryTemplate**](../Model/PatchedPlayoutHistoryTemplate.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playout history template. |
- **playout_history_template** | [**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playout history template. | |
+| **playout_history_template** | [**\Libretime\Client\Model\PlayoutHistoryTemplate**](../Model/PlayoutHistoryTemplate.md)|  | |
 
 ### Return type
 

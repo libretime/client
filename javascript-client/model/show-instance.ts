@@ -13,6 +13,8 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
 
 /**

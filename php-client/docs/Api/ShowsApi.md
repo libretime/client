@@ -1,15 +1,15 @@
 # Libretime\Client\ShowsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**showsCreate()**](ShowsApi.md#showsCreate) | **POST** /api/v2/shows | 
-[**showsDestroy()**](ShowsApi.md#showsDestroy) | **DELETE** /api/v2/shows/{id} | 
-[**showsList()**](ShowsApi.md#showsList) | **GET** /api/v2/shows | 
-[**showsPartialUpdate()**](ShowsApi.md#showsPartialUpdate) | **PATCH** /api/v2/shows/{id} | 
-[**showsRetrieve()**](ShowsApi.md#showsRetrieve) | **GET** /api/v2/shows/{id} | 
-[**showsUpdate()**](ShowsApi.md#showsUpdate) | **PUT** /api/v2/shows/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**showsCreate()**](ShowsApi.md#showsCreate) | **POST** /api/v2/shows |  |
+| [**showsDestroy()**](ShowsApi.md#showsDestroy) | **DELETE** /api/v2/shows/{id} |  |
+| [**showsList()**](ShowsApi.md#showsList) | **GET** /api/v2/shows |  |
+| [**showsPartialUpdate()**](ShowsApi.md#showsPartialUpdate) | **PATCH** /api/v2/shows/{id} |  |
+| [**showsRetrieve()**](ShowsApi.md#showsRetrieve) | **GET** /api/v2/shows/{id} |  |
+| [**showsUpdate()**](ShowsApi.md#showsUpdate) | **PUT** /api/v2/shows/{id} |  |
 
 
 ## `showsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **show** | [**\Libretime\Client\Model\Show**](../Model/Show.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **show** | [**\Libretime\Client\Model\Show**](../Model/Show.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show. |
- **patched_show** | [**\Libretime\Client\Model\PatchedShow**](../Model/PatchedShow.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show. | |
+| **patched_show** | [**\Libretime\Client\Model\PatchedShow**](../Model/PatchedShow.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show. |
- **show** | [**\Libretime\Client\Model\Show**](../Model/Show.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show. | |
+| **show** | [**\Libretime\Client\Model\Show**](../Model/Show.md)|  | |
 
 ### Return type
 

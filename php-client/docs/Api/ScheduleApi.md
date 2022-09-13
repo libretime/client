@@ -1,15 +1,15 @@
 # Libretime\Client\ScheduleApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**scheduleCreate()**](ScheduleApi.md#scheduleCreate) | **POST** /api/v2/schedule | 
-[**scheduleDestroy()**](ScheduleApi.md#scheduleDestroy) | **DELETE** /api/v2/schedule/{id} | 
-[**scheduleList()**](ScheduleApi.md#scheduleList) | **GET** /api/v2/schedule | 
-[**schedulePartialUpdate()**](ScheduleApi.md#schedulePartialUpdate) | **PATCH** /api/v2/schedule/{id} | 
-[**scheduleRetrieve()**](ScheduleApi.md#scheduleRetrieve) | **GET** /api/v2/schedule/{id} | 
-[**scheduleUpdate()**](ScheduleApi.md#scheduleUpdate) | **PUT** /api/v2/schedule/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**scheduleCreate()**](ScheduleApi.md#scheduleCreate) | **POST** /api/v2/schedule |  |
+| [**scheduleDestroy()**](ScheduleApi.md#scheduleDestroy) | **DELETE** /api/v2/schedule/{id} |  |
+| [**scheduleList()**](ScheduleApi.md#scheduleList) | **GET** /api/v2/schedule |  |
+| [**schedulePartialUpdate()**](ScheduleApi.md#schedulePartialUpdate) | **PATCH** /api/v2/schedule/{id} |  |
+| [**scheduleRetrieve()**](ScheduleApi.md#scheduleRetrieve) | **GET** /api/v2/schedule/{id} |  |
+| [**scheduleUpdate()**](ScheduleApi.md#scheduleUpdate) | **PUT** /api/v2/schedule/{id} |  |
 
 
 ## `scheduleCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this schedule. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this schedule. | |
 
 ### Return type
 
@@ -191,15 +191,15 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **broadcasted** | **int**|  | [optional]
- **ends_after** | **\DateTime**|  | [optional]
- **ends_before** | **\DateTime**|  | [optional]
- **overbooked** | **bool**|  | [optional]
- **position_status** | **int**|  | [optional]
- **starts_after** | **\DateTime**|  | [optional]
- **starts_before** | **\DateTime**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **broadcasted** | **int**|  | [optional] |
+| **ends_after** | **\DateTime**|  | [optional] |
+| **ends_before** | **\DateTime**|  | [optional] |
+| **overbooked** | **bool**|  | [optional] |
+| **position_status** | **int**|  | [optional] |
+| **starts_after** | **\DateTime**|  | [optional] |
+| **starts_before** | **\DateTime**|  | [optional] |
 
 ### Return type
 
@@ -263,10 +263,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this schedule. |
- **patched_schedule** | [**\Libretime\Client\Model\PatchedSchedule**](../Model/PatchedSchedule.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this schedule. | |
+| **patched_schedule** | [**\Libretime\Client\Model\PatchedSchedule**](../Model/PatchedSchedule.md)|  | [optional] |
 
 ### Return type
 
@@ -329,9 +329,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this schedule. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this schedule. | |
 
 ### Return type
 
@@ -395,10 +395,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this schedule. |
- **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this schedule. | |
+| **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  | |
 
 ### Return type
 

@@ -13,7 +13,11 @@
  */
 
 
+// May contain unused imports in some cases
+// @ts-ignore
 import { NullEnum } from './null-enum';
+// May contain unused imports in some cases
+// @ts-ignore
 import { WeekDayEnum } from './week-day-enum';
 
 /**

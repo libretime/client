@@ -1,15 +1,15 @@
 # Libretime\Client\ShowDaysApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**showDaysCreate()**](ShowDaysApi.md#showDaysCreate) | **POST** /api/v2/show-days | 
-[**showDaysDestroy()**](ShowDaysApi.md#showDaysDestroy) | **DELETE** /api/v2/show-days/{id} | 
-[**showDaysList()**](ShowDaysApi.md#showDaysList) | **GET** /api/v2/show-days | 
-[**showDaysPartialUpdate()**](ShowDaysApi.md#showDaysPartialUpdate) | **PATCH** /api/v2/show-days/{id} | 
-[**showDaysRetrieve()**](ShowDaysApi.md#showDaysRetrieve) | **GET** /api/v2/show-days/{id} | 
-[**showDaysUpdate()**](ShowDaysApi.md#showDaysUpdate) | **PUT** /api/v2/show-days/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**showDaysCreate()**](ShowDaysApi.md#showDaysCreate) | **POST** /api/v2/show-days |  |
+| [**showDaysDestroy()**](ShowDaysApi.md#showDaysDestroy) | **DELETE** /api/v2/show-days/{id} |  |
+| [**showDaysList()**](ShowDaysApi.md#showDaysList) | **GET** /api/v2/show-days |  |
+| [**showDaysPartialUpdate()**](ShowDaysApi.md#showDaysPartialUpdate) | **PATCH** /api/v2/show-days/{id} |  |
+| [**showDaysRetrieve()**](ShowDaysApi.md#showDaysRetrieve) | **GET** /api/v2/show-days/{id} |  |
+| [**showDaysUpdate()**](ShowDaysApi.md#showDaysUpdate) | **PUT** /api/v2/show-days/{id} |  |
 
 
 ## `showDaysCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **show_days** | [**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **show_days** | [**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show days. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show days. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show days. |
- **patched_show_days** | [**\Libretime\Client\Model\PatchedShowDays**](../Model/PatchedShowDays.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show days. | |
+| **patched_show_days** | [**\Libretime\Client\Model\PatchedShowDays**](../Model/PatchedShowDays.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show days. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show days. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this show days. |
- **show_days** | [**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this show days. | |
+| **show_days** | [**\Libretime\Client\Model\ShowDays**](../Model/ShowDays.md)|  | |
 
 ### Return type
 

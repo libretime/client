@@ -1,15 +1,15 @@
 # Libretime\Client\TimestampsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**timestampsCreate()**](TimestampsApi.md#timestampsCreate) | **POST** /api/v2/timestamps | 
-[**timestampsDestroy()**](TimestampsApi.md#timestampsDestroy) | **DELETE** /api/v2/timestamps/{id} | 
-[**timestampsList()**](TimestampsApi.md#timestampsList) | **GET** /api/v2/timestamps | 
-[**timestampsPartialUpdate()**](TimestampsApi.md#timestampsPartialUpdate) | **PATCH** /api/v2/timestamps/{id} | 
-[**timestampsRetrieve()**](TimestampsApi.md#timestampsRetrieve) | **GET** /api/v2/timestamps/{id} | 
-[**timestampsUpdate()**](TimestampsApi.md#timestampsUpdate) | **PUT** /api/v2/timestamps/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**timestampsCreate()**](TimestampsApi.md#timestampsCreate) | **POST** /api/v2/timestamps |  |
+| [**timestampsDestroy()**](TimestampsApi.md#timestampsDestroy) | **DELETE** /api/v2/timestamps/{id} |  |
+| [**timestampsList()**](TimestampsApi.md#timestampsList) | **GET** /api/v2/timestamps |  |
+| [**timestampsPartialUpdate()**](TimestampsApi.md#timestampsPartialUpdate) | **PATCH** /api/v2/timestamps/{id} |  |
+| [**timestampsRetrieve()**](TimestampsApi.md#timestampsRetrieve) | **GET** /api/v2/timestamps/{id} |  |
+| [**timestampsUpdate()**](TimestampsApi.md#timestampsUpdate) | **PUT** /api/v2/timestamps/{id} |  |
 
 
 ## `timestampsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **timestamp** | [**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **timestamp** | [**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this timestamp. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this timestamp. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this timestamp. |
- **patched_timestamp** | [**\Libretime\Client\Model\PatchedTimestamp**](../Model/PatchedTimestamp.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this timestamp. | |
+| **patched_timestamp** | [**\Libretime\Client\Model\PatchedTimestamp**](../Model/PatchedTimestamp.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this timestamp. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this timestamp. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this timestamp. |
- **timestamp** | [**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this timestamp. | |
+| **timestamp** | [**\Libretime\Client\Model\Timestamp**](../Model/Timestamp.md)|  | |
 
 ### Return type
 

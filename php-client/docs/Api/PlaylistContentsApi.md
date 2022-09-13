@@ -1,15 +1,15 @@
 # Libretime\Client\PlaylistContentsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**playlistContentsCreate()**](PlaylistContentsApi.md#playlistContentsCreate) | **POST** /api/v2/playlist-contents | 
-[**playlistContentsDestroy()**](PlaylistContentsApi.md#playlistContentsDestroy) | **DELETE** /api/v2/playlist-contents/{id} | 
-[**playlistContentsList()**](PlaylistContentsApi.md#playlistContentsList) | **GET** /api/v2/playlist-contents | 
-[**playlistContentsPartialUpdate()**](PlaylistContentsApi.md#playlistContentsPartialUpdate) | **PATCH** /api/v2/playlist-contents/{id} | 
-[**playlistContentsRetrieve()**](PlaylistContentsApi.md#playlistContentsRetrieve) | **GET** /api/v2/playlist-contents/{id} | 
-[**playlistContentsUpdate()**](PlaylistContentsApi.md#playlistContentsUpdate) | **PUT** /api/v2/playlist-contents/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**playlistContentsCreate()**](PlaylistContentsApi.md#playlistContentsCreate) | **POST** /api/v2/playlist-contents |  |
+| [**playlistContentsDestroy()**](PlaylistContentsApi.md#playlistContentsDestroy) | **DELETE** /api/v2/playlist-contents/{id} |  |
+| [**playlistContentsList()**](PlaylistContentsApi.md#playlistContentsList) | **GET** /api/v2/playlist-contents |  |
+| [**playlistContentsPartialUpdate()**](PlaylistContentsApi.md#playlistContentsPartialUpdate) | **PATCH** /api/v2/playlist-contents/{id} |  |
+| [**playlistContentsRetrieve()**](PlaylistContentsApi.md#playlistContentsRetrieve) | **GET** /api/v2/playlist-contents/{id} |  |
+| [**playlistContentsUpdate()**](PlaylistContentsApi.md#playlistContentsUpdate) | **PUT** /api/v2/playlist-contents/{id} |  |
 
 
 ## `playlistContentsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **playlist_content** | [**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **playlist_content** | [**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist content. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist content. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist content. |
- **patched_playlist_content** | [**\Libretime\Client\Model\PatchedPlaylistContent**](../Model/PatchedPlaylistContent.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist content. | |
+| **patched_playlist_content** | [**\Libretime\Client\Model\PatchedPlaylistContent**](../Model/PatchedPlaylistContent.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist content. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist content. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this playlist content. |
- **playlist_content** | [**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this playlist content. | |
+| **playlist_content** | [**\Libretime\Client\Model\PlaylistContent**](../Model/PlaylistContent.md)|  | |
 
 ### Return type
 

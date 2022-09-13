@@ -1,15 +1,15 @@
 # Libretime\Client\StationPodcastsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**stationPodcastsCreate()**](StationPodcastsApi.md#stationPodcastsCreate) | **POST** /api/v2/station-podcasts | 
-[**stationPodcastsDestroy()**](StationPodcastsApi.md#stationPodcastsDestroy) | **DELETE** /api/v2/station-podcasts/{id} | 
-[**stationPodcastsList()**](StationPodcastsApi.md#stationPodcastsList) | **GET** /api/v2/station-podcasts | 
-[**stationPodcastsPartialUpdate()**](StationPodcastsApi.md#stationPodcastsPartialUpdate) | **PATCH** /api/v2/station-podcasts/{id} | 
-[**stationPodcastsRetrieve()**](StationPodcastsApi.md#stationPodcastsRetrieve) | **GET** /api/v2/station-podcasts/{id} | 
-[**stationPodcastsUpdate()**](StationPodcastsApi.md#stationPodcastsUpdate) | **PUT** /api/v2/station-podcasts/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**stationPodcastsCreate()**](StationPodcastsApi.md#stationPodcastsCreate) | **POST** /api/v2/station-podcasts |  |
+| [**stationPodcastsDestroy()**](StationPodcastsApi.md#stationPodcastsDestroy) | **DELETE** /api/v2/station-podcasts/{id} |  |
+| [**stationPodcastsList()**](StationPodcastsApi.md#stationPodcastsList) | **GET** /api/v2/station-podcasts |  |
+| [**stationPodcastsPartialUpdate()**](StationPodcastsApi.md#stationPodcastsPartialUpdate) | **PATCH** /api/v2/station-podcasts/{id} |  |
+| [**stationPodcastsRetrieve()**](StationPodcastsApi.md#stationPodcastsRetrieve) | **GET** /api/v2/station-podcasts/{id} |  |
+| [**stationPodcastsUpdate()**](StationPodcastsApi.md#stationPodcastsUpdate) | **PUT** /api/v2/station-podcasts/{id} |  |
 
 
 ## `stationPodcastsCreate()`
@@ -56,9 +56,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **station_podcast** | [**\Libretime\Client\Model\StationPodcast**](../Model/StationPodcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **station_podcast** | [**\Libretime\Client\Model\StationPodcast**](../Model/StationPodcast.md)|  | |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this station podcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this station podcast. | |
 
 ### Return type
 
@@ -248,10 +248,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this station podcast. |
- **patched_station_podcast** | [**\Libretime\Client\Model\PatchedStationPodcast**](../Model/PatchedStationPodcast.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this station podcast. | |
+| **patched_station_podcast** | [**\Libretime\Client\Model\PatchedStationPodcast**](../Model/PatchedStationPodcast.md)|  | [optional] |
 
 ### Return type
 
@@ -314,9 +314,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this station podcast. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this station podcast. | |
 
 ### Return type
 
@@ -380,10 +380,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this station podcast. |
- **station_podcast** | [**\Libretime\Client\Model\StationPodcast**](../Model/StationPodcast.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| A unique integer value identifying this station podcast. | |
+| **station_podcast** | [**\Libretime\Client\Model\StationPodcast**](../Model/StationPodcast.md)|  | |
 
 ### Return type
 
