@@ -4,13 +4,11 @@ SHELL = bash
 GIT_USER_ID = libretime
 GIT_REPO_ID = client
 
-# https://github.com/OpenAPITools/openapi-generator/releases
-GENERATOR_VERSION = v6.0.0
 GENERATOR_CLI = docker run \
 	--rm \
 	--volume="$$PWD:/local" \
 	--user="$$UID:$$GID" \
-	openapitools/openapi-generator-cli:$(GENERATOR_VERSION)
+	$(shell docker build -q .)
 
 GENERATATE_CMD = $(GENERATOR_CLI) generate \
 		--input-spec /local/schema.yml \
