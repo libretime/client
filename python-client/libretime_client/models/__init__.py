@@ -1,3 +1,5 @@
+# coding: utf-8
+
 # flake8: noqa
 
 # import all models into this package
@@ -41,15 +43,12 @@ from libretime_client.model.patched_schedule import PatchedSchedule
 from libretime_client.model.patched_service_register import PatchedServiceRegister
 from libretime_client.model.patched_show import PatchedShow
 from libretime_client.model.patched_show_days import PatchedShowDays
-from libretime_client.model.patched_show_days_record_enabled import PatchedShowDaysRecordEnabled
-from libretime_client.model.patched_show_days_week_day import PatchedShowDaysWeekDay
 from libretime_client.model.patched_show_host import PatchedShowHost
 from libretime_client.model.patched_show_instance import PatchedShowInstance
 from libretime_client.model.patched_show_rebroadcast import PatchedShowRebroadcast
 from libretime_client.model.patched_smart_block import PatchedSmartBlock
 from libretime_client.model.patched_smart_block_content import PatchedSmartBlockContent
 from libretime_client.model.patched_smart_block_criteria import PatchedSmartBlockCriteria
-from libretime_client.model.patched_smart_block_kind import PatchedSmartBlockKind
 from libretime_client.model.patched_station_podcast import PatchedStationPodcast
 from libretime_client.model.patched_third_party_track_reference import PatchedThirdPartyTrackReference
 from libretime_client.model.patched_timestamp import PatchedTimestamp

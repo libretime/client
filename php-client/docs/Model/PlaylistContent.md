@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly]
 **kind** | [**PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  |
 **position** | **int** |  | [optional]
-**offset** | **double** |  |
+**offset** | **float** |  |
 **length** | **string** |  | [optional]
 **cue_in** | **string** |  | [optional]
 **cue_out** | **string** |  | [optional]

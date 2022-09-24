@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
 **position** | **int** |  | [optional]
-**offset** | **double** |  | [optional]
+**offset** | **float** |  | [optional]
 **length** | **string** |  | [optional]
 **cue_in** | **string** |  | [optional]
 **cue_out** | **string** |  | [optional]

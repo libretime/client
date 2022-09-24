@@ -1,0 +1,46 @@
+# do not import all endpoints into this module because that uses a lot of memory and stack frames
+# if you need the ability to import all endpoints from this module, import them with
+# from libretime_client.apis.tag_to_api import tag_to_api
+
+import enum
+
+
+class TagValues(str, enum.Enum):
+    CELERYTASKS = "celery-tasks"
+    FILES = "files"
+    IMPORTEDPODCASTS = "imported-podcasts"
+    INFO = "info"
+    LIBRARIES = "libraries"
+    LISTENERCOUNTS = "listener-counts"
+    LIVELOGS = "live-logs"
+    LOGINATTEMPTS = "login-attempts"
+    MOUNTNAMES = "mount-names"
+    PLAYLISTCONTENTS = "playlist-contents"
+    PLAYLISTS = "playlists"
+    PLAYOUTHISTORY = "playout-history"
+    PLAYOUTHISTORYMETADATA = "playout-history-metadata"
+    PLAYOUTHISTORYTEMPLATEFIELDS = "playout-history-template-fields"
+    PLAYOUTHISTORYTEMPLATES = "playout-history-templates"
+    PODCASTEPISODES = "podcast-episodes"
+    PODCASTS = "podcasts"
+    PREFERENCES = "preferences"
+    SCHEDULE = "schedule"
+    SCHEMA = "schema"
+    SERVICEREGISTERS = "service-registers"
+    SHOWDAYS = "show-days"
+    SHOWHOSTS = "show-hosts"
+    SHOWINSTANCES = "show-instances"
+    SHOWREBROADCASTS = "show-rebroadcasts"
+    SHOWS = "shows"
+    SMARTBLOCKCONTENTS = "smart-block-contents"
+    SMARTBLOCKCRITERIA = "smart-block-criteria"
+    SMARTBLOCKS = "smart-blocks"
+    STATIONPODCASTS = "station-podcasts"
+    STREAM = "stream"
+    THIRDPARTYTRACKREFERENCES = "third-party-track-references"
+    TIMESTAMPS = "timestamps"
+    USERTOKENS = "user-tokens"
+    USERS = "users"
+    VERSION = "version"
+    WEBSTREAMMETADATA = "webstream-metadata"
+    WEBSTREAMS = "webstreams"

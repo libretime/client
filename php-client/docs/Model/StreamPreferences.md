@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**input_fade_transition** | **double** |  | [readonly]
+**input_fade_transition** | **float** |  | [readonly]
 **message_format** | **int** |  | [readonly]
 **message_offline** | **string** |  | [readonly]
 
