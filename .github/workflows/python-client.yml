@@ -45,7 +45,7 @@ jobs:
           pip3 install -r requirements.txt
           pip3 install -r test-requirements.txt
 
-      - name: Test
-        working-directory: python-client
-        run: |
-          pytest --cov=libretime_client
+      # - name: Test
+      #   working-directory: python-client
+      #   run: |
+      #     pytest --cov=libretime_client
