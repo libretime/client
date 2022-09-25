@@ -34,7 +34,7 @@ setup(
     description="LibreTime API",
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
-    url="",
+    url="https://github.com/libretime/client",
     keywords=["OpenAPI", "OpenAPI-Generator", "LibreTime API"],
     python_requires=">=3.7",
     install_requires=REQUIRES,
