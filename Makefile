@@ -44,4 +44,5 @@ python-client:
 	$(GENERATATE_CMD) \
 		--generator-name python \
 		--output /local/python-client \
-		--package-name libretime_client
+		--package-name libretime_client \
+		--additional-properties=packageUrl=https://github.com/libretime/client
