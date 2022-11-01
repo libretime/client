@@ -140,7 +140,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import libretime_client
 from pprint import pprint
-from libretime_client.apis import celery_tasks_api
+from libretime_client.apis.tags import celery_tasks_api
 from libretime_client.model.celery_task import CeleryTask
 from libretime_client.model.patched_celery_task import PatchedCeleryTask
 # Defining the host is optional and defaults to http://localhost

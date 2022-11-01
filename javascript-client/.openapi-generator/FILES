@@ -130,3 +130,4 @@ model/version.ts
 model/webstream-metadata.ts
 model/webstream.ts
 model/week-day-enum.ts
+tsconfig.esm.json
