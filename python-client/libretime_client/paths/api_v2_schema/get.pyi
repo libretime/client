@@ -300,6 +300,10 @@ class LangSchema(
         return cls("mr")
     
     @schemas.classproperty
+    def MS(cls):
+        return cls("ms")
+    
+    @schemas.classproperty
     def MY(cls):
         return cls("my")
     

@@ -122,6 +122,7 @@ class LangSchema(
             "ml": "ML",
             "mn": "MN",
             "mr": "MR",
+            "ms": "MS",
             "my": "MY",
             "nb": "NB",
             "ne": "NE",
@@ -408,6 +409,10 @@ class LangSchema(
     @schemas.classproperty
     def MR(cls):
         return cls("mr")
+    
+    @schemas.classproperty
+    def MS(cls):
+        return cls("ms")
     
     @schemas.classproperty
     def MY(cls):
