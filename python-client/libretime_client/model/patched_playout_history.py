@@ -55,12 +55,12 @@ class PatchedPlayoutHistory(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'ends':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -75,12 +75,12 @@ class PatchedPlayoutHistory(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'file':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -95,12 +95,12 @@ class PatchedPlayoutHistory(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'instance':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -158,7 +158,7 @@ class PatchedPlayoutHistory(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         starts: typing.Union[MetaOapg.properties.starts, str, datetime, schemas.Unset] = schemas.unset,
         ends: typing.Union[MetaOapg.properties.ends, None, str, datetime, schemas.Unset] = schemas.unset,
@@ -169,7 +169,7 @@ class PatchedPlayoutHistory(
     ) -> 'PatchedPlayoutHistory':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             starts=starts,
             ends=ends,

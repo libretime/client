@@ -89,7 +89,7 @@ class StreamPreferences(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         message_offline: typing.Union[MetaOapg.properties.message_offline, str, ],
         message_format: typing.Union[MetaOapg.properties.message_format, decimal.Decimal, int, ],
         input_fade_transition: typing.Union[MetaOapg.properties.input_fade_transition, decimal.Decimal, int, float, ],
@@ -98,7 +98,7 @@ class StreamPreferences(
     ) -> 'StreamPreferences':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             message_offline=message_offline,
             message_format=message_format,
             input_fade_transition=input_fade_transition,

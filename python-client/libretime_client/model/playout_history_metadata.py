@@ -115,7 +115,7 @@ class PlayoutHistoryMetadata(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         history: typing.Union[MetaOapg.properties.history, decimal.Decimal, int, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         value: typing.Union[MetaOapg.properties.value, str, ],
@@ -125,7 +125,7 @@ class PlayoutHistoryMetadata(
     ) -> 'PlayoutHistoryMetadata':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             history=history,
             id=id,
             value=value,

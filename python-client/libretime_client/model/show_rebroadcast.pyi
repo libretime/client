@@ -104,7 +104,7 @@ class ShowRebroadcast(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         start_time: typing.Union[MetaOapg.properties.start_time, str, ],
         day_offset: typing.Union[MetaOapg.properties.day_offset, str, ],
         show: typing.Union[MetaOapg.properties.show, decimal.Decimal, int, ],
@@ -114,7 +114,7 @@ class ShowRebroadcast(
     ) -> 'ShowRebroadcast':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             start_time=start_time,
             day_offset=day_offset,
             show=show,

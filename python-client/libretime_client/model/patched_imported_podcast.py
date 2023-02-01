@@ -56,12 +56,12 @@ class PatchedImportedPodcast(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'auto_ingested_at':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             podcast = schemas.IntSchema
@@ -120,7 +120,7 @@ class PatchedImportedPodcast(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         override_album: typing.Union[MetaOapg.properties.override_album, bool, schemas.Unset] = schemas.unset,
         auto_ingest: typing.Union[MetaOapg.properties.auto_ingest, bool, schemas.Unset] = schemas.unset,
@@ -131,7 +131,7 @@ class PatchedImportedPodcast(
     ) -> 'PatchedImportedPodcast':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             override_album=override_album,
             auto_ingest=auto_ingest,

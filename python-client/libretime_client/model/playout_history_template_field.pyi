@@ -149,7 +149,7 @@ class PlayoutHistoryTemplateField(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         template: typing.Union[MetaOapg.properties.template, decimal.Decimal, int, ],
         is_file_md: typing.Union[MetaOapg.properties.is_file_md, bool, ],
         name: typing.Union[MetaOapg.properties.name, str, ],
@@ -162,7 +162,7 @@ class PlayoutHistoryTemplateField(
     ) -> 'PlayoutHistoryTemplateField':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             template=template,
             is_file_md=is_file_md,
             name=name,

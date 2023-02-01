@@ -96,7 +96,7 @@ class PatchedWebstreamMetadata(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         starts_at: typing.Union[MetaOapg.properties.starts_at, str, datetime, schemas.Unset] = schemas.unset,
         data: typing.Union[MetaOapg.properties.data, str, schemas.Unset] = schemas.unset,
@@ -106,7 +106,7 @@ class PatchedWebstreamMetadata(
     ) -> 'PatchedWebstreamMetadata':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             starts_at=starts_at,
             data=data,

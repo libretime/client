@@ -79,7 +79,7 @@ class Timestamp(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         timestamp: typing.Union[MetaOapg.properties.timestamp, str, datetime, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -87,7 +87,7 @@ class Timestamp(
     ) -> 'Timestamp':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             timestamp=timestamp,
             _configuration=_configuration,

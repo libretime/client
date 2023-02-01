@@ -89,7 +89,7 @@ class ShowHost(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         show: typing.Union[MetaOapg.properties.show, decimal.Decimal, int, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         user: typing.Union[MetaOapg.properties.user, decimal.Decimal, int, ],
@@ -98,7 +98,7 @@ class ShowHost(
     ) -> 'ShowHost':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             show=show,
             id=id,
             user=user,

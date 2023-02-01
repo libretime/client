@@ -93,7 +93,7 @@ class PatchedListenerCount(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         listener_count: typing.Union[MetaOapg.properties.listener_count, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         timestamp: typing.Union[MetaOapg.properties.timestamp, decimal.Decimal, int, schemas.Unset] = schemas.unset,
@@ -103,7 +103,7 @@ class PatchedListenerCount(
     ) -> 'PatchedListenerCount':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             listener_count=listener_count,
             timestamp=timestamp,

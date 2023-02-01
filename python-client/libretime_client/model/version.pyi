@@ -69,14 +69,14 @@ class Version(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         api_version: typing.Union[MetaOapg.properties.api_version, str, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'Version':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             api_version=api_version,
             _configuration=_configuration,
             **kwargs,

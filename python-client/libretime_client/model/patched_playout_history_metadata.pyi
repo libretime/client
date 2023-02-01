@@ -98,7 +98,7 @@ class PatchedPlayoutHistoryMetadata(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         key: typing.Union[MetaOapg.properties.key, str, schemas.Unset] = schemas.unset,
         value: typing.Union[MetaOapg.properties.value, str, schemas.Unset] = schemas.unset,
@@ -108,7 +108,7 @@ class PatchedPlayoutHistoryMetadata(
     ) -> 'PatchedPlayoutHistoryMetadata':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             key=key,
             value=value,

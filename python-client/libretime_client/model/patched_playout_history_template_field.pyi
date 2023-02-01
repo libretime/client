@@ -132,7 +132,7 @@ class PatchedPlayoutHistoryTemplateField(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         label: typing.Union[MetaOapg.properties.label, str, schemas.Unset] = schemas.unset,
@@ -145,7 +145,7 @@ class PatchedPlayoutHistoryTemplateField(
     ) -> 'PatchedPlayoutHistoryTemplateField':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             name=name,
             label=label,

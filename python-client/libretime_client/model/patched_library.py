@@ -53,12 +53,12 @@ class PatchedLibrary(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'name':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -86,12 +86,12 @@ class PatchedLibrary(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'description':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             enabled = schemas.BoolSchema
@@ -150,7 +150,7 @@ class PatchedLibrary(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, None, str, schemas.Unset] = schemas.unset,
         code: typing.Union[MetaOapg.properties.code, str, schemas.Unset] = schemas.unset,
@@ -161,7 +161,7 @@ class PatchedLibrary(
     ) -> 'PatchedLibrary':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             name=name,
             code=code,

@@ -79,7 +79,7 @@ class StationPodcast(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         podcast: typing.Union[MetaOapg.properties.podcast, decimal.Decimal, int, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -87,7 +87,7 @@ class StationPodcast(
     ) -> 'StationPodcast':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             podcast=podcast,
             id=id,
             _configuration=_configuration,

@@ -109,7 +109,7 @@ class StreamState(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         input_show_streaming: typing.Union[MetaOapg.properties.input_show_streaming, bool, ],
         input_show_connected: typing.Union[MetaOapg.properties.input_show_connected, bool, ],
         schedule_streaming: typing.Union[MetaOapg.properties.schedule_streaming, bool, ],
@@ -120,7 +120,7 @@ class StreamState(
     ) -> 'StreamState':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             input_show_streaming=input_show_streaming,
             input_show_connected=input_show_connected,
             schedule_streaming=schedule_streaming,

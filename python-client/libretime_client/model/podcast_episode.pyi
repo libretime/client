@@ -79,12 +79,12 @@ class PodcastEpisode(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'file':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -171,7 +171,7 @@ class PodcastEpisode(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         episode_guid: typing.Union[MetaOapg.properties.episode_guid, str, ],
         podcast: typing.Union[MetaOapg.properties.podcast, decimal.Decimal, int, ],
         download_url: typing.Union[MetaOapg.properties.download_url, str, ],
@@ -185,7 +185,7 @@ class PodcastEpisode(
     ) -> 'PodcastEpisode':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             episode_guid=episode_guid,
             podcast=podcast,
             download_url=download_url,

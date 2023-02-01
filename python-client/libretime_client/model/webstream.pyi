@@ -84,12 +84,12 @@ class Webstream(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'last_played_at':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -107,12 +107,12 @@ class Webstream(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'mime':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -127,12 +127,12 @@ class Webstream(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'owner':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -233,7 +233,7 @@ class Webstream(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         updated_at: typing.Union[MetaOapg.properties.updated_at, str, datetime, ],
         length: typing.Union[MetaOapg.properties.length, str, ],
         name: typing.Union[MetaOapg.properties.name, str, ],
@@ -249,7 +249,7 @@ class Webstream(
     ) -> 'Webstream':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             updated_at=updated_at,
             length=length,
             name=name,

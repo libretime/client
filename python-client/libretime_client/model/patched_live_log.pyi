@@ -61,12 +61,12 @@ class PatchedLiveLog(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'end_time':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -117,7 +117,7 @@ class PatchedLiveLog(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         state: typing.Union[MetaOapg.properties.state, str, schemas.Unset] = schemas.unset,
         start_time: typing.Union[MetaOapg.properties.start_time, str, datetime, schemas.Unset] = schemas.unset,
@@ -127,7 +127,7 @@ class PatchedLiveLog(
     ) -> 'PatchedLiveLog':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             state=state,
             start_time=start_time,

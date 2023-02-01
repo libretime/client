@@ -58,12 +58,12 @@ class PatchedThirdPartyTrackReference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'foreign_id':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -83,12 +83,12 @@ class PatchedThirdPartyTrackReference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'upload_time':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -106,12 +106,12 @@ class PatchedThirdPartyTrackReference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'status':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -126,12 +126,12 @@ class PatchedThirdPartyTrackReference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'file':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -196,7 +196,7 @@ class PatchedThirdPartyTrackReference(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         service: typing.Union[MetaOapg.properties.service, str, schemas.Unset] = schemas.unset,
         foreign_id: typing.Union[MetaOapg.properties.foreign_id, None, str, schemas.Unset] = schemas.unset,
@@ -208,7 +208,7 @@ class PatchedThirdPartyTrackReference(
     ) -> 'PatchedThirdPartyTrackReference':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             service=service,
             foreign_id=foreign_id,

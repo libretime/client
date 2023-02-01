@@ -119,7 +119,7 @@ class UserToken(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         created: typing.Union[MetaOapg.properties.created, str, datetime, ],
         action: typing.Union[MetaOapg.properties.action, str, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
@@ -130,7 +130,7 @@ class UserToken(
     ) -> 'UserToken':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             created=created,
             action=action,
             id=id,

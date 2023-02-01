@@ -80,7 +80,7 @@ class PatchedShowHost(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         show: typing.Union[MetaOapg.properties.show, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         user: typing.Union[MetaOapg.properties.user, decimal.Decimal, int, schemas.Unset] = schemas.unset,
@@ -89,7 +89,7 @@ class PatchedShowHost(
     ) -> 'PatchedShowHost':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             show=show,
             user=user,

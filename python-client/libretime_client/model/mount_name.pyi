@@ -84,7 +84,7 @@ class MountName(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         mount_name: typing.Union[MetaOapg.properties.mount_name, str, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -92,7 +92,7 @@ class MountName(
     ) -> 'MountName':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             mount_name=mount_name,
             id=id,
             _configuration=_configuration,

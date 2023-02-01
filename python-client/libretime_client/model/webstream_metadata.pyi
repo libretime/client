@@ -104,7 +104,7 @@ class WebstreamMetadata(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         schedule: typing.Union[MetaOapg.properties.schedule, decimal.Decimal, int, ],
         starts_at: typing.Union[MetaOapg.properties.starts_at, str, datetime, ],
         data: typing.Union[MetaOapg.properties.data, str, ],
@@ -114,7 +114,7 @@ class WebstreamMetadata(
     ) -> 'WebstreamMetadata':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             schedule=schedule,
             starts_at=starts_at,
             data=data,

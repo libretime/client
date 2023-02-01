@@ -78,12 +78,12 @@ class CeleryTask(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'name':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -103,12 +103,12 @@ class CeleryTask(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'dispatch_time':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -178,7 +178,7 @@ class CeleryTask(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         task_id: typing.Union[MetaOapg.properties.task_id, str, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         track_reference: typing.Union[MetaOapg.properties.track_reference, decimal.Decimal, int, ],
@@ -190,7 +190,7 @@ class CeleryTask(
     ) -> 'CeleryTask':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             task_id=task_id,
             id=id,
             track_reference=track_reference,

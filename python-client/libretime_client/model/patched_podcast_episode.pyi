@@ -70,12 +70,12 @@ class PatchedPodcastEpisode(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'file':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -154,7 +154,7 @@ class PatchedPodcastEpisode(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         published_at: typing.Union[MetaOapg.properties.published_at, str, datetime, schemas.Unset] = schemas.unset,
         download_url: typing.Union[MetaOapg.properties.download_url, str, schemas.Unset] = schemas.unset,
@@ -168,7 +168,7 @@ class PatchedPodcastEpisode(
     ) -> 'PatchedPodcastEpisode':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             published_at=published_at,
             download_url=download_url,

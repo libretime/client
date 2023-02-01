@@ -106,7 +106,7 @@ class PatchedUserToken(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         action: typing.Union[MetaOapg.properties.action, str, schemas.Unset] = schemas.unset,
         token: typing.Union[MetaOapg.properties.token, str, schemas.Unset] = schemas.unset,
@@ -117,7 +117,7 @@ class PatchedUserToken(
     ) -> 'PatchedUserToken':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             action=action,
             token=token,

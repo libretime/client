@@ -66,12 +66,12 @@ class Library(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'name':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -90,12 +90,12 @@ class Library(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'description':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             enabled = schemas.BoolSchema
@@ -157,7 +157,7 @@ class Library(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         code: typing.Union[MetaOapg.properties.code, str, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         name: typing.Union[MetaOapg.properties.name, None, str, schemas.Unset] = schemas.unset,
@@ -168,7 +168,7 @@ class Library(
     ) -> 'Library':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             code=code,
             id=id,
             name=name,

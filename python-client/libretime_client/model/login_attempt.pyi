@@ -60,12 +60,12 @@ class LoginAttempt(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'attempts':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -104,7 +104,7 @@ class LoginAttempt(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ip: typing.Union[MetaOapg.properties.ip, str, ],
         attempts: typing.Union[MetaOapg.properties.attempts, None, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -112,7 +112,7 @@ class LoginAttempt(
     ) -> 'LoginAttempt':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ip=ip,
             attempts=attempts,
             _configuration=_configuration,

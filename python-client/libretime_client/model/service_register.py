@@ -95,7 +95,7 @@ class ServiceRegister(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ip: typing.Union[MetaOapg.properties.ip, str, ],
         name: typing.Union[MetaOapg.properties.name, str, ],
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -103,7 +103,7 @@ class ServiceRegister(
     ) -> 'ServiceRegister':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ip=ip,
             name=name,
             _configuration=_configuration,

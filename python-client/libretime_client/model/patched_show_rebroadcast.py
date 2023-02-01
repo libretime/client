@@ -96,7 +96,7 @@ class PatchedShowRebroadcast(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         day_offset: typing.Union[MetaOapg.properties.day_offset, str, schemas.Unset] = schemas.unset,
         start_time: typing.Union[MetaOapg.properties.start_time, str, schemas.Unset] = schemas.unset,
@@ -106,7 +106,7 @@ class PatchedShowRebroadcast(
     ) -> 'PatchedShowRebroadcast':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             day_offset=day_offset,
             start_time=start_time,

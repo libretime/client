@@ -55,12 +55,12 @@ class PatchedShowDays(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, date, ],
+                    *_args: typing.Union[None, str, date, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'last_show_on':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             start_time = schemas.StrSchema
@@ -111,13 +111,13 @@ class PatchedShowDays(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'record_enabled':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                         **kwargs,
                     )
@@ -150,13 +150,13 @@ class PatchedShowDays(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'week_day':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                         **kwargs,
                     )
@@ -188,13 +188,13 @@ class PatchedShowDays(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'repeat_kind':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                         **kwargs,
                     )
@@ -215,12 +215,12 @@ class PatchedShowDays(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, date, ],
+                    *_args: typing.Union[None, str, date, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'repeat_next_on':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             show = schemas.IntSchema
@@ -321,7 +321,7 @@ class PatchedShowDays(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         first_show_on: typing.Union[MetaOapg.properties.first_show_on, str, date, schemas.Unset] = schemas.unset,
         last_show_on: typing.Union[MetaOapg.properties.last_show_on, None, str, date, schemas.Unset] = schemas.unset,
@@ -338,7 +338,7 @@ class PatchedShowDays(
     ) -> 'PatchedShowDays':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             first_show_on=first_show_on,
             last_show_on=last_show_on,

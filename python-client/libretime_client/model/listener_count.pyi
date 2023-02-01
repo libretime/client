@@ -104,7 +104,7 @@ class ListenerCount(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         mount_name: typing.Union[MetaOapg.properties.mount_name, decimal.Decimal, int, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         listener_count: typing.Union[MetaOapg.properties.listener_count, decimal.Decimal, int, ],
@@ -114,7 +114,7 @@ class ListenerCount(
     ) -> 'ListenerCount':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             mount_name=mount_name,
             id=id,
             listener_count=listener_count,

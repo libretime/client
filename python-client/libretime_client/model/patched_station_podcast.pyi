@@ -72,7 +72,7 @@ class PatchedStationPodcast(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         podcast: typing.Union[MetaOapg.properties.podcast, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -80,7 +80,7 @@ class PatchedStationPodcast(
     ) -> 'PatchedStationPodcast':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             podcast=podcast,
             _configuration=_configuration,

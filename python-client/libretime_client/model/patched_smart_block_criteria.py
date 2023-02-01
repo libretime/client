@@ -54,12 +54,12 @@ class PatchedSmartBlockCriteria(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'group':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -105,12 +105,12 @@ class PatchedSmartBlockCriteria(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'extra':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             block = schemas.IntSchema
@@ -183,7 +183,7 @@ class PatchedSmartBlockCriteria(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         group: typing.Union[MetaOapg.properties.group, None, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         criteria: typing.Union[MetaOapg.properties.criteria, str, schemas.Unset] = schemas.unset,
@@ -196,7 +196,7 @@ class PatchedSmartBlockCriteria(
     ) -> 'PatchedSmartBlockCriteria':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             group=group,
             criteria=criteria,

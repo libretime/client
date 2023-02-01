@@ -88,7 +88,7 @@ class PatchedServiceRegister(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         ip: typing.Union[MetaOapg.properties.ip, str, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -96,7 +96,7 @@ class PatchedServiceRegister(
     ) -> 'PatchedServiceRegister':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             name=name,
             ip=ip,
             _configuration=_configuration,

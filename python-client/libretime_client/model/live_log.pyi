@@ -66,12 +66,12 @@ class LiveLog(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'end_time':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -126,7 +126,7 @@ class LiveLog(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         start_time: typing.Union[MetaOapg.properties.start_time, str, datetime, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         state: typing.Union[MetaOapg.properties.state, str, ],
@@ -136,7 +136,7 @@ class LiveLog(
     ) -> 'LiveLog':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             start_time=start_time,
             id=id,
             state=state,

@@ -89,12 +89,12 @@ class SmartBlockCriteria(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'group':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -113,12 +113,12 @@ class SmartBlockCriteria(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'extra':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -196,7 +196,7 @@ class SmartBlockCriteria(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         condition: typing.Union[MetaOapg.properties.condition, str, ],
         criteria: typing.Union[MetaOapg.properties.criteria, str, ],
         block: typing.Union[MetaOapg.properties.block, decimal.Decimal, int, ],
@@ -209,7 +209,7 @@ class SmartBlockCriteria(
     ) -> 'SmartBlockCriteria':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             condition=condition,
             criteria=criteria,
             block=block,

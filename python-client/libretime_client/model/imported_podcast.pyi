@@ -63,12 +63,12 @@ class ImportedPodcast(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'auto_ingested_at':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -131,7 +131,7 @@ class ImportedPodcast(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         podcast: typing.Union[MetaOapg.properties.podcast, decimal.Decimal, int, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, ],
         auto_ingest: typing.Union[MetaOapg.properties.auto_ingest, bool, ],
@@ -142,7 +142,7 @@ class ImportedPodcast(
     ) -> 'ImportedPodcast':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             podcast=podcast,
             id=id,
             auto_ingest=auto_ingest,

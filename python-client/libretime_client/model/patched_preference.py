@@ -53,12 +53,12 @@ class PatchedPreference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'key':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -73,12 +73,12 @@ class PatchedPreference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'value':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -93,12 +93,12 @@ class PatchedPreference(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'user':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -149,7 +149,7 @@ class PatchedPreference(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         key: typing.Union[MetaOapg.properties.key, None, str, schemas.Unset] = schemas.unset,
         value: typing.Union[MetaOapg.properties.value, None, str, schemas.Unset] = schemas.unset,
@@ -159,7 +159,7 @@ class PatchedPreference(
     ) -> 'PatchedPreference':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             key=key,
             value=value,

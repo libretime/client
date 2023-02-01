@@ -96,7 +96,7 @@ class PatchedPlayoutHistoryTemplate(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         type: typing.Union[MetaOapg.properties.type, str, schemas.Unset] = schemas.unset,
@@ -105,7 +105,7 @@ class PatchedPlayoutHistoryTemplate(
     ) -> 'PatchedPlayoutHistoryTemplate':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             name=name,
             type=type,
