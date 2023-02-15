@@ -50,5 +50,11 @@ export interface PatchedLibrary {
      * @memberof PatchedLibrary
      */
     'enabled'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedLibrary
+     */
+    'analyze_cue_points'?: boolean;
 }
 

@@ -99,12 +99,14 @@ class Library(
                         _configuration=_configuration,
                     )
             enabled = schemas.BoolSchema
+            analyze_cue_points = schemas.BoolSchema
             __annotations__ = {
                 "id": id,
                 "code": code,
                 "name": name,
                 "description": description,
                 "enabled": enabled,
+                "analyze_cue_points": analyze_cue_points,
             }
     
     code: MetaOapg.properties.code
@@ -126,9 +128,12 @@ class Library(
     def __getitem__(self, name: typing_extensions.Literal["enabled"]) -> MetaOapg.properties.enabled: ...
     
     @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["analyze_cue_points"]) -> MetaOapg.properties.analyze_cue_points: ...
+    
+    @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "code", "name", "description", "enabled", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "code", "name", "description", "enabled", "analyze_cue_points", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -149,9 +154,12 @@ class Library(
     def get_item_oapg(self, name: typing_extensions.Literal["enabled"]) -> typing.Union[MetaOapg.properties.enabled, schemas.Unset]: ...
     
     @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["analyze_cue_points"]) -> typing.Union[MetaOapg.properties.analyze_cue_points, schemas.Unset]: ...
+    
+    @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "code", "name", "description", "enabled", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "code", "name", "description", "enabled", "analyze_cue_points", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -163,6 +171,7 @@ class Library(
         name: typing.Union[MetaOapg.properties.name, None, str, schemas.Unset] = schemas.unset,
         description: typing.Union[MetaOapg.properties.description, None, str, schemas.Unset] = schemas.unset,
         enabled: typing.Union[MetaOapg.properties.enabled, bool, schemas.Unset] = schemas.unset,
+        analyze_cue_points: typing.Union[MetaOapg.properties.analyze_cue_points, bool, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'Library':
@@ -174,6 +183,7 @@ class Library(
             name=name,
             description=description,
             enabled=enabled,
+            analyze_cue_points=analyze_cue_points,
             _configuration=_configuration,
             **kwargs,
         )

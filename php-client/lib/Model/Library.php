@@ -61,7 +61,8 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'code' => 'string',
         'description' => 'string',
-        'enabled' => 'bool'
+        'enabled' => 'bool',
+        'analyze_cue_points' => 'bool'
     ];
 
     /**
@@ -76,7 +77,8 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'code' => null,
         'description' => null,
-        'enabled' => null
+        'enabled' => null,
+        'analyze_cue_points' => null
     ];
 
     /**
@@ -89,7 +91,8 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
 		'name' => true,
 		'code' => false,
 		'description' => true,
-		'enabled' => false
+		'enabled' => false,
+		'analyze_cue_points' => false
     ];
 
     /**
@@ -182,7 +185,8 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'code' => 'code',
         'description' => 'description',
-        'enabled' => 'enabled'
+        'enabled' => 'enabled',
+        'analyze_cue_points' => 'analyze_cue_points'
     ];
 
     /**
@@ -195,7 +199,8 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'code' => 'setCode',
         'description' => 'setDescription',
-        'enabled' => 'setEnabled'
+        'enabled' => 'setEnabled',
+        'analyze_cue_points' => 'setAnalyzeCuePoints'
     ];
 
     /**
@@ -208,7 +213,8 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'code' => 'getCode',
         'description' => 'getDescription',
-        'enabled' => 'getEnabled'
+        'enabled' => 'getEnabled',
+        'analyze_cue_points' => 'getAnalyzeCuePoints'
     ];
 
     /**
@@ -273,6 +279,7 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('code', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('enabled', $data ?? [], null);
+        $this->setIfExists('analyze_cue_points', $data ?? [], null);
     }
 
     /**
@@ -492,6 +499,33 @@ class Library implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
         }
         $this->container['enabled'] = $enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets analyze_cue_points
+     *
+     * @return bool|null
+     */
+    public function getAnalyzeCuePoints()
+    {
+        return $this->container['analyze_cue_points'];
+    }
+
+    /**
+     * Sets analyze_cue_points
+     *
+     * @param bool|null $analyze_cue_points analyze_cue_points
+     *
+     * @return self
+     */
+    public function setAnalyzeCuePoints($analyze_cue_points)
+    {
+        if (is_null($analyze_cue_points)) {
+            throw new \InvalidArgumentException('non-nullable analyze_cue_points cannot be null');
+        }
+        $this->container['analyze_cue_points'] = $analyze_cue_points;
 
         return $this;
     }

@@ -61,6 +61,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         code="code_example",
         description="description_example",
         enabled=True,
+        analyze_cue_points=True,
     )
     try:
         api_response = api_instance.libraries_create(
@@ -371,6 +372,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         code="code_example",
         description="description_example",
         enabled=True,
+        analyze_cue_points=True,
     )
     try:
         api_response = api_instance.libraries_partial_update(
@@ -609,6 +611,7 @@ with libretime_client.ApiClient(configuration) as api_client:
         code="code_example",
         description="description_example",
         enabled=True,
+        analyze_cue_points=True,
     )
     try:
         api_response = api_instance.libraries_update(

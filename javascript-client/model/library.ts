@@ -50,5 +50,11 @@ export interface Library {
      * @memberof Library
      */
     'enabled'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof Library
+     */
+    'analyze_cue_points'?: boolean;
 }
 
