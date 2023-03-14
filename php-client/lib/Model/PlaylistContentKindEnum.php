@@ -33,6 +33,7 @@ use \Libretime\Client\ObjectSerializer;
  * PlaylistContentKindEnum Class Doc Comment
  *
  * @category Class
+ * @description * &#x60;0&#x60; - Success * &#x60;1&#x60; - Pending * &#x60;2&#x60; - Failed
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

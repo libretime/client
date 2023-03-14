@@ -31,6 +31,12 @@ class RepeatKindEnum(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    * `0` - Every week
+* `1` - Every 2 weeks
+* `4` - Every 3 weeks
+* `5` - Every 4 weeks
+* `2` - Every month
     """
     
     @schemas.classproperty

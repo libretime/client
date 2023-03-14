@@ -31,6 +31,10 @@ class PlaylistContentKindEnum(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    * `0` - Success
+* `1` - Pending
+* `2` - Failed
     """
     
     @schemas.classproperty

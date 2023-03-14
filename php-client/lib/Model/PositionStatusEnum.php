@@ -33,6 +33,7 @@ use \Libretime\Client\ObjectSerializer;
  * PositionStatusEnum Class Doc Comment
  *
  * @category Class
+ * @description * &#x60;-1&#x60; - Filler * &#x60;0&#x60; - Outside * &#x60;1&#x60; - Inside * &#x60;2&#x60; - Boundary
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

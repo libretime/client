@@ -15,7 +15,7 @@
 
 
 /**
- * 
+ * * `G` - Guest * `H` - Host * `P` - Manager * `A` - Admin
  * @export
  * @enum {string}
  */

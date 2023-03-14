@@ -31,6 +31,9 @@ class RecordEnabledEnum(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    * `0` - No
+* `1` - Yes
     """
 
 

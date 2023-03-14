@@ -31,6 +31,11 @@ class RoleEnum(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
+
+    * `G` - Guest
+* `H` - Host
+* `P` - Manager
+* `A` - Admin
     """
     
     @schemas.classproperty

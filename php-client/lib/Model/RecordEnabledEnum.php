@@ -33,6 +33,7 @@ use \Libretime\Client\ObjectSerializer;
  * RecordEnabledEnum Class Doc Comment
  *
  * @category Class
+ * @description * &#x60;0&#x60; - No * &#x60;1&#x60; - Yes
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

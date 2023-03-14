@@ -33,6 +33,7 @@ use \Libretime\Client\ObjectSerializer;
  * SmartBlockKindEnum Class Doc Comment
  *
  * @category Class
+ * @description * &#x60;static&#x60; - Static * &#x60;dynamic&#x60; - Dynamic
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

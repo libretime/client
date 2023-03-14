@@ -15,7 +15,7 @@
 
 
 /**
- * 
+ * * `0` - No * `1` - Yes
  * @export
  * @enum {string}
  */

@@ -33,6 +33,7 @@ use \Libretime\Client\ObjectSerializer;
  * RoleEnum Class Doc Comment
  *
  * @category Class
+ * @description * &#x60;G&#x60; - Guest * &#x60;H&#x60; - Host * &#x60;P&#x60; - Manager * &#x60;A&#x60; - Admin
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

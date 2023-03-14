@@ -15,7 +15,7 @@
 
 
 /**
- * 
+ * * `static` - Static * `dynamic` - Dynamic
  * @export
  * @enum {string}
  */

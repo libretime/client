@@ -33,6 +33,7 @@ use \Libretime\Client\ObjectSerializer;
  * RepeatKindEnum Class Doc Comment
  *
  * @category Class
+ * @description * &#x60;0&#x60; - Every week * &#x60;1&#x60; - Every 2 weeks * &#x60;4&#x60; - Every 3 weeks * &#x60;5&#x60; - Every 4 weeks * &#x60;2&#x60; - Every month
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
