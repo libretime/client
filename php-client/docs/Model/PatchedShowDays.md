@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **duration** | **string** |  | [optional]
 **record_enabled** | [**\Libretime\Client\Model\PatchedShowDaysRecordEnabled**](PatchedShowDaysRecordEnabled.md) |  | [optional]
 **week_day** | [**\Libretime\Client\Model\PatchedShowDaysWeekDay**](PatchedShowDaysWeekDay.md) |  | [optional]
-**repeat_kind** | [**RepeatKindEnum**](RepeatKindEnum.md) |  | [optional]
+**repeat_kind** | [**\Libretime\Client\Model\RepeatKindEnum**](RepeatKindEnum.md) |  | [optional]
 **repeat_next_on** | **\DateTime** |  | [optional]
 **show** | **int** |  | [optional]
 

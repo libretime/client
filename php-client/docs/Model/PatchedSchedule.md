@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **fade_out** | **string** |  | [optional]
 **cue_in** | **string** |  | [optional]
 **position** | **int** |  | [optional]
-**position_status** | [**PositionStatusEnum**](PositionStatusEnum.md) |  | [optional]
+**position_status** | [**\Libretime\Client\Model\PositionStatusEnum**](PositionStatusEnum.md) |  | [optional]
 **broadcasted** | **int** |  | [optional]
 **played** | **bool** |  | [optional]
 **instance** | **int** |  | [optional]

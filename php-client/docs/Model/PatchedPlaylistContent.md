@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
-**kind** | [**PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  | [optional]
+**kind** | [**\Libretime\Client\Model\PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  | [optional]
 **position** | **int** |  | [optional]
 **offset** | **float** |  | [optional]
 **length** | **string** |  | [optional]
