@@ -92,6 +92,10 @@ class LangSchema(
         return cls("ca")
     
     @schemas.classproperty
+    def CKB(cls):
+        return cls("ckb")
+    
+    @schemas.classproperty
     def CS(cls):
         return cls("cs")
     

@@ -70,6 +70,7 @@ class LangSchema(
             "br": "BR",
             "bs": "BS",
             "ca": "CA",
+            "ckb": "CKB",
             "cs": "CS",
             "cy": "CY",
             "da": "DA",
@@ -201,6 +202,10 @@ class LangSchema(
     @schemas.classproperty
     def CA(cls):
         return cls("ca")
+    
+    @schemas.classproperty
+    def CKB(cls):
+        return cls("ckb")
     
     @schemas.classproperty
     def CS(cls):
