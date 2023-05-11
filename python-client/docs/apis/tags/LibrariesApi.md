@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.libraries_api.LibrariesApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**libraries_update**](#libraries_update) | **put** /api/v2/libraries/{id} | 
 
 # **libraries_create**
-<a name="libraries_create"></a>
+<a id="libraries_create"></a>
 > Library libraries_create(library)
 
 
@@ -129,7 +129,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **libraries_destroy**
-<a name="libraries_destroy"></a>
+<a id="libraries_destroy"></a>
 > libraries_destroy(id)
 
 
@@ -224,7 +224,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **libraries_list**
-<a name="libraries_list"></a>
+<a id="libraries_list"></a>
 > [Library] libraries_list()
 
 
@@ -308,7 +308,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **libraries_partial_update**
-<a name="libraries_partial_update"></a>
+<a id="libraries_partial_update"></a>
 > Library libraries_partial_update(id)
 
 
@@ -456,7 +456,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **libraries_retrieve**
-<a name="libraries_retrieve"></a>
+<a id="libraries_retrieve"></a>
 > Library libraries_retrieve(id)
 
 
@@ -560,7 +560,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **libraries_update**
-<a name="libraries_update"></a>
+<a id="libraries_update"></a>
 > Library libraries_update(idlibrary)
 
 

@@ -383,10 +383,10 @@ Class | Method | HTTP request | Description
 
 ## Authorization
 
+Authentication schemes defined for the API:
 ### basicAuth
 
 - **Type**: HTTP basic authentication
-
 
 ### cookieAuth
 

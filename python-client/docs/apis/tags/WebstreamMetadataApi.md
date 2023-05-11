@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.webstream_metadata_api.WebstreamMetadataApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**webstream_metadata_update**](#webstream_metadata_update) | **put** /api/v2/webstream-metadata/{id} | 
 
 # **webstream_metadata_create**
-<a name="webstream_metadata_create"></a>
+<a id="webstream_metadata_create"></a>
 > WebstreamMetadata webstream_metadata_create(webstream_metadata)
 
 
@@ -127,7 +127,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstream_metadata_destroy**
-<a name="webstream_metadata_destroy"></a>
+<a id="webstream_metadata_destroy"></a>
 > webstream_metadata_destroy(id)
 
 
@@ -222,7 +222,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstream_metadata_list**
-<a name="webstream_metadata_list"></a>
+<a id="webstream_metadata_list"></a>
 > [WebstreamMetadata] webstream_metadata_list()
 
 
@@ -306,7 +306,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstream_metadata_partial_update**
-<a name="webstream_metadata_partial_update"></a>
+<a id="webstream_metadata_partial_update"></a>
 > WebstreamMetadata webstream_metadata_partial_update(id)
 
 
@@ -452,7 +452,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstream_metadata_retrieve**
-<a name="webstream_metadata_retrieve"></a>
+<a id="webstream_metadata_retrieve"></a>
 > WebstreamMetadata webstream_metadata_retrieve(id)
 
 
@@ -556,7 +556,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstream_metadata_update**
-<a name="webstream_metadata_update"></a>
+<a id="webstream_metadata_update"></a>
 > WebstreamMetadata webstream_metadata_update(idwebstream_metadata)
 
 

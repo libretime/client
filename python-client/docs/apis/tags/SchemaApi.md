@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.schema_api.SchemaApi
 
 All URIs are relative to *http://localhost*
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**schema_retrieve**](#schema_retrieve) | **get** /api/v2/schema | 
 
 # **schema_retrieve**
-<a name="schema_retrieve"></a>
+<a id="schema_retrieve"></a>
 > {str: (bool, date, datetime, dict, float, int, list, str, none_type)} schema_retrieve()
 
 

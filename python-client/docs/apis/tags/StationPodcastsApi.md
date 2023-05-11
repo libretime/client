@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.station_podcasts_api.StationPodcastsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**station_podcasts_update**](#station_podcasts_update) | **put** /api/v2/station-podcasts/{id} | 
 
 # **station_podcasts_create**
-<a name="station_podcasts_create"></a>
+<a id="station_podcasts_create"></a>
 > StationPodcast station_podcasts_create(station_podcast)
 
 
@@ -125,7 +125,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **station_podcasts_destroy**
-<a name="station_podcasts_destroy"></a>
+<a id="station_podcasts_destroy"></a>
 > station_podcasts_destroy(id)
 
 
@@ -220,7 +220,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **station_podcasts_list**
-<a name="station_podcasts_list"></a>
+<a id="station_podcasts_list"></a>
 > [StationPodcast] station_podcasts_list()
 
 
@@ -304,7 +304,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **station_podcasts_partial_update**
-<a name="station_podcasts_partial_update"></a>
+<a id="station_podcasts_partial_update"></a>
 > StationPodcast station_podcasts_partial_update(id)
 
 
@@ -448,7 +448,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **station_podcasts_retrieve**
-<a name="station_podcasts_retrieve"></a>
+<a id="station_podcasts_retrieve"></a>
 > StationPodcast station_podcasts_retrieve(id)
 
 
@@ -552,7 +552,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **station_podcasts_update**
-<a name="station_podcasts_update"></a>
+<a id="station_podcasts_update"></a>
 > StationPodcast station_podcasts_update(idstation_podcast)
 
 

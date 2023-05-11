@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.info_api.InfoApi
 
 All URIs are relative to *http://localhost*
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**info_retrieve**](#info_retrieve) | **get** /api/v2/info | 
 
 # **info_retrieve**
-<a name="info_retrieve"></a>
+<a id="info_retrieve"></a>
 > Info info_retrieve()
 
 

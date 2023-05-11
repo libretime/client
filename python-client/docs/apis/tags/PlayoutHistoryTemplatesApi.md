@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.playout_history_templates_api.PlayoutHistoryTemplatesApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**playout_history_templates_update**](#playout_history_templates_update) | **put** /api/v2/playout-history-templates/{id} | 
 
 # **playout_history_templates_create**
-<a name="playout_history_templates_create"></a>
+<a id="playout_history_templates_create"></a>
 > PlayoutHistoryTemplate playout_history_templates_create(playout_history_template)
 
 
@@ -126,7 +126,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_templates_destroy**
-<a name="playout_history_templates_destroy"></a>
+<a id="playout_history_templates_destroy"></a>
 > playout_history_templates_destroy(id)
 
 
@@ -221,7 +221,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_templates_list**
-<a name="playout_history_templates_list"></a>
+<a id="playout_history_templates_list"></a>
 > [PlayoutHistoryTemplate] playout_history_templates_list()
 
 
@@ -305,7 +305,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_templates_partial_update**
-<a name="playout_history_templates_partial_update"></a>
+<a id="playout_history_templates_partial_update"></a>
 > PlayoutHistoryTemplate playout_history_templates_partial_update(id)
 
 
@@ -450,7 +450,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_templates_retrieve**
-<a name="playout_history_templates_retrieve"></a>
+<a id="playout_history_templates_retrieve"></a>
 > PlayoutHistoryTemplate playout_history_templates_retrieve(id)
 
 
@@ -554,7 +554,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_templates_update**
-<a name="playout_history_templates_update"></a>
+<a id="playout_history_templates_update"></a>
 > PlayoutHistoryTemplate playout_history_templates_update(idplayout_history_template)
 
 

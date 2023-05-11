@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.listener_counts_api.ListenerCountsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**listener_counts_update**](#listener_counts_update) | **put** /api/v2/listener-counts/{id} | 
 
 # **listener_counts_create**
-<a name="listener_counts_create"></a>
+<a id="listener_counts_create"></a>
 > ListenerCount listener_counts_create(listener_count)
 
 
@@ -127,7 +127,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **listener_counts_destroy**
-<a name="listener_counts_destroy"></a>
+<a id="listener_counts_destroy"></a>
 > listener_counts_destroy(id)
 
 
@@ -222,7 +222,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **listener_counts_list**
-<a name="listener_counts_list"></a>
+<a id="listener_counts_list"></a>
 > [ListenerCount] listener_counts_list()
 
 
@@ -306,7 +306,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **listener_counts_partial_update**
-<a name="listener_counts_partial_update"></a>
+<a id="listener_counts_partial_update"></a>
 > ListenerCount listener_counts_partial_update(id)
 
 
@@ -452,7 +452,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **listener_counts_retrieve**
-<a name="listener_counts_retrieve"></a>
+<a id="listener_counts_retrieve"></a>
 > ListenerCount listener_counts_retrieve(id)
 
 
@@ -556,7 +556,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **listener_counts_update**
-<a name="listener_counts_update"></a>
+<a id="listener_counts_update"></a>
 > ListenerCount listener_counts_update(idlistener_count)
 
 

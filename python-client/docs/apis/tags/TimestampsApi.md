@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.timestamps_api.TimestampsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**timestamps_update**](#timestamps_update) | **put** /api/v2/timestamps/{id} | 
 
 # **timestamps_create**
-<a name="timestamps_create"></a>
+<a id="timestamps_create"></a>
 > Timestamp timestamps_create(timestamp)
 
 
@@ -125,7 +125,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **timestamps_destroy**
-<a name="timestamps_destroy"></a>
+<a id="timestamps_destroy"></a>
 > timestamps_destroy(id)
 
 
@@ -220,7 +220,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **timestamps_list**
-<a name="timestamps_list"></a>
+<a id="timestamps_list"></a>
 > [Timestamp] timestamps_list()
 
 
@@ -304,7 +304,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **timestamps_partial_update**
-<a name="timestamps_partial_update"></a>
+<a id="timestamps_partial_update"></a>
 > Timestamp timestamps_partial_update(id)
 
 
@@ -448,7 +448,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **timestamps_retrieve**
-<a name="timestamps_retrieve"></a>
+<a id="timestamps_retrieve"></a>
 > Timestamp timestamps_retrieve(id)
 
 
@@ -552,7 +552,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **timestamps_update**
-<a name="timestamps_update"></a>
+<a id="timestamps_update"></a>
 > Timestamp timestamps_update(idtimestamp)
 
 

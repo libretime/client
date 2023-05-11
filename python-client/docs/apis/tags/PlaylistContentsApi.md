@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.playlist_contents_api.PlaylistContentsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**playlist_contents_update**](#playlist_contents_update) | **put** /api/v2/playlist-contents/{id} | 
 
 # **playlist_contents_create**
-<a name="playlist_contents_create"></a>
+<a id="playlist_contents_create"></a>
 > PlaylistContent playlist_contents_create(playlist_content)
 
 
@@ -136,7 +136,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlist_contents_destroy**
-<a name="playlist_contents_destroy"></a>
+<a id="playlist_contents_destroy"></a>
 > playlist_contents_destroy(id)
 
 
@@ -231,7 +231,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlist_contents_list**
-<a name="playlist_contents_list"></a>
+<a id="playlist_contents_list"></a>
 > [PlaylistContent] playlist_contents_list()
 
 
@@ -315,7 +315,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlist_contents_partial_update**
-<a name="playlist_contents_partial_update"></a>
+<a id="playlist_contents_partial_update"></a>
 > PlaylistContent playlist_contents_partial_update(id)
 
 
@@ -470,7 +470,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlist_contents_retrieve**
-<a name="playlist_contents_retrieve"></a>
+<a id="playlist_contents_retrieve"></a>
 > PlaylistContent playlist_contents_retrieve(id)
 
 
@@ -574,7 +574,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlist_contents_update**
-<a name="playlist_contents_update"></a>
+<a id="playlist_contents_update"></a>
 > PlaylistContent playlist_contents_update(idplaylist_content)
 
 

@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.webstreams_api.WebstreamsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**webstreams_update**](#webstreams_update) | **put** /api/v2/webstreams/{id} | 
 
 # **webstreams_create**
-<a name="webstreams_create"></a>
+<a id="webstreams_create"></a>
 > Webstream webstreams_create(webstream)
 
 
@@ -133,7 +133,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstreams_destroy**
-<a name="webstreams_destroy"></a>
+<a id="webstreams_destroy"></a>
 > webstreams_destroy(id)
 
 
@@ -228,7 +228,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstreams_list**
-<a name="webstreams_list"></a>
+<a id="webstreams_list"></a>
 > [Webstream] webstreams_list()
 
 
@@ -312,7 +312,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstreams_partial_update**
-<a name="webstreams_partial_update"></a>
+<a id="webstreams_partial_update"></a>
 > Webstream webstreams_partial_update(id)
 
 
@@ -464,7 +464,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstreams_retrieve**
-<a name="webstreams_retrieve"></a>
+<a id="webstreams_retrieve"></a>
 > Webstream webstreams_retrieve(id)
 
 
@@ -568,7 +568,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **webstreams_update**
-<a name="webstreams_update"></a>
+<a id="webstreams_update"></a>
 > Webstream webstreams_update(idwebstream)
 
 

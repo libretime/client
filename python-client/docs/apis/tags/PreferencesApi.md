@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.preferences_api.PreferencesApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**preferences_update**](#preferences_update) | **put** /api/v2/preferences/{id} | 
 
 # **preferences_create**
-<a name="preferences_create"></a>
+<a id="preferences_create"></a>
 > Preference preferences_create(preference)
 
 
@@ -127,7 +127,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **preferences_destroy**
-<a name="preferences_destroy"></a>
+<a id="preferences_destroy"></a>
 > preferences_destroy(id)
 
 
@@ -222,7 +222,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **preferences_list**
-<a name="preferences_list"></a>
+<a id="preferences_list"></a>
 > [Preference] preferences_list()
 
 
@@ -306,7 +306,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **preferences_partial_update**
-<a name="preferences_partial_update"></a>
+<a id="preferences_partial_update"></a>
 > Preference preferences_partial_update(id)
 
 
@@ -452,7 +452,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **preferences_retrieve**
-<a name="preferences_retrieve"></a>
+<a id="preferences_retrieve"></a>
 > Preference preferences_retrieve(id)
 
 
@@ -556,7 +556,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **preferences_update**
-<a name="preferences_update"></a>
+<a id="preferences_update"></a>
 > Preference preferences_update(idpreference)
 
 

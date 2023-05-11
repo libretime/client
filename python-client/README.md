@@ -489,13 +489,14 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
-
-## basicAuth
+Authentication schemes defined for the API:
+<a id="basicAuth"></a>
+### basicAuth
 
 - **Type**: HTTP basic authentication
 
- Authentication schemes defined for the API:
-## cookieAuth
+<a id="cookieAuth"></a>
+### cookieAuth
 
 - **Type**: API key
 - **API key parameter name**: sessionid

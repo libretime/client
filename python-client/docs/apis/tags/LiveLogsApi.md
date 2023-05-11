@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.live_logs_api.LiveLogsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**live_logs_update**](#live_logs_update) | **put** /api/v2/live-logs/{id} | 
 
 # **live_logs_create**
-<a name="live_logs_create"></a>
+<a id="live_logs_create"></a>
 > LiveLog live_logs_create(live_log)
 
 
@@ -127,7 +127,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **live_logs_destroy**
-<a name="live_logs_destroy"></a>
+<a id="live_logs_destroy"></a>
 > live_logs_destroy(id)
 
 
@@ -222,7 +222,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **live_logs_list**
-<a name="live_logs_list"></a>
+<a id="live_logs_list"></a>
 > [LiveLog] live_logs_list()
 
 
@@ -306,7 +306,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **live_logs_partial_update**
-<a name="live_logs_partial_update"></a>
+<a id="live_logs_partial_update"></a>
 > LiveLog live_logs_partial_update(id)
 
 
@@ -452,7 +452,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **live_logs_retrieve**
-<a name="live_logs_retrieve"></a>
+<a id="live_logs_retrieve"></a>
 > LiveLog live_logs_retrieve(id)
 
 
@@ -556,7 +556,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **live_logs_update**
-<a name="live_logs_update"></a>
+<a id="live_logs_update"></a>
 > LiveLog live_logs_update(idlive_log)
 
 

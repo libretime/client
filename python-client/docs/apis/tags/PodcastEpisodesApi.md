@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.podcast_episodes_api.PodcastEpisodesApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**podcast_episodes_update**](#podcast_episodes_update) | **put** /api/v2/podcast-episodes/{id} | 
 
 # **podcast_episodes_create**
-<a name="podcast_episodes_create"></a>
+<a id="podcast_episodes_create"></a>
 > PodcastEpisode podcast_episodes_create(podcast_episode)
 
 
@@ -131,7 +131,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcast_episodes_destroy**
-<a name="podcast_episodes_destroy"></a>
+<a id="podcast_episodes_destroy"></a>
 > podcast_episodes_destroy(id)
 
 
@@ -226,7 +226,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcast_episodes_list**
-<a name="podcast_episodes_list"></a>
+<a id="podcast_episodes_list"></a>
 > [PodcastEpisode] podcast_episodes_list()
 
 
@@ -310,7 +310,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcast_episodes_partial_update**
-<a name="podcast_episodes_partial_update"></a>
+<a id="podcast_episodes_partial_update"></a>
 > PodcastEpisode podcast_episodes_partial_update(id)
 
 
@@ -460,7 +460,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcast_episodes_retrieve**
-<a name="podcast_episodes_retrieve"></a>
+<a id="podcast_episodes_retrieve"></a>
 > PodcastEpisode podcast_episodes_retrieve(id)
 
 
@@ -564,7 +564,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcast_episodes_update**
-<a name="podcast_episodes_update"></a>
+<a id="podcast_episodes_update"></a>
 > PodcastEpisode podcast_episodes_update(idpodcast_episode)
 
 

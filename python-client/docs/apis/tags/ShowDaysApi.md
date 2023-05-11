@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.show_days_api.ShowDaysApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**show_days_update**](#show_days_update) | **put** /api/v2/show-days/{id} | 
 
 # **show_days_create**
-<a name="show_days_create"></a>
+<a id="show_days_create"></a>
 > ShowDays show_days_create(show_days)
 
 
@@ -134,7 +134,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_days_destroy**
-<a name="show_days_destroy"></a>
+<a id="show_days_destroy"></a>
 > show_days_destroy(id)
 
 
@@ -229,7 +229,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_days_list**
-<a name="show_days_list"></a>
+<a id="show_days_list"></a>
 > [ShowDays] show_days_list()
 
 
@@ -313,7 +313,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_days_partial_update**
-<a name="show_days_partial_update"></a>
+<a id="show_days_partial_update"></a>
 > ShowDays show_days_partial_update(id)
 
 
@@ -466,7 +466,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_days_retrieve**
-<a name="show_days_retrieve"></a>
+<a id="show_days_retrieve"></a>
 > ShowDays show_days_retrieve(id)
 
 
@@ -570,7 +570,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_days_update**
-<a name="show_days_update"></a>
+<a id="show_days_update"></a>
 > ShowDays show_days_update(idshow_days)
 
 

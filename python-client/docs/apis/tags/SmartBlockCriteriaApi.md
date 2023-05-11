@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.smart_block_criteria_api.SmartBlockCriteriaApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**smart_block_criteria_update**](#smart_block_criteria_update) | **put** /api/v2/smart-block-criteria/{id} | 
 
 # **smart_block_criteria_create**
-<a name="smart_block_criteria_create"></a>
+<a id="smart_block_criteria_create"></a>
 > SmartBlockCriteria smart_block_criteria_create(smart_block_criteria)
 
 
@@ -130,7 +130,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_block_criteria_destroy**
-<a name="smart_block_criteria_destroy"></a>
+<a id="smart_block_criteria_destroy"></a>
 > smart_block_criteria_destroy(id)
 
 
@@ -225,7 +225,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_block_criteria_list**
-<a name="smart_block_criteria_list"></a>
+<a id="smart_block_criteria_list"></a>
 > [SmartBlockCriteria] smart_block_criteria_list()
 
 
@@ -309,7 +309,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_block_criteria_partial_update**
-<a name="smart_block_criteria_partial_update"></a>
+<a id="smart_block_criteria_partial_update"></a>
 > SmartBlockCriteria smart_block_criteria_partial_update(id)
 
 
@@ -458,7 +458,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_block_criteria_retrieve**
-<a name="smart_block_criteria_retrieve"></a>
+<a id="smart_block_criteria_retrieve"></a>
 > SmartBlockCriteria smart_block_criteria_retrieve(id)
 
 
@@ -562,7 +562,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_block_criteria_update**
-<a name="smart_block_criteria_update"></a>
+<a id="smart_block_criteria_update"></a>
 > SmartBlockCriteria smart_block_criteria_update(idsmart_block_criteria)
 
 

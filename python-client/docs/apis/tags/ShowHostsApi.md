@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.show_hosts_api.ShowHostsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**show_hosts_update**](#show_hosts_update) | **put** /api/v2/show-hosts/{id} | 
 
 # **show_hosts_create**
-<a name="show_hosts_create"></a>
+<a id="show_hosts_create"></a>
 > ShowHost show_hosts_create(show_host)
 
 
@@ -126,7 +126,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_hosts_destroy**
-<a name="show_hosts_destroy"></a>
+<a id="show_hosts_destroy"></a>
 > show_hosts_destroy(id)
 
 
@@ -221,7 +221,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_hosts_list**
-<a name="show_hosts_list"></a>
+<a id="show_hosts_list"></a>
 > [ShowHost] show_hosts_list()
 
 
@@ -305,7 +305,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_hosts_partial_update**
-<a name="show_hosts_partial_update"></a>
+<a id="show_hosts_partial_update"></a>
 > ShowHost show_hosts_partial_update(id)
 
 
@@ -450,7 +450,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_hosts_retrieve**
-<a name="show_hosts_retrieve"></a>
+<a id="show_hosts_retrieve"></a>
 > ShowHost show_hosts_retrieve(id)
 
 
@@ -554,7 +554,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_hosts_update**
-<a name="show_hosts_update"></a>
+<a id="show_hosts_update"></a>
 > ShowHost show_hosts_update(idshow_host)
 
 

@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.playout_history_metadata_api.PlayoutHistoryMetadataApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**playout_history_metadata_update**](#playout_history_metadata_update) | **put** /api/v2/playout-history-metadata/{id} | 
 
 # **playout_history_metadata_create**
-<a name="playout_history_metadata_create"></a>
+<a id="playout_history_metadata_create"></a>
 > PlayoutHistoryMetadata playout_history_metadata_create(playout_history_metadata)
 
 
@@ -127,7 +127,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_metadata_destroy**
-<a name="playout_history_metadata_destroy"></a>
+<a id="playout_history_metadata_destroy"></a>
 > playout_history_metadata_destroy(id)
 
 
@@ -222,7 +222,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_metadata_list**
-<a name="playout_history_metadata_list"></a>
+<a id="playout_history_metadata_list"></a>
 > [PlayoutHistoryMetadata] playout_history_metadata_list()
 
 
@@ -306,7 +306,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_metadata_partial_update**
-<a name="playout_history_metadata_partial_update"></a>
+<a id="playout_history_metadata_partial_update"></a>
 > PlayoutHistoryMetadata playout_history_metadata_partial_update(id)
 
 
@@ -452,7 +452,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_metadata_retrieve**
-<a name="playout_history_metadata_retrieve"></a>
+<a id="playout_history_metadata_retrieve"></a>
 > PlayoutHistoryMetadata playout_history_metadata_retrieve(id)
 
 
@@ -556,7 +556,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_metadata_update**
-<a name="playout_history_metadata_update"></a>
+<a id="playout_history_metadata_update"></a>
 > PlayoutHistoryMetadata playout_history_metadata_update(idplayout_history_metadata)
 
 

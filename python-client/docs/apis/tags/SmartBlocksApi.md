@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.smart_blocks_api.SmartBlocksApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**smart_blocks_update**](#smart_blocks_update) | **put** /api/v2/smart-blocks/{id} | 
 
 # **smart_blocks_create**
-<a name="smart_blocks_create"></a>
+<a id="smart_blocks_create"></a>
 > SmartBlock smart_blocks_create(smart_block)
 
 
@@ -131,7 +131,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_blocks_destroy**
-<a name="smart_blocks_destroy"></a>
+<a id="smart_blocks_destroy"></a>
 > smart_blocks_destroy(id)
 
 
@@ -226,7 +226,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_blocks_list**
-<a name="smart_blocks_list"></a>
+<a id="smart_blocks_list"></a>
 > [SmartBlock] smart_blocks_list()
 
 
@@ -310,7 +310,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_blocks_partial_update**
-<a name="smart_blocks_partial_update"></a>
+<a id="smart_blocks_partial_update"></a>
 > SmartBlock smart_blocks_partial_update(id)
 
 
@@ -460,7 +460,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_blocks_retrieve**
-<a name="smart_blocks_retrieve"></a>
+<a id="smart_blocks_retrieve"></a>
 > SmartBlock smart_blocks_retrieve(id)
 
 
@@ -564,7 +564,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **smart_blocks_update**
-<a name="smart_blocks_update"></a>
+<a id="smart_blocks_update"></a>
 > SmartBlock smart_blocks_update(idsmart_block)
 
 

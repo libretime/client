@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.shows_api.ShowsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**shows_update**](#shows_update) | **put** /api/v2/shows/{id} | 
 
 # **shows_create**
-<a name="shows_create"></a>
+<a id="shows_create"></a>
 > Show shows_create(show)
 
 
@@ -137,7 +137,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **shows_destroy**
-<a name="shows_destroy"></a>
+<a id="shows_destroy"></a>
 > shows_destroy(id)
 
 
@@ -232,7 +232,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **shows_list**
-<a name="shows_list"></a>
+<a id="shows_list"></a>
 > [Show] shows_list()
 
 
@@ -316,7 +316,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **shows_partial_update**
-<a name="shows_partial_update"></a>
+<a id="shows_partial_update"></a>
 > Show shows_partial_update(id)
 
 
@@ -472,7 +472,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **shows_retrieve**
-<a name="shows_retrieve"></a>
+<a id="shows_retrieve"></a>
 > Show shows_retrieve(id)
 
 
@@ -576,7 +576,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **shows_update**
-<a name="shows_update"></a>
+<a id="shows_update"></a>
 > Show shows_update(idshow)
 
 

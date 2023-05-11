@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.imported_podcasts_api.ImportedPodcastsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**imported_podcasts_update**](#imported_podcasts_update) | **put** /api/v2/imported-podcasts/{id} | 
 
 # **imported_podcasts_create**
-<a name="imported_podcasts_create"></a>
+<a id="imported_podcasts_create"></a>
 > ImportedPodcast imported_podcasts_create(imported_podcast)
 
 
@@ -128,7 +128,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **imported_podcasts_destroy**
-<a name="imported_podcasts_destroy"></a>
+<a id="imported_podcasts_destroy"></a>
 > imported_podcasts_destroy(id)
 
 
@@ -223,7 +223,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **imported_podcasts_list**
-<a name="imported_podcasts_list"></a>
+<a id="imported_podcasts_list"></a>
 > [ImportedPodcast] imported_podcasts_list()
 
 
@@ -307,7 +307,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **imported_podcasts_partial_update**
-<a name="imported_podcasts_partial_update"></a>
+<a id="imported_podcasts_partial_update"></a>
 > ImportedPodcast imported_podcasts_partial_update(id)
 
 
@@ -454,7 +454,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **imported_podcasts_retrieve**
-<a name="imported_podcasts_retrieve"></a>
+<a id="imported_podcasts_retrieve"></a>
 > ImportedPodcast imported_podcasts_retrieve(id)
 
 
@@ -558,7 +558,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **imported_podcasts_update**
-<a name="imported_podcasts_update"></a>
+<a id="imported_podcasts_update"></a>
 > ImportedPodcast imported_podcasts_update(idimported_podcast)
 
 

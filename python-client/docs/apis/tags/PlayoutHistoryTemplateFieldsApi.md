@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.playout_history_template_fields_api.PlayoutHistoryTemplateFieldsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**playout_history_template_fields_update**](#playout_history_template_fields_update) | **put** /api/v2/playout-history-template-fields/{id} | 
 
 # **playout_history_template_fields_create**
-<a name="playout_history_template_fields_create"></a>
+<a id="playout_history_template_fields_create"></a>
 > PlayoutHistoryTemplateField playout_history_template_fields_create(playout_history_template_field)
 
 
@@ -130,7 +130,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_template_fields_destroy**
-<a name="playout_history_template_fields_destroy"></a>
+<a id="playout_history_template_fields_destroy"></a>
 > playout_history_template_fields_destroy(id)
 
 
@@ -225,7 +225,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_template_fields_list**
-<a name="playout_history_template_fields_list"></a>
+<a id="playout_history_template_fields_list"></a>
 > [PlayoutHistoryTemplateField] playout_history_template_fields_list()
 
 
@@ -309,7 +309,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_template_fields_partial_update**
-<a name="playout_history_template_fields_partial_update"></a>
+<a id="playout_history_template_fields_partial_update"></a>
 > PlayoutHistoryTemplateField playout_history_template_fields_partial_update(id)
 
 
@@ -458,7 +458,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_template_fields_retrieve**
-<a name="playout_history_template_fields_retrieve"></a>
+<a id="playout_history_template_fields_retrieve"></a>
 > PlayoutHistoryTemplateField playout_history_template_fields_retrieve(id)
 
 
@@ -562,7 +562,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playout_history_template_fields_update**
-<a name="playout_history_template_fields_update"></a>
+<a id="playout_history_template_fields_update"></a>
 > PlayoutHistoryTemplateField playout_history_template_fields_update(idplayout_history_template_field)
 
 

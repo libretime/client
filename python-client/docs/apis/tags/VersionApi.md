@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.version_api.VersionApi
 
 All URIs are relative to *http://localhost*
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**version_retrieve**](#version_retrieve) | **get** /api/v2/version | 
 
 # **version_retrieve**
-<a name="version_retrieve"></a>
+<a id="version_retrieve"></a>
 > Version version_retrieve()
 
 

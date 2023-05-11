@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.celery_tasks_api.CeleryTasksApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**celery_tasks_update**](#celery_tasks_update) | **put** /api/v2/celery-tasks/{id} | 
 
 # **celery_tasks_create**
-<a name="celery_tasks_create"></a>
+<a id="celery_tasks_create"></a>
 > CeleryTask celery_tasks_create(celery_task)
 
 
@@ -129,7 +129,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **celery_tasks_destroy**
-<a name="celery_tasks_destroy"></a>
+<a id="celery_tasks_destroy"></a>
 > celery_tasks_destroy(id)
 
 
@@ -224,7 +224,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **celery_tasks_list**
-<a name="celery_tasks_list"></a>
+<a id="celery_tasks_list"></a>
 > [CeleryTask] celery_tasks_list()
 
 
@@ -308,7 +308,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **celery_tasks_partial_update**
-<a name="celery_tasks_partial_update"></a>
+<a id="celery_tasks_partial_update"></a>
 > CeleryTask celery_tasks_partial_update(id)
 
 
@@ -456,7 +456,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **celery_tasks_retrieve**
-<a name="celery_tasks_retrieve"></a>
+<a id="celery_tasks_retrieve"></a>
 > CeleryTask celery_tasks_retrieve(id)
 
 
@@ -560,7 +560,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **celery_tasks_update**
-<a name="celery_tasks_update"></a>
+<a id="celery_tasks_update"></a>
 > CeleryTask celery_tasks_update(idcelery_task)
 
 

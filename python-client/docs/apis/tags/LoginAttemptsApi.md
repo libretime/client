@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.login_attempts_api.LoginAttemptsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**login_attempts_update**](#login_attempts_update) | **put** /api/v2/login-attempts/{ip} | 
 
 # **login_attempts_create**
-<a name="login_attempts_create"></a>
+<a id="login_attempts_create"></a>
 > LoginAttempt login_attempts_create(login_attempt)
 
 
@@ -125,7 +125,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **login_attempts_destroy**
-<a name="login_attempts_destroy"></a>
+<a id="login_attempts_destroy"></a>
 > login_attempts_destroy(ip)
 
 
@@ -220,7 +220,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **login_attempts_list**
-<a name="login_attempts_list"></a>
+<a id="login_attempts_list"></a>
 > [LoginAttempt] login_attempts_list()
 
 
@@ -304,7 +304,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **login_attempts_partial_update**
-<a name="login_attempts_partial_update"></a>
+<a id="login_attempts_partial_update"></a>
 > LoginAttempt login_attempts_partial_update(ip)
 
 
@@ -448,7 +448,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **login_attempts_retrieve**
-<a name="login_attempts_retrieve"></a>
+<a id="login_attempts_retrieve"></a>
 > LoginAttempt login_attempts_retrieve(ip)
 
 
@@ -552,7 +552,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **login_attempts_update**
-<a name="login_attempts_update"></a>
+<a id="login_attempts_update"></a>
 > LoginAttempt login_attempts_update(iplogin_attempt)
 
 

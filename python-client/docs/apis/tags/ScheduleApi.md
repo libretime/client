@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.schedule_api.ScheduleApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**schedule_update**](#schedule_update) | **put** /api/v2/schedule/{id} | 
 
 # **schedule_create**
-<a name="schedule_create"></a>
+<a id="schedule_create"></a>
 > Schedule schedule_create(schedule)
 
 
@@ -138,7 +138,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **schedule_destroy**
-<a name="schedule_destroy"></a>
+<a id="schedule_destroy"></a>
 > schedule_destroy(id)
 
 
@@ -233,7 +233,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **schedule_list**
-<a name="schedule_list"></a>
+<a id="schedule_list"></a>
 > [Schedule] schedule_list()
 
 
@@ -398,7 +398,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **schedule_partial_update**
-<a name="schedule_partial_update"></a>
+<a id="schedule_partial_update"></a>
 > Schedule schedule_partial_update(id)
 
 
@@ -555,7 +555,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **schedule_retrieve**
-<a name="schedule_retrieve"></a>
+<a id="schedule_retrieve"></a>
 > Schedule schedule_retrieve(id)
 
 
@@ -659,7 +659,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **schedule_update**
-<a name="schedule_update"></a>
+<a id="schedule_update"></a>
 > Schedule schedule_update(idschedule)
 
 

@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.user_tokens_api.UserTokensApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**user_tokens_update**](#user_tokens_update) | **put** /api/v2/user-tokens/{id} | 
 
 # **user_tokens_create**
-<a name="user_tokens_create"></a>
+<a id="user_tokens_create"></a>
 > UserToken user_tokens_create(user_token)
 
 
@@ -128,7 +128,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **user_tokens_destroy**
-<a name="user_tokens_destroy"></a>
+<a id="user_tokens_destroy"></a>
 > user_tokens_destroy(id)
 
 
@@ -223,7 +223,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **user_tokens_list**
-<a name="user_tokens_list"></a>
+<a id="user_tokens_list"></a>
 > [UserToken] user_tokens_list()
 
 
@@ -307,7 +307,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **user_tokens_partial_update**
-<a name="user_tokens_partial_update"></a>
+<a id="user_tokens_partial_update"></a>
 > UserToken user_tokens_partial_update(id)
 
 
@@ -454,7 +454,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **user_tokens_retrieve**
-<a name="user_tokens_retrieve"></a>
+<a id="user_tokens_retrieve"></a>
 > UserToken user_tokens_retrieve(id)
 
 
@@ -558,7 +558,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **user_tokens_update**
-<a name="user_tokens_update"></a>
+<a id="user_tokens_update"></a>
 > UserToken user_tokens_update(iduser_token)
 
 

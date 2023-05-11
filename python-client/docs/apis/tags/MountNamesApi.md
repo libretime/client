@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.mount_names_api.MountNamesApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**mount_names_update**](#mount_names_update) | **put** /api/v2/mount-names/{id} | 
 
 # **mount_names_create**
-<a name="mount_names_create"></a>
+<a id="mount_names_create"></a>
 > MountName mount_names_create(mount_name)
 
 
@@ -125,7 +125,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **mount_names_destroy**
-<a name="mount_names_destroy"></a>
+<a id="mount_names_destroy"></a>
 > mount_names_destroy(id)
 
 
@@ -220,7 +220,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **mount_names_list**
-<a name="mount_names_list"></a>
+<a id="mount_names_list"></a>
 > [MountName] mount_names_list()
 
 
@@ -304,7 +304,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **mount_names_partial_update**
-<a name="mount_names_partial_update"></a>
+<a id="mount_names_partial_update"></a>
 > MountName mount_names_partial_update(id)
 
 
@@ -448,7 +448,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **mount_names_retrieve**
-<a name="mount_names_retrieve"></a>
+<a id="mount_names_retrieve"></a>
 > MountName mount_names_retrieve(id)
 
 
@@ -552,7 +552,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **mount_names_update**
-<a name="mount_names_update"></a>
+<a id="mount_names_update"></a>
 > MountName mount_names_update(idmount_name)
 
 

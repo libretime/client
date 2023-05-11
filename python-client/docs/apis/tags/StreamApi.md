@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.stream_api.StreamApi
 
 All URIs are relative to *http://localhost*
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**stream_state_retrieve**](#stream_state_retrieve) | **get** /api/v2/stream/state | 
 
 # **stream_preferences_retrieve**
-<a name="stream_preferences_retrieve"></a>
+<a id="stream_preferences_retrieve"></a>
 > StreamPreferences stream_preferences_retrieve()
 
 
@@ -87,7 +87,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **stream_state_retrieve**
-<a name="stream_state_retrieve"></a>
+<a id="stream_state_retrieve"></a>
 > StreamState stream_state_retrieve()
 
 

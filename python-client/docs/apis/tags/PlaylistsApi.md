@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.playlists_api.PlaylistsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**playlists_update**](#playlists_update) | **put** /api/v2/playlists/{id} | 
 
 # **playlists_create**
-<a name="playlists_create"></a>
+<a id="playlists_create"></a>
 > Playlist playlists_create(playlist)
 
 
@@ -130,7 +130,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlists_destroy**
-<a name="playlists_destroy"></a>
+<a id="playlists_destroy"></a>
 > playlists_destroy(id)
 
 
@@ -225,7 +225,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlists_list**
-<a name="playlists_list"></a>
+<a id="playlists_list"></a>
 > [Playlist] playlists_list()
 
 
@@ -309,7 +309,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlists_partial_update**
-<a name="playlists_partial_update"></a>
+<a id="playlists_partial_update"></a>
 > Playlist playlists_partial_update(id)
 
 
@@ -458,7 +458,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlists_retrieve**
-<a name="playlists_retrieve"></a>
+<a id="playlists_retrieve"></a>
 > Playlist playlists_retrieve(id)
 
 
@@ -562,7 +562,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **playlists_update**
-<a name="playlists_update"></a>
+<a id="playlists_update"></a>
 > Playlist playlists_update(idplaylist)
 
 

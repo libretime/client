@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.show_rebroadcasts_api.ShowRebroadcastsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**show_rebroadcasts_update**](#show_rebroadcasts_update) | **put** /api/v2/show-rebroadcasts/{id} | 
 
 # **show_rebroadcasts_create**
-<a name="show_rebroadcasts_create"></a>
+<a id="show_rebroadcasts_create"></a>
 > ShowRebroadcast show_rebroadcasts_create(show_rebroadcast)
 
 
@@ -127,7 +127,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_rebroadcasts_destroy**
-<a name="show_rebroadcasts_destroy"></a>
+<a id="show_rebroadcasts_destroy"></a>
 > show_rebroadcasts_destroy(id)
 
 
@@ -222,7 +222,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_rebroadcasts_list**
-<a name="show_rebroadcasts_list"></a>
+<a id="show_rebroadcasts_list"></a>
 > [ShowRebroadcast] show_rebroadcasts_list()
 
 
@@ -306,7 +306,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_rebroadcasts_partial_update**
-<a name="show_rebroadcasts_partial_update"></a>
+<a id="show_rebroadcasts_partial_update"></a>
 > ShowRebroadcast show_rebroadcasts_partial_update(id)
 
 
@@ -452,7 +452,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_rebroadcasts_retrieve**
-<a name="show_rebroadcasts_retrieve"></a>
+<a id="show_rebroadcasts_retrieve"></a>
 > ShowRebroadcast show_rebroadcasts_retrieve(id)
 
 
@@ -556,7 +556,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **show_rebroadcasts_update**
-<a name="show_rebroadcasts_update"></a>
+<a id="show_rebroadcasts_update"></a>
 > ShowRebroadcast show_rebroadcasts_update(idshow_rebroadcast)
 
 

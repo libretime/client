@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.files_api.FilesApi
 
 All URIs are relative to *http://localhost*
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**files_update**](#files_update) | **put** /api/v2/files/{id} | 
 
 # **files_create**
-<a name="files_create"></a>
+<a id="files_create"></a>
 > File files_create(file)
 
 
@@ -189,7 +189,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **files_destroy**
-<a name="files_destroy"></a>
+<a id="files_destroy"></a>
 > files_destroy(id)
 
 
@@ -284,7 +284,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **files_download_retrieve**
-<a name="files_download_retrieve"></a>
+<a id="files_download_retrieve"></a>
 > File files_download_retrieve(id)
 
 
@@ -388,7 +388,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **files_list**
-<a name="files_list"></a>
+<a id="files_list"></a>
 > [File] files_list()
 
 
@@ -472,7 +472,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **files_partial_update**
-<a name="files_partial_update"></a>
+<a id="files_partial_update"></a>
 > File files_partial_update(id)
 
 
@@ -679,7 +679,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **files_retrieve**
-<a name="files_retrieve"></a>
+<a id="files_retrieve"></a>
 > File files_retrieve(id)
 
 
@@ -783,7 +783,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **files_update**
-<a name="files_update"></a>
+<a id="files_update"></a>
 > File files_update(idfile)
 
 

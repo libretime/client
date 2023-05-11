@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.service_registers_api.ServiceRegistersApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**service_registers_update**](#service_registers_update) | **put** /api/v2/service-registers/{name} | 
 
 # **service_registers_create**
-<a name="service_registers_create"></a>
+<a id="service_registers_create"></a>
 > ServiceRegister service_registers_create(service_register)
 
 
@@ -125,7 +125,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **service_registers_destroy**
-<a name="service_registers_destroy"></a>
+<a id="service_registers_destroy"></a>
 > service_registers_destroy(name)
 
 
@@ -220,7 +220,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **service_registers_list**
-<a name="service_registers_list"></a>
+<a id="service_registers_list"></a>
 > [ServiceRegister] service_registers_list()
 
 
@@ -304,7 +304,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **service_registers_partial_update**
-<a name="service_registers_partial_update"></a>
+<a id="service_registers_partial_update"></a>
 > ServiceRegister service_registers_partial_update(name)
 
 
@@ -448,7 +448,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **service_registers_retrieve**
-<a name="service_registers_retrieve"></a>
+<a id="service_registers_retrieve"></a>
 > ServiceRegister service_registers_retrieve(name)
 
 
@@ -552,7 +552,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **service_registers_update**
-<a name="service_registers_update"></a>
+<a id="service_registers_update"></a>
 > ServiceRegister service_registers_update(nameservice_register)
 
 

@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.third_party_track_references_api.ThirdPartyTrackReferencesApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**third_party_track_references_update**](#third_party_track_references_update) | **put** /api/v2/third-party-track-references/{id} | 
 
 # **third_party_track_references_create**
-<a name="third_party_track_references_create"></a>
+<a id="third_party_track_references_create"></a>
 > ThirdPartyTrackReference third_party_track_references_create(third_party_track_reference)
 
 
@@ -129,7 +129,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **third_party_track_references_destroy**
-<a name="third_party_track_references_destroy"></a>
+<a id="third_party_track_references_destroy"></a>
 > third_party_track_references_destroy(id)
 
 
@@ -224,7 +224,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **third_party_track_references_list**
-<a name="third_party_track_references_list"></a>
+<a id="third_party_track_references_list"></a>
 > [ThirdPartyTrackReference] third_party_track_references_list()
 
 
@@ -308,7 +308,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **third_party_track_references_partial_update**
-<a name="third_party_track_references_partial_update"></a>
+<a id="third_party_track_references_partial_update"></a>
 > ThirdPartyTrackReference third_party_track_references_partial_update(id)
 
 
@@ -456,7 +456,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **third_party_track_references_retrieve**
-<a name="third_party_track_references_retrieve"></a>
+<a id="third_party_track_references_retrieve"></a>
 > ThirdPartyTrackReference third_party_track_references_retrieve(id)
 
 
@@ -560,7 +560,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **third_party_track_references_update**
-<a name="third_party_track_references_update"></a>
+<a id="third_party_track_references_update"></a>
 > ThirdPartyTrackReference third_party_track_references_update(idthird_party_track_reference)
 
 

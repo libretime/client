@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.users_api.UsersApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**users_update**](#users_update) | **put** /api/v2/users/{id} | 
 
 # **users_create**
-<a name="users_create"></a>
+<a id="users_create"></a>
 > User users_create(user)
 
 
@@ -135,7 +135,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **users_destroy**
-<a name="users_destroy"></a>
+<a id="users_destroy"></a>
 > users_destroy(id)
 
 
@@ -230,7 +230,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **users_list**
-<a name="users_list"></a>
+<a id="users_list"></a>
 > [User] users_list()
 
 
@@ -314,7 +314,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **users_partial_update**
-<a name="users_partial_update"></a>
+<a id="users_partial_update"></a>
 > User users_partial_update(id)
 
 
@@ -468,7 +468,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **users_retrieve**
-<a name="users_retrieve"></a>
+<a id="users_retrieve"></a>
 > User users_retrieve(id)
 
 
@@ -572,7 +572,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **users_update**
-<a name="users_update"></a>
+<a id="users_update"></a>
 > User users_update(iduser)
 
 

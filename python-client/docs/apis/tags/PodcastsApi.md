@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # libretime_client.apis.tags.podcasts_api.PodcastsApi
 
 All URIs are relative to *http://localhost*
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**podcasts_update**](#podcasts_update) | **put** /api/v2/podcasts/{id} | 
 
 # **podcasts_create**
-<a name="podcasts_create"></a>
+<a id="podcasts_create"></a>
 > Podcast podcasts_create(podcast)
 
 
@@ -138,7 +138,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcasts_destroy**
-<a name="podcasts_destroy"></a>
+<a id="podcasts_destroy"></a>
 > podcasts_destroy(id)
 
 
@@ -233,7 +233,7 @@ headers | Unset | headers were not defined |
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcasts_list**
-<a name="podcasts_list"></a>
+<a id="podcasts_list"></a>
 > [Podcast] podcasts_list()
 
 
@@ -317,7 +317,7 @@ Class Name | Input Type | Accessed Type | Description | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcasts_partial_update**
-<a name="podcasts_partial_update"></a>
+<a id="podcasts_partial_update"></a>
 > Podcast podcasts_partial_update(id)
 
 
@@ -474,7 +474,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcasts_retrieve**
-<a name="podcasts_retrieve"></a>
+<a id="podcasts_retrieve"></a>
 > Podcast podcasts_retrieve(id)
 
 
@@ -578,7 +578,7 @@ Type | Description  | Notes
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **podcasts_update**
-<a name="podcasts_update"></a>
+<a id="podcasts_update"></a>
 > Podcast podcasts_update(idpodcast)
 
 
