@@ -15,13 +15,13 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
-// May contain unused imports in some cases
-// @ts-ignore
-import { PatchedShowDaysWeekDay } from './patched-show-days-week-day';
+import { RecordEnabledEnum } from './record-enabled-enum';
 // May contain unused imports in some cases
 // @ts-ignore
 import { RepeatKindEnum } from './repeat-kind-enum';
+// May contain unused imports in some cases
+// @ts-ignore
+import { WeekDayEnum } from './week-day-enum';
 
 /**
  * 
@@ -67,16 +67,16 @@ export interface PatchedShowDays {
     'duration'?: string;
     /**
      * 
-     * @type {PatchedShowDaysRecordEnabled}
+     * @type {RecordEnabledEnum}
      * @memberof PatchedShowDays
      */
-    'record_enabled'?: PatchedShowDaysRecordEnabled | null;
+    'record_enabled'?: RecordEnabledEnum | null;
     /**
      * 
-     * @type {PatchedShowDaysWeekDay}
+     * @type {WeekDayEnum}
      * @memberof PatchedShowDays
      */
-    'week_day'?: PatchedShowDaysWeekDay | null;
+    'week_day'?: WeekDayEnum | null;
     /**
      * 
      * @type {RepeatKindEnum}

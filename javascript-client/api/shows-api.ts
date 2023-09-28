@@ -486,3 +486,4 @@ export class ShowsApi extends BaseAPI {
         return ShowsApiFp(this.configuration).showsUpdate(id, show, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

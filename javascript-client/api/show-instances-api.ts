@@ -486,3 +486,4 @@ export class ShowInstancesApi extends BaseAPI {
         return ShowInstancesApiFp(this.configuration).showInstancesUpdate(id, showInstance, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

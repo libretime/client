@@ -486,3 +486,4 @@ export class PlayoutHistoryMetadataApi extends BaseAPI {
         return PlayoutHistoryMetadataApiFp(this.configuration).playoutHistoryMetadataUpdate(id, playoutHistoryMetadata, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

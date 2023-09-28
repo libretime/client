@@ -30,8 +30,6 @@ export * from './patched-schedule';
 export * from './patched-service-register';
 export * from './patched-show';
 export * from './patched-show-days';
-export * from './patched-show-days-record-enabled';
-export * from './patched-show-days-week-day';
 export * from './patched-show-host';
 export * from './patched-show-instance';
 export * from './patched-show-rebroadcast';

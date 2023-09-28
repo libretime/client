@@ -486,3 +486,4 @@ export class PreferencesApi extends BaseAPI {
         return PreferencesApiFp(this.configuration).preferencesUpdate(id, preference, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

@@ -486,3 +486,4 @@ export class SmartBlockContentsApi extends BaseAPI {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsUpdate(id, smartBlockContent, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

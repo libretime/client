@@ -550,3 +550,4 @@ export class ScheduleApi extends BaseAPI {
         return ScheduleApiFp(this.configuration).scheduleUpdate(id, schedule, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

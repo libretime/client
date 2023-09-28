@@ -486,3 +486,4 @@ export class LibrariesApi extends BaseAPI {
         return LibrariesApiFp(this.configuration).librariesUpdate(id, library, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

@@ -486,3 +486,4 @@ export class WebstreamsApi extends BaseAPI {
         return WebstreamsApiFp(this.configuration).webstreamsUpdate(id, webstream, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

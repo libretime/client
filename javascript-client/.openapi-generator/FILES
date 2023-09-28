@@ -76,8 +76,6 @@ model/patched-podcast.ts
 model/patched-preference.ts
 model/patched-schedule.ts
 model/patched-service-register.ts
-model/patched-show-days-record-enabled.ts
-model/patched-show-days-week-day.ts
 model/patched-show-days.ts
 model/patched-show-host.ts
 model/patched-show-instance.ts

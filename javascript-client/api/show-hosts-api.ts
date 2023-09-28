@@ -486,3 +486,4 @@ export class ShowHostsApi extends BaseAPI {
         return ShowHostsApiFp(this.configuration).showHostsUpdate(id, showHost, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

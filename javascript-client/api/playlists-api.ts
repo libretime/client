@@ -486,3 +486,4 @@ export class PlaylistsApi extends BaseAPI {
         return PlaylistsApiFp(this.configuration).playlistsUpdate(id, playlist, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

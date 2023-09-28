@@ -185,3 +185,4 @@ export class StreamApi extends BaseAPI {
         return StreamApiFp(this.configuration).streamStateRetrieve(options).then((request) => request(this.axios, this.basePath));
     }
 }
+

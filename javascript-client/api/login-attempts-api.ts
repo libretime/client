@@ -486,3 +486,4 @@ export class LoginAttemptsApi extends BaseAPI {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsUpdate(ip, loginAttempt, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

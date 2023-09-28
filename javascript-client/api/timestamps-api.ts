@@ -486,3 +486,4 @@ export class TimestampsApi extends BaseAPI {
         return TimestampsApiFp(this.configuration).timestampsUpdate(id, timestamp, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

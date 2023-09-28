@@ -486,3 +486,4 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesUpdate(id, playoutHistoryTemplate, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

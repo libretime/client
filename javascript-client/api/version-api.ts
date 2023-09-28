@@ -121,3 +121,4 @@ export class VersionApi extends BaseAPI {
         return VersionApiFp(this.configuration).versionRetrieve(options).then((request) => request(this.axios, this.basePath));
     }
 }
+

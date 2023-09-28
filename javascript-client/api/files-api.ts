@@ -555,3 +555,4 @@ export class FilesApi extends BaseAPI {
         return FilesApiFp(this.configuration).filesUpdate(id, modelFile, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

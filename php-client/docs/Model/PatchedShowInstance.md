@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **modified** | **bool** |  | [optional]
 **rebroadcast** | **int** |  | [optional]
 **auto_playlist_built** | **bool** |  | [optional]
-**record_enabled** | [**\Libretime\Client\Model\PatchedShowDaysRecordEnabled**](PatchedShowDaysRecordEnabled.md) |  | [optional]
+**record_enabled** | [**\Libretime\Client\Model\RecordEnabledEnum**](RecordEnabledEnum.md) |  | [optional]
 **show** | **int** |  | [optional]
 **instance** | **int** |  | [optional]
 **record_file** | **int** |  | [optional]

@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { PatchedShowDaysRecordEnabled } from './patched-show-days-record-enabled';
+import { RecordEnabledEnum } from './record-enabled-enum';
 
 /**
  * 
@@ -85,10 +85,10 @@ export interface PatchedShowInstance {
     'auto_playlist_built'?: boolean;
     /**
      * 
-     * @type {PatchedShowDaysRecordEnabled}
+     * @type {RecordEnabledEnum}
      * @memberof PatchedShowInstance
      */
-    'record_enabled'?: PatchedShowDaysRecordEnabled | null;
+    'record_enabled'?: RecordEnabledEnum | null;
     /**
      * 
      * @type {number}
@@ -108,4 +108,6 @@ export interface PatchedShowInstance {
      */
     'record_file'?: number | null;
 }
+
+
 

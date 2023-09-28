@@ -486,3 +486,4 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesUpdate(id, thirdPartyTrackReference, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

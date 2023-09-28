@@ -486,3 +486,4 @@ export class PlaylistContentsApi extends BaseAPI {
         return PlaylistContentsApiFp(this.configuration).playlistContentsUpdate(id, playlistContent, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

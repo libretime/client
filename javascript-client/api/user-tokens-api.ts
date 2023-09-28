@@ -486,3 +486,4 @@ export class UserTokensApi extends BaseAPI {
         return UserTokensApiFp(this.configuration).userTokensUpdate(id, userToken, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

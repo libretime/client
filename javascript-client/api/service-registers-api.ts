@@ -486,3 +486,4 @@ export class ServiceRegistersApi extends BaseAPI {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersUpdate(name, serviceRegister, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

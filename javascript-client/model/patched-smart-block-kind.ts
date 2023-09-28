@@ -18,15 +18,12 @@
 import { BlankEnum } from './blank-enum';
 // May contain unused imports in some cases
 // @ts-ignore
-import { NullEnum } from './null-enum';
-// May contain unused imports in some cases
-// @ts-ignore
 import { SmartBlockKindEnum } from './smart-block-kind-enum';
 
 /**
  * @type PatchedSmartBlockKind
  * @export
  */
-export type PatchedSmartBlockKind = BlankEnum | NullEnum | SmartBlockKindEnum;
+export type PatchedSmartBlockKind = BlankEnum | SmartBlockKindEnum;
 
 

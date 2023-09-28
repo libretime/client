@@ -486,3 +486,4 @@ export class SmartBlockCriteriaApi extends BaseAPI {
         return SmartBlockCriteriaApiFp(this.configuration).smartBlockCriteriaUpdate(id, smartBlockCriteria, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

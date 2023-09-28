@@ -328,8 +328,6 @@ Class | Method | HTTP request | Description
 - [PatchedServiceRegister](docs/Model/PatchedServiceRegister.md)
 - [PatchedShow](docs/Model/PatchedShow.md)
 - [PatchedShowDays](docs/Model/PatchedShowDays.md)
-- [PatchedShowDaysRecordEnabled](docs/Model/PatchedShowDaysRecordEnabled.md)
-- [PatchedShowDaysWeekDay](docs/Model/PatchedShowDaysWeekDay.md)
 - [PatchedShowHost](docs/Model/PatchedShowHost.md)
 - [PatchedShowInstance](docs/Model/PatchedShowInstance.md)
 - [PatchedShowRebroadcast](docs/Model/PatchedShowRebroadcast.md)

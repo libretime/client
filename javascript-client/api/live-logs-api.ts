@@ -486,3 +486,4 @@ export class LiveLogsApi extends BaseAPI {
         return LiveLogsApiFp(this.configuration).liveLogsUpdate(id, liveLog, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

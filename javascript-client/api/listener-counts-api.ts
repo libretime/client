@@ -486,3 +486,4 @@ export class ListenerCountsApi extends BaseAPI {
         return ListenerCountsApiFp(this.configuration).listenerCountsUpdate(id, listenerCount, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

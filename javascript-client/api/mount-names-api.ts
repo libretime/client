@@ -486,3 +486,4 @@ export class MountNamesApi extends BaseAPI {
         return MountNamesApiFp(this.configuration).mountNamesUpdate(id, mountName, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

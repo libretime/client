@@ -486,3 +486,4 @@ export class PodcastEpisodesApi extends BaseAPI {
         return PodcastEpisodesApiFp(this.configuration).podcastEpisodesUpdate(id, podcastEpisode, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

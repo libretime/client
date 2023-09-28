@@ -486,3 +486,4 @@ export class ShowRebroadcastsApi extends BaseAPI {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsUpdate(id, showRebroadcast, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

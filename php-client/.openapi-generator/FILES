@@ -73,8 +73,6 @@ docs/Model/PatchedSchedule.md
 docs/Model/PatchedServiceRegister.md
 docs/Model/PatchedShow.md
 docs/Model/PatchedShowDays.md
-docs/Model/PatchedShowDaysRecordEnabled.md
-docs/Model/PatchedShowDaysWeekDay.md
 docs/Model/PatchedShowHost.md
 docs/Model/PatchedShowInstance.md
 docs/Model/PatchedShowRebroadcast.md
@@ -200,8 +198,6 @@ lib/Model/PatchedSchedule.php
 lib/Model/PatchedServiceRegister.php
 lib/Model/PatchedShow.php
 lib/Model/PatchedShowDays.php
-lib/Model/PatchedShowDaysRecordEnabled.php
-lib/Model/PatchedShowDaysWeekDay.php
 lib/Model/PatchedShowHost.php
 lib/Model/PatchedShowInstance.php
 lib/Model/PatchedShowRebroadcast.php

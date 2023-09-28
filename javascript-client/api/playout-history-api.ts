@@ -486,3 +486,4 @@ export class PlayoutHistoryApi extends BaseAPI {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryUpdate(id, playoutHistory, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

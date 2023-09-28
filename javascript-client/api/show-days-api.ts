@@ -486,3 +486,4 @@ export class ShowDaysApi extends BaseAPI {
         return ShowDaysApiFp(this.configuration).showDaysUpdate(id, showDays, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

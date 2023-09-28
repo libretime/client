@@ -486,3 +486,4 @@ export class CeleryTasksApi extends BaseAPI {
         return CeleryTasksApiFp(this.configuration).celeryTasksUpdate(id, celeryTask, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

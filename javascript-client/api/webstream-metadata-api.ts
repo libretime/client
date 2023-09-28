@@ -486,3 +486,4 @@ export class WebstreamMetadataApi extends BaseAPI {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataUpdate(id, webstreamMetadata, options).then((request) => request(this.axios, this.basePath));
     }
 }
+

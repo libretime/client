@@ -121,3 +121,4 @@ export class InfoApi extends BaseAPI {
         return InfoApiFp(this.configuration).infoRetrieve(options).then((request) => request(this.axios, this.basePath));
     }
 }
+
