@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly] 
-**import_status** | [**PlaylistContentKindEnum**](PlaylistContentKindEnum.md) |  | [optional] 
+**import_status** | [**FileImportStatusEnum**](FileImportStatusEnum.md) |  | [optional] 
 **filepath** | **str** |  | [optional] 
 **size** | **int** |  | [optional] 
 **exists** | **bool** |  | [optional] 

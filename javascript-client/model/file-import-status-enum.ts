@@ -15,18 +15,18 @@
 
 
 /**
- * * `0` - File * `1` - Stream * `2` - Block
+ * * `0` - Success * `1` - Pending * `2` - Failed
  * @export
  * @enum {string}
  */
 
-export const PlaylistContentKindEnum = {
+export const FileImportStatusEnum = {
     NUMBER_0: 0,
     NUMBER_1: 1,
     NUMBER_2: 2
 } as const;
 
-export type PlaylistContentKindEnum = typeof PlaylistContentKindEnum[keyof typeof PlaylistContentKindEnum];
+export type FileImportStatusEnum = typeof FileImportStatusEnum[keyof typeof FileImportStatusEnum];
 
 
 

@@ -17,6 +17,7 @@
 from libretime_client.models.blank_enum import BlankEnum
 from libretime_client.models.celery_task import CeleryTask
 from libretime_client.models.file import File
+from libretime_client.models.file_import_status_enum import FileImportStatusEnum
 from libretime_client.models.imported_podcast import ImportedPodcast
 from libretime_client.models.info import Info
 from libretime_client.models.library import Library

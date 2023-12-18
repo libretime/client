@@ -21,9 +21,9 @@ from aenum import Enum, no_arg
 
 
 
-class PlaylistContentKindEnum(int, Enum):
+class FileImportStatusEnum(int, Enum):
     """
-    * `0` - File * `1` - Stream * `2` - Block
+    * `0` - Success * `1` - Pending * `2` - Failed
     """
 
     """
@@ -34,8 +34,8 @@ class PlaylistContentKindEnum(int, Enum):
     NUMBER_2 = 2
 
     @classmethod
-    def from_json(cls, json_str: str) -> PlaylistContentKindEnum:
-        """Create an instance of PlaylistContentKindEnum from a JSON string"""
-        return PlaylistContentKindEnum(json.loads(json_str))
+    def from_json(cls, json_str: str) -> FileImportStatusEnum:
+        """Create an instance of FileImportStatusEnum from a JSON string"""
+        return FileImportStatusEnum(json.loads(json_str))
 
 

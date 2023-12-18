@@ -7,6 +7,7 @@ docs/BlankEnum.md
 docs/CeleryTask.md
 docs/CeleryTasksApi.md
 docs/File.md
+docs/FileImportStatusEnum.md
 docs/FilesApi.md
 docs/ImportedPodcast.md
 docs/ImportedPodcastsApi.md
@@ -172,6 +173,7 @@ libretime_client/models/__init__.py
 libretime_client/models/blank_enum.py
 libretime_client/models/celery_task.py
 libretime_client/models/file.py
+libretime_client/models/file_import_status_enum.py
 libretime_client/models/imported_podcast.py
 libretime_client/models/info.py
 libretime_client/models/library.py
@@ -259,4 +261,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_file_import_status_enum.py
 tox.ini

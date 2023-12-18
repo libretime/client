@@ -20,14 +20,14 @@ import json
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr, conint, constr, validator
-from libretime_client.models.playlist_content_kind_enum import PlaylistContentKindEnum
+from libretime_client.models.file_import_status_enum import FileImportStatusEnum
 
 class File(BaseModel):
     """
     File
     """
     id: StrictInt = Field(...)
-    import_status: Optional[PlaylistContentKindEnum] = None
+    import_status: Optional[FileImportStatusEnum] = None
     filepath: Optional[StrictStr] = None
     size: conint(strict=True, le=2147483647, ge=-2147483648) = Field(...)
     exists: Optional[StrictBool] = None

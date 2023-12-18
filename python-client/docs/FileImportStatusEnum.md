@@ -1,6 +1,6 @@
-# PlaylistContentKindEnum
+# FileImportStatusEnum
 
-* `0` - File * `1` - Stream * `2` - Block
+* `0` - Success * `1` - Pending * `2` - Failed
 
 ## Properties
 Name | Type | Description | Notes

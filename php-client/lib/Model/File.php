@@ -58,7 +58,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'import_status' => '\Libretime\Client\Model\PlaylistContentKindEnum',
+        'import_status' => '\Libretime\Client\Model\FileImportStatusEnum',
         'filepath' => 'string',
         'size' => 'int',
         'exists' => 'bool',
@@ -998,7 +998,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets import_status
      *
-     * @return \Libretime\Client\Model\PlaylistContentKindEnum|null
+     * @return \Libretime\Client\Model\FileImportStatusEnum|null
      */
     public function getImportStatus()
     {
@@ -1008,7 +1008,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets import_status
      *
-     * @param \Libretime\Client\Model\PlaylistContentKindEnum|null $import_status import_status
+     * @param \Libretime\Client\Model\FileImportStatusEnum|null $import_status import_status
      *
      * @return self
      */

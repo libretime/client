@@ -317,6 +317,7 @@ Class | Method | HTTP request | Description
  - [BlankEnum](docs/BlankEnum.md)
  - [CeleryTask](docs/CeleryTask.md)
  - [File](docs/File.md)
+ - [FileImportStatusEnum](docs/FileImportStatusEnum.md)
  - [ImportedPodcast](docs/ImportedPodcast.md)
  - [Info](docs/Info.md)
  - [Library](docs/Library.md)

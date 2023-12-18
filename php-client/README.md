@@ -299,6 +299,7 @@ Class | Method | HTTP request | Description
 - [BlankEnum](docs/Model/BlankEnum.md)
 - [CeleryTask](docs/Model/CeleryTask.md)
 - [File](docs/Model/File.md)
+- [FileImportStatusEnum](docs/Model/FileImportStatusEnum.md)
 - [ImportedPodcast](docs/Model/ImportedPodcast.md)
 - [Info](docs/Model/Info.md)
 - [Library](docs/Model/Library.md)

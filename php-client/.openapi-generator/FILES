@@ -44,6 +44,7 @@ docs/Api/WebstreamsApi.md
 docs/Model/BlankEnum.md
 docs/Model/CeleryTask.md
 docs/Model/File.md
+docs/Model/FileImportStatusEnum.md
 docs/Model/ImportedPodcast.md
 docs/Model/Info.md
 docs/Model/Library.md
@@ -168,6 +169,7 @@ lib/HeaderSelector.php
 lib/Model/BlankEnum.php
 lib/Model/CeleryTask.php
 lib/Model/File.php
+lib/Model/FileImportStatusEnum.php
 lib/Model/ImportedPodcast.php
 lib/Model/Info.php
 lib/Model/Library.php
@@ -250,3 +252,4 @@ lib/Model/WebstreamMetadata.php
 lib/Model/WeekDayEnum.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/FileImportStatusEnumTest.php

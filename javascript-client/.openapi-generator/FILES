@@ -47,6 +47,7 @@ git_push.sh
 index.ts
 model/blank-enum.ts
 model/celery-task.ts
+model/file-import-status-enum.ts
 model/imported-podcast.ts
 model/index.ts
 model/info.ts

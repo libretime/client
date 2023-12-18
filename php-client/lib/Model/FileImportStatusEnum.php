@@ -1,6 +1,6 @@
 <?php
 /**
- * PlaylistContentKindEnum
+ * FileImportStatusEnum
  *
  * PHP version 7.4
  *
@@ -30,15 +30,15 @@ namespace Libretime\Client\Model;
 use \Libretime\Client\ObjectSerializer;
 
 /**
- * PlaylistContentKindEnum Class Doc Comment
+ * FileImportStatusEnum Class Doc Comment
  *
  * @category Class
- * @description * &#x60;0&#x60; - File * &#x60;1&#x60; - Stream * &#x60;2&#x60; - Block
+ * @description * &#x60;0&#x60; - Success * &#x60;1&#x60; - Pending * &#x60;2&#x60; - Failed
  * @package  Libretime\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class PlaylistContentKindEnum
+class FileImportStatusEnum
 {
     /**
      * Possible values of this enum

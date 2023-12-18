@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
+import { FileImportStatusEnum } from './file-import-status-enum';
 
 /**
  * 
@@ -31,10 +31,10 @@ export interface PatchedFile {
     'id'?: number;
     /**
      * 
-     * @type {PlaylistContentKindEnum}
+     * @type {FileImportStatusEnum}
      * @memberof PatchedFile
      */
-    'import_status'?: PlaylistContentKindEnum;
+    'import_status'?: FileImportStatusEnum;
     /**
      * 
      * @type {string}
