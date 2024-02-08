@@ -59,7 +59,9 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'input_fade_transition' => 'float',
         'message_format' => 'int',
-        'message_offline' => 'string'
+        'message_offline' => 'string',
+        'replay_gain_enabled' => 'bool',
+        'replay_gain_offset' => 'float'
     ];
 
     /**
@@ -72,7 +74,9 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPIFormats = [
         'input_fade_transition' => 'double',
         'message_format' => null,
-        'message_offline' => null
+        'message_offline' => null,
+        'replay_gain_enabled' => null,
+        'replay_gain_offset' => 'double'
     ];
 
     /**
@@ -83,7 +87,9 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static array $openAPINullables = [
         'input_fade_transition' => false,
         'message_format' => false,
-        'message_offline' => false
+        'message_offline' => false,
+        'replay_gain_enabled' => false,
+        'replay_gain_offset' => false
     ];
 
     /**
@@ -174,7 +180,9 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $attributeMap = [
         'input_fade_transition' => 'input_fade_transition',
         'message_format' => 'message_format',
-        'message_offline' => 'message_offline'
+        'message_offline' => 'message_offline',
+        'replay_gain_enabled' => 'replay_gain_enabled',
+        'replay_gain_offset' => 'replay_gain_offset'
     ];
 
     /**
@@ -185,7 +193,9 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $setters = [
         'input_fade_transition' => 'setInputFadeTransition',
         'message_format' => 'setMessageFormat',
-        'message_offline' => 'setMessageOffline'
+        'message_offline' => 'setMessageOffline',
+        'replay_gain_enabled' => 'setReplayGainEnabled',
+        'replay_gain_offset' => 'setReplayGainOffset'
     ];
 
     /**
@@ -196,7 +206,9 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $getters = [
         'input_fade_transition' => 'getInputFadeTransition',
         'message_format' => 'getMessageFormat',
-        'message_offline' => 'getMessageOffline'
+        'message_offline' => 'getMessageOffline',
+        'replay_gain_enabled' => 'getReplayGainEnabled',
+        'replay_gain_offset' => 'getReplayGainOffset'
     ];
 
     /**
@@ -259,6 +271,8 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('input_fade_transition', $data ?? [], null);
         $this->setIfExists('message_format', $data ?? [], null);
         $this->setIfExists('message_offline', $data ?? [], null);
+        $this->setIfExists('replay_gain_enabled', $data ?? [], null);
+        $this->setIfExists('replay_gain_offset', $data ?? [], null);
     }
 
     /**
@@ -296,6 +310,12 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
         }
         if ($this->container['message_offline'] === null) {
             $invalidProperties[] = "'message_offline' can't be null";
+        }
+        if ($this->container['replay_gain_enabled'] === null) {
+            $invalidProperties[] = "'replay_gain_enabled' can't be null";
+        }
+        if ($this->container['replay_gain_offset'] === null) {
+            $invalidProperties[] = "'replay_gain_offset' can't be null";
         }
         return $invalidProperties;
     }
@@ -389,6 +409,60 @@ class StreamPreferences implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable message_offline cannot be null');
         }
         $this->container['message_offline'] = $message_offline;
+
+        return $this;
+    }
+
+    /**
+     * Gets replay_gain_enabled
+     *
+     * @return bool
+     */
+    public function getReplayGainEnabled()
+    {
+        return $this->container['replay_gain_enabled'];
+    }
+
+    /**
+     * Sets replay_gain_enabled
+     *
+     * @param bool $replay_gain_enabled replay_gain_enabled
+     *
+     * @return self
+     */
+    public function setReplayGainEnabled($replay_gain_enabled)
+    {
+        if (is_null($replay_gain_enabled)) {
+            throw new \InvalidArgumentException('non-nullable replay_gain_enabled cannot be null');
+        }
+        $this->container['replay_gain_enabled'] = $replay_gain_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets replay_gain_offset
+     *
+     * @return float
+     */
+    public function getReplayGainOffset()
+    {
+        return $this->container['replay_gain_offset'];
+    }
+
+    /**
+     * Sets replay_gain_offset
+     *
+     * @param float $replay_gain_offset replay_gain_offset
+     *
+     * @return self
+     */
+    public function setReplayGainOffset($replay_gain_offset)
+    {
+        if (is_null($replay_gain_offset)) {
+            throw new \InvalidArgumentException('non-nullable replay_gain_offset cannot be null');
+        }
+        $this->container['replay_gain_offset'] = $replay_gain_offset;
 
         return $this;
     }

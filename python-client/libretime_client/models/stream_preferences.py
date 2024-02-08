@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Union
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,7 +29,9 @@ class StreamPreferences(BaseModel):
     input_fade_transition: Union[StrictFloat, StrictInt]
     message_format: StrictInt
     message_offline: StrictStr
-    __properties: ClassVar[List[str]] = ["input_fade_transition", "message_format", "message_offline"]
+    replay_gain_enabled: StrictBool
+    replay_gain_offset: Union[StrictFloat, StrictInt]
+    __properties: ClassVar[List[str]] = ["input_fade_transition", "message_format", "message_offline", "replay_gain_enabled", "replay_gain_offset"]
 
     model_config = {
         "populate_by_name": True,
@@ -64,11 +66,15 @@ class StreamPreferences(BaseModel):
         * OpenAPI `readOnly` fields are excluded.
         * OpenAPI `readOnly` fields are excluded.
         * OpenAPI `readOnly` fields are excluded.
+        * OpenAPI `readOnly` fields are excluded.
+        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
             "input_fade_transition",
             "message_format",
             "message_offline",
+            "replay_gain_enabled",
+            "replay_gain_offset",
         ])
 
         _dict = self.model_dump(
@@ -90,7 +96,9 @@ class StreamPreferences(BaseModel):
         _obj = cls.model_validate({
             "input_fade_transition": obj.get("input_fade_transition"),
             "message_format": obj.get("message_format"),
-            "message_offline": obj.get("message_offline")
+            "message_offline": obj.get("message_offline"),
+            "replay_gain_enabled": obj.get("replay_gain_enabled"),
+            "replay_gain_offset": obj.get("replay_gain_offset")
         })
         return _obj
 

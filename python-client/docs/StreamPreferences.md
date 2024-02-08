@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **input_fade_transition** | **float** |  | [readonly] 
 **message_format** | **int** |  | [readonly] 
 **message_offline** | **str** |  | [readonly] 
+**replay_gain_enabled** | **bool** |  | [readonly] 
+**replay_gain_offset** | **float** |  | [readonly] 
 
 ## Example
 

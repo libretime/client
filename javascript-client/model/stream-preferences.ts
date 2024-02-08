@@ -38,5 +38,17 @@ export interface StreamPreferences {
      * @memberof StreamPreferences
      */
     'message_offline': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof StreamPreferences
+     */
+    'replay_gain_enabled': boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof StreamPreferences
+     */
+    'replay_gain_offset': number;
 }
 
