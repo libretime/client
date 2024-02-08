@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { ListenerCount } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsCreate: async (listenerCount: ListenerCount, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listenerCountsCreate: async (listenerCount: ListenerCount, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'listenerCount' is not null or undefined
             assertParamExists('listenerCountsCreate', 'listenerCount', listenerCount)
             const localVarPath = `/api/v2/listener-counts`;
@@ -78,7 +78,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listenerCountsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsDestroy', 'id', id)
             const localVarPath = `/api/v2/listener-counts/{id}`
@@ -116,7 +116,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listenerCountsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/listener-counts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsPartialUpdate: async (id: number, patchedListenerCount?: PatchedListenerCount, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listenerCountsPartialUpdate: async (id: number, patchedListenerCount?: PatchedListenerCount, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/listener-counts/{id}`
@@ -195,7 +195,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listenerCountsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsRetrieve', 'id', id)
             const localVarPath = `/api/v2/listener-counts/{id}`
@@ -235,7 +235,7 @@ export const ListenerCountsApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsUpdate: async (id: number, listenerCount: ListenerCount, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listenerCountsUpdate: async (id: number, listenerCount: ListenerCount, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('listenerCountsUpdate', 'id', id)
             // verify required parameter 'listenerCount' is not null or undefined
@@ -289,9 +289,11 @@ export const ListenerCountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listenerCountsCreate(listenerCount: ListenerCount, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
+        async listenerCountsCreate(listenerCount: ListenerCount, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listenerCountsCreate(listenerCount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ListenerCountsApi.listenerCountsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const ListenerCountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listenerCountsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async listenerCountsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listenerCountsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ListenerCountsApi.listenerCountsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listenerCountsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ListenerCount>>> {
+        async listenerCountsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ListenerCount>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listenerCountsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ListenerCountsApi.listenerCountsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const ListenerCountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listenerCountsPartialUpdate(id: number, patchedListenerCount?: PatchedListenerCount, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
+        async listenerCountsPartialUpdate(id: number, patchedListenerCount?: PatchedListenerCount, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listenerCountsPartialUpdate(id, patchedListenerCount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ListenerCountsApi.listenerCountsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const ListenerCountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listenerCountsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
+        async listenerCountsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listenerCountsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ListenerCountsApi.listenerCountsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const ListenerCountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listenerCountsUpdate(id: number, listenerCount: ListenerCount, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
+        async listenerCountsUpdate(id: number, listenerCount: ListenerCount, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListenerCount>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listenerCountsUpdate(id, listenerCount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ListenerCountsApi.listenerCountsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class ListenerCountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ListenerCountsApi
      */
-    public listenerCountsCreate(listenerCount: ListenerCount, options?: AxiosRequestConfig) {
+    public listenerCountsCreate(listenerCount: ListenerCount, options?: RawAxiosRequestConfig) {
         return ListenerCountsApiFp(this.configuration).listenerCountsCreate(listenerCount, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class ListenerCountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ListenerCountsApi
      */
-    public listenerCountsDestroy(id: number, options?: AxiosRequestConfig) {
+    public listenerCountsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ListenerCountsApiFp(this.configuration).listenerCountsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class ListenerCountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ListenerCountsApi
      */
-    public listenerCountsList(options?: AxiosRequestConfig) {
+    public listenerCountsList(options?: RawAxiosRequestConfig) {
         return ListenerCountsApiFp(this.configuration).listenerCountsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class ListenerCountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ListenerCountsApi
      */
-    public listenerCountsPartialUpdate(id: number, patchedListenerCount?: PatchedListenerCount, options?: AxiosRequestConfig) {
+    public listenerCountsPartialUpdate(id: number, patchedListenerCount?: PatchedListenerCount, options?: RawAxiosRequestConfig) {
         return ListenerCountsApiFp(this.configuration).listenerCountsPartialUpdate(id, patchedListenerCount, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class ListenerCountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ListenerCountsApi
      */
-    public listenerCountsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public listenerCountsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ListenerCountsApiFp(this.configuration).listenerCountsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class ListenerCountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ListenerCountsApi
      */
-    public listenerCountsUpdate(id: number, listenerCount: ListenerCount, options?: AxiosRequestConfig) {
+    public listenerCountsUpdate(id: number, listenerCount: ListenerCount, options?: RawAxiosRequestConfig) {
         return ListenerCountsApiFp(this.configuration).listenerCountsUpdate(id, listenerCount, options).then((request) => request(this.axios, this.basePath));
     }
 }

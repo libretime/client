@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { StreamPreferences } from '../model';
 // @ts-ignore
@@ -36,7 +36,7 @@ export const StreamApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamPreferencesRetrieve: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        streamPreferencesRetrieve: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/stream/preferences`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -71,7 +71,7 @@ export const StreamApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamStateRetrieve: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        streamStateRetrieve: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/stream/state`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -116,18 +116,22 @@ export const StreamApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async streamPreferencesRetrieve(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamPreferences>> {
+        async streamPreferencesRetrieve(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamPreferences>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.streamPreferencesRetrieve(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StreamApi.streamPreferencesRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async streamStateRetrieve(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamState>> {
+        async streamStateRetrieve(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamState>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.streamStateRetrieve(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StreamApi.streamStateRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -171,7 +175,7 @@ export class StreamApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StreamApi
      */
-    public streamPreferencesRetrieve(options?: AxiosRequestConfig) {
+    public streamPreferencesRetrieve(options?: RawAxiosRequestConfig) {
         return StreamApiFp(this.configuration).streamPreferencesRetrieve(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -181,7 +185,7 @@ export class StreamApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StreamApi
      */
-    public streamStateRetrieve(options?: AxiosRequestConfig) {
+    public streamStateRetrieve(options?: RawAxiosRequestConfig) {
         return StreamApiFp(this.configuration).streamStateRetrieve(options).then((request) => request(this.axios, this.basePath));
     }
 }

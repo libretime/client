@@ -3,6 +3,7 @@
 * `0` - File * `1` - Stream * `2` - Block
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedSmartBlockContent } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockContentsCreate: async (smartBlockContent: SmartBlockContent, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        smartBlockContentsCreate: async (smartBlockContent: SmartBlockContent, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'smartBlockContent' is not null or undefined
             assertParamExists('smartBlockContentsCreate', 'smartBlockContent', smartBlockContent)
             const localVarPath = `/api/v2/smart-block-contents`;
@@ -78,7 +78,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockContentsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        smartBlockContentsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsDestroy', 'id', id)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
@@ -116,7 +116,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockContentsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        smartBlockContentsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/smart-block-contents`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockContentsPartialUpdate: async (id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        smartBlockContentsPartialUpdate: async (id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
@@ -195,7 +195,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockContentsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        smartBlockContentsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsRetrieve', 'id', id)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
@@ -235,7 +235,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockContentsUpdate: async (id: number, smartBlockContent: SmartBlockContent, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        smartBlockContentsUpdate: async (id: number, smartBlockContent: SmartBlockContent, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsUpdate', 'id', id)
             // verify required parameter 'smartBlockContent' is not null or undefined
@@ -289,9 +289,11 @@ export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async smartBlockContentsCreate(smartBlockContent: SmartBlockContent, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
+        async smartBlockContentsCreate(smartBlockContent: SmartBlockContent, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.smartBlockContentsCreate(smartBlockContent, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SmartBlockContentsApi.smartBlockContentsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async smartBlockContentsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async smartBlockContentsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.smartBlockContentsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SmartBlockContentsApi.smartBlockContentsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async smartBlockContentsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SmartBlockContent>>> {
+        async smartBlockContentsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SmartBlockContent>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.smartBlockContentsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SmartBlockContentsApi.smartBlockContentsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async smartBlockContentsPartialUpdate(id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
+        async smartBlockContentsPartialUpdate(id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.smartBlockContentsPartialUpdate(id, patchedSmartBlockContent, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SmartBlockContentsApi.smartBlockContentsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async smartBlockContentsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
+        async smartBlockContentsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.smartBlockContentsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SmartBlockContentsApi.smartBlockContentsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async smartBlockContentsUpdate(id: number, smartBlockContent: SmartBlockContent, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
+        async smartBlockContentsUpdate(id: number, smartBlockContent: SmartBlockContent, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SmartBlockContent>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.smartBlockContentsUpdate(id, smartBlockContent, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SmartBlockContentsApi.smartBlockContentsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SmartBlockContentsApi
      */
-    public smartBlockContentsCreate(smartBlockContent: SmartBlockContent, options?: AxiosRequestConfig) {
+    public smartBlockContentsCreate(smartBlockContent: SmartBlockContent, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsCreate(smartBlockContent, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SmartBlockContentsApi
      */
-    public smartBlockContentsDestroy(id: number, options?: AxiosRequestConfig) {
+    public smartBlockContentsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SmartBlockContentsApi
      */
-    public smartBlockContentsList(options?: AxiosRequestConfig) {
+    public smartBlockContentsList(options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SmartBlockContentsApi
      */
-    public smartBlockContentsPartialUpdate(id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options?: AxiosRequestConfig) {
+    public smartBlockContentsPartialUpdate(id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsPartialUpdate(id, patchedSmartBlockContent, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SmartBlockContentsApi
      */
-    public smartBlockContentsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public smartBlockContentsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SmartBlockContentsApi
      */
-    public smartBlockContentsUpdate(id: number, smartBlockContent: SmartBlockContent, options?: AxiosRequestConfig) {
+    public smartBlockContentsUpdate(id: number, smartBlockContent: SmartBlockContent, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsUpdate(id, smartBlockContent, options).then((request) => request(this.axios, this.basePath));
     }
 }

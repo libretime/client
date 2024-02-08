@@ -17,9 +17,8 @@ Method | HTTP request | Description
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.stream_preferences import StreamPreferences
 from libretime_client.rest import ApiException
@@ -64,6 +63,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -80,6 +80,7 @@ This endpoint does not need any parameter.
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -95,9 +96,8 @@ This endpoint does not need any parameter.
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.stream_state import StreamState
 from libretime_client.rest import ApiException
@@ -142,6 +142,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -158,6 +159,7 @@ This endpoint does not need any parameter.
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |

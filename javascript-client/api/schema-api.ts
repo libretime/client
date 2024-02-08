@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 /**
  * SchemaApi - axios parameter creator
  * @export
@@ -34,7 +34,7 @@ export const SchemaApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schemaRetrieve: async (format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        schemaRetrieve: async (format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/schema`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -89,9 +89,11 @@ export const SchemaApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: any; }>> {
+        async schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: any; }>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.schemaRetrieve(format, lang, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SchemaApi.schemaRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -131,7 +133,7 @@ export class SchemaApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SchemaApi
      */
-    public schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: AxiosRequestConfig) {
+    public schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: RawAxiosRequestConfig) {
         return SchemaApiFp(this.configuration).schemaRetrieve(format, lang, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -3,6 +3,7 @@
 * `0` - No * `1` - Yes
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedPlaylist } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistsCreate: async (playlist: Playlist, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playlistsCreate: async (playlist: Playlist, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playlist' is not null or undefined
             assertParamExists('playlistsCreate', 'playlist', playlist)
             const localVarPath = `/api/v2/playlists`;
@@ -78,7 +78,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playlistsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsDestroy', 'id', id)
             const localVarPath = `/api/v2/playlists/{id}`
@@ -116,7 +116,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playlistsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/playlists`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistsPartialUpdate: async (id: number, patchedPlaylist?: PatchedPlaylist, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playlistsPartialUpdate: async (id: number, patchedPlaylist?: PatchedPlaylist, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/playlists/{id}`
@@ -195,7 +195,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playlistsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsRetrieve', 'id', id)
             const localVarPath = `/api/v2/playlists/{id}`
@@ -235,7 +235,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistsUpdate: async (id: number, playlist: Playlist, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playlistsUpdate: async (id: number, playlist: Playlist, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsUpdate', 'id', id)
             // verify required parameter 'playlist' is not null or undefined
@@ -289,9 +289,11 @@ export const PlaylistsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playlistsCreate(playlist: Playlist, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
+        async playlistsCreate(playlist: Playlist, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playlistsCreate(playlist, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlaylistsApi.playlistsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const PlaylistsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playlistsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async playlistsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playlistsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlaylistsApi.playlistsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playlistsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Playlist>>> {
+        async playlistsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Playlist>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playlistsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlaylistsApi.playlistsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const PlaylistsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playlistsPartialUpdate(id: number, patchedPlaylist?: PatchedPlaylist, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
+        async playlistsPartialUpdate(id: number, patchedPlaylist?: PatchedPlaylist, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playlistsPartialUpdate(id, patchedPlaylist, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlaylistsApi.playlistsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const PlaylistsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playlistsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
+        async playlistsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playlistsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlaylistsApi.playlistsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const PlaylistsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playlistsUpdate(id: number, playlist: Playlist, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
+        async playlistsUpdate(id: number, playlist: Playlist, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Playlist>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playlistsUpdate(id, playlist, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlaylistsApi.playlistsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class PlaylistsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlaylistsApi
      */
-    public playlistsCreate(playlist: Playlist, options?: AxiosRequestConfig) {
+    public playlistsCreate(playlist: Playlist, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsCreate(playlist, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class PlaylistsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlaylistsApi
      */
-    public playlistsDestroy(id: number, options?: AxiosRequestConfig) {
+    public playlistsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class PlaylistsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlaylistsApi
      */
-    public playlistsList(options?: AxiosRequestConfig) {
+    public playlistsList(options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class PlaylistsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlaylistsApi
      */
-    public playlistsPartialUpdate(id: number, patchedPlaylist?: PatchedPlaylist, options?: AxiosRequestConfig) {
+    public playlistsPartialUpdate(id: number, patchedPlaylist?: PatchedPlaylist, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsPartialUpdate(id, patchedPlaylist, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class PlaylistsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlaylistsApi
      */
-    public playlistsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public playlistsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class PlaylistsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlaylistsApi
      */
-    public playlistsUpdate(id: number, playlist: Playlist, options?: AxiosRequestConfig) {
+    public playlistsUpdate(id: number, playlist: Playlist, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsUpdate(id, playlist, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -3,6 +3,7 @@
 * `G` - Guest * `H` - Host * `P` - Manager * `A` - Admin
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { Library } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesCreate: async (library: Library, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        librariesCreate: async (library: Library, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'library' is not null or undefined
             assertParamExists('librariesCreate', 'library', library)
             const localVarPath = `/api/v2/libraries`;
@@ -78,7 +78,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        librariesDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesDestroy', 'id', id)
             const localVarPath = `/api/v2/libraries/{id}`
@@ -116,7 +116,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        librariesList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/libraries`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesPartialUpdate: async (id: number, patchedLibrary?: PatchedLibrary, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        librariesPartialUpdate: async (id: number, patchedLibrary?: PatchedLibrary, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/libraries/{id}`
@@ -195,7 +195,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        librariesRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesRetrieve', 'id', id)
             const localVarPath = `/api/v2/libraries/{id}`
@@ -235,7 +235,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesUpdate: async (id: number, library: Library, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        librariesUpdate: async (id: number, library: Library, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesUpdate', 'id', id)
             // verify required parameter 'library' is not null or undefined
@@ -289,9 +289,11 @@ export const LibrariesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async librariesCreate(library: Library, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
+        async librariesCreate(library: Library, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.librariesCreate(library, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LibrariesApi.librariesCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const LibrariesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async librariesDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async librariesDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.librariesDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LibrariesApi.librariesDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async librariesList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Library>>> {
+        async librariesList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Library>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.librariesList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LibrariesApi.librariesList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const LibrariesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
+        async librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.librariesPartialUpdate(id, patchedLibrary, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LibrariesApi.librariesPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const LibrariesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async librariesRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
+        async librariesRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.librariesRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LibrariesApi.librariesRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const LibrariesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async librariesUpdate(id: number, library: Library, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
+        async librariesUpdate(id: number, library: Library, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Library>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.librariesUpdate(id, library, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LibrariesApi.librariesUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class LibrariesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LibrariesApi
      */
-    public librariesCreate(library: Library, options?: AxiosRequestConfig) {
+    public librariesCreate(library: Library, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesCreate(library, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class LibrariesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LibrariesApi
      */
-    public librariesDestroy(id: number, options?: AxiosRequestConfig) {
+    public librariesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class LibrariesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LibrariesApi
      */
-    public librariesList(options?: AxiosRequestConfig) {
+    public librariesList(options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class LibrariesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LibrariesApi
      */
-    public librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: AxiosRequestConfig) {
+    public librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesPartialUpdate(id, patchedLibrary, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class LibrariesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LibrariesApi
      */
-    public librariesRetrieve(id: number, options?: AxiosRequestConfig) {
+    public librariesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class LibrariesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LibrariesApi
      */
-    public librariesUpdate(id: number, library: Library, options?: AxiosRequestConfig) {
+    public librariesUpdate(id: number, library: Library, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesUpdate(id, library, options).then((request) => request(this.axios, this.basePath));
     }
 }

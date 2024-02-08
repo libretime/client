@@ -50,7 +50,6 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import time
 import libretime_client
 from libretime_client.rest import ApiException
 from pprint import pprint

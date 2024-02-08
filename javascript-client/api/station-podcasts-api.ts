@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedStationPodcast } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const StationPodcastsApiAxiosParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stationPodcastsCreate: async (stationPodcast: StationPodcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        stationPodcastsCreate: async (stationPodcast: StationPodcast, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'stationPodcast' is not null or undefined
             assertParamExists('stationPodcastsCreate', 'stationPodcast', stationPodcast)
             const localVarPath = `/api/v2/station-podcasts`;
@@ -78,7 +78,7 @@ export const StationPodcastsApiAxiosParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stationPodcastsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        stationPodcastsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('stationPodcastsDestroy', 'id', id)
             const localVarPath = `/api/v2/station-podcasts/{id}`
@@ -116,7 +116,7 @@ export const StationPodcastsApiAxiosParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stationPodcastsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        stationPodcastsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/station-podcasts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const StationPodcastsApiAxiosParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stationPodcastsPartialUpdate: async (id: number, patchedStationPodcast?: PatchedStationPodcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        stationPodcastsPartialUpdate: async (id: number, patchedStationPodcast?: PatchedStationPodcast, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('stationPodcastsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/station-podcasts/{id}`
@@ -195,7 +195,7 @@ export const StationPodcastsApiAxiosParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stationPodcastsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        stationPodcastsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('stationPodcastsRetrieve', 'id', id)
             const localVarPath = `/api/v2/station-podcasts/{id}`
@@ -235,7 +235,7 @@ export const StationPodcastsApiAxiosParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stationPodcastsUpdate: async (id: number, stationPodcast: StationPodcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        stationPodcastsUpdate: async (id: number, stationPodcast: StationPodcast, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('stationPodcastsUpdate', 'id', id)
             // verify required parameter 'stationPodcast' is not null or undefined
@@ -289,9 +289,11 @@ export const StationPodcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stationPodcastsCreate(stationPodcast: StationPodcast, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
+        async stationPodcastsCreate(stationPodcast: StationPodcast, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stationPodcastsCreate(stationPodcast, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StationPodcastsApi.stationPodcastsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const StationPodcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stationPodcastsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async stationPodcastsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stationPodcastsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StationPodcastsApi.stationPodcastsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stationPodcastsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StationPodcast>>> {
+        async stationPodcastsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<StationPodcast>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stationPodcastsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StationPodcastsApi.stationPodcastsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const StationPodcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stationPodcastsPartialUpdate(id: number, patchedStationPodcast?: PatchedStationPodcast, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
+        async stationPodcastsPartialUpdate(id: number, patchedStationPodcast?: PatchedStationPodcast, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stationPodcastsPartialUpdate(id, patchedStationPodcast, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StationPodcastsApi.stationPodcastsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const StationPodcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stationPodcastsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
+        async stationPodcastsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stationPodcastsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StationPodcastsApi.stationPodcastsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const StationPodcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stationPodcastsUpdate(id: number, stationPodcast: StationPodcast, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
+        async stationPodcastsUpdate(id: number, stationPodcast: StationPodcast, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StationPodcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stationPodcastsUpdate(id, stationPodcast, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['StationPodcastsApi.stationPodcastsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class StationPodcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StationPodcastsApi
      */
-    public stationPodcastsCreate(stationPodcast: StationPodcast, options?: AxiosRequestConfig) {
+    public stationPodcastsCreate(stationPodcast: StationPodcast, options?: RawAxiosRequestConfig) {
         return StationPodcastsApiFp(this.configuration).stationPodcastsCreate(stationPodcast, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class StationPodcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StationPodcastsApi
      */
-    public stationPodcastsDestroy(id: number, options?: AxiosRequestConfig) {
+    public stationPodcastsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return StationPodcastsApiFp(this.configuration).stationPodcastsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class StationPodcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StationPodcastsApi
      */
-    public stationPodcastsList(options?: AxiosRequestConfig) {
+    public stationPodcastsList(options?: RawAxiosRequestConfig) {
         return StationPodcastsApiFp(this.configuration).stationPodcastsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class StationPodcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StationPodcastsApi
      */
-    public stationPodcastsPartialUpdate(id: number, patchedStationPodcast?: PatchedStationPodcast, options?: AxiosRequestConfig) {
+    public stationPodcastsPartialUpdate(id: number, patchedStationPodcast?: PatchedStationPodcast, options?: RawAxiosRequestConfig) {
         return StationPodcastsApiFp(this.configuration).stationPodcastsPartialUpdate(id, patchedStationPodcast, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class StationPodcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StationPodcastsApi
      */
-    public stationPodcastsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public stationPodcastsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return StationPodcastsApiFp(this.configuration).stationPodcastsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class StationPodcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StationPodcastsApi
      */
-    public stationPodcastsUpdate(id: number, stationPodcast: StationPodcast, options?: AxiosRequestConfig) {
+    public stationPodcastsUpdate(id: number, stationPodcast: StationPodcast, options?: RawAxiosRequestConfig) {
         return StationPodcastsApiFp(this.configuration).stationPodcastsUpdate(id, stationPodcast, options).then((request) => request(this.axios, this.basePath));
     }
 }

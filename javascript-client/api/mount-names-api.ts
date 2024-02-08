@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { MountName } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesCreate: async (mountName: MountName, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        mountNamesCreate: async (mountName: MountName, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'mountName' is not null or undefined
             assertParamExists('mountNamesCreate', 'mountName', mountName)
             const localVarPath = `/api/v2/mount-names`;
@@ -78,7 +78,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        mountNamesDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesDestroy', 'id', id)
             const localVarPath = `/api/v2/mount-names/{id}`
@@ -116,7 +116,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        mountNamesList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/mount-names`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesPartialUpdate: async (id: number, patchedMountName?: PatchedMountName, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        mountNamesPartialUpdate: async (id: number, patchedMountName?: PatchedMountName, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/mount-names/{id}`
@@ -195,7 +195,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        mountNamesRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesRetrieve', 'id', id)
             const localVarPath = `/api/v2/mount-names/{id}`
@@ -235,7 +235,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesUpdate: async (id: number, mountName: MountName, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        mountNamesUpdate: async (id: number, mountName: MountName, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesUpdate', 'id', id)
             // verify required parameter 'mountName' is not null or undefined
@@ -289,9 +289,11 @@ export const MountNamesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async mountNamesCreate(mountName: MountName, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
+        async mountNamesCreate(mountName: MountName, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.mountNamesCreate(mountName, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MountNamesApi.mountNamesCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const MountNamesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async mountNamesDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async mountNamesDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.mountNamesDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MountNamesApi.mountNamesDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async mountNamesList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountName>>> {
+        async mountNamesList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountName>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.mountNamesList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MountNamesApi.mountNamesList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const MountNamesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
+        async mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.mountNamesPartialUpdate(id, patchedMountName, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MountNamesApi.mountNamesPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const MountNamesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async mountNamesRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
+        async mountNamesRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.mountNamesRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MountNamesApi.mountNamesRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const MountNamesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async mountNamesUpdate(id: number, mountName: MountName, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
+        async mountNamesUpdate(id: number, mountName: MountName, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountName>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.mountNamesUpdate(id, mountName, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MountNamesApi.mountNamesUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class MountNamesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountNamesApi
      */
-    public mountNamesCreate(mountName: MountName, options?: AxiosRequestConfig) {
+    public mountNamesCreate(mountName: MountName, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesCreate(mountName, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class MountNamesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountNamesApi
      */
-    public mountNamesDestroy(id: number, options?: AxiosRequestConfig) {
+    public mountNamesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class MountNamesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountNamesApi
      */
-    public mountNamesList(options?: AxiosRequestConfig) {
+    public mountNamesList(options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class MountNamesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountNamesApi
      */
-    public mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: AxiosRequestConfig) {
+    public mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesPartialUpdate(id, patchedMountName, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class MountNamesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountNamesApi
      */
-    public mountNamesRetrieve(id: number, options?: AxiosRequestConfig) {
+    public mountNamesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class MountNamesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountNamesApi
      */
-    public mountNamesUpdate(id: number, mountName: MountName, options?: AxiosRequestConfig) {
+    public mountNamesUpdate(id: number, mountName: MountName, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesUpdate(id, mountName, options).then((request) => request(this.axios, this.basePath));
     }
 }

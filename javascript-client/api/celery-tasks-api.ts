@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { CeleryTask } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksCreate: async (celeryTask: CeleryTask, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        celeryTasksCreate: async (celeryTask: CeleryTask, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'celeryTask' is not null or undefined
             assertParamExists('celeryTasksCreate', 'celeryTask', celeryTask)
             const localVarPath = `/api/v2/celery-tasks`;
@@ -78,7 +78,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        celeryTasksDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksDestroy', 'id', id)
             const localVarPath = `/api/v2/celery-tasks/{id}`
@@ -116,7 +116,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        celeryTasksList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/celery-tasks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksPartialUpdate: async (id: number, patchedCeleryTask?: PatchedCeleryTask, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        celeryTasksPartialUpdate: async (id: number, patchedCeleryTask?: PatchedCeleryTask, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/celery-tasks/{id}`
@@ -195,7 +195,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        celeryTasksRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksRetrieve', 'id', id)
             const localVarPath = `/api/v2/celery-tasks/{id}`
@@ -235,7 +235,7 @@ export const CeleryTasksApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksUpdate: async (id: number, celeryTask: CeleryTask, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        celeryTasksUpdate: async (id: number, celeryTask: CeleryTask, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('celeryTasksUpdate', 'id', id)
             // verify required parameter 'celeryTask' is not null or undefined
@@ -289,9 +289,11 @@ export const CeleryTasksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async celeryTasksCreate(celeryTask: CeleryTask, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
+        async celeryTasksCreate(celeryTask: CeleryTask, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.celeryTasksCreate(celeryTask, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CeleryTasksApi.celeryTasksCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const CeleryTasksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async celeryTasksDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async celeryTasksDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.celeryTasksDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CeleryTasksApi.celeryTasksDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async celeryTasksList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CeleryTask>>> {
+        async celeryTasksList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CeleryTask>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.celeryTasksList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CeleryTasksApi.celeryTasksList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const CeleryTasksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async celeryTasksPartialUpdate(id: number, patchedCeleryTask?: PatchedCeleryTask, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
+        async celeryTasksPartialUpdate(id: number, patchedCeleryTask?: PatchedCeleryTask, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.celeryTasksPartialUpdate(id, patchedCeleryTask, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CeleryTasksApi.celeryTasksPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const CeleryTasksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async celeryTasksRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
+        async celeryTasksRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.celeryTasksRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CeleryTasksApi.celeryTasksRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const CeleryTasksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async celeryTasksUpdate(id: number, celeryTask: CeleryTask, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
+        async celeryTasksUpdate(id: number, celeryTask: CeleryTask, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CeleryTask>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.celeryTasksUpdate(id, celeryTask, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['CeleryTasksApi.celeryTasksUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class CeleryTasksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CeleryTasksApi
      */
-    public celeryTasksCreate(celeryTask: CeleryTask, options?: AxiosRequestConfig) {
+    public celeryTasksCreate(celeryTask: CeleryTask, options?: RawAxiosRequestConfig) {
         return CeleryTasksApiFp(this.configuration).celeryTasksCreate(celeryTask, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class CeleryTasksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CeleryTasksApi
      */
-    public celeryTasksDestroy(id: number, options?: AxiosRequestConfig) {
+    public celeryTasksDestroy(id: number, options?: RawAxiosRequestConfig) {
         return CeleryTasksApiFp(this.configuration).celeryTasksDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class CeleryTasksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CeleryTasksApi
      */
-    public celeryTasksList(options?: AxiosRequestConfig) {
+    public celeryTasksList(options?: RawAxiosRequestConfig) {
         return CeleryTasksApiFp(this.configuration).celeryTasksList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class CeleryTasksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CeleryTasksApi
      */
-    public celeryTasksPartialUpdate(id: number, patchedCeleryTask?: PatchedCeleryTask, options?: AxiosRequestConfig) {
+    public celeryTasksPartialUpdate(id: number, patchedCeleryTask?: PatchedCeleryTask, options?: RawAxiosRequestConfig) {
         return CeleryTasksApiFp(this.configuration).celeryTasksPartialUpdate(id, patchedCeleryTask, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class CeleryTasksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CeleryTasksApi
      */
-    public celeryTasksRetrieve(id: number, options?: AxiosRequestConfig) {
+    public celeryTasksRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return CeleryTasksApiFp(this.configuration).celeryTasksRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class CeleryTasksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CeleryTasksApi
      */
-    public celeryTasksUpdate(id: number, celeryTask: CeleryTask, options?: AxiosRequestConfig) {
+    public celeryTasksUpdate(id: number, celeryTask: CeleryTask, options?: RawAxiosRequestConfig) {
         return CeleryTasksApiFp(this.configuration).celeryTasksUpdate(id, celeryTask, options).then((request) => request(this.axios, this.basePath));
     }
 }

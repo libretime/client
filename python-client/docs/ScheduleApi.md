@@ -21,9 +21,8 @@ Method | HTTP request | Description
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.schedule import Schedule
 from libretime_client.rest import ApiException
@@ -70,6 +69,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schedule** | [**Schedule**](Schedule.md)|  | 
@@ -88,6 +88,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** |  |  -  |
@@ -103,9 +104,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.rest import ApiException
 from pprint import pprint
@@ -149,6 +149,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. | 
@@ -167,6 +168,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No response body |  -  |
@@ -182,9 +184,8 @@ void (empty response body)
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.schedule import Schedule
 from libretime_client.rest import ApiException
@@ -237,6 +238,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **broadcasted** | **int**|  | [optional] 
@@ -261,6 +263,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -276,9 +279,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.patched_schedule import PatchedSchedule
 from libretime_client.models.schedule import Schedule
@@ -327,6 +329,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. | 
@@ -346,6 +349,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -361,9 +365,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.schedule import Schedule
 from libretime_client.rest import ApiException
@@ -410,6 +413,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. | 
@@ -428,6 +432,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -443,9 +448,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.schedule import Schedule
 from libretime_client.rest import ApiException
@@ -493,6 +497,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. | 
@@ -512,6 +517,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |

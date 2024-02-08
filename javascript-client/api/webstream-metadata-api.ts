@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedWebstreamMetadata } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataCreate: async (webstreamMetadata: WebstreamMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamMetadataCreate: async (webstreamMetadata: WebstreamMetadata, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'webstreamMetadata' is not null or undefined
             assertParamExists('webstreamMetadataCreate', 'webstreamMetadata', webstreamMetadata)
             const localVarPath = `/api/v2/webstream-metadata`;
@@ -78,7 +78,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamMetadataDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataDestroy', 'id', id)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
@@ -116,7 +116,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamMetadataList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/webstream-metadata`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataPartialUpdate: async (id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamMetadataPartialUpdate: async (id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
@@ -195,7 +195,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamMetadataRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataRetrieve', 'id', id)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
@@ -235,7 +235,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataUpdate: async (id: number, webstreamMetadata: WebstreamMetadata, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamMetadataUpdate: async (id: number, webstreamMetadata: WebstreamMetadata, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataUpdate', 'id', id)
             // verify required parameter 'webstreamMetadata' is not null or undefined
@@ -289,9 +289,11 @@ export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
+        async webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamMetadataCreate(webstreamMetadata, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamMetadataApi.webstreamMetadataCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamMetadataDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async webstreamMetadataDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamMetadataDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamMetadataApi.webstreamMetadataDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamMetadataList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WebstreamMetadata>>> {
+        async webstreamMetadataList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WebstreamMetadata>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamMetadataList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamMetadataApi.webstreamMetadataList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
+        async webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamMetadataPartialUpdate(id, patchedWebstreamMetadata, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamMetadataApi.webstreamMetadataPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamMetadataRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
+        async webstreamMetadataRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamMetadataRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamMetadataApi.webstreamMetadataRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
+        async webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WebstreamMetadata>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamMetadataUpdate(id, webstreamMetadata, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamMetadataApi.webstreamMetadataUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamMetadataApi
      */
-    public webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: AxiosRequestConfig) {
+    public webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataCreate(webstreamMetadata, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamMetadataApi
      */
-    public webstreamMetadataDestroy(id: number, options?: AxiosRequestConfig) {
+    public webstreamMetadataDestroy(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamMetadataApi
      */
-    public webstreamMetadataList(options?: AxiosRequestConfig) {
+    public webstreamMetadataList(options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamMetadataApi
      */
-    public webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: AxiosRequestConfig) {
+    public webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataPartialUpdate(id, patchedWebstreamMetadata, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamMetadataApi
      */
-    public webstreamMetadataRetrieve(id: number, options?: AxiosRequestConfig) {
+    public webstreamMetadataRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamMetadataApi
      */
-    public webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: AxiosRequestConfig) {
+    public webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataUpdate(id, webstreamMetadata, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedShowRebroadcast } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsCreate: async (showRebroadcast: ShowRebroadcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showRebroadcastsCreate: async (showRebroadcast: ShowRebroadcast, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'showRebroadcast' is not null or undefined
             assertParamExists('showRebroadcastsCreate', 'showRebroadcast', showRebroadcast)
             const localVarPath = `/api/v2/show-rebroadcasts`;
@@ -78,7 +78,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showRebroadcastsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsDestroy', 'id', id)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
@@ -116,7 +116,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showRebroadcastsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/show-rebroadcasts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsPartialUpdate: async (id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showRebroadcastsPartialUpdate: async (id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
@@ -195,7 +195,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showRebroadcastsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsRetrieve', 'id', id)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
@@ -235,7 +235,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsUpdate: async (id: number, showRebroadcast: ShowRebroadcast, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showRebroadcastsUpdate: async (id: number, showRebroadcast: ShowRebroadcast, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsUpdate', 'id', id)
             // verify required parameter 'showRebroadcast' is not null or undefined
@@ -289,9 +289,11 @@ export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
+        async showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showRebroadcastsCreate(showRebroadcast, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowRebroadcastsApi.showRebroadcastsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showRebroadcastsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async showRebroadcastsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showRebroadcastsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowRebroadcastsApi.showRebroadcastsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showRebroadcastsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShowRebroadcast>>> {
+        async showRebroadcastsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShowRebroadcast>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showRebroadcastsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowRebroadcastsApi.showRebroadcastsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
+        async showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showRebroadcastsPartialUpdate(id, patchedShowRebroadcast, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowRebroadcastsApi.showRebroadcastsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showRebroadcastsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
+        async showRebroadcastsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showRebroadcastsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowRebroadcastsApi.showRebroadcastsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
+        async showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowRebroadcast>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showRebroadcastsUpdate(id, showRebroadcast, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowRebroadcastsApi.showRebroadcastsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowRebroadcastsApi
      */
-    public showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: AxiosRequestConfig) {
+    public showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsCreate(showRebroadcast, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowRebroadcastsApi
      */
-    public showRebroadcastsDestroy(id: number, options?: AxiosRequestConfig) {
+    public showRebroadcastsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowRebroadcastsApi
      */
-    public showRebroadcastsList(options?: AxiosRequestConfig) {
+    public showRebroadcastsList(options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowRebroadcastsApi
      */
-    public showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: AxiosRequestConfig) {
+    public showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsPartialUpdate(id, patchedShowRebroadcast, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowRebroadcastsApi
      */
-    public showRebroadcastsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public showRebroadcastsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowRebroadcastsApi
      */
-    public showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: AxiosRequestConfig) {
+    public showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsUpdate(id, showRebroadcast, options).then((request) => request(this.axios, this.basePath));
     }
 }

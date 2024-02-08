@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedShowHost } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsCreate: async (showHost: ShowHost, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showHostsCreate: async (showHost: ShowHost, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'showHost' is not null or undefined
             assertParamExists('showHostsCreate', 'showHost', showHost)
             const localVarPath = `/api/v2/show-hosts`;
@@ -78,7 +78,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showHostsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsDestroy', 'id', id)
             const localVarPath = `/api/v2/show-hosts/{id}`
@@ -116,7 +116,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showHostsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/show-hosts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsPartialUpdate: async (id: number, patchedShowHost?: PatchedShowHost, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showHostsPartialUpdate: async (id: number, patchedShowHost?: PatchedShowHost, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/show-hosts/{id}`
@@ -195,7 +195,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showHostsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsRetrieve', 'id', id)
             const localVarPath = `/api/v2/show-hosts/{id}`
@@ -235,7 +235,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsUpdate: async (id: number, showHost: ShowHost, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showHostsUpdate: async (id: number, showHost: ShowHost, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsUpdate', 'id', id)
             // verify required parameter 'showHost' is not null or undefined
@@ -289,9 +289,11 @@ export const ShowHostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showHostsCreate(showHost: ShowHost, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
+        async showHostsCreate(showHost: ShowHost, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showHostsCreate(showHost, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowHostsApi.showHostsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const ShowHostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showHostsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async showHostsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showHostsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowHostsApi.showHostsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showHostsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShowHost>>> {
+        async showHostsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShowHost>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showHostsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowHostsApi.showHostsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const ShowHostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
+        async showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showHostsPartialUpdate(id, patchedShowHost, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowHostsApi.showHostsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const ShowHostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showHostsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
+        async showHostsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showHostsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowHostsApi.showHostsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const ShowHostsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showHostsUpdate(id: number, showHost: ShowHost, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
+        async showHostsUpdate(id: number, showHost: ShowHost, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowHost>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showHostsUpdate(id, showHost, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowHostsApi.showHostsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class ShowHostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowHostsApi
      */
-    public showHostsCreate(showHost: ShowHost, options?: AxiosRequestConfig) {
+    public showHostsCreate(showHost: ShowHost, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsCreate(showHost, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class ShowHostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowHostsApi
      */
-    public showHostsDestroy(id: number, options?: AxiosRequestConfig) {
+    public showHostsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class ShowHostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowHostsApi
      */
-    public showHostsList(options?: AxiosRequestConfig) {
+    public showHostsList(options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class ShowHostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowHostsApi
      */
-    public showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: AxiosRequestConfig) {
+    public showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsPartialUpdate(id, patchedShowHost, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class ShowHostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowHostsApi
      */
-    public showHostsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public showHostsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class ShowHostsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowHostsApi
      */
-    public showHostsUpdate(id: number, showHost: ShowHost, options?: AxiosRequestConfig) {
+    public showHostsUpdate(id: number, showHost: ShowHost, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsUpdate(id, showHost, options).then((request) => request(this.axios, this.basePath));
     }
 }

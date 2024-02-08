@@ -12,13 +12,10 @@
 """  # noqa: E501
 
 
+from __future__ import annotations
 import json
-import pprint
-import re  # noqa: F401
-from aenum import Enum, no_arg
-
-
-
+from enum import Enum
+from typing_extensions import Self
 
 
 class SmartBlockKindEnum(str, Enum):
@@ -33,8 +30,8 @@ class SmartBlockKindEnum(str, Enum):
     DYNAMIC = 'dynamic'
 
     @classmethod
-    def from_json(cls, json_str: str) -> SmartBlockKindEnum:
+    def from_json(cls, json_str: str) -> Self:
         """Create an instance of SmartBlockKindEnum from a JSON string"""
-        return SmartBlockKindEnum(json.loads(json_str))
+        return cls(json.loads(json_str))
 
 

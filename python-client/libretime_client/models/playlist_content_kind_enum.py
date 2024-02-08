@@ -12,13 +12,10 @@
 """  # noqa: E501
 
 
+from __future__ import annotations
 import json
-import pprint
-import re  # noqa: F401
-from aenum import Enum, no_arg
-
-
-
+from enum import Enum
+from typing_extensions import Self
 
 
 class PlaylistContentKindEnum(int, Enum):
@@ -34,8 +31,8 @@ class PlaylistContentKindEnum(int, Enum):
     NUMBER_2 = 2
 
     @classmethod
-    def from_json(cls, json_str: str) -> PlaylistContentKindEnum:
+    def from_json(cls, json_str: str) -> Self:
         """Create an instance of PlaylistContentKindEnum from a JSON string"""
-        return PlaylistContentKindEnum(json.loads(json_str))
+        return cls(json.loads(json_str))
 
 

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedPlayoutHistoryTemplate } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const PlayoutHistoryTemplatesApiAxiosParamCreator = function (configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesCreate: async (playoutHistoryTemplate: PlayoutHistoryTemplate, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playoutHistoryTemplatesCreate: async (playoutHistoryTemplate: PlayoutHistoryTemplate, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playoutHistoryTemplate' is not null or undefined
             assertParamExists('playoutHistoryTemplatesCreate', 'playoutHistoryTemplate', playoutHistoryTemplate)
             const localVarPath = `/api/v2/playout-history-templates`;
@@ -78,7 +78,7 @@ export const PlayoutHistoryTemplatesApiAxiosParamCreator = function (configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playoutHistoryTemplatesDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplatesDestroy', 'id', id)
             const localVarPath = `/api/v2/playout-history-templates/{id}`
@@ -116,7 +116,7 @@ export const PlayoutHistoryTemplatesApiAxiosParamCreator = function (configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playoutHistoryTemplatesList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/playout-history-templates`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const PlayoutHistoryTemplatesApiAxiosParamCreator = function (configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesPartialUpdate: async (id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playoutHistoryTemplatesPartialUpdate: async (id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplatesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/playout-history-templates/{id}`
@@ -195,7 +195,7 @@ export const PlayoutHistoryTemplatesApiAxiosParamCreator = function (configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playoutHistoryTemplatesRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplatesRetrieve', 'id', id)
             const localVarPath = `/api/v2/playout-history-templates/{id}`
@@ -235,7 +235,7 @@ export const PlayoutHistoryTemplatesApiAxiosParamCreator = function (configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesUpdate: async (id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        playoutHistoryTemplatesUpdate: async (id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryTemplatesUpdate', 'id', id)
             // verify required parameter 'playoutHistoryTemplate' is not null or undefined
@@ -289,9 +289,11 @@ export const PlayoutHistoryTemplatesApiFp = function(configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playoutHistoryTemplatesCreate(playoutHistoryTemplate: PlayoutHistoryTemplate, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
+        async playoutHistoryTemplatesCreate(playoutHistoryTemplate: PlayoutHistoryTemplate, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playoutHistoryTemplatesCreate(playoutHistoryTemplate, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlayoutHistoryTemplatesApi.playoutHistoryTemplatesCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const PlayoutHistoryTemplatesApiFp = function(configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playoutHistoryTemplatesDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async playoutHistoryTemplatesDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playoutHistoryTemplatesDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlayoutHistoryTemplatesApi.playoutHistoryTemplatesDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playoutHistoryTemplatesList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<PlayoutHistoryTemplate>>> {
+        async playoutHistoryTemplatesList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<PlayoutHistoryTemplate>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playoutHistoryTemplatesList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlayoutHistoryTemplatesApi.playoutHistoryTemplatesList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const PlayoutHistoryTemplatesApiFp = function(configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playoutHistoryTemplatesPartialUpdate(id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
+        async playoutHistoryTemplatesPartialUpdate(id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playoutHistoryTemplatesPartialUpdate(id, patchedPlayoutHistoryTemplate, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlayoutHistoryTemplatesApi.playoutHistoryTemplatesPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const PlayoutHistoryTemplatesApiFp = function(configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playoutHistoryTemplatesRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
+        async playoutHistoryTemplatesRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playoutHistoryTemplatesRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlayoutHistoryTemplatesApi.playoutHistoryTemplatesRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const PlayoutHistoryTemplatesApiFp = function(configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playoutHistoryTemplatesUpdate(id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
+        async playoutHistoryTemplatesUpdate(id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PlayoutHistoryTemplate>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playoutHistoryTemplatesUpdate(id, playoutHistoryTemplate, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['PlayoutHistoryTemplatesApi.playoutHistoryTemplatesUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlayoutHistoryTemplatesApi
      */
-    public playoutHistoryTemplatesCreate(playoutHistoryTemplate: PlayoutHistoryTemplate, options?: AxiosRequestConfig) {
+    public playoutHistoryTemplatesCreate(playoutHistoryTemplate: PlayoutHistoryTemplate, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesCreate(playoutHistoryTemplate, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlayoutHistoryTemplatesApi
      */
-    public playoutHistoryTemplatesDestroy(id: number, options?: AxiosRequestConfig) {
+    public playoutHistoryTemplatesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlayoutHistoryTemplatesApi
      */
-    public playoutHistoryTemplatesList(options?: AxiosRequestConfig) {
+    public playoutHistoryTemplatesList(options?: RawAxiosRequestConfig) {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlayoutHistoryTemplatesApi
      */
-    public playoutHistoryTemplatesPartialUpdate(id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options?: AxiosRequestConfig) {
+    public playoutHistoryTemplatesPartialUpdate(id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesPartialUpdate(id, patchedPlayoutHistoryTemplate, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlayoutHistoryTemplatesApi
      */
-    public playoutHistoryTemplatesRetrieve(id: number, options?: AxiosRequestConfig) {
+    public playoutHistoryTemplatesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class PlayoutHistoryTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PlayoutHistoryTemplatesApi
      */
-    public playoutHistoryTemplatesUpdate(id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options?: AxiosRequestConfig) {
+    public playoutHistoryTemplatesUpdate(id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryTemplatesApiFp(this.configuration).playoutHistoryTemplatesUpdate(id, playoutHistoryTemplate, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedServiceRegister } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersCreate: async (serviceRegister: ServiceRegister, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        serviceRegistersCreate: async (serviceRegister: ServiceRegister, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'serviceRegister' is not null or undefined
             assertParamExists('serviceRegistersCreate', 'serviceRegister', serviceRegister)
             const localVarPath = `/api/v2/service-registers`;
@@ -78,7 +78,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersDestroy: async (name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        serviceRegistersDestroy: async (name: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersDestroy', 'name', name)
             const localVarPath = `/api/v2/service-registers/{name}`
@@ -116,7 +116,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        serviceRegistersList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/service-registers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersPartialUpdate: async (name: string, patchedServiceRegister?: PatchedServiceRegister, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        serviceRegistersPartialUpdate: async (name: string, patchedServiceRegister?: PatchedServiceRegister, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersPartialUpdate', 'name', name)
             const localVarPath = `/api/v2/service-registers/{name}`
@@ -195,7 +195,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersRetrieve: async (name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        serviceRegistersRetrieve: async (name: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersRetrieve', 'name', name)
             const localVarPath = `/api/v2/service-registers/{name}`
@@ -235,7 +235,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersUpdate: async (name: string, serviceRegister: ServiceRegister, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        serviceRegistersUpdate: async (name: string, serviceRegister: ServiceRegister, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersUpdate', 'name', name)
             // verify required parameter 'serviceRegister' is not null or undefined
@@ -289,9 +289,11 @@ export const ServiceRegistersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async serviceRegistersCreate(serviceRegister: ServiceRegister, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
+        async serviceRegistersCreate(serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.serviceRegistersCreate(serviceRegister, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ServiceRegistersApi.serviceRegistersCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const ServiceRegistersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async serviceRegistersDestroy(name: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async serviceRegistersDestroy(name: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.serviceRegistersDestroy(name, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ServiceRegistersApi.serviceRegistersDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async serviceRegistersList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServiceRegister>>> {
+        async serviceRegistersList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ServiceRegister>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.serviceRegistersList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ServiceRegistersApi.serviceRegistersList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const ServiceRegistersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
+        async serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.serviceRegistersPartialUpdate(name, patchedServiceRegister, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ServiceRegistersApi.serviceRegistersPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const ServiceRegistersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async serviceRegistersRetrieve(name: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
+        async serviceRegistersRetrieve(name: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.serviceRegistersRetrieve(name, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ServiceRegistersApi.serviceRegistersRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const ServiceRegistersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
+        async serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ServiceRegister>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.serviceRegistersUpdate(name, serviceRegister, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ServiceRegistersApi.serviceRegistersUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class ServiceRegistersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ServiceRegistersApi
      */
-    public serviceRegistersCreate(serviceRegister: ServiceRegister, options?: AxiosRequestConfig) {
+    public serviceRegistersCreate(serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersCreate(serviceRegister, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class ServiceRegistersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ServiceRegistersApi
      */
-    public serviceRegistersDestroy(name: string, options?: AxiosRequestConfig) {
+    public serviceRegistersDestroy(name: string, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersDestroy(name, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class ServiceRegistersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ServiceRegistersApi
      */
-    public serviceRegistersList(options?: AxiosRequestConfig) {
+    public serviceRegistersList(options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class ServiceRegistersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ServiceRegistersApi
      */
-    public serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: AxiosRequestConfig) {
+    public serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersPartialUpdate(name, patchedServiceRegister, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class ServiceRegistersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ServiceRegistersApi
      */
-    public serviceRegistersRetrieve(name: string, options?: AxiosRequestConfig) {
+    public serviceRegistersRetrieve(name: string, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersRetrieve(name, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class ServiceRegistersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ServiceRegistersApi
      */
-    public serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: AxiosRequestConfig) {
+    public serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersUpdate(name, serviceRegister, options).then((request) => request(this.axios, this.basePath));
     }
 }

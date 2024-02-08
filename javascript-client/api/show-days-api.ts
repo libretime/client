@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedShowDays } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysCreate: async (showDays: ShowDays, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showDaysCreate: async (showDays: ShowDays, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'showDays' is not null or undefined
             assertParamExists('showDaysCreate', 'showDays', showDays)
             const localVarPath = `/api/v2/show-days`;
@@ -78,7 +78,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showDaysDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysDestroy', 'id', id)
             const localVarPath = `/api/v2/show-days/{id}`
@@ -116,7 +116,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showDaysList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/show-days`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysPartialUpdate: async (id: number, patchedShowDays?: PatchedShowDays, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showDaysPartialUpdate: async (id: number, patchedShowDays?: PatchedShowDays, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/show-days/{id}`
@@ -195,7 +195,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showDaysRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysRetrieve', 'id', id)
             const localVarPath = `/api/v2/show-days/{id}`
@@ -235,7 +235,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysUpdate: async (id: number, showDays: ShowDays, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        showDaysUpdate: async (id: number, showDays: ShowDays, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysUpdate', 'id', id)
             // verify required parameter 'showDays' is not null or undefined
@@ -289,9 +289,11 @@ export const ShowDaysApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showDaysCreate(showDays: ShowDays, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
+        async showDaysCreate(showDays: ShowDays, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showDaysCreate(showDays, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowDaysApi.showDaysCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const ShowDaysApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showDaysDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async showDaysDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showDaysDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowDaysApi.showDaysDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showDaysList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShowDays>>> {
+        async showDaysList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ShowDays>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showDaysList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowDaysApi.showDaysList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const ShowDaysApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
+        async showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showDaysPartialUpdate(id, patchedShowDays, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowDaysApi.showDaysPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const ShowDaysApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showDaysRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
+        async showDaysRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showDaysRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowDaysApi.showDaysRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const ShowDaysApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async showDaysUpdate(id: number, showDays: ShowDays, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
+        async showDaysUpdate(id: number, showDays: ShowDays, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ShowDays>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.showDaysUpdate(id, showDays, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['ShowDaysApi.showDaysUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class ShowDaysApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowDaysApi
      */
-    public showDaysCreate(showDays: ShowDays, options?: AxiosRequestConfig) {
+    public showDaysCreate(showDays: ShowDays, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysCreate(showDays, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class ShowDaysApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowDaysApi
      */
-    public showDaysDestroy(id: number, options?: AxiosRequestConfig) {
+    public showDaysDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class ShowDaysApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowDaysApi
      */
-    public showDaysList(options?: AxiosRequestConfig) {
+    public showDaysList(options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class ShowDaysApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowDaysApi
      */
-    public showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: AxiosRequestConfig) {
+    public showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysPartialUpdate(id, patchedShowDays, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class ShowDaysApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowDaysApi
      */
-    public showDaysRetrieve(id: number, options?: AxiosRequestConfig) {
+    public showDaysRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class ShowDaysApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ShowDaysApi
      */
-    public showDaysUpdate(id: number, showDays: ShowDays, options?: AxiosRequestConfig) {
+    public showDaysUpdate(id: number, showDays: ShowDays, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysUpdate(id, showDays, options).then((request) => request(this.axios, this.basePath));
     }
 }

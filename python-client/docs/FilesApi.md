@@ -22,9 +22,8 @@ Method | HTTP request | Description
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.file import File
 from libretime_client.rest import ApiException
@@ -71,6 +70,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | [**File**](File.md)|  | 
@@ -89,6 +89,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** |  |  -  |
@@ -104,9 +105,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.rest import ApiException
 from pprint import pprint
@@ -150,6 +150,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. | 
@@ -168,6 +169,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No response body |  -  |
@@ -183,9 +185,8 @@ void (empty response body)
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.file import File
 from libretime_client.rest import ApiException
@@ -232,6 +233,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. | 
@@ -250,6 +252,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -265,9 +268,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.file import File
 from libretime_client.rest import ApiException
@@ -312,6 +314,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -328,6 +331,7 @@ This endpoint does not need any parameter.
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -343,9 +347,8 @@ This endpoint does not need any parameter.
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.file import File
 from libretime_client.models.patched_file import PatchedFile
@@ -394,6 +397,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. | 
@@ -413,6 +417,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -428,9 +433,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.file import File
 from libretime_client.rest import ApiException
@@ -477,6 +481,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. | 
@@ -495,6 +500,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
@@ -510,9 +516,8 @@ Name | Type | Description  | Notes
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.models.file import File
 from libretime_client.rest import ApiException
@@ -560,6 +565,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this file. | 
@@ -579,6 +585,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |

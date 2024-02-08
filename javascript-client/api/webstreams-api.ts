@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedWebstream } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsCreate: async (webstream: Webstream, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamsCreate: async (webstream: Webstream, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'webstream' is not null or undefined
             assertParamExists('webstreamsCreate', 'webstream', webstream)
             const localVarPath = `/api/v2/webstreams`;
@@ -78,7 +78,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsDestroy', 'id', id)
             const localVarPath = `/api/v2/webstreams/{id}`
@@ -116,7 +116,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/webstreams`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsPartialUpdate: async (id: number, patchedWebstream?: PatchedWebstream, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamsPartialUpdate: async (id: number, patchedWebstream?: PatchedWebstream, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/webstreams/{id}`
@@ -195,7 +195,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsRetrieve', 'id', id)
             const localVarPath = `/api/v2/webstreams/{id}`
@@ -235,7 +235,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsUpdate: async (id: number, webstream: Webstream, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        webstreamsUpdate: async (id: number, webstream: Webstream, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsUpdate', 'id', id)
             // verify required parameter 'webstream' is not null or undefined
@@ -289,9 +289,11 @@ export const WebstreamsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamsCreate(webstream: Webstream, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
+        async webstreamsCreate(webstream: Webstream, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamsCreate(webstream, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamsApi.webstreamsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const WebstreamsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async webstreamsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamsApi.webstreamsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Webstream>>> {
+        async webstreamsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Webstream>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamsApi.webstreamsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const WebstreamsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
+        async webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamsPartialUpdate(id, patchedWebstream, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamsApi.webstreamsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const WebstreamsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
+        async webstreamsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamsApi.webstreamsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const WebstreamsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async webstreamsUpdate(id: number, webstream: Webstream, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
+        async webstreamsUpdate(id: number, webstream: Webstream, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Webstream>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.webstreamsUpdate(id, webstream, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['WebstreamsApi.webstreamsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class WebstreamsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamsApi
      */
-    public webstreamsCreate(webstream: Webstream, options?: AxiosRequestConfig) {
+    public webstreamsCreate(webstream: Webstream, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsCreate(webstream, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class WebstreamsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamsApi
      */
-    public webstreamsDestroy(id: number, options?: AxiosRequestConfig) {
+    public webstreamsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class WebstreamsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamsApi
      */
-    public webstreamsList(options?: AxiosRequestConfig) {
+    public webstreamsList(options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class WebstreamsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamsApi
      */
-    public webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: AxiosRequestConfig) {
+    public webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsPartialUpdate(id, patchedWebstream, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class WebstreamsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamsApi
      */
-    public webstreamsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public webstreamsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class WebstreamsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebstreamsApi
      */
-    public webstreamsUpdate(id: number, webstream: Webstream, options?: AxiosRequestConfig) {
+    public webstreamsUpdate(id: number, webstream: Webstream, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsUpdate(id, webstream, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedTimestamp } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsCreate: async (timestamp: Timestamp, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        timestampsCreate: async (timestamp: Timestamp, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'timestamp' is not null or undefined
             assertParamExists('timestampsCreate', 'timestamp', timestamp)
             const localVarPath = `/api/v2/timestamps`;
@@ -78,7 +78,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        timestampsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsDestroy', 'id', id)
             const localVarPath = `/api/v2/timestamps/{id}`
@@ -116,7 +116,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        timestampsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/timestamps`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsPartialUpdate: async (id: number, patchedTimestamp?: PatchedTimestamp, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        timestampsPartialUpdate: async (id: number, patchedTimestamp?: PatchedTimestamp, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/timestamps/{id}`
@@ -195,7 +195,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        timestampsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsRetrieve', 'id', id)
             const localVarPath = `/api/v2/timestamps/{id}`
@@ -235,7 +235,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsUpdate: async (id: number, timestamp: Timestamp, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        timestampsUpdate: async (id: number, timestamp: Timestamp, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsUpdate', 'id', id)
             // verify required parameter 'timestamp' is not null or undefined
@@ -289,9 +289,11 @@ export const TimestampsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async timestampsCreate(timestamp: Timestamp, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
+        async timestampsCreate(timestamp: Timestamp, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.timestampsCreate(timestamp, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['TimestampsApi.timestampsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const TimestampsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async timestampsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async timestampsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.timestampsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['TimestampsApi.timestampsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async timestampsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Timestamp>>> {
+        async timestampsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Timestamp>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.timestampsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['TimestampsApi.timestampsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const TimestampsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
+        async timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.timestampsPartialUpdate(id, patchedTimestamp, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['TimestampsApi.timestampsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const TimestampsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async timestampsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
+        async timestampsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.timestampsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['TimestampsApi.timestampsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const TimestampsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async timestampsUpdate(id: number, timestamp: Timestamp, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
+        async timestampsUpdate(id: number, timestamp: Timestamp, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Timestamp>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.timestampsUpdate(id, timestamp, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['TimestampsApi.timestampsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class TimestampsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TimestampsApi
      */
-    public timestampsCreate(timestamp: Timestamp, options?: AxiosRequestConfig) {
+    public timestampsCreate(timestamp: Timestamp, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsCreate(timestamp, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class TimestampsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TimestampsApi
      */
-    public timestampsDestroy(id: number, options?: AxiosRequestConfig) {
+    public timestampsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class TimestampsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TimestampsApi
      */
-    public timestampsList(options?: AxiosRequestConfig) {
+    public timestampsList(options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class TimestampsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TimestampsApi
      */
-    public timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: AxiosRequestConfig) {
+    public timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsPartialUpdate(id, patchedTimestamp, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class TimestampsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TimestampsApi
      */
-    public timestampsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public timestampsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class TimestampsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TimestampsApi
      */
-    public timestampsUpdate(id: number, timestamp: Timestamp, options?: AxiosRequestConfig) {
+    public timestampsUpdate(id: number, timestamp: Timestamp, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsUpdate(id, timestamp, options).then((request) => request(this.axios, this.basePath));
     }
 }

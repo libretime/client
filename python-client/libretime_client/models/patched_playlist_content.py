@@ -17,18 +17,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-
-from typing import Optional, Union
-from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr, conint
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
+from typing_extensions import Annotated
 from libretime_client.models.playlist_content_kind_enum import PlaylistContentKindEnum
+from typing import Optional, Set
+from typing_extensions import Self
 
 class PatchedPlaylistContent(BaseModel):
     """
     PatchedPlaylistContent
-    """
+    """ # noqa: E501
     id: Optional[StrictInt] = None
     kind: Optional[PlaylistContentKindEnum] = None
-    position: Optional[conint(strict=True, le=2147483647, ge=-2147483648)] = None
+    position: Optional[Annotated[int, Field(le=2147483647, strict=True, ge=-2147483648)]] = None
     offset: Optional[Union[StrictFloat, StrictInt]] = None
     length: Optional[StrictStr] = None
     cue_in: Optional[StrictStr] = None
@@ -39,95 +41,111 @@ class PatchedPlaylistContent(BaseModel):
     file: Optional[StrictInt] = None
     stream: Optional[StrictInt] = None
     block: Optional[StrictInt] = None
-    __properties = ["id", "kind", "position", "offset", "length", "cue_in", "cue_out", "fade_in", "fade_out", "playlist", "file", "stream", "block"]
+    __properties: ClassVar[List[str]] = ["id", "kind", "position", "offset", "length", "cue_in", "cue_out", "fade_in", "fade_out", "playlist", "file", "stream", "block"]
 
-    class Config:
-        """Pydantic configuration"""
-        allow_population_by_field_name = True
-        validate_assignment = True
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
+
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
-        return pprint.pformat(self.dict(by_alias=True))
+        return pprint.pformat(self.model_dump(by_alias=True))
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
+        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> PatchedPlaylistContent:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of PatchedPlaylistContent from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
-    def to_dict(self):
-        """Returns the dictionary representation of the model using alias"""
-        _dict = self.dict(by_alias=True,
-                          exclude={
-                            "id",
-                          },
-                          exclude_none=True)
+    def to_dict(self) -> Dict[str, Any]:
+        """Return the dictionary representation of the model using alias.
+
+        This has the following differences from calling pydantic's
+        `self.model_dump(by_alias=True)`:
+
+        * `None` is only added to the output dict for nullable fields that
+          were set at model initialization. Other fields with value `None`
+          are ignored.
+        * OpenAPI `readOnly` fields are excluded.
+        """
+        excluded_fields: Set[str] = set([
+            "id",
+        ])
+
+        _dict = self.model_dump(
+            by_alias=True,
+            exclude=excluded_fields,
+            exclude_none=True,
+        )
         # set to None if position (nullable) is None
-        # and __fields_set__ contains the field
-        if self.position is None and "position" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.position is None and "position" in self.model_fields_set:
             _dict['position'] = None
 
         # set to None if length (nullable) is None
-        # and __fields_set__ contains the field
-        if self.length is None and "length" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.length is None and "length" in self.model_fields_set:
             _dict['length'] = None
 
         # set to None if cue_in (nullable) is None
-        # and __fields_set__ contains the field
-        if self.cue_in is None and "cue_in" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.cue_in is None and "cue_in" in self.model_fields_set:
             _dict['cue_in'] = None
 
         # set to None if cue_out (nullable) is None
-        # and __fields_set__ contains the field
-        if self.cue_out is None and "cue_out" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.cue_out is None and "cue_out" in self.model_fields_set:
             _dict['cue_out'] = None
 
         # set to None if fade_in (nullable) is None
-        # and __fields_set__ contains the field
-        if self.fade_in is None and "fade_in" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.fade_in is None and "fade_in" in self.model_fields_set:
             _dict['fade_in'] = None
 
         # set to None if fade_out (nullable) is None
-        # and __fields_set__ contains the field
-        if self.fade_out is None and "fade_out" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.fade_out is None and "fade_out" in self.model_fields_set:
             _dict['fade_out'] = None
 
         # set to None if playlist (nullable) is None
-        # and __fields_set__ contains the field
-        if self.playlist is None and "playlist" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.playlist is None and "playlist" in self.model_fields_set:
             _dict['playlist'] = None
 
         # set to None if file (nullable) is None
-        # and __fields_set__ contains the field
-        if self.file is None and "file" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.file is None and "file" in self.model_fields_set:
             _dict['file'] = None
 
         # set to None if stream (nullable) is None
-        # and __fields_set__ contains the field
-        if self.stream is None and "stream" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.stream is None and "stream" in self.model_fields_set:
             _dict['stream'] = None
 
         # set to None if block (nullable) is None
-        # and __fields_set__ contains the field
-        if self.block is None and "block" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.block is None and "block" in self.model_fields_set:
             _dict['block'] = None
 
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> PatchedPlaylistContent:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of PatchedPlaylistContent from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return PatchedPlaylistContent.parse_obj(obj)
+            return cls.model_validate(obj)
 
-        _obj = PatchedPlaylistContent.parse_obj({
+        _obj = cls.model_validate({
             "id": obj.get("id"),
             "kind": obj.get("kind"),
             "position": obj.get("position"),

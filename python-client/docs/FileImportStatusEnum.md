@@ -3,6 +3,7 @@
 * `0` - Success * `1` - Pending * `2` - Failed
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { LiveLog } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsCreate: async (liveLog: LiveLog, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        liveLogsCreate: async (liveLog: LiveLog, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'liveLog' is not null or undefined
             assertParamExists('liveLogsCreate', 'liveLog', liveLog)
             const localVarPath = `/api/v2/live-logs`;
@@ -78,7 +78,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        liveLogsDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsDestroy', 'id', id)
             const localVarPath = `/api/v2/live-logs/{id}`
@@ -116,7 +116,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        liveLogsList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/live-logs`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsPartialUpdate: async (id: number, patchedLiveLog?: PatchedLiveLog, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        liveLogsPartialUpdate: async (id: number, patchedLiveLog?: PatchedLiveLog, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/live-logs/{id}`
@@ -195,7 +195,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        liveLogsRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsRetrieve', 'id', id)
             const localVarPath = `/api/v2/live-logs/{id}`
@@ -235,7 +235,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsUpdate: async (id: number, liveLog: LiveLog, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        liveLogsUpdate: async (id: number, liveLog: LiveLog, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsUpdate', 'id', id)
             // verify required parameter 'liveLog' is not null or undefined
@@ -289,9 +289,11 @@ export const LiveLogsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liveLogsCreate(liveLog: LiveLog, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
+        async liveLogsCreate(liveLog: LiveLog, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.liveLogsCreate(liveLog, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LiveLogsApi.liveLogsCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const LiveLogsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liveLogsDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async liveLogsDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.liveLogsDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LiveLogsApi.liveLogsDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liveLogsList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<LiveLog>>> {
+        async liveLogsList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<LiveLog>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.liveLogsList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LiveLogsApi.liveLogsList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const LiveLogsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
+        async liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.liveLogsPartialUpdate(id, patchedLiveLog, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LiveLogsApi.liveLogsPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const LiveLogsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liveLogsRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
+        async liveLogsRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.liveLogsRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LiveLogsApi.liveLogsRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const LiveLogsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async liveLogsUpdate(id: number, liveLog: LiveLog, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
+        async liveLogsUpdate(id: number, liveLog: LiveLog, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LiveLog>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.liveLogsUpdate(id, liveLog, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['LiveLogsApi.liveLogsUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class LiveLogsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveLogsApi
      */
-    public liveLogsCreate(liveLog: LiveLog, options?: AxiosRequestConfig) {
+    public liveLogsCreate(liveLog: LiveLog, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsCreate(liveLog, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class LiveLogsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveLogsApi
      */
-    public liveLogsDestroy(id: number, options?: AxiosRequestConfig) {
+    public liveLogsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class LiveLogsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveLogsApi
      */
-    public liveLogsList(options?: AxiosRequestConfig) {
+    public liveLogsList(options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class LiveLogsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveLogsApi
      */
-    public liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: AxiosRequestConfig) {
+    public liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsPartialUpdate(id, patchedLiveLog, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class LiveLogsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveLogsApi
      */
-    public liveLogsRetrieve(id: number, options?: AxiosRequestConfig) {
+    public liveLogsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class LiveLogsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveLogsApi
      */
-    public liveLogsUpdate(id: number, liveLog: LiveLog, options?: AxiosRequestConfig) {
+    public liveLogsUpdate(id: number, liveLog: LiveLog, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsUpdate(id, liveLog, options).then((request) => request(this.axios, this.basePath));
     }
 }

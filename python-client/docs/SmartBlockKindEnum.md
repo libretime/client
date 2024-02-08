@@ -3,6 +3,7 @@
 * `static` - Static * `dynamic` - Dynamic
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 

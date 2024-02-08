@@ -18,9 +18,8 @@ OpenApi3 schema for this API. Format can be selected via content negotiation.  -
 
 * Basic Authentication (basicAuth):
 * Api Key Authentication (cookieAuth):
+
 ```python
-import time
-import os
 import libretime_client
 from libretime_client.rest import ApiException
 from pprint import pprint
@@ -67,6 +66,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**|  | [optional] 
@@ -86,6 +86,7 @@ Name | Type | Description  | Notes
  - **Accept**: application/vnd.oai.openapi, application/yaml, application/vnd.oai.openapi+json, application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |

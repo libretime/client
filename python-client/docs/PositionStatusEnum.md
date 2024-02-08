@@ -3,6 +3,7 @@
 * `-1` - Filler * `0` - Outside * `1` - Inside * `2` - Boundary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 

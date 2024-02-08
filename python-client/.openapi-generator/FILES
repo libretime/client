@@ -261,5 +261,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_file_import_status_enum.py
 tox.ini

@@ -14,13 +14,13 @@
 
 
 import type { Configuration } from '../configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
 import { PatchedUserToken } from '../model';
 // @ts-ignore
@@ -37,7 +37,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensCreate: async (userToken: UserToken, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        userTokensCreate: async (userToken: UserToken, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'userToken' is not null or undefined
             assertParamExists('userTokensCreate', 'userToken', userToken)
             const localVarPath = `/api/v2/user-tokens`;
@@ -78,7 +78,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensDestroy: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        userTokensDestroy: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensDestroy', 'id', id)
             const localVarPath = `/api/v2/user-tokens/{id}`
@@ -116,7 +116,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        userTokensList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/user-tokens`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -153,7 +153,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensPartialUpdate: async (id: number, patchedUserToken?: PatchedUserToken, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        userTokensPartialUpdate: async (id: number, patchedUserToken?: PatchedUserToken, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/user-tokens/{id}`
@@ -195,7 +195,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensRetrieve: async (id: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        userTokensRetrieve: async (id: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensRetrieve', 'id', id)
             const localVarPath = `/api/v2/user-tokens/{id}`
@@ -235,7 +235,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensUpdate: async (id: number, userToken: UserToken, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        userTokensUpdate: async (id: number, userToken: UserToken, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensUpdate', 'id', id)
             // verify required parameter 'userToken' is not null or undefined
@@ -289,9 +289,11 @@ export const UserTokensApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async userTokensCreate(userToken: UserToken, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
+        async userTokensCreate(userToken: UserToken, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userTokensCreate(userToken, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UserTokensApi.userTokensCreate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -299,18 +301,22 @@ export const UserTokensApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async userTokensDestroy(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async userTokensDestroy(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userTokensDestroy(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UserTokensApi.userTokensDestroy']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async userTokensList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<UserToken>>> {
+        async userTokensList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<UserToken>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userTokensList(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UserTokensApi.userTokensList']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -319,9 +325,11 @@ export const UserTokensApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
+        async userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userTokensPartialUpdate(id, patchedUserToken, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UserTokensApi.userTokensPartialUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -329,9 +337,11 @@ export const UserTokensApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async userTokensRetrieve(id: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
+        async userTokensRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userTokensRetrieve(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UserTokensApi.userTokensRetrieve']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -340,9 +350,11 @@ export const UserTokensApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async userTokensUpdate(id: number, userToken: UserToken, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
+        async userTokensUpdate(id: number, userToken: UserToken, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserToken>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userTokensUpdate(id, userToken, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['UserTokensApi.userTokensUpdate']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -426,7 +438,7 @@ export class UserTokensApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UserTokensApi
      */
-    public userTokensCreate(userToken: UserToken, options?: AxiosRequestConfig) {
+    public userTokensCreate(userToken: UserToken, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensCreate(userToken, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -437,7 +449,7 @@ export class UserTokensApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UserTokensApi
      */
-    public userTokensDestroy(id: number, options?: AxiosRequestConfig) {
+    public userTokensDestroy(id: number, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensDestroy(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -447,7 +459,7 @@ export class UserTokensApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UserTokensApi
      */
-    public userTokensList(options?: AxiosRequestConfig) {
+    public userTokensList(options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensList(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -459,7 +471,7 @@ export class UserTokensApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UserTokensApi
      */
-    public userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: AxiosRequestConfig) {
+    public userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensPartialUpdate(id, patchedUserToken, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -470,7 +482,7 @@ export class UserTokensApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UserTokensApi
      */
-    public userTokensRetrieve(id: number, options?: AxiosRequestConfig) {
+    public userTokensRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensRetrieve(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -482,7 +494,7 @@ export class UserTokensApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UserTokensApi
      */
-    public userTokensUpdate(id: number, userToken: UserToken, options?: AxiosRequestConfig) {
+    public userTokensUpdate(id: number, userToken: UserToken, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensUpdate(id, userToken, options).then((request) => request(this.axios, this.basePath));
     }
 }

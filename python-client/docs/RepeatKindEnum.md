@@ -3,6 +3,7 @@
 * `0` - Every week * `1` - Every 2 weeks * `4` - Every 3 weeks * `5` - Every 4 weeks * `2` - Every month
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 
