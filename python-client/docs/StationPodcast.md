@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of StationPodcast from a JSON string
 station_podcast_instance = StationPodcast.from_json(json)
 # print the JSON string representation of the object
-print StationPodcast.to_json()
+print(StationPodcast.to_json())
 
 # convert the object into a dict
 station_podcast_dict = station_podcast_instance.to_dict()

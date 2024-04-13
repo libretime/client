@@ -31,7 +31,7 @@ json = "{}"
 # create an instance of PatchedSchedule from a JSON string
 patched_schedule_instance = PatchedSchedule.from_json(json)
 # print the JSON string representation of the object
-print PatchedSchedule.to_json()
+print(PatchedSchedule.to_json())
 
 # convert the object into a dict
 patched_schedule_dict = patched_schedule_instance.to_dict()

@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of Version from a JSON string
 version_instance = Version.from_json(json)
 # print the JSON string representation of the object
-print Version.to_json()
+print(Version.to_json())
 
 # convert the object into a dict
 version_dict = version_instance.to_dict()

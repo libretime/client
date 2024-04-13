@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of PatchedShowRebroadcast from a JSON string
 patched_show_rebroadcast_instance = PatchedShowRebroadcast.from_json(json)
 # print the JSON string representation of the object
-print PatchedShowRebroadcast.to_json()
+print(PatchedShowRebroadcast.to_json())
 
 # convert the object into a dict
 patched_show_rebroadcast_dict = patched_show_rebroadcast_instance.to_dict()

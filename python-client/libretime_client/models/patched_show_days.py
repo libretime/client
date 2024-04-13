@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import date
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from libretime_client.models.record_enabled_enum import RecordEnabledEnum
@@ -44,11 +44,11 @@ class PatchedShowDays(BaseModel):
     show: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["id", "first_show_on", "last_show_on", "start_time", "timezone", "duration", "record_enabled", "week_day", "repeat_kind", "repeat_next_on", "show"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

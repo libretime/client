@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of PatchedServiceRegister from a JSON string
 patched_service_register_instance = PatchedServiceRegister.from_json(json)
 # print the JSON string representation of the object
-print PatchedServiceRegister.to_json()
+print(PatchedServiceRegister.to_json())
 
 # convert the object into a dict
 patched_service_register_dict = patched_service_register_instance.to_dict()

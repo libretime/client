@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of PatchedPlayoutHistoryTemplateField from a JSON string
 patched_playout_history_template_field_instance = PatchedPlayoutHistoryTemplateField.from_json(json)
 # print the JSON string representation of the object
-print PatchedPlayoutHistoryTemplateField.to_json()
+print(PatchedPlayoutHistoryTemplateField.to_json())
 
 # convert the object into a dict
 patched_playout_history_template_field_dict = patched_playout_history_template_field_instance.to_dict()

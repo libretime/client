@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of PatchedPlaylistContent from a JSON string
 patched_playlist_content_instance = PatchedPlaylistContent.from_json(json)
 # print the JSON string representation of the object
-print PatchedPlaylistContent.to_json()
+print(PatchedPlaylistContent.to_json())
 
 # convert the object into a dict
 patched_playlist_content_dict = patched_playlist_content_instance.to_dict()

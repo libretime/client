@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of PatchedWebstream from a JSON string
 patched_webstream_instance = PatchedWebstream.from_json(json)
 # print the JSON string representation of the object
-print PatchedWebstream.to_json()
+print(PatchedWebstream.to_json())
 
 # convert the object into a dict
 patched_webstream_dict = patched_webstream_instance.to_dict()

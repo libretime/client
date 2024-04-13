@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from libretime_client.models.role_enum import RoleEnum
@@ -43,11 +43,11 @@ class PatchedUser(BaseModel):
     phone: Optional[Annotated[str, Field(strict=True, max_length=1024)]] = None
     __properties: ClassVar[List[str]] = ["id", "role", "username", "email", "first_name", "last_name", "login_attempts", "last_login", "last_failed_login", "skype", "jabber", "phone"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

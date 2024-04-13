@@ -81,7 +81,7 @@ json = "{}"
 # create an instance of PatchedFile from a JSON string
 patched_file_instance = PatchedFile.from_json(json)
 # print the JSON string representation of the object
-print PatchedFile.to_json()
+print(PatchedFile.to_json())
 
 # convert the object into a dict
 patched_file_dict = patched_file_instance.to_dict()

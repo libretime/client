@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from libretime_client.models.patched_smart_block_kind import PatchedSmartBlockKind
@@ -39,11 +39,11 @@ class PatchedSmartBlock(BaseModel):
     owner: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["id", "created_at", "updated_at", "name", "description", "length", "kind", "owner"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

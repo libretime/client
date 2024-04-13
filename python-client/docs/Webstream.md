@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of Webstream from a JSON string
 webstream_instance = Webstream.from_json(json)
 # print the JSON string representation of the object
-print Webstream.to_json()
+print(Webstream.to_json())
 
 # convert the object into a dict
 webstream_dict = webstream_instance.to_dict()

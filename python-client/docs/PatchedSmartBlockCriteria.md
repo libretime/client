@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of PatchedSmartBlockCriteria from a JSON string
 patched_smart_block_criteria_instance = PatchedSmartBlockCriteria.from_json(json)
 # print the JSON string representation of the object
-print PatchedSmartBlockCriteria.to_json()
+print(PatchedSmartBlockCriteria.to_json())
 
 # convert the object into a dict
 patched_smart_block_criteria_dict = patched_smart_block_criteria_instance.to_dict()

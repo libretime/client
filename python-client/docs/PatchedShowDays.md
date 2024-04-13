@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of PatchedShowDays from a JSON string
 patched_show_days_instance = PatchedShowDays.from_json(json)
 # print the JSON string representation of the object
-print PatchedShowDays.to_json()
+print(PatchedShowDays.to_json())
 
 # convert the object into a dict
 patched_show_days_dict = patched_show_days_instance.to_dict()

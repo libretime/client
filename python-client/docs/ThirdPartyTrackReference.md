@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of ThirdPartyTrackReference from a JSON string
 third_party_track_reference_instance = ThirdPartyTrackReference.from_json(json)
 # print the JSON string representation of the object
-print ThirdPartyTrackReference.to_json()
+print(ThirdPartyTrackReference.to_json())
 
 # convert the object into a dict
 third_party_track_reference_dict = third_party_track_reference_instance.to_dict()

@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of StreamPreferences from a JSON string
 stream_preferences_instance = StreamPreferences.from_json(json)
 # print the JSON string representation of the object
-print StreamPreferences.to_json()
+print(StreamPreferences.to_json())
 
 # convert the object into a dict
 stream_preferences_dict = stream_preferences_instance.to_dict()

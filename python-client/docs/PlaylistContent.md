@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of PlaylistContent from a JSON string
 playlist_content_instance = PlaylistContent.from_json(json)
 # print the JSON string representation of the object
-print PlaylistContent.to_json()
+print(PlaylistContent.to_json())
 
 # convert the object into a dict
 playlist_content_dict = playlist_content_instance.to_dict()

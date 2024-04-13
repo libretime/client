@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
@@ -43,11 +43,11 @@ class Show(BaseModel):
     auto_playlist_repeat: StrictBool
     __properties: ClassVar[List[str]] = ["id", "name", "description", "genre", "url", "image", "foreground_color", "background_color", "live_enabled", "linked", "linkable", "auto_playlist", "auto_playlist_enabled", "auto_playlist_repeat"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

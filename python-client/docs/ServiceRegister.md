@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ServiceRegister from a JSON string
 service_register_instance = ServiceRegister.from_json(json)
 # print the JSON string representation of the object
-print ServiceRegister.to_json()
+print(ServiceRegister.to_json())
 
 # convert the object into a dict
 service_register_dict = service_register_instance.to_dict()

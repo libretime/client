@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of PlayoutHistoryTemplate from a JSON string
 playout_history_template_instance = PlayoutHistoryTemplate.from_json(json)
 # print the JSON string representation of the object
-print PlayoutHistoryTemplate.to_json()
+print(PlayoutHistoryTemplate.to_json())
 
 # convert the object into a dict
 playout_history_template_dict = playout_history_template_instance.to_dict()

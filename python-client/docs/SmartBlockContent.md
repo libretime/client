@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of SmartBlockContent from a JSON string
 smart_block_content_instance = SmartBlockContent.from_json(json)
 # print the JSON string representation of the object
-print SmartBlockContent.to_json()
+print(SmartBlockContent.to_json())
 
 # convert the object into a dict
 smart_block_content_dict = smart_block_content_instance.to_dict()

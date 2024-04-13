@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of PatchedLibrary from a JSON string
 patched_library_instance = PatchedLibrary.from_json(json)
 # print the JSON string representation of the object
-print PatchedLibrary.to_json()
+print(PatchedLibrary.to_json())
 
 # convert the object into a dict
 patched_library_dict = patched_library_instance.to_dict()

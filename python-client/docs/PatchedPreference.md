@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of PatchedPreference from a JSON string
 patched_preference_instance = PatchedPreference.from_json(json)
 # print the JSON string representation of the object
-print PatchedPreference.to_json()
+print(PatchedPreference.to_json())
 
 # convert the object into a dict
 patched_preference_dict = patched_preference_instance.to_dict()

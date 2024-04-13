@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of PatchedUser from a JSON string
 patched_user_instance = PatchedUser.from_json(json)
 # print the JSON string representation of the object
-print PatchedUser.to_json()
+print(PatchedUser.to_json())
 
 # convert the object into a dict
 patched_user_dict = patched_user_instance.to_dict()

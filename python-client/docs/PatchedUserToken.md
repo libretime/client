@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of PatchedUserToken from a JSON string
 patched_user_token_instance = PatchedUserToken.from_json(json)
 # print the JSON string representation of the object
-print PatchedUserToken.to_json()
+print(PatchedUserToken.to_json())
 
 # convert the object into a dict
 patched_user_token_dict = patched_user_token_instance.to_dict()

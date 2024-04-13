@@ -15,7 +15,7 @@
 from __future__ import annotations
 import json
 import pprint
-from pydantic import BaseModel, Field, StrictStr, ValidationError, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
 from typing import Any, List, Optional
 from libretime_client.models.blank_enum import BlankEnum
 from libretime_client.models.smart_block_kind_enum import SmartBlockKindEnum
@@ -36,10 +36,10 @@ class PatchedSmartBlockKind(BaseModel):
     actual_instance: Optional[Union[BlankEnum, SmartBlockKindEnum]] = None
     one_of_schemas: List[str] = Field(default=Literal["BlankEnum", "SmartBlockKindEnum"])
 
-    model_config = {
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def __init__(self, *args, **kwargs) -> None:

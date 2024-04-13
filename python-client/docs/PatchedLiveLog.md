@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of PatchedLiveLog from a JSON string
 patched_live_log_instance = PatchedLiveLog.from_json(json)
 # print the JSON string representation of the object
-print PatchedLiveLog.to_json()
+print(PatchedLiveLog.to_json())
 
 # convert the object into a dict
 patched_live_log_dict = patched_live_log_instance.to_dict()

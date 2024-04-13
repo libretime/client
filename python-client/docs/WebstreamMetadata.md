@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of WebstreamMetadata from a JSON string
 webstream_metadata_instance = WebstreamMetadata.from_json(json)
 # print the JSON string representation of the object
-print WebstreamMetadata.to_json()
+print(WebstreamMetadata.to_json())
 
 # convert the object into a dict
 webstream_metadata_dict = webstream_metadata_instance.to_dict()

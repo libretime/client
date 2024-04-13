@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of PatchedMountName from a JSON string
 patched_mount_name_instance = PatchedMountName.from_json(json)
 # print the JSON string representation of the object
-print PatchedMountName.to_json()
+print(PatchedMountName.to_json())
 
 # convert the object into a dict
 patched_mount_name_dict = patched_mount_name_instance.to_dict()

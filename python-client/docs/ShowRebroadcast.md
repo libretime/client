@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of ShowRebroadcast from a JSON string
 show_rebroadcast_instance = ShowRebroadcast.from_json(json)
 # print the JSON string representation of the object
-print ShowRebroadcast.to_json()
+print(ShowRebroadcast.to_json())
 
 # convert the object into a dict
 show_rebroadcast_dict = show_rebroadcast_instance.to_dict()

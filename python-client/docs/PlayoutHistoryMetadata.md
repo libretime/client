@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of PlayoutHistoryMetadata from a JSON string
 playout_history_metadata_instance = PlayoutHistoryMetadata.from_json(json)
 # print the JSON string representation of the object
-print PlayoutHistoryMetadata.to_json()
+print(PlayoutHistoryMetadata.to_json())
 
 # convert the object into a dict
 playout_history_metadata_dict = playout_history_metadata_instance.to_dict()

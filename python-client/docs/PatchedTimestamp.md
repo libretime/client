@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of PatchedTimestamp from a JSON string
 patched_timestamp_instance = PatchedTimestamp.from_json(json)
 # print the JSON string representation of the object
-print PatchedTimestamp.to_json()
+print(PatchedTimestamp.to_json())
 
 # convert the object into a dict
 patched_timestamp_dict = patched_timestamp_instance.to_dict()

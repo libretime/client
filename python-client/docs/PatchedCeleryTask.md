@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of PatchedCeleryTask from a JSON string
 patched_celery_task_instance = PatchedCeleryTask.from_json(json)
 # print the JSON string representation of the object
-print PatchedCeleryTask.to_json()
+print(PatchedCeleryTask.to_json())
 
 # convert the object into a dict
 patched_celery_task_dict = patched_celery_task_instance.to_dict()

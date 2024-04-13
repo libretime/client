@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of PatchedStationPodcast from a JSON string
 patched_station_podcast_instance = PatchedStationPodcast.from_json(json)
 # print the JSON string representation of the object
-print PatchedStationPodcast.to_json()
+print(PatchedStationPodcast.to_json())
 
 # convert the object into a dict
 patched_station_podcast_dict = patched_station_podcast_instance.to_dict()

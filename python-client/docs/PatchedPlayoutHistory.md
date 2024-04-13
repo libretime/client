@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of PatchedPlayoutHistory from a JSON string
 patched_playout_history_instance = PatchedPlayoutHistory.from_json(json)
 # print the JSON string representation of the object
-print PatchedPlayoutHistory.to_json()
+print(PatchedPlayoutHistory.to_json())
 
 # convert the object into a dict
 patched_playout_history_dict = patched_playout_history_instance.to_dict()

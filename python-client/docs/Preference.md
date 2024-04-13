@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of Preference from a JSON string
 preference_instance = Preference.from_json(json)
 # print the JSON string representation of the object
-print Preference.to_json()
+print(Preference.to_json())
 
 # convert the object into a dict
 preference_dict = preference_instance.to_dict()

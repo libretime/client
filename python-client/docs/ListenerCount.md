@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of ListenerCount from a JSON string
 listener_count_instance = ListenerCount.from_json(json)
 # print the JSON string representation of the object
-print ListenerCount.to_json()
+print(ListenerCount.to_json())
 
 # convert the object into a dict
 listener_count_dict = listener_count_instance.to_dict()

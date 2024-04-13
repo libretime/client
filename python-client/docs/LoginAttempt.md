@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of LoginAttempt from a JSON string
 login_attempt_instance = LoginAttempt.from_json(json)
 # print the JSON string representation of the object
-print LoginAttempt.to_json()
+print(LoginAttempt.to_json())
 
 # convert the object into a dict
 login_attempt_dict = login_attempt_instance.to_dict()

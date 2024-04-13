@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of StreamState from a JSON string
 stream_state_instance = StreamState.from_json(json)
 # print the JSON string representation of the object
-print StreamState.to_json()
+print(StreamState.to_json())
 
 # convert the object into a dict
 stream_state_dict = stream_state_instance.to_dict()

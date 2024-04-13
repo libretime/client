@@ -31,7 +31,7 @@ json = "{}"
 # create an instance of Schedule from a JSON string
 schedule_instance = Schedule.from_json(json)
 # print the JSON string representation of the object
-print Schedule.to_json()
+print(Schedule.to_json())
 
 # convert the object into a dict
 schedule_dict = schedule_instance.to_dict()

@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of CeleryTask from a JSON string
 celery_task_instance = CeleryTask.from_json(json)
 # print the JSON string representation of the object
-print CeleryTask.to_json()
+print(CeleryTask.to_json())
 
 # convert the object into a dict
 celery_task_dict = celery_task_instance.to_dict()

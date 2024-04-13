@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of PlayoutHistory from a JSON string
 playout_history_instance = PlayoutHistory.from_json(json)
 # print the JSON string representation of the object
-print PlayoutHistory.to_json()
+print(PlayoutHistory.to_json())
 
 # convert the object into a dict
 playout_history_dict = playout_history_instance.to_dict()

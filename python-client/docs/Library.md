@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of Library from a JSON string
 library_instance = Library.from_json(json)
 # print the JSON string representation of the object
-print Library.to_json()
+print(Library.to_json())
 
 # convert the object into a dict
 library_dict = library_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of PatchedLoginAttempt from a JSON string
 patched_login_attempt_instance = PatchedLoginAttempt.from_json(json)
 # print the JSON string representation of the object
-print PatchedLoginAttempt.to_json()
+print(PatchedLoginAttempt.to_json())
 
 # convert the object into a dict
 patched_login_attempt_dict = patched_login_attempt_instance.to_dict()

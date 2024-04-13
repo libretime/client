@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of PatchedWebstreamMetadata from a JSON string
 patched_webstream_metadata_instance = PatchedWebstreamMetadata.from_json(json)
 # print the JSON string representation of the object
-print PatchedWebstreamMetadata.to_json()
+print(PatchedWebstreamMetadata.to_json())
 
 # convert the object into a dict
 patched_webstream_metadata_dict = patched_webstream_metadata_instance.to_dict()

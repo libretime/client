@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of Show from a JSON string
 show_instance = Show.from_json(json)
 # print the JSON string representation of the object
-print Show.to_json()
+print(Show.to_json())
 
 # convert the object into a dict
 show_dict = show_instance.to_dict()

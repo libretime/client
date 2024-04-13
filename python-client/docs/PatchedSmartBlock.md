@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of PatchedSmartBlock from a JSON string
 patched_smart_block_instance = PatchedSmartBlock.from_json(json)
 # print the JSON string representation of the object
-print PatchedSmartBlock.to_json()
+print(PatchedSmartBlock.to_json())
 
 # convert the object into a dict
 patched_smart_block_dict = patched_smart_block_instance.to_dict()

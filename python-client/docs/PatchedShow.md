@@ -30,7 +30,7 @@ json = "{}"
 # create an instance of PatchedShow from a JSON string
 patched_show_instance = PatchedShow.from_json(json)
 # print the JSON string representation of the object
-print PatchedShow.to_json()
+print(PatchedShow.to_json())
 
 # convert the object into a dict
 patched_show_dict = patched_show_instance.to_dict()

@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of ImportedPodcast from a JSON string
 imported_podcast_instance = ImportedPodcast.from_json(json)
 # print the JSON string representation of the object
-print ImportedPodcast.to_json()
+print(ImportedPodcast.to_json())
 
 # convert the object into a dict
 imported_podcast_dict = imported_podcast_instance.to_dict()

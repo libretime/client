@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of ShowDays from a JSON string
 show_days_instance = ShowDays.from_json(json)
 # print the JSON string representation of the object
-print ShowDays.to_json()
+print(ShowDays.to_json())
 
 # convert the object into a dict
 show_days_dict = show_days_instance.to_dict()

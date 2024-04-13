@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of MountName from a JSON string
 mount_name_instance = MountName.from_json(json)
 # print the JSON string representation of the object
-print MountName.to_json()
+print(MountName.to_json())
 
 # convert the object into a dict
 mount_name_dict = mount_name_instance.to_dict()

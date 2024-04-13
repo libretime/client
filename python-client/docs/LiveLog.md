@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of LiveLog from a JSON string
 live_log_instance = LiveLog.from_json(json)
 # print the JSON string representation of the object
-print LiveLog.to_json()
+print(LiveLog.to_json())
 
 # convert the object into a dict
 live_log_dict = live_log_instance.to_dict()

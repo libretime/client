@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from libretime_client.models.record_enabled_enum import RecordEnabledEnum
@@ -45,11 +45,11 @@ class ShowInstance(BaseModel):
     record_file: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["id", "created_at", "starts_at", "ends_at", "filled_time", "last_scheduled_at", "description", "modified", "rebroadcast", "auto_playlist_built", "record_enabled", "show", "instance", "record_file"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

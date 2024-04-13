@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of PatchedListenerCount from a JSON string
 patched_listener_count_instance = PatchedListenerCount.from_json(json)
 # print the JSON string representation of the object
-print PatchedListenerCount.to_json()
+print(PatchedListenerCount.to_json())
 
 # convert the object into a dict
 patched_listener_count_dict = patched_listener_count_instance.to_dict()
