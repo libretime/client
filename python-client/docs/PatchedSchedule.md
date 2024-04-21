@@ -36,7 +36,7 @@ print(PatchedSchedule.to_json())
 # convert the object into a dict
 patched_schedule_dict = patched_schedule_instance.to_dict()
 # create an instance of PatchedSchedule from a dict
-patched_schedule_form_dict = patched_schedule.from_dict(patched_schedule_dict)
+patched_schedule_from_dict = PatchedSchedule.from_dict(patched_schedule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -33,7 +33,7 @@ print(PatchedUser.to_json())
 # convert the object into a dict
 patched_user_dict = patched_user_instance.to_dict()
 # create an instance of PatchedUser from a dict
-patched_user_form_dict = patched_user.from_dict(patched_user_dict)
+patched_user_from_dict = PatchedUser.from_dict(patched_user_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

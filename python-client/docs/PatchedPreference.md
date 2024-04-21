@@ -25,7 +25,7 @@ print(PatchedPreference.to_json())
 # convert the object into a dict
 patched_preference_dict = patched_preference_instance.to_dict()
 # create an instance of PatchedPreference from a dict
-patched_preference_form_dict = patched_preference.from_dict(patched_preference_dict)
+patched_preference_from_dict = PatchedPreference.from_dict(patched_preference_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

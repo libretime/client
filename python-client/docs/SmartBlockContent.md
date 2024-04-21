@@ -31,7 +31,7 @@ print(SmartBlockContent.to_json())
 # convert the object into a dict
 smart_block_content_dict = smart_block_content_instance.to_dict()
 # create an instance of SmartBlockContent from a dict
-smart_block_content_form_dict = smart_block_content.from_dict(smart_block_content_dict)
+smart_block_content_from_dict = SmartBlockContent.from_dict(smart_block_content_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

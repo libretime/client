@@ -26,7 +26,7 @@ print(PatchedUserToken.to_json())
 # convert the object into a dict
 patched_user_token_dict = patched_user_token_instance.to_dict()
 # create an instance of PatchedUserToken from a dict
-patched_user_token_form_dict = patched_user_token.from_dict(patched_user_token_dict)
+patched_user_token_from_dict = PatchedUserToken.from_dict(patched_user_token_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

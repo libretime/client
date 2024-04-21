@@ -31,7 +31,7 @@ print(Webstream.to_json())
 # convert the object into a dict
 webstream_dict = webstream_instance.to_dict()
 # create an instance of Webstream from a dict
-webstream_form_dict = webstream.from_dict(webstream_dict)
+webstream_from_dict = Webstream.from_dict(webstream_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

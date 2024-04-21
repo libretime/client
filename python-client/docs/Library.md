@@ -27,7 +27,7 @@ print(Library.to_json())
 # convert the object into a dict
 library_dict = library_instance.to_dict()
 # create an instance of Library from a dict
-library_form_dict = library.from_dict(library_dict)
+library_from_dict = Library.from_dict(library_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

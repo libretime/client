@@ -28,7 +28,7 @@ print(SmartBlockCriteria.to_json())
 # convert the object into a dict
 smart_block_criteria_dict = smart_block_criteria_instance.to_dict()
 # create an instance of SmartBlockCriteria from a dict
-smart_block_criteria_form_dict = smart_block_criteria.from_dict(smart_block_criteria_dict)
+smart_block_criteria_from_dict = SmartBlockCriteria.from_dict(smart_block_criteria_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,7 +26,7 @@ print(PlayoutHistory.to_json())
 # convert the object into a dict
 playout_history_dict = playout_history_instance.to_dict()
 # create an instance of PlayoutHistory from a dict
-playout_history_form_dict = playout_history.from_dict(playout_history_dict)
+playout_history_from_dict = PlayoutHistory.from_dict(playout_history_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -29,7 +29,7 @@ print(SmartBlock.to_json())
 # convert the object into a dict
 smart_block_dict = smart_block_instance.to_dict()
 # create an instance of SmartBlock from a dict
-smart_block_form_dict = smart_block.from_dict(smart_block_dict)
+smart_block_from_dict = SmartBlock.from_dict(smart_block_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

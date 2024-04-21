@@ -34,7 +34,7 @@ print(PatchedPlaylistContent.to_json())
 # convert the object into a dict
 patched_playlist_content_dict = patched_playlist_content_instance.to_dict()
 # create an instance of PatchedPlaylistContent from a dict
-patched_playlist_content_form_dict = patched_playlist_content.from_dict(patched_playlist_content_dict)
+patched_playlist_content_from_dict = PatchedPlaylistContent.from_dict(patched_playlist_content_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(PatchedListenerCount.to_json())
 # convert the object into a dict
 patched_listener_count_dict = patched_listener_count_instance.to_dict()
 # create an instance of PatchedListenerCount from a dict
-patched_listener_count_form_dict = patched_listener_count.from_dict(patched_listener_count_dict)
+patched_listener_count_from_dict = PatchedListenerCount.from_dict(patched_listener_count_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

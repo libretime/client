@@ -24,7 +24,7 @@ print(ShowHost.to_json())
 # convert the object into a dict
 show_host_dict = show_host_instance.to_dict()
 # create an instance of ShowHost from a dict
-show_host_form_dict = show_host.from_dict(show_host_dict)
+show_host_from_dict = ShowHost.from_dict(show_host_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

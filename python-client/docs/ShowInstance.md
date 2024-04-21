@@ -35,7 +35,7 @@ print(ShowInstance.to_json())
 # convert the object into a dict
 show_instance_dict = show_instance_instance.to_dict()
 # create an instance of ShowInstance from a dict
-show_instance_form_dict = show_instance.from_dict(show_instance_dict)
+show_instance_from_dict = ShowInstance.from_dict(show_instance_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

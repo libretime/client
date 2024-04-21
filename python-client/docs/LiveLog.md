@@ -25,7 +25,7 @@ print(LiveLog.to_json())
 # convert the object into a dict
 live_log_dict = live_log_instance.to_dict()
 # create an instance of LiveLog from a dict
-live_log_form_dict = live_log.from_dict(live_log_dict)
+live_log_from_dict = LiveLog.from_dict(live_log_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

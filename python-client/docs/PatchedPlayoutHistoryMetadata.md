@@ -25,7 +25,7 @@ print(PatchedPlayoutHistoryMetadata.to_json())
 # convert the object into a dict
 patched_playout_history_metadata_dict = patched_playout_history_metadata_instance.to_dict()
 # create an instance of PatchedPlayoutHistoryMetadata from a dict
-patched_playout_history_metadata_form_dict = patched_playout_history_metadata.from_dict(patched_playout_history_metadata_dict)
+patched_playout_history_metadata_from_dict = PatchedPlayoutHistoryMetadata.from_dict(patched_playout_history_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

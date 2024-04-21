@@ -34,7 +34,7 @@ print(PlaylistContent.to_json())
 # convert the object into a dict
 playlist_content_dict = playlist_content_instance.to_dict()
 # create an instance of PlaylistContent from a dict
-playlist_content_form_dict = playlist_content.from_dict(playlist_content_dict)
+playlist_content_from_dict = PlaylistContent.from_dict(playlist_content_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

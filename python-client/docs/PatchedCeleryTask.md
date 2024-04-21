@@ -27,7 +27,7 @@ print(PatchedCeleryTask.to_json())
 # convert the object into a dict
 patched_celery_task_dict = patched_celery_task_instance.to_dict()
 # create an instance of PatchedCeleryTask from a dict
-patched_celery_task_form_dict = patched_celery_task.from_dict(patched_celery_task_dict)
+patched_celery_task_from_dict = PatchedCeleryTask.from_dict(patched_celery_task_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(PatchedLoginAttempt.to_json())
 # convert the object into a dict
 patched_login_attempt_dict = patched_login_attempt_instance.to_dict()
 # create an instance of PatchedLoginAttempt from a dict
-patched_login_attempt_form_dict = patched_login_attempt.from_dict(patched_login_attempt_dict)
+patched_login_attempt_from_dict = PatchedLoginAttempt.from_dict(patched_login_attempt_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -29,7 +29,7 @@ print(PodcastEpisode.to_json())
 # convert the object into a dict
 podcast_episode_dict = podcast_episode_instance.to_dict()
 # create an instance of PodcastEpisode from a dict
-podcast_episode_form_dict = podcast_episode.from_dict(podcast_episode_dict)
+podcast_episode_from_dict = PodcastEpisode.from_dict(podcast_episode_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

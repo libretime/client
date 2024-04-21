@@ -24,7 +24,7 @@ print(PatchedPlayoutHistoryTemplate.to_json())
 # convert the object into a dict
 patched_playout_history_template_dict = patched_playout_history_template_instance.to_dict()
 # create an instance of PatchedPlayoutHistoryTemplate from a dict
-patched_playout_history_template_form_dict = patched_playout_history_template.from_dict(patched_playout_history_template_dict)
+patched_playout_history_template_from_dict = PatchedPlayoutHistoryTemplate.from_dict(patched_playout_history_template_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

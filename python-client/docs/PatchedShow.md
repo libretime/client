@@ -35,7 +35,7 @@ print(PatchedShow.to_json())
 # convert the object into a dict
 patched_show_dict = patched_show_instance.to_dict()
 # create an instance of PatchedShow from a dict
-patched_show_form_dict = patched_show.from_dict(patched_show_dict)
+patched_show_from_dict = PatchedShow.from_dict(patched_show_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

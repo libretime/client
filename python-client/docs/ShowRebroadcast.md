@@ -25,7 +25,7 @@ print(ShowRebroadcast.to_json())
 # convert the object into a dict
 show_rebroadcast_dict = show_rebroadcast_instance.to_dict()
 # create an instance of ShowRebroadcast from a dict
-show_rebroadcast_form_dict = show_rebroadcast.from_dict(show_rebroadcast_dict)
+show_rebroadcast_from_dict = ShowRebroadcast.from_dict(show_rebroadcast_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

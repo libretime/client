@@ -23,7 +23,7 @@ print(LoginAttempt.to_json())
 # convert the object into a dict
 login_attempt_dict = login_attempt_instance.to_dict()
 # create an instance of LoginAttempt from a dict
-login_attempt_form_dict = login_attempt.from_dict(login_attempt_dict)
+login_attempt_from_dict = LoginAttempt.from_dict(login_attempt_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

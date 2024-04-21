@@ -27,7 +27,7 @@ print(ThirdPartyTrackReference.to_json())
 # convert the object into a dict
 third_party_track_reference_dict = third_party_track_reference_instance.to_dict()
 # create an instance of ThirdPartyTrackReference from a dict
-third_party_track_reference_form_dict = third_party_track_reference.from_dict(third_party_track_reference_dict)
+third_party_track_reference_from_dict = ThirdPartyTrackReference.from_dict(third_party_track_reference_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

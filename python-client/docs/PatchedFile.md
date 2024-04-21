@@ -86,7 +86,7 @@ print(PatchedFile.to_json())
 # convert the object into a dict
 patched_file_dict = patched_file_instance.to_dict()
 # create an instance of PatchedFile from a dict
-patched_file_form_dict = patched_file.from_dict(patched_file_dict)
+patched_file_from_dict = PatchedFile.from_dict(patched_file_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

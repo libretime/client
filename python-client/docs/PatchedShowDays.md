@@ -32,7 +32,7 @@ print(PatchedShowDays.to_json())
 # convert the object into a dict
 patched_show_days_dict = patched_show_days_instance.to_dict()
 # create an instance of PatchedShowDays from a dict
-patched_show_days_form_dict = patched_show_days.from_dict(patched_show_days_dict)
+patched_show_days_from_dict = PatchedShowDays.from_dict(patched_show_days_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

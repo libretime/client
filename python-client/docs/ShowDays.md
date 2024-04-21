@@ -32,7 +32,7 @@ print(ShowDays.to_json())
 # convert the object into a dict
 show_days_dict = show_days_instance.to_dict()
 # create an instance of ShowDays from a dict
-show_days_form_dict = show_days.from_dict(show_days_dict)
+show_days_from_dict = ShowDays.from_dict(show_days_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

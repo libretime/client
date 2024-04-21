@@ -26,7 +26,7 @@ print(StreamPreferences.to_json())
 # convert the object into a dict
 stream_preferences_dict = stream_preferences_instance.to_dict()
 # create an instance of StreamPreferences from a dict
-stream_preferences_form_dict = stream_preferences.from_dict(stream_preferences_dict)
+stream_preferences_from_dict = StreamPreferences.from_dict(stream_preferences_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

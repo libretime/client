@@ -31,7 +31,7 @@ print(PatchedWebstream.to_json())
 # convert the object into a dict
 patched_webstream_dict = patched_webstream_instance.to_dict()
 # create an instance of PatchedWebstream from a dict
-patched_webstream_form_dict = patched_webstream.from_dict(patched_webstream_dict)
+patched_webstream_from_dict = PatchedWebstream.from_dict(patched_webstream_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

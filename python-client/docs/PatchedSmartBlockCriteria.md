@@ -28,7 +28,7 @@ print(PatchedSmartBlockCriteria.to_json())
 # convert the object into a dict
 patched_smart_block_criteria_dict = patched_smart_block_criteria_instance.to_dict()
 # create an instance of PatchedSmartBlockCriteria from a dict
-patched_smart_block_criteria_form_dict = patched_smart_block_criteria.from_dict(patched_smart_block_criteria_dict)
+patched_smart_block_criteria_from_dict = PatchedSmartBlockCriteria.from_dict(patched_smart_block_criteria_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

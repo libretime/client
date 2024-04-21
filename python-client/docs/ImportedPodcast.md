@@ -26,7 +26,7 @@ print(ImportedPodcast.to_json())
 # convert the object into a dict
 imported_podcast_dict = imported_podcast_instance.to_dict()
 # create an instance of ImportedPodcast from a dict
-imported_podcast_form_dict = imported_podcast.from_dict(imported_podcast_dict)
+imported_podcast_from_dict = ImportedPodcast.from_dict(imported_podcast_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

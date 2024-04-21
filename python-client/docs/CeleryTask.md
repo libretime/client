@@ -27,7 +27,7 @@ print(CeleryTask.to_json())
 # convert the object into a dict
 celery_task_dict = celery_task_instance.to_dict()
 # create an instance of CeleryTask from a dict
-celery_task_form_dict = celery_task.from_dict(celery_task_dict)
+celery_task_from_dict = CeleryTask.from_dict(celery_task_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

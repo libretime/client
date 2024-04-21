@@ -23,7 +23,7 @@ print(PatchedMountName.to_json())
 # convert the object into a dict
 patched_mount_name_dict = patched_mount_name_instance.to_dict()
 # create an instance of PatchedMountName from a dict
-patched_mount_name_form_dict = patched_mount_name.from_dict(patched_mount_name_dict)
+patched_mount_name_from_dict = PatchedMountName.from_dict(patched_mount_name_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

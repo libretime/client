@@ -31,7 +31,7 @@ print(PatchedSmartBlockContent.to_json())
 # convert the object into a dict
 patched_smart_block_content_dict = patched_smart_block_content_instance.to_dict()
 # create an instance of PatchedSmartBlockContent from a dict
-patched_smart_block_content_form_dict = patched_smart_block_content.from_dict(patched_smart_block_content_dict)
+patched_smart_block_content_from_dict = PatchedSmartBlockContent.from_dict(patched_smart_block_content_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

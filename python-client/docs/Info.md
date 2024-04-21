@@ -22,7 +22,7 @@ print(Info.to_json())
 # convert the object into a dict
 info_dict = info_instance.to_dict()
 # create an instance of Info from a dict
-info_form_dict = info.from_dict(info_dict)
+info_from_dict = Info.from_dict(info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

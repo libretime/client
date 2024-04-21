@@ -20,7 +20,7 @@ from typing import Any, List, Optional
 from libretime_client.models.blank_enum import BlankEnum
 from libretime_client.models.smart_block_kind_enum import SmartBlockKindEnum
 from pydantic import StrictStr, Field
-from typing import Union, List, Optional, Dict
+from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self
 
 PATCHEDSMARTBLOCKKIND_ONE_OF_SCHEMAS = ["BlankEnum", "SmartBlockKindEnum"]
@@ -34,7 +34,7 @@ class PatchedSmartBlockKind(BaseModel):
     # data type: BlankEnum
     oneof_schema_2_validator: Optional[BlankEnum] = None
     actual_instance: Optional[Union[BlankEnum, SmartBlockKindEnum]] = None
-    one_of_schemas: List[str] = Field(default=Literal["BlankEnum", "SmartBlockKindEnum"])
+    one_of_schemas: Set[str] = { "BlankEnum", "SmartBlockKindEnum" }
 
     model_config = ConfigDict(
         validate_assignment=True,
