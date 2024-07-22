@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { RecordEnabledEnum } from './record-enabled-enum';
+import type { RecordEnabledEnum } from './record-enabled-enum';
 
 /**
  * 

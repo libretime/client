@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { PatchedSmartBlockKind } from './patched-smart-block-kind';
+import type { PatchedSmartBlockKind } from './patched-smart-block-kind';
 
 /**
  * 

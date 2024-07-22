@@ -20,11 +20,11 @@ import globalAxios from 'axios';
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import { ImportedPodcast } from '../model';
+import type { ImportedPodcast } from '../model';
 // @ts-ignore
-import { PatchedImportedPodcast } from '../model';
+import type { PatchedImportedPodcast } from '../model';
 /**
  * ImportedPodcastsApi - axios parameter creator
  * @export

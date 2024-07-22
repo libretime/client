@@ -20,11 +20,11 @@ import globalAxios from 'axios';
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import { PatchedPlaylistContent } from '../model';
+import type { PatchedPlaylistContent } from '../model';
 // @ts-ignore
-import { PlaylistContent } from '../model';
+import type { PlaylistContent } from '../model';
 /**
  * PlaylistContentsApi - axios parameter creator
  * @export

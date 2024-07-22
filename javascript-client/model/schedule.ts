@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { PositionStatusEnum } from './position-status-enum';
+import type { PositionStatusEnum } from './position-status-enum';
 
 /**
  * 

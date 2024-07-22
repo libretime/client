@@ -15,13 +15,13 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { RecordEnabledEnum } from './record-enabled-enum';
+import type { RecordEnabledEnum } from './record-enabled-enum';
 // May contain unused imports in some cases
 // @ts-ignore
-import { RepeatKindEnum } from './repeat-kind-enum';
+import type { RepeatKindEnum } from './repeat-kind-enum';
 // May contain unused imports in some cases
 // @ts-ignore
-import { WeekDayEnum } from './week-day-enum';
+import type { WeekDayEnum } from './week-day-enum';
 
 /**
  * 

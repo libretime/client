@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { RoleEnum } from './role-enum';
+import type { RoleEnum } from './role-enum';
 
 /**
  * 

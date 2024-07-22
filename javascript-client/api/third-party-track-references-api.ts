@@ -20,11 +20,11 @@ import globalAxios from 'axios';
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
+import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import { PatchedThirdPartyTrackReference } from '../model';
+import type { PatchedThirdPartyTrackReference } from '../model';
 // @ts-ignore
-import { ThirdPartyTrackReference } from '../model';
+import type { ThirdPartyTrackReference } from '../model';
 /**
  * ThirdPartyTrackReferencesApi - axios parameter creator
  * @export

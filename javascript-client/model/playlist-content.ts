@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { PlaylistContentKindEnum } from './playlist-content-kind-enum';
+import type { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 
 /**
  * 

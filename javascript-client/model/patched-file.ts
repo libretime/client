@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { FileImportStatusEnum } from './file-import-status-enum';
+import type { FileImportStatusEnum } from './file-import-status-enum';
 
 /**
  * 

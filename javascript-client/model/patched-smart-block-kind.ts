@@ -15,10 +15,10 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { BlankEnum } from './blank-enum';
+import type { BlankEnum } from './blank-enum';
 // May contain unused imports in some cases
 // @ts-ignore
-import { SmartBlockKindEnum } from './smart-block-kind-enum';
+import type { SmartBlockKindEnum } from './smart-block-kind-enum';
 
 /**
  * @type PatchedSmartBlockKind
