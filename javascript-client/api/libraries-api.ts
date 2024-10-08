@@ -372,7 +372,7 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesCreate(library: Library, options?: any): AxiosPromise<Library> {
+        librariesCreate(library: Library, options?: RawAxiosRequestConfig): AxiosPromise<Library> {
             return localVarFp.librariesCreate(library, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesDestroy(id: number, options?: any): AxiosPromise<void> {
+        librariesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.librariesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesList(options?: any): AxiosPromise<Array<Library>> {
+        librariesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<Library>> {
             return localVarFp.librariesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: any): AxiosPromise<Library> {
+        librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: RawAxiosRequestConfig): AxiosPromise<Library> {
             return localVarFp.librariesPartialUpdate(id, patchedLibrary, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesRetrieve(id: number, options?: any): AxiosPromise<Library> {
+        librariesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Library> {
             return localVarFp.librariesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        librariesUpdate(id: number, library: Library, options?: any): AxiosPromise<Library> {
+        librariesUpdate(id: number, library: Library, options?: RawAxiosRequestConfig): AxiosPromise<Library> {
             return localVarFp.librariesUpdate(id, library, options).then((request) => request(axios, basePath));
         },
     };

@@ -372,7 +372,7 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: any): AxiosPromise<WebstreamMetadata> {
+        webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig): AxiosPromise<WebstreamMetadata> {
             return localVarFp.webstreamMetadataCreate(webstreamMetadata, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataDestroy(id: number, options?: any): AxiosPromise<void> {
+        webstreamMetadataDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.webstreamMetadataDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataList(options?: any): AxiosPromise<Array<WebstreamMetadata>> {
+        webstreamMetadataList(options?: RawAxiosRequestConfig): AxiosPromise<Array<WebstreamMetadata>> {
             return localVarFp.webstreamMetadataList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: any): AxiosPromise<WebstreamMetadata> {
+        webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: RawAxiosRequestConfig): AxiosPromise<WebstreamMetadata> {
             return localVarFp.webstreamMetadataPartialUpdate(id, patchedWebstreamMetadata, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataRetrieve(id: number, options?: any): AxiosPromise<WebstreamMetadata> {
+        webstreamMetadataRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<WebstreamMetadata> {
             return localVarFp.webstreamMetadataRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: any): AxiosPromise<WebstreamMetadata> {
+        webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig): AxiosPromise<WebstreamMetadata> {
             return localVarFp.webstreamMetadataUpdate(id, webstreamMetadata, options).then((request) => request(axios, basePath));
         },
     };

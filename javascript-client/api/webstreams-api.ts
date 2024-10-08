@@ -372,7 +372,7 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsCreate(webstream: Webstream, options?: any): AxiosPromise<Webstream> {
+        webstreamsCreate(webstream: Webstream, options?: RawAxiosRequestConfig): AxiosPromise<Webstream> {
             return localVarFp.webstreamsCreate(webstream, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsDestroy(id: number, options?: any): AxiosPromise<void> {
+        webstreamsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.webstreamsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsList(options?: any): AxiosPromise<Array<Webstream>> {
+        webstreamsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<Webstream>> {
             return localVarFp.webstreamsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: any): AxiosPromise<Webstream> {
+        webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: RawAxiosRequestConfig): AxiosPromise<Webstream> {
             return localVarFp.webstreamsPartialUpdate(id, patchedWebstream, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsRetrieve(id: number, options?: any): AxiosPromise<Webstream> {
+        webstreamsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Webstream> {
             return localVarFp.webstreamsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        webstreamsUpdate(id: number, webstream: Webstream, options?: any): AxiosPromise<Webstream> {
+        webstreamsUpdate(id: number, webstream: Webstream, options?: RawAxiosRequestConfig): AxiosPromise<Webstream> {
             return localVarFp.webstreamsUpdate(id, webstream, options).then((request) => request(axios, basePath));
         },
     };

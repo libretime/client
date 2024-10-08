@@ -372,7 +372,7 @@ export const ListenerCountsApiFactory = function (configuration?: Configuration,
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsCreate(listenerCount: ListenerCount, options?: any): AxiosPromise<ListenerCount> {
+        listenerCountsCreate(listenerCount: ListenerCount, options?: RawAxiosRequestConfig): AxiosPromise<ListenerCount> {
             return localVarFp.listenerCountsCreate(listenerCount, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ListenerCountsApiFactory = function (configuration?: Configuration,
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsDestroy(id: number, options?: any): AxiosPromise<void> {
+        listenerCountsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.listenerCountsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ListenerCountsApiFactory = function (configuration?: Configuration,
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsList(options?: any): AxiosPromise<Array<ListenerCount>> {
+        listenerCountsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ListenerCount>> {
             return localVarFp.listenerCountsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ListenerCountsApiFactory = function (configuration?: Configuration,
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsPartialUpdate(id: number, patchedListenerCount?: PatchedListenerCount, options?: any): AxiosPromise<ListenerCount> {
+        listenerCountsPartialUpdate(id: number, patchedListenerCount?: PatchedListenerCount, options?: RawAxiosRequestConfig): AxiosPromise<ListenerCount> {
             return localVarFp.listenerCountsPartialUpdate(id, patchedListenerCount, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ListenerCountsApiFactory = function (configuration?: Configuration,
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsRetrieve(id: number, options?: any): AxiosPromise<ListenerCount> {
+        listenerCountsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ListenerCount> {
             return localVarFp.listenerCountsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ListenerCountsApiFactory = function (configuration?: Configuration,
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listenerCountsUpdate(id: number, listenerCount: ListenerCount, options?: any): AxiosPromise<ListenerCount> {
+        listenerCountsUpdate(id: number, listenerCount: ListenerCount, options?: RawAxiosRequestConfig): AxiosPromise<ListenerCount> {
             return localVarFp.listenerCountsUpdate(id, listenerCount, options).then((request) => request(axios, basePath));
         },
     };

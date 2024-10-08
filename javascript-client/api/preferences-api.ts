@@ -372,7 +372,7 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesCreate(preference: Preference, options?: any): AxiosPromise<Preference> {
+        preferencesCreate(preference: Preference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
             return localVarFp.preferencesCreate(preference, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesDestroy(id: number, options?: any): AxiosPromise<void> {
+        preferencesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.preferencesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesList(options?: any): AxiosPromise<Array<Preference>> {
+        preferencesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<Preference>> {
             return localVarFp.preferencesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesPartialUpdate(id: number, patchedPreference?: PatchedPreference, options?: any): AxiosPromise<Preference> {
+        preferencesPartialUpdate(id: number, patchedPreference?: PatchedPreference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
             return localVarFp.preferencesPartialUpdate(id, patchedPreference, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesRetrieve(id: number, options?: any): AxiosPromise<Preference> {
+        preferencesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
             return localVarFp.preferencesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesUpdate(id: number, preference: Preference, options?: any): AxiosPromise<Preference> {
+        preferencesUpdate(id: number, preference: Preference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
             return localVarFp.preferencesUpdate(id, preference, options).then((request) => request(axios, basePath));
         },
     };

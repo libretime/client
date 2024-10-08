@@ -17,7 +17,7 @@
 /**
  * * `-1` - Filler * `0` - Outside * `1` - Inside * `2` - Boundary
  * @export
- * @enum {string}
+ * @enum {number}
  */
 
 export const PositionStatusEnum = {

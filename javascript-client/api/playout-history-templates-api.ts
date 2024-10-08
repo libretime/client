@@ -372,7 +372,7 @@ export const PlayoutHistoryTemplatesApiFactory = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesCreate(playoutHistoryTemplate: PlayoutHistoryTemplate, options?: any): AxiosPromise<PlayoutHistoryTemplate> {
+        playoutHistoryTemplatesCreate(playoutHistoryTemplate: PlayoutHistoryTemplate, options?: RawAxiosRequestConfig): AxiosPromise<PlayoutHistoryTemplate> {
             return localVarFp.playoutHistoryTemplatesCreate(playoutHistoryTemplate, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const PlayoutHistoryTemplatesApiFactory = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesDestroy(id: number, options?: any): AxiosPromise<void> {
+        playoutHistoryTemplatesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.playoutHistoryTemplatesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const PlayoutHistoryTemplatesApiFactory = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesList(options?: any): AxiosPromise<Array<PlayoutHistoryTemplate>> {
+        playoutHistoryTemplatesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<PlayoutHistoryTemplate>> {
             return localVarFp.playoutHistoryTemplatesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const PlayoutHistoryTemplatesApiFactory = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesPartialUpdate(id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options?: any): AxiosPromise<PlayoutHistoryTemplate> {
+        playoutHistoryTemplatesPartialUpdate(id: number, patchedPlayoutHistoryTemplate?: PatchedPlayoutHistoryTemplate, options?: RawAxiosRequestConfig): AxiosPromise<PlayoutHistoryTemplate> {
             return localVarFp.playoutHistoryTemplatesPartialUpdate(id, patchedPlayoutHistoryTemplate, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const PlayoutHistoryTemplatesApiFactory = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesRetrieve(id: number, options?: any): AxiosPromise<PlayoutHistoryTemplate> {
+        playoutHistoryTemplatesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<PlayoutHistoryTemplate> {
             return localVarFp.playoutHistoryTemplatesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const PlayoutHistoryTemplatesApiFactory = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playoutHistoryTemplatesUpdate(id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options?: any): AxiosPromise<PlayoutHistoryTemplate> {
+        playoutHistoryTemplatesUpdate(id: number, playoutHistoryTemplate: PlayoutHistoryTemplate, options?: RawAxiosRequestConfig): AxiosPromise<PlayoutHistoryTemplate> {
             return localVarFp.playoutHistoryTemplatesUpdate(id, playoutHistoryTemplate, options).then((request) => request(axios, basePath));
         },
     };

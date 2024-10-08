@@ -372,7 +372,7 @@ export const CeleryTasksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksCreate(celeryTask: CeleryTask, options?: any): AxiosPromise<CeleryTask> {
+        celeryTasksCreate(celeryTask: CeleryTask, options?: RawAxiosRequestConfig): AxiosPromise<CeleryTask> {
             return localVarFp.celeryTasksCreate(celeryTask, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const CeleryTasksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksDestroy(id: number, options?: any): AxiosPromise<void> {
+        celeryTasksDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.celeryTasksDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const CeleryTasksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksList(options?: any): AxiosPromise<Array<CeleryTask>> {
+        celeryTasksList(options?: RawAxiosRequestConfig): AxiosPromise<Array<CeleryTask>> {
             return localVarFp.celeryTasksList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const CeleryTasksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksPartialUpdate(id: number, patchedCeleryTask?: PatchedCeleryTask, options?: any): AxiosPromise<CeleryTask> {
+        celeryTasksPartialUpdate(id: number, patchedCeleryTask?: PatchedCeleryTask, options?: RawAxiosRequestConfig): AxiosPromise<CeleryTask> {
             return localVarFp.celeryTasksPartialUpdate(id, patchedCeleryTask, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const CeleryTasksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksRetrieve(id: number, options?: any): AxiosPromise<CeleryTask> {
+        celeryTasksRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<CeleryTask> {
             return localVarFp.celeryTasksRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const CeleryTasksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        celeryTasksUpdate(id: number, celeryTask: CeleryTask, options?: any): AxiosPromise<CeleryTask> {
+        celeryTasksUpdate(id: number, celeryTask: CeleryTask, options?: RawAxiosRequestConfig): AxiosPromise<CeleryTask> {
             return localVarFp.celeryTasksUpdate(id, celeryTask, options).then((request) => request(axios, basePath));
         },
     };

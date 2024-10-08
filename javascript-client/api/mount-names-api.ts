@@ -372,7 +372,7 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesCreate(mountName: MountName, options?: any): AxiosPromise<MountName> {
+        mountNamesCreate(mountName: MountName, options?: RawAxiosRequestConfig): AxiosPromise<MountName> {
             return localVarFp.mountNamesCreate(mountName, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesDestroy(id: number, options?: any): AxiosPromise<void> {
+        mountNamesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.mountNamesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesList(options?: any): AxiosPromise<Array<MountName>> {
+        mountNamesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<MountName>> {
             return localVarFp.mountNamesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: any): AxiosPromise<MountName> {
+        mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: RawAxiosRequestConfig): AxiosPromise<MountName> {
             return localVarFp.mountNamesPartialUpdate(id, patchedMountName, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesRetrieve(id: number, options?: any): AxiosPromise<MountName> {
+        mountNamesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<MountName> {
             return localVarFp.mountNamesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        mountNamesUpdate(id: number, mountName: MountName, options?: any): AxiosPromise<MountName> {
+        mountNamesUpdate(id: number, mountName: MountName, options?: RawAxiosRequestConfig): AxiosPromise<MountName> {
             return localVarFp.mountNamesUpdate(id, mountName, options).then((request) => request(axios, basePath));
         },
     };

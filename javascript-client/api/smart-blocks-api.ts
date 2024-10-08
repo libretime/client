@@ -372,7 +372,7 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlocksCreate(smartBlock: SmartBlock, options?: any): AxiosPromise<SmartBlock> {
+        smartBlocksCreate(smartBlock: SmartBlock, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlock> {
             return localVarFp.smartBlocksCreate(smartBlock, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlocksDestroy(id: number, options?: any): AxiosPromise<void> {
+        smartBlocksDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.smartBlocksDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlocksList(options?: any): AxiosPromise<Array<SmartBlock>> {
+        smartBlocksList(options?: RawAxiosRequestConfig): AxiosPromise<Array<SmartBlock>> {
             return localVarFp.smartBlocksList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlocksPartialUpdate(id: number, patchedSmartBlock?: PatchedSmartBlock, options?: any): AxiosPromise<SmartBlock> {
+        smartBlocksPartialUpdate(id: number, patchedSmartBlock?: PatchedSmartBlock, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlock> {
             return localVarFp.smartBlocksPartialUpdate(id, patchedSmartBlock, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlocksRetrieve(id: number, options?: any): AxiosPromise<SmartBlock> {
+        smartBlocksRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlock> {
             return localVarFp.smartBlocksRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlocksUpdate(id: number, smartBlock: SmartBlock, options?: any): AxiosPromise<SmartBlock> {
+        smartBlocksUpdate(id: number, smartBlock: SmartBlock, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlock> {
             return localVarFp.smartBlocksUpdate(id, smartBlock, options).then((request) => request(axios, basePath));
         },
     };

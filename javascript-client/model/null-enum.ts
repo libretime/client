@@ -21,7 +21,6 @@
  */
 
 export const NullEnum = {
-    Null: 'null'
 } as const;
 
 export type NullEnum = typeof NullEnum[keyof typeof NullEnum];

@@ -372,7 +372,7 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersCreate(user: User, options?: any): AxiosPromise<User> {
+        usersCreate(user: User, options?: RawAxiosRequestConfig): AxiosPromise<User> {
             return localVarFp.usersCreate(user, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersDestroy(id: number, options?: any): AxiosPromise<void> {
+        usersDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.usersDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersList(options?: any): AxiosPromise<Array<User>> {
+        usersList(options?: RawAxiosRequestConfig): AxiosPromise<Array<User>> {
             return localVarFp.usersList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersPartialUpdate(id: number, patchedUser?: PatchedUser, options?: any): AxiosPromise<User> {
+        usersPartialUpdate(id: number, patchedUser?: PatchedUser, options?: RawAxiosRequestConfig): AxiosPromise<User> {
             return localVarFp.usersPartialUpdate(id, patchedUser, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersRetrieve(id: number, options?: any): AxiosPromise<User> {
+        usersRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<User> {
             return localVarFp.usersRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersUpdate(id: number, user: User, options?: any): AxiosPromise<User> {
+        usersUpdate(id: number, user: User, options?: RawAxiosRequestConfig): AxiosPromise<User> {
             return localVarFp.usersUpdate(id, user, options).then((request) => request(axios, basePath));
         },
     };

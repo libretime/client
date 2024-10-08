@@ -372,7 +372,7 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: any): AxiosPromise<ShowRebroadcast> {
+        showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig): AxiosPromise<ShowRebroadcast> {
             return localVarFp.showRebroadcastsCreate(showRebroadcast, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsDestroy(id: number, options?: any): AxiosPromise<void> {
+        showRebroadcastsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.showRebroadcastsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsList(options?: any): AxiosPromise<Array<ShowRebroadcast>> {
+        showRebroadcastsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ShowRebroadcast>> {
             return localVarFp.showRebroadcastsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: any): AxiosPromise<ShowRebroadcast> {
+        showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: RawAxiosRequestConfig): AxiosPromise<ShowRebroadcast> {
             return localVarFp.showRebroadcastsPartialUpdate(id, patchedShowRebroadcast, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsRetrieve(id: number, options?: any): AxiosPromise<ShowRebroadcast> {
+        showRebroadcastsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ShowRebroadcast> {
             return localVarFp.showRebroadcastsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: any): AxiosPromise<ShowRebroadcast> {
+        showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig): AxiosPromise<ShowRebroadcast> {
             return localVarFp.showRebroadcastsUpdate(id, showRebroadcast, options).then((request) => request(axios, basePath));
         },
     };

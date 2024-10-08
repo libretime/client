@@ -423,7 +423,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesCreate(modelFile: ModelFile, options?: any): AxiosPromise<any> {
+        filesCreate(modelFile: ModelFile, options?: RawAxiosRequestConfig): AxiosPromise<any> {
             return localVarFp.filesCreate(modelFile, options).then((request) => request(axios, basePath));
         },
         /**
@@ -432,7 +432,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesDestroy(id: number, options?: any): AxiosPromise<void> {
+        filesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.filesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -441,7 +441,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesDownloadRetrieve(id: number, options?: any): AxiosPromise<any> {
+        filesDownloadRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<any> {
             return localVarFp.filesDownloadRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -449,7 +449,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesList(options?: any): AxiosPromise<Array<any>> {
+        filesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<any>> {
             return localVarFp.filesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -459,7 +459,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesPartialUpdate(id: number, patchedFile?: PatchedFile, options?: any): AxiosPromise<any> {
+        filesPartialUpdate(id: number, patchedFile?: PatchedFile, options?: RawAxiosRequestConfig): AxiosPromise<any> {
             return localVarFp.filesPartialUpdate(id, patchedFile, options).then((request) => request(axios, basePath));
         },
         /**
@@ -468,7 +468,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesRetrieve(id: number, options?: any): AxiosPromise<any> {
+        filesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<any> {
             return localVarFp.filesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -478,7 +478,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesUpdate(id: number, modelFile: ModelFile, options?: any): AxiosPromise<any> {
+        filesUpdate(id: number, modelFile: ModelFile, options?: RawAxiosRequestConfig): AxiosPromise<any> {
             return localVarFp.filesUpdate(id, modelFile, options).then((request) => request(axios, basePath));
         },
     };

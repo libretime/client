@@ -372,7 +372,7 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importedPodcastsCreate(importedPodcast: ImportedPodcast, options?: any): AxiosPromise<ImportedPodcast> {
+        importedPodcastsCreate(importedPodcast: ImportedPodcast, options?: RawAxiosRequestConfig): AxiosPromise<ImportedPodcast> {
             return localVarFp.importedPodcastsCreate(importedPodcast, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importedPodcastsDestroy(id: number, options?: any): AxiosPromise<void> {
+        importedPodcastsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.importedPodcastsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importedPodcastsList(options?: any): AxiosPromise<Array<ImportedPodcast>> {
+        importedPodcastsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ImportedPodcast>> {
             return localVarFp.importedPodcastsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importedPodcastsPartialUpdate(id: number, patchedImportedPodcast?: PatchedImportedPodcast, options?: any): AxiosPromise<ImportedPodcast> {
+        importedPodcastsPartialUpdate(id: number, patchedImportedPodcast?: PatchedImportedPodcast, options?: RawAxiosRequestConfig): AxiosPromise<ImportedPodcast> {
             return localVarFp.importedPodcastsPartialUpdate(id, patchedImportedPodcast, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importedPodcastsRetrieve(id: number, options?: any): AxiosPromise<ImportedPodcast> {
+        importedPodcastsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ImportedPodcast> {
             return localVarFp.importedPodcastsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importedPodcastsUpdate(id: number, importedPodcast: ImportedPodcast, options?: any): AxiosPromise<ImportedPodcast> {
+        importedPodcastsUpdate(id: number, importedPodcast: ImportedPodcast, options?: RawAxiosRequestConfig): AxiosPromise<ImportedPodcast> {
             return localVarFp.importedPodcastsUpdate(id, importedPodcast, options).then((request) => request(axios, basePath));
         },
     };

@@ -372,7 +372,7 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsCreate(loginAttempt: LoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
+        loginAttemptsCreate(loginAttempt: LoginAttempt, options?: RawAxiosRequestConfig): AxiosPromise<LoginAttempt> {
             return localVarFp.loginAttemptsCreate(loginAttempt, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsDestroy(ip: string, options?: any): AxiosPromise<void> {
+        loginAttemptsDestroy(ip: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.loginAttemptsDestroy(ip, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsList(options?: any): AxiosPromise<Array<LoginAttempt>> {
+        loginAttemptsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<LoginAttempt>> {
             return localVarFp.loginAttemptsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsPartialUpdate(ip: string, patchedLoginAttempt?: PatchedLoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
+        loginAttemptsPartialUpdate(ip: string, patchedLoginAttempt?: PatchedLoginAttempt, options?: RawAxiosRequestConfig): AxiosPromise<LoginAttempt> {
             return localVarFp.loginAttemptsPartialUpdate(ip, patchedLoginAttempt, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsRetrieve(ip: string, options?: any): AxiosPromise<LoginAttempt> {
+        loginAttemptsRetrieve(ip: string, options?: RawAxiosRequestConfig): AxiosPromise<LoginAttempt> {
             return localVarFp.loginAttemptsRetrieve(ip, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        loginAttemptsUpdate(ip: string, loginAttempt: LoginAttempt, options?: any): AxiosPromise<LoginAttempt> {
+        loginAttemptsUpdate(ip: string, loginAttempt: LoginAttempt, options?: RawAxiosRequestConfig): AxiosPromise<LoginAttempt> {
             return localVarFp.loginAttemptsUpdate(ip, loginAttempt, options).then((request) => request(axios, basePath));
         },
     };

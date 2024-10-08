@@ -372,7 +372,7 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsCreate(timestamp: Timestamp, options?: any): AxiosPromise<Timestamp> {
+        timestampsCreate(timestamp: Timestamp, options?: RawAxiosRequestConfig): AxiosPromise<Timestamp> {
             return localVarFp.timestampsCreate(timestamp, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsDestroy(id: number, options?: any): AxiosPromise<void> {
+        timestampsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.timestampsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsList(options?: any): AxiosPromise<Array<Timestamp>> {
+        timestampsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<Timestamp>> {
             return localVarFp.timestampsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: any): AxiosPromise<Timestamp> {
+        timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: RawAxiosRequestConfig): AxiosPromise<Timestamp> {
             return localVarFp.timestampsPartialUpdate(id, patchedTimestamp, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsRetrieve(id: number, options?: any): AxiosPromise<Timestamp> {
+        timestampsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Timestamp> {
             return localVarFp.timestampsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        timestampsUpdate(id: number, timestamp: Timestamp, options?: any): AxiosPromise<Timestamp> {
+        timestampsUpdate(id: number, timestamp: Timestamp, options?: RawAxiosRequestConfig): AxiosPromise<Timestamp> {
             return localVarFp.timestampsUpdate(id, timestamp, options).then((request) => request(axios, basePath));
         },
     };

@@ -148,7 +148,7 @@ export const StreamApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamPreferencesRetrieve(options?: any): AxiosPromise<StreamPreferences> {
+        streamPreferencesRetrieve(options?: RawAxiosRequestConfig): AxiosPromise<StreamPreferences> {
             return localVarFp.streamPreferencesRetrieve(options).then((request) => request(axios, basePath));
         },
         /**
@@ -156,7 +156,7 @@ export const StreamApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        streamStateRetrieve(options?: any): AxiosPromise<StreamState> {
+        streamStateRetrieve(options?: RawAxiosRequestConfig): AxiosPromise<StreamState> {
             return localVarFp.streamStateRetrieve(options).then((request) => request(axios, basePath));
         },
     };

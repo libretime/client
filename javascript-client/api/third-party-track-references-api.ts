@@ -372,7 +372,7 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        thirdPartyTrackReferencesCreate(thirdPartyTrackReference: ThirdPartyTrackReference, options?: any): AxiosPromise<ThirdPartyTrackReference> {
+        thirdPartyTrackReferencesCreate(thirdPartyTrackReference: ThirdPartyTrackReference, options?: RawAxiosRequestConfig): AxiosPromise<ThirdPartyTrackReference> {
             return localVarFp.thirdPartyTrackReferencesCreate(thirdPartyTrackReference, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        thirdPartyTrackReferencesDestroy(id: number, options?: any): AxiosPromise<void> {
+        thirdPartyTrackReferencesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.thirdPartyTrackReferencesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        thirdPartyTrackReferencesList(options?: any): AxiosPromise<Array<ThirdPartyTrackReference>> {
+        thirdPartyTrackReferencesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ThirdPartyTrackReference>> {
             return localVarFp.thirdPartyTrackReferencesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        thirdPartyTrackReferencesPartialUpdate(id: number, patchedThirdPartyTrackReference?: PatchedThirdPartyTrackReference, options?: any): AxiosPromise<ThirdPartyTrackReference> {
+        thirdPartyTrackReferencesPartialUpdate(id: number, patchedThirdPartyTrackReference?: PatchedThirdPartyTrackReference, options?: RawAxiosRequestConfig): AxiosPromise<ThirdPartyTrackReference> {
             return localVarFp.thirdPartyTrackReferencesPartialUpdate(id, patchedThirdPartyTrackReference, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        thirdPartyTrackReferencesRetrieve(id: number, options?: any): AxiosPromise<ThirdPartyTrackReference> {
+        thirdPartyTrackReferencesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ThirdPartyTrackReference> {
             return localVarFp.thirdPartyTrackReferencesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        thirdPartyTrackReferencesUpdate(id: number, thirdPartyTrackReference: ThirdPartyTrackReference, options?: any): AxiosPromise<ThirdPartyTrackReference> {
+        thirdPartyTrackReferencesUpdate(id: number, thirdPartyTrackReference: ThirdPartyTrackReference, options?: RawAxiosRequestConfig): AxiosPromise<ThirdPartyTrackReference> {
             return localVarFp.thirdPartyTrackReferencesUpdate(id, thirdPartyTrackReference, options).then((request) => request(axios, basePath));
         },
     };

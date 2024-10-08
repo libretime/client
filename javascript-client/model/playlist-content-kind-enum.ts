@@ -17,7 +17,7 @@
 /**
  * * `0` - File * `1` - Stream * `2` - Block
  * @export
- * @enum {string}
+ * @enum {number}
  */
 
 export const PlaylistContentKindEnum = {

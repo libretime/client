@@ -372,7 +372,7 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsCreate(showHost: ShowHost, options?: any): AxiosPromise<ShowHost> {
+        showHostsCreate(showHost: ShowHost, options?: RawAxiosRequestConfig): AxiosPromise<ShowHost> {
             return localVarFp.showHostsCreate(showHost, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsDestroy(id: number, options?: any): AxiosPromise<void> {
+        showHostsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.showHostsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsList(options?: any): AxiosPromise<Array<ShowHost>> {
+        showHostsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ShowHost>> {
             return localVarFp.showHostsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: any): AxiosPromise<ShowHost> {
+        showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: RawAxiosRequestConfig): AxiosPromise<ShowHost> {
             return localVarFp.showHostsPartialUpdate(id, patchedShowHost, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsRetrieve(id: number, options?: any): AxiosPromise<ShowHost> {
+        showHostsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ShowHost> {
             return localVarFp.showHostsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showHostsUpdate(id: number, showHost: ShowHost, options?: any): AxiosPromise<ShowHost> {
+        showHostsUpdate(id: number, showHost: ShowHost, options?: RawAxiosRequestConfig): AxiosPromise<ShowHost> {
             return localVarFp.showHostsUpdate(id, showHost, options).then((request) => request(axios, basePath));
         },
     };

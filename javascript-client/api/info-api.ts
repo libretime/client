@@ -100,7 +100,7 @@ export const InfoApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        infoRetrieve(options?: any): AxiosPromise<Info> {
+        infoRetrieve(options?: RawAxiosRequestConfig): AxiosPromise<Info> {
             return localVarFp.infoRetrieve(options).then((request) => request(axios, basePath));
         },
     };

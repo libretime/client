@@ -422,7 +422,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleCreate(schedule: Schedule, options?: any): AxiosPromise<Schedule> {
+        scheduleCreate(schedule: Schedule, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
             return localVarFp.scheduleCreate(schedule, options).then((request) => request(axios, basePath));
         },
         /**
@@ -431,7 +431,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleDestroy(id: number, options?: any): AxiosPromise<void> {
+        scheduleDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.scheduleDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -446,7 +446,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: any): AxiosPromise<Array<Schedule>> {
+        scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<Schedule>> {
             return localVarFp.scheduleList(broadcasted, endsAfter, endsBefore, overbooked, positionStatus, startsAfter, startsBefore, options).then((request) => request(axios, basePath));
         },
         /**
@@ -456,7 +456,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schedulePartialUpdate(id: number, patchedSchedule?: PatchedSchedule, options?: any): AxiosPromise<Schedule> {
+        schedulePartialUpdate(id: number, patchedSchedule?: PatchedSchedule, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
             return localVarFp.schedulePartialUpdate(id, patchedSchedule, options).then((request) => request(axios, basePath));
         },
         /**
@@ -465,7 +465,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleRetrieve(id: number, options?: any): AxiosPromise<Schedule> {
+        scheduleRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
             return localVarFp.scheduleRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -475,7 +475,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleUpdate(id: number, schedule: Schedule, options?: any): AxiosPromise<Schedule> {
+        scheduleUpdate(id: number, schedule: Schedule, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
             return localVarFp.scheduleUpdate(id, schedule, options).then((request) => request(axios, basePath));
         },
     };

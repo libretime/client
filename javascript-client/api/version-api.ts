@@ -100,7 +100,7 @@ export const VersionApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        versionRetrieve(options?: any): AxiosPromise<Version> {
+        versionRetrieve(options?: RawAxiosRequestConfig): AxiosPromise<Version> {
             return localVarFp.versionRetrieve(options).then((request) => request(axios, basePath));
         },
     };

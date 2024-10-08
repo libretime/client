@@ -372,7 +372,7 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensCreate(userToken: UserToken, options?: any): AxiosPromise<UserToken> {
+        userTokensCreate(userToken: UserToken, options?: RawAxiosRequestConfig): AxiosPromise<UserToken> {
             return localVarFp.userTokensCreate(userToken, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensDestroy(id: number, options?: any): AxiosPromise<void> {
+        userTokensDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.userTokensDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensList(options?: any): AxiosPromise<Array<UserToken>> {
+        userTokensList(options?: RawAxiosRequestConfig): AxiosPromise<Array<UserToken>> {
             return localVarFp.userTokensList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: any): AxiosPromise<UserToken> {
+        userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: RawAxiosRequestConfig): AxiosPromise<UserToken> {
             return localVarFp.userTokensPartialUpdate(id, patchedUserToken, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensRetrieve(id: number, options?: any): AxiosPromise<UserToken> {
+        userTokensRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<UserToken> {
             return localVarFp.userTokensRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        userTokensUpdate(id: number, userToken: UserToken, options?: any): AxiosPromise<UserToken> {
+        userTokensUpdate(id: number, userToken: UserToken, options?: RawAxiosRequestConfig): AxiosPromise<UserToken> {
             return localVarFp.userTokensUpdate(id, userToken, options).then((request) => request(axios, basePath));
         },
     };

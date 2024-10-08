@@ -372,7 +372,7 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysCreate(showDays: ShowDays, options?: any): AxiosPromise<ShowDays> {
+        showDaysCreate(showDays: ShowDays, options?: RawAxiosRequestConfig): AxiosPromise<ShowDays> {
             return localVarFp.showDaysCreate(showDays, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysDestroy(id: number, options?: any): AxiosPromise<void> {
+        showDaysDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.showDaysDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysList(options?: any): AxiosPromise<Array<ShowDays>> {
+        showDaysList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ShowDays>> {
             return localVarFp.showDaysList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: any): AxiosPromise<ShowDays> {
+        showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: RawAxiosRequestConfig): AxiosPromise<ShowDays> {
             return localVarFp.showDaysPartialUpdate(id, patchedShowDays, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysRetrieve(id: number, options?: any): AxiosPromise<ShowDays> {
+        showDaysRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ShowDays> {
             return localVarFp.showDaysRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showDaysUpdate(id: number, showDays: ShowDays, options?: any): AxiosPromise<ShowDays> {
+        showDaysUpdate(id: number, showDays: ShowDays, options?: RawAxiosRequestConfig): AxiosPromise<ShowDays> {
             return localVarFp.showDaysUpdate(id, showDays, options).then((request) => request(axios, basePath));
         },
     };

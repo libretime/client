@@ -112,7 +112,7 @@ export const SchemaApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: any): AxiosPromise<{ [key: string]: any; }> {
+        schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: RawAxiosRequestConfig): AxiosPromise<{ [key: string]: any; }> {
             return localVarFp.schemaRetrieve(format, lang, options).then((request) => request(axios, basePath));
         },
     };

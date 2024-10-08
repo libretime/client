@@ -372,7 +372,7 @@ export const PlaylistContentsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistContentsCreate(playlistContent: PlaylistContent, options?: any): AxiosPromise<PlaylistContent> {
+        playlistContentsCreate(playlistContent: PlaylistContent, options?: RawAxiosRequestConfig): AxiosPromise<PlaylistContent> {
             return localVarFp.playlistContentsCreate(playlistContent, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const PlaylistContentsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistContentsDestroy(id: number, options?: any): AxiosPromise<void> {
+        playlistContentsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.playlistContentsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const PlaylistContentsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistContentsList(options?: any): AxiosPromise<Array<PlaylistContent>> {
+        playlistContentsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<PlaylistContent>> {
             return localVarFp.playlistContentsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const PlaylistContentsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistContentsPartialUpdate(id: number, patchedPlaylistContent?: PatchedPlaylistContent, options?: any): AxiosPromise<PlaylistContent> {
+        playlistContentsPartialUpdate(id: number, patchedPlaylistContent?: PatchedPlaylistContent, options?: RawAxiosRequestConfig): AxiosPromise<PlaylistContent> {
             return localVarFp.playlistContentsPartialUpdate(id, patchedPlaylistContent, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const PlaylistContentsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistContentsRetrieve(id: number, options?: any): AxiosPromise<PlaylistContent> {
+        playlistContentsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<PlaylistContent> {
             return localVarFp.playlistContentsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const PlaylistContentsApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playlistContentsUpdate(id: number, playlistContent: PlaylistContent, options?: any): AxiosPromise<PlaylistContent> {
+        playlistContentsUpdate(id: number, playlistContent: PlaylistContent, options?: RawAxiosRequestConfig): AxiosPromise<PlaylistContent> {
             return localVarFp.playlistContentsUpdate(id, playlistContent, options).then((request) => request(axios, basePath));
         },
     };

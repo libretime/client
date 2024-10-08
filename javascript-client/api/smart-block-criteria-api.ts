@@ -372,7 +372,7 @@ export const SmartBlockCriteriaApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockCriteriaCreate(smartBlockCriteria: SmartBlockCriteria, options?: any): AxiosPromise<SmartBlockCriteria> {
+        smartBlockCriteriaCreate(smartBlockCriteria: SmartBlockCriteria, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlockCriteria> {
             return localVarFp.smartBlockCriteriaCreate(smartBlockCriteria, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const SmartBlockCriteriaApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockCriteriaDestroy(id: number, options?: any): AxiosPromise<void> {
+        smartBlockCriteriaDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.smartBlockCriteriaDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const SmartBlockCriteriaApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockCriteriaList(options?: any): AxiosPromise<Array<SmartBlockCriteria>> {
+        smartBlockCriteriaList(options?: RawAxiosRequestConfig): AxiosPromise<Array<SmartBlockCriteria>> {
             return localVarFp.smartBlockCriteriaList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const SmartBlockCriteriaApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockCriteriaPartialUpdate(id: number, patchedSmartBlockCriteria?: PatchedSmartBlockCriteria, options?: any): AxiosPromise<SmartBlockCriteria> {
+        smartBlockCriteriaPartialUpdate(id: number, patchedSmartBlockCriteria?: PatchedSmartBlockCriteria, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlockCriteria> {
             return localVarFp.smartBlockCriteriaPartialUpdate(id, patchedSmartBlockCriteria, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const SmartBlockCriteriaApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockCriteriaRetrieve(id: number, options?: any): AxiosPromise<SmartBlockCriteria> {
+        smartBlockCriteriaRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlockCriteria> {
             return localVarFp.smartBlockCriteriaRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const SmartBlockCriteriaApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        smartBlockCriteriaUpdate(id: number, smartBlockCriteria: SmartBlockCriteria, options?: any): AxiosPromise<SmartBlockCriteria> {
+        smartBlockCriteriaUpdate(id: number, smartBlockCriteria: SmartBlockCriteria, options?: RawAxiosRequestConfig): AxiosPromise<SmartBlockCriteria> {
             return localVarFp.smartBlockCriteriaUpdate(id, smartBlockCriteria, options).then((request) => request(axios, basePath));
         },
     };

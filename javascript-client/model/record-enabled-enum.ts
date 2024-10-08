@@ -17,7 +17,7 @@
 /**
  * * `0` - No * `1` - Yes
  * @export
- * @enum {string}
+ * @enum {number}
  */
 
 export const RecordEnabledEnum = {

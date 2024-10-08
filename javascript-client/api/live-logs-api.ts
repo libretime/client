@@ -372,7 +372,7 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsCreate(liveLog: LiveLog, options?: any): AxiosPromise<LiveLog> {
+        liveLogsCreate(liveLog: LiveLog, options?: RawAxiosRequestConfig): AxiosPromise<LiveLog> {
             return localVarFp.liveLogsCreate(liveLog, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsDestroy(id: number, options?: any): AxiosPromise<void> {
+        liveLogsDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.liveLogsDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsList(options?: any): AxiosPromise<Array<LiveLog>> {
+        liveLogsList(options?: RawAxiosRequestConfig): AxiosPromise<Array<LiveLog>> {
             return localVarFp.liveLogsList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: any): AxiosPromise<LiveLog> {
+        liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: RawAxiosRequestConfig): AxiosPromise<LiveLog> {
             return localVarFp.liveLogsPartialUpdate(id, patchedLiveLog, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsRetrieve(id: number, options?: any): AxiosPromise<LiveLog> {
+        liveLogsRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<LiveLog> {
             return localVarFp.liveLogsRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        liveLogsUpdate(id: number, liveLog: LiveLog, options?: any): AxiosPromise<LiveLog> {
+        liveLogsUpdate(id: number, liveLog: LiveLog, options?: RawAxiosRequestConfig): AxiosPromise<LiveLog> {
             return localVarFp.liveLogsUpdate(id, liveLog, options).then((request) => request(axios, basePath));
         },
     };

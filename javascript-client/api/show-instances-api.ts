@@ -372,7 +372,7 @@ export const ShowInstancesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showInstancesCreate(showInstance: ShowInstance, options?: any): AxiosPromise<ShowInstance> {
+        showInstancesCreate(showInstance: ShowInstance, options?: RawAxiosRequestConfig): AxiosPromise<ShowInstance> {
             return localVarFp.showInstancesCreate(showInstance, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ShowInstancesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showInstancesDestroy(id: number, options?: any): AxiosPromise<void> {
+        showInstancesDestroy(id: number, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.showInstancesDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ShowInstancesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showInstancesList(options?: any): AxiosPromise<Array<ShowInstance>> {
+        showInstancesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ShowInstance>> {
             return localVarFp.showInstancesList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ShowInstancesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showInstancesPartialUpdate(id: number, patchedShowInstance?: PatchedShowInstance, options?: any): AxiosPromise<ShowInstance> {
+        showInstancesPartialUpdate(id: number, patchedShowInstance?: PatchedShowInstance, options?: RawAxiosRequestConfig): AxiosPromise<ShowInstance> {
             return localVarFp.showInstancesPartialUpdate(id, patchedShowInstance, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ShowInstancesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showInstancesRetrieve(id: number, options?: any): AxiosPromise<ShowInstance> {
+        showInstancesRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ShowInstance> {
             return localVarFp.showInstancesRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ShowInstancesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        showInstancesUpdate(id: number, showInstance: ShowInstance, options?: any): AxiosPromise<ShowInstance> {
+        showInstancesUpdate(id: number, showInstance: ShowInstance, options?: RawAxiosRequestConfig): AxiosPromise<ShowInstance> {
             return localVarFp.showInstancesUpdate(id, showInstance, options).then((request) => request(axios, basePath));
         },
     };

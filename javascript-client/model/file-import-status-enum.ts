@@ -17,7 +17,7 @@
 /**
  * * `0` - Success * `1` - Pending * `2` - Failed
  * @export
- * @enum {string}
+ * @enum {number}
  */
 
 export const FileImportStatusEnum = {

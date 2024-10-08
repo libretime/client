@@ -18,7 +18,7 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class NullEnum(str, Enum):
+class NullEnum(, Enum):
     """
     NullEnum
     """
@@ -26,7 +26,6 @@ class NullEnum(str, Enum):
     """
     allowed enum values
     """
-    NULL = 'null'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

@@ -372,7 +372,7 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersCreate(serviceRegister: ServiceRegister, options?: any): AxiosPromise<ServiceRegister> {
+        serviceRegistersCreate(serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig): AxiosPromise<ServiceRegister> {
             return localVarFp.serviceRegistersCreate(serviceRegister, options).then((request) => request(axios, basePath));
         },
         /**
@@ -381,7 +381,7 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersDestroy(name: string, options?: any): AxiosPromise<void> {
+        serviceRegistersDestroy(name: string, options?: RawAxiosRequestConfig): AxiosPromise<void> {
             return localVarFp.serviceRegistersDestroy(name, options).then((request) => request(axios, basePath));
         },
         /**
@@ -389,7 +389,7 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersList(options?: any): AxiosPromise<Array<ServiceRegister>> {
+        serviceRegistersList(options?: RawAxiosRequestConfig): AxiosPromise<Array<ServiceRegister>> {
             return localVarFp.serviceRegistersList(options).then((request) => request(axios, basePath));
         },
         /**
@@ -399,7 +399,7 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: any): AxiosPromise<ServiceRegister> {
+        serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: RawAxiosRequestConfig): AxiosPromise<ServiceRegister> {
             return localVarFp.serviceRegistersPartialUpdate(name, patchedServiceRegister, options).then((request) => request(axios, basePath));
         },
         /**
@@ -408,7 +408,7 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersRetrieve(name: string, options?: any): AxiosPromise<ServiceRegister> {
+        serviceRegistersRetrieve(name: string, options?: RawAxiosRequestConfig): AxiosPromise<ServiceRegister> {
             return localVarFp.serviceRegistersRetrieve(name, options).then((request) => request(axios, basePath));
         },
         /**
@@ -418,7 +418,7 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: any): AxiosPromise<ServiceRegister> {
+        serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig): AxiosPromise<ServiceRegister> {
             return localVarFp.serviceRegistersUpdate(name, serviceRegister, options).then((request) => request(axios, basePath));
         },
     };
