@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **auto_playlist** | **int** |  | [optional] 
 **auto_playlist_enabled** | **bool** |  | [optional] 
 **auto_playlist_repeat** | **bool** |  | [optional] 
+**intro_playlist** | **int** |  | [optional] 
+**outro_playlist** | **int** |  | [optional] 
 
 ## Example
 

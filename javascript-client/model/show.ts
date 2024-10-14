@@ -104,5 +104,17 @@ export interface Show {
      * @memberof Show
      */
     'auto_playlist_repeat': boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof Show
+     */
+    'intro_playlist'?: number | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof Show
+     */
+    'outro_playlist'?: number | null;
 }
 

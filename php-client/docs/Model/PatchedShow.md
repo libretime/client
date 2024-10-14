@@ -18,5 +18,7 @@ Name | Type | Description | Notes
 **auto_playlist** | **int** |  | [optional]
 **auto_playlist_enabled** | **bool** |  | [optional]
 **auto_playlist_repeat** | **bool** |  | [optional]
+**intro_playlist** | **int** |  | [optional]
+**outro_playlist** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

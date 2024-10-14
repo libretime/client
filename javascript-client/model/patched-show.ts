@@ -104,5 +104,17 @@ export interface PatchedShow {
      * @memberof PatchedShow
      */
     'auto_playlist_repeat'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedShow
+     */
+    'intro_playlist'?: number | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PatchedShow
+     */
+    'outro_playlist'?: number | null;
 }
 

@@ -41,7 +41,9 @@ class Show(BaseModel):
     auto_playlist: Optional[StrictInt] = None
     auto_playlist_enabled: StrictBool
     auto_playlist_repeat: StrictBool
-    __properties: ClassVar[List[str]] = ["id", "name", "description", "genre", "url", "image", "foreground_color", "background_color", "live_enabled", "linked", "linkable", "auto_playlist", "auto_playlist_enabled", "auto_playlist_repeat"]
+    intro_playlist: Optional[StrictInt] = None
+    outro_playlist: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["id", "name", "description", "genre", "url", "image", "foreground_color", "background_color", "live_enabled", "linked", "linkable", "auto_playlist", "auto_playlist_enabled", "auto_playlist_repeat", "intro_playlist", "outro_playlist"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -121,6 +123,16 @@ class Show(BaseModel):
         if self.auto_playlist is None and "auto_playlist" in self.model_fields_set:
             _dict['auto_playlist'] = None
 
+        # set to None if intro_playlist (nullable) is None
+        # and model_fields_set contains the field
+        if self.intro_playlist is None and "intro_playlist" in self.model_fields_set:
+            _dict['intro_playlist'] = None
+
+        # set to None if outro_playlist (nullable) is None
+        # and model_fields_set contains the field
+        if self.outro_playlist is None and "outro_playlist" in self.model_fields_set:
+            _dict['outro_playlist'] = None
+
         return _dict
 
     @classmethod
@@ -146,7 +158,9 @@ class Show(BaseModel):
             "linkable": obj.get("linkable"),
             "auto_playlist": obj.get("auto_playlist"),
             "auto_playlist_enabled": obj.get("auto_playlist_enabled"),
-            "auto_playlist_repeat": obj.get("auto_playlist_repeat")
+            "auto_playlist_repeat": obj.get("auto_playlist_repeat"),
+            "intro_playlist": obj.get("intro_playlist"),
+            "outro_playlist": obj.get("outro_playlist")
         })
         return _obj
 

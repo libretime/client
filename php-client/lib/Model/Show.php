@@ -70,7 +70,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'linkable' => 'bool',
         'auto_playlist' => 'int',
         'auto_playlist_enabled' => 'bool',
-        'auto_playlist_repeat' => 'bool'
+        'auto_playlist_repeat' => 'bool',
+        'intro_playlist' => 'int',
+        'outro_playlist' => 'int'
     ];
 
     /**
@@ -94,7 +96,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'linkable' => null,
         'auto_playlist' => null,
         'auto_playlist_enabled' => null,
-        'auto_playlist_repeat' => null
+        'auto_playlist_repeat' => null,
+        'intro_playlist' => null,
+        'outro_playlist' => null
     ];
 
     /**
@@ -116,7 +120,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'linkable' => false,
         'auto_playlist' => true,
         'auto_playlist_enabled' => false,
-        'auto_playlist_repeat' => false
+        'auto_playlist_repeat' => false,
+        'intro_playlist' => true,
+        'outro_playlist' => true
     ];
 
     /**
@@ -218,7 +224,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'linkable' => 'linkable',
         'auto_playlist' => 'auto_playlist',
         'auto_playlist_enabled' => 'auto_playlist_enabled',
-        'auto_playlist_repeat' => 'auto_playlist_repeat'
+        'auto_playlist_repeat' => 'auto_playlist_repeat',
+        'intro_playlist' => 'intro_playlist',
+        'outro_playlist' => 'outro_playlist'
     ];
 
     /**
@@ -240,7 +248,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'linkable' => 'setLinkable',
         'auto_playlist' => 'setAutoPlaylist',
         'auto_playlist_enabled' => 'setAutoPlaylistEnabled',
-        'auto_playlist_repeat' => 'setAutoPlaylistRepeat'
+        'auto_playlist_repeat' => 'setAutoPlaylistRepeat',
+        'intro_playlist' => 'setIntroPlaylist',
+        'outro_playlist' => 'setOutroPlaylist'
     ];
 
     /**
@@ -262,7 +272,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'linkable' => 'getLinkable',
         'auto_playlist' => 'getAutoPlaylist',
         'auto_playlist_enabled' => 'getAutoPlaylistEnabled',
-        'auto_playlist_repeat' => 'getAutoPlaylistRepeat'
+        'auto_playlist_repeat' => 'getAutoPlaylistRepeat',
+        'intro_playlist' => 'getIntroPlaylist',
+        'outro_playlist' => 'getOutroPlaylist'
     ];
 
     /**
@@ -336,6 +348,8 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('auto_playlist', $data ?? [], null);
         $this->setIfExists('auto_playlist_enabled', $data ?? [], null);
         $this->setIfExists('auto_playlist_repeat', $data ?? [], null);
+        $this->setIfExists('intro_playlist', $data ?? [], null);
+        $this->setIfExists('outro_playlist', $data ?? [], null);
     }
 
     /**
@@ -880,6 +894,74 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable auto_playlist_repeat cannot be null');
         }
         $this->container['auto_playlist_repeat'] = $auto_playlist_repeat;
+
+        return $this;
+    }
+
+    /**
+     * Gets intro_playlist
+     *
+     * @return int|null
+     */
+    public function getIntroPlaylist()
+    {
+        return $this->container['intro_playlist'];
+    }
+
+    /**
+     * Sets intro_playlist
+     *
+     * @param int|null $intro_playlist intro_playlist
+     *
+     * @return self
+     */
+    public function setIntroPlaylist($intro_playlist)
+    {
+        if (is_null($intro_playlist)) {
+            array_push($this->openAPINullablesSetToNull, 'intro_playlist');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('intro_playlist', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['intro_playlist'] = $intro_playlist;
+
+        return $this;
+    }
+
+    /**
+     * Gets outro_playlist
+     *
+     * @return int|null
+     */
+    public function getOutroPlaylist()
+    {
+        return $this->container['outro_playlist'];
+    }
+
+    /**
+     * Sets outro_playlist
+     *
+     * @param int|null $outro_playlist outro_playlist
+     *
+     * @return self
+     */
+    public function setOutroPlaylist($outro_playlist)
+    {
+        if (is_null($outro_playlist)) {
+            array_push($this->openAPINullablesSetToNull, 'outro_playlist');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('outro_playlist', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['outro_playlist'] = $outro_playlist;
 
         return $this;
     }
