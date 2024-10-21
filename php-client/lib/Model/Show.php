@@ -72,7 +72,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'auto_playlist_enabled' => 'bool',
         'auto_playlist_repeat' => 'bool',
         'intro_playlist' => 'int',
-        'outro_playlist' => 'int'
+        'override_intro_playlist' => 'bool',
+        'outro_playlist' => 'int',
+        'override_outro_playlist' => 'bool'
     ];
 
     /**
@@ -98,7 +100,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'auto_playlist_enabled' => null,
         'auto_playlist_repeat' => null,
         'intro_playlist' => null,
-        'outro_playlist' => null
+        'override_intro_playlist' => null,
+        'outro_playlist' => null,
+        'override_outro_playlist' => null
     ];
 
     /**
@@ -122,7 +126,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'auto_playlist_enabled' => false,
         'auto_playlist_repeat' => false,
         'intro_playlist' => true,
-        'outro_playlist' => true
+        'override_intro_playlist' => false,
+        'outro_playlist' => true,
+        'override_outro_playlist' => false
     ];
 
     /**
@@ -226,7 +232,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'auto_playlist_enabled' => 'auto_playlist_enabled',
         'auto_playlist_repeat' => 'auto_playlist_repeat',
         'intro_playlist' => 'intro_playlist',
-        'outro_playlist' => 'outro_playlist'
+        'override_intro_playlist' => 'override_intro_playlist',
+        'outro_playlist' => 'outro_playlist',
+        'override_outro_playlist' => 'override_outro_playlist'
     ];
 
     /**
@@ -250,7 +258,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'auto_playlist_enabled' => 'setAutoPlaylistEnabled',
         'auto_playlist_repeat' => 'setAutoPlaylistRepeat',
         'intro_playlist' => 'setIntroPlaylist',
-        'outro_playlist' => 'setOutroPlaylist'
+        'override_intro_playlist' => 'setOverrideIntroPlaylist',
+        'outro_playlist' => 'setOutroPlaylist',
+        'override_outro_playlist' => 'setOverrideOutroPlaylist'
     ];
 
     /**
@@ -274,7 +284,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         'auto_playlist_enabled' => 'getAutoPlaylistEnabled',
         'auto_playlist_repeat' => 'getAutoPlaylistRepeat',
         'intro_playlist' => 'getIntroPlaylist',
-        'outro_playlist' => 'getOutroPlaylist'
+        'override_intro_playlist' => 'getOverrideIntroPlaylist',
+        'outro_playlist' => 'getOutroPlaylist',
+        'override_outro_playlist' => 'getOverrideOutroPlaylist'
     ];
 
     /**
@@ -349,7 +361,9 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('auto_playlist_enabled', $data ?? [], null);
         $this->setIfExists('auto_playlist_repeat', $data ?? [], null);
         $this->setIfExists('intro_playlist', $data ?? [], null);
+        $this->setIfExists('override_intro_playlist', $data ?? [], null);
         $this->setIfExists('outro_playlist', $data ?? [], null);
+        $this->setIfExists('override_outro_playlist', $data ?? [], null);
     }
 
     /**
@@ -427,6 +441,12 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['auto_playlist_repeat'] === null) {
             $invalidProperties[] = "'auto_playlist_repeat' can't be null";
+        }
+        if ($this->container['override_intro_playlist'] === null) {
+            $invalidProperties[] = "'override_intro_playlist' can't be null";
+        }
+        if ($this->container['override_outro_playlist'] === null) {
+            $invalidProperties[] = "'override_outro_playlist' can't be null";
         }
         return $invalidProperties;
     }
@@ -933,6 +953,33 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets override_intro_playlist
+     *
+     * @return bool
+     */
+    public function getOverrideIntroPlaylist()
+    {
+        return $this->container['override_intro_playlist'];
+    }
+
+    /**
+     * Sets override_intro_playlist
+     *
+     * @param bool $override_intro_playlist override_intro_playlist
+     *
+     * @return self
+     */
+    public function setOverrideIntroPlaylist($override_intro_playlist)
+    {
+        if (is_null($override_intro_playlist)) {
+            throw new \InvalidArgumentException('non-nullable override_intro_playlist cannot be null');
+        }
+        $this->container['override_intro_playlist'] = $override_intro_playlist;
+
+        return $this;
+    }
+
+    /**
      * Gets outro_playlist
      *
      * @return int|null
@@ -962,6 +1009,33 @@ class Show implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['outro_playlist'] = $outro_playlist;
+
+        return $this;
+    }
+
+    /**
+     * Gets override_outro_playlist
+     *
+     * @return bool
+     */
+    public function getOverrideOutroPlaylist()
+    {
+        return $this->container['override_outro_playlist'];
+    }
+
+    /**
+     * Sets override_outro_playlist
+     *
+     * @param bool $override_outro_playlist override_outro_playlist
+     *
+     * @return self
+     */
+    public function setOverrideOutroPlaylist($override_outro_playlist)
+    {
+        if (is_null($override_outro_playlist)) {
+            throw new \InvalidArgumentException('non-nullable override_outro_playlist cannot be null');
+        }
+        $this->container['override_outro_playlist'] = $override_outro_playlist;
 
         return $this;
     }

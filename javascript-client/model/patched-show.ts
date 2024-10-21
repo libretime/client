@@ -112,9 +112,21 @@ export interface PatchedShow {
     'intro_playlist'?: number | null;
     /**
      * 
+     * @type {boolean}
+     * @memberof PatchedShow
+     */
+    'override_intro_playlist'?: boolean;
+    /**
+     * 
      * @type {number}
      * @memberof PatchedShow
      */
     'outro_playlist'?: number | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PatchedShow
+     */
+    'override_outro_playlist'?: boolean;
 }
 

@@ -42,8 +42,10 @@ class PatchedShow(BaseModel):
     auto_playlist_enabled: Optional[StrictBool] = None
     auto_playlist_repeat: Optional[StrictBool] = None
     intro_playlist: Optional[StrictInt] = None
+    override_intro_playlist: Optional[StrictBool] = None
     outro_playlist: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["id", "name", "description", "genre", "url", "image", "foreground_color", "background_color", "live_enabled", "linked", "linkable", "auto_playlist", "auto_playlist_enabled", "auto_playlist_repeat", "intro_playlist", "outro_playlist"]
+    override_outro_playlist: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["id", "name", "description", "genre", "url", "image", "foreground_color", "background_color", "live_enabled", "linked", "linkable", "auto_playlist", "auto_playlist_enabled", "auto_playlist_repeat", "intro_playlist", "override_intro_playlist", "outro_playlist", "override_outro_playlist"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -160,7 +162,9 @@ class PatchedShow(BaseModel):
             "auto_playlist_enabled": obj.get("auto_playlist_enabled"),
             "auto_playlist_repeat": obj.get("auto_playlist_repeat"),
             "intro_playlist": obj.get("intro_playlist"),
-            "outro_playlist": obj.get("outro_playlist")
+            "override_intro_playlist": obj.get("override_intro_playlist"),
+            "outro_playlist": obj.get("outro_playlist"),
+            "override_outro_playlist": obj.get("override_outro_playlist")
         })
         return _obj
 

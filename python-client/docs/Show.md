@@ -20,7 +20,9 @@ Name | Type | Description | Notes
 **auto_playlist_enabled** | **bool** |  | 
 **auto_playlist_repeat** | **bool** |  | 
 **intro_playlist** | **int** |  | [optional] 
+**override_intro_playlist** | **bool** |  | 
 **outro_playlist** | **int** |  | [optional] 
+**override_outro_playlist** | **bool** |  | 
 
 ## Example
 
