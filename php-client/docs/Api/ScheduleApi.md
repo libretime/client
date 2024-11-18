@@ -174,12 +174,12 @@ $apiInstance = new Libretime\Client\Api\ScheduleApi(
     $config
 );
 $broadcasted = 56; // int
-$ends_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$ends_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$ends_after = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$ends_before = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
 $overbooked = True; // bool
 $position_status = 56; // int
-$starts_after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$starts_before = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$starts_after = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$starts_before = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
 
 try {
     $result = $apiInstance->scheduleList($broadcasted, $ends_after, $ends_before, $overbooked, $position_status, $starts_after, $starts_before);
