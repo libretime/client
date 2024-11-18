@@ -41,7 +41,7 @@ docs/PatchedPlayoutHistoryTemplateField.md
 docs/PatchedPodcast.md
 docs/PatchedPodcastEpisode.md
 docs/PatchedPreference.md
-docs/PatchedSchedule.md
+docs/PatchedReadSchedule.md
 docs/PatchedServiceRegister.md
 docs/PatchedShow.md
 docs/PatchedShowDays.md
@@ -79,10 +79,10 @@ docs/PodcastsApi.md
 docs/PositionStatusEnum.md
 docs/Preference.md
 docs/PreferencesApi.md
+docs/ReadSchedule.md
 docs/RecordEnabledEnum.md
 docs/RepeatKindEnum.md
 docs/RoleEnum.md
-docs/Schedule.md
 docs/ScheduleApi.md
 docs/SchemaApi.md
 docs/ServiceRegister.md
@@ -124,6 +124,7 @@ docs/WebstreamMetadata.md
 docs/WebstreamMetadataApi.md
 docs/WebstreamsApi.md
 docs/WeekDayEnum.md
+docs/WriteSchedule.md
 git_push.sh
 libretime_client/__init__.py
 libretime_client/api/__init__.py
@@ -199,7 +200,7 @@ libretime_client/models/patched_playout_history_template_field.py
 libretime_client/models/patched_podcast.py
 libretime_client/models/patched_podcast_episode.py
 libretime_client/models/patched_preference.py
-libretime_client/models/patched_schedule.py
+libretime_client/models/patched_read_schedule.py
 libretime_client/models/patched_service_register.py
 libretime_client/models/patched_show.py
 libretime_client/models/patched_show_days.py
@@ -228,10 +229,10 @@ libretime_client/models/podcast.py
 libretime_client/models/podcast_episode.py
 libretime_client/models/position_status_enum.py
 libretime_client/models/preference.py
+libretime_client/models/read_schedule.py
 libretime_client/models/record_enabled_enum.py
 libretime_client/models/repeat_kind_enum.py
 libretime_client/models/role_enum.py
-libretime_client/models/schedule.py
 libretime_client/models/service_register.py
 libretime_client/models/show.py
 libretime_client/models/show_days.py
@@ -253,6 +254,7 @@ libretime_client/models/version.py
 libretime_client/models/webstream.py
 libretime_client/models/webstream_metadata.py
 libretime_client/models/week_day_enum.py
+libretime_client/models/write_schedule.py
 libretime_client/py.typed
 libretime_client/rest.py
 pyproject.toml
@@ -261,4 +263,7 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_patched_read_schedule.py
+test/test_read_schedule.py
+test/test_write_schedule.py
 tox.ini

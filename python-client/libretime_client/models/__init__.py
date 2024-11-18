@@ -43,7 +43,7 @@ from libretime_client.models.patched_playout_history_template_field import Patch
 from libretime_client.models.patched_podcast import PatchedPodcast
 from libretime_client.models.patched_podcast_episode import PatchedPodcastEpisode
 from libretime_client.models.patched_preference import PatchedPreference
-from libretime_client.models.patched_schedule import PatchedSchedule
+from libretime_client.models.patched_read_schedule import PatchedReadSchedule
 from libretime_client.models.patched_service_register import PatchedServiceRegister
 from libretime_client.models.patched_show import PatchedShow
 from libretime_client.models.patched_show_days import PatchedShowDays
@@ -72,10 +72,10 @@ from libretime_client.models.podcast import Podcast
 from libretime_client.models.podcast_episode import PodcastEpisode
 from libretime_client.models.position_status_enum import PositionStatusEnum
 from libretime_client.models.preference import Preference
+from libretime_client.models.read_schedule import ReadSchedule
 from libretime_client.models.record_enabled_enum import RecordEnabledEnum
 from libretime_client.models.repeat_kind_enum import RepeatKindEnum
 from libretime_client.models.role_enum import RoleEnum
-from libretime_client.models.schedule import Schedule
 from libretime_client.models.service_register import ServiceRegister
 from libretime_client.models.show import Show
 from libretime_client.models.show_days import ShowDays
@@ -97,3 +97,4 @@ from libretime_client.models.version import Version
 from libretime_client.models.webstream import Webstream
 from libretime_client.models.webstream_metadata import WebstreamMetadata
 from libretime_client.models.week_day_enum import WeekDayEnum
+from libretime_client.models.write_schedule import WriteSchedule

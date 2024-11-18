@@ -20,8 +20,9 @@ from datetime import datetime
 from pydantic import Field, StrictBool, StrictInt
 from typing import List, Optional
 from typing_extensions import Annotated
-from libretime_client.models.patched_schedule import PatchedSchedule
-from libretime_client.models.schedule import Schedule
+from libretime_client.models.patched_read_schedule import PatchedReadSchedule
+from libretime_client.models.read_schedule import ReadSchedule
+from libretime_client.models.write_schedule import WriteSchedule
 
 from libretime_client.api_client import ApiClient, RequestSerialized
 from libretime_client.api_response import ApiResponse
@@ -44,7 +45,7 @@ class ScheduleApi:
     @validate_call
     def schedule_create(
         self,
-        schedule: Schedule,
+        write_schedule: WriteSchedule,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -57,12 +58,13 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Schedule:
+    ) -> WriteSchedule:
         """schedule_create
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
-        :param schedule: (required)
-        :type schedule: Schedule
+        :param write_schedule: (required)
+        :type write_schedule: WriteSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -86,7 +88,7 @@ class ScheduleApi:
         """ # noqa: E501
 
         _param = self._schedule_create_serialize(
-            schedule=schedule,
+            write_schedule=write_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -94,7 +96,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Schedule",
+            '201': "WriteSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -110,7 +112,7 @@ class ScheduleApi:
     @validate_call
     def schedule_create_with_http_info(
         self,
-        schedule: Schedule,
+        write_schedule: WriteSchedule,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -123,12 +125,13 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Schedule]:
+    ) -> ApiResponse[WriteSchedule]:
         """schedule_create
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
-        :param schedule: (required)
-        :type schedule: Schedule
+        :param write_schedule: (required)
+        :type write_schedule: WriteSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -152,7 +155,7 @@ class ScheduleApi:
         """ # noqa: E501
 
         _param = self._schedule_create_serialize(
-            schedule=schedule,
+            write_schedule=write_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -160,7 +163,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Schedule",
+            '201': "WriteSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -176,7 +179,7 @@ class ScheduleApi:
     @validate_call
     def schedule_create_without_preload_content(
         self,
-        schedule: Schedule,
+        write_schedule: WriteSchedule,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -192,9 +195,10 @@ class ScheduleApi:
     ) -> RESTResponseType:
         """schedule_create
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
-        :param schedule: (required)
-        :type schedule: Schedule
+        :param write_schedule: (required)
+        :type write_schedule: WriteSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -218,7 +222,7 @@ class ScheduleApi:
         """ # noqa: E501
 
         _param = self._schedule_create_serialize(
-            schedule=schedule,
+            write_schedule=write_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -226,7 +230,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Schedule",
+            '201': "WriteSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -237,7 +241,7 @@ class ScheduleApi:
 
     def _schedule_create_serialize(
         self,
-        schedule,
+        write_schedule,
         _request_auth,
         _content_type,
         _headers,
@@ -263,8 +267,8 @@ class ScheduleApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if schedule is not None:
-            _body_params = schedule
+        if write_schedule is not None:
+            _body_params = write_schedule
 
 
         # set the HTTP header `Accept`
@@ -334,6 +338,7 @@ class ScheduleApi:
     ) -> None:
         """schedule_destroy
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
@@ -400,6 +405,7 @@ class ScheduleApi:
     ) -> ApiResponse[None]:
         """schedule_destroy
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
@@ -466,6 +472,7 @@ class ScheduleApi:
     ) -> RESTResponseType:
         """schedule_destroy
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
@@ -589,9 +596,10 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> List[Schedule]:
+    ) -> List[ReadSchedule]:
         """schedule_list
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param broadcasted:
         :type broadcasted: int
@@ -644,7 +652,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[Schedule]",
+            '200': "List[ReadSchedule]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -679,9 +687,10 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[List[Schedule]]:
+    ) -> ApiResponse[List[ReadSchedule]]:
         """schedule_list
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param broadcasted:
         :type broadcasted: int
@@ -734,7 +743,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[Schedule]",
+            '200': "List[ReadSchedule]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -772,6 +781,7 @@ class ScheduleApi:
     ) -> RESTResponseType:
         """schedule_list
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param broadcasted:
         :type broadcasted: int
@@ -824,7 +834,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[Schedule]",
+            '200': "List[ReadSchedule]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -970,7 +980,7 @@ class ScheduleApi:
     def schedule_partial_update(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this schedule.")],
-        patched_schedule: Optional[PatchedSchedule] = None,
+        patched_read_schedule: Optional[PatchedReadSchedule] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -983,14 +993,15 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Schedule:
+    ) -> ReadSchedule:
         """schedule_partial_update
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
-        :param patched_schedule:
-        :type patched_schedule: PatchedSchedule
+        :param patched_read_schedule:
+        :type patched_read_schedule: PatchedReadSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1015,7 +1026,7 @@ class ScheduleApi:
 
         _param = self._schedule_partial_update_serialize(
             id=id,
-            patched_schedule=patched_schedule,
+            patched_read_schedule=patched_read_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1023,7 +1034,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1040,7 +1051,7 @@ class ScheduleApi:
     def schedule_partial_update_with_http_info(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this schedule.")],
-        patched_schedule: Optional[PatchedSchedule] = None,
+        patched_read_schedule: Optional[PatchedReadSchedule] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1053,14 +1064,15 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Schedule]:
+    ) -> ApiResponse[ReadSchedule]:
         """schedule_partial_update
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
-        :param patched_schedule:
-        :type patched_schedule: PatchedSchedule
+        :param patched_read_schedule:
+        :type patched_read_schedule: PatchedReadSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1085,7 +1097,7 @@ class ScheduleApi:
 
         _param = self._schedule_partial_update_serialize(
             id=id,
-            patched_schedule=patched_schedule,
+            patched_read_schedule=patched_read_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1093,7 +1105,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1110,7 +1122,7 @@ class ScheduleApi:
     def schedule_partial_update_without_preload_content(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this schedule.")],
-        patched_schedule: Optional[PatchedSchedule] = None,
+        patched_read_schedule: Optional[PatchedReadSchedule] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1126,11 +1138,12 @@ class ScheduleApi:
     ) -> RESTResponseType:
         """schedule_partial_update
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
-        :param patched_schedule:
-        :type patched_schedule: PatchedSchedule
+        :param patched_read_schedule:
+        :type patched_read_schedule: PatchedReadSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1155,7 +1168,7 @@ class ScheduleApi:
 
         _param = self._schedule_partial_update_serialize(
             id=id,
-            patched_schedule=patched_schedule,
+            patched_read_schedule=patched_read_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1163,7 +1176,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1175,7 +1188,7 @@ class ScheduleApi:
     def _schedule_partial_update_serialize(
         self,
         id,
-        patched_schedule,
+        patched_read_schedule,
         _request_auth,
         _content_type,
         _headers,
@@ -1203,8 +1216,8 @@ class ScheduleApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if patched_schedule is not None:
-            _body_params = patched_schedule
+        if patched_read_schedule is not None:
+            _body_params = patched_read_schedule
 
 
         # set the HTTP header `Accept`
@@ -1271,9 +1284,10 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Schedule:
+    ) -> ReadSchedule:
         """schedule_retrieve
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
@@ -1308,7 +1322,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1337,9 +1351,10 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Schedule]:
+    ) -> ApiResponse[ReadSchedule]:
         """schedule_retrieve
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
@@ -1374,7 +1389,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1406,6 +1421,7 @@ class ScheduleApi:
     ) -> RESTResponseType:
         """schedule_retrieve
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
@@ -1440,7 +1456,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1518,7 +1534,7 @@ class ScheduleApi:
     def schedule_update(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this schedule.")],
-        schedule: Schedule,
+        read_schedule: ReadSchedule,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1531,14 +1547,15 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Schedule:
+    ) -> ReadSchedule:
         """schedule_update
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
-        :param schedule: (required)
-        :type schedule: Schedule
+        :param read_schedule: (required)
+        :type read_schedule: ReadSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1563,7 +1580,7 @@ class ScheduleApi:
 
         _param = self._schedule_update_serialize(
             id=id,
-            schedule=schedule,
+            read_schedule=read_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1571,7 +1588,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1588,7 +1605,7 @@ class ScheduleApi:
     def schedule_update_with_http_info(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this schedule.")],
-        schedule: Schedule,
+        read_schedule: ReadSchedule,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1601,14 +1618,15 @@ class ScheduleApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Schedule]:
+    ) -> ApiResponse[ReadSchedule]:
         """schedule_update
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
-        :param schedule: (required)
-        :type schedule: Schedule
+        :param read_schedule: (required)
+        :type read_schedule: ReadSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1633,7 +1651,7 @@ class ScheduleApi:
 
         _param = self._schedule_update_serialize(
             id=id,
-            schedule=schedule,
+            read_schedule=read_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1641,7 +1659,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1658,7 +1676,7 @@ class ScheduleApi:
     def schedule_update_without_preload_content(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this schedule.")],
-        schedule: Schedule,
+        read_schedule: ReadSchedule,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1674,11 +1692,12 @@ class ScheduleApi:
     ) -> RESTResponseType:
         """schedule_update
 
+        Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
         :param id: A unique integer value identifying this schedule. (required)
         :type id: int
-        :param schedule: (required)
-        :type schedule: Schedule
+        :param read_schedule: (required)
+        :type read_schedule: ReadSchedule
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1703,7 +1722,7 @@ class ScheduleApi:
 
         _param = self._schedule_update_serialize(
             id=id,
-            schedule=schedule,
+            read_schedule=read_schedule,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1711,7 +1730,7 @@ class ScheduleApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Schedule",
+            '200': "ReadSchedule",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1723,7 +1742,7 @@ class ScheduleApi:
     def _schedule_update_serialize(
         self,
         id,
-        schedule,
+        read_schedule,
         _request_auth,
         _content_type,
         _headers,
@@ -1751,8 +1770,8 @@ class ScheduleApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if schedule is not None:
-            _body_params = schedule
+        if read_schedule is not None:
+            _body_params = read_schedule
 
 
         # set the HTTP header `Accept`

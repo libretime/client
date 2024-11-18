@@ -13,9 +13,11 @@ Method | HTTP request | Description
 
 
 # **schedule_create**
-> Schedule schedule_create(schedule)
+> WriteSchedule schedule_create(write_schedule)
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -24,7 +26,7 @@ Method | HTTP request | Description
 
 ```python
 import libretime_client
-from libretime_client.models.schedule import Schedule
+from libretime_client.models.write_schedule import WriteSchedule
 from libretime_client.rest import ApiException
 from pprint import pprint
 
@@ -55,10 +57,10 @@ configuration.api_key['cookieAuth'] = os.environ["API_KEY"]
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = libretime_client.ScheduleApi(api_client)
-    schedule = libretime_client.Schedule() # Schedule | 
+    write_schedule = libretime_client.WriteSchedule() # WriteSchedule | 
 
     try:
-        api_response = api_instance.schedule_create(schedule)
+        api_response = api_instance.schedule_create(write_schedule)
         print("The response of ScheduleApi->schedule_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -72,11 +74,11 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule** | [**Schedule**](Schedule.md)|  | 
+ **write_schedule** | [**WriteSchedule**](WriteSchedule.md)|  | 
 
 ### Return type
 
-[**Schedule**](Schedule.md)
+[**WriteSchedule**](WriteSchedule.md)
 
 ### Authorization
 
@@ -99,6 +101,8 @@ Name | Type | Description  | Notes
 > schedule_destroy(id)
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -176,9 +180,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_list**
-> List[Schedule] schedule_list(broadcasted=broadcasted, ends_after=ends_after, ends_before=ends_before, overbooked=overbooked, position_status=position_status, starts_after=starts_after, starts_before=starts_before)
+> List[ReadSchedule] schedule_list(broadcasted=broadcasted, ends_after=ends_after, ends_before=ends_before, overbooked=overbooked, position_status=position_status, starts_after=starts_after, starts_before=starts_before)
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -187,7 +193,7 @@ void (empty response body)
 
 ```python
 import libretime_client
-from libretime_client.models.schedule import Schedule
+from libretime_client.models.read_schedule import ReadSchedule
 from libretime_client.rest import ApiException
 from pprint import pprint
 
@@ -251,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[Schedule]**](Schedule.md)
+[**List[ReadSchedule]**](ReadSchedule.md)
 
 ### Authorization
 
@@ -271,9 +277,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_partial_update**
-> Schedule schedule_partial_update(id, patched_schedule=patched_schedule)
+> ReadSchedule schedule_partial_update(id, patched_read_schedule=patched_read_schedule)
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -282,8 +290,8 @@ Name | Type | Description  | Notes
 
 ```python
 import libretime_client
-from libretime_client.models.patched_schedule import PatchedSchedule
-from libretime_client.models.schedule import Schedule
+from libretime_client.models.patched_read_schedule import PatchedReadSchedule
+from libretime_client.models.read_schedule import ReadSchedule
 from libretime_client.rest import ApiException
 from pprint import pprint
 
@@ -315,10 +323,10 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = libretime_client.ScheduleApi(api_client)
     id = 56 # int | A unique integer value identifying this schedule.
-    patched_schedule = libretime_client.PatchedSchedule() # PatchedSchedule |  (optional)
+    patched_read_schedule = libretime_client.PatchedReadSchedule() # PatchedReadSchedule |  (optional)
 
     try:
-        api_response = api_instance.schedule_partial_update(id, patched_schedule=patched_schedule)
+        api_response = api_instance.schedule_partial_update(id, patched_read_schedule=patched_read_schedule)
         print("The response of ScheduleApi->schedule_partial_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -333,11 +341,11 @@ with libretime_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. | 
- **patched_schedule** | [**PatchedSchedule**](PatchedSchedule.md)|  | [optional] 
+ **patched_read_schedule** | [**PatchedReadSchedule**](PatchedReadSchedule.md)|  | [optional] 
 
 ### Return type
 
-[**Schedule**](Schedule.md)
+[**ReadSchedule**](ReadSchedule.md)
 
 ### Authorization
 
@@ -357,9 +365,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_retrieve**
-> Schedule schedule_retrieve(id)
+> ReadSchedule schedule_retrieve(id)
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -368,7 +378,7 @@ Name | Type | Description  | Notes
 
 ```python
 import libretime_client
-from libretime_client.models.schedule import Schedule
+from libretime_client.models.read_schedule import ReadSchedule
 from libretime_client.rest import ApiException
 from pprint import pprint
 
@@ -420,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Schedule**](Schedule.md)
+[**ReadSchedule**](ReadSchedule.md)
 
 ### Authorization
 
@@ -440,9 +450,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_update**
-> Schedule schedule_update(id, schedule)
+> ReadSchedule schedule_update(id, read_schedule)
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -451,7 +463,7 @@ Name | Type | Description  | Notes
 
 ```python
 import libretime_client
-from libretime_client.models.schedule import Schedule
+from libretime_client.models.read_schedule import ReadSchedule
 from libretime_client.rest import ApiException
 from pprint import pprint
 
@@ -483,10 +495,10 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = libretime_client.ScheduleApi(api_client)
     id = 56 # int | A unique integer value identifying this schedule.
-    schedule = libretime_client.Schedule() # Schedule | 
+    read_schedule = libretime_client.ReadSchedule() # ReadSchedule | 
 
     try:
-        api_response = api_instance.schedule_update(id, schedule)
+        api_response = api_instance.schedule_update(id, read_schedule)
         print("The response of ScheduleApi->schedule_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -501,11 +513,11 @@ with libretime_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this schedule. | 
- **schedule** | [**Schedule**](Schedule.md)|  | 
+ **read_schedule** | [**ReadSchedule**](ReadSchedule.md)|  | 
 
 ### Return type
 
-[**Schedule**](Schedule.md)
+[**ReadSchedule**](ReadSchedule.md)
 
 ### Authorization
 

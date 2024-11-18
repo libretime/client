@@ -325,7 +325,7 @@ Class | Method | HTTP request | Description
 - [PatchedPodcast](docs/Model/PatchedPodcast.md)
 - [PatchedPodcastEpisode](docs/Model/PatchedPodcastEpisode.md)
 - [PatchedPreference](docs/Model/PatchedPreference.md)
-- [PatchedSchedule](docs/Model/PatchedSchedule.md)
+- [PatchedReadSchedule](docs/Model/PatchedReadSchedule.md)
 - [PatchedServiceRegister](docs/Model/PatchedServiceRegister.md)
 - [PatchedShow](docs/Model/PatchedShow.md)
 - [PatchedShowDays](docs/Model/PatchedShowDays.md)
@@ -354,10 +354,10 @@ Class | Method | HTTP request | Description
 - [PodcastEpisode](docs/Model/PodcastEpisode.md)
 - [PositionStatusEnum](docs/Model/PositionStatusEnum.md)
 - [Preference](docs/Model/Preference.md)
+- [ReadSchedule](docs/Model/ReadSchedule.md)
 - [RecordEnabledEnum](docs/Model/RecordEnabledEnum.md)
 - [RepeatKindEnum](docs/Model/RepeatKindEnum.md)
 - [RoleEnum](docs/Model/RoleEnum.md)
-- [Schedule](docs/Model/Schedule.md)
 - [ServiceRegister](docs/Model/ServiceRegister.md)
 - [Show](docs/Model/Show.md)
 - [ShowDays](docs/Model/ShowDays.md)
@@ -379,6 +379,7 @@ Class | Method | HTTP request | Description
 - [Webstream](docs/Model/Webstream.md)
 - [WebstreamMetadata](docs/Model/WebstreamMetadata.md)
 - [WeekDayEnum](docs/Model/WeekDayEnum.md)
+- [WriteSchedule](docs/Model/WriteSchedule.md)
 
 ## Authorization
 

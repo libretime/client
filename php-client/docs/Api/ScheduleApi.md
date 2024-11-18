@@ -15,10 +15,12 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `scheduleCreate()`
 
 ```php
-scheduleCreate($schedule): \Libretime\Client\Model\Schedule
+scheduleCreate($write_schedule): \Libretime\Client\Model\WriteSchedule
 ```
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -44,10 +46,10 @@ $apiInstance = new Libretime\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule = new \Libretime\Client\Model\Schedule(); // \Libretime\Client\Model\Schedule
+$write_schedule = new \Libretime\Client\Model\WriteSchedule(); // \Libretime\Client\Model\WriteSchedule
 
 try {
-    $result = $apiInstance->scheduleCreate($schedule);
+    $result = $apiInstance->scheduleCreate($write_schedule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->scheduleCreate: ', $e->getMessage(), PHP_EOL;
@@ -58,11 +60,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  | |
+| **write_schedule** | [**\Libretime\Client\Model\WriteSchedule**](../Model/WriteSchedule.md)|  | |
 
 ### Return type
 
-[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\WriteSchedule**](../Model/WriteSchedule.md)
 
 ### Authorization
 
@@ -84,6 +86,8 @@ scheduleDestroy($id)
 ```
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -144,10 +148,12 @@ void (empty response body)
 ## `scheduleList()`
 
 ```php
-scheduleList($broadcasted, $ends_after, $ends_before, $overbooked, $position_status, $starts_after, $starts_before): \Libretime\Client\Model\Schedule[]
+scheduleList($broadcasted, $ends_after, $ends_before, $overbooked, $position_status, $starts_after, $starts_before): \Libretime\Client\Model\ReadSchedule[]
 ```
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -203,7 +209,7 @@ try {
 
 ### Return type
 
-[**\Libretime\Client\Model\Schedule[]**](../Model/Schedule.md)
+[**\Libretime\Client\Model\ReadSchedule[]**](../Model/ReadSchedule.md)
 
 ### Authorization
 
@@ -221,10 +227,12 @@ try {
 ## `schedulePartialUpdate()`
 
 ```php
-schedulePartialUpdate($id, $patched_schedule): \Libretime\Client\Model\Schedule
+schedulePartialUpdate($id, $patched_read_schedule): \Libretime\Client\Model\ReadSchedule
 ```
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -251,10 +259,10 @@ $apiInstance = new Libretime\Client\Api\ScheduleApi(
     $config
 );
 $id = 56; // int | A unique integer value identifying this schedule.
-$patched_schedule = new \Libretime\Client\Model\PatchedSchedule(); // \Libretime\Client\Model\PatchedSchedule
+$patched_read_schedule = new \Libretime\Client\Model\PatchedReadSchedule(); // \Libretime\Client\Model\PatchedReadSchedule
 
 try {
-    $result = $apiInstance->schedulePartialUpdate($id, $patched_schedule);
+    $result = $apiInstance->schedulePartialUpdate($id, $patched_read_schedule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->schedulePartialUpdate: ', $e->getMessage(), PHP_EOL;
@@ -266,11 +274,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| A unique integer value identifying this schedule. | |
-| **patched_schedule** | [**\Libretime\Client\Model\PatchedSchedule**](../Model/PatchedSchedule.md)|  | [optional] |
+| **patched_read_schedule** | [**\Libretime\Client\Model\PatchedReadSchedule**](../Model/PatchedReadSchedule.md)|  | [optional] |
 
 ### Return type
 
-[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\ReadSchedule**](../Model/ReadSchedule.md)
 
 ### Authorization
 
@@ -288,10 +296,12 @@ try {
 ## `scheduleRetrieve()`
 
 ```php
-scheduleRetrieve($id): \Libretime\Client\Model\Schedule
+scheduleRetrieve($id): \Libretime\Client\Model\ReadSchedule
 ```
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -335,7 +345,7 @@ try {
 
 ### Return type
 
-[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\ReadSchedule**](../Model/ReadSchedule.md)
 
 ### Authorization
 
@@ -353,10 +363,12 @@ try {
 ## `scheduleUpdate()`
 
 ```php
-scheduleUpdate($id, $schedule): \Libretime\Client\Model\Schedule
+scheduleUpdate($id, $read_schedule): \Libretime\Client\Model\ReadSchedule
 ```
 
 
+
+Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
 
 ### Example
 
@@ -383,10 +395,10 @@ $apiInstance = new Libretime\Client\Api\ScheduleApi(
     $config
 );
 $id = 56; // int | A unique integer value identifying this schedule.
-$schedule = new \Libretime\Client\Model\Schedule(); // \Libretime\Client\Model\Schedule
+$read_schedule = new \Libretime\Client\Model\ReadSchedule(); // \Libretime\Client\Model\ReadSchedule
 
 try {
-    $result = $apiInstance->scheduleUpdate($id, $schedule);
+    $result = $apiInstance->scheduleUpdate($id, $read_schedule);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->scheduleUpdate: ', $e->getMessage(), PHP_EOL;
@@ -398,11 +410,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| A unique integer value identifying this schedule. | |
-| **schedule** | [**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)|  | |
+| **read_schedule** | [**\Libretime\Client\Model\ReadSchedule**](../Model/ReadSchedule.md)|  | |
 
 ### Return type
 
-[**\Libretime\Client\Model\Schedule**](../Model/Schedule.md)
+[**\Libretime\Client\Model\ReadSchedule**](../Model/ReadSchedule.md)
 
 ### Authorization
 

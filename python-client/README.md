@@ -343,7 +343,7 @@ Class | Method | HTTP request | Description
  - [PatchedPodcast](docs/PatchedPodcast.md)
  - [PatchedPodcastEpisode](docs/PatchedPodcastEpisode.md)
  - [PatchedPreference](docs/PatchedPreference.md)
- - [PatchedSchedule](docs/PatchedSchedule.md)
+ - [PatchedReadSchedule](docs/PatchedReadSchedule.md)
  - [PatchedServiceRegister](docs/PatchedServiceRegister.md)
  - [PatchedShow](docs/PatchedShow.md)
  - [PatchedShowDays](docs/PatchedShowDays.md)
@@ -372,10 +372,10 @@ Class | Method | HTTP request | Description
  - [PodcastEpisode](docs/PodcastEpisode.md)
  - [PositionStatusEnum](docs/PositionStatusEnum.md)
  - [Preference](docs/Preference.md)
+ - [ReadSchedule](docs/ReadSchedule.md)
  - [RecordEnabledEnum](docs/RecordEnabledEnum.md)
  - [RepeatKindEnum](docs/RepeatKindEnum.md)
  - [RoleEnum](docs/RoleEnum.md)
- - [Schedule](docs/Schedule.md)
  - [ServiceRegister](docs/ServiceRegister.md)
  - [Show](docs/Show.md)
  - [ShowDays](docs/ShowDays.md)
@@ -397,6 +397,7 @@ Class | Method | HTTP request | Description
  - [Webstream](docs/Webstream.md)
  - [WebstreamMetadata](docs/WebstreamMetadata.md)
  - [WeekDayEnum](docs/WeekDayEnum.md)
+ - [WriteSchedule](docs/WriteSchedule.md)
 
 
 <a id="documentation-for-authorization"></a>

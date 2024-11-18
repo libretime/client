@@ -146,32 +146,32 @@ class ScheduleApi
     /**
      * Operation scheduleCreate
      *
-     * @param  \Libretime\Client\Model\Schedule $schedule schedule (required)
+     * @param  \Libretime\Client\Model\WriteSchedule $write_schedule write_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleCreate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Libretime\Client\Model\Schedule
+     * @return \Libretime\Client\Model\WriteSchedule
      */
-    public function scheduleCreate($schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
+    public function scheduleCreate($write_schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
     {
-        list($response) = $this->scheduleCreateWithHttpInfo($schedule, $contentType);
+        list($response) = $this->scheduleCreateWithHttpInfo($write_schedule, $contentType);
         return $response;
     }
 
     /**
      * Operation scheduleCreateWithHttpInfo
      *
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\WriteSchedule $write_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleCreate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Libretime\Client\Model\Schedule, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Libretime\Client\Model\WriteSchedule, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scheduleCreateWithHttpInfo($schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
+    public function scheduleCreateWithHttpInfo($write_schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
     {
-        $request = $this->scheduleCreateRequest($schedule, $contentType);
+        $request = $this->scheduleCreateRequest($write_schedule, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -198,11 +198,11 @@ class ScheduleApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Libretime\Client\Model\Schedule' === '\SplFileObject') {
+                    if ('\Libretime\Client\Model\WriteSchedule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Libretime\Client\Model\Schedule' !== 'string') {
+                        if ('\Libretime\Client\Model\WriteSchedule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,7 +220,7 @@ class ScheduleApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\Schedule', []),
+                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\WriteSchedule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -239,7 +239,7 @@ class ScheduleApi
                 );
             }
 
-            $returnType = '\Libretime\Client\Model\Schedule';
+            $returnType = '\Libretime\Client\Model\WriteSchedule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -272,7 +272,7 @@ class ScheduleApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Libretime\Client\Model\Schedule',
+                        '\Libretime\Client\Model\WriteSchedule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,15 +285,15 @@ class ScheduleApi
     /**
      * Operation scheduleCreateAsync
      *
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\WriteSchedule $write_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scheduleCreateAsync($schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
+    public function scheduleCreateAsync($write_schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
     {
-        return $this->scheduleCreateAsyncWithHttpInfo($schedule, $contentType)
+        return $this->scheduleCreateAsyncWithHttpInfo($write_schedule, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -304,16 +304,16 @@ class ScheduleApi
     /**
      * Operation scheduleCreateAsyncWithHttpInfo
      *
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\WriteSchedule $write_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scheduleCreateAsyncWithHttpInfo($schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
+    public function scheduleCreateAsyncWithHttpInfo($write_schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
     {
-        $returnType = '\Libretime\Client\Model\Schedule';
-        $request = $this->scheduleCreateRequest($schedule, $contentType);
+        $returnType = '\Libretime\Client\Model\WriteSchedule';
+        $request = $this->scheduleCreateRequest($write_schedule, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -354,19 +354,19 @@ class ScheduleApi
     /**
      * Create request for operation 'scheduleCreate'
      *
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\WriteSchedule $write_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function scheduleCreateRequest($schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
+    public function scheduleCreateRequest($write_schedule, string $contentType = self::contentTypes['scheduleCreate'][0])
     {
 
-        // verify the required parameter 'schedule' is set
-        if ($schedule === null || (is_array($schedule) && count($schedule) === 0)) {
+        // verify the required parameter 'write_schedule' is set
+        if ($write_schedule === null || (is_array($write_schedule) && count($write_schedule) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule when calling scheduleCreate'
+                'Missing the required parameter $write_schedule when calling scheduleCreate'
             );
         }
 
@@ -389,12 +389,12 @@ class ScheduleApi
         );
 
         // for model (json/xml)
-        if (isset($schedule)) {
+        if (isset($write_schedule)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($schedule));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($write_schedule));
             } else {
-                $httpBody = $schedule;
+                $httpBody = $write_schedule;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -683,7 +683,7 @@ class ScheduleApi
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Libretime\Client\Model\Schedule[]
+     * @return \Libretime\Client\Model\ReadSchedule[]
      */
     public function scheduleList($broadcasted = null, $ends_after = null, $ends_before = null, $overbooked = null, $position_status = null, $starts_after = null, $starts_before = null, string $contentType = self::contentTypes['scheduleList'][0])
     {
@@ -705,7 +705,7 @@ class ScheduleApi
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Libretime\Client\Model\Schedule[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Libretime\Client\Model\ReadSchedule[], HTTP status code, HTTP response headers (array of strings)
      */
     public function scheduleListWithHttpInfo($broadcasted = null, $ends_after = null, $ends_before = null, $overbooked = null, $position_status = null, $starts_after = null, $starts_before = null, string $contentType = self::contentTypes['scheduleList'][0])
     {
@@ -736,11 +736,11 @@ class ScheduleApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Libretime\Client\Model\Schedule[]' === '\SplFileObject') {
+                    if ('\Libretime\Client\Model\ReadSchedule[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Libretime\Client\Model\Schedule[]' !== 'string') {
+                        if ('\Libretime\Client\Model\ReadSchedule[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -758,7 +758,7 @@ class ScheduleApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\Schedule[]', []),
+                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\ReadSchedule[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -777,7 +777,7 @@ class ScheduleApi
                 );
             }
 
-            $returnType = '\Libretime\Client\Model\Schedule[]';
+            $returnType = '\Libretime\Client\Model\ReadSchedule[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -810,7 +810,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Libretime\Client\Model\Schedule[]',
+                        '\Libretime\Client\Model\ReadSchedule[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -862,7 +862,7 @@ class ScheduleApi
      */
     public function scheduleListAsyncWithHttpInfo($broadcasted = null, $ends_after = null, $ends_before = null, $overbooked = null, $position_status = null, $starts_after = null, $starts_before = null, string $contentType = self::contentTypes['scheduleList'][0])
     {
-        $returnType = '\Libretime\Client\Model\Schedule[]';
+        $returnType = '\Libretime\Client\Model\ReadSchedule[]';
         $request = $this->scheduleListRequest($broadcasted, $ends_after, $ends_before, $overbooked, $position_status, $starts_after, $starts_before, $contentType);
 
         return $this->client
@@ -1067,16 +1067,16 @@ class ScheduleApi
      * Operation schedulePartialUpdate
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\PatchedSchedule $patched_schedule patched_schedule (optional)
+     * @param  \Libretime\Client\Model\PatchedReadSchedule $patched_read_schedule patched_read_schedule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['schedulePartialUpdate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Libretime\Client\Model\Schedule
+     * @return \Libretime\Client\Model\ReadSchedule
      */
-    public function schedulePartialUpdate($id, $patched_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
+    public function schedulePartialUpdate($id, $patched_read_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
     {
-        list($response) = $this->schedulePartialUpdateWithHttpInfo($id, $patched_schedule, $contentType);
+        list($response) = $this->schedulePartialUpdateWithHttpInfo($id, $patched_read_schedule, $contentType);
         return $response;
     }
 
@@ -1084,16 +1084,16 @@ class ScheduleApi
      * Operation schedulePartialUpdateWithHttpInfo
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\PatchedSchedule $patched_schedule (optional)
+     * @param  \Libretime\Client\Model\PatchedReadSchedule $patched_read_schedule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['schedulePartialUpdate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Libretime\Client\Model\Schedule, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Libretime\Client\Model\ReadSchedule, HTTP status code, HTTP response headers (array of strings)
      */
-    public function schedulePartialUpdateWithHttpInfo($id, $patched_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
+    public function schedulePartialUpdateWithHttpInfo($id, $patched_read_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
     {
-        $request = $this->schedulePartialUpdateRequest($id, $patched_schedule, $contentType);
+        $request = $this->schedulePartialUpdateRequest($id, $patched_read_schedule, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1120,11 +1120,11 @@ class ScheduleApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Libretime\Client\Model\Schedule' === '\SplFileObject') {
+                    if ('\Libretime\Client\Model\ReadSchedule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Libretime\Client\Model\Schedule' !== 'string') {
+                        if ('\Libretime\Client\Model\ReadSchedule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1142,7 +1142,7 @@ class ScheduleApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\Schedule', []),
+                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\ReadSchedule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1161,7 +1161,7 @@ class ScheduleApi
                 );
             }
 
-            $returnType = '\Libretime\Client\Model\Schedule';
+            $returnType = '\Libretime\Client\Model\ReadSchedule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1194,7 +1194,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Libretime\Client\Model\Schedule',
+                        '\Libretime\Client\Model\ReadSchedule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1208,15 +1208,15 @@ class ScheduleApi
      * Operation schedulePartialUpdateAsync
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\PatchedSchedule $patched_schedule (optional)
+     * @param  \Libretime\Client\Model\PatchedReadSchedule $patched_read_schedule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['schedulePartialUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function schedulePartialUpdateAsync($id, $patched_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
+    public function schedulePartialUpdateAsync($id, $patched_read_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
     {
-        return $this->schedulePartialUpdateAsyncWithHttpInfo($id, $patched_schedule, $contentType)
+        return $this->schedulePartialUpdateAsyncWithHttpInfo($id, $patched_read_schedule, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1228,16 +1228,16 @@ class ScheduleApi
      * Operation schedulePartialUpdateAsyncWithHttpInfo
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\PatchedSchedule $patched_schedule (optional)
+     * @param  \Libretime\Client\Model\PatchedReadSchedule $patched_read_schedule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['schedulePartialUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function schedulePartialUpdateAsyncWithHttpInfo($id, $patched_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
+    public function schedulePartialUpdateAsyncWithHttpInfo($id, $patched_read_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
     {
-        $returnType = '\Libretime\Client\Model\Schedule';
-        $request = $this->schedulePartialUpdateRequest($id, $patched_schedule, $contentType);
+        $returnType = '\Libretime\Client\Model\ReadSchedule';
+        $request = $this->schedulePartialUpdateRequest($id, $patched_read_schedule, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1279,13 +1279,13 @@ class ScheduleApi
      * Create request for operation 'schedulePartialUpdate'
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\PatchedSchedule $patched_schedule (optional)
+     * @param  \Libretime\Client\Model\PatchedReadSchedule $patched_read_schedule (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['schedulePartialUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function schedulePartialUpdateRequest($id, $patched_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
+    public function schedulePartialUpdateRequest($id, $patched_read_schedule = null, string $contentType = self::contentTypes['schedulePartialUpdate'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1323,12 +1323,12 @@ class ScheduleApi
         );
 
         // for model (json/xml)
-        if (isset($patched_schedule)) {
+        if (isset($patched_read_schedule)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patched_schedule));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patched_read_schedule));
             } else {
-                $httpBody = $patched_schedule;
+                $httpBody = $patched_read_schedule;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1393,7 +1393,7 @@ class ScheduleApi
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Libretime\Client\Model\Schedule
+     * @return \Libretime\Client\Model\ReadSchedule
      */
     public function scheduleRetrieve($id, string $contentType = self::contentTypes['scheduleRetrieve'][0])
     {
@@ -1409,7 +1409,7 @@ class ScheduleApi
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Libretime\Client\Model\Schedule, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Libretime\Client\Model\ReadSchedule, HTTP status code, HTTP response headers (array of strings)
      */
     public function scheduleRetrieveWithHttpInfo($id, string $contentType = self::contentTypes['scheduleRetrieve'][0])
     {
@@ -1440,11 +1440,11 @@ class ScheduleApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Libretime\Client\Model\Schedule' === '\SplFileObject') {
+                    if ('\Libretime\Client\Model\ReadSchedule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Libretime\Client\Model\Schedule' !== 'string') {
+                        if ('\Libretime\Client\Model\ReadSchedule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1462,7 +1462,7 @@ class ScheduleApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\Schedule', []),
+                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\ReadSchedule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1481,7 +1481,7 @@ class ScheduleApi
                 );
             }
 
-            $returnType = '\Libretime\Client\Model\Schedule';
+            $returnType = '\Libretime\Client\Model\ReadSchedule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1514,7 +1514,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Libretime\Client\Model\Schedule',
+                        '\Libretime\Client\Model\ReadSchedule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1554,7 +1554,7 @@ class ScheduleApi
      */
     public function scheduleRetrieveAsyncWithHttpInfo($id, string $contentType = self::contentTypes['scheduleRetrieve'][0])
     {
-        $returnType = '\Libretime\Client\Model\Schedule';
+        $returnType = '\Libretime\Client\Model\ReadSchedule';
         $request = $this->scheduleRetrieveRequest($id, $contentType);
 
         return $this->client
@@ -1698,16 +1698,16 @@ class ScheduleApi
      * Operation scheduleUpdate
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\Schedule $schedule schedule (required)
+     * @param  \Libretime\Client\Model\ReadSchedule $read_schedule read_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleUpdate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Libretime\Client\Model\Schedule
+     * @return \Libretime\Client\Model\ReadSchedule
      */
-    public function scheduleUpdate($id, $schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
+    public function scheduleUpdate($id, $read_schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
     {
-        list($response) = $this->scheduleUpdateWithHttpInfo($id, $schedule, $contentType);
+        list($response) = $this->scheduleUpdateWithHttpInfo($id, $read_schedule, $contentType);
         return $response;
     }
 
@@ -1715,16 +1715,16 @@ class ScheduleApi
      * Operation scheduleUpdateWithHttpInfo
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\ReadSchedule $read_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleUpdate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Libretime\Client\Model\Schedule, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Libretime\Client\Model\ReadSchedule, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scheduleUpdateWithHttpInfo($id, $schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
+    public function scheduleUpdateWithHttpInfo($id, $read_schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
     {
-        $request = $this->scheduleUpdateRequest($id, $schedule, $contentType);
+        $request = $this->scheduleUpdateRequest($id, $read_schedule, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1751,11 +1751,11 @@ class ScheduleApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Libretime\Client\Model\Schedule' === '\SplFileObject') {
+                    if ('\Libretime\Client\Model\ReadSchedule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Libretime\Client\Model\Schedule' !== 'string') {
+                        if ('\Libretime\Client\Model\ReadSchedule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1773,7 +1773,7 @@ class ScheduleApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\Schedule', []),
+                        ObjectSerializer::deserialize($content, '\Libretime\Client\Model\ReadSchedule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1792,7 +1792,7 @@ class ScheduleApi
                 );
             }
 
-            $returnType = '\Libretime\Client\Model\Schedule';
+            $returnType = '\Libretime\Client\Model\ReadSchedule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1825,7 +1825,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Libretime\Client\Model\Schedule',
+                        '\Libretime\Client\Model\ReadSchedule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1839,15 +1839,15 @@ class ScheduleApi
      * Operation scheduleUpdateAsync
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\ReadSchedule $read_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scheduleUpdateAsync($id, $schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
+    public function scheduleUpdateAsync($id, $read_schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
     {
-        return $this->scheduleUpdateAsyncWithHttpInfo($id, $schedule, $contentType)
+        return $this->scheduleUpdateAsyncWithHttpInfo($id, $read_schedule, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1859,16 +1859,16 @@ class ScheduleApi
      * Operation scheduleUpdateAsyncWithHttpInfo
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\ReadSchedule $read_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function scheduleUpdateAsyncWithHttpInfo($id, $schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
+    public function scheduleUpdateAsyncWithHttpInfo($id, $read_schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
     {
-        $returnType = '\Libretime\Client\Model\Schedule';
-        $request = $this->scheduleUpdateRequest($id, $schedule, $contentType);
+        $returnType = '\Libretime\Client\Model\ReadSchedule';
+        $request = $this->scheduleUpdateRequest($id, $read_schedule, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1910,13 +1910,13 @@ class ScheduleApi
      * Create request for operation 'scheduleUpdate'
      *
      * @param  int $id A unique integer value identifying this schedule. (required)
-     * @param  \Libretime\Client\Model\Schedule $schedule (required)
+     * @param  \Libretime\Client\Model\ReadSchedule $read_schedule (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['scheduleUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function scheduleUpdateRequest($id, $schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
+    public function scheduleUpdateRequest($id, $read_schedule, string $contentType = self::contentTypes['scheduleUpdate'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1926,10 +1926,10 @@ class ScheduleApi
             );
         }
 
-        // verify the required parameter 'schedule' is set
-        if ($schedule === null || (is_array($schedule) && count($schedule) === 0)) {
+        // verify the required parameter 'read_schedule' is set
+        if ($read_schedule === null || (is_array($read_schedule) && count($read_schedule) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule when calling scheduleUpdate'
+                'Missing the required parameter $read_schedule when calling scheduleUpdate'
             );
         }
 
@@ -1960,12 +1960,12 @@ class ScheduleApi
         );
 
         // for model (json/xml)
-        if (isset($schedule)) {
+        if (isset($read_schedule)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($schedule));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($read_schedule));
             } else {
-                $httpBody = $schedule;
+                $httpBody = $read_schedule;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

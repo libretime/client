@@ -22,9 +22,11 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
-import type { PatchedSchedule } from '../model';
+import type { PatchedReadSchedule } from '../model';
 // @ts-ignore
-import type { Schedule } from '../model';
+import type { ReadSchedule } from '../model';
+// @ts-ignore
+import type { WriteSchedule } from '../model';
 /**
  * ScheduleApi - axios parameter creator
  * @export
@@ -32,14 +34,14 @@ import type { Schedule } from '../model';
 export const ScheduleApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 
-         * @param {Schedule} schedule 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+         * @param {WriteSchedule} writeSchedule 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleCreate: async (schedule: Schedule, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'schedule' is not null or undefined
-            assertParamExists('scheduleCreate', 'schedule', schedule)
+        scheduleCreate: async (writeSchedule: WriteSchedule, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'writeSchedule' is not null or undefined
+            assertParamExists('scheduleCreate', 'writeSchedule', writeSchedule)
             const localVarPath = `/api/v2/schedule`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -65,7 +67,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(schedule, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(writeSchedule, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -73,7 +75,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -112,7 +114,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} [broadcasted] 
          * @param {string} [endsAfter] 
          * @param {string} [endsBefore] 
@@ -190,13 +192,13 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
-         * @param {PatchedSchedule} [patchedSchedule] 
+         * @param {PatchedReadSchedule} [patchedReadSchedule] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schedulePartialUpdate: async (id: number, patchedSchedule?: PatchedSchedule, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        schedulePartialUpdate: async (id: number, patchedReadSchedule?: PatchedReadSchedule, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('schedulePartialUpdate', 'id', id)
             const localVarPath = `/api/v2/schedule/{id}`
@@ -225,7 +227,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(patchedSchedule, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(patchedReadSchedule, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -233,7 +235,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -272,17 +274,17 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
-         * @param {Schedule} schedule 
+         * @param {ReadSchedule} readSchedule 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleUpdate: async (id: number, schedule: Schedule, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        scheduleUpdate: async (id: number, readSchedule: ReadSchedule, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('scheduleUpdate', 'id', id)
-            // verify required parameter 'schedule' is not null or undefined
-            assertParamExists('scheduleUpdate', 'schedule', schedule)
+            // verify required parameter 'readSchedule' is not null or undefined
+            assertParamExists('scheduleUpdate', 'readSchedule', readSchedule)
             const localVarPath = `/api/v2/schedule/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -309,7 +311,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(schedule, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(readSchedule, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -327,19 +329,19 @@ export const ScheduleApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ScheduleApiAxiosParamCreator(configuration)
     return {
         /**
-         * 
-         * @param {Schedule} schedule 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+         * @param {WriteSchedule} writeSchedule 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async scheduleCreate(schedule: Schedule, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Schedule>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleCreate(schedule, options);
+        async scheduleCreate(writeSchedule: WriteSchedule, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<WriteSchedule>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleCreate(writeSchedule, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ScheduleApi.scheduleCreate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -351,7 +353,7 @@ export const ScheduleApiFp = function(configuration?: Configuration) {
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} [broadcasted] 
          * @param {string} [endsAfter] 
          * @param {string} [endsBefore] 
@@ -362,46 +364,46 @@ export const ScheduleApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Schedule>>> {
+        async scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ReadSchedule>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleList(broadcasted, endsAfter, endsBefore, overbooked, positionStatus, startsAfter, startsBefore, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ScheduleApi.scheduleList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
-         * @param {PatchedSchedule} [patchedSchedule] 
+         * @param {PatchedReadSchedule} [patchedReadSchedule] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async schedulePartialUpdate(id: number, patchedSchedule?: PatchedSchedule, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Schedule>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulePartialUpdate(id, patchedSchedule, options);
+        async schedulePartialUpdate(id: number, patchedReadSchedule?: PatchedReadSchedule, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReadSchedule>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulePartialUpdate(id, patchedReadSchedule, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ScheduleApi.schedulePartialUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async scheduleRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Schedule>> {
+        async scheduleRetrieve(id: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReadSchedule>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleRetrieve(id, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ScheduleApi.scheduleRetrieve']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
-         * @param {Schedule} schedule 
+         * @param {ReadSchedule} readSchedule 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async scheduleUpdate(id: number, schedule: Schedule, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Schedule>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleUpdate(id, schedule, options);
+        async scheduleUpdate(id: number, readSchedule: ReadSchedule, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ReadSchedule>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.scheduleUpdate(id, readSchedule, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['ScheduleApi.scheduleUpdate']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -417,16 +419,16 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
     const localVarFp = ScheduleApiFp(configuration)
     return {
         /**
-         * 
-         * @param {Schedule} schedule 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+         * @param {WriteSchedule} writeSchedule 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleCreate(schedule: Schedule, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
-            return localVarFp.scheduleCreate(schedule, options).then((request) => request(axios, basePath));
+        scheduleCreate(writeSchedule: WriteSchedule, options?: RawAxiosRequestConfig): AxiosPromise<WriteSchedule> {
+            return localVarFp.scheduleCreate(writeSchedule, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -435,7 +437,7 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
             return localVarFp.scheduleDestroy(id, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} [broadcasted] 
          * @param {string} [endsAfter] 
          * @param {string} [endsBefore] 
@@ -446,37 +448,37 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<Schedule>> {
+        scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<ReadSchedule>> {
             return localVarFp.scheduleList(broadcasted, endsAfter, endsBefore, overbooked, positionStatus, startsAfter, startsBefore, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
-         * @param {PatchedSchedule} [patchedSchedule] 
+         * @param {PatchedReadSchedule} [patchedReadSchedule] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schedulePartialUpdate(id: number, patchedSchedule?: PatchedSchedule, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
-            return localVarFp.schedulePartialUpdate(id, patchedSchedule, options).then((request) => request(axios, basePath));
+        schedulePartialUpdate(id: number, patchedReadSchedule?: PatchedReadSchedule, options?: RawAxiosRequestConfig): AxiosPromise<ReadSchedule> {
+            return localVarFp.schedulePartialUpdate(id, patchedReadSchedule, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
+        scheduleRetrieve(id: number, options?: RawAxiosRequestConfig): AxiosPromise<ReadSchedule> {
             return localVarFp.scheduleRetrieve(id, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
+         * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
          * @param {number} id A unique integer value identifying this schedule.
-         * @param {Schedule} schedule 
+         * @param {ReadSchedule} readSchedule 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        scheduleUpdate(id: number, schedule: Schedule, options?: RawAxiosRequestConfig): AxiosPromise<Schedule> {
-            return localVarFp.scheduleUpdate(id, schedule, options).then((request) => request(axios, basePath));
+        scheduleUpdate(id: number, readSchedule: ReadSchedule, options?: RawAxiosRequestConfig): AxiosPromise<ReadSchedule> {
+            return localVarFp.scheduleUpdate(id, readSchedule, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -489,18 +491,18 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
  */
 export class ScheduleApi extends BaseAPI {
     /**
-     * 
-     * @param {Schedule} schedule 
+     * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+     * @param {WriteSchedule} writeSchedule 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ScheduleApi
      */
-    public scheduleCreate(schedule: Schedule, options?: RawAxiosRequestConfig) {
-        return ScheduleApiFp(this.configuration).scheduleCreate(schedule, options).then((request) => request(this.axios, this.basePath));
+    public scheduleCreate(writeSchedule: WriteSchedule, options?: RawAxiosRequestConfig) {
+        return ScheduleApiFp(this.configuration).scheduleCreate(writeSchedule, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * 
+     * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
      * @param {number} id A unique integer value identifying this schedule.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -511,7 +513,7 @@ export class ScheduleApi extends BaseAPI {
     }
 
     /**
-     * 
+     * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
      * @param {number} [broadcasted] 
      * @param {string} [endsAfter] 
      * @param {string} [endsBefore] 
@@ -528,19 +530,19 @@ export class ScheduleApi extends BaseAPI {
     }
 
     /**
-     * 
+     * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
      * @param {number} id A unique integer value identifying this schedule.
-     * @param {PatchedSchedule} [patchedSchedule] 
+     * @param {PatchedReadSchedule} [patchedReadSchedule] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ScheduleApi
      */
-    public schedulePartialUpdate(id: number, patchedSchedule?: PatchedSchedule, options?: RawAxiosRequestConfig) {
-        return ScheduleApiFp(this.configuration).schedulePartialUpdate(id, patchedSchedule, options).then((request) => request(this.axios, this.basePath));
+    public schedulePartialUpdate(id: number, patchedReadSchedule?: PatchedReadSchedule, options?: RawAxiosRequestConfig) {
+        return ScheduleApiFp(this.configuration).schedulePartialUpdate(id, patchedReadSchedule, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * 
+     * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
      * @param {number} id A unique integer value identifying this schedule.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -551,15 +553,15 @@ export class ScheduleApi extends BaseAPI {
     }
 
     /**
-     * 
+     * Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
      * @param {number} id A unique integer value identifying this schedule.
-     * @param {Schedule} schedule 
+     * @param {ReadSchedule} readSchedule 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ScheduleApi
      */
-    public scheduleUpdate(id: number, schedule: Schedule, options?: RawAxiosRequestConfig) {
-        return ScheduleApiFp(this.configuration).scheduleUpdate(id, schedule, options).then((request) => request(this.axios, this.basePath));
+    public scheduleUpdate(id: number, readSchedule: ReadSchedule, options?: RawAxiosRequestConfig) {
+        return ScheduleApiFp(this.configuration).scheduleUpdate(id, readSchedule, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

@@ -75,7 +75,7 @@ model/patched-playout-history.ts
 model/patched-podcast-episode.ts
 model/patched-podcast.ts
 model/patched-preference.ts
-model/patched-schedule.ts
+model/patched-read-schedule.ts
 model/patched-service-register.ts
 model/patched-show-days.ts
 model/patched-show-host.ts
@@ -104,10 +104,10 @@ model/podcast-episode.ts
 model/podcast.ts
 model/position-status-enum.ts
 model/preference.ts
+model/read-schedule.ts
 model/record-enabled-enum.ts
 model/repeat-kind-enum.ts
 model/role-enum.ts
-model/schedule.ts
 model/service-register.ts
 model/show-days.ts
 model/show-host.ts
@@ -129,4 +129,5 @@ model/version.ts
 model/webstream-metadata.ts
 model/webstream.ts
 model/week-day-enum.ts
+model/write-schedule.ts
 tsconfig.esm.json

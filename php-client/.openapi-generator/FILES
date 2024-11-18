@@ -70,7 +70,7 @@ docs/Model/PatchedPlayoutHistoryTemplateField.md
 docs/Model/PatchedPodcast.md
 docs/Model/PatchedPodcastEpisode.md
 docs/Model/PatchedPreference.md
-docs/Model/PatchedSchedule.md
+docs/Model/PatchedReadSchedule.md
 docs/Model/PatchedServiceRegister.md
 docs/Model/PatchedShow.md
 docs/Model/PatchedShowDays.md
@@ -99,10 +99,10 @@ docs/Model/Podcast.md
 docs/Model/PodcastEpisode.md
 docs/Model/PositionStatusEnum.md
 docs/Model/Preference.md
+docs/Model/ReadSchedule.md
 docs/Model/RecordEnabledEnum.md
 docs/Model/RepeatKindEnum.md
 docs/Model/RoleEnum.md
-docs/Model/Schedule.md
 docs/Model/ServiceRegister.md
 docs/Model/Show.md
 docs/Model/ShowDays.md
@@ -124,6 +124,7 @@ docs/Model/Version.md
 docs/Model/Webstream.md
 docs/Model/WebstreamMetadata.md
 docs/Model/WeekDayEnum.md
+docs/Model/WriteSchedule.md
 git_push.sh
 lib/Api/CeleryTasksApi.php
 lib/Api/FilesApi.php
@@ -196,7 +197,7 @@ lib/Model/PatchedPlayoutHistoryTemplateField.php
 lib/Model/PatchedPodcast.php
 lib/Model/PatchedPodcastEpisode.php
 lib/Model/PatchedPreference.php
-lib/Model/PatchedSchedule.php
+lib/Model/PatchedReadSchedule.php
 lib/Model/PatchedServiceRegister.php
 lib/Model/PatchedShow.php
 lib/Model/PatchedShowDays.php
@@ -225,10 +226,10 @@ lib/Model/Podcast.php
 lib/Model/PodcastEpisode.php
 lib/Model/PositionStatusEnum.php
 lib/Model/Preference.php
+lib/Model/ReadSchedule.php
 lib/Model/RecordEnabledEnum.php
 lib/Model/RepeatKindEnum.php
 lib/Model/RoleEnum.php
-lib/Model/Schedule.php
 lib/Model/ServiceRegister.php
 lib/Model/Show.php
 lib/Model/ShowDays.php
@@ -250,5 +251,9 @@ lib/Model/Version.php
 lib/Model/Webstream.php
 lib/Model/WebstreamMetadata.php
 lib/Model/WeekDayEnum.php
+lib/Model/WriteSchedule.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/PatchedReadScheduleTest.php
+test/Model/ReadScheduleTest.php
+test/Model/WriteScheduleTest.php
