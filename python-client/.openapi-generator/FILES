@@ -263,7 +263,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_patched_read_schedule.py
-test/test_read_schedule.py
-test/test_write_schedule.py
 tox.ini

@@ -254,6 +254,3 @@ lib/Model/WeekDayEnum.php
 lib/Model/WriteSchedule.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/PatchedReadScheduleTest.php
-test/Model/ReadScheduleTest.php
-test/Model/WriteScheduleTest.php
