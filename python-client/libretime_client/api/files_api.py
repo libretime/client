@@ -16,7 +16,7 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictInt
+from pydantic import Field, StrictInt, StrictStr
 from typing import List, Optional
 from typing_extensions import Annotated
 from libretime_client.models.file import File
@@ -828,6 +828,8 @@ class FilesApi:
     @validate_call
     def files_list(
         self,
+        genre: Optional[StrictStr] = None,
+        md5: Optional[StrictStr] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -844,6 +846,10 @@ class FilesApi:
         """files_list
 
 
+        :param genre:
+        :type genre: str
+        :param md5:
+        :type md5: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -867,6 +873,8 @@ class FilesApi:
         """ # noqa: E501
 
         _param = self._files_list_serialize(
+            genre=genre,
+            md5=md5,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -890,6 +898,8 @@ class FilesApi:
     @validate_call
     def files_list_with_http_info(
         self,
+        genre: Optional[StrictStr] = None,
+        md5: Optional[StrictStr] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -906,6 +916,10 @@ class FilesApi:
         """files_list
 
 
+        :param genre:
+        :type genre: str
+        :param md5:
+        :type md5: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -929,6 +943,8 @@ class FilesApi:
         """ # noqa: E501
 
         _param = self._files_list_serialize(
+            genre=genre,
+            md5=md5,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -952,6 +968,8 @@ class FilesApi:
     @validate_call
     def files_list_without_preload_content(
         self,
+        genre: Optional[StrictStr] = None,
+        md5: Optional[StrictStr] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -968,6 +986,10 @@ class FilesApi:
         """files_list
 
 
+        :param genre:
+        :type genre: str
+        :param md5:
+        :type md5: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -991,6 +1013,8 @@ class FilesApi:
         """ # noqa: E501
 
         _param = self._files_list_serialize(
+            genre=genre,
+            md5=md5,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1009,6 +1033,8 @@ class FilesApi:
 
     def _files_list_serialize(
         self,
+        genre,
+        md5,
         _request_auth,
         _content_type,
         _headers,
@@ -1031,6 +1057,14 @@ class FilesApi:
 
         # process the path parameters
         # process the query parameters
+        if genre is not None:
+            
+            _query_params.append(('genre', genre))
+            
+        if md5 is not None:
+            
+            _query_params.append(('md5', md5))
+            
         # process the header parameters
         # process the form parameters
         # process the body parameter

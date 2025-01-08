@@ -984,30 +984,34 @@ class FilesApi
     /**
      * Operation filesList
      *
+     * @param  string $genre genre (optional)
+     * @param  string $md5 md5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['filesList'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\File[]
      */
-    public function filesList(string $contentType = self::contentTypes['filesList'][0])
+    public function filesList($genre = null, $md5 = null, string $contentType = self::contentTypes['filesList'][0])
     {
-        list($response) = $this->filesListWithHttpInfo($contentType);
+        list($response) = $this->filesListWithHttpInfo($genre, $md5, $contentType);
         return $response;
     }
 
     /**
      * Operation filesListWithHttpInfo
      *
+     * @param  string $genre (optional)
+     * @param  string $md5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['filesList'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\File[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function filesListWithHttpInfo(string $contentType = self::contentTypes['filesList'][0])
+    public function filesListWithHttpInfo($genre = null, $md5 = null, string $contentType = self::contentTypes['filesList'][0])
     {
-        $request = $this->filesListRequest($contentType);
+        $request = $this->filesListRequest($genre, $md5, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1121,14 +1125,16 @@ class FilesApi
     /**
      * Operation filesListAsync
      *
+     * @param  string $genre (optional)
+     * @param  string $md5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['filesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function filesListAsync(string $contentType = self::contentTypes['filesList'][0])
+    public function filesListAsync($genre = null, $md5 = null, string $contentType = self::contentTypes['filesList'][0])
     {
-        return $this->filesListAsyncWithHttpInfo($contentType)
+        return $this->filesListAsyncWithHttpInfo($genre, $md5, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1139,15 +1145,17 @@ class FilesApi
     /**
      * Operation filesListAsyncWithHttpInfo
      *
+     * @param  string $genre (optional)
+     * @param  string $md5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['filesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function filesListAsyncWithHttpInfo(string $contentType = self::contentTypes['filesList'][0])
+    public function filesListAsyncWithHttpInfo($genre = null, $md5 = null, string $contentType = self::contentTypes['filesList'][0])
     {
         $returnType = '\Libretime\Client\Model\File[]';
-        $request = $this->filesListRequest($contentType);
+        $request = $this->filesListRequest($genre, $md5, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1188,13 +1196,17 @@ class FilesApi
     /**
      * Create request for operation 'filesList'
      *
+     * @param  string $genre (optional)
+     * @param  string $md5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['filesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function filesListRequest(string $contentType = self::contentTypes['filesList'][0])
+    public function filesListRequest($genre = null, $md5 = null, string $contentType = self::contentTypes['filesList'][0])
     {
+
+
 
 
         $resourcePath = '/api/v2/files';
@@ -1204,6 +1216,24 @@ class FilesApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $genre,
+            'genre', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $md5,
+            'md5', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
 
 
 

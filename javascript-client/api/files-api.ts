@@ -152,10 +152,12 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
         },
         /**
          * 
+         * @param {string} [genre] 
+         * @param {string} [md5] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        filesList: async (genre?: string, md5?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/files`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -173,6 +175,14 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             setBasicAuthToObject(localVarRequestOptions, configuration)
 
             // authentication cookieAuth required
+
+            if (genre !== undefined) {
+                localVarQueryParameter['genre'] = genre;
+            }
+
+            if (md5 !== undefined) {
+                localVarQueryParameter['md5'] = md5;
+            }
 
 
     
@@ -360,11 +370,13 @@ export const FilesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [genre] 
+         * @param {string} [md5] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async filesList(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<any>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.filesList(options);
+        async filesList(genre?: string, md5?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<any>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.filesList(genre, md5, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['FilesApi.filesList']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -446,11 +458,13 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @param {string} [genre] 
+         * @param {string} [md5] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        filesList(options?: RawAxiosRequestConfig): AxiosPromise<Array<any>> {
-            return localVarFp.filesList(options).then((request) => request(axios, basePath));
+        filesList(genre?: string, md5?: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<any>> {
+            return localVarFp.filesList(genre, md5, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -526,12 +540,14 @@ export class FilesApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} [genre] 
+     * @param {string} [md5] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FilesApi
      */
-    public filesList(options?: RawAxiosRequestConfig) {
-        return FilesApiFp(this.configuration).filesList(options).then((request) => request(this.axios, this.basePath));
+    public filesList(genre?: string, md5?: string, options?: RawAxiosRequestConfig) {
+        return FilesApiFp(this.configuration).filesList(genre, md5, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

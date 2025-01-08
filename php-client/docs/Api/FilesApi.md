@@ -210,7 +210,7 @@ try {
 ## `filesList()`
 
 ```php
-filesList(): \Libretime\Client\Model\File[]
+filesList($genre, $md5): \Libretime\Client\Model\File[]
 ```
 
 
@@ -239,9 +239,11 @@ $apiInstance = new Libretime\Client\Api\FilesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$genre = 'genre_example'; // string
+$md5 = 'md5_example'; // string
 
 try {
-    $result = $apiInstance->filesList();
+    $result = $apiInstance->filesList($genre, $md5);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FilesApi->filesList: ', $e->getMessage(), PHP_EOL;
@@ -250,7 +252,10 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **genre** | **string**|  | [optional] |
+| **md5** | **string**|  | [optional] |
 
 ### Return type
 

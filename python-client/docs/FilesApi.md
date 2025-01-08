@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **files_list**
-> List[File] files_list()
+> List[File] files_list(genre=genre, md5=md5)
 
 
 
@@ -302,9 +302,11 @@ configuration.api_key['cookieAuth'] = os.environ["API_KEY"]
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = libretime_client.FilesApi(api_client)
+    genre = 'genre_example' # str |  (optional)
+    md5 = 'md5_example' # str |  (optional)
 
     try:
-        api_response = api_instance.files_list()
+        api_response = api_instance.files_list(genre=genre, md5=md5)
         print("The response of FilesApi->files_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -315,7 +317,11 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **genre** | **str**|  | [optional] 
+ **md5** | **str**|  | [optional] 
 
 ### Return type
 
