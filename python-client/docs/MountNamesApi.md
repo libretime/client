@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **mount_names_create**
 > MountName mount_names_create(mount_name)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **mount_names_destroy**
 > mount_names_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **mount_names_list**
 > List[MountName] mount_names_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **mount_names_partial_update**
 > MountName mount_names_partial_update(id, patched_mount_name=patched_mount_name)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **mount_names_retrieve**
 > MountName mount_names_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **mount_names_update**
 > MountName mount_names_update(id, mount_name)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **shows_create**
 > Show shows_create(show)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **shows_destroy**
 > shows_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **shows_list**
 > List[Show] shows_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **shows_partial_update**
 > Show shows_partial_update(id, patched_show=patched_show)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **shows_retrieve**
 > Show shows_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **shows_update**
 > Show shows_update(id, show)
-
-
 
 ### Example
 

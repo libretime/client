@@ -10,9 +10,10 @@ Method | HTTP request | Description
 # **schema_retrieve**
 > Dict[str, object] schema_retrieve(format=format, lang=lang)
 
+OpenApi3 schema for this API. Format can be selected via content negotiation.
 
-
-OpenApi3 schema for this API. Format can be selected via content negotiation.  - YAML: application/vnd.oai.openapi - JSON: application/vnd.oai.openapi+json
+- YAML: application/vnd.oai.openapi
+- JSON: application/vnd.oai.openapi+json
 
 ### Example
 

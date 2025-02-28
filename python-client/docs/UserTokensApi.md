@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **user_tokens_create**
 > UserToken user_tokens_create(user_token)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **user_tokens_destroy**
 > user_tokens_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **user_tokens_list**
 > List[UserToken] user_tokens_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **user_tokens_partial_update**
 > UserToken user_tokens_partial_update(id, patched_user_token=patched_user_token)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **user_tokens_retrieve**
 > UserToken user_tokens_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **user_tokens_update**
 > UserToken user_tokens_update(id, user_token)
-
-
 
 ### Example
 

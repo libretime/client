@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **login_attempts_create**
 > LoginAttempt login_attempts_create(login_attempt)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **login_attempts_destroy**
 > login_attempts_destroy(ip)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **login_attempts_list**
 > List[LoginAttempt] login_attempts_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **login_attempts_partial_update**
 > LoginAttempt login_attempts_partial_update(ip, patched_login_attempt=patched_login_attempt)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **login_attempts_retrieve**
 > LoginAttempt login_attempts_retrieve(ip)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **login_attempts_update**
 > LoginAttempt login_attempts_update(ip, login_attempt)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **show_hosts_create**
 > ShowHost show_hosts_create(show_host)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **show_hosts_destroy**
 > show_hosts_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **show_hosts_list**
 > List[ShowHost] show_hosts_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **show_hosts_partial_update**
 > ShowHost show_hosts_partial_update(id, patched_show_host=patched_show_host)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **show_hosts_retrieve**
 > ShowHost show_hosts_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **show_hosts_update**
 > ShowHost show_hosts_update(id, show_host)
-
-
 
 ### Example
 

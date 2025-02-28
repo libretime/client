@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **version_retrieve**
 > Version version_retrieve()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):

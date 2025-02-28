@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **webstreams_create**
 > Webstream webstreams_create(webstream)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **webstreams_destroy**
 > webstreams_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **webstreams_list**
 > List[Webstream] webstreams_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **webstreams_partial_update**
 > Webstream webstreams_partial_update(id, patched_webstream=patched_webstream)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **webstreams_retrieve**
 > Webstream webstreams_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **webstreams_update**
 > Webstream webstreams_update(id, webstream)
-
-
 
 ### Example
 

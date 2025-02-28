@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **service_registers_create**
 > ServiceRegister service_registers_create(service_register)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **service_registers_destroy**
 > service_registers_destroy(name)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **service_registers_list**
 > List[ServiceRegister] service_registers_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **service_registers_partial_update**
 > ServiceRegister service_registers_partial_update(name, patched_service_register=patched_service_register)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **service_registers_retrieve**
 > ServiceRegister service_registers_retrieve(name)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **service_registers_update**
 > ServiceRegister service_registers_update(name, service_register)
-
-
 
 ### Example
 

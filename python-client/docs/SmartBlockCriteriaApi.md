@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **smart_block_criteria_create**
 > SmartBlockCriteria smart_block_criteria_create(smart_block_criteria)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **smart_block_criteria_destroy**
 > smart_block_criteria_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **smart_block_criteria_list**
 > List[SmartBlockCriteria] smart_block_criteria_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **smart_block_criteria_partial_update**
 > SmartBlockCriteria smart_block_criteria_partial_update(id, patched_smart_block_criteria=patched_smart_block_criteria)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **smart_block_criteria_retrieve**
 > SmartBlockCriteria smart_block_criteria_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **smart_block_criteria_update**
 > SmartBlockCriteria smart_block_criteria_update(id, smart_block_criteria)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **show_rebroadcasts_create**
 > ShowRebroadcast show_rebroadcasts_create(show_rebroadcast)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **show_rebroadcasts_destroy**
 > show_rebroadcasts_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **show_rebroadcasts_list**
 > List[ShowRebroadcast] show_rebroadcasts_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **show_rebroadcasts_partial_update**
 > ShowRebroadcast show_rebroadcasts_partial_update(id, patched_show_rebroadcast=patched_show_rebroadcast)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **show_rebroadcasts_retrieve**
 > ShowRebroadcast show_rebroadcasts_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **show_rebroadcasts_update**
 > ShowRebroadcast show_rebroadcasts_update(id, show_rebroadcast)
-
-
 
 ### Example
 

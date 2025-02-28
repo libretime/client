@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **celery_tasks_create**
 > CeleryTask celery_tasks_create(celery_task)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **celery_tasks_destroy**
 > celery_tasks_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **celery_tasks_list**
 > List[CeleryTask] celery_tasks_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **celery_tasks_partial_update**
 > CeleryTask celery_tasks_partial_update(id, patched_celery_task=patched_celery_task)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **celery_tasks_retrieve**
 > CeleryTask celery_tasks_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **celery_tasks_update**
 > CeleryTask celery_tasks_update(id, celery_task)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **third_party_track_references_create**
 > ThirdPartyTrackReference third_party_track_references_create(third_party_track_reference)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **third_party_track_references_destroy**
 > third_party_track_references_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **third_party_track_references_list**
 > List[ThirdPartyTrackReference] third_party_track_references_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **third_party_track_references_partial_update**
 > ThirdPartyTrackReference third_party_track_references_partial_update(id, patched_third_party_track_reference=patched_third_party_track_reference)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **third_party_track_references_retrieve**
 > ThirdPartyTrackReference third_party_track_references_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **third_party_track_references_update**
 > ThirdPartyTrackReference third_party_track_references_update(id, third_party_track_reference)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **libraries_create**
 > Library libraries_create(library)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **libraries_destroy**
 > libraries_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **libraries_list**
 > List[Library] libraries_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **libraries_partial_update**
 > Library libraries_partial_update(id, patched_library=patched_library)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **libraries_retrieve**
 > Library libraries_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **libraries_update**
 > Library libraries_update(id, library)
-
-
 
 ### Example
 

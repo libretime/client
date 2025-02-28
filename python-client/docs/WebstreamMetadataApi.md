@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **webstream_metadata_create**
 > WebstreamMetadata webstream_metadata_create(webstream_metadata)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **webstream_metadata_destroy**
 > webstream_metadata_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **webstream_metadata_list**
 > List[WebstreamMetadata] webstream_metadata_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **webstream_metadata_partial_update**
 > WebstreamMetadata webstream_metadata_partial_update(id, patched_webstream_metadata=patched_webstream_metadata)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **webstream_metadata_retrieve**
 > WebstreamMetadata webstream_metadata_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **webstream_metadata_update**
 > WebstreamMetadata webstream_metadata_update(id, webstream_metadata)
-
-
 
 ### Example
 

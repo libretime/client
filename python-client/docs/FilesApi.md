@@ -16,8 +16,6 @@ Method | HTTP request | Description
 # **files_create**
 > File files_create(file)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -99,8 +97,6 @@ Name | Type | Description  | Notes
 # **files_destroy**
 > files_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 
 # **files_download_retrieve**
 > File files_download_retrieve(id)
-
-
 
 ### Example
 
@@ -261,8 +255,6 @@ Name | Type | Description  | Notes
 
 # **files_list**
 > List[File] files_list(genre=genre, md5=md5)
-
-
 
 ### Example
 
@@ -346,8 +338,6 @@ Name | Type | Description  | Notes
 
 # **files_partial_update**
 > File files_partial_update(id, patched_file=patched_file)
-
-
 
 ### Example
 
@@ -433,8 +423,6 @@ Name | Type | Description  | Notes
 # **files_retrieve**
 > File files_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -515,8 +503,6 @@ Name | Type | Description  | Notes
 
 # **files_update**
 > File files_update(id, file)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **show_days_create**
 > ShowDays show_days_create(show_days)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **show_days_destroy**
 > show_days_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **show_days_list**
 > List[ShowDays] show_days_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **show_days_partial_update**
 > ShowDays show_days_partial_update(id, patched_show_days=patched_show_days)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **show_days_retrieve**
 > ShowDays show_days_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **show_days_update**
 > ShowDays show_days_update(id, show_days)
-
-
 
 ### Example
 

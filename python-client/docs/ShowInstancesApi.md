@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **show_instances_create**
 > ShowInstance show_instances_create(show_instance)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **show_instances_destroy**
 > show_instances_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **show_instances_list**
 > List[ShowInstance] show_instances_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **show_instances_partial_update**
 > ShowInstance show_instances_partial_update(id, patched_show_instance=patched_show_instance)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **show_instances_retrieve**
 > ShowInstance show_instances_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **show_instances_update**
 > ShowInstance show_instances_update(id, show_instance)
-
-
 
 ### Example
 

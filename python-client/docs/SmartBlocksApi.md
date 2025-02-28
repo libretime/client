@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **smart_blocks_create**
 > SmartBlock smart_blocks_create(smart_block)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **smart_blocks_destroy**
 > smart_blocks_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **smart_blocks_list**
 > List[SmartBlock] smart_blocks_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **smart_blocks_partial_update**
 > SmartBlock smart_blocks_partial_update(id, patched_smart_block=patched_smart_block)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **smart_blocks_retrieve**
 > SmartBlock smart_blocks_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **smart_blocks_update**
 > SmartBlock smart_blocks_update(id, smart_block)
-
-
 
 ### Example
 

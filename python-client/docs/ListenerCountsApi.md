@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **listener_counts_create**
 > ListenerCount listener_counts_create(listener_count)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **listener_counts_destroy**
 > listener_counts_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **listener_counts_list**
 > List[ListenerCount] listener_counts_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **listener_counts_partial_update**
 > ListenerCount listener_counts_partial_update(id, patched_listener_count=patched_listener_count)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **listener_counts_retrieve**
 > ListenerCount listener_counts_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **listener_counts_update**
 > ListenerCount listener_counts_update(id, listener_count)
-
-
 
 ### Example
 

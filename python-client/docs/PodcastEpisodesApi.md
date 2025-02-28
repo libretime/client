@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **podcast_episodes_create**
 > PodcastEpisode podcast_episodes_create(podcast_episode)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **podcast_episodes_destroy**
 > podcast_episodes_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **podcast_episodes_list**
 > List[PodcastEpisode] podcast_episodes_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **podcast_episodes_partial_update**
 > PodcastEpisode podcast_episodes_partial_update(id, patched_podcast_episode=patched_podcast_episode)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **podcast_episodes_retrieve**
 > PodcastEpisode podcast_episodes_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **podcast_episodes_update**
 > PodcastEpisode podcast_episodes_update(id, podcast_episode)
-
-
 
 ### Example
 

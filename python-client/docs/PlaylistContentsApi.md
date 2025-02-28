@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **playlist_contents_create**
 > PlaylistContent playlist_contents_create(playlist_content)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **playlist_contents_destroy**
 > playlist_contents_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **playlist_contents_list**
 > List[PlaylistContent] playlist_contents_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **playlist_contents_partial_update**
 > PlaylistContent playlist_contents_partial_update(id, patched_playlist_content=patched_playlist_content)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **playlist_contents_retrieve**
 > PlaylistContent playlist_contents_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **playlist_contents_update**
 > PlaylistContent playlist_contents_update(id, playlist_content)
-
-
 
 ### Example
 

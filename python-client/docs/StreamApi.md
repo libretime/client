@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **stream_preferences_retrieve**
 > StreamPreferences stream_preferences_retrieve()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -89,8 +87,6 @@ This endpoint does not need any parameter.
 
 # **stream_state_retrieve**
 > StreamState stream_state_retrieve()
-
-
 
 ### Example
 

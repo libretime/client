@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **live_logs_create**
 > LiveLog live_logs_create(live_log)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **live_logs_destroy**
 > live_logs_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **live_logs_list**
 > List[LiveLog] live_logs_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **live_logs_partial_update**
 > LiveLog live_logs_partial_update(id, patched_live_log=patched_live_log)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **live_logs_retrieve**
 > LiveLog live_logs_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **live_logs_update**
 > LiveLog live_logs_update(id, live_log)
-
-
 
 ### Example
 

@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **imported_podcasts_create**
 > ImportedPodcast imported_podcasts_create(imported_podcast)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **imported_podcasts_destroy**
 > imported_podcasts_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **imported_podcasts_list**
 > List[ImportedPodcast] imported_podcasts_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **imported_podcasts_partial_update**
 > ImportedPodcast imported_podcasts_partial_update(id, patched_imported_podcast=patched_imported_podcast)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **imported_podcasts_retrieve**
 > ImportedPodcast imported_podcasts_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **imported_podcasts_update**
 > ImportedPodcast imported_podcasts_update(id, imported_podcast)
-
-
 
 ### Example
 

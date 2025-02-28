@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **preferences_create**
 > Preference preferences_create(preference)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **preferences_destroy**
 > preferences_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **preferences_list**
 > List[Preference] preferences_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **preferences_partial_update**
 > Preference preferences_partial_update(id, patched_preference=patched_preference)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **preferences_retrieve**
 > Preference preferences_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **preferences_update**
 > Preference preferences_update(id, preference)
-
-
 
 ### Example
 

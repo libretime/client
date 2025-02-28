@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **playout_history_create**
 > PlayoutHistory playout_history_create(playout_history)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **playout_history_destroy**
 > playout_history_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **playout_history_list**
 > List[PlayoutHistory] playout_history_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **playout_history_partial_update**
 > PlayoutHistory playout_history_partial_update(id, patched_playout_history=patched_playout_history)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **playout_history_retrieve**
 > PlayoutHistory playout_history_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **playout_history_update**
 > PlayoutHistory playout_history_update(id, playout_history)
-
-
 
 ### Example
 

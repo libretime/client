@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **info_retrieve**
 > Info info_retrieve()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):

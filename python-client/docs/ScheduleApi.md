@@ -15,9 +15,11 @@ Method | HTTP request | Description
 # **schedule_create**
 > WriteSchedule schedule_create(write_schedule)
 
+Overrides get_serializer_class to choose the read serializer
+for GET requests and the write serializer for POST requests.
 
-
-Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+Set read_serializer_class and write_serializer_class attributes on a
+viewset.
 
 ### Example
 
@@ -100,9 +102,11 @@ Name | Type | Description  | Notes
 # **schedule_destroy**
 > schedule_destroy(id)
 
+Overrides get_serializer_class to choose the read serializer
+for GET requests and the write serializer for POST requests.
 
-
-Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+Set read_serializer_class and write_serializer_class attributes on a
+viewset.
 
 ### Example
 
@@ -182,9 +186,11 @@ void (empty response body)
 # **schedule_list**
 > List[ReadSchedule] schedule_list(broadcasted=broadcasted, ends_after=ends_after, ends_before=ends_before, overbooked=overbooked, position_status=position_status, starts_after=starts_after, starts_before=starts_before)
 
+Overrides get_serializer_class to choose the read serializer
+for GET requests and the write serializer for POST requests.
 
-
-Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+Set read_serializer_class and write_serializer_class attributes on a
+viewset.
 
 ### Example
 
@@ -279,9 +285,11 @@ Name | Type | Description  | Notes
 # **schedule_partial_update**
 > ReadSchedule schedule_partial_update(id, patched_read_schedule=patched_read_schedule)
 
+Overrides get_serializer_class to choose the read serializer
+for GET requests and the write serializer for POST requests.
 
-
-Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+Set read_serializer_class and write_serializer_class attributes on a
+viewset.
 
 ### Example
 
@@ -367,9 +375,11 @@ Name | Type | Description  | Notes
 # **schedule_retrieve**
 > ReadSchedule schedule_retrieve(id)
 
+Overrides get_serializer_class to choose the read serializer
+for GET requests and the write serializer for POST requests.
 
-
-Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+Set read_serializer_class and write_serializer_class attributes on a
+viewset.
 
 ### Example
 
@@ -452,9 +462,11 @@ Name | Type | Description  | Notes
 # **schedule_update**
 > ReadSchedule schedule_update(id, read_schedule)
 
+Overrides get_serializer_class to choose the read serializer
+for GET requests and the write serializer for POST requests.
 
-
-Overrides get_serializer_class to choose the read serializer for GET requests and the write serializer for POST requests.  Set read_serializer_class and write_serializer_class attributes on a viewset.
+Set read_serializer_class and write_serializer_class attributes on a
+viewset.
 
 ### Example
 

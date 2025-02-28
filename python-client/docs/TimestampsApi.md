@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **timestamps_create**
 > Timestamp timestamps_create(timestamp)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **timestamps_destroy**
 > timestamps_destroy(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -178,8 +174,6 @@ void (empty response body)
 # **timestamps_list**
 > List[Timestamp] timestamps_list()
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -256,8 +250,6 @@ This endpoint does not need any parameter.
 
 # **timestamps_partial_update**
 > Timestamp timestamps_partial_update(id, patched_timestamp=patched_timestamp)
-
-
 
 ### Example
 
@@ -343,8 +335,6 @@ Name | Type | Description  | Notes
 # **timestamps_retrieve**
 > Timestamp timestamps_retrieve(id)
 
-
-
 ### Example
 
 * Basic Authentication (basicAuth):
@@ -425,8 +415,6 @@ Name | Type | Description  | Notes
 
 # **timestamps_update**
 > Timestamp timestamps_update(id, timestamp)
-
-
 
 ### Example
 
