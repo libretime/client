@@ -166,6 +166,7 @@ lib/Api/WebstreamMetadataApi.php
 lib/Api/WebstreamsApi.php
 lib/ApiException.php
 lib/Configuration.php
+lib/FormDataProcessor.php
 lib/HeaderSelector.php
 lib/Model/BlankEnum.php
 lib/Model/CeleryTask.php
