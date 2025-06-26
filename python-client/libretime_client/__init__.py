@@ -16,139 +16,274 @@
 
 __version__ = "1.0.0"
 
+# Define package exports
+__all__ = [
+    "CeleryTasksApi",
+    "FilesApi",
+    "ImportedPodcastsApi",
+    "InfoApi",
+    "LibrariesApi",
+    "ListenerCountsApi",
+    "LiveLogsApi",
+    "LoginAttemptsApi",
+    "MountNamesApi",
+    "PlaylistContentsApi",
+    "PlaylistsApi",
+    "PlayoutHistoryApi",
+    "PlayoutHistoryMetadataApi",
+    "PlayoutHistoryTemplateFieldsApi",
+    "PlayoutHistoryTemplatesApi",
+    "PodcastEpisodesApi",
+    "PodcastsApi",
+    "PreferencesApi",
+    "ScheduleApi",
+    "SchemaApi",
+    "ServiceRegistersApi",
+    "ShowDaysApi",
+    "ShowHostsApi",
+    "ShowInstancesApi",
+    "ShowRebroadcastsApi",
+    "ShowsApi",
+    "SmartBlockContentsApi",
+    "SmartBlockCriteriaApi",
+    "SmartBlocksApi",
+    "StationPodcastsApi",
+    "StreamApi",
+    "ThirdPartyTrackReferencesApi",
+    "TimestampsApi",
+    "UserTokensApi",
+    "UsersApi",
+    "VersionApi",
+    "WebstreamMetadataApi",
+    "WebstreamsApi",
+    "ApiResponse",
+    "ApiClient",
+    "Configuration",
+    "OpenApiException",
+    "ApiTypeError",
+    "ApiValueError",
+    "ApiKeyError",
+    "ApiAttributeError",
+    "ApiException",
+    "BlankEnum",
+    "CeleryTask",
+    "File",
+    "FileImportStatusEnum",
+    "ImportedPodcast",
+    "Info",
+    "Library",
+    "ListenerCount",
+    "LiveLog",
+    "LoginAttempt",
+    "MountName",
+    "NullEnum",
+    "PatchedCeleryTask",
+    "PatchedFile",
+    "PatchedImportedPodcast",
+    "PatchedLibrary",
+    "PatchedListenerCount",
+    "PatchedLiveLog",
+    "PatchedLoginAttempt",
+    "PatchedMountName",
+    "PatchedPlaylist",
+    "PatchedPlaylistContent",
+    "PatchedPlayoutHistory",
+    "PatchedPlayoutHistoryMetadata",
+    "PatchedPlayoutHistoryTemplate",
+    "PatchedPlayoutHistoryTemplateField",
+    "PatchedPodcast",
+    "PatchedPodcastEpisode",
+    "PatchedPreference",
+    "PatchedReadSchedule",
+    "PatchedServiceRegister",
+    "PatchedShow",
+    "PatchedShowDays",
+    "PatchedShowHost",
+    "PatchedShowInstance",
+    "PatchedShowRebroadcast",
+    "PatchedSmartBlock",
+    "PatchedSmartBlockContent",
+    "PatchedSmartBlockCriteria",
+    "PatchedSmartBlockKind",
+    "PatchedStationPodcast",
+    "PatchedThirdPartyTrackReference",
+    "PatchedTimestamp",
+    "PatchedUser",
+    "PatchedUserToken",
+    "PatchedWebstream",
+    "PatchedWebstreamMetadata",
+    "Playlist",
+    "PlaylistContent",
+    "PlaylistContentKindEnum",
+    "PlayoutHistory",
+    "PlayoutHistoryMetadata",
+    "PlayoutHistoryTemplate",
+    "PlayoutHistoryTemplateField",
+    "Podcast",
+    "PodcastEpisode",
+    "PositionStatusEnum",
+    "Preference",
+    "ReadSchedule",
+    "RecordEnabledEnum",
+    "RepeatKindEnum",
+    "RoleEnum",
+    "ServiceRegister",
+    "Show",
+    "ShowDays",
+    "ShowHost",
+    "ShowInstance",
+    "ShowRebroadcast",
+    "SmartBlock",
+    "SmartBlockContent",
+    "SmartBlockCriteria",
+    "SmartBlockKindEnum",
+    "StationPodcast",
+    "StreamPreferences",
+    "StreamState",
+    "ThirdPartyTrackReference",
+    "Timestamp",
+    "User",
+    "UserToken",
+    "Version",
+    "Webstream",
+    "WebstreamMetadata",
+    "WeekDayEnum",
+    "WriteSchedule",
+]
+
 # import apis into sdk package
-from libretime_client.api.celery_tasks_api import CeleryTasksApi
-from libretime_client.api.files_api import FilesApi
-from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi
-from libretime_client.api.info_api import InfoApi
-from libretime_client.api.libraries_api import LibrariesApi
-from libretime_client.api.listener_counts_api import ListenerCountsApi
-from libretime_client.api.live_logs_api import LiveLogsApi
-from libretime_client.api.login_attempts_api import LoginAttemptsApi
-from libretime_client.api.mount_names_api import MountNamesApi
-from libretime_client.api.playlist_contents_api import PlaylistContentsApi
-from libretime_client.api.playlists_api import PlaylistsApi
-from libretime_client.api.playout_history_api import PlayoutHistoryApi
-from libretime_client.api.playout_history_metadata_api import PlayoutHistoryMetadataApi
-from libretime_client.api.playout_history_template_fields_api import PlayoutHistoryTemplateFieldsApi
-from libretime_client.api.playout_history_templates_api import PlayoutHistoryTemplatesApi
-from libretime_client.api.podcast_episodes_api import PodcastEpisodesApi
-from libretime_client.api.podcasts_api import PodcastsApi
-from libretime_client.api.preferences_api import PreferencesApi
-from libretime_client.api.schedule_api import ScheduleApi
-from libretime_client.api.schema_api import SchemaApi
-from libretime_client.api.service_registers_api import ServiceRegistersApi
-from libretime_client.api.show_days_api import ShowDaysApi
-from libretime_client.api.show_hosts_api import ShowHostsApi
-from libretime_client.api.show_instances_api import ShowInstancesApi
-from libretime_client.api.show_rebroadcasts_api import ShowRebroadcastsApi
-from libretime_client.api.shows_api import ShowsApi
-from libretime_client.api.smart_block_contents_api import SmartBlockContentsApi
-from libretime_client.api.smart_block_criteria_api import SmartBlockCriteriaApi
-from libretime_client.api.smart_blocks_api import SmartBlocksApi
-from libretime_client.api.station_podcasts_api import StationPodcastsApi
-from libretime_client.api.stream_api import StreamApi
-from libretime_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi
-from libretime_client.api.timestamps_api import TimestampsApi
-from libretime_client.api.user_tokens_api import UserTokensApi
-from libretime_client.api.users_api import UsersApi
-from libretime_client.api.version_api import VersionApi
-from libretime_client.api.webstream_metadata_api import WebstreamMetadataApi
-from libretime_client.api.webstreams_api import WebstreamsApi
+from libretime_client.api.celery_tasks_api import CeleryTasksApi as CeleryTasksApi
+from libretime_client.api.files_api import FilesApi as FilesApi
+from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi as ImportedPodcastsApi
+from libretime_client.api.info_api import InfoApi as InfoApi
+from libretime_client.api.libraries_api import LibrariesApi as LibrariesApi
+from libretime_client.api.listener_counts_api import ListenerCountsApi as ListenerCountsApi
+from libretime_client.api.live_logs_api import LiveLogsApi as LiveLogsApi
+from libretime_client.api.login_attempts_api import LoginAttemptsApi as LoginAttemptsApi
+from libretime_client.api.mount_names_api import MountNamesApi as MountNamesApi
+from libretime_client.api.playlist_contents_api import PlaylistContentsApi as PlaylistContentsApi
+from libretime_client.api.playlists_api import PlaylistsApi as PlaylistsApi
+from libretime_client.api.playout_history_api import PlayoutHistoryApi as PlayoutHistoryApi
+from libretime_client.api.playout_history_metadata_api import PlayoutHistoryMetadataApi as PlayoutHistoryMetadataApi
+from libretime_client.api.playout_history_template_fields_api import PlayoutHistoryTemplateFieldsApi as PlayoutHistoryTemplateFieldsApi
+from libretime_client.api.playout_history_templates_api import PlayoutHistoryTemplatesApi as PlayoutHistoryTemplatesApi
+from libretime_client.api.podcast_episodes_api import PodcastEpisodesApi as PodcastEpisodesApi
+from libretime_client.api.podcasts_api import PodcastsApi as PodcastsApi
+from libretime_client.api.preferences_api import PreferencesApi as PreferencesApi
+from libretime_client.api.schedule_api import ScheduleApi as ScheduleApi
+from libretime_client.api.schema_api import SchemaApi as SchemaApi
+from libretime_client.api.service_registers_api import ServiceRegistersApi as ServiceRegistersApi
+from libretime_client.api.show_days_api import ShowDaysApi as ShowDaysApi
+from libretime_client.api.show_hosts_api import ShowHostsApi as ShowHostsApi
+from libretime_client.api.show_instances_api import ShowInstancesApi as ShowInstancesApi
+from libretime_client.api.show_rebroadcasts_api import ShowRebroadcastsApi as ShowRebroadcastsApi
+from libretime_client.api.shows_api import ShowsApi as ShowsApi
+from libretime_client.api.smart_block_contents_api import SmartBlockContentsApi as SmartBlockContentsApi
+from libretime_client.api.smart_block_criteria_api import SmartBlockCriteriaApi as SmartBlockCriteriaApi
+from libretime_client.api.smart_blocks_api import SmartBlocksApi as SmartBlocksApi
+from libretime_client.api.station_podcasts_api import StationPodcastsApi as StationPodcastsApi
+from libretime_client.api.stream_api import StreamApi as StreamApi
+from libretime_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi as ThirdPartyTrackReferencesApi
+from libretime_client.api.timestamps_api import TimestampsApi as TimestampsApi
+from libretime_client.api.user_tokens_api import UserTokensApi as UserTokensApi
+from libretime_client.api.users_api import UsersApi as UsersApi
+from libretime_client.api.version_api import VersionApi as VersionApi
+from libretime_client.api.webstream_metadata_api import WebstreamMetadataApi as WebstreamMetadataApi
+from libretime_client.api.webstreams_api import WebstreamsApi as WebstreamsApi
 
 # import ApiClient
-from libretime_client.api_response import ApiResponse
-from libretime_client.api_client import ApiClient
-from libretime_client.configuration import Configuration
-from libretime_client.exceptions import OpenApiException
-from libretime_client.exceptions import ApiTypeError
-from libretime_client.exceptions import ApiValueError
-from libretime_client.exceptions import ApiKeyError
-from libretime_client.exceptions import ApiAttributeError
-from libretime_client.exceptions import ApiException
+from libretime_client.api_response import ApiResponse as ApiResponse
+from libretime_client.api_client import ApiClient as ApiClient
+from libretime_client.configuration import Configuration as Configuration
+from libretime_client.exceptions import OpenApiException as OpenApiException
+from libretime_client.exceptions import ApiTypeError as ApiTypeError
+from libretime_client.exceptions import ApiValueError as ApiValueError
+from libretime_client.exceptions import ApiKeyError as ApiKeyError
+from libretime_client.exceptions import ApiAttributeError as ApiAttributeError
+from libretime_client.exceptions import ApiException as ApiException
 
 # import models into sdk package
-from libretime_client.models.blank_enum import BlankEnum
-from libretime_client.models.celery_task import CeleryTask
-from libretime_client.models.file import File
-from libretime_client.models.file_import_status_enum import FileImportStatusEnum
-from libretime_client.models.imported_podcast import ImportedPodcast
-from libretime_client.models.info import Info
-from libretime_client.models.library import Library
-from libretime_client.models.listener_count import ListenerCount
-from libretime_client.models.live_log import LiveLog
-from libretime_client.models.login_attempt import LoginAttempt
-from libretime_client.models.mount_name import MountName
-from libretime_client.models.null_enum import NullEnum
-from libretime_client.models.patched_celery_task import PatchedCeleryTask
-from libretime_client.models.patched_file import PatchedFile
-from libretime_client.models.patched_imported_podcast import PatchedImportedPodcast
-from libretime_client.models.patched_library import PatchedLibrary
-from libretime_client.models.patched_listener_count import PatchedListenerCount
-from libretime_client.models.patched_live_log import PatchedLiveLog
-from libretime_client.models.patched_login_attempt import PatchedLoginAttempt
-from libretime_client.models.patched_mount_name import PatchedMountName
-from libretime_client.models.patched_playlist import PatchedPlaylist
-from libretime_client.models.patched_playlist_content import PatchedPlaylistContent
-from libretime_client.models.patched_playout_history import PatchedPlayoutHistory
-from libretime_client.models.patched_playout_history_metadata import PatchedPlayoutHistoryMetadata
-from libretime_client.models.patched_playout_history_template import PatchedPlayoutHistoryTemplate
-from libretime_client.models.patched_playout_history_template_field import PatchedPlayoutHistoryTemplateField
-from libretime_client.models.patched_podcast import PatchedPodcast
-from libretime_client.models.patched_podcast_episode import PatchedPodcastEpisode
-from libretime_client.models.patched_preference import PatchedPreference
-from libretime_client.models.patched_read_schedule import PatchedReadSchedule
-from libretime_client.models.patched_service_register import PatchedServiceRegister
-from libretime_client.models.patched_show import PatchedShow
-from libretime_client.models.patched_show_days import PatchedShowDays
-from libretime_client.models.patched_show_host import PatchedShowHost
-from libretime_client.models.patched_show_instance import PatchedShowInstance
-from libretime_client.models.patched_show_rebroadcast import PatchedShowRebroadcast
-from libretime_client.models.patched_smart_block import PatchedSmartBlock
-from libretime_client.models.patched_smart_block_content import PatchedSmartBlockContent
-from libretime_client.models.patched_smart_block_criteria import PatchedSmartBlockCriteria
-from libretime_client.models.patched_smart_block_kind import PatchedSmartBlockKind
-from libretime_client.models.patched_station_podcast import PatchedStationPodcast
-from libretime_client.models.patched_third_party_track_reference import PatchedThirdPartyTrackReference
-from libretime_client.models.patched_timestamp import PatchedTimestamp
-from libretime_client.models.patched_user import PatchedUser
-from libretime_client.models.patched_user_token import PatchedUserToken
-from libretime_client.models.patched_webstream import PatchedWebstream
-from libretime_client.models.patched_webstream_metadata import PatchedWebstreamMetadata
-from libretime_client.models.playlist import Playlist
-from libretime_client.models.playlist_content import PlaylistContent
-from libretime_client.models.playlist_content_kind_enum import PlaylistContentKindEnum
-from libretime_client.models.playout_history import PlayoutHistory
-from libretime_client.models.playout_history_metadata import PlayoutHistoryMetadata
-from libretime_client.models.playout_history_template import PlayoutHistoryTemplate
-from libretime_client.models.playout_history_template_field import PlayoutHistoryTemplateField
-from libretime_client.models.podcast import Podcast
-from libretime_client.models.podcast_episode import PodcastEpisode
-from libretime_client.models.position_status_enum import PositionStatusEnum
-from libretime_client.models.preference import Preference
-from libretime_client.models.read_schedule import ReadSchedule
-from libretime_client.models.record_enabled_enum import RecordEnabledEnum
-from libretime_client.models.repeat_kind_enum import RepeatKindEnum
-from libretime_client.models.role_enum import RoleEnum
-from libretime_client.models.service_register import ServiceRegister
-from libretime_client.models.show import Show
-from libretime_client.models.show_days import ShowDays
-from libretime_client.models.show_host import ShowHost
-from libretime_client.models.show_instance import ShowInstance
-from libretime_client.models.show_rebroadcast import ShowRebroadcast
-from libretime_client.models.smart_block import SmartBlock
-from libretime_client.models.smart_block_content import SmartBlockContent
-from libretime_client.models.smart_block_criteria import SmartBlockCriteria
-from libretime_client.models.smart_block_kind_enum import SmartBlockKindEnum
-from libretime_client.models.station_podcast import StationPodcast
-from libretime_client.models.stream_preferences import StreamPreferences
-from libretime_client.models.stream_state import StreamState
-from libretime_client.models.third_party_track_reference import ThirdPartyTrackReference
-from libretime_client.models.timestamp import Timestamp
-from libretime_client.models.user import User
-from libretime_client.models.user_token import UserToken
-from libretime_client.models.version import Version
-from libretime_client.models.webstream import Webstream
-from libretime_client.models.webstream_metadata import WebstreamMetadata
-from libretime_client.models.week_day_enum import WeekDayEnum
-from libretime_client.models.write_schedule import WriteSchedule
+from libretime_client.models.blank_enum import BlankEnum as BlankEnum
+from libretime_client.models.celery_task import CeleryTask as CeleryTask
+from libretime_client.models.file import File as File
+from libretime_client.models.file_import_status_enum import FileImportStatusEnum as FileImportStatusEnum
+from libretime_client.models.imported_podcast import ImportedPodcast as ImportedPodcast
+from libretime_client.models.info import Info as Info
+from libretime_client.models.library import Library as Library
+from libretime_client.models.listener_count import ListenerCount as ListenerCount
+from libretime_client.models.live_log import LiveLog as LiveLog
+from libretime_client.models.login_attempt import LoginAttempt as LoginAttempt
+from libretime_client.models.mount_name import MountName as MountName
+from libretime_client.models.null_enum import NullEnum as NullEnum
+from libretime_client.models.patched_celery_task import PatchedCeleryTask as PatchedCeleryTask
+from libretime_client.models.patched_file import PatchedFile as PatchedFile
+from libretime_client.models.patched_imported_podcast import PatchedImportedPodcast as PatchedImportedPodcast
+from libretime_client.models.patched_library import PatchedLibrary as PatchedLibrary
+from libretime_client.models.patched_listener_count import PatchedListenerCount as PatchedListenerCount
+from libretime_client.models.patched_live_log import PatchedLiveLog as PatchedLiveLog
+from libretime_client.models.patched_login_attempt import PatchedLoginAttempt as PatchedLoginAttempt
+from libretime_client.models.patched_mount_name import PatchedMountName as PatchedMountName
+from libretime_client.models.patched_playlist import PatchedPlaylist as PatchedPlaylist
+from libretime_client.models.patched_playlist_content import PatchedPlaylistContent as PatchedPlaylistContent
+from libretime_client.models.patched_playout_history import PatchedPlayoutHistory as PatchedPlayoutHistory
+from libretime_client.models.patched_playout_history_metadata import PatchedPlayoutHistoryMetadata as PatchedPlayoutHistoryMetadata
+from libretime_client.models.patched_playout_history_template import PatchedPlayoutHistoryTemplate as PatchedPlayoutHistoryTemplate
+from libretime_client.models.patched_playout_history_template_field import PatchedPlayoutHistoryTemplateField as PatchedPlayoutHistoryTemplateField
+from libretime_client.models.patched_podcast import PatchedPodcast as PatchedPodcast
+from libretime_client.models.patched_podcast_episode import PatchedPodcastEpisode as PatchedPodcastEpisode
+from libretime_client.models.patched_preference import PatchedPreference as PatchedPreference
+from libretime_client.models.patched_read_schedule import PatchedReadSchedule as PatchedReadSchedule
+from libretime_client.models.patched_service_register import PatchedServiceRegister as PatchedServiceRegister
+from libretime_client.models.patched_show import PatchedShow as PatchedShow
+from libretime_client.models.patched_show_days import PatchedShowDays as PatchedShowDays
+from libretime_client.models.patched_show_host import PatchedShowHost as PatchedShowHost
+from libretime_client.models.patched_show_instance import PatchedShowInstance as PatchedShowInstance
+from libretime_client.models.patched_show_rebroadcast import PatchedShowRebroadcast as PatchedShowRebroadcast
+from libretime_client.models.patched_smart_block import PatchedSmartBlock as PatchedSmartBlock
+from libretime_client.models.patched_smart_block_content import PatchedSmartBlockContent as PatchedSmartBlockContent
+from libretime_client.models.patched_smart_block_criteria import PatchedSmartBlockCriteria as PatchedSmartBlockCriteria
+from libretime_client.models.patched_smart_block_kind import PatchedSmartBlockKind as PatchedSmartBlockKind
+from libretime_client.models.patched_station_podcast import PatchedStationPodcast as PatchedStationPodcast
+from libretime_client.models.patched_third_party_track_reference import PatchedThirdPartyTrackReference as PatchedThirdPartyTrackReference
+from libretime_client.models.patched_timestamp import PatchedTimestamp as PatchedTimestamp
+from libretime_client.models.patched_user import PatchedUser as PatchedUser
+from libretime_client.models.patched_user_token import PatchedUserToken as PatchedUserToken
+from libretime_client.models.patched_webstream import PatchedWebstream as PatchedWebstream
+from libretime_client.models.patched_webstream_metadata import PatchedWebstreamMetadata as PatchedWebstreamMetadata
+from libretime_client.models.playlist import Playlist as Playlist
+from libretime_client.models.playlist_content import PlaylistContent as PlaylistContent
+from libretime_client.models.playlist_content_kind_enum import PlaylistContentKindEnum as PlaylistContentKindEnum
+from libretime_client.models.playout_history import PlayoutHistory as PlayoutHistory
+from libretime_client.models.playout_history_metadata import PlayoutHistoryMetadata as PlayoutHistoryMetadata
+from libretime_client.models.playout_history_template import PlayoutHistoryTemplate as PlayoutHistoryTemplate
+from libretime_client.models.playout_history_template_field import PlayoutHistoryTemplateField as PlayoutHistoryTemplateField
+from libretime_client.models.podcast import Podcast as Podcast
+from libretime_client.models.podcast_episode import PodcastEpisode as PodcastEpisode
+from libretime_client.models.position_status_enum import PositionStatusEnum as PositionStatusEnum
+from libretime_client.models.preference import Preference as Preference
+from libretime_client.models.read_schedule import ReadSchedule as ReadSchedule
+from libretime_client.models.record_enabled_enum import RecordEnabledEnum as RecordEnabledEnum
+from libretime_client.models.repeat_kind_enum import RepeatKindEnum as RepeatKindEnum
+from libretime_client.models.role_enum import RoleEnum as RoleEnum
+from libretime_client.models.service_register import ServiceRegister as ServiceRegister
+from libretime_client.models.show import Show as Show
+from libretime_client.models.show_days import ShowDays as ShowDays
+from libretime_client.models.show_host import ShowHost as ShowHost
+from libretime_client.models.show_instance import ShowInstance as ShowInstance
+from libretime_client.models.show_rebroadcast import ShowRebroadcast as ShowRebroadcast
+from libretime_client.models.smart_block import SmartBlock as SmartBlock
+from libretime_client.models.smart_block_content import SmartBlockContent as SmartBlockContent
+from libretime_client.models.smart_block_criteria import SmartBlockCriteria as SmartBlockCriteria
+from libretime_client.models.smart_block_kind_enum import SmartBlockKindEnum as SmartBlockKindEnum
+from libretime_client.models.station_podcast import StationPodcast as StationPodcast
+from libretime_client.models.stream_preferences import StreamPreferences as StreamPreferences
+from libretime_client.models.stream_state import StreamState as StreamState
+from libretime_client.models.third_party_track_reference import ThirdPartyTrackReference as ThirdPartyTrackReference
+from libretime_client.models.timestamp import Timestamp as Timestamp
+from libretime_client.models.user import User as User
+from libretime_client.models.user_token import UserToken as UserToken
+from libretime_client.models.version import Version as Version
+from libretime_client.models.webstream import Webstream as Webstream
+from libretime_client.models.webstream_metadata import WebstreamMetadata as WebstreamMetadata
+from libretime_client.models.week_day_enum import WeekDayEnum as WeekDayEnum
+from libretime_client.models.write_schedule import WriteSchedule as WriteSchedule
