@@ -1,4 +1,4 @@
-# # ReadSchedule
+# ReadSchedule
 
 ## Properties
 

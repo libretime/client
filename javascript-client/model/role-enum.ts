@@ -16,15 +16,13 @@
 
 /**
  * * `G` - Guest * `H` - Host * `P` - Manager * `A` - Admin
- * @export
- * @enum {string}
  */
 
 export const RoleEnum = {
     G: 'G',
     H: 'H',
     P: 'P',
-    A: 'A'
+    A: 'A',
 } as const;
 
 export type RoleEnum = typeof RoleEnum[keyof typeof RoleEnum];

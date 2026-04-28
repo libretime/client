@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [default to undefined]
 **description** | **string** |  | [optional] [default to undefined]
 **length** | **string** |  | [optional] [default to undefined]
-**kind** | [**PatchedSmartBlockKind**](PatchedSmartBlockKind.md) |  | [optional] [default to undefined]
+**kind** | **string** |  | [optional] [default to undefined]
 **owner** | **number** |  | [optional] [default to undefined]
 
 ## Example

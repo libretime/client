@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedTimestamp
- */
 export interface PatchedTimestamp {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedTimestamp
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedTimestamp
-     */
     'timestamp'?: string;
 }
 

@@ -1,4 +1,4 @@
-# # PatchedPodcast
+# PatchedPodcast
 
 ## Properties
 

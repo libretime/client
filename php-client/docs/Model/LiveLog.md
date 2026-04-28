@@ -1,4 +1,4 @@
-# # LiveLog
+# LiveLog
 
 ## Properties
 

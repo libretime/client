@@ -1,4 +1,4 @@
-# # SmartBlock
+# SmartBlock
 
 ## Properties
 
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **name** | **string** |  |
 **description** | **string** |  | [optional]
 **length** | **string** |  | [optional]
-**kind** | [**\Libretime\Client\Model\PatchedSmartBlockKind**](PatchedSmartBlockKind.md) |  | [optional]
+**kind** | **string** |  | [optional]
 **owner** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

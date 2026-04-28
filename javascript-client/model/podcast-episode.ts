@@ -14,59 +14,14 @@
 
 
 
-/**
- * 
- * @export
- * @interface PodcastEpisode
- */
 export interface PodcastEpisode {
-    /**
-     * 
-     * @type {number}
-     * @memberof PodcastEpisode
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PodcastEpisode
-     */
     'published_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PodcastEpisode
-     */
     'download_url': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PodcastEpisode
-     */
     'episode_guid': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PodcastEpisode
-     */
     'episode_title': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PodcastEpisode
-     */
     'episode_description': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PodcastEpisode
-     */
     'podcast': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PodcastEpisode
-     */
     'file'?: number | null;
 }
 

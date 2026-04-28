@@ -304,7 +304,6 @@ Class | Method | HTTP request | Description
  - [PatchedSmartBlock](docs/PatchedSmartBlock.md)
  - [PatchedSmartBlockContent](docs/PatchedSmartBlockContent.md)
  - [PatchedSmartBlockCriteria](docs/PatchedSmartBlockCriteria.md)
- - [PatchedSmartBlockKind](docs/PatchedSmartBlockKind.md)
  - [PatchedStationPodcast](docs/PatchedStationPodcast.md)
  - [PatchedThirdPartyTrackReference](docs/PatchedThirdPartyTrackReference.md)
  - [PatchedTimestamp](docs/PatchedTimestamp.md)

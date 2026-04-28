@@ -14,53 +14,13 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedSmartBlockCriteria
- */
 export interface PatchedSmartBlockCriteria {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'group'?: number | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'criteria'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'condition'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'value'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'extra'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockCriteria
-     */
     'block'?: number;
 }
 

@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedListenerCount
- */
 export interface PatchedListenerCount {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedListenerCount
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedListenerCount
-     */
     'listener_count'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedListenerCount
-     */
     'timestamp'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedListenerCount
-     */
     'mount_name'?: number;
 }
 

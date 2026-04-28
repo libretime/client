@@ -1,4 +1,4 @@
-# # PatchedShowInstance
+# PatchedShowInstance
 
 ## Properties
 

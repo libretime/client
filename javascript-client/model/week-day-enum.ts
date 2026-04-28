@@ -16,8 +16,6 @@
 
 /**
  * * `0` - Monday * `1` - Tuesday * `2` - Wednesday * `3` - Thursday * `4` - Friday * `5` - Saturday * `6` - Sunday
- * @export
- * @enum {number}
  */
 
 export const WeekDayEnum = {
@@ -27,7 +25,7 @@ export const WeekDayEnum = {
     NUMBER_3: 3,
     NUMBER_4: 4,
     NUMBER_5: 5,
-    NUMBER_6: 6
+    NUMBER_6: 6,
 } as const;
 
 export type WeekDayEnum = typeof WeekDayEnum[keyof typeof WeekDayEnum];

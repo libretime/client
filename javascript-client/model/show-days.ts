@@ -23,77 +23,17 @@ import type { RepeatKindEnum } from './repeat-kind-enum';
 // @ts-ignore
 import type { WeekDayEnum } from './week-day-enum';
 
-/**
- * 
- * @export
- * @interface ShowDays
- */
 export interface ShowDays {
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowDays
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowDays
-     */
     'first_show_on': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowDays
-     */
     'last_show_on'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowDays
-     */
     'start_time': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowDays
-     */
     'timezone': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowDays
-     */
     'duration': string;
-    /**
-     * 
-     * @type {RecordEnabledEnum}
-     * @memberof ShowDays
-     */
     'record_enabled'?: RecordEnabledEnum | null;
-    /**
-     * 
-     * @type {WeekDayEnum}
-     * @memberof ShowDays
-     */
     'week_day'?: WeekDayEnum | null;
-    /**
-     * 
-     * @type {RepeatKindEnum}
-     * @memberof ShowDays
-     */
     'repeat_kind': RepeatKindEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowDays
-     */
     'repeat_next_on'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowDays
-     */
     'show': number;
 }
 

@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedPreference } from '../model';
 import type { Preference } from '../model';
 /**
  * PreferencesApi - axios parameter creator
- * @export
  */
 export const PreferencesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesDestroy', 'id', id)
             const localVarPath = `/api/v2/preferences/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/preferences/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesRetrieve', 'id', id)
             const localVarPath = `/api/v2/preferences/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'preference' is not null or undefined
             assertParamExists('preferencesUpdate', 'preference', preference)
             const localVarPath = `/api/v2/preferences/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
 
 /**
  * PreferencesApi - functional programming interface
- * @export
  */
 export const PreferencesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PreferencesApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const PreferencesApiFp = function(configuration?: Configuration) {
 
 /**
  * PreferencesApi - factory interface
- * @export
  */
 export const PreferencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PreferencesApiFp(configuration)
@@ -426,9 +419,6 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
 
 /**
  * PreferencesApi - object-oriented interface
- * @export
- * @class PreferencesApi
- * @extends {BaseAPI}
  */
 export class PreferencesApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class PreferencesApi extends BaseAPI {
      * @param {Preference} preference 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PreferencesApi
      */
     public preferencesCreate(preference: Preference, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesCreate(preference, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class PreferencesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this preference.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PreferencesApi
      */
     public preferencesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class PreferencesApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PreferencesApi
      */
     public preferencesList(options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class PreferencesApi extends BaseAPI {
      * @param {PatchedPreference} [patchedPreference] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PreferencesApi
      */
     public preferencesPartialUpdate(id: number, patchedPreference?: PatchedPreference, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesPartialUpdate(id, patchedPreference, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class PreferencesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this preference.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PreferencesApi
      */
     public preferencesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class PreferencesApi extends BaseAPI {
      * @param {Preference} preference 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PreferencesApi
      */
     public preferencesUpdate(id: number, preference: Preference, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesUpdate(id, preference, options).then((request) => request(this.axios, this.basePath));

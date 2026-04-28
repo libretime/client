@@ -1,4 +1,4 @@
-# # StreamState
+# StreamState
 
 ## Properties
 

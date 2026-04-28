@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedServiceRegister
- */
 export interface PatchedServiceRegister {
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedServiceRegister
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedServiceRegister
-     */
     'ip'?: string;
 }
 

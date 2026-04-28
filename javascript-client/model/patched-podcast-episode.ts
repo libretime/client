@@ -14,59 +14,14 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPodcastEpisode
- */
 export interface PatchedPodcastEpisode {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPodcastEpisode
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcastEpisode
-     */
     'published_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcastEpisode
-     */
     'download_url'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcastEpisode
-     */
     'episode_guid'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcastEpisode
-     */
     'episode_title'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcastEpisode
-     */
     'episode_description'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPodcastEpisode
-     */
     'podcast'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPodcastEpisode
-     */
     'file'?: number | null;
 }
 

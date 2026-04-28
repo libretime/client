@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedThirdPartyTrackReference } from '../model';
 import type { ThirdPartyTrackReference } from '../model';
 /**
  * ThirdPartyTrackReferencesApi - axios parameter creator
- * @export
  */
 export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesDestroy', 'id', id)
             const localVarPath = `/api/v2/third-party-track-references/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/third-party-track-references/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesRetrieve', 'id', id)
             const localVarPath = `/api/v2/third-party-track-references/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
             // verify required parameter 'thirdPartyTrackReference' is not null or undefined
             assertParamExists('thirdPartyTrackReferencesUpdate', 'thirdPartyTrackReference', thirdPartyTrackReference)
             const localVarPath = `/api/v2/third-party-track-references/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ThirdPartyTrackReferencesApiAxiosParamCreator = function (configura
 
 /**
  * ThirdPartyTrackReferencesApi - functional programming interface
- * @export
  */
 export const ThirdPartyTrackReferencesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ThirdPartyTrackReferencesApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ThirdPartyTrackReferencesApiFp = function(configuration?: Configura
 
 /**
  * ThirdPartyTrackReferencesApi - factory interface
- * @export
  */
 export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ThirdPartyTrackReferencesApiFp(configuration)
@@ -426,9 +419,6 @@ export const ThirdPartyTrackReferencesApiFactory = function (configuration?: Con
 
 /**
  * ThirdPartyTrackReferencesApi - object-oriented interface
- * @export
- * @class ThirdPartyTrackReferencesApi
- * @extends {BaseAPI}
  */
 export class ThirdPartyTrackReferencesApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
      * @param {ThirdPartyTrackReference} thirdPartyTrackReference 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ThirdPartyTrackReferencesApi
      */
     public thirdPartyTrackReferencesCreate(thirdPartyTrackReference: ThirdPartyTrackReference, options?: RawAxiosRequestConfig) {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesCreate(thirdPartyTrackReference, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this third party track reference.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ThirdPartyTrackReferencesApi
      */
     public thirdPartyTrackReferencesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ThirdPartyTrackReferencesApi
      */
     public thirdPartyTrackReferencesList(options?: RawAxiosRequestConfig) {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
      * @param {PatchedThirdPartyTrackReference} [patchedThirdPartyTrackReference] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ThirdPartyTrackReferencesApi
      */
     public thirdPartyTrackReferencesPartialUpdate(id: number, patchedThirdPartyTrackReference?: PatchedThirdPartyTrackReference, options?: RawAxiosRequestConfig) {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesPartialUpdate(id, patchedThirdPartyTrackReference, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this third party track reference.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ThirdPartyTrackReferencesApi
      */
     public thirdPartyTrackReferencesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ThirdPartyTrackReferencesApi extends BaseAPI {
      * @param {ThirdPartyTrackReference} thirdPartyTrackReference 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ThirdPartyTrackReferencesApi
      */
     public thirdPartyTrackReferencesUpdate(id: number, thirdPartyTrackReference: ThirdPartyTrackReference, options?: RawAxiosRequestConfig) {
         return ThirdPartyTrackReferencesApiFp(this.configuration).thirdPartyTrackReferencesUpdate(id, thirdPartyTrackReference, options).then((request) => request(this.axios, this.basePath));

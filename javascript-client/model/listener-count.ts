@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface ListenerCount
- */
 export interface ListenerCount {
-    /**
-     * 
-     * @type {number}
-     * @memberof ListenerCount
-     */
     'id': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListenerCount
-     */
     'listener_count': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListenerCount
-     */
     'timestamp': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListenerCount
-     */
     'mount_name': number;
 }
 

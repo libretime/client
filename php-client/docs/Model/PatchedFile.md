@@ -1,4 +1,4 @@
-# # PatchedFile
+# PatchedFile
 
 ## Properties
 

@@ -14,119 +14,24 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedShow
- */
 export interface PatchedShow {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShow
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'genre'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'url'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'image'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'foreground_color'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShow
-     */
     'background_color'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'live_enabled'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'linked'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'linkable'?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShow
-     */
     'auto_playlist'?: number | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'auto_playlist_enabled'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'auto_playlist_repeat'?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShow
-     */
     'intro_playlist'?: number | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'override_intro_playlist'?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShow
-     */
     'outro_playlist'?: number | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedShow
-     */
     'override_outro_playlist'?: boolean;
 }
 

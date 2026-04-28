@@ -1,4 +1,4 @@
-# # WriteSchedule
+# WriteSchedule
 
 ## Properties
 

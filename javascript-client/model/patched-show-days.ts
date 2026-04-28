@@ -23,77 +23,17 @@ import type { RepeatKindEnum } from './repeat-kind-enum';
 // @ts-ignore
 import type { WeekDayEnum } from './week-day-enum';
 
-/**
- * 
- * @export
- * @interface PatchedShowDays
- */
 export interface PatchedShowDays {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowDays
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowDays
-     */
     'first_show_on'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowDays
-     */
     'last_show_on'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowDays
-     */
     'start_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowDays
-     */
     'timezone'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowDays
-     */
     'duration'?: string;
-    /**
-     * 
-     * @type {RecordEnabledEnum}
-     * @memberof PatchedShowDays
-     */
     'record_enabled'?: RecordEnabledEnum | null;
-    /**
-     * 
-     * @type {WeekDayEnum}
-     * @memberof PatchedShowDays
-     */
     'week_day'?: WeekDayEnum | null;
-    /**
-     * 
-     * @type {RepeatKindEnum}
-     * @memberof PatchedShowDays
-     */
     'repeat_kind'?: RepeatKindEnum;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowDays
-     */
     'repeat_next_on'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowDays
-     */
     'show'?: number;
 }
 

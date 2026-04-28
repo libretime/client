@@ -14,29 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @interface PlayoutHistoryTemplate
- */
 export interface PlayoutHistoryTemplate {
-    /**
-     * 
-     * @type {number}
-     * @memberof PlayoutHistoryTemplate
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlayoutHistoryTemplate
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlayoutHistoryTemplate
-     */
     'type': string;
 }
 

@@ -24,6 +24,7 @@ from typing_extensions import Annotated
 from libretime_client.models.position_status_enum import PositionStatusEnum
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class WriteSchedule(BaseModel):
     """
@@ -47,7 +48,8 @@ class WriteSchedule(BaseModel):
     __properties: ClassVar[List[str]] = ["id", "starts_at", "ends_at", "length", "fade_in", "fade_out", "cue_in", "cue_out", "position", "position_status", "broadcasted", "played", "instance", "file", "stream"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -59,8 +61,7 @@ class WriteSchedule(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

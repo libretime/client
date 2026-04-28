@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { ModelFile } from '../model';
 import type { PatchedFile } from '../model';
 /**
  * FilesApi - axios parameter creator
- * @export
  */
 export const FilesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesDestroy', 'id', id)
             const localVarPath = `/api/v2/files/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -121,7 +118,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesDownloadRetrieve', 'id', id)
             const localVarPath = `/api/v2/files/{id}/download`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -139,8 +136,8 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -184,8 +181,8 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['md5'] = md5;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -206,7 +203,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/files/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -224,9 +221,8 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -248,7 +244,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('filesRetrieve', 'id', id)
             const localVarPath = `/api/v2/files/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -266,8 +262,8 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -290,7 +286,7 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'modelFile' is not null or undefined
             assertParamExists('filesUpdate', 'modelFile', modelFile)
             const localVarPath = `/api/v2/files/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -308,9 +304,8 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -327,7 +322,6 @@ export const FilesApiAxiosParamCreator = function (configuration?: Configuration
 
 /**
  * FilesApi - functional programming interface
- * @export
  */
 export const FilesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = FilesApiAxiosParamCreator(configuration)
@@ -424,7 +418,6 @@ export const FilesApiFp = function(configuration?: Configuration) {
 
 /**
  * FilesApi - factory interface
- * @export
  */
 export const FilesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = FilesApiFp(configuration)
@@ -500,9 +493,6 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
 
 /**
  * FilesApi - object-oriented interface
- * @export
- * @class FilesApi
- * @extends {BaseAPI}
  */
 export class FilesApi extends BaseAPI {
     /**
@@ -510,7 +500,6 @@ export class FilesApi extends BaseAPI {
      * @param {ModelFile} modelFile 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesCreate(modelFile: ModelFile, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesCreate(modelFile, options).then((request) => request(this.axios, this.basePath));
@@ -521,7 +510,6 @@ export class FilesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this file.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -532,7 +520,6 @@ export class FilesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this file.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesDownloadRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesDownloadRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -544,7 +531,6 @@ export class FilesApi extends BaseAPI {
      * @param {string} [md5] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesList(genre?: string, md5?: string, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesList(genre, md5, options).then((request) => request(this.axios, this.basePath));
@@ -556,7 +542,6 @@ export class FilesApi extends BaseAPI {
      * @param {PatchedFile} [patchedFile] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesPartialUpdate(id: number, patchedFile?: PatchedFile, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesPartialUpdate(id, patchedFile, options).then((request) => request(this.axios, this.basePath));
@@ -567,7 +552,6 @@ export class FilesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this file.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -579,7 +563,6 @@ export class FilesApi extends BaseAPI {
      * @param {ModelFile} modelFile 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof FilesApi
      */
     public filesUpdate(id: number, modelFile: ModelFile, options?: RawAxiosRequestConfig) {
         return FilesApiFp(this.configuration).filesUpdate(id, modelFile, options).then((request) => request(this.axios, this.basePath));

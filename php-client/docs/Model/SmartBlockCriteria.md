@@ -1,4 +1,4 @@
-# # SmartBlockCriteria
+# SmartBlockCriteria
 
 ## Properties
 

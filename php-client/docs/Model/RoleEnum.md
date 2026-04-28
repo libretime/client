@@ -1,4 +1,4 @@
-# # RoleEnum
+# RoleEnum
 
 ## Properties
 

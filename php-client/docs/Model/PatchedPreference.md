@@ -1,4 +1,4 @@
-# # PatchedPreference
+# PatchedPreference
 
 ## Properties
 

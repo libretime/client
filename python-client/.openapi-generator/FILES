@@ -51,7 +51,6 @@ docs/PatchedShowRebroadcast.md
 docs/PatchedSmartBlock.md
 docs/PatchedSmartBlockContent.md
 docs/PatchedSmartBlockCriteria.md
-docs/PatchedSmartBlockKind.md
 docs/PatchedStationPodcast.md
 docs/PatchedThirdPartyTrackReference.md
 docs/PatchedTimestamp.md
@@ -210,7 +209,6 @@ libretime_client/models/patched_show_rebroadcast.py
 libretime_client/models/patched_smart_block.py
 libretime_client/models/patched_smart_block_content.py
 libretime_client/models/patched_smart_block_criteria.py
-libretime_client/models/patched_smart_block_kind.py
 libretime_client/models/patched_station_podcast.py
 libretime_client/models/patched_third_party_track_reference.py
 libretime_client/models/patched_timestamp.py

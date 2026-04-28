@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedShowRebroadcast
- */
 export interface PatchedShowRebroadcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowRebroadcast
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowRebroadcast
-     */
     'day_offset'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedShowRebroadcast
-     */
     'start_time'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowRebroadcast
-     */
     'show'?: number;
 }
 

@@ -1,4 +1,4 @@
-# # ShowDays
+# ShowDays
 
 ## Properties
 

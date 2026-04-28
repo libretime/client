@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedStationPodcast
- */
 export interface PatchedStationPodcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedStationPodcast
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedStationPodcast
-     */
     'podcast'?: number;
 }
 

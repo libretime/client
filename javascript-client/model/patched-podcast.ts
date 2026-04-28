@@ -14,101 +14,21 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPodcast
- */
 export interface PatchedPodcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPodcast
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'url'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'title'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'creator'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'language'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'copyright'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'link'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'itunes_author'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'itunes_keywords'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'itunes_summary'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'itunes_subtitle'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'itunes_category'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPodcast
-     */
     'itunes_explicit'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPodcast
-     */
     'owner'?: number | null;
 }
 

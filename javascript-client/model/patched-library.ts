@@ -14,47 +14,12 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedLibrary
- */
 export interface PatchedLibrary {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedLibrary
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLibrary
-     */
     'name'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLibrary
-     */
     'code'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLibrary
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedLibrary
-     */
     'enabled'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedLibrary
-     */
     'analyze_cue_points'?: boolean;
 }
 

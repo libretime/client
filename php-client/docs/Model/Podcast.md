@@ -1,4 +1,4 @@
-# # Podcast
+# Podcast
 
 ## Properties
 

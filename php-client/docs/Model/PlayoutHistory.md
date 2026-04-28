@@ -1,4 +1,4 @@
-# # PlayoutHistory
+# PlayoutHistory
 
 ## Properties
 

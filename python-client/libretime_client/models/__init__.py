@@ -12,7 +12,6 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 # import models into model package
 from libretime_client.models.blank_enum import BlankEnum
 from libretime_client.models.celery_task import CeleryTask
@@ -53,7 +52,6 @@ from libretime_client.models.patched_show_rebroadcast import PatchedShowRebroadc
 from libretime_client.models.patched_smart_block import PatchedSmartBlock
 from libretime_client.models.patched_smart_block_content import PatchedSmartBlockContent
 from libretime_client.models.patched_smart_block_criteria import PatchedSmartBlockCriteria
-from libretime_client.models.patched_smart_block_kind import PatchedSmartBlockKind
 from libretime_client.models.patched_station_podcast import PatchedStationPodcast
 from libretime_client.models.patched_third_party_track_reference import PatchedThirdPartyTrackReference
 from libretime_client.models.patched_timestamp import PatchedTimestamp
@@ -98,3 +96,4 @@ from libretime_client.models.webstream import Webstream
 from libretime_client.models.webstream_metadata import WebstreamMetadata
 from libretime_client.models.week_day_enum import WeekDayEnum
 from libretime_client.models.write_schedule import WriteSchedule
+

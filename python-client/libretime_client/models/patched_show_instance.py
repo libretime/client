@@ -24,6 +24,7 @@ from typing_extensions import Annotated
 from libretime_client.models.record_enabled_enum import RecordEnabledEnum
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class PatchedShowInstance(BaseModel):
     """
@@ -46,7 +47,8 @@ class PatchedShowInstance(BaseModel):
     __properties: ClassVar[List[str]] = ["id", "created_at", "starts_at", "ends_at", "filled_time", "last_scheduled_at", "description", "modified", "rebroadcast", "auto_playlist_built", "record_enabled", "show", "instance", "record_file"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -58,8 +60,7 @@ class PatchedShowInstance(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:

@@ -1,4 +1,4 @@
-# # PatchedWebstreamMetadata
+# PatchedWebstreamMetadata
 
 ## Properties
 

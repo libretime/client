@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPlayoutHistory
- */
 export interface PatchedPlayoutHistory {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistory
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistory
-     */
     'starts'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistory
-     */
     'ends'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistory
-     */
     'file'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistory
-     */
     'instance'?: number | null;
 }
 

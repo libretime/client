@@ -16,13 +16,11 @@
 
 /**
  * * `static` - Static * `dynamic` - Dynamic
- * @export
- * @enum {string}
  */
 
 export const SmartBlockKindEnum = {
     Static: 'static',
-    Dynamic: 'dynamic'
+    Dynamic: 'dynamic',
 } as const;
 
 export type SmartBlockKindEnum = typeof SmartBlockKindEnum[keyof typeof SmartBlockKindEnum];

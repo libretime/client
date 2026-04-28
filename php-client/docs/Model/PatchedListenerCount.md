@@ -1,4 +1,4 @@
-# # PatchedListenerCount
+# PatchedListenerCount
 
 ## Properties
 

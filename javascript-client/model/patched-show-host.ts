@@ -14,29 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedShowHost
- */
 export interface PatchedShowHost {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowHost
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowHost
-     */
     'show'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedShowHost
-     */
     'user'?: number;
 }
 

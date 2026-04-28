@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface PlayoutHistory
- */
 export interface PlayoutHistory {
-    /**
-     * 
-     * @type {number}
-     * @memberof PlayoutHistory
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlayoutHistory
-     */
     'starts': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlayoutHistory
-     */
     'ends'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlayoutHistory
-     */
     'file'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlayoutHistory
-     */
     'instance'?: number | null;
 }
 

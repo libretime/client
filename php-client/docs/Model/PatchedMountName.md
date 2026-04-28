@@ -1,4 +1,4 @@
-# # PatchedMountName
+# PatchedMountName
 
 ## Properties
 

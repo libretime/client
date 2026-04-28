@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedLoginAttempt
- */
 export interface PatchedLoginAttempt {
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLoginAttempt
-     */
     'ip'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedLoginAttempt
-     */
     'attempts'?: number | null;
 }
 

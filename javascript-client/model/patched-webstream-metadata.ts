@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedWebstreamMetadata
- */
 export interface PatchedWebstreamMetadata {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedWebstreamMetadata
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstreamMetadata
-     */
     'starts_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstreamMetadata
-     */
     'data'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedWebstreamMetadata
-     */
     'schedule'?: number;
 }
 

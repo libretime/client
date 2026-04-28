@@ -14,47 +14,12 @@
 
 
 
-/**
- * 
- * @export
- * @interface CeleryTask
- */
 export interface CeleryTask {
-    /**
-     * 
-     * @type {number}
-     * @memberof CeleryTask
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof CeleryTask
-     */
     'task_id': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof CeleryTask
-     */
     'name'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof CeleryTask
-     */
     'dispatch_time'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof CeleryTask
-     */
     'status': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CeleryTask
-     */
     'track_reference': number;
 }
 

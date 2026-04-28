@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedPlaylist } from '../model';
 import type { Playlist } from '../model';
 /**
  * PlaylistsApi - axios parameter creator
- * @export
  */
 export const PlaylistsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsDestroy', 'id', id)
             const localVarPath = `/api/v2/playlists/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/playlists/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playlistsRetrieve', 'id', id)
             const localVarPath = `/api/v2/playlists/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'playlist' is not null or undefined
             assertParamExists('playlistsUpdate', 'playlist', playlist)
             const localVarPath = `/api/v2/playlists/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * PlaylistsApi - functional programming interface
- * @export
  */
 export const PlaylistsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PlaylistsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const PlaylistsApiFp = function(configuration?: Configuration) {
 
 /**
  * PlaylistsApi - factory interface
- * @export
  */
 export const PlaylistsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PlaylistsApiFp(configuration)
@@ -426,9 +419,6 @@ export const PlaylistsApiFactory = function (configuration?: Configuration, base
 
 /**
  * PlaylistsApi - object-oriented interface
- * @export
- * @class PlaylistsApi
- * @extends {BaseAPI}
  */
 export class PlaylistsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class PlaylistsApi extends BaseAPI {
      * @param {Playlist} playlist 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlaylistsApi
      */
     public playlistsCreate(playlist: Playlist, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsCreate(playlist, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class PlaylistsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this playlist.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlaylistsApi
      */
     public playlistsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class PlaylistsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlaylistsApi
      */
     public playlistsList(options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class PlaylistsApi extends BaseAPI {
      * @param {PatchedPlaylist} [patchedPlaylist] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlaylistsApi
      */
     public playlistsPartialUpdate(id: number, patchedPlaylist?: PatchedPlaylist, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsPartialUpdate(id, patchedPlaylist, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class PlaylistsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this playlist.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlaylistsApi
      */
     public playlistsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class PlaylistsApi extends BaseAPI {
      * @param {Playlist} playlist 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlaylistsApi
      */
     public playlistsUpdate(id: number, playlist: Playlist, options?: RawAxiosRequestConfig) {
         return PlaylistsApiFp(this.configuration).playlistsUpdate(id, playlist, options).then((request) => request(this.axios, this.basePath));

@@ -1,4 +1,4 @@
-# # StreamPreferences
+# StreamPreferences
 
 ## Properties
 

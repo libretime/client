@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface StreamPreferences
- */
 export interface StreamPreferences {
-    /**
-     * 
-     * @type {number}
-     * @memberof StreamPreferences
-     */
     'input_fade_transition': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof StreamPreferences
-     */
     'message_format': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof StreamPreferences
-     */
     'message_offline': string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof StreamPreferences
-     */
     'replay_gain_enabled': boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof StreamPreferences
-     */
     'replay_gain_offset': number;
 }
 

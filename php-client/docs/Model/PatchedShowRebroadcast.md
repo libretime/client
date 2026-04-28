@@ -1,4 +1,4 @@
-# # PatchedShowRebroadcast
+# PatchedShowRebroadcast
 
 ## Properties
 

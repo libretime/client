@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface Timestamp
- */
 export interface Timestamp {
-    /**
-     * 
-     * @type {number}
-     * @memberof Timestamp
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Timestamp
-     */
     'timestamp': string;
 }
 

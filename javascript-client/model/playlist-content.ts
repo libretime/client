@@ -17,89 +17,19 @@
 // @ts-ignore
 import type { PlaylistContentKindEnum } from './playlist-content-kind-enum';
 
-/**
- * 
- * @export
- * @interface PlaylistContent
- */
 export interface PlaylistContent {
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'id': number;
-    /**
-     * 
-     * @type {PlaylistContentKindEnum}
-     * @memberof PlaylistContent
-     */
     'kind': PlaylistContentKindEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'position'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'offset': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlaylistContent
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlaylistContent
-     */
     'cue_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlaylistContent
-     */
     'cue_out'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlaylistContent
-     */
     'fade_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlaylistContent
-     */
     'fade_out'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'playlist'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'file'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'stream'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlaylistContent
-     */
     'block'?: number | null;
 }
 

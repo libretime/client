@@ -14,53 +14,13 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPlaylist
- */
 export interface PatchedPlaylist {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlaylist
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
     'created_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
     'updated_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlaylist
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlaylist
-     */
     'owner'?: number | null;
 }
 

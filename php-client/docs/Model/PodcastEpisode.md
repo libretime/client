@@ -1,4 +1,4 @@
-# # PodcastEpisode
+# PodcastEpisode
 
 ## Properties
 

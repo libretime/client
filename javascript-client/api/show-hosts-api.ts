@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedShowHost } from '../model';
 import type { ShowHost } from '../model';
 /**
  * ShowHostsApi - axios parameter creator
- * @export
  */
 export const ShowHostsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsDestroy', 'id', id)
             const localVarPath = `/api/v2/show-hosts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/show-hosts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showHostsRetrieve', 'id', id)
             const localVarPath = `/api/v2/show-hosts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'showHost' is not null or undefined
             assertParamExists('showHostsUpdate', 'showHost', showHost)
             const localVarPath = `/api/v2/show-hosts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ShowHostsApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * ShowHostsApi - functional programming interface
- * @export
  */
 export const ShowHostsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ShowHostsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ShowHostsApiFp = function(configuration?: Configuration) {
 
 /**
  * ShowHostsApi - factory interface
- * @export
  */
 export const ShowHostsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ShowHostsApiFp(configuration)
@@ -426,9 +419,6 @@ export const ShowHostsApiFactory = function (configuration?: Configuration, base
 
 /**
  * ShowHostsApi - object-oriented interface
- * @export
- * @class ShowHostsApi
- * @extends {BaseAPI}
  */
 export class ShowHostsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ShowHostsApi extends BaseAPI {
      * @param {ShowHost} showHost 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowHostsApi
      */
     public showHostsCreate(showHost: ShowHost, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsCreate(showHost, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ShowHostsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show host.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowHostsApi
      */
     public showHostsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ShowHostsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowHostsApi
      */
     public showHostsList(options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ShowHostsApi extends BaseAPI {
      * @param {PatchedShowHost} [patchedShowHost] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowHostsApi
      */
     public showHostsPartialUpdate(id: number, patchedShowHost?: PatchedShowHost, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsPartialUpdate(id, patchedShowHost, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ShowHostsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show host.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowHostsApi
      */
     public showHostsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ShowHostsApi extends BaseAPI {
      * @param {ShowHost} showHost 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowHostsApi
      */
     public showHostsUpdate(id: number, showHost: ShowHost, options?: RawAxiosRequestConfig) {
         return ShowHostsApiFp(this.configuration).showHostsUpdate(id, showHost, options).then((request) => request(this.axios, this.basePath));

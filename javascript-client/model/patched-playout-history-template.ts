@@ -14,29 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPlayoutHistoryTemplate
- */
 export interface PatchedPlayoutHistoryTemplate {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistoryTemplate
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryTemplate
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryTemplate
-     */
     'type'?: string;
 }
 

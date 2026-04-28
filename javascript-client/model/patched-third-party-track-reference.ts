@@ -14,47 +14,12 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedThirdPartyTrackReference
- */
 export interface PatchedThirdPartyTrackReference {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedThirdPartyTrackReference
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedThirdPartyTrackReference
-     */
     'service'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedThirdPartyTrackReference
-     */
     'foreign_id'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedThirdPartyTrackReference
-     */
     'upload_time'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedThirdPartyTrackReference
-     */
     'status'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedThirdPartyTrackReference
-     */
     'file'?: number | null;
 }
 

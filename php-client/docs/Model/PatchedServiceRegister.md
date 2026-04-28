@@ -1,4 +1,4 @@
-# # PatchedServiceRegister
+# PatchedServiceRegister
 
 ## Properties
 

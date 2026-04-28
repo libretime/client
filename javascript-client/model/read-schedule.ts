@@ -17,101 +17,21 @@
 // @ts-ignore
 import type { PositionStatusEnum } from './position-status-enum';
 
-/**
- * 
- * @export
- * @interface ReadSchedule
- */
 export interface ReadSchedule {
-    /**
-     * 
-     * @type {number}
-     * @memberof ReadSchedule
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'cue_out': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'ends_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'starts_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'fade_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'fade_out'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ReadSchedule
-     */
     'cue_in': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ReadSchedule
-     */
     'position': number;
-    /**
-     * 
-     * @type {PositionStatusEnum}
-     * @memberof ReadSchedule
-     */
     'position_status'?: PositionStatusEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof ReadSchedule
-     */
     'broadcasted': number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ReadSchedule
-     */
     'played'?: boolean | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ReadSchedule
-     */
     'instance': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ReadSchedule
-     */
     'file'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ReadSchedule
-     */
     'stream'?: number | null;
 }
 

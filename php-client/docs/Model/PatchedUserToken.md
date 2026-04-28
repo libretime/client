@@ -1,4 +1,4 @@
-# # PatchedUserToken
+# PatchedUserToken
 
 ## Properties
 

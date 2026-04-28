@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface StreamState
- */
 export interface StreamState {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof StreamState
-     */
     'input_main_connected': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof StreamState
-     */
     'input_main_streaming': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof StreamState
-     */
     'input_show_connected': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof StreamState
-     */
     'input_show_streaming': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof StreamState
-     */
     'schedule_streaming': boolean;
 }
 

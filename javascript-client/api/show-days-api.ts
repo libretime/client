@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedShowDays } from '../model';
 import type { ShowDays } from '../model';
 /**
  * ShowDaysApi - axios parameter creator
- * @export
  */
 export const ShowDaysApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysDestroy', 'id', id)
             const localVarPath = `/api/v2/show-days/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/show-days/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showDaysRetrieve', 'id', id)
             const localVarPath = `/api/v2/show-days/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'showDays' is not null or undefined
             assertParamExists('showDaysUpdate', 'showDays', showDays)
             const localVarPath = `/api/v2/show-days/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ShowDaysApiAxiosParamCreator = function (configuration?: Configurat
 
 /**
  * ShowDaysApi - functional programming interface
- * @export
  */
 export const ShowDaysApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ShowDaysApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ShowDaysApiFp = function(configuration?: Configuration) {
 
 /**
  * ShowDaysApi - factory interface
- * @export
  */
 export const ShowDaysApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ShowDaysApiFp(configuration)
@@ -426,9 +419,6 @@ export const ShowDaysApiFactory = function (configuration?: Configuration, baseP
 
 /**
  * ShowDaysApi - object-oriented interface
- * @export
- * @class ShowDaysApi
- * @extends {BaseAPI}
  */
 export class ShowDaysApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ShowDaysApi extends BaseAPI {
      * @param {ShowDays} showDays 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowDaysApi
      */
     public showDaysCreate(showDays: ShowDays, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysCreate(showDays, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ShowDaysApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show days.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowDaysApi
      */
     public showDaysDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ShowDaysApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowDaysApi
      */
     public showDaysList(options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ShowDaysApi extends BaseAPI {
      * @param {PatchedShowDays} [patchedShowDays] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowDaysApi
      */
     public showDaysPartialUpdate(id: number, patchedShowDays?: PatchedShowDays, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysPartialUpdate(id, patchedShowDays, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ShowDaysApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show days.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowDaysApi
      */
     public showDaysRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ShowDaysApi extends BaseAPI {
      * @param {ShowDays} showDays 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowDaysApi
      */
     public showDaysUpdate(id: number, showDays: ShowDays, options?: RawAxiosRequestConfig) {
         return ShowDaysApiFp(this.configuration).showDaysUpdate(id, showDays, options).then((request) => request(this.axios, this.basePath));

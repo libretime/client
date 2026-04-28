@@ -18,12 +18,11 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 /**
  * SchemaApi - axios parameter creator
- * @export
  */
 export const SchemaApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -61,8 +60,8 @@ export const SchemaApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['lang'] = lang;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/vnd.oai.openapi,application/yaml,application/vnd.oai.openapi+json,application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -77,7 +76,6 @@ export const SchemaApiAxiosParamCreator = function (configuration?: Configuratio
 
 /**
  * SchemaApi - functional programming interface
- * @export
  */
 export const SchemaApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = SchemaApiAxiosParamCreator(configuration)
@@ -100,7 +98,6 @@ export const SchemaApiFp = function(configuration?: Configuration) {
 
 /**
  * SchemaApi - factory interface
- * @export
  */
 export const SchemaApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = SchemaApiFp(configuration)
@@ -120,9 +117,6 @@ export const SchemaApiFactory = function (configuration?: Configuration, basePat
 
 /**
  * SchemaApi - object-oriented interface
- * @export
- * @class SchemaApi
- * @extends {BaseAPI}
  */
 export class SchemaApi extends BaseAPI {
     /**
@@ -131,24 +125,17 @@ export class SchemaApi extends BaseAPI {
      * @param {SchemaRetrieveLangEnum} [lang] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SchemaApi
      */
     public schemaRetrieve(format?: SchemaRetrieveFormatEnum, lang?: SchemaRetrieveLangEnum, options?: RawAxiosRequestConfig) {
         return SchemaApiFp(this.configuration).schemaRetrieve(format, lang, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const SchemaRetrieveFormatEnum = {
     Json: 'json',
-    Yaml: 'yaml'
+    Yaml: 'yaml',
 } as const;
 export type SchemaRetrieveFormatEnum = typeof SchemaRetrieveFormatEnum[keyof typeof SchemaRetrieveFormatEnum];
-/**
- * @export
- */
 export const SchemaRetrieveLangEnum = {
     Af: 'af',
     Ar: 'ar',
@@ -247,6 +234,6 @@ export const SchemaRetrieveLangEnum = {
     Uz: 'uz',
     Vi: 'vi',
     ZhHans: 'zh-hans',
-    ZhHant: 'zh-hant'
+    ZhHant: 'zh-hant',
 } as const;
 export type SchemaRetrieveLangEnum = typeof SchemaRetrieveLangEnum[keyof typeof SchemaRetrieveLangEnum];

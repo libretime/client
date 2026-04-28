@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface MountName
- */
 export interface MountName {
-    /**
-     * 
-     * @type {number}
-     * @memberof MountName
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof MountName
-     */
     'mount_name': string;
 }
 

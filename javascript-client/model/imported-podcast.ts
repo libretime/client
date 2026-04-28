@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface ImportedPodcast
- */
 export interface ImportedPodcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof ImportedPodcast
-     */
     'id': number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ImportedPodcast
-     */
     'override_album': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ImportedPodcast
-     */
     'auto_ingest': boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof ImportedPodcast
-     */
     'auto_ingested_at'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ImportedPodcast
-     */
     'podcast': number;
 }
 

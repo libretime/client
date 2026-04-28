@@ -14,71 +14,16 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedSmartBlockContent
- */
 export interface PatchedSmartBlockContent {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockContent
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockContent
-     */
     'position'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockContent
-     */
     'offset'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockContent
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockContent
-     */
     'cue_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockContent
-     */
     'cue_out'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockContent
-     */
     'fade_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedSmartBlockContent
-     */
     'fade_out'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockContent
-     */
     'block'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedSmartBlockContent
-     */
     'file'?: number | null;
 }
 

@@ -1,4 +1,4 @@
-# # PatchedLiveLog
+# PatchedLiveLog
 
 ## Properties
 

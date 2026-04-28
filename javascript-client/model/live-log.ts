@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface LiveLog
- */
 export interface LiveLog {
-    /**
-     * 
-     * @type {number}
-     * @memberof LiveLog
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof LiveLog
-     */
     'state': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof LiveLog
-     */
     'start_time': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof LiveLog
-     */
     'end_time'?: string | null;
 }
 

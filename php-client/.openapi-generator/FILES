@@ -80,7 +80,6 @@ docs/Model/PatchedShowRebroadcast.md
 docs/Model/PatchedSmartBlock.md
 docs/Model/PatchedSmartBlockContent.md
 docs/Model/PatchedSmartBlockCriteria.md
-docs/Model/PatchedSmartBlockKind.md
 docs/Model/PatchedStationPodcast.md
 docs/Model/PatchedThirdPartyTrackReference.md
 docs/Model/PatchedTimestamp.md
@@ -208,7 +207,6 @@ lib/Model/PatchedShowRebroadcast.php
 lib/Model/PatchedSmartBlock.php
 lib/Model/PatchedSmartBlockContent.php
 lib/Model/PatchedSmartBlockCriteria.php
-lib/Model/PatchedSmartBlockKind.php
 lib/Model/PatchedStationPodcast.php
 lib/Model/PatchedThirdPartyTrackReference.php
 lib/Model/PatchedTimestamp.php

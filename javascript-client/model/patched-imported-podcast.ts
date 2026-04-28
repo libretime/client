@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedImportedPodcast
- */
 export interface PatchedImportedPodcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedImportedPodcast
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedImportedPodcast
-     */
     'override_album'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedImportedPodcast
-     */
     'auto_ingest'?: boolean;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedImportedPodcast
-     */
     'auto_ingested_at'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedImportedPodcast
-     */
     'podcast'?: number;
 }
 

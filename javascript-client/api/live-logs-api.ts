@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { LiveLog } from '../model';
 import type { PatchedLiveLog } from '../model';
 /**
  * LiveLogsApi - axios parameter creator
- * @export
  */
 export const LiveLogsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsDestroy', 'id', id)
             const localVarPath = `/api/v2/live-logs/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/live-logs/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('liveLogsRetrieve', 'id', id)
             const localVarPath = `/api/v2/live-logs/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'liveLog' is not null or undefined
             assertParamExists('liveLogsUpdate', 'liveLog', liveLog)
             const localVarPath = `/api/v2/live-logs/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const LiveLogsApiAxiosParamCreator = function (configuration?: Configurat
 
 /**
  * LiveLogsApi - functional programming interface
- * @export
  */
 export const LiveLogsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = LiveLogsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const LiveLogsApiFp = function(configuration?: Configuration) {
 
 /**
  * LiveLogsApi - factory interface
- * @export
  */
 export const LiveLogsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = LiveLogsApiFp(configuration)
@@ -426,9 +419,6 @@ export const LiveLogsApiFactory = function (configuration?: Configuration, baseP
 
 /**
  * LiveLogsApi - object-oriented interface
- * @export
- * @class LiveLogsApi
- * @extends {BaseAPI}
  */
 export class LiveLogsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class LiveLogsApi extends BaseAPI {
      * @param {LiveLog} liveLog 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LiveLogsApi
      */
     public liveLogsCreate(liveLog: LiveLog, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsCreate(liveLog, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class LiveLogsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this live log.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LiveLogsApi
      */
     public liveLogsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class LiveLogsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LiveLogsApi
      */
     public liveLogsList(options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class LiveLogsApi extends BaseAPI {
      * @param {PatchedLiveLog} [patchedLiveLog] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LiveLogsApi
      */
     public liveLogsPartialUpdate(id: number, patchedLiveLog?: PatchedLiveLog, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsPartialUpdate(id, patchedLiveLog, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class LiveLogsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this live log.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LiveLogsApi
      */
     public liveLogsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class LiveLogsApi extends BaseAPI {
      * @param {LiveLog} liveLog 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LiveLogsApi
      */
     public liveLogsUpdate(id: number, liveLog: LiveLog, options?: RawAxiosRequestConfig) {
         return LiveLogsApiFp(this.configuration).liveLogsUpdate(id, liveLog, options).then((request) => request(this.axios, this.basePath));

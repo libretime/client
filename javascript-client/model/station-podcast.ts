@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface StationPodcast
- */
 export interface StationPodcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof StationPodcast
-     */
     'id': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof StationPodcast
-     */
     'podcast': number;
 }
 

@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PlayoutHistoryMetadata
- */
 export interface PlayoutHistoryMetadata {
-    /**
-     * 
-     * @type {number}
-     * @memberof PlayoutHistoryMetadata
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlayoutHistoryMetadata
-     */
     'key': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PlayoutHistoryMetadata
-     */
     'value': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PlayoutHistoryMetadata
-     */
     'history': number;
 }
 

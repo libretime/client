@@ -1,4 +1,4 @@
-# # BlankEnum
+# BlankEnum
 
 ## Properties
 

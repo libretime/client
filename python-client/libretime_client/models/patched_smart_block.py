@@ -18,12 +18,12 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from libretime_client.models.patched_smart_block_kind import PatchedSmartBlockKind
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class PatchedSmartBlock(BaseModel):
     """
@@ -35,12 +35,23 @@ class PatchedSmartBlock(BaseModel):
     name: Optional[Annotated[str, Field(strict=True, max_length=255)]] = None
     description: Optional[Annotated[str, Field(strict=True, max_length=512)]] = None
     length: Optional[StrictStr] = None
-    kind: Optional[PatchedSmartBlockKind] = None
+    kind: Optional[StrictStr] = None
     owner: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["id", "created_at", "updated_at", "name", "description", "length", "kind", "owner"]
 
+    @field_validator('kind')
+    def kind_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['static', 'dynamic', '']):
+            raise ValueError("must be one of enum values ('static', 'dynamic', '')")
+        return value
+
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -52,8 +63,7 @@ class PatchedSmartBlock(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
@@ -80,9 +90,6 @@ class PatchedSmartBlock(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of kind
-        if self.kind:
-            _dict['kind'] = self.kind.to_dict()
         # set to None if created_at (nullable) is None
         # and model_fields_set contains the field
         if self.created_at is None and "created_at" in self.model_fields_set:
@@ -131,7 +138,7 @@ class PatchedSmartBlock(BaseModel):
             "name": obj.get("name"),
             "description": obj.get("description"),
             "length": obj.get("length"),
-            "kind": PatchedSmartBlockKind.from_dict(obj["kind"]) if obj.get("kind") is not None else None,
+            "kind": obj.get("kind"),
             "owner": obj.get("owner")
         })
         return _obj

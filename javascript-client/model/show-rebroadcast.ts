@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface ShowRebroadcast
- */
 export interface ShowRebroadcast {
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowRebroadcast
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowRebroadcast
-     */
     'day_offset': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ShowRebroadcast
-     */
     'start_time': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowRebroadcast
-     */
     'show': number;
 }
 

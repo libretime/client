@@ -1,4 +1,4 @@
-# # RecordEnabledEnum
+# RecordEnabledEnum
 
 ## Properties
 

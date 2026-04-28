@@ -1,4 +1,4 @@
-# # PatchedShowHost
+# PatchedShowHost
 
 ## Properties
 

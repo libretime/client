@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface Preference
- */
 export interface Preference {
-    /**
-     * 
-     * @type {number}
-     * @memberof Preference
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Preference
-     */
     'key': string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Preference
-     */
     'value'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof Preference
-     */
     'user': number | null;
 }
 

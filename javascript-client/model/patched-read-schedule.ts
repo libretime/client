@@ -17,101 +17,21 @@
 // @ts-ignore
 import type { PositionStatusEnum } from './position-status-enum';
 
-/**
- * 
- * @export
- * @interface PatchedReadSchedule
- */
 export interface PatchedReadSchedule {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedReadSchedule
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'cue_out'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'ends_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'starts_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'fade_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'fade_out'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedReadSchedule
-     */
     'cue_in'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedReadSchedule
-     */
     'position'?: number;
-    /**
-     * 
-     * @type {PositionStatusEnum}
-     * @memberof PatchedReadSchedule
-     */
     'position_status'?: PositionStatusEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedReadSchedule
-     */
     'broadcasted'?: number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedReadSchedule
-     */
     'played'?: boolean | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedReadSchedule
-     */
     'instance'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedReadSchedule
-     */
     'file'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedReadSchedule
-     */
     'stream'?: number | null;
 }
 

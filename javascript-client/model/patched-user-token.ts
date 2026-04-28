@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedUserToken
- */
 export interface PatchedUserToken {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedUserToken
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUserToken
-     */
     'action'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUserToken
-     */
     'token'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedUserToken
-     */
     'created'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedUserToken
-     */
     'user'?: number;
 }
 

@@ -1,4 +1,4 @@
-# # ServiceRegister
+# ServiceRegister
 
 ## Properties
 

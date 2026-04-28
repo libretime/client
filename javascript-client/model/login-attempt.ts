@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface LoginAttempt
- */
 export interface LoginAttempt {
-    /**
-     * 
-     * @type {string}
-     * @memberof LoginAttempt
-     */
     'ip': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof LoginAttempt
-     */
     'attempts'?: number | null;
 }
 

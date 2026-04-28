@@ -1,4 +1,4 @@
-# # LoginAttempt
+# LoginAttempt
 
 ## Properties
 

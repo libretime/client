@@ -14,29 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @interface ShowHost
- */
 export interface ShowHost {
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowHost
-     */
     'id': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowHost
-     */
     'show': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ShowHost
-     */
     'user': number;
 }
 

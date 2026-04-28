@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { Library } from '../model';
 import type { PatchedLibrary } from '../model';
 /**
  * LibrariesApi - axios parameter creator
- * @export
  */
 export const LibrariesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesDestroy', 'id', id)
             const localVarPath = `/api/v2/libraries/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/libraries/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'id' is not null or undefined
             assertParamExists('librariesRetrieve', 'id', id)
             const localVarPath = `/api/v2/libraries/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
             // verify required parameter 'library' is not null or undefined
             assertParamExists('librariesUpdate', 'library', library)
             const localVarPath = `/api/v2/libraries/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const LibrariesApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * LibrariesApi - functional programming interface
- * @export
  */
 export const LibrariesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = LibrariesApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const LibrariesApiFp = function(configuration?: Configuration) {
 
 /**
  * LibrariesApi - factory interface
- * @export
  */
 export const LibrariesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = LibrariesApiFp(configuration)
@@ -426,9 +419,6 @@ export const LibrariesApiFactory = function (configuration?: Configuration, base
 
 /**
  * LibrariesApi - object-oriented interface
- * @export
- * @class LibrariesApi
- * @extends {BaseAPI}
  */
 export class LibrariesApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class LibrariesApi extends BaseAPI {
      * @param {Library} library 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LibrariesApi
      */
     public librariesCreate(library: Library, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesCreate(library, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class LibrariesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this library.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LibrariesApi
      */
     public librariesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class LibrariesApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LibrariesApi
      */
     public librariesList(options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class LibrariesApi extends BaseAPI {
      * @param {PatchedLibrary} [patchedLibrary] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LibrariesApi
      */
     public librariesPartialUpdate(id: number, patchedLibrary?: PatchedLibrary, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesPartialUpdate(id, patchedLibrary, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class LibrariesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this library.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LibrariesApi
      */
     public librariesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class LibrariesApi extends BaseAPI {
      * @param {Library} library 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LibrariesApi
      */
     public librariesUpdate(id: number, library: Library, options?: RawAxiosRequestConfig) {
         return LibrariesApiFp(this.configuration).librariesUpdate(id, library, options).then((request) => request(this.axios, this.basePath));

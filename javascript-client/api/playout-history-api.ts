@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedPlayoutHistory } from '../model';
 import type { PlayoutHistory } from '../model';
 /**
  * PlayoutHistoryApi - axios parameter creator
- * @export
  */
 export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryDestroy', 'id', id)
             const localVarPath = `/api/v2/playout-history/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/playout-history/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
             // verify required parameter 'id' is not null or undefined
             assertParamExists('playoutHistoryRetrieve', 'id', id)
             const localVarPath = `/api/v2/playout-history/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
             // verify required parameter 'playoutHistory' is not null or undefined
             assertParamExists('playoutHistoryUpdate', 'playoutHistory', playoutHistory)
             const localVarPath = `/api/v2/playout-history/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const PlayoutHistoryApiAxiosParamCreator = function (configuration?: Conf
 
 /**
  * PlayoutHistoryApi - functional programming interface
- * @export
  */
 export const PlayoutHistoryApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PlayoutHistoryApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const PlayoutHistoryApiFp = function(configuration?: Configuration) {
 
 /**
  * PlayoutHistoryApi - factory interface
- * @export
  */
 export const PlayoutHistoryApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PlayoutHistoryApiFp(configuration)
@@ -426,9 +419,6 @@ export const PlayoutHistoryApiFactory = function (configuration?: Configuration,
 
 /**
  * PlayoutHistoryApi - object-oriented interface
- * @export
- * @class PlayoutHistoryApi
- * @extends {BaseAPI}
  */
 export class PlayoutHistoryApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class PlayoutHistoryApi extends BaseAPI {
      * @param {PlayoutHistory} playoutHistory 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlayoutHistoryApi
      */
     public playoutHistoryCreate(playoutHistory: PlayoutHistory, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryCreate(playoutHistory, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class PlayoutHistoryApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this playout history.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlayoutHistoryApi
      */
     public playoutHistoryDestroy(id: number, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class PlayoutHistoryApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlayoutHistoryApi
      */
     public playoutHistoryList(options?: RawAxiosRequestConfig) {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class PlayoutHistoryApi extends BaseAPI {
      * @param {PatchedPlayoutHistory} [patchedPlayoutHistory] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlayoutHistoryApi
      */
     public playoutHistoryPartialUpdate(id: number, patchedPlayoutHistory?: PatchedPlayoutHistory, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryPartialUpdate(id, patchedPlayoutHistory, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class PlayoutHistoryApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this playout history.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlayoutHistoryApi
      */
     public playoutHistoryRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class PlayoutHistoryApi extends BaseAPI {
      * @param {PlayoutHistory} playoutHistory 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PlayoutHistoryApi
      */
     public playoutHistoryUpdate(id: number, playoutHistory: PlayoutHistory, options?: RawAxiosRequestConfig) {
         return PlayoutHistoryApiFp(this.configuration).playoutHistoryUpdate(id, playoutHistory, options).then((request) => request(this.axios, this.basePath));

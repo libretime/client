@@ -1,4 +1,4 @@
-# # SmartBlockContent
+# SmartBlockContent
 
 ## Properties
 

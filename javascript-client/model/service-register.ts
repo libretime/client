@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface ServiceRegister
- */
 export interface ServiceRegister {
-    /**
-     * 
-     * @type {string}
-     * @memberof ServiceRegister
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ServiceRegister
-     */
     'ip': string;
 }
 

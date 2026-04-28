@@ -13,63 +13,24 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { PatchedSmartBlockKind } from './patched-smart-block-kind';
 
-/**
- * 
- * @export
- * @interface SmartBlock
- */
 export interface SmartBlock {
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlock
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlock
-     */
     'created_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlock
-     */
     'updated_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlock
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlock
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlock
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {PatchedSmartBlockKind}
-     * @memberof SmartBlock
-     */
-    'kind'?: PatchedSmartBlockKind | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlock
-     */
+    'kind'?: SmartBlockKindEnum | null;
     'owner'?: number | null;
 }
+
+export const SmartBlockKindEnum = {
+    Static: 'static',
+    Dynamic: 'dynamic',
+    Empty: '',
+} as const;
+
+export type SmartBlockKindEnum = typeof SmartBlockKindEnum[keyof typeof SmartBlockKindEnum];
+
 

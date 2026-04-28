@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPlayoutHistoryMetadata
- */
 export interface PatchedPlayoutHistoryMetadata {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistoryMetadata
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryMetadata
-     */
     'key'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryMetadata
-     */
     'value'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistoryMetadata
-     */
     'history'?: number;
 }
 

@@ -1,4 +1,4 @@
-# # PatchedCeleryTask
+# PatchedCeleryTask
 
 ## Properties
 

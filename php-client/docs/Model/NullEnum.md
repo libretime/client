@@ -1,4 +1,4 @@
-# # NullEnum
+# NullEnum
 
 ## Properties
 

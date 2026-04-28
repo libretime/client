@@ -16,13 +16,11 @@
 
 /**
  * * `0` - No * `1` - Yes
- * @export
- * @enum {number}
  */
 
 export const RecordEnabledEnum = {
     NUMBER_0: 0,
-    NUMBER_1: 1
+    NUMBER_1: 1,
 } as const;
 
 export type RecordEnabledEnum = typeof RecordEnabledEnum[keyof typeof RecordEnabledEnum];

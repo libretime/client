@@ -14,119 +14,24 @@
 
 
 
-/**
- * 
- * @export
- * @interface Show
- */
 export interface Show {
-    /**
-     * 
-     * @type {number}
-     * @memberof Show
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'genre'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'url'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'image'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'foreground_color'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Show
-     */
     'background_color'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'live_enabled': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'linked': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'linkable': boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof Show
-     */
     'auto_playlist'?: number | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'auto_playlist_enabled': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'auto_playlist_repeat': boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof Show
-     */
     'intro_playlist'?: number | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'override_intro_playlist': boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof Show
-     */
     'outro_playlist'?: number | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Show
-     */
     'override_outro_playlist': boolean;
 }
 

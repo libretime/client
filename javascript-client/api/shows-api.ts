@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedShow } from '../model';
 import type { Show } from '../model';
 /**
  * ShowsApi - axios parameter creator
- * @export
  */
 export const ShowsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showsDestroy', 'id', id)
             const localVarPath = `/api/v2/shows/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/shows/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showsRetrieve', 'id', id)
             const localVarPath = `/api/v2/shows/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'show' is not null or undefined
             assertParamExists('showsUpdate', 'show', show)
             const localVarPath = `/api/v2/shows/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ShowsApiAxiosParamCreator = function (configuration?: Configuration
 
 /**
  * ShowsApi - functional programming interface
- * @export
  */
 export const ShowsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ShowsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ShowsApiFp = function(configuration?: Configuration) {
 
 /**
  * ShowsApi - factory interface
- * @export
  */
 export const ShowsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ShowsApiFp(configuration)
@@ -426,9 +419,6 @@ export const ShowsApiFactory = function (configuration?: Configuration, basePath
 
 /**
  * ShowsApi - object-oriented interface
- * @export
- * @class ShowsApi
- * @extends {BaseAPI}
  */
 export class ShowsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ShowsApi extends BaseAPI {
      * @param {Show} show 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowsApi
      */
     public showsCreate(show: Show, options?: RawAxiosRequestConfig) {
         return ShowsApiFp(this.configuration).showsCreate(show, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ShowsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowsApi
      */
     public showsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowsApiFp(this.configuration).showsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ShowsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowsApi
      */
     public showsList(options?: RawAxiosRequestConfig) {
         return ShowsApiFp(this.configuration).showsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ShowsApi extends BaseAPI {
      * @param {PatchedShow} [patchedShow] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowsApi
      */
     public showsPartialUpdate(id: number, patchedShow?: PatchedShow, options?: RawAxiosRequestConfig) {
         return ShowsApiFp(this.configuration).showsPartialUpdate(id, patchedShow, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ShowsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowsApi
      */
     public showsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowsApiFp(this.configuration).showsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ShowsApi extends BaseAPI {
      * @param {Show} show 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowsApi
      */
     public showsUpdate(id: number, show: Show, options?: RawAxiosRequestConfig) {
         return ShowsApiFp(this.configuration).showsUpdate(id, show, options).then((request) => request(this.axios, this.basePath));

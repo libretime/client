@@ -1,4 +1,4 @@
-# # FileImportStatusEnum
+# FileImportStatusEnum
 
 ## Properties
 

@@ -16,8 +16,6 @@
 
 /**
  * * `0` - Every week * `1` - Every 2 weeks * `4` - Every 3 weeks * `5` - Every 4 weeks * `2` - Every month
- * @export
- * @enum {number}
  */
 
 export const RepeatKindEnum = {
@@ -25,7 +23,7 @@ export const RepeatKindEnum = {
     NUMBER_1: 1,
     NUMBER_4: 4,
     NUMBER_5: 5,
-    NUMBER_2: 2
+    NUMBER_2: 2,
 } as const;
 
 export type RepeatKindEnum = typeof RepeatKindEnum[keyof typeof RepeatKindEnum];

@@ -14,53 +14,13 @@
 
 
 
-/**
- * 
- * @export
- * @interface Playlist
- */
 export interface Playlist {
-    /**
-     * 
-     * @type {number}
-     * @memberof Playlist
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
     'created_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
     'updated_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Playlist
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof Playlist
-     */
     'owner'?: number | null;
 }
 

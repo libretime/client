@@ -37,7 +37,6 @@ export * from './patched-show-rebroadcast';
 export * from './patched-smart-block';
 export * from './patched-smart-block-content';
 export * from './patched-smart-block-criteria';
-export * from './patched-smart-block-kind';
 export * from './patched-station-podcast';
 export * from './patched-third-party-track-reference';
 export * from './patched-timestamp';

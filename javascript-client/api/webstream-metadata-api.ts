@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedWebstreamMetadata } from '../model';
 import type { WebstreamMetadata } from '../model';
 /**
  * WebstreamMetadataApi - axios parameter creator
- * @export
  */
 export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataDestroy', 'id', id)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamMetadataRetrieve', 'id', id)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
             // verify required parameter 'webstreamMetadata' is not null or undefined
             assertParamExists('webstreamMetadataUpdate', 'webstreamMetadata', webstreamMetadata)
             const localVarPath = `/api/v2/webstream-metadata/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const WebstreamMetadataApiAxiosParamCreator = function (configuration?: C
 
 /**
  * WebstreamMetadataApi - functional programming interface
- * @export
  */
 export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = WebstreamMetadataApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const WebstreamMetadataApiFp = function(configuration?: Configuration) {
 
 /**
  * WebstreamMetadataApi - factory interface
- * @export
  */
 export const WebstreamMetadataApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = WebstreamMetadataApiFp(configuration)
@@ -426,9 +419,6 @@ export const WebstreamMetadataApiFactory = function (configuration?: Configurati
 
 /**
  * WebstreamMetadataApi - object-oriented interface
- * @export
- * @class WebstreamMetadataApi
- * @extends {BaseAPI}
  */
 export class WebstreamMetadataApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @param {WebstreamMetadata} webstreamMetadata 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamMetadataApi
      */
     public webstreamMetadataCreate(webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataCreate(webstreamMetadata, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this webstream metadata.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamMetadataApi
      */
     public webstreamMetadataDestroy(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class WebstreamMetadataApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamMetadataApi
      */
     public webstreamMetadataList(options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @param {PatchedWebstreamMetadata} [patchedWebstreamMetadata] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamMetadataApi
      */
     public webstreamMetadataPartialUpdate(id: number, patchedWebstreamMetadata?: PatchedWebstreamMetadata, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataPartialUpdate(id, patchedWebstreamMetadata, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this webstream metadata.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamMetadataApi
      */
     public webstreamMetadataRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class WebstreamMetadataApi extends BaseAPI {
      * @param {WebstreamMetadata} webstreamMetadata 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamMetadataApi
      */
     public webstreamMetadataUpdate(id: number, webstreamMetadata: WebstreamMetadata, options?: RawAxiosRequestConfig) {
         return WebstreamMetadataApiFp(this.configuration).webstreamMetadataUpdate(id, webstreamMetadata, options).then((request) => request(this.axios, this.basePath));

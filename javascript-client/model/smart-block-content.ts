@@ -14,71 +14,16 @@
 
 
 
-/**
- * 
- * @export
- * @interface SmartBlockContent
- */
 export interface SmartBlockContent {
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockContent
-     */
     'id': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockContent
-     */
     'position'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockContent
-     */
     'offset': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockContent
-     */
     'length'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockContent
-     */
     'cue_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockContent
-     */
     'cue_out'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockContent
-     */
     'fade_in'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockContent
-     */
     'fade_out'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockContent
-     */
     'block'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockContent
-     */
     'file'?: number | null;
 }
 

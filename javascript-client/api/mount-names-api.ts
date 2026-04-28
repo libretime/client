@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { MountName } from '../model';
 import type { PatchedMountName } from '../model';
 /**
  * MountNamesApi - axios parameter creator
- * @export
  */
 export const MountNamesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesDestroy', 'id', id)
             const localVarPath = `/api/v2/mount-names/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/mount-names/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('mountNamesRetrieve', 'id', id)
             const localVarPath = `/api/v2/mount-names/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'mountName' is not null or undefined
             assertParamExists('mountNamesUpdate', 'mountName', mountName)
             const localVarPath = `/api/v2/mount-names/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const MountNamesApiAxiosParamCreator = function (configuration?: Configur
 
 /**
  * MountNamesApi - functional programming interface
- * @export
  */
 export const MountNamesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = MountNamesApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const MountNamesApiFp = function(configuration?: Configuration) {
 
 /**
  * MountNamesApi - factory interface
- * @export
  */
 export const MountNamesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = MountNamesApiFp(configuration)
@@ -426,9 +419,6 @@ export const MountNamesApiFactory = function (configuration?: Configuration, bas
 
 /**
  * MountNamesApi - object-oriented interface
- * @export
- * @class MountNamesApi
- * @extends {BaseAPI}
  */
 export class MountNamesApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class MountNamesApi extends BaseAPI {
      * @param {MountName} mountName 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountNamesApi
      */
     public mountNamesCreate(mountName: MountName, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesCreate(mountName, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class MountNamesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this mount name.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountNamesApi
      */
     public mountNamesDestroy(id: number, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class MountNamesApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountNamesApi
      */
     public mountNamesList(options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class MountNamesApi extends BaseAPI {
      * @param {PatchedMountName} [patchedMountName] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountNamesApi
      */
     public mountNamesPartialUpdate(id: number, patchedMountName?: PatchedMountName, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesPartialUpdate(id, patchedMountName, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class MountNamesApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this mount name.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountNamesApi
      */
     public mountNamesRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class MountNamesApi extends BaseAPI {
      * @param {MountName} mountName 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountNamesApi
      */
     public mountNamesUpdate(id: number, mountName: MountName, options?: RawAxiosRequestConfig) {
         return MountNamesApiFp(this.configuration).mountNamesUpdate(id, mountName, options).then((request) => request(this.axios, this.basePath));

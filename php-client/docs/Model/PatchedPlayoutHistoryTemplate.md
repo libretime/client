@@ -1,4 +1,4 @@
-# # PatchedPlayoutHistoryTemplate
+# PatchedPlayoutHistoryTemplate
 
 ## Properties
 

@@ -14,71 +14,16 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedWebstream
- */
 export interface PatchedWebstream {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedWebstream
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'created_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'updated_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'last_played_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'description'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'url'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'length'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedWebstream
-     */
     'mime'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedWebstream
-     */
     'owner'?: number | null;
 }
 

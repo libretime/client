@@ -1,4 +1,4 @@
-# # PlaylistContent
+# PlaylistContent
 
 ## Properties
 

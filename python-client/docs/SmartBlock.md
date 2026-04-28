@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **description** | **str** |  | [optional] 
 **length** | **str** |  | [optional] 
-**kind** | [**PatchedSmartBlockKind**](PatchedSmartBlockKind.md) |  | [optional] 
+**kind** | **str** |  | [optional] 
 **owner** | **int** |  | [optional] 
 
 ## Example

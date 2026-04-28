@@ -14,47 +14,12 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedCeleryTask
- */
 export interface PatchedCeleryTask {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedCeleryTask
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedCeleryTask
-     */
     'task_id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedCeleryTask
-     */
     'name'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedCeleryTask
-     */
     'dispatch_time'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedCeleryTask
-     */
     'status'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedCeleryTask
-     */
     'track_reference'?: number;
 }
 

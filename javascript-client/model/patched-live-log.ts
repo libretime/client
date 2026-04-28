@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedLiveLog
- */
 export interface PatchedLiveLog {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedLiveLog
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLiveLog
-     */
     'state'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLiveLog
-     */
     'start_time'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedLiveLog
-     */
     'end_time'?: string | null;
 }
 

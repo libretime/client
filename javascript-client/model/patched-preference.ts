@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPreference
- */
 export interface PatchedPreference {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPreference
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPreference
-     */
     'key'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPreference
-     */
     'value'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPreference
-     */
     'user'?: number | null;
 }
 

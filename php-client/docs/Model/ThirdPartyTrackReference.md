@@ -1,4 +1,4 @@
-# # ThirdPartyTrackReference
+# ThirdPartyTrackReference
 
 ## Properties
 

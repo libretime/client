@@ -14,35 +14,10 @@
 
 
 
-/**
- * 
- * @export
- * @interface WebstreamMetadata
- */
 export interface WebstreamMetadata {
-    /**
-     * 
-     * @type {number}
-     * @memberof WebstreamMetadata
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof WebstreamMetadata
-     */
     'starts_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof WebstreamMetadata
-     */
     'data': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof WebstreamMetadata
-     */
     'schedule': number;
 }
 

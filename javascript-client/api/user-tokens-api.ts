@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedUserToken } from '../model';
 import type { UserToken } from '../model';
 /**
  * UserTokensApi - axios parameter creator
- * @export
  */
 export const UserTokensApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensDestroy', 'id', id)
             const localVarPath = `/api/v2/user-tokens/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/user-tokens/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('userTokensRetrieve', 'id', id)
             const localVarPath = `/api/v2/user-tokens/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'userToken' is not null or undefined
             assertParamExists('userTokensUpdate', 'userToken', userToken)
             const localVarPath = `/api/v2/user-tokens/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const UserTokensApiAxiosParamCreator = function (configuration?: Configur
 
 /**
  * UserTokensApi - functional programming interface
- * @export
  */
 export const UserTokensApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = UserTokensApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const UserTokensApiFp = function(configuration?: Configuration) {
 
 /**
  * UserTokensApi - factory interface
- * @export
  */
 export const UserTokensApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = UserTokensApiFp(configuration)
@@ -426,9 +419,6 @@ export const UserTokensApiFactory = function (configuration?: Configuration, bas
 
 /**
  * UserTokensApi - object-oriented interface
- * @export
- * @class UserTokensApi
- * @extends {BaseAPI}
  */
 export class UserTokensApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class UserTokensApi extends BaseAPI {
      * @param {UserToken} userToken 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserTokensApi
      */
     public userTokensCreate(userToken: UserToken, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensCreate(userToken, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class UserTokensApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this user token.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserTokensApi
      */
     public userTokensDestroy(id: number, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class UserTokensApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserTokensApi
      */
     public userTokensList(options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class UserTokensApi extends BaseAPI {
      * @param {PatchedUserToken} [patchedUserToken] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserTokensApi
      */
     public userTokensPartialUpdate(id: number, patchedUserToken?: PatchedUserToken, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensPartialUpdate(id, patchedUserToken, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class UserTokensApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this user token.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserTokensApi
      */
     public userTokensRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class UserTokensApi extends BaseAPI {
      * @param {UserToken} userToken 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserTokensApi
      */
     public userTokensUpdate(id: number, userToken: UserToken, options?: RawAxiosRequestConfig) {
         return UserTokensApiFp(this.configuration).userTokensUpdate(id, userToken, options).then((request) => request(this.axios, this.basePath));

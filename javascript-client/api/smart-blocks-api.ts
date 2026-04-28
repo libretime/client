@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedSmartBlock } from '../model';
 import type { SmartBlock } from '../model';
 /**
  * SmartBlocksApi - axios parameter creator
- * @export
  */
 export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlocksDestroy', 'id', id)
             const localVarPath = `/api/v2/smart-blocks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlocksPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/smart-blocks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlocksRetrieve', 'id', id)
             const localVarPath = `/api/v2/smart-blocks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
             // verify required parameter 'smartBlock' is not null or undefined
             assertParamExists('smartBlocksUpdate', 'smartBlock', smartBlock)
             const localVarPath = `/api/v2/smart-blocks/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const SmartBlocksApiAxiosParamCreator = function (configuration?: Configu
 
 /**
  * SmartBlocksApi - functional programming interface
- * @export
  */
 export const SmartBlocksApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = SmartBlocksApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const SmartBlocksApiFp = function(configuration?: Configuration) {
 
 /**
  * SmartBlocksApi - factory interface
- * @export
  */
 export const SmartBlocksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = SmartBlocksApiFp(configuration)
@@ -426,9 +419,6 @@ export const SmartBlocksApiFactory = function (configuration?: Configuration, ba
 
 /**
  * SmartBlocksApi - object-oriented interface
- * @export
- * @class SmartBlocksApi
- * @extends {BaseAPI}
  */
 export class SmartBlocksApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class SmartBlocksApi extends BaseAPI {
      * @param {SmartBlock} smartBlock 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlocksApi
      */
     public smartBlocksCreate(smartBlock: SmartBlock, options?: RawAxiosRequestConfig) {
         return SmartBlocksApiFp(this.configuration).smartBlocksCreate(smartBlock, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class SmartBlocksApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this smart block.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlocksApi
      */
     public smartBlocksDestroy(id: number, options?: RawAxiosRequestConfig) {
         return SmartBlocksApiFp(this.configuration).smartBlocksDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class SmartBlocksApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlocksApi
      */
     public smartBlocksList(options?: RawAxiosRequestConfig) {
         return SmartBlocksApiFp(this.configuration).smartBlocksList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class SmartBlocksApi extends BaseAPI {
      * @param {PatchedSmartBlock} [patchedSmartBlock] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlocksApi
      */
     public smartBlocksPartialUpdate(id: number, patchedSmartBlock?: PatchedSmartBlock, options?: RawAxiosRequestConfig) {
         return SmartBlocksApiFp(this.configuration).smartBlocksPartialUpdate(id, patchedSmartBlock, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class SmartBlocksApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this smart block.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlocksApi
      */
     public smartBlocksRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return SmartBlocksApiFp(this.configuration).smartBlocksRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class SmartBlocksApi extends BaseAPI {
      * @param {SmartBlock} smartBlock 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlocksApi
      */
     public smartBlocksUpdate(id: number, smartBlock: SmartBlock, options?: RawAxiosRequestConfig) {
         return SmartBlocksApiFp(this.configuration).smartBlocksUpdate(id, smartBlock, options).then((request) => request(this.axios, this.basePath));

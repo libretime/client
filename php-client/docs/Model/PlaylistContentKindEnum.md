@@ -1,4 +1,4 @@
-# # PlaylistContentKindEnum
+# PlaylistContentKindEnum
 
 ## Properties
 

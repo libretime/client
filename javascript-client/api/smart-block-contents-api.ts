@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedSmartBlockContent } from '../model';
 import type { SmartBlockContent } from '../model';
 /**
  * SmartBlockContentsApi - axios parameter creator
- * @export
  */
 export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsDestroy', 'id', id)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
             // verify required parameter 'id' is not null or undefined
             assertParamExists('smartBlockContentsRetrieve', 'id', id)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
             // verify required parameter 'smartBlockContent' is not null or undefined
             assertParamExists('smartBlockContentsUpdate', 'smartBlockContent', smartBlockContent)
             const localVarPath = `/api/v2/smart-block-contents/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const SmartBlockContentsApiAxiosParamCreator = function (configuration?: 
 
 /**
  * SmartBlockContentsApi - functional programming interface
- * @export
  */
 export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = SmartBlockContentsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const SmartBlockContentsApiFp = function(configuration?: Configuration) {
 
 /**
  * SmartBlockContentsApi - factory interface
- * @export
  */
 export const SmartBlockContentsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = SmartBlockContentsApiFp(configuration)
@@ -426,9 +419,6 @@ export const SmartBlockContentsApiFactory = function (configuration?: Configurat
 
 /**
  * SmartBlockContentsApi - object-oriented interface
- * @export
- * @class SmartBlockContentsApi
- * @extends {BaseAPI}
  */
 export class SmartBlockContentsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @param {SmartBlockContent} smartBlockContent 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlockContentsApi
      */
     public smartBlockContentsCreate(smartBlockContent: SmartBlockContent, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsCreate(smartBlockContent, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this smart block content.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlockContentsApi
      */
     public smartBlockContentsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class SmartBlockContentsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlockContentsApi
      */
     public smartBlockContentsList(options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @param {PatchedSmartBlockContent} [patchedSmartBlockContent] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlockContentsApi
      */
     public smartBlockContentsPartialUpdate(id: number, patchedSmartBlockContent?: PatchedSmartBlockContent, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsPartialUpdate(id, patchedSmartBlockContent, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this smart block content.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlockContentsApi
      */
     public smartBlockContentsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class SmartBlockContentsApi extends BaseAPI {
      * @param {SmartBlockContent} smartBlockContent 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SmartBlockContentsApi
      */
     public smartBlockContentsUpdate(id: number, smartBlockContent: SmartBlockContent, options?: RawAxiosRequestConfig) {
         return SmartBlockContentsApiFp(this.configuration).smartBlockContentsUpdate(id, smartBlockContent, options).then((request) => request(this.axios, this.basePath));

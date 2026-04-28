@@ -14,71 +14,16 @@
 
 
 
-/**
- * 
- * @export
- * @interface Webstream
- */
 export interface Webstream {
-    /**
-     * 
-     * @type {number}
-     * @memberof Webstream
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'updated_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'last_played_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'description': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'url': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'length': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Webstream
-     */
     'mime'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof Webstream
-     */
     'owner'?: number | null;
 }
 

@@ -91,7 +91,6 @@ docs/PatchedShowRebroadcast.md
 docs/PatchedSmartBlock.md
 docs/PatchedSmartBlockContent.md
 docs/PatchedSmartBlockCriteria.md
-docs/PatchedSmartBlockKind.md
 docs/PatchedStationPodcast.md
 docs/PatchedThirdPartyTrackReference.md
 docs/PatchedTimestamp.md
@@ -206,7 +205,6 @@ model/patched-show-rebroadcast.ts
 model/patched-show.ts
 model/patched-smart-block-content.ts
 model/patched-smart-block-criteria.ts
-model/patched-smart-block-kind.ts
 model/patched-smart-block.ts
 model/patched-station-podcast.ts
 model/patched-third-party-track-reference.ts

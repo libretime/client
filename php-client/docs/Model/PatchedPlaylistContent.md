@@ -1,4 +1,4 @@
-# # PatchedPlaylistContent
+# PatchedPlaylistContent
 
 ## Properties
 

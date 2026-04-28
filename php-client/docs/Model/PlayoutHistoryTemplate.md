@@ -1,4 +1,4 @@
-# # PlayoutHistoryTemplate
+# PlayoutHistoryTemplate
 
 ## Properties
 

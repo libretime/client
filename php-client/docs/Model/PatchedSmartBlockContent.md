@@ -1,4 +1,4 @@
-# # PatchedSmartBlockContent
+# PatchedSmartBlockContent
 
 ## Properties
 

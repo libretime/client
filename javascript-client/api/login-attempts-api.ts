@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { LoginAttempt } from '../model';
 import type { PatchedLoginAttempt } from '../model';
 /**
  * LoginAttemptsApi - axios parameter creator
- * @export
  */
 export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsDestroy', 'ip', ip)
             const localVarPath = `/api/v2/login-attempts/{ip}`
-                .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
+                .replace('{ip}', encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsPartialUpdate', 'ip', ip)
             const localVarPath = `/api/v2/login-attempts/{ip}`
-                .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
+                .replace('{ip}', encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
             // verify required parameter 'ip' is not null or undefined
             assertParamExists('loginAttemptsRetrieve', 'ip', ip)
             const localVarPath = `/api/v2/login-attempts/{ip}`
-                .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
+                .replace('{ip}', encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
             // verify required parameter 'loginAttempt' is not null or undefined
             assertParamExists('loginAttemptsUpdate', 'loginAttempt', loginAttempt)
             const localVarPath = `/api/v2/login-attempts/{ip}`
-                .replace(`{${"ip"}}`, encodeURIComponent(String(ip)));
+                .replace('{ip}', encodeURIComponent(String(ip)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const LoginAttemptsApiAxiosParamCreator = function (configuration?: Confi
 
 /**
  * LoginAttemptsApi - functional programming interface
- * @export
  */
 export const LoginAttemptsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = LoginAttemptsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const LoginAttemptsApiFp = function(configuration?: Configuration) {
 
 /**
  * LoginAttemptsApi - factory interface
- * @export
  */
 export const LoginAttemptsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = LoginAttemptsApiFp(configuration)
@@ -426,9 +419,6 @@ export const LoginAttemptsApiFactory = function (configuration?: Configuration, 
 
 /**
  * LoginAttemptsApi - object-oriented interface
- * @export
- * @class LoginAttemptsApi
- * @extends {BaseAPI}
  */
 export class LoginAttemptsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class LoginAttemptsApi extends BaseAPI {
      * @param {LoginAttempt} loginAttempt 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LoginAttemptsApi
      */
     public loginAttemptsCreate(loginAttempt: LoginAttempt, options?: RawAxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsCreate(loginAttempt, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class LoginAttemptsApi extends BaseAPI {
      * @param {string} ip A unique value identifying this login attempt.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LoginAttemptsApi
      */
     public loginAttemptsDestroy(ip: string, options?: RawAxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsDestroy(ip, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class LoginAttemptsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LoginAttemptsApi
      */
     public loginAttemptsList(options?: RawAxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class LoginAttemptsApi extends BaseAPI {
      * @param {PatchedLoginAttempt} [patchedLoginAttempt] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LoginAttemptsApi
      */
     public loginAttemptsPartialUpdate(ip: string, patchedLoginAttempt?: PatchedLoginAttempt, options?: RawAxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsPartialUpdate(ip, patchedLoginAttempt, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class LoginAttemptsApi extends BaseAPI {
      * @param {string} ip A unique value identifying this login attempt.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LoginAttemptsApi
      */
     public loginAttemptsRetrieve(ip: string, options?: RawAxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsRetrieve(ip, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class LoginAttemptsApi extends BaseAPI {
      * @param {LoginAttempt} loginAttempt 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof LoginAttemptsApi
      */
     public loginAttemptsUpdate(ip: string, loginAttempt: LoginAttempt, options?: RawAxiosRequestConfig) {
         return LoginAttemptsApiFp(this.configuration).loginAttemptsUpdate(ip, loginAttempt, options).then((request) => request(this.axios, this.basePath));

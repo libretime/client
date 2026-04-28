@@ -1,4 +1,4 @@
-# # PatchedThirdPartyTrackReference
+# PatchedThirdPartyTrackReference
 
 ## Properties
 

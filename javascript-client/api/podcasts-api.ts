@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedPodcast } from '../model';
 import type { Podcast } from '../model';
 /**
  * PodcastsApi - axios parameter creator
- * @export
  */
 export const PodcastsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('podcastsDestroy', 'id', id)
             const localVarPath = `/api/v2/podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('podcastsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('podcastsRetrieve', 'id', id)
             const localVarPath = `/api/v2/podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'podcast' is not null or undefined
             assertParamExists('podcastsUpdate', 'podcast', podcast)
             const localVarPath = `/api/v2/podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const PodcastsApiAxiosParamCreator = function (configuration?: Configurat
 
 /**
  * PodcastsApi - functional programming interface
- * @export
  */
 export const PodcastsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = PodcastsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const PodcastsApiFp = function(configuration?: Configuration) {
 
 /**
  * PodcastsApi - factory interface
- * @export
  */
 export const PodcastsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = PodcastsApiFp(configuration)
@@ -426,9 +419,6 @@ export const PodcastsApiFactory = function (configuration?: Configuration, baseP
 
 /**
  * PodcastsApi - object-oriented interface
- * @export
- * @class PodcastsApi
- * @extends {BaseAPI}
  */
 export class PodcastsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class PodcastsApi extends BaseAPI {
      * @param {Podcast} podcast 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PodcastsApi
      */
     public podcastsCreate(podcast: Podcast, options?: RawAxiosRequestConfig) {
         return PodcastsApiFp(this.configuration).podcastsCreate(podcast, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class PodcastsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this podcast.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PodcastsApi
      */
     public podcastsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return PodcastsApiFp(this.configuration).podcastsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class PodcastsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PodcastsApi
      */
     public podcastsList(options?: RawAxiosRequestConfig) {
         return PodcastsApiFp(this.configuration).podcastsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class PodcastsApi extends BaseAPI {
      * @param {PatchedPodcast} [patchedPodcast] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PodcastsApi
      */
     public podcastsPartialUpdate(id: number, patchedPodcast?: PatchedPodcast, options?: RawAxiosRequestConfig) {
         return PodcastsApiFp(this.configuration).podcastsPartialUpdate(id, patchedPodcast, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class PodcastsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this podcast.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PodcastsApi
      */
     public podcastsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return PodcastsApiFp(this.configuration).podcastsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class PodcastsApi extends BaseAPI {
      * @param {Podcast} podcast 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PodcastsApi
      */
     public podcastsUpdate(id: number, podcast: Podcast, options?: RawAxiosRequestConfig) {
         return PodcastsApiFp(this.configuration).podcastsUpdate(id, podcast, options).then((request) => request(this.axios, this.basePath));

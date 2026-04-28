@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedServiceRegister } from '../model';
 import type { ServiceRegister } from '../model';
 /**
  * ServiceRegistersApi - axios parameter creator
- * @export
  */
 export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersDestroy', 'name', name)
             const localVarPath = `/api/v2/service-registers/{name}`
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace('{name}', encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersPartialUpdate', 'name', name)
             const localVarPath = `/api/v2/service-registers/{name}`
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace('{name}', encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'name' is not null or undefined
             assertParamExists('serviceRegistersRetrieve', 'name', name)
             const localVarPath = `/api/v2/service-registers/{name}`
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace('{name}', encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'serviceRegister' is not null or undefined
             assertParamExists('serviceRegistersUpdate', 'serviceRegister', serviceRegister)
             const localVarPath = `/api/v2/service-registers/{name}`
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace('{name}', encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ServiceRegistersApiAxiosParamCreator = function (configuration?: Co
 
 /**
  * ServiceRegistersApi - functional programming interface
- * @export
  */
 export const ServiceRegistersApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ServiceRegistersApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ServiceRegistersApiFp = function(configuration?: Configuration) {
 
 /**
  * ServiceRegistersApi - factory interface
- * @export
  */
 export const ServiceRegistersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ServiceRegistersApiFp(configuration)
@@ -426,9 +419,6 @@ export const ServiceRegistersApiFactory = function (configuration?: Configuratio
 
 /**
  * ServiceRegistersApi - object-oriented interface
- * @export
- * @class ServiceRegistersApi
- * @extends {BaseAPI}
  */
 export class ServiceRegistersApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ServiceRegistersApi extends BaseAPI {
      * @param {ServiceRegister} serviceRegister 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServiceRegistersApi
      */
     public serviceRegistersCreate(serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersCreate(serviceRegister, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ServiceRegistersApi extends BaseAPI {
      * @param {string} name A unique value identifying this service register.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServiceRegistersApi
      */
     public serviceRegistersDestroy(name: string, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersDestroy(name, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ServiceRegistersApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServiceRegistersApi
      */
     public serviceRegistersList(options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ServiceRegistersApi extends BaseAPI {
      * @param {PatchedServiceRegister} [patchedServiceRegister] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServiceRegistersApi
      */
     public serviceRegistersPartialUpdate(name: string, patchedServiceRegister?: PatchedServiceRegister, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersPartialUpdate(name, patchedServiceRegister, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ServiceRegistersApi extends BaseAPI {
      * @param {string} name A unique value identifying this service register.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServiceRegistersApi
      */
     public serviceRegistersRetrieve(name: string, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersRetrieve(name, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ServiceRegistersApi extends BaseAPI {
      * @param {ServiceRegister} serviceRegister 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ServiceRegistersApi
      */
     public serviceRegistersUpdate(name: string, serviceRegister: ServiceRegister, options?: RawAxiosRequestConfig) {
         return ServiceRegistersApiFp(this.configuration).serviceRegistersUpdate(name, serviceRegister, options).then((request) => request(this.axios, this.basePath));

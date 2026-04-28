@@ -14,41 +14,11 @@
 
 
 
-/**
- * 
- * @export
- * @interface UserToken
- */
 export interface UserToken {
-    /**
-     * 
-     * @type {number}
-     * @memberof UserToken
-     */
     'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof UserToken
-     */
     'action': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UserToken
-     */
     'token': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof UserToken
-     */
     'created': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UserToken
-     */
     'user': number;
 }
 

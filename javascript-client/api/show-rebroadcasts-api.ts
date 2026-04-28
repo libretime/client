@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedShowRebroadcast } from '../model';
 import type { ShowRebroadcast } from '../model';
 /**
  * ShowRebroadcastsApi - axios parameter creator
- * @export
  */
 export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsDestroy', 'id', id)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'id' is not null or undefined
             assertParamExists('showRebroadcastsRetrieve', 'id', id)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'showRebroadcast' is not null or undefined
             assertParamExists('showRebroadcastsUpdate', 'showRebroadcast', showRebroadcast)
             const localVarPath = `/api/v2/show-rebroadcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ShowRebroadcastsApiAxiosParamCreator = function (configuration?: Co
 
 /**
  * ShowRebroadcastsApi - functional programming interface
- * @export
  */
 export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ShowRebroadcastsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ShowRebroadcastsApiFp = function(configuration?: Configuration) {
 
 /**
  * ShowRebroadcastsApi - factory interface
- * @export
  */
 export const ShowRebroadcastsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ShowRebroadcastsApiFp(configuration)
@@ -426,9 +419,6 @@ export const ShowRebroadcastsApiFactory = function (configuration?: Configuratio
 
 /**
  * ShowRebroadcastsApi - object-oriented interface
- * @export
- * @class ShowRebroadcastsApi
- * @extends {BaseAPI}
  */
 export class ShowRebroadcastsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @param {ShowRebroadcast} showRebroadcast 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowRebroadcastsApi
      */
     public showRebroadcastsCreate(showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsCreate(showRebroadcast, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show rebroadcast.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowRebroadcastsApi
      */
     public showRebroadcastsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowRebroadcastsApi
      */
     public showRebroadcastsList(options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @param {PatchedShowRebroadcast} [patchedShowRebroadcast] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowRebroadcastsApi
      */
     public showRebroadcastsPartialUpdate(id: number, patchedShowRebroadcast?: PatchedShowRebroadcast, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsPartialUpdate(id, patchedShowRebroadcast, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this show rebroadcast.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowRebroadcastsApi
      */
     public showRebroadcastsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ShowRebroadcastsApi extends BaseAPI {
      * @param {ShowRebroadcast} showRebroadcast 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ShowRebroadcastsApi
      */
     public showRebroadcastsUpdate(id: number, showRebroadcast: ShowRebroadcast, options?: RawAxiosRequestConfig) {
         return ShowRebroadcastsApiFp(this.configuration).showRebroadcastsUpdate(id, showRebroadcast, options).then((request) => request(this.axios, this.basePath));

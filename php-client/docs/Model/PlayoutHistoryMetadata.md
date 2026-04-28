@@ -1,4 +1,4 @@
-# # PlayoutHistoryMetadata
+# PlayoutHistoryMetadata
 
 ## Properties
 

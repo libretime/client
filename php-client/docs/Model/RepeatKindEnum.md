@@ -1,4 +1,4 @@
-# # RepeatKindEnum
+# RepeatKindEnum
 
 ## Properties
 

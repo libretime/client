@@ -1,4 +1,4 @@
-# # ListenerCount
+# ListenerCount
 
 ## Properties
 

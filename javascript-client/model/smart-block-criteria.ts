@@ -14,53 +14,13 @@
 
 
 
-/**
- * 
- * @export
- * @interface SmartBlockCriteria
- */
 export interface SmartBlockCriteria {
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockCriteria
-     */
     'id': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockCriteria
-     */
     'group'?: number | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockCriteria
-     */
     'criteria': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockCriteria
-     */
     'condition': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockCriteria
-     */
     'value': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof SmartBlockCriteria
-     */
     'extra'?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof SmartBlockCriteria
-     */
     'block': number;
 }
 

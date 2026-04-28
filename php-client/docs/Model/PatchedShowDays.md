@@ -1,4 +1,4 @@
-# # PatchedShowDays
+# PatchedShowDays
 
 ## Properties
 

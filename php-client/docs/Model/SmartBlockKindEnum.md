@@ -1,4 +1,4 @@
-# # SmartBlockKindEnum
+# SmartBlockKindEnum
 
 ## Properties
 

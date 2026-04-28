@@ -14,53 +14,13 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedPlayoutHistoryTemplateField
- */
 export interface PatchedPlayoutHistoryTemplateField {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'label'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'type'?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'is_file_md'?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'position'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedPlayoutHistoryTemplateField
-     */
     'template'?: number;
 }
 

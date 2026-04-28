@@ -1,4 +1,4 @@
-# # WebstreamMetadata
+# WebstreamMetadata
 
 ## Properties
 

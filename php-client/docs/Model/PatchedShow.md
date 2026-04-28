@@ -1,4 +1,4 @@
-# # PatchedShow
+# PatchedShow
 
 ## Properties
 

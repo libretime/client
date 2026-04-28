@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -29,7 +29,6 @@ import type { ReadSchedule } from '../model';
 import type { WriteSchedule } from '../model';
 /**
  * ScheduleApi - axios parameter creator
- * @export
  */
 export const ScheduleApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -60,9 +59,8 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -84,7 +82,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('scheduleDestroy', 'id', id)
             const localVarPath = `/api/v2/schedule/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -103,7 +101,6 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -180,8 +177,8 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
                     startsBefore;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -202,7 +199,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('schedulePartialUpdate', 'id', id)
             const localVarPath = `/api/v2/schedule/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -220,9 +217,8 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -244,7 +240,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'id' is not null or undefined
             assertParamExists('scheduleRetrieve', 'id', id)
             const localVarPath = `/api/v2/schedule/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -262,8 +258,8 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -286,7 +282,7 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
             // verify required parameter 'readSchedule' is not null or undefined
             assertParamExists('scheduleUpdate', 'readSchedule', readSchedule)
             const localVarPath = `/api/v2/schedule/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -304,9 +300,8 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -323,7 +318,6 @@ export const ScheduleApiAxiosParamCreator = function (configuration?: Configurat
 
 /**
  * ScheduleApi - functional programming interface
- * @export
  */
 export const ScheduleApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ScheduleApiAxiosParamCreator(configuration)
@@ -413,7 +407,6 @@ export const ScheduleApiFp = function(configuration?: Configuration) {
 
 /**
  * ScheduleApi - factory interface
- * @export
  */
 export const ScheduleApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ScheduleApiFp(configuration)
@@ -485,9 +478,6 @@ export const ScheduleApiFactory = function (configuration?: Configuration, baseP
 
 /**
  * ScheduleApi - object-oriented interface
- * @export
- * @class ScheduleApi
- * @extends {BaseAPI}
  */
 export class ScheduleApi extends BaseAPI {
     /**
@@ -495,7 +485,6 @@ export class ScheduleApi extends BaseAPI {
      * @param {WriteSchedule} writeSchedule 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ScheduleApi
      */
     public scheduleCreate(writeSchedule: WriteSchedule, options?: RawAxiosRequestConfig) {
         return ScheduleApiFp(this.configuration).scheduleCreate(writeSchedule, options).then((request) => request(this.axios, this.basePath));
@@ -506,7 +495,6 @@ export class ScheduleApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this schedule.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ScheduleApi
      */
     public scheduleDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ScheduleApiFp(this.configuration).scheduleDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -523,7 +511,6 @@ export class ScheduleApi extends BaseAPI {
      * @param {string} [startsBefore] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ScheduleApi
      */
     public scheduleList(broadcasted?: number, endsAfter?: string, endsBefore?: string, overbooked?: boolean, positionStatus?: number, startsAfter?: string, startsBefore?: string, options?: RawAxiosRequestConfig) {
         return ScheduleApiFp(this.configuration).scheduleList(broadcasted, endsAfter, endsBefore, overbooked, positionStatus, startsAfter, startsBefore, options).then((request) => request(this.axios, this.basePath));
@@ -535,7 +522,6 @@ export class ScheduleApi extends BaseAPI {
      * @param {PatchedReadSchedule} [patchedReadSchedule] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ScheduleApi
      */
     public schedulePartialUpdate(id: number, patchedReadSchedule?: PatchedReadSchedule, options?: RawAxiosRequestConfig) {
         return ScheduleApiFp(this.configuration).schedulePartialUpdate(id, patchedReadSchedule, options).then((request) => request(this.axios, this.basePath));
@@ -546,7 +532,6 @@ export class ScheduleApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this schedule.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ScheduleApi
      */
     public scheduleRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ScheduleApiFp(this.configuration).scheduleRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -558,7 +543,6 @@ export class ScheduleApi extends BaseAPI {
      * @param {ReadSchedule} readSchedule 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ScheduleApi
      */
     public scheduleUpdate(id: number, readSchedule: ReadSchedule, options?: RawAxiosRequestConfig) {
         return ScheduleApiFp(this.configuration).scheduleUpdate(id, readSchedule, options).then((request) => request(this.axios, this.basePath));

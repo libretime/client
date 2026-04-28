@@ -1,4 +1,4 @@
-# # Show
+# Show
 
 ## Properties
 

@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { ImportedPodcast } from '../model';
 import type { PatchedImportedPodcast } from '../model';
 /**
  * ImportedPodcastsApi - axios parameter creator
- * @export
  */
 export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'id' is not null or undefined
             assertParamExists('importedPodcastsDestroy', 'id', id)
             const localVarPath = `/api/v2/imported-podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'id' is not null or undefined
             assertParamExists('importedPodcastsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/imported-podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'id' is not null or undefined
             assertParamExists('importedPodcastsRetrieve', 'id', id)
             const localVarPath = `/api/v2/imported-podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
             // verify required parameter 'importedPodcast' is not null or undefined
             assertParamExists('importedPodcastsUpdate', 'importedPodcast', importedPodcast)
             const localVarPath = `/api/v2/imported-podcasts/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const ImportedPodcastsApiAxiosParamCreator = function (configuration?: Co
 
 /**
  * ImportedPodcastsApi - functional programming interface
- * @export
  */
 export const ImportedPodcastsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ImportedPodcastsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const ImportedPodcastsApiFp = function(configuration?: Configuration) {
 
 /**
  * ImportedPodcastsApi - factory interface
- * @export
  */
 export const ImportedPodcastsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ImportedPodcastsApiFp(configuration)
@@ -426,9 +419,6 @@ export const ImportedPodcastsApiFactory = function (configuration?: Configuratio
 
 /**
  * ImportedPodcastsApi - object-oriented interface
- * @export
- * @class ImportedPodcastsApi
- * @extends {BaseAPI}
  */
 export class ImportedPodcastsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class ImportedPodcastsApi extends BaseAPI {
      * @param {ImportedPodcast} importedPodcast 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ImportedPodcastsApi
      */
     public importedPodcastsCreate(importedPodcast: ImportedPodcast, options?: RawAxiosRequestConfig) {
         return ImportedPodcastsApiFp(this.configuration).importedPodcastsCreate(importedPodcast, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class ImportedPodcastsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this imported podcast.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ImportedPodcastsApi
      */
     public importedPodcastsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return ImportedPodcastsApiFp(this.configuration).importedPodcastsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class ImportedPodcastsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ImportedPodcastsApi
      */
     public importedPodcastsList(options?: RawAxiosRequestConfig) {
         return ImportedPodcastsApiFp(this.configuration).importedPodcastsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class ImportedPodcastsApi extends BaseAPI {
      * @param {PatchedImportedPodcast} [patchedImportedPodcast] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ImportedPodcastsApi
      */
     public importedPodcastsPartialUpdate(id: number, patchedImportedPodcast?: PatchedImportedPodcast, options?: RawAxiosRequestConfig) {
         return ImportedPodcastsApiFp(this.configuration).importedPodcastsPartialUpdate(id, patchedImportedPodcast, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class ImportedPodcastsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this imported podcast.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ImportedPodcastsApi
      */
     public importedPodcastsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return ImportedPodcastsApiFp(this.configuration).importedPodcastsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class ImportedPodcastsApi extends BaseAPI {
      * @param {ImportedPodcast} importedPodcast 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ImportedPodcastsApi
      */
     public importedPodcastsUpdate(id: number, importedPodcast: ImportedPodcast, options?: RawAxiosRequestConfig) {
         return ImportedPodcastsApiFp(this.configuration).importedPodcastsUpdate(id, importedPodcast, options).then((request) => request(this.axios, this.basePath));

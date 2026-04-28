@@ -16,14 +16,12 @@
 
 /**
  * * `0` - File * `1` - Stream * `2` - Block
- * @export
- * @enum {number}
  */
 
 export const PlaylistContentKindEnum = {
     NUMBER_0: 0,
     NUMBER_1: 1,
-    NUMBER_2: 2
+    NUMBER_2: 2,
 } as const;
 
 export type PlaylistContentKindEnum = typeof PlaylistContentKindEnum[keyof typeof PlaylistContentKindEnum];

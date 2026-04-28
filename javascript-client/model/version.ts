@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface Version
- */
 export interface Version {
-    /**
-     * 
-     * @type {string}
-     * @memberof Version
-     */
     'api_version': string;
 }
 

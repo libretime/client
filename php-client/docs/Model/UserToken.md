@@ -1,4 +1,4 @@
-# # UserToken
+# UserToken
 
 ## Properties
 

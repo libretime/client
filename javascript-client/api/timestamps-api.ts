@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedTimestamp } from '../model';
 import type { Timestamp } from '../model';
 /**
  * TimestampsApi - axios parameter creator
- * @export
  */
 export const TimestampsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsDestroy', 'id', id)
             const localVarPath = `/api/v2/timestamps/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/timestamps/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('timestampsRetrieve', 'id', id)
             const localVarPath = `/api/v2/timestamps/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'timestamp' is not null or undefined
             assertParamExists('timestampsUpdate', 'timestamp', timestamp)
             const localVarPath = `/api/v2/timestamps/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const TimestampsApiAxiosParamCreator = function (configuration?: Configur
 
 /**
  * TimestampsApi - functional programming interface
- * @export
  */
 export const TimestampsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = TimestampsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const TimestampsApiFp = function(configuration?: Configuration) {
 
 /**
  * TimestampsApi - factory interface
- * @export
  */
 export const TimestampsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = TimestampsApiFp(configuration)
@@ -426,9 +419,6 @@ export const TimestampsApiFactory = function (configuration?: Configuration, bas
 
 /**
  * TimestampsApi - object-oriented interface
- * @export
- * @class TimestampsApi
- * @extends {BaseAPI}
  */
 export class TimestampsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class TimestampsApi extends BaseAPI {
      * @param {Timestamp} timestamp 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TimestampsApi
      */
     public timestampsCreate(timestamp: Timestamp, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsCreate(timestamp, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class TimestampsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this timestamp.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TimestampsApi
      */
     public timestampsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class TimestampsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TimestampsApi
      */
     public timestampsList(options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class TimestampsApi extends BaseAPI {
      * @param {PatchedTimestamp} [patchedTimestamp] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TimestampsApi
      */
     public timestampsPartialUpdate(id: number, patchedTimestamp?: PatchedTimestamp, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsPartialUpdate(id, patchedTimestamp, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class TimestampsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this timestamp.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TimestampsApi
      */
     public timestampsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class TimestampsApi extends BaseAPI {
      * @param {Timestamp} timestamp 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof TimestampsApi
      */
     public timestampsUpdate(id: number, timestamp: Timestamp, options?: RawAxiosRequestConfig) {
         return TimestampsApiFp(this.configuration).timestampsUpdate(id, timestamp, options).then((request) => request(this.axios, this.basePath));

@@ -16,15 +16,13 @@
 
 /**
  * * `-1` - Filler * `0` - Outside * `1` - Inside * `2` - Boundary
- * @export
- * @enum {number}
  */
 
 export const PositionStatusEnum = {
     NUMBER_MINUS_1: -1,
     NUMBER_0: 0,
     NUMBER_1: 1,
-    NUMBER_2: 2
+    NUMBER_2: 2,
 } as const;
 
 export type PositionStatusEnum = typeof PositionStatusEnum[keyof typeof PositionStatusEnum];

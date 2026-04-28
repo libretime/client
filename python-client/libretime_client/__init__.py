@@ -104,7 +104,6 @@ __all__ = [
     "PatchedSmartBlock",
     "PatchedSmartBlockContent",
     "PatchedSmartBlockCriteria",
-    "PatchedSmartBlockKind",
     "PatchedStationPodcast",
     "PatchedThirdPartyTrackReference",
     "PatchedTimestamp",
@@ -242,7 +241,6 @@ from libretime_client.models.patched_show_rebroadcast import PatchedShowRebroadc
 from libretime_client.models.patched_smart_block import PatchedSmartBlock as PatchedSmartBlock
 from libretime_client.models.patched_smart_block_content import PatchedSmartBlockContent as PatchedSmartBlockContent
 from libretime_client.models.patched_smart_block_criteria import PatchedSmartBlockCriteria as PatchedSmartBlockCriteria
-from libretime_client.models.patched_smart_block_kind import PatchedSmartBlockKind as PatchedSmartBlockKind
 from libretime_client.models.patched_station_podcast import PatchedStationPodcast as PatchedStationPodcast
 from libretime_client.models.patched_third_party_track_reference import PatchedThirdPartyTrackReference as PatchedThirdPartyTrackReference
 from libretime_client.models.patched_timestamp import PatchedTimestamp as PatchedTimestamp
@@ -287,3 +285,4 @@ from libretime_client.models.webstream import Webstream as Webstream
 from libretime_client.models.webstream_metadata import WebstreamMetadata as WebstreamMetadata
 from libretime_client.models.week_day_enum import WeekDayEnum as WeekDayEnum
 from libretime_client.models.write_schedule import WriteSchedule as WriteSchedule
+

@@ -18,7 +18,7 @@ import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
+import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction, replaceWithSerializableTypeIfNeeded } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError, operationServerMap } from '../base';
 // @ts-ignore
@@ -27,7 +27,6 @@ import type { PatchedWebstream } from '../model';
 import type { Webstream } from '../model';
 /**
  * WebstreamsApi - axios parameter creator
- * @export
  */
 export const WebstreamsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -58,9 +57,8 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -82,7 +80,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsDestroy', 'id', id)
             const localVarPath = `/api/v2/webstreams/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -101,7 +99,6 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
             // authentication cookieAuth required
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -135,8 +132,8 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -157,7 +154,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsPartialUpdate', 'id', id)
             const localVarPath = `/api/v2/webstreams/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -175,9 +172,8 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -199,7 +195,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('webstreamsRetrieve', 'id', id)
             const localVarPath = `/api/v2/webstreams/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -217,8 +213,8 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -241,7 +237,7 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'webstream' is not null or undefined
             assertParamExists('webstreamsUpdate', 'webstream', webstream)
             const localVarPath = `/api/v2/webstreams/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+                .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -259,9 +255,8 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
 
             // authentication cookieAuth required
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -278,7 +273,6 @@ export const WebstreamsApiAxiosParamCreator = function (configuration?: Configur
 
 /**
  * WebstreamsApi - functional programming interface
- * @export
  */
 export const WebstreamsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = WebstreamsApiAxiosParamCreator(configuration)
@@ -361,7 +355,6 @@ export const WebstreamsApiFp = function(configuration?: Configuration) {
 
 /**
  * WebstreamsApi - factory interface
- * @export
  */
 export const WebstreamsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = WebstreamsApiFp(configuration)
@@ -426,9 +419,6 @@ export const WebstreamsApiFactory = function (configuration?: Configuration, bas
 
 /**
  * WebstreamsApi - object-oriented interface
- * @export
- * @class WebstreamsApi
- * @extends {BaseAPI}
  */
 export class WebstreamsApi extends BaseAPI {
     /**
@@ -436,7 +426,6 @@ export class WebstreamsApi extends BaseAPI {
      * @param {Webstream} webstream 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamsApi
      */
     public webstreamsCreate(webstream: Webstream, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsCreate(webstream, options).then((request) => request(this.axios, this.basePath));
@@ -447,7 +436,6 @@ export class WebstreamsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this webstream.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamsApi
      */
     public webstreamsDestroy(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsDestroy(id, options).then((request) => request(this.axios, this.basePath));
@@ -457,7 +445,6 @@ export class WebstreamsApi extends BaseAPI {
      * 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamsApi
      */
     public webstreamsList(options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsList(options).then((request) => request(this.axios, this.basePath));
@@ -469,7 +456,6 @@ export class WebstreamsApi extends BaseAPI {
      * @param {PatchedWebstream} [patchedWebstream] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamsApi
      */
     public webstreamsPartialUpdate(id: number, patchedWebstream?: PatchedWebstream, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsPartialUpdate(id, patchedWebstream, options).then((request) => request(this.axios, this.basePath));
@@ -480,7 +466,6 @@ export class WebstreamsApi extends BaseAPI {
      * @param {number} id A unique integer value identifying this webstream.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamsApi
      */
     public webstreamsRetrieve(id: number, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsRetrieve(id, options).then((request) => request(this.axios, this.basePath));
@@ -492,7 +477,6 @@ export class WebstreamsApi extends BaseAPI {
      * @param {Webstream} webstream 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebstreamsApi
      */
     public webstreamsUpdate(id: number, webstream: Webstream, options?: RawAxiosRequestConfig) {
         return WebstreamsApiFp(this.configuration).webstreamsUpdate(id, webstream, options).then((request) => request(this.axios, this.basePath));

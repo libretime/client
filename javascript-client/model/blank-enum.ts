@@ -14,14 +14,9 @@
 
 
 
-/**
- * 
- * @export
- * @enum {string}
- */
 
 export const BlankEnum = {
-    Empty: ''
+    Empty: '',
 } as const;
 
 export type BlankEnum = typeof BlankEnum[keyof typeof BlankEnum];

@@ -1,4 +1,4 @@
-# # PatchedPodcastEpisode
+# PatchedPodcastEpisode
 
 ## Properties
 

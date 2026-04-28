@@ -14,23 +14,8 @@
 
 
 
-/**
- * 
- * @export
- * @interface PatchedMountName
- */
 export interface PatchedMountName {
-    /**
-     * 
-     * @type {number}
-     * @memberof PatchedMountName
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PatchedMountName
-     */
     'mount_name'?: string;
 }
 

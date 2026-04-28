@@ -14,17 +14,7 @@
 
 
 
-/**
- * 
- * @export
- * @interface Info
- */
 export interface Info {
-    /**
-     * 
-     * @type {string}
-     * @memberof Info
-     */
     'station_name': string;
 }
 

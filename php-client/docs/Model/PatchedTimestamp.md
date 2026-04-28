@@ -1,4 +1,4 @@
-# # PatchedTimestamp
+# PatchedTimestamp
 
 ## Properties
 
