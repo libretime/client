@@ -97,16 +97,13 @@ class PatchedFile(BaseModel):
     edited_by: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["id", "import_status", "filepath", "size", "exists", "mime", "md5", "hidden", "accessed", "scheduled", "part_of_list", "created_at", "updated_at", "last_played_at", "bit_rate", "sample_rate", "format", "channels", "length", "bpm", "replay_gain", "cue_in", "cue_out", "name", "description", "artwork", "artist_name", "artist_url", "original_artist", "album_title", "track_title", "genre", "mood", "date", "track_number", "disc_number", "comment", "language", "label", "copyright", "composer", "conductor", "orchestra", "encoder", "encoded_by", "isrc", "lyrics", "lyricist", "original_lyricist", "subject", "contributor", "rating", "url", "info_url", "audio_source_url", "buy_this_url", "catalog_number", "radio_station_name", "radio_station_url", "report_datetime", "report_location", "report_organization", "library", "owner", "edited_by"]
 
-    @field_validator('replay_gain')
+    @field_validator('replay_gain', mode="before")
     def replay_gain_validate_regular_expression(cls, value):
         """Validates the regular expression"""
         if value is None:
             return value
 
-        if not isinstance(value, str):
-            value = str(value)
-
-        if not re.match(r"^-?\d{0,6}(?:\.\d{0,2})?$", value):
+        if isinstance(value, str) and not re.match(r"^-?\d{0,6}(?:\.\d{0,2})?$", value):
             raise ValueError(r"must validate the regular expression /^-?\d{0,6}(?:\.\d{0,2})?$/")
         return value
 
