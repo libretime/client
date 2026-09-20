@@ -33,12 +33,12 @@ class File(BaseModel):
     id: StrictInt
     import_status: Optional[FileImportStatusEnum] = None
     filepath: Optional[StrictStr] = None
-    size: Annotated[int, Field(le=2147483647, strict=True, ge=-2147483648)]
+    size: Optional[Annotated[int, Field(le=2147483647, strict=True, ge=-2147483648)]] = None
     exists: Optional[StrictBool] = None
     mime: Annotated[str, Field(strict=True, max_length=255)]
     md5: Optional[Annotated[str, Field(strict=True, max_length=32)]] = None
     hidden: Optional[StrictBool] = None
-    accessed: Annotated[int, Field(le=2147483647, strict=True, ge=-2147483648)]
+    accessed: Optional[Annotated[int, Field(le=2147483647, strict=True, ge=-2147483648)]] = None
     scheduled: Optional[StrictBool] = None
     part_of_list: Optional[StrictBool] = None
     created_at: Optional[datetime] = None

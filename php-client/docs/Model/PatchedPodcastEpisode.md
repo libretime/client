@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
+**created_at** | **\DateTime** |  | [optional] [readonly]
 **published_at** | **\DateTime** |  | [optional]
 **download_url** | **string** |  | [optional]
 **episode_guid** | **string** |  | [optional]

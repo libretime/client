@@ -3,7 +3,6 @@
 .travis.yml
 README.md
 composer.json
-docs/Api/CeleryTasksApi.md
 docs/Api/FilesApi.md
 docs/Api/ImportedPodcastsApi.md
 docs/Api/InfoApi.md
@@ -34,7 +33,6 @@ docs/Api/SmartBlockCriteriaApi.md
 docs/Api/SmartBlocksApi.md
 docs/Api/StationPodcastsApi.md
 docs/Api/StreamApi.md
-docs/Api/ThirdPartyTrackReferencesApi.md
 docs/Api/TimestampsApi.md
 docs/Api/UserTokensApi.md
 docs/Api/UsersApi.md
@@ -42,7 +40,6 @@ docs/Api/VersionApi.md
 docs/Api/WebstreamMetadataApi.md
 docs/Api/WebstreamsApi.md
 docs/Model/BlankEnum.md
-docs/Model/CeleryTask.md
 docs/Model/File.md
 docs/Model/FileImportStatusEnum.md
 docs/Model/ImportedPodcast.md
@@ -53,7 +50,6 @@ docs/Model/LiveLog.md
 docs/Model/LoginAttempt.md
 docs/Model/MountName.md
 docs/Model/NullEnum.md
-docs/Model/PatchedCeleryTask.md
 docs/Model/PatchedFile.md
 docs/Model/PatchedImportedPodcast.md
 docs/Model/PatchedLibrary.md
@@ -81,7 +77,6 @@ docs/Model/PatchedSmartBlock.md
 docs/Model/PatchedSmartBlockContent.md
 docs/Model/PatchedSmartBlockCriteria.md
 docs/Model/PatchedStationPodcast.md
-docs/Model/PatchedThirdPartyTrackReference.md
 docs/Model/PatchedTimestamp.md
 docs/Model/PatchedUser.md
 docs/Model/PatchedUserToken.md
@@ -115,7 +110,6 @@ docs/Model/SmartBlockKindEnum.md
 docs/Model/StationPodcast.md
 docs/Model/StreamPreferences.md
 docs/Model/StreamState.md
-docs/Model/ThirdPartyTrackReference.md
 docs/Model/Timestamp.md
 docs/Model/User.md
 docs/Model/UserToken.md
@@ -125,7 +119,6 @@ docs/Model/WebstreamMetadata.md
 docs/Model/WeekDayEnum.md
 docs/Model/WriteSchedule.md
 git_push.sh
-lib/Api/CeleryTasksApi.php
 lib/Api/FilesApi.php
 lib/Api/ImportedPodcastsApi.php
 lib/Api/InfoApi.php
@@ -156,7 +149,6 @@ lib/Api/SmartBlockCriteriaApi.php
 lib/Api/SmartBlocksApi.php
 lib/Api/StationPodcastsApi.php
 lib/Api/StreamApi.php
-lib/Api/ThirdPartyTrackReferencesApi.php
 lib/Api/TimestampsApi.php
 lib/Api/UserTokensApi.php
 lib/Api/UsersApi.php
@@ -168,7 +160,6 @@ lib/Configuration.php
 lib/FormDataProcessor.php
 lib/HeaderSelector.php
 lib/Model/BlankEnum.php
-lib/Model/CeleryTask.php
 lib/Model/File.php
 lib/Model/FileImportStatusEnum.php
 lib/Model/ImportedPodcast.php
@@ -180,7 +171,6 @@ lib/Model/LoginAttempt.php
 lib/Model/ModelInterface.php
 lib/Model/MountName.php
 lib/Model/NullEnum.php
-lib/Model/PatchedCeleryTask.php
 lib/Model/PatchedFile.php
 lib/Model/PatchedImportedPodcast.php
 lib/Model/PatchedLibrary.php
@@ -208,7 +198,6 @@ lib/Model/PatchedSmartBlock.php
 lib/Model/PatchedSmartBlockContent.php
 lib/Model/PatchedSmartBlockCriteria.php
 lib/Model/PatchedStationPodcast.php
-lib/Model/PatchedThirdPartyTrackReference.php
 lib/Model/PatchedTimestamp.php
 lib/Model/PatchedUser.php
 lib/Model/PatchedUserToken.php
@@ -242,7 +231,6 @@ lib/Model/SmartBlockKindEnum.php
 lib/Model/StationPodcast.php
 lib/Model/StreamPreferences.php
 lib/Model/StreamState.php
-lib/Model/ThirdPartyTrackReference.php
 lib/Model/Timestamp.php
 lib/Model/User.php
 lib/Model/UserToken.php

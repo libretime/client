@@ -2,7 +2,6 @@
 .npmignore
 README.md
 api.ts
-api/celery-tasks-api.ts
 api/files-api.ts
 api/imported-podcasts-api.ts
 api/info-api.ts
@@ -33,7 +32,6 @@ api/smart-block-criteria-api.ts
 api/smart-blocks-api.ts
 api/station-podcasts-api.ts
 api/stream-api.ts
-api/third-party-track-references-api.ts
 api/timestamps-api.ts
 api/user-tokens-api.ts
 api/users-api.ts
@@ -44,8 +42,6 @@ base.ts
 common.ts
 configuration.ts
 docs/BlankEnum.md
-docs/CeleryTask.md
-docs/CeleryTasksApi.md
 docs/File.md
 docs/FileImportStatusEnum.md
 docs/FilesApi.md
@@ -64,7 +60,6 @@ docs/LoginAttemptsApi.md
 docs/MountName.md
 docs/MountNamesApi.md
 docs/NullEnum.md
-docs/PatchedCeleryTask.md
 docs/PatchedFile.md
 docs/PatchedImportedPodcast.md
 docs/PatchedLibrary.md
@@ -92,7 +87,6 @@ docs/PatchedSmartBlock.md
 docs/PatchedSmartBlockContent.md
 docs/PatchedSmartBlockCriteria.md
 docs/PatchedStationPodcast.md
-docs/PatchedThirdPartyTrackReference.md
 docs/PatchedTimestamp.md
 docs/PatchedUser.md
 docs/PatchedUserToken.md
@@ -148,8 +142,6 @@ docs/StationPodcastsApi.md
 docs/StreamApi.md
 docs/StreamPreferences.md
 docs/StreamState.md
-docs/ThirdPartyTrackReference.md
-docs/ThirdPartyTrackReferencesApi.md
 docs/Timestamp.md
 docs/TimestampsApi.md
 docs/User.md
@@ -167,7 +159,6 @@ docs/WriteSchedule.md
 git_push.sh
 index.ts
 model/blank-enum.ts
-model/celery-task.ts
 model/file-import-status-enum.ts
 model/imported-podcast.ts
 model/index.ts
@@ -179,7 +170,6 @@ model/login-attempt.ts
 model/model-file.ts
 model/mount-name.ts
 model/null-enum.ts
-model/patched-celery-task.ts
 model/patched-file.ts
 model/patched-imported-podcast.ts
 model/patched-library.ts
@@ -207,7 +197,6 @@ model/patched-smart-block-content.ts
 model/patched-smart-block-criteria.ts
 model/patched-smart-block.ts
 model/patched-station-podcast.ts
-model/patched-third-party-track-reference.ts
 model/patched-timestamp.ts
 model/patched-user-token.ts
 model/patched-user.ts
@@ -241,7 +230,6 @@ model/smart-block.ts
 model/station-podcast.ts
 model/stream-preferences.ts
 model/stream-state.ts
-model/third-party-track-reference.ts
 model/timestamp.ts
 model/user-token.ts
 model/user.ts

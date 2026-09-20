@@ -82,15 +82,15 @@ configuration.api_key['cookieAuth'] = os.environ["API_KEY"]
 # Enter a context with an instance of the API client
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = libretime_client.CeleryTasksApi(api_client)
-    celery_task = libretime_client.CeleryTask() # CeleryTask | 
+    api_instance = libretime_client.FilesApi(api_client)
+    file = '/path/to/file' # File | 
 
     try:
-        api_response = api_instance.celery_tasks_create(celery_task)
-        print("The response of CeleryTasksApi->celery_tasks_create:\n")
+        api_response = api_instance.files_create(file)
+        print("The response of FilesApi->files_create:\n")
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling CeleryTasksApi->celery_tasks_create: %s\n" % e)
+        print("Exception when calling FilesApi->files_create: %s\n" % e)
 
 ```
 
@@ -100,12 +100,6 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CeleryTasksApi* | [**celery_tasks_create**](docs/CeleryTasksApi.md#celery_tasks_create) | **POST** /api/v2/celery-tasks | 
-*CeleryTasksApi* | [**celery_tasks_destroy**](docs/CeleryTasksApi.md#celery_tasks_destroy) | **DELETE** /api/v2/celery-tasks/{id} | 
-*CeleryTasksApi* | [**celery_tasks_list**](docs/CeleryTasksApi.md#celery_tasks_list) | **GET** /api/v2/celery-tasks | 
-*CeleryTasksApi* | [**celery_tasks_partial_update**](docs/CeleryTasksApi.md#celery_tasks_partial_update) | **PATCH** /api/v2/celery-tasks/{id} | 
-*CeleryTasksApi* | [**celery_tasks_retrieve**](docs/CeleryTasksApi.md#celery_tasks_retrieve) | **GET** /api/v2/celery-tasks/{id} | 
-*CeleryTasksApi* | [**celery_tasks_update**](docs/CeleryTasksApi.md#celery_tasks_update) | **PUT** /api/v2/celery-tasks/{id} | 
 *FilesApi* | [**files_create**](docs/FilesApi.md#files_create) | **POST** /api/v2/files | 
 *FilesApi* | [**files_destroy**](docs/FilesApi.md#files_destroy) | **DELETE** /api/v2/files/{id} | 
 *FilesApi* | [**files_download_retrieve**](docs/FilesApi.md#files_download_retrieve) | **GET** /api/v2/files/{id}/download | 
@@ -273,12 +267,6 @@ Class | Method | HTTP request | Description
 *StationPodcastsApi* | [**station_podcasts_update**](docs/StationPodcastsApi.md#station_podcasts_update) | **PUT** /api/v2/station-podcasts/{id} | 
 *StreamApi* | [**stream_preferences_retrieve**](docs/StreamApi.md#stream_preferences_retrieve) | **GET** /api/v2/stream/preferences | 
 *StreamApi* | [**stream_state_retrieve**](docs/StreamApi.md#stream_state_retrieve) | **GET** /api/v2/stream/state | 
-*ThirdPartyTrackReferencesApi* | [**third_party_track_references_create**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_create) | **POST** /api/v2/third-party-track-references | 
-*ThirdPartyTrackReferencesApi* | [**third_party_track_references_destroy**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_destroy) | **DELETE** /api/v2/third-party-track-references/{id} | 
-*ThirdPartyTrackReferencesApi* | [**third_party_track_references_list**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_list) | **GET** /api/v2/third-party-track-references | 
-*ThirdPartyTrackReferencesApi* | [**third_party_track_references_partial_update**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_partial_update) | **PATCH** /api/v2/third-party-track-references/{id} | 
-*ThirdPartyTrackReferencesApi* | [**third_party_track_references_retrieve**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_retrieve) | **GET** /api/v2/third-party-track-references/{id} | 
-*ThirdPartyTrackReferencesApi* | [**third_party_track_references_update**](docs/ThirdPartyTrackReferencesApi.md#third_party_track_references_update) | **PUT** /api/v2/third-party-track-references/{id} | 
 *TimestampsApi* | [**timestamps_create**](docs/TimestampsApi.md#timestamps_create) | **POST** /api/v2/timestamps | 
 *TimestampsApi* | [**timestamps_destroy**](docs/TimestampsApi.md#timestamps_destroy) | **DELETE** /api/v2/timestamps/{id} | 
 *TimestampsApi* | [**timestamps_list**](docs/TimestampsApi.md#timestamps_list) | **GET** /api/v2/timestamps | 
@@ -315,7 +303,6 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BlankEnum](docs/BlankEnum.md)
- - [CeleryTask](docs/CeleryTask.md)
  - [File](docs/File.md)
  - [FileImportStatusEnum](docs/FileImportStatusEnum.md)
  - [ImportedPodcast](docs/ImportedPodcast.md)
@@ -326,7 +313,6 @@ Class | Method | HTTP request | Description
  - [LoginAttempt](docs/LoginAttempt.md)
  - [MountName](docs/MountName.md)
  - [NullEnum](docs/NullEnum.md)
- - [PatchedCeleryTask](docs/PatchedCeleryTask.md)
  - [PatchedFile](docs/PatchedFile.md)
  - [PatchedImportedPodcast](docs/PatchedImportedPodcast.md)
  - [PatchedLibrary](docs/PatchedLibrary.md)
@@ -354,7 +340,6 @@ Class | Method | HTTP request | Description
  - [PatchedSmartBlockContent](docs/PatchedSmartBlockContent.md)
  - [PatchedSmartBlockCriteria](docs/PatchedSmartBlockCriteria.md)
  - [PatchedStationPodcast](docs/PatchedStationPodcast.md)
- - [PatchedThirdPartyTrackReference](docs/PatchedThirdPartyTrackReference.md)
  - [PatchedTimestamp](docs/PatchedTimestamp.md)
  - [PatchedUser](docs/PatchedUser.md)
  - [PatchedUserToken](docs/PatchedUserToken.md)
@@ -388,7 +373,6 @@ Class | Method | HTTP request | Description
  - [StationPodcast](docs/StationPodcast.md)
  - [StreamPreferences](docs/StreamPreferences.md)
  - [StreamState](docs/StreamState.md)
- - [ThirdPartyTrackReference](docs/ThirdPartyTrackReference.md)
  - [Timestamp](docs/Timestamp.md)
  - [User](docs/User.md)
  - [UserToken](docs/UserToken.md)

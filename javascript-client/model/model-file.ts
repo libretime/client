@@ -21,12 +21,12 @@ export interface ModelFile {
     'id': number;
     'import_status'?: FileImportStatusEnum;
     'filepath'?: string | null;
-    'size': number;
+    'size'?: number;
     'exists'?: boolean | null;
     'mime': string;
     'md5'?: string | null;
     'hidden'?: boolean | null;
-    'accessed': number;
+    'accessed'?: number;
     'scheduled'?: boolean | null;
     'part_of_list'?: boolean | null;
     'created_at'?: string | null;

@@ -8,12 +8,12 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly] 
 **import_status** | [**FileImportStatusEnum**](FileImportStatusEnum.md) |  | [optional] 
 **filepath** | **str** |  | [optional] 
-**size** | **int** |  | 
+**size** | **int** |  | [optional] 
 **exists** | **bool** |  | [optional] 
 **mime** | **str** |  | 
 **md5** | **str** |  | [optional] 
 **hidden** | **bool** |  | [optional] 
-**accessed** | **int** |  | 
+**accessed** | **int** |  | [optional] 
 **scheduled** | **bool** |  | [optional] 
 **part_of_list** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

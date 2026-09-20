@@ -58,6 +58,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $openAPITypes = [
         'id' => 'int',
+        'created_at' => '\DateTime',
         'published_at' => '\DateTime',
         'download_url' => 'string',
         'episode_guid' => 'string',
@@ -76,6 +77,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $openAPIFormats = [
         'id' => null,
+        'created_at' => 'date-time',
         'published_at' => 'date-time',
         'download_url' => null,
         'episode_guid' => null,
@@ -92,6 +94,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static array $openAPINullables = [
         'id' => false,
+        'created_at' => false,
         'published_at' => false,
         'download_url' => false,
         'episode_guid' => false,
@@ -188,6 +191,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'created_at' => 'created_at',
         'published_at' => 'published_at',
         'download_url' => 'download_url',
         'episode_guid' => 'episode_guid',
@@ -204,6 +208,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'id' => 'setId',
+        'created_at' => 'setCreatedAt',
         'published_at' => 'setPublishedAt',
         'download_url' => 'setDownloadUrl',
         'episode_guid' => 'setEpisodeGuid',
@@ -220,6 +225,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'id' => 'getId',
+        'created_at' => 'getCreatedAt',
         'published_at' => 'getPublishedAt',
         'download_url' => 'getDownloadUrl',
         'episode_guid' => 'getEpisodeGuid',
@@ -287,6 +293,7 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('created_at', $data ?? [], null);
         $this->setIfExists('published_at', $data ?? [], null);
         $this->setIfExists('download_url', $data ?? [], null);
         $this->setIfExists('episode_guid', $data ?? [], null);
@@ -373,6 +380,33 @@ class PatchedPodcastEpisode implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at created_at
+     *
+     * @return self
+     */
+    public function setCreatedAt($created_at)
+    {
+        if (is_null($created_at)) {
+            throw new \InvalidArgumentException('non-nullable created_at cannot be null');
+        }
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }

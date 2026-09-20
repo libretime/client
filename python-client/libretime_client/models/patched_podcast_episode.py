@@ -30,6 +30,7 @@ class PatchedPodcastEpisode(BaseModel):
     PatchedPodcastEpisode
     """ # noqa: E501
     id: Optional[StrictInt] = None
+    created_at: Optional[datetime] = None
     published_at: Optional[datetime] = None
     download_url: Optional[Annotated[str, Field(strict=True, max_length=4096)]] = None
     episode_guid: Optional[Annotated[str, Field(strict=True, max_length=4096)]] = None
@@ -37,7 +38,7 @@ class PatchedPodcastEpisode(BaseModel):
     episode_description: Optional[StrictStr] = None
     podcast: Optional[StrictInt] = None
     file: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["id", "published_at", "download_url", "episode_guid", "episode_title", "episode_description", "podcast", "file"]
+    __properties: ClassVar[List[str]] = ["id", "created_at", "published_at", "download_url", "episode_guid", "episode_title", "episode_description", "podcast", "file"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -70,9 +71,11 @@ class PatchedPodcastEpisode(BaseModel):
           were set at model initialization. Other fields with value `None`
           are ignored.
         * OpenAPI `readOnly` fields are excluded.
+        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
             "id",
+            "created_at",
         ])
 
         _dict = self.model_dump(
@@ -98,6 +101,7 @@ class PatchedPodcastEpisode(BaseModel):
 
         _obj = cls.model_validate({
             "id": obj.get("id"),
+            "created_at": obj.get("created_at"),
             "published_at": obj.get("published_at"),
             "download_url": obj.get("download_url"),
             "episode_guid": obj.get("episode_guid"),

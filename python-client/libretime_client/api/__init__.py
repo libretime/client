@@ -1,7 +1,6 @@
 # flake8: noqa
 
 # import apis into api package
-from libretime_client.api.celery_tasks_api import CeleryTasksApi
 from libretime_client.api.files_api import FilesApi
 from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi
 from libretime_client.api.info_api import InfoApi
@@ -32,7 +31,6 @@ from libretime_client.api.smart_block_criteria_api import SmartBlockCriteriaApi
 from libretime_client.api.smart_blocks_api import SmartBlocksApi
 from libretime_client.api.station_podcasts_api import StationPodcastsApi
 from libretime_client.api.stream_api import StreamApi
-from libretime_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi
 from libretime_client.api.timestamps_api import TimestampsApi
 from libretime_client.api.user_tokens_api import UserTokensApi
 from libretime_client.api.users_api import UsersApi

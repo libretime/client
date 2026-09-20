@@ -18,7 +18,6 @@ __version__ = "1.0.0"
 
 # Define package exports
 __all__ = [
-    "CeleryTasksApi",
     "FilesApi",
     "ImportedPodcastsApi",
     "InfoApi",
@@ -49,7 +48,6 @@ __all__ = [
     "SmartBlocksApi",
     "StationPodcastsApi",
     "StreamApi",
-    "ThirdPartyTrackReferencesApi",
     "TimestampsApi",
     "UserTokensApi",
     "UsersApi",
@@ -66,7 +64,6 @@ __all__ = [
     "ApiAttributeError",
     "ApiException",
     "BlankEnum",
-    "CeleryTask",
     "File",
     "FileImportStatusEnum",
     "ImportedPodcast",
@@ -77,7 +74,6 @@ __all__ = [
     "LoginAttempt",
     "MountName",
     "NullEnum",
-    "PatchedCeleryTask",
     "PatchedFile",
     "PatchedImportedPodcast",
     "PatchedLibrary",
@@ -105,7 +101,6 @@ __all__ = [
     "PatchedSmartBlockContent",
     "PatchedSmartBlockCriteria",
     "PatchedStationPodcast",
-    "PatchedThirdPartyTrackReference",
     "PatchedTimestamp",
     "PatchedUser",
     "PatchedUserToken",
@@ -139,7 +134,6 @@ __all__ = [
     "StationPodcast",
     "StreamPreferences",
     "StreamState",
-    "ThirdPartyTrackReference",
     "Timestamp",
     "User",
     "UserToken",
@@ -151,7 +145,6 @@ __all__ = [
 ]
 
 # import apis into sdk package
-from libretime_client.api.celery_tasks_api import CeleryTasksApi as CeleryTasksApi
 from libretime_client.api.files_api import FilesApi as FilesApi
 from libretime_client.api.imported_podcasts_api import ImportedPodcastsApi as ImportedPodcastsApi
 from libretime_client.api.info_api import InfoApi as InfoApi
@@ -182,7 +175,6 @@ from libretime_client.api.smart_block_criteria_api import SmartBlockCriteriaApi 
 from libretime_client.api.smart_blocks_api import SmartBlocksApi as SmartBlocksApi
 from libretime_client.api.station_podcasts_api import StationPodcastsApi as StationPodcastsApi
 from libretime_client.api.stream_api import StreamApi as StreamApi
-from libretime_client.api.third_party_track_references_api import ThirdPartyTrackReferencesApi as ThirdPartyTrackReferencesApi
 from libretime_client.api.timestamps_api import TimestampsApi as TimestampsApi
 from libretime_client.api.user_tokens_api import UserTokensApi as UserTokensApi
 from libretime_client.api.users_api import UsersApi as UsersApi
@@ -203,7 +195,6 @@ from libretime_client.exceptions import ApiException as ApiException
 
 # import models into sdk package
 from libretime_client.models.blank_enum import BlankEnum as BlankEnum
-from libretime_client.models.celery_task import CeleryTask as CeleryTask
 from libretime_client.models.file import File as File
 from libretime_client.models.file_import_status_enum import FileImportStatusEnum as FileImportStatusEnum
 from libretime_client.models.imported_podcast import ImportedPodcast as ImportedPodcast
@@ -214,7 +205,6 @@ from libretime_client.models.live_log import LiveLog as LiveLog
 from libretime_client.models.login_attempt import LoginAttempt as LoginAttempt
 from libretime_client.models.mount_name import MountName as MountName
 from libretime_client.models.null_enum import NullEnum as NullEnum
-from libretime_client.models.patched_celery_task import PatchedCeleryTask as PatchedCeleryTask
 from libretime_client.models.patched_file import PatchedFile as PatchedFile
 from libretime_client.models.patched_imported_podcast import PatchedImportedPodcast as PatchedImportedPodcast
 from libretime_client.models.patched_library import PatchedLibrary as PatchedLibrary
@@ -242,7 +232,6 @@ from libretime_client.models.patched_smart_block import PatchedSmartBlock as Pat
 from libretime_client.models.patched_smart_block_content import PatchedSmartBlockContent as PatchedSmartBlockContent
 from libretime_client.models.patched_smart_block_criteria import PatchedSmartBlockCriteria as PatchedSmartBlockCriteria
 from libretime_client.models.patched_station_podcast import PatchedStationPodcast as PatchedStationPodcast
-from libretime_client.models.patched_third_party_track_reference import PatchedThirdPartyTrackReference as PatchedThirdPartyTrackReference
 from libretime_client.models.patched_timestamp import PatchedTimestamp as PatchedTimestamp
 from libretime_client.models.patched_user import PatchedUser as PatchedUser
 from libretime_client.models.patched_user_token import PatchedUserToken as PatchedUserToken
@@ -276,7 +265,6 @@ from libretime_client.models.smart_block_kind_enum import SmartBlockKindEnum as 
 from libretime_client.models.station_podcast import StationPodcast as StationPodcast
 from libretime_client.models.stream_preferences import StreamPreferences as StreamPreferences
 from libretime_client.models.stream_state import StreamState as StreamState
-from libretime_client.models.third_party_track_reference import ThirdPartyTrackReference as ThirdPartyTrackReference
 from libretime_client.models.timestamp import Timestamp as Timestamp
 from libretime_client.models.user import User as User
 from libretime_client.models.user_token import UserToken as UserToken

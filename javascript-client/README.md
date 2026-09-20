@@ -51,12 +51,6 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CeleryTasksApi* | [**celeryTasksCreate**](docs/CeleryTasksApi.md#celerytaskscreate) | **POST** /api/v2/celery-tasks | 
-*CeleryTasksApi* | [**celeryTasksDestroy**](docs/CeleryTasksApi.md#celerytasksdestroy) | **DELETE** /api/v2/celery-tasks/{id} | 
-*CeleryTasksApi* | [**celeryTasksList**](docs/CeleryTasksApi.md#celerytaskslist) | **GET** /api/v2/celery-tasks | 
-*CeleryTasksApi* | [**celeryTasksPartialUpdate**](docs/CeleryTasksApi.md#celerytaskspartialupdate) | **PATCH** /api/v2/celery-tasks/{id} | 
-*CeleryTasksApi* | [**celeryTasksRetrieve**](docs/CeleryTasksApi.md#celerytasksretrieve) | **GET** /api/v2/celery-tasks/{id} | 
-*CeleryTasksApi* | [**celeryTasksUpdate**](docs/CeleryTasksApi.md#celerytasksupdate) | **PUT** /api/v2/celery-tasks/{id} | 
 *FilesApi* | [**filesCreate**](docs/FilesApi.md#filescreate) | **POST** /api/v2/files | 
 *FilesApi* | [**filesDestroy**](docs/FilesApi.md#filesdestroy) | **DELETE** /api/v2/files/{id} | 
 *FilesApi* | [**filesDownloadRetrieve**](docs/FilesApi.md#filesdownloadretrieve) | **GET** /api/v2/files/{id}/download | 
@@ -224,12 +218,6 @@ Class | Method | HTTP request | Description
 *StationPodcastsApi* | [**stationPodcastsUpdate**](docs/StationPodcastsApi.md#stationpodcastsupdate) | **PUT** /api/v2/station-podcasts/{id} | 
 *StreamApi* | [**streamPreferencesRetrieve**](docs/StreamApi.md#streampreferencesretrieve) | **GET** /api/v2/stream/preferences | 
 *StreamApi* | [**streamStateRetrieve**](docs/StreamApi.md#streamstateretrieve) | **GET** /api/v2/stream/state | 
-*ThirdPartyTrackReferencesApi* | [**thirdPartyTrackReferencesCreate**](docs/ThirdPartyTrackReferencesApi.md#thirdpartytrackreferencescreate) | **POST** /api/v2/third-party-track-references | 
-*ThirdPartyTrackReferencesApi* | [**thirdPartyTrackReferencesDestroy**](docs/ThirdPartyTrackReferencesApi.md#thirdpartytrackreferencesdestroy) | **DELETE** /api/v2/third-party-track-references/{id} | 
-*ThirdPartyTrackReferencesApi* | [**thirdPartyTrackReferencesList**](docs/ThirdPartyTrackReferencesApi.md#thirdpartytrackreferenceslist) | **GET** /api/v2/third-party-track-references | 
-*ThirdPartyTrackReferencesApi* | [**thirdPartyTrackReferencesPartialUpdate**](docs/ThirdPartyTrackReferencesApi.md#thirdpartytrackreferencespartialupdate) | **PATCH** /api/v2/third-party-track-references/{id} | 
-*ThirdPartyTrackReferencesApi* | [**thirdPartyTrackReferencesRetrieve**](docs/ThirdPartyTrackReferencesApi.md#thirdpartytrackreferencesretrieve) | **GET** /api/v2/third-party-track-references/{id} | 
-*ThirdPartyTrackReferencesApi* | [**thirdPartyTrackReferencesUpdate**](docs/ThirdPartyTrackReferencesApi.md#thirdpartytrackreferencesupdate) | **PUT** /api/v2/third-party-track-references/{id} | 
 *TimestampsApi* | [**timestampsCreate**](docs/TimestampsApi.md#timestampscreate) | **POST** /api/v2/timestamps | 
 *TimestampsApi* | [**timestampsDestroy**](docs/TimestampsApi.md#timestampsdestroy) | **DELETE** /api/v2/timestamps/{id} | 
 *TimestampsApi* | [**timestampsList**](docs/TimestampsApi.md#timestampslist) | **GET** /api/v2/timestamps | 
@@ -266,7 +254,6 @@ Class | Method | HTTP request | Description
 ### Documentation For Models
 
  - [BlankEnum](docs/BlankEnum.md)
- - [CeleryTask](docs/CeleryTask.md)
  - [FileImportStatusEnum](docs/FileImportStatusEnum.md)
  - [ImportedPodcast](docs/ImportedPodcast.md)
  - [Info](docs/Info.md)
@@ -277,7 +264,6 @@ Class | Method | HTTP request | Description
  - [ModelFile](docs/ModelFile.md)
  - [MountName](docs/MountName.md)
  - [NullEnum](docs/NullEnum.md)
- - [PatchedCeleryTask](docs/PatchedCeleryTask.md)
  - [PatchedFile](docs/PatchedFile.md)
  - [PatchedImportedPodcast](docs/PatchedImportedPodcast.md)
  - [PatchedLibrary](docs/PatchedLibrary.md)
@@ -305,7 +291,6 @@ Class | Method | HTTP request | Description
  - [PatchedSmartBlockContent](docs/PatchedSmartBlockContent.md)
  - [PatchedSmartBlockCriteria](docs/PatchedSmartBlockCriteria.md)
  - [PatchedStationPodcast](docs/PatchedStationPodcast.md)
- - [PatchedThirdPartyTrackReference](docs/PatchedThirdPartyTrackReference.md)
  - [PatchedTimestamp](docs/PatchedTimestamp.md)
  - [PatchedUser](docs/PatchedUser.md)
  - [PatchedUserToken](docs/PatchedUserToken.md)
@@ -339,7 +324,6 @@ Class | Method | HTTP request | Description
  - [StationPodcast](docs/StationPodcast.md)
  - [StreamPreferences](docs/StreamPreferences.md)
  - [StreamState](docs/StreamState.md)
- - [ThirdPartyTrackReference](docs/ThirdPartyTrackReference.md)
  - [Timestamp](docs/Timestamp.md)
  - [User](docs/User.md)
  - [UserToken](docs/UserToken.md)

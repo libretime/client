@@ -725,14 +725,11 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-        if (($this->container['size'] > 2147483647)) {
+        if (!is_null($this->container['size']) && ($this->container['size'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 2147483647.";
         }
 
-        if (($this->container['size'] < -2147483648)) {
+        if (!is_null($this->container['size']) && ($this->container['size'] < -2147483648)) {
             $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to -2147483648.";
         }
 
@@ -747,14 +744,11 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'md5', the character length must be smaller than or equal to 32.";
         }
 
-        if ($this->container['accessed'] === null) {
-            $invalidProperties[] = "'accessed' can't be null";
-        }
-        if (($this->container['accessed'] > 2147483647)) {
+        if (!is_null($this->container['accessed']) && ($this->container['accessed'] > 2147483647)) {
             $invalidProperties[] = "invalid value for 'accessed', must be smaller than or equal to 2147483647.";
         }
 
-        if (($this->container['accessed'] < -2147483648)) {
+        if (!is_null($this->container['accessed']) && ($this->container['accessed'] < -2147483648)) {
             $invalidProperties[] = "invalid value for 'accessed', must be bigger than or equal to -2147483648.";
         }
 
@@ -1059,7 +1053,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets size
      *
-     * @return int
+     * @return int|null
      */
     public function getSize()
     {
@@ -1069,7 +1063,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets size
      *
-     * @param int $size size
+     * @param int|null $size size
      *
      * @return self
      */
@@ -1230,7 +1224,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets accessed
      *
-     * @return int
+     * @return int|null
      */
     public function getAccessed()
     {
@@ -1240,7 +1234,7 @@ class File implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets accessed
      *
-     * @param int $accessed accessed
+     * @param int|null $accessed accessed
      *
      * @return self
      */

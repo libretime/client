@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly]
 **import_status** | [**\Libretime\Client\Model\FileImportStatusEnum**](FileImportStatusEnum.md) |  | [optional]
 **filepath** | **string** |  | [optional]
-**size** | **int** |  |
+**size** | **int** |  | [optional]
 **exists** | **bool** |  | [optional]
 **mime** | **string** |  |
 **md5** | **string** |  | [optional]
 **hidden** | **bool** |  | [optional]
-**accessed** | **int** |  |
+**accessed** | **int** |  | [optional]
 **scheduled** | **bool** |  | [optional]
 **part_of_list** | **bool** |  | [optional]
 **created_at** | **\DateTime** |  | [optional]

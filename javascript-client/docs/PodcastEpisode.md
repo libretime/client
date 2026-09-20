@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **number** |  | [readonly] [default to undefined]
+**created_at** | **string** |  | [readonly] [default to undefined]
 **published_at** | **string** |  | [default to undefined]
 **download_url** | **string** |  | [default to undefined]
 **episode_guid** | **string** |  | [default to undefined]
@@ -21,6 +22,7 @@ import { PodcastEpisode } from 'libretime-client';
 
 const instance: PodcastEpisode = {
     id,
+    created_at,
     published_at,
     download_url,
     episode_guid,

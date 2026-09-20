@@ -4,8 +4,6 @@
 .travis.yml
 README.md
 docs/BlankEnum.md
-docs/CeleryTask.md
-docs/CeleryTasksApi.md
 docs/File.md
 docs/FileImportStatusEnum.md
 docs/FilesApi.md
@@ -24,7 +22,6 @@ docs/LoginAttemptsApi.md
 docs/MountName.md
 docs/MountNamesApi.md
 docs/NullEnum.md
-docs/PatchedCeleryTask.md
 docs/PatchedFile.md
 docs/PatchedImportedPodcast.md
 docs/PatchedLibrary.md
@@ -52,7 +49,6 @@ docs/PatchedSmartBlock.md
 docs/PatchedSmartBlockContent.md
 docs/PatchedSmartBlockCriteria.md
 docs/PatchedStationPodcast.md
-docs/PatchedThirdPartyTrackReference.md
 docs/PatchedTimestamp.md
 docs/PatchedUser.md
 docs/PatchedUserToken.md
@@ -108,8 +104,6 @@ docs/StationPodcastsApi.md
 docs/StreamApi.md
 docs/StreamPreferences.md
 docs/StreamState.md
-docs/ThirdPartyTrackReference.md
-docs/ThirdPartyTrackReferencesApi.md
 docs/Timestamp.md
 docs/TimestampsApi.md
 docs/User.md
@@ -127,7 +121,6 @@ docs/WriteSchedule.md
 git_push.sh
 libretime_client/__init__.py
 libretime_client/api/__init__.py
-libretime_client/api/celery_tasks_api.py
 libretime_client/api/files_api.py
 libretime_client/api/imported_podcasts_api.py
 libretime_client/api/info_api.py
@@ -158,7 +151,6 @@ libretime_client/api/smart_block_criteria_api.py
 libretime_client/api/smart_blocks_api.py
 libretime_client/api/station_podcasts_api.py
 libretime_client/api/stream_api.py
-libretime_client/api/third_party_track_references_api.py
 libretime_client/api/timestamps_api.py
 libretime_client/api/user_tokens_api.py
 libretime_client/api/users_api.py
@@ -171,7 +163,6 @@ libretime_client/configuration.py
 libretime_client/exceptions.py
 libretime_client/models/__init__.py
 libretime_client/models/blank_enum.py
-libretime_client/models/celery_task.py
 libretime_client/models/file.py
 libretime_client/models/file_import_status_enum.py
 libretime_client/models/imported_podcast.py
@@ -182,7 +173,6 @@ libretime_client/models/live_log.py
 libretime_client/models/login_attempt.py
 libretime_client/models/mount_name.py
 libretime_client/models/null_enum.py
-libretime_client/models/patched_celery_task.py
 libretime_client/models/patched_file.py
 libretime_client/models/patched_imported_podcast.py
 libretime_client/models/patched_library.py
@@ -210,7 +200,6 @@ libretime_client/models/patched_smart_block.py
 libretime_client/models/patched_smart_block_content.py
 libretime_client/models/patched_smart_block_criteria.py
 libretime_client/models/patched_station_podcast.py
-libretime_client/models/patched_third_party_track_reference.py
 libretime_client/models/patched_timestamp.py
 libretime_client/models/patched_user.py
 libretime_client/models/patched_user_token.py
@@ -244,7 +233,6 @@ libretime_client/models/smart_block_kind_enum.py
 libretime_client/models/station_podcast.py
 libretime_client/models/stream_preferences.py
 libretime_client/models/stream_state.py
-libretime_client/models/third_party_track_reference.py
 libretime_client/models/timestamp.py
 libretime_client/models/user.py
 libretime_client/models/user_token.py

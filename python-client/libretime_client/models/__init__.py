@@ -14,7 +14,6 @@
 
 # import models into model package
 from libretime_client.models.blank_enum import BlankEnum
-from libretime_client.models.celery_task import CeleryTask
 from libretime_client.models.file import File
 from libretime_client.models.file_import_status_enum import FileImportStatusEnum
 from libretime_client.models.imported_podcast import ImportedPodcast
@@ -25,7 +24,6 @@ from libretime_client.models.live_log import LiveLog
 from libretime_client.models.login_attempt import LoginAttempt
 from libretime_client.models.mount_name import MountName
 from libretime_client.models.null_enum import NullEnum
-from libretime_client.models.patched_celery_task import PatchedCeleryTask
 from libretime_client.models.patched_file import PatchedFile
 from libretime_client.models.patched_imported_podcast import PatchedImportedPodcast
 from libretime_client.models.patched_library import PatchedLibrary
@@ -53,7 +51,6 @@ from libretime_client.models.patched_smart_block import PatchedSmartBlock
 from libretime_client.models.patched_smart_block_content import PatchedSmartBlockContent
 from libretime_client.models.patched_smart_block_criteria import PatchedSmartBlockCriteria
 from libretime_client.models.patched_station_podcast import PatchedStationPodcast
-from libretime_client.models.patched_third_party_track_reference import PatchedThirdPartyTrackReference
 from libretime_client.models.patched_timestamp import PatchedTimestamp
 from libretime_client.models.patched_user import PatchedUser
 from libretime_client.models.patched_user_token import PatchedUserToken
@@ -87,7 +84,6 @@ from libretime_client.models.smart_block_kind_enum import SmartBlockKindEnum
 from libretime_client.models.station_podcast import StationPodcast
 from libretime_client.models.stream_preferences import StreamPreferences
 from libretime_client.models.stream_state import StreamState
-from libretime_client.models.third_party_track_reference import ThirdPartyTrackReference
 from libretime_client.models.timestamp import Timestamp
 from libretime_client.models.user import User
 from libretime_client.models.user_token import UserToken

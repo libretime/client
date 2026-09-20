@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
+**created_at** | **datetime** |  | [readonly] 
 **published_at** | **datetime** |  | 
 **download_url** | **str** |  | 
 **episode_guid** | **str** |  | 

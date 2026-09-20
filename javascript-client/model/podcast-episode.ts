@@ -16,6 +16,7 @@
 
 export interface PodcastEpisode {
     'id': number;
+    'created_at': string;
     'published_at': string;
     'download_url': string;
     'episode_guid': string;

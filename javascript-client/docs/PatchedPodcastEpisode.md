@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **number** |  | [optional] [readonly] [default to undefined]
+**created_at** | **string** |  | [optional] [readonly] [default to undefined]
 **published_at** | **string** |  | [optional] [default to undefined]
 **download_url** | **string** |  | [optional] [default to undefined]
 **episode_guid** | **string** |  | [optional] [default to undefined]
@@ -21,6 +22,7 @@ import { PatchedPodcastEpisode } from 'libretime-client';
 
 const instance: PatchedPodcastEpisode = {
     id,
+    created_at,
     published_at,
     download_url,
     episode_guid,
