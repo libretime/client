@@ -60,7 +60,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  | |
+| **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  | [optional] |
 
 ### Return type
 
@@ -385,7 +385,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| A unique integer value identifying this preference. | |
-| **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  | |
+| **preference** | [**\Libretime\Client\Model\Preference**](../Model/Preference.md)|  | [optional] |
 
 ### Return type
 

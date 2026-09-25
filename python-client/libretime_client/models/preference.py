@@ -29,9 +29,9 @@ class Preference(BaseModel):
     Preference
     """ # noqa: E501
     id: StrictInt
-    key: Optional[Annotated[str, Field(strict=True, max_length=255)]]
+    key: Optional[Annotated[str, Field(strict=True, max_length=255)]] = None
     value: Optional[StrictStr] = None
-    user: Optional[StrictInt]
+    user: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["id", "key", "value", "user"]
 
     model_config = ConfigDict(

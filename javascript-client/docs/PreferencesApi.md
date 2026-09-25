@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost*
 |[**preferencesUpdate**](#preferencesupdate) | **PUT** /api/v2/preferences/{id} | |
 
 # **preferencesCreate**
-> Preference preferencesCreate(preference)
+> Preference preferencesCreate()
 
 
 ### Example
@@ -27,7 +27,7 @@ import {
 const configuration = new Configuration();
 const apiInstance = new PreferencesApi(configuration);
 
-let preference: Preference; //
+let preference: Preference; // (optional)
 
 const { status, data } = await apiInstance.preferencesCreate(
     preference
@@ -260,7 +260,7 @@ const { status, data } = await apiInstance.preferencesRetrieve(
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **preferencesUpdate**
-> Preference preferencesUpdate(preference)
+> Preference preferencesUpdate()
 
 
 ### Example
@@ -276,7 +276,7 @@ const configuration = new Configuration();
 const apiInstance = new PreferencesApi(configuration);
 
 let id: number; //A unique integer value identifying this preference. (default to undefined)
-let preference: Preference; //
+let preference: Preference; // (optional)
 
 const { status, data } = await apiInstance.preferencesUpdate(
     id,

@@ -229,6 +229,7 @@ export const SchemaRetrieveLangEnum = {
     Tr: 'tr',
     Tt: 'tt',
     Udm: 'udm',
+    Ug: 'ug',
     Uk: 'uk',
     Ur: 'ur',
     Uz: 'uz',

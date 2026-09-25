@@ -32,13 +32,11 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
     return {
         /**
          * 
-         * @param {Preference} preference 
+         * @param {Preference} [preference] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesCreate: async (preference: Preference, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'preference' is not null or undefined
-            assertParamExists('preferencesCreate', 'preference', preference)
+        preferencesCreate: async (preference?: Preference, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/v2/preferences`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -227,15 +225,13 @@ export const PreferencesApiAxiosParamCreator = function (configuration?: Configu
         /**
          * 
          * @param {number} id A unique integer value identifying this preference.
-         * @param {Preference} preference 
+         * @param {Preference} [preference] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesUpdate: async (id: number, preference: Preference, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        preferencesUpdate: async (id: number, preference?: Preference, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('preferencesUpdate', 'id', id)
-            // verify required parameter 'preference' is not null or undefined
-            assertParamExists('preferencesUpdate', 'preference', preference)
             const localVarPath = `/api/v2/preferences/{id}`
                 .replace('{id}', encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -279,11 +275,11 @@ export const PreferencesApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {Preference} preference 
+         * @param {Preference} [preference] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async preferencesCreate(preference: Preference, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Preference>> {
+        async preferencesCreate(preference?: Preference, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Preference>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.preferencesCreate(preference, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['PreferencesApi.preferencesCreate']?.[localVarOperationServerIndex]?.url;
@@ -340,11 +336,11 @@ export const PreferencesApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {number} id A unique integer value identifying this preference.
-         * @param {Preference} preference 
+         * @param {Preference} [preference] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async preferencesUpdate(id: number, preference: Preference, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Preference>> {
+        async preferencesUpdate(id: number, preference?: Preference, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Preference>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.preferencesUpdate(id, preference, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['PreferencesApi.preferencesUpdate']?.[localVarOperationServerIndex]?.url;
@@ -361,11 +357,11 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
     return {
         /**
          * 
-         * @param {Preference} preference 
+         * @param {Preference} [preference] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesCreate(preference: Preference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
+        preferencesCreate(preference?: Preference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
             return localVarFp.preferencesCreate(preference, options).then((request) => request(axios, basePath));
         },
         /**
@@ -407,11 +403,11 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
         /**
          * 
          * @param {number} id A unique integer value identifying this preference.
-         * @param {Preference} preference 
+         * @param {Preference} [preference] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        preferencesUpdate(id: number, preference: Preference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
+        preferencesUpdate(id: number, preference?: Preference, options?: RawAxiosRequestConfig): AxiosPromise<Preference> {
             return localVarFp.preferencesUpdate(id, preference, options).then((request) => request(axios, basePath));
         },
     };
@@ -423,11 +419,11 @@ export const PreferencesApiFactory = function (configuration?: Configuration, ba
 export class PreferencesApi extends BaseAPI {
     /**
      * 
-     * @param {Preference} preference 
+     * @param {Preference} [preference] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public preferencesCreate(preference: Preference, options?: RawAxiosRequestConfig) {
+    public preferencesCreate(preference?: Preference, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesCreate(preference, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -474,11 +470,11 @@ export class PreferencesApi extends BaseAPI {
     /**
      * 
      * @param {number} id A unique integer value identifying this preference.
-     * @param {Preference} preference 
+     * @param {Preference} [preference] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public preferencesUpdate(id: number, preference: Preference, options?: RawAxiosRequestConfig) {
+    public preferencesUpdate(id: number, preference?: Preference, options?: RawAxiosRequestConfig) {
         return PreferencesApiFp(this.configuration).preferencesUpdate(id, preference, options).then((request) => request(this.axios, this.basePath));
     }
 }

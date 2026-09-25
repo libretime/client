@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **number** |  | [readonly] [default to undefined]
-**key** | **string** |  | [default to undefined]
+**key** | **string** |  | [optional] [default to undefined]
 **value** | **string** |  | [optional] [default to undefined]
-**user** | **number** |  | [default to undefined]
+**user** | **number** |  | [optional] [default to undefined]
 
 ## Example
 

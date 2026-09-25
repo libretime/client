@@ -42,7 +42,7 @@ class PreferencesApi:
     @validate_call
     def preferences_create(
         self,
-        preference: Preference,
+        preference: Optional[Preference] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -59,7 +59,7 @@ class PreferencesApi:
         """preferences_create
 
 
-        :param preference: (required)
+        :param preference:
         :type preference: Preference
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -108,7 +108,7 @@ class PreferencesApi:
     @validate_call
     def preferences_create_with_http_info(
         self,
-        preference: Preference,
+        preference: Optional[Preference] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -125,7 +125,7 @@ class PreferencesApi:
         """preferences_create
 
 
-        :param preference: (required)
+        :param preference:
         :type preference: Preference
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -174,7 +174,7 @@ class PreferencesApi:
     @validate_call
     def preferences_create_without_preload_content(
         self,
-        preference: Preference,
+        preference: Optional[Preference] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -191,7 +191,7 @@ class PreferencesApi:
         """preferences_create
 
 
-        :param preference: (required)
+        :param preference:
         :type preference: Preference
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1361,7 +1361,7 @@ class PreferencesApi:
     def preferences_update(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this preference.")],
-        preference: Preference,
+        preference: Optional[Preference] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1380,7 +1380,7 @@ class PreferencesApi:
 
         :param id: A unique integer value identifying this preference. (required)
         :type id: int
-        :param preference: (required)
+        :param preference:
         :type preference: Preference
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1431,7 +1431,7 @@ class PreferencesApi:
     def preferences_update_with_http_info(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this preference.")],
-        preference: Preference,
+        preference: Optional[Preference] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1450,7 +1450,7 @@ class PreferencesApi:
 
         :param id: A unique integer value identifying this preference. (required)
         :type id: int
-        :param preference: (required)
+        :param preference:
         :type preference: Preference
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1501,7 +1501,7 @@ class PreferencesApi:
     def preferences_update_without_preload_content(
         self,
         id: Annotated[StrictInt, Field(description="A unique integer value identifying this preference.")],
-        preference: Preference,
+        preference: Optional[Preference] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1520,7 +1520,7 @@ class PreferencesApi:
 
         :param id: A unique integer value identifying this preference. (required)
         :type id: int
-        :param preference: (required)
+        :param preference:
         :type preference: Preference
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

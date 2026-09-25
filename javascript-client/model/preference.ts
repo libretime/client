@@ -16,8 +16,8 @@
 
 export interface Preference {
     'id': number;
-    'key': string | null;
+    'key'?: string | null;
     'value'?: string | null;
-    'user': number | null;
+    'user'?: number | null;
 }
 

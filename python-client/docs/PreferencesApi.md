@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **preferences_create**
-> Preference preferences_create(preference)
+> Preference preferences_create(preference=preference)
 
 ### Example
 
@@ -53,10 +53,10 @@ configuration.api_key['cookieAuth'] = os.environ["API_KEY"]
 with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = libretime_client.PreferencesApi(api_client)
-    preference = libretime_client.Preference() # Preference | 
+    preference = libretime_client.Preference() # Preference |  (optional)
 
     try:
-        api_response = api_instance.preferences_create(preference)
+        api_response = api_instance.preferences_create(preference=preference)
         print("The response of PreferencesApi->preferences_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -70,7 +70,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **preference** | [**Preference**](Preference.md)|  | 
+ **preference** | [**Preference**](Preference.md)|  | [optional] 
 
 ### Return type
 
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **preferences_update**
-> Preference preferences_update(id, preference)
+> Preference preferences_update(id, preference=preference)
 
 ### Example
 
@@ -455,10 +455,10 @@ with libretime_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = libretime_client.PreferencesApi(api_client)
     id = 56 # int | A unique integer value identifying this preference.
-    preference = libretime_client.Preference() # Preference | 
+    preference = libretime_client.Preference() # Preference |  (optional)
 
     try:
-        api_response = api_instance.preferences_update(id, preference)
+        api_response = api_instance.preferences_update(id, preference=preference)
         print("The response of PreferencesApi->preferences_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -473,7 +473,7 @@ with libretime_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this preference. | 
- **preference** | [**Preference**](Preference.md)|  | 
+ **preference** | [**Preference**](Preference.md)|  | [optional] 
 
 ### Return type
 

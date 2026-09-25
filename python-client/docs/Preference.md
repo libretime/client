@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
-**key** | **str** |  | 
+**key** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
-**user** | **int** |  | 
+**user** | **int** |  | [optional] 
 
 ## Example
 

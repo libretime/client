@@ -149,14 +149,14 @@ class PreferencesApi
     /**
      * Operation preferencesCreate
      *
-     * @param  \Libretime\Client\Model\Preference $preference preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesCreate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\Preference
      */
-    public function preferencesCreate($preference, string $contentType = self::contentTypes['preferencesCreate'][0])
+    public function preferencesCreate($preference = null, string $contentType = self::contentTypes['preferencesCreate'][0])
     {
         list($response) = $this->preferencesCreateWithHttpInfo($preference, $contentType);
         return $response;
@@ -165,14 +165,14 @@ class PreferencesApi
     /**
      * Operation preferencesCreateWithHttpInfo
      *
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesCreate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\Preference, HTTP status code, HTTP response headers (array of strings)
      */
-    public function preferencesCreateWithHttpInfo($preference, string $contentType = self::contentTypes['preferencesCreate'][0])
+    public function preferencesCreateWithHttpInfo($preference = null, string $contentType = self::contentTypes['preferencesCreate'][0])
     {
         $request = $this->preferencesCreateRequest($preference, $contentType);
 
@@ -248,13 +248,13 @@ class PreferencesApi
     /**
      * Operation preferencesCreateAsync
      *
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function preferencesCreateAsync($preference, string $contentType = self::contentTypes['preferencesCreate'][0])
+    public function preferencesCreateAsync($preference = null, string $contentType = self::contentTypes['preferencesCreate'][0])
     {
         return $this->preferencesCreateAsyncWithHttpInfo($preference, $contentType)
             ->then(
@@ -267,13 +267,13 @@ class PreferencesApi
     /**
      * Operation preferencesCreateAsyncWithHttpInfo
      *
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function preferencesCreateAsyncWithHttpInfo($preference, string $contentType = self::contentTypes['preferencesCreate'][0])
+    public function preferencesCreateAsyncWithHttpInfo($preference = null, string $contentType = self::contentTypes['preferencesCreate'][0])
     {
         $returnType = '\Libretime\Client\Model\Preference';
         $request = $this->preferencesCreateRequest($preference, $contentType);
@@ -317,21 +317,15 @@ class PreferencesApi
     /**
      * Create request for operation 'preferencesCreate'
      *
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function preferencesCreateRequest($preference, string $contentType = self::contentTypes['preferencesCreate'][0])
+    public function preferencesCreateRequest($preference = null, string $contentType = self::contentTypes['preferencesCreate'][0])
     {
 
-        // verify the required parameter 'preference' is set
-        if ($preference === null || (is_array($preference) && count($preference) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $preference when calling preferencesCreate'
-            );
-        }
 
 
         $resourcePath = '/api/v2/preferences';
@@ -1412,14 +1406,14 @@ class PreferencesApi
      * Operation preferencesUpdate
      *
      * @param  int $id A unique integer value identifying this preference. (required)
-     * @param  \Libretime\Client\Model\Preference $preference preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesUpdate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Libretime\Client\Model\Preference
      */
-    public function preferencesUpdate($id, $preference, string $contentType = self::contentTypes['preferencesUpdate'][0])
+    public function preferencesUpdate($id, $preference = null, string $contentType = self::contentTypes['preferencesUpdate'][0])
     {
         list($response) = $this->preferencesUpdateWithHttpInfo($id, $preference, $contentType);
         return $response;
@@ -1429,14 +1423,14 @@ class PreferencesApi
      * Operation preferencesUpdateWithHttpInfo
      *
      * @param  int $id A unique integer value identifying this preference. (required)
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesUpdate'] to see the possible values for this operation
      *
      * @throws \Libretime\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Libretime\Client\Model\Preference, HTTP status code, HTTP response headers (array of strings)
      */
-    public function preferencesUpdateWithHttpInfo($id, $preference, string $contentType = self::contentTypes['preferencesUpdate'][0])
+    public function preferencesUpdateWithHttpInfo($id, $preference = null, string $contentType = self::contentTypes['preferencesUpdate'][0])
     {
         $request = $this->preferencesUpdateRequest($id, $preference, $contentType);
 
@@ -1513,13 +1507,13 @@ class PreferencesApi
      * Operation preferencesUpdateAsync
      *
      * @param  int $id A unique integer value identifying this preference. (required)
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function preferencesUpdateAsync($id, $preference, string $contentType = self::contentTypes['preferencesUpdate'][0])
+    public function preferencesUpdateAsync($id, $preference = null, string $contentType = self::contentTypes['preferencesUpdate'][0])
     {
         return $this->preferencesUpdateAsyncWithHttpInfo($id, $preference, $contentType)
             ->then(
@@ -1533,13 +1527,13 @@ class PreferencesApi
      * Operation preferencesUpdateAsyncWithHttpInfo
      *
      * @param  int $id A unique integer value identifying this preference. (required)
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function preferencesUpdateAsyncWithHttpInfo($id, $preference, string $contentType = self::contentTypes['preferencesUpdate'][0])
+    public function preferencesUpdateAsyncWithHttpInfo($id, $preference = null, string $contentType = self::contentTypes['preferencesUpdate'][0])
     {
         $returnType = '\Libretime\Client\Model\Preference';
         $request = $this->preferencesUpdateRequest($id, $preference, $contentType);
@@ -1584,13 +1578,13 @@ class PreferencesApi
      * Create request for operation 'preferencesUpdate'
      *
      * @param  int $id A unique integer value identifying this preference. (required)
-     * @param  \Libretime\Client\Model\Preference $preference (required)
+     * @param  \Libretime\Client\Model\Preference|null $preference (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['preferencesUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function preferencesUpdateRequest($id, $preference, string $contentType = self::contentTypes['preferencesUpdate'][0])
+    public function preferencesUpdateRequest($id, $preference = null, string $contentType = self::contentTypes['preferencesUpdate'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1600,12 +1594,6 @@ class PreferencesApi
             );
         }
 
-        // verify the required parameter 'preference' is set
-        if ($preference === null || (is_array($preference) && count($preference) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $preference when calling preferencesUpdate'
-            );
-        }
 
 
         $resourcePath = '/api/v2/preferences/{id}';
